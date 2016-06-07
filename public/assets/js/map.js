@@ -45,55 +45,71 @@ function createMarkers(info){
 }
 
 function refresh(http)
-	{
-		deleteMarkers();
+{
+	deleteMarkers();
 
-		infoWindow = new google.maps.InfoWindow({maxWidth:400});
+	infoWindow = new google.maps.InfoWindow({maxWidth:400});
 
-		//retrieve the fossils and put them as marker in the map
-		http.get('/api/map/loadfossils/'+filter['genus']+'/-1/ee/ee/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
-			data.forEach(function(item, index){
-				var info = [];
-				info['lat'] = item['lat'];
-				info['lng'] = item['lng'];
-				var info_window_genus = "";
+	//retrieve the fossils and put them as marker in the map
+	http.get('/api/map/loadfossils/'+filter['genus']+'/-1/ee/ee/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
+		data.forEach(function(item, index){
+			var info = [];
+			info['lat'] = item['lat'];
+			info['lng'] = item['lng'];
+			var info_window_genus = "";
 
-				if (item['genus'] == 'Not listed')
-				{
-					info['title'] = item['genuscustom'] + " " + item['species'];
-					info_window_genus = item['genuscustom'];
-				}
-				else{
-					info['title'] = item['genus'] + " " + item['species'];
-					info_window_genus = item['genus'];
-				}
-				
-				info['content'] = 
-				"<div class='container-fluid map-infowindow'>"
-					+ "<div class='row'>"
+			if (item['genus'] == 'Not listed')
+			{
+				info['title'] = item['genuscustom'] + " " + item['species'];
+				info_window_genus = item['genuscustom'];
+			}
+			else{
+				info['title'] = item['genus'] + " " + item['species'];
+				info_window_genus = item['genus'];
+			}
+			
+			info['content'] = 
+			"<div class='container-fluid map-infowindow'>"
+				+ "<div class='row'>"
 
-						+ "<div class='col-md-6'>"
-							+ "<img src='"+item["url"]+"' class='map-infowindow-img' onclick='show_img('"+item["url"]+"')'>"
-						+ "</div>"
+					+ "<div class='col-md-6'>"
+						+ "<img src='"+item["url"]+"' class='map-infowindow-img' onclick='show_img('"+item["url"]+"')'>"
+					+ "</div>"
 
-						+ "<div class='col-md-6'>"
+					+ "<div class='col-md-6'>"
 
-							+ "<p> "
-								+ "<strong> Genus : </strong> " + info_window_genus
-								+ "</br> <strong> Species : </strong> " + item["species"]
-								+ "</br> <strong> Age : </strong>" + item['age']
-								+ "</br> <strong> Collector : </strong>"+ item["collector"]
-							+ "</p>"
+						+ "<p> "
+							+ "<strong> Genus : </strong> " + info_window_genus
+							+ "</br> <strong> Species : </strong> " + item["species"]
+							+ "</br> <strong> Age : </strong>" + item['age']
+							+ "</br> <strong> Collector : </strong>"+ item["collector"]
+						+ "</p>"
 
-						+ "</div>"
 					+ "</div>"
 				+ "</div>"
-				;
+			+ "</div>"
+			;
 
-				createMarkers(info);	
-			});
+			createMarkers(info);	
 		});
-	}
+	});
+}
+
+function logActivity(http, message, user_id){
+	activity = {};
+	activity.activity = message;
+	activity.user_id = user_id;
+	// Do the ajax call
+	http({
+        method : 'POST',
+        url: '/api/map/logmapactivity',
+        data: $.param(activity),
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+    	
+	}).success(function(data, status, headers, config) {
+		console.log("success");
+	});
+}
 
 function show_img(url){
 	console.log(url);
@@ -158,68 +174,8 @@ map.controller('filterSection', function($scope, $http){
 	$scope.selectedAgeMax = "Precambrian";
 	$scope.selectedCollector = "-1";
 	*/
-	/*
-	var refresh = function(){
-		deleteMarkers();
-		//retrieve the fossils and put them as marker in the map
-		$http.get('/api/map/loadfossils/'+filter['genus']+'/-1/ee/ee/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
-			data.forEach(function(item, index){
-				var info = [];
-				info['lat'] = item['lat'];
-				info['lng'] = item['lng'];
-				if (item['genus'] == 'Not listed')
-				{
-					info['title'] = item['genuscustom'] + " " + item['species'];
-					info_window_genus = item['genuscustom'];
-				}
-				else{
-					info['title'] = item['genus'] + " " + item['species'];
-					info_window_genus = item['genus'];
-				}
-				
-				info['content'] = 
-				"<div class='container-fluid map-infowindow'>"
-					+ "<div class='row'>"
 
-						+ "<div class='col-md-6'>"
-							+ "<img src='"+item["url"]+"' class='map-infowindow-img' onclick='show_img('"+item["url"]+"')'>"
-						+ "</div>"
-
-						+ "<div class='col-md-6'>"
-
-							+ "<p> "
-								+ "<strong> Genus : </strong> " + info_window_genus
-								+ "</br> <strong> Species : </strong> " + item["species"]
-								+ "</br> <strong> Age : </strong>" + item['age']
-								+ "</br> <strong> Collector : </strong>"+ item["collector"]
-							+ "</p>"
-
-						+ "</div>"
-					+ "</div>"
-				+ "</div>"
-				;
-				createMarkers(info);	
-			});
-		});
-	}
-	*/
-
-	var logActivity = function($a){
-		console.log($a);
-		$scope.activity = {};
-		$scope.activity.activity = $a;
-		$scope.activity.user_id = $scope.user_id;
-		// Do the ajax call
-		$http({
-            method : 'POST',
-            url: '/api/map/logmapactivity',
-            data: $.param($scope.activity),
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-        	
-    	}).success(function(data, status, headers, config) {
-			console.log("success");
-		});
-	}
+	
 
 	$scope.newProject = function (){
 		filter['project'] = $scope.selectedProject;
@@ -229,7 +185,7 @@ map.controller('filterSection', function($scope, $http){
 	$scope.newGenus = function(){
 		filter['genus'] = $scope.selectedGenus;
 		refresh($http);
-		logActivity("Genus Selector Change Value");
+		logActivity($http, "Genus Selector Change Value", $scope.user_id);
 	}
 
 	$scope.newAgeMin = function(){
@@ -245,7 +201,7 @@ map.controller('filterSection', function($scope, $http){
 	$scope.newCollector = function(){
 		filter['collector'] = $scope.selectedCollector;
 		refresh($http);
-		logActivity("Collector Selector Change Value");
+		logActivity($http, "Collector Selector Change Value", $scope.user_id);
 	}
 
 	$scope.recordActivity = function($a){
