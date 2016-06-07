@@ -185,6 +185,7 @@ map.controller('filterSection', function($scope, $http){
 		$http.get('/api/profile/getdetails/').success(function(data, status, headers, config) {
 			// Update the profile page and taskbar
 			$scope.activity.user_id = data.profile.id;
+			console.log(data.profile.id);
 		});
 		// Do the ajax call
 		$http({
