@@ -133,8 +133,9 @@ function logActivity(http, message, user_id){
 	});
 }
 
-
-	
+function show_img(url){
+	console.log(url);
+}
 
 var map = angular.module('map', [])
 .controller('GoogleMap', function($scope, $http){
@@ -176,9 +177,6 @@ var map = angular.module('map', [])
 		map_zoom=new_zoom;
 	});
 
-	function show_img(url){
-		console.log(url);
-	}
 
 	refresh($http);
 });
