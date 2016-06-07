@@ -136,6 +136,10 @@ var map = angular.module('map', [])
 
 	actualmap = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 	
+	actualmap.addListener("click", function(){
+			console.log('map clicked');
+		});
+
 	refresh($http);
 });
 
