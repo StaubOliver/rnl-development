@@ -182,6 +182,7 @@ map.controller('filterSection', function($scope, $http){
 		console.log($a);
 		$scope.activity = {};
 		$scope.activity.activity = $a;
+		$scope.activity.user_id = "1";
 		// Do the ajax call
 		$http({
             method : 'POST',
