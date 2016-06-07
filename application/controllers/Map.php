@@ -39,7 +39,7 @@ class map extends CI_Controller {
 				$data['logged_in'] = true;
 				$data['is_admin'] = $this->ProfileModel->isAdmin();
 			} else{
-				$data['is_admine'] = "0";
+				$data['is_admin'] = "0";
 			}
 
 			$this->load->view('map', $data);
