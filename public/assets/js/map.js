@@ -98,6 +98,9 @@ function refresh(http)
 							+ "<div class='col-xs-12'>"
 								+ "<p class='infowindow-text'> <strong> Location : </strong>" + item["place"] + " " + item["country"] + "</p>"
 							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<p class='infowindow-text'>Do you think that this marker is wrong ?</p>"
+							+ "</div>"
 						+"</div>"
 
 					+ "</div>"
