@@ -69,7 +69,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><p class="navbar-text">Profil</p></li>
 					<li><p class="navbar-text">Share</p></li>
-					<li><p class="navbar-text">Logout</p></li>
+					<li><a href ="/logout" class="navbar-text">Logout</a></li>
 				</ul>
 			</div>
 		</div>
