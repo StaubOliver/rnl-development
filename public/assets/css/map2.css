@@ -27,7 +27,8 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 */
 
 .col-md-9{
-	padding:0px;
+	padding-left:5px;
+	padding-right: 0px;
 }
 
 .main-layout-right{
