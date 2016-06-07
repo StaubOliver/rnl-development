@@ -123,7 +123,7 @@ map.controller('navbarSection', function($scope, $http){
 
 	$scope.profile.first_name = 'John Smith';
 
-	$http.get('/api/profile/getdetails/').success(function(data, status, headers, config) {
+	/*$http.get('/api/profile/getdetails/').success(function(data, status, headers, config) {
 		// Update the profile page and taskbar
 		$scope.profile.id = data.profile.id;
 		$scope.profile.username = data.profile.username;
@@ -133,7 +133,7 @@ map.controller('navbarSection', function($scope, $http){
 		$scope.profile.first_name = data.profile.first_name;
 		$scope.profile.last_name = data.profile.last_name;
 
-	});
+	});*/
 });
 
 map.controller('filterSection', function($scope, $http){
