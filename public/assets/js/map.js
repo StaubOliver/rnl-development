@@ -46,7 +46,7 @@ function createMarkers(info){
 
 function refresh(http)
 	{
-		deleteMarkers;
+		deleteMarkers();
 
 		infoWindow = new google.maps.InfoWindow({maxWidth:400});
 
