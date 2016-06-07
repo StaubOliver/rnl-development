@@ -110,6 +110,7 @@
 					</div>
 
 					<!-- Project -->
+					<!--
 					<div class="row filter-element">
 						<div class="col-md-3">
 							<h6>Projects</h6>
@@ -129,6 +130,7 @@
 							</select>
 						</div>
 					</div>
+					-->
 
 					<!-- Place -->
 					<!--
