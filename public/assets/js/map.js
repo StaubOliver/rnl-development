@@ -235,16 +235,4 @@ map.controller('filterSection', function($scope, $http){
 	};
 });
 
-map.controller('map-navbar', function($scope, $http){
 
-	$http.get('/api/profile/getdetails/').success(function(data, status, headers, config) {
-		// Update the profile page and taskbar
-		$scope.profile.id = data.profile.id;
-		$scope.profile.username = data.profile.username;
-		$scope.profile.email = data.profile.email;
-		$scope.profile.last_login = data.profile.last_login;
-		$scope.profile.location = data.profile.location;
-		$scope.profile.first_name = data.profile.first_name;
-		$scope.profile.last_name = data.profile.last_name;
-
-});
