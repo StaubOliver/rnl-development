@@ -237,6 +237,8 @@ map.controller('filterSection', function($scope, $http){
 
 map.controller('map-navbar', function($scope, $http){
 
+	$scope.profile.first_name = 'John Smith';
+
 	$http.get('/api/profile/getdetails/').success(function(data, status, headers, config) {
 		// Update the profile page and taskbar
 		$scope.profile.id = data.profile.id;
