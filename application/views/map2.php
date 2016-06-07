@@ -325,10 +325,10 @@
 						<div class="feedback-message-form">
 							<form>
 								<div class="row feedback-form">
-									<div class="col-md-8">
+									<div class="col-md-9">
 										<textarea class="form-control feedback-message-form-textarea" rows="2"></textarea>
 									</div>
-									<div class="col-md-4 feedback-submit-btn">
+									<div class="col-md-3 feedback-submit-btn">
 										<button type="button" class="btn btn-primary ">Submit</button>
 									</div>
 								</div>
