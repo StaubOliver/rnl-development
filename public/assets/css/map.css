@@ -160,4 +160,8 @@ body{
 	margin-right: 10px;
 }
 
+.infowindow-text{
+	margin-bottom: 0px !important;
+}
+
 
