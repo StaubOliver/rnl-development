@@ -161,8 +161,6 @@ map.controller('filterSection', function($scope, $http){
 	$scope.selectedAgeMax = filter['ageMax'];
 	$scope.selectedCollector = filter['collector'];
 
-	$scope.user_id = user_id;
-
 	/*
 	$scope.selectedProject = "-1";
 	$scope.selectedGenus = "-1";
@@ -181,7 +179,7 @@ map.controller('filterSection', function($scope, $http){
 	$scope.newGenus = function(){
 		filter['genus'] = $scope.selectedGenus;
 		refresh($http);
-		logActivity($http, "Genus Selector Change Value", $scope.user_id);
+		logActivity($http, "Genus Selector Change Value", user_id);
 	}
 
 	$scope.newAgeMin = function(){
@@ -197,11 +195,11 @@ map.controller('filterSection', function($scope, $http){
 	$scope.newCollector = function(){
 		filter['collector'] = $scope.selectedCollector;
 		refresh($http);
-		logActivity($http, "Collector Selector Change Value", $scope.user_id);
+		logActivity($http, "Collector Selector Change Value", user_id);
 	}
 
 	$scope.recordActivity = function($a){
-		logActivity($http, $a, $scope.user_id);
+		logActivity($http, $a, user_id);
 	};
 });
 
