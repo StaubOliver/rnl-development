@@ -87,7 +87,6 @@
 	<div ng-controller='GoogleMap'>
 		<div class="map-header">
 			<img class="map-header-img" src="http://assets.manchester.ac.uk/logos/museum-1.png" alt="Hello there" height="84" width="169">
-			{{map_zoom}}
 		</div>
 
 		<!-- Modal to show large pictures -->
@@ -120,6 +119,7 @@
 						<div id="googleMap"></div>
 					</div>
 				</div>
+				{{map_zoom}}
 			</div>
 		</div>
 	</div>
