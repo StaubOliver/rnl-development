@@ -84,7 +84,10 @@
 	</nav>
 
 	<div class="map-header">
-		<img class="map-header-img" src="http://assets.manchester.ac.uk/logos/museum-1.png" alt="Hello there" height="84" width="169">
+		<!--<img class="map-header-img" src="http://assets.manchester.ac.uk/logos/museum-1.png" alt="Hello there" height="84" width="169">
+		-->
+		{{map_center}}
+
 	</div>
 
 	<div class="row main-layout">
@@ -119,7 +122,6 @@
 				-->
 				<div class="map-section">
 					<div id="googleMap"></div>
-					 {{map_center}}
 				</div>
 			</div>
 
