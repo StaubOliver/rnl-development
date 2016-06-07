@@ -9,6 +9,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 
 .main-layout{
 	width: 100%;
+	margin: 0px !important;
 }
 
 .map-section{
