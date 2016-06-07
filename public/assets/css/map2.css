@@ -3,7 +3,7 @@ body{
 	background-color: #EAEAEA;
 }
 
-html, body, .controller-googleMap{
+html, body, .main-layout, .main-layout-left, main-layout-right, .controller-googleMap{
 	height:100%;
 }
 
