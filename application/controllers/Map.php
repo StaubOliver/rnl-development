@@ -42,7 +42,7 @@ class map extends CI_Controller {
 				$data['is_admin'] = "0";
 			}
 
-			$this->load->view('map', $data);
+			$this->load->view('map2', $data);
 			
 			// Log the data
         	//$this->LoggerModel->logData();

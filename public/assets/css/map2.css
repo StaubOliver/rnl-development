@@ -1,0 +1,168 @@
+body{
+	padding-top: 70px;
+	background-color: #EAEAEA;
+}
+
+.map-section{
+	background-color:#EEEEEE;
+	border-radius: 2px;
+	box-shadow: 0px 1px 10px #CCCCCC;
+
+	width:auto;
+
+}
+
+#googleMap{
+	width:100%;
+	height:600px;
+}
+
+.filter-section{
+	margin-top: 25px;
+	margin-left:60px;
+	margin-right:20px;
+
+	padding-top:10px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom: 15px;
+
+	background-color:#FFFFFF;
+	border-radius: 2px;
+	box-shadow: 0px 1px 10px #CCCCCC;
+
+	width:auto;
+}
+
+.filter-title{
+	margin-left: 5px;
+}
+
+.filter-element{
+	margin-top:15px;
+	margin-bottom:15px;
+	background-color: red;
+	padding-top: 6px;
+	padding-bottom: 6px;
+
+	margin-left: 5px;
+	margin-right: 5px;
+
+	background-color: white;
+	box-shadow: 0px 0px 3px #CCCCCC;
+}
+
+
+.feedback-section{
+	margin-top: 25px;
+	margin-left:20px;
+	margin-right:60px;
+
+	padding-top:10px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom: 15px;
+
+	background-color:#FFFFFF;
+	border-radius: 2px;
+	box-shadow: 0px 1px 10px #CCCCCC;
+
+	width:auto;
+}
+
+.feedback-title{
+	margin-left: 5px;
+}
+
+.feedback-message-form{
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 10px;
+	background-color: white;
+	margin-top: 15px;
+	margin-bottom: 15px;
+
+	box-shadow: 0px 0px 3px #CCCCCC;
+
+}
+
+
+.feedback-message{
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 10px;
+	background-color: white;
+	margin-top: 15px;
+	margin-bottom: 15px;
+
+	box-shadow: 0px 0px 3px #CCCCCC;
+}
+
+.feedback-message-text{
+	text-align: justify;
+	border-radius: 10px;
+}
+
+.feedback-message p{
+	margin: 0px;
+}
+
+.feedback-message-author{
+	text-align: left;
+	color:#AAAAAA;
+}
+
+.feedback-message-time{
+	text-align: left;
+	color:#AAAAAA;
+}
+
+.feedback-message-upvote{
+	text-align: left;
+	color:#AAAAAA;
+}
+
+.feedback-submit-btn{
+	margin-top: 10px;
+	text-align: right;
+}
+
+.map-header{
+	z-index: 5;
+	position: absolute;
+	top: 95px;
+	left: 40px;
+	width: 169px;
+	height: 84px;
+	background-color: white;
+	box-shadow: 0px 0px 4px #CCCCCC;
+}
+
+.map-header-img{
+	padding:10px;
+}
+
+.map-loading{
+	z-index: 5;
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	background-color: white;
+}
+
+.map-infowindow{
+	width:400px;
+}
+
+.map-infowindow-img{
+	width: 175px;
+	height:auto;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.infowindow-text{
+	margin-bottom: 0px !important;
+}
+
+
