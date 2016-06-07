@@ -140,23 +140,23 @@ var map = angular.module('map', [])
 	
 	actualmap.addListener("click", function(){
 		console.log('map clicked');
-		logActivity(http, "Map click", user_id);
+		logActivity($http, "Map click", user_id);
 	});
 
 	actualmap.addListener("dragend", function(){
 		console.log('map dragged');
-		logActivity(http, "Map drag", user_id);
+		logActivity($http, "Map drag", user_id);
 	});
 
 	actualmap.addListener("zoom_changed", function(){
 		new_zoom = actualmap.getZoom();
 		if (new_zoom>map_zoom){
 			console.log("zoom in");
-			logActivity(http, "Map zoom in", user_id);
+			logActivity($http, "Map zoom in", user_id);
 		}
 		else {
 			console.log("zoom out");
-			logActivity(http, "Map zoom out", user_id);
+			logActivity($http, "Map zoom out", user_id);
 		}
 		map_zoom=new_zoom;
 	});
