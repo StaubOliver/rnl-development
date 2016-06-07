@@ -8,7 +8,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 }
 
 .main-layout{
-	width: 100px;
+	width: 100%;
 }
 
 .map-section{
