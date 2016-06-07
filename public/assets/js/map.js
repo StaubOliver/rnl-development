@@ -142,7 +142,8 @@ var map = angular.module('map', [])
 	
 	$scope.loading = false;
 
-	map_zoom = 3;
+	$scope.map_zoom = 3;
+
 
 	var mapProp = {
 	    center:new google.maps.LatLng(51.508742,-0.120850),
@@ -167,7 +168,7 @@ var map = angular.module('map', [])
 
 	actualmap.addListener("zoom_changed", function(){
 		new_zoom = actualmap.getZoom();
-		if (new_zoom>map_zoom){
+		if (new_zoom>$scope.map_zoom){
 			console.log("zoom in");
 			logActivity($http, "Map Zoom in", user_id);
 		}
@@ -175,7 +176,7 @@ var map = angular.module('map', [])
 			console.log("zoom out");
 			logActivity($http, "Map Zoom out", user_id);
 		}
-		map_zoom=new_zoom;
+		$scope.map_zoom=new_zoom;
 	});
 
 
