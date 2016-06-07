@@ -12,7 +12,7 @@ html, body, .controller-googleMap{
 	border-radius: 2px;
 	box-shadow: 0px 1px 10px #CCCCCC;
 	width:auto;
-	height:auto;
+	height:100%;
 }
 
 #googleMap{
