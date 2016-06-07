@@ -112,7 +112,6 @@
 			<h2 >Loading...</h2>
 		</div>
 		-->
-		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="map-section">
@@ -120,7 +119,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
 	</div>
 
 	<!-- Filter  & Feedback -->
