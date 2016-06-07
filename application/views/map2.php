@@ -31,7 +31,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 	<link rel="stylesheet" href="/assets/css/responsive.css">
 	-->
-	<link rel="stylesheet" href="/assets/css/map.css">
+	<link rel="stylesheet" href="/assets/css/map2.css">
 	
 	<!-- Google Map API -->
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
