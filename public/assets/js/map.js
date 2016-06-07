@@ -145,7 +145,7 @@ var map = angular.module('map', [])
 	$scope.map_zoom = 3;
 
 	var mapProp = {
-	    center:new google.maps.LatLng(51.508742,-0.120850),
+	    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
 	    zoom:$scope.map_zoom,
 	    maxZoom: 9,
 	    minZoom: 2,
