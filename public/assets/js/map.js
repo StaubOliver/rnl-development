@@ -39,8 +39,28 @@ function createMarkers(info, http){
 		infoWindow.setContent(info["content"]);
 		logActivity(http, "Click on fossil "+info['id']+" "+info['title'], user_id);
 		document.getElementById('modal-image-title').innerHTML = info['title'] + " | " + info['age'];
-		document.getElementById('modal-image-body').innerHTML = 
-		"<img class='img-responsive' src= "+info["url"]+">";
+		document.getElementById('modal-image-body').innerHTML =
+		"<div class='row'>"
+			+ "<div class='col-md-12'>"
+				+ "<img class='img-responsive' src= "+info["url"]+">";
+			+ "</div>"
+			+ "</div class='col-md-4'>"
+				+ "<p><strong>Genus : </strong>" + info['title'] + "</p>"
+			+ "</div>"
+			+ "</div class='col-md-4'>"
+				+ "<p><strong>Species : </strong>" + info['species'] + "</p>"
+			+ "</div>"
+			+ "</div class='col-md-4'>"
+				+ "<p><strong>Age : </strong>" + info['age'] + "</p>"
+			+ "</div>"
+			+ "</div class='col-md-8'>"
+				+ "<p><strong>Location : </strong>" + info['species'] + "</p>"
+			+ "</div>"
+			+ "</div class='col-md-4'>"
+				+ "<p><strong>Collector : </strong>" + info['collector'] + "</p>"
+			+ "</div>"
+		+ "</div>"
+
 		infoWindow.open('actualmap', marker);
 	});
 
@@ -63,6 +83,7 @@ function refresh(http)
 			info['location'] = item['place']+ ' ' + item['country'];
 			info['url'] = item['url'];
 			info['age'] = item['age'];
+			info['species'] = item['species'];
 			info['collector'] = item['collector'];
 
 			var info_window_genus = "";
