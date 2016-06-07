@@ -134,7 +134,7 @@ function logActivity(http, message, user_id){
 }
 
 function show_img(url){
-	console.log('etst');
+	console.log(url);
 }
 	
 
