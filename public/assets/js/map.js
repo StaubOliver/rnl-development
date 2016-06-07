@@ -126,6 +126,14 @@ map.controller('filterSection', function($scope, $http){
 	$scope.selectedAgeMin = filter['ageMin'];
 	$scope.selectedAgeMax = filter['ageMax'];
 	$scope.selectedCollector = filter['collector'];
+
+	$scope.user_id = "0";
+	$http.get('/api/profile/getdetails/').success(function(data, status, headers, config) {
+			// Update the profile page and taskbar
+			$scope.user_id = data.profile.id;
+			console.log(data.profile.id);
+	});
+
 	/*
 	$scope.selectedProject = "-1";
 	$scope.selectedGenus = "-1";
@@ -182,12 +190,7 @@ map.controller('filterSection', function($scope, $http){
 		console.log($a);
 		$scope.activity = {};
 		$scope.activity.activity = $a;
-		$scope.activity.user_id = "-1";
-		$http.get('/api/profile/getdetails/').success(function(data, status, headers, config) {
-			// Update the profile page and taskbar
-			$scope.activity.user_id = data.profile.id;
-			console.log(data.profile.id);
-		});
+		$scope.activity.user_id = $scope.user_id;
 		// Do the ajax call
 		$http({
             method : 'POST',
@@ -197,7 +200,6 @@ map.controller('filterSection', function($scope, $http){
         	
     	}).success(function(data, status, headers, config) {
 			console.log("success");
-			console.log($scope.activity)
 		});
 	}
 
