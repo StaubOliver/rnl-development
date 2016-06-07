@@ -9,7 +9,7 @@ body{
 	border-radius: 2px;
 	box-shadow: 0px 1px 10px #CCCCCC;
 	width:auto;
-	height:100%;
+	min-height:100%;
 }
 
 #googleMap{
