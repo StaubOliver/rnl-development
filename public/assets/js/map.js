@@ -38,7 +38,7 @@ function createMarkers(info, http){
 		infoWindow.close;
 		infoWindow.setContent(info["content"]);
 		logActivity(http, "Click on fossil "+info['id']+" "+info['title'], user_id);
-		document.getElementById('modal-image-body').innerHTML = info["url"];
+		document.getElementById('modal-image-body').innerHTML = "<img src= "+info["url"]+">";
 		infoWindow.open('actualmap', marker);
 	});
 
