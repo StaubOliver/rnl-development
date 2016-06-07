@@ -150,7 +150,6 @@ var map = angular.module('map', [])
 	    zoom:$scope.map_zoom,
 	    maxZoom: 9,
 	    minZoom: 2,
-	    scrollwheel:false,
 	    mapTypeId:google.maps.MapTypeId.ROADMAP,
 	    mapTypeControl:false,
 	    streetViewControl:false
