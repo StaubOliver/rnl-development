@@ -144,8 +144,6 @@ var map = angular.module('map', [])
 
 	$scope.map_zoom = 3;
 
-	$scope.map_center;
-
 	var mapProp = {
 	    center:new google.maps.LatLng(51.508742,-0.120850),
 	    zoom:$scope.map_zoom,
@@ -166,7 +164,7 @@ var map = angular.module('map', [])
 	actualmap.addListener("dragend", function(){
 		console.log('map dragged');
 		logActivity($http, "Map Pan", user_id);
-		$scope.map_center = actualmap.getCenter();
+		console.log(actualmap.getCenter());
 	});
 
 	actualmap.addListener("zoom_changed", function(){

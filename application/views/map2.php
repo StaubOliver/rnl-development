@@ -84,10 +84,7 @@
 	</nav>
 
 	<div class="map-header">
-		<!--<img class="map-header-img" src="http://assets.manchester.ac.uk/logos/museum-1.png" alt="Hello there" height="84" width="169">
-		-->
-		{{map_center}}
-
+		<img class="map-header-img" src="http://assets.manchester.ac.uk/logos/museum-1.png" alt="Hello there" height="84" width="169">
 	</div>
 
 	<div class="row main-layout">
