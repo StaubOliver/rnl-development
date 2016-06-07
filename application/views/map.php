@@ -88,6 +88,15 @@
 		<div class="map-header">
 			<img class="map-header-img" src="http://assets.manchester.ac.uk/logos/museum-1.png" alt="Hello there" height="84" width="169">
 		</div>
+
+		<!-- Modal to show large pictures -->
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  ...
+				</div>
+			</div>
+		</div>
 		<!--
 		<div class="map-loading" ng-show="loading">
 			<h2 >Loading...</h2>
