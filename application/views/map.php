@@ -132,7 +132,7 @@
 			
 					<div class="row">
 						<div class="col-md-12 filter-title">
-							<h4>Filter</h4>
+							<h4>Filter what's plotted on the map</h4>
 						</div>
 					</div>
 
