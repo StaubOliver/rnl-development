@@ -72,7 +72,9 @@
 					<?php endif; ?>	
 					<li><p class="navbar-text">Profil</p></li>
 					<li><p class="navbar-text">Share</p></li>
-					<li><a href ="/auth/logout" class="navbar-link">Logout</a></li>
+					<?php if($logged_in == true): ?>
+		 			<li><a href ="/auth/logout" class="navbar-link">Logout</a></li>
+					<?php endif; ?>	
 				</ul>
 			</div>
 		</div>
