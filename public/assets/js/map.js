@@ -140,7 +140,7 @@ var map = angular.module('map', [])
 			console.log('map clicked');
 	});
 
-	actualmap.addListener("click", function(){
+	actualmap.addListener("dragend", function(){
 			console.log('map dragged');
 	});
 
