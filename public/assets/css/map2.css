@@ -138,7 +138,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	z-index: 5;
 	position: absolute;
 	top: 60px;
-	left: 10px;
+	left: 100px;
 	width: 169px;
 	height: 84px;
 	background-color: white;
