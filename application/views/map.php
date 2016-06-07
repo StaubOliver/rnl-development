@@ -67,6 +67,9 @@
 					<li><p class="navbar-text">Hello {{ profile.first_name }}</p></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
+					<?php if($is_admin == 1): ?>
+		 			<li><a href="/map/admin">Admin area</a></li>
+					<?php endif; ?>	
 					<li><p class="navbar-text">Profil</p></li>
 					<li><p class="navbar-text">Share</p></li>
 					<li><a href ="/auth/logout" class="navbar-link">Logout</a></li>
