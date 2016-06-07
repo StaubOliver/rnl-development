@@ -17,7 +17,10 @@ class Profile extends MY_Controller {
 	
 	public function getDetails() {
 		// Get the user's profile details
-		$data = $this->ProfileModel->getUserProfile();
+		$data = {};
+		if ($this->ion_auth->logged_in()){ 
+			$data = $this->ProfileModel->getUserProfile();
+		}
 		
 		// Return as json
 		echo json_encode($data);
