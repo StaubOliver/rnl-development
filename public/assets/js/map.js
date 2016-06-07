@@ -39,6 +39,7 @@ function createMarkers(info, http){
 	marker.addListener("click", function(){
 		infoWindow.close;
 		infoWindow.setContent(info["content"]);
+		logActivity(http, "Click on fossil "+info['data_id'], user_id);
 		infoWindow.open('actualmap', marker);
 	});
 
@@ -57,6 +58,7 @@ function refresh(http)
 			var info = [];
 			info['lat'] = item['lat'];
 			info['lng'] = item['lng'];
+			info['id'] = item['data_id'];
 			var info_window_genus = "";
 
 			if (item['genus'] == 'Not listed')
