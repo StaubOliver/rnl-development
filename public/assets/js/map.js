@@ -42,7 +42,7 @@ function createMarkers(info, http){
 		document.getElementById('modal-image-body').innerHTML =
 		"<div class='row'>"
 			+ "<div class='col-md-12'>"
-				+ "<img class='img-responsive' src= "+info["url"]+">";
+				+ "<img class='img-responsive' src= "+info["url"]+"></img>";
 			+ "</div>"
 			+ "<div class='col-md-4'>"
 				+ "<p><strong>Genus : </strong>" + info['title'] + "</p>"
