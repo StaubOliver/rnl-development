@@ -1,14 +1,13 @@
 body{
 	padding-top: 50px;
 	background-color: #EAEAEA;
-	height:100%;
 }
 
 .map-section{
 	background-color:#EEEEEE;
 	border-radius: 2px;
 	box-shadow: 0px 1px 10px #CCCCCC;
-
+	position: absolute;
 	width:auto;
 	top:50px;
 	bottom: 0;
@@ -17,7 +16,6 @@ body{
 #googleMap{
 	width:100%;
 	/*height:600px;*/
-	height:100%;
 }
 
 .filter-section{
