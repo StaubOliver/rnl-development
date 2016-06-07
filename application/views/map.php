@@ -119,7 +119,6 @@
 						<div id="googleMap"></div>
 					</div>
 				</div>
-				{{map_zoom}}
 			</div>
 		</div>
 	</div>

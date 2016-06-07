@@ -148,6 +148,8 @@ var map = angular.module('map', [])
 	var mapProp = {
 	    center:new google.maps.LatLng(51.508742,-0.120850),
 	    zoom:$scope.map_zoom,
+	    maxZoom: 9,
+	    minZoom: 2,
 	    scrollwheel:false,
 	    mapTypeId:google.maps.MapTypeId.ROADMAP,
 	    mapTypeControl:false,
