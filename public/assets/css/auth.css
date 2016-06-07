@@ -1,0 +1,69 @@
+/**
+*	Citizen Science Auth CSS
+*	@author rob.dunne@manchester.ac.uk
+*/
+
+* {
+	text-align: center;
+}
+
+#forgot,
+#register,
+#login {
+	margin: 10vh auto 0;
+	max-width: 300px;
+}
+
+#forgot p,
+#register p,
+#login p {
+	margin: 0;
+}
+
+#forgot input[type="text"],
+#forgot input[type="password"],
+#register input[type="text"],
+#register input[type="password"],
+#login input[type="text"],
+#login input[type="password"] {
+	background: #f9f9f9;
+}
+
+#login-forgot-password a {
+	color: #888;
+}
+
+#login-create-user {
+
+}
+
+#login-remember-me label {
+	display: inline;
+}
+
+#forgot-info-message,
+#register-info-message,
+#login-info-message {
+	margin: 0 0 20px;
+}
+
+#forgot-info-message p,
+#register-info-message p,
+#login-info-message p {
+	background: #333;
+	color: #fff;
+	padding: 5px;
+	margin: 0 0 10px;
+}
+
+#browser-warning {
+	background: #111;
+	color: #fff;
+	font-size: 2em;
+	text-align: center;
+	padding: 20px;
+}
+
+#browser-warning a {
+	font-size: 1em;
+}

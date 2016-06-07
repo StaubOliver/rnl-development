@@ -1,0 +1,176 @@
+/**
+*	Reading Nature's Library CSS
+*	@author rob.dunne@manchester.ac.uk
+*/
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+	border-bottom: 1px dashed #aaa;
+    color: #212a33;
+    font-size: 5em;
+    margin: 0;
+    padding: 0 0 20px;
+}
+
+#header {
+	/*background: #212a33;*/
+	left: 0;
+    padding: 2%;
+    position: fixed;
+    top: 0;
+    width: 96%;
+    z-index: 70;
+}
+
+#section0 .intro {
+	background: rgba(255, 255, 255, .9);
+	padding: 0 0 20px;
+}
+
+.intro p {
+	color: #fff;
+}
+
+.content {
+	width: 80%;
+	min-width: 400px;
+	margin: 0 auto;
+}
+
+.content p {
+	line-height: 2em;
+    text-align: left;
+}
+
+.content .fa {
+	border-bottom: 1px dashed #aaa;
+    color: #ff4d79;
+    font-size: 4em;
+    margin: 0 0 20px;
+    padding: 0 0 30px;
+    width: 100%;
+}
+
+
+.section {
+	text-align:center;
+	background-size: cover;
+}
+
+#section0 {
+	background-image: url('/assets/img/home/museum25.jpg');
+}
+/*
+#section1 {
+	background-image: url('/assets/img/home/curator.jpg');
+}
+
+#section5 {
+	background-image: url('/assets/img/home/fish.jpg');
+}
+*/
+
+#uom-logo {
+	width: 170px;
+	float: left;
+}
+
+#menu li {
+	display:inline-block;
+	color: #000;
+	border-bottom: 3px solid #212a33;
+}
+
+#menu li.active {
+	border-bottom: 3px solid #ff4d79;
+}
+
+#menu li a {
+	text-decoration:none;
+	color: #000;
+}
+
+#menu li.active a:hover {
+	color: #000;
+}
+
+#menu li:hover {
+	border-bottom: 3px solid #ff4d79;
+}
+
+#menu li a,
+#menu li.active a {
+	padding: 9px 18px;
+	display:block;
+}
+
+#menu li.active a {
+	color: #000;
+}
+
+#menu {
+	height: 40px;
+	z-index: 70;
+	width: auto;
+	padding: 0;
+	margin:0;
+	float: right;
+}
+
+#button-wrapper {
+	margin: 10px 0 ;
+}
+
+.pink-button {
+	background: #ff4d79!important;
+	padding: 10px 20px;
+	border-radius: 5px;
+	color: #fff!important;
+	text-decoration: none;
+	border: none !important;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.grey-button {
+	background: #ccc!important;
+	padding: 10px 20px;
+	border-radius: 5px;
+	color: #333!important;
+	text-decoration: none;
+	border: none !important;
+	cursor: pointer;
+	display: inline-block;
+}
+
+#activity-feed {
+	margin: 20px 0 0;
+}
+
+.or {
+	border-top: 1px solid #212a33;
+    display: inline;
+    margin: 20px 10px;
+    padding: 0 20px;
+    position: relative;
+    top: 10px;
+    vertical-align: middle;
+}
+
+.or span {
+	background: #f9f9f9;
+    border-radius: 15px;
+    display: inline-block;
+    height: 25px;
+    padding: 3px 0 2px;
+    position: relative;
+    top: -12px;
+    width: 30px;
+}

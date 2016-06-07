@@ -1,0 +1,159 @@
+/**
+*	Citizen Science Admin CSS
+*	@author rob.dunne@manchester.ac.uk
+*/
+
+* {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+}
+
+html {
+	background: #f9f9f9;
+}
+
+a,
+a[ng-click],
+.show-profile {
+	color: #ff4d79;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+a:active,
+a:hover,
+a[ng-click]:active,
+a[ng-click]:hover,
+.show-profile:active,
+.show-profile:hover {
+	color: #d6626d;
+}
+
+h1 {
+	border-bottom: 1px solid #999;
+    font-size: 30px;
+    padding: 0 0 10px;
+}
+
+h3 {
+	font-size: 20px;
+    margin: 0;
+}
+
+p {
+
+}
+
+#admin-projects-list {
+	margin: 0 auto;
+    width: 800px;
+}
+
+.project-wrapper {
+	border-bottom: 1px dotted #333;
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+}
+
+.project-image-wrapper {
+	float: left;
+    width: 40%;
+}
+
+.project-info-wrapper {
+	float: right;
+    width: 60%;
+}
+
+.project-data-totals {
+	font-weight: bold;
+}
+
+.project-data-totals span {
+
+}
+
+.pink-button {
+	background: #ff4d79 none repeat scroll 0 0 !important;
+    border: medium none !important;
+    border-radius: 5px;
+    color: #fff !important;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.pink-light-button {
+	background: #FF8AA7 none repeat scroll 0 0 !important;
+    border: medium none !important;
+    border-radius: 5px;
+    color: #fff !important;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 0 0;
+}
+
+.admin-projects-list-item {
+	margin: 0 0 20px;
+	padding: 10px;
+	background: #fff;
+	border: 1px dotted #ddd;
+}
+
+.admin-projects-list-item h3 {
+	border-bottom: 1px dashed #ddd;
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+}
+
+.admin-projects-list-item-img {
+	float: left;
+	width: 400px;
+	margin: 0 20px 0 0;
+}
+
+.admin-projects-list-item-data {
+	float: right;
+	width: 350px;
+}
+
+.admin-projects-list-item-data table {
+	width: 100%;
+}
+
+.admin-projects-list-item-data thead {
+	background: #eee;
+}
+
+.admin-projects-list-item-data th {
+	font-weight: bold;
+	border-bottom: 1px solid #aaa;
+	text-align: left;
+}
+
+.admin-projects-list-item-data th,
+.admin-projects-list-item-data td {
+	padding: 5px;
+	width: 45%;
+}
+
+.admin-projects-list-item .pink-button {
+	margin: 10px 0 0;
+}
+
+.admin-projects-list-item-complete {
+	text-align: center;
+	color: #fff;
+	padding: 10px;
+	background: #2d2d2d;
+	margin: 10px 0 0;
+}
+
+.clear {
+	clear: both;
+}

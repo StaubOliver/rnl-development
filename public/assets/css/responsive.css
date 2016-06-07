@@ -1,0 +1,76 @@
+/**
+*	Citizen Science CSS - Responsive styles
+*	@author rob.dunne@manchester.ac.uk
+*/
+
+/* mobile */
+@media (max-width: 400px) {
+	#project-header,
+	#project-selection {
+		display: none;
+	}
+	
+	#phone-warning {
+		display: block;
+	}
+	
+	#share-tab {
+		display: none;
+	}
+	
+	.container {
+		padding: 0;
+	}
+}
+
+/* phablet (also point when grid becomes active) */
+@media (max-width: 550px) {
+	#project-header,
+	#project-selection {
+		display: none;
+	}
+	
+	#phone-warning {
+		display: block;
+	}
+	
+	#share-tab {
+		display: none;
+	}
+	
+	.container {
+		padding: 0;
+	}
+}
+
+/* tablet */
+@media (max-width: 750px) {
+	#project-header,
+	#project-selection {
+		display: none;
+	}
+	
+	#phone-warning {
+		display: block;
+	}
+	
+	#share-tab {
+		display: none;
+	}
+	
+	.container {
+		padding: 0;
+	}
+}
+
+/* Old desktop */
+@media (max-width: 1000px) {
+	.project-image-wrapper {
+		display: none;
+	}
+}
+
+/* Desktop HD */
+@media (max-width: 1200px) {
+	
+}

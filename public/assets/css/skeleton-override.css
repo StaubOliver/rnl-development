@@ -1,0 +1,31 @@
+/**
+*	Citizen Science CSS: Skeleton overrides
+*	@author rob.dunne@manchester.ac.uk
+*/
+
+.container {
+	width: 100%;
+	max-width: 100%;
+}
+
+.nine.columns {
+    width: 78%;
+}
+
+main .three.columns {
+    margin: 0;
+}
+
+select:focus,
+input:focus {
+	border: 1px solid #ff4d79 !important;
+}
+
+option:focus {
+	outline: 0;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
