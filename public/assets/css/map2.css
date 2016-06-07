@@ -20,8 +20,8 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	height:100%;
 }
 
-.main-layout-left .margin-right: {
-	margin: 0 !important;
+.main-layout-left, .margin-right, .col-md-9, .col-md-3{
+	padding: 0 !important;
 }
 
 .main-layout-right{
