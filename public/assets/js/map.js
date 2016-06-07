@@ -2,6 +2,7 @@ var actualmap;
 var markers = [];
 
 var infoWindow;
+var user_id = "0";
 
 var filter = [];
 filter['project'] = "-1";
@@ -28,7 +29,7 @@ function deleteMarkers() {
 
 
 
-function createMarkers(info){
+function createMarkers(info, http){
 	var marker = new google.maps.Marker({
 		map: actualmap,
 		position: new google.maps.LatLng(info['lat'], info['lng']),
@@ -38,6 +39,7 @@ function createMarkers(info){
 	marker.addListener("click", function(){
 		infoWindow.close;
 		infoWindow.setContent(info["content"])
+		logActivity(http, ,)
 		infoWindow.open('actualmap', marker);
 	});
 
@@ -90,7 +92,7 @@ function refresh(http)
 			+ "</div>"
 			;
 
-			createMarkers(info);	
+			createMarkers(info, http);	
 		});
 	});
 }
@@ -130,8 +132,8 @@ var map = angular.module('map', [])
 	};
 
 	actualmap = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+	
 	refresh($http);
-
 });
 
 map.controller('navbarSection', function($scope, $http){
@@ -142,6 +144,7 @@ map.controller('navbarSection', function($scope, $http){
 	$http.get('/api/profile/getdetails/').success(function(data, status, headers, config) {
 		// Update the profile page and taskbar
 		$scope.profile.id = data.profile.id;
+		user_id = data.profile.id;
 		$scope.profile.username = data.profile.username;
 		$scope.profile.email = data.profile.email;
 		$scope.profile.last_login = data.profile.last_login;
@@ -160,12 +163,7 @@ map.controller('filterSection', function($scope, $http){
 	$scope.selectedAgeMax = filter['ageMax'];
 	$scope.selectedCollector = filter['collector'];
 
-	$scope.user_id = "0";
-	$http.get('/api/profile/getdetails/').success(function(data, status, headers, config) {
-			// Update the profile page and taskbar
-			$scope.user_id = data.profile.id;
-			console.log(data.profile.id);
-	});
+	$scope.user_id = user_id;
 
 	/*
 	$scope.selectedProject = "-1";
