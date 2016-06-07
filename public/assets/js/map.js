@@ -38,7 +38,7 @@ function createMarkers(info, http){
 		infoWindow.close;
 		infoWindow.setContent(info["content"]);
 		logActivity(http, "Click on fossil "+info['id']+" "+info['title'], user_id);
-		document.getElementById('modal-image-title').innerHTML = info['title'];
+		document.getElementById('modal-image-title').innerHTML = info['title'] + " | " + info['age'];
 		document.getElementById('modal-image-body').innerHTML = "<img class='img-responsive' src= "+info["url"]+">";
 		infoWindow.open('actualmap', marker);
 	});
@@ -61,6 +61,9 @@ function refresh(http)
 			info['id'] = item['data_id'];
 			info['location'] = item['place']+ ' ' + item['country'];
 			info['url'] = item['url'];
+			info['age'] = item['age'];
+			info['collector'] = item['collector'];
+
 			var info_window_genus = "";
 
 			if (item['genus'] == 'Not listed')
