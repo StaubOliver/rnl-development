@@ -3,14 +3,12 @@ var markers = [];
 
 var infoWindow;
 
-
 var filter = [];
 filter['project'] = "-1";
 filter['genus'] = "-1";
 filter['ageMin'] = "Quaternary";
 filter['ageMax'] = 'Precambrian';
 filter['collector'] = '-1';
-
 
 // Sets the map on all markers in the array.
 function setMapOnAll(map) {
@@ -101,7 +99,6 @@ function show_img(url){
 	console.log(url);
 }
 	
-
 
 var map = angular.module('map', [])
 .controller('GoogleMap', function($scope, $http){
