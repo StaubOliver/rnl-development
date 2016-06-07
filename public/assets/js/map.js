@@ -126,9 +126,11 @@ var map = angular.module('map', [])
 	
 	$scope.loading = false;
 
+	map_zoom = 3;
+
 	var mapProp = {
 	    center:new google.maps.LatLng(51.508742,-0.120850),
-	    zoom:3,
+	    zoom:map_zoom,
 	    mapTypeId:google.maps.MapTypeId.ROADMAP,
 	    mapTypeControl:false,
 	    streetViewControl:false
@@ -137,12 +139,24 @@ var map = angular.module('map', [])
 	actualmap = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 	
 	actualmap.addListener("click", function(){
-			console.log('map clicked');
+		console.log('map clicked');
 	});
 
 	actualmap.addListener("dragend", function(){
-			console.log('map dragged');
+		console.log('map dragged');
 	});
+
+	actualmap.addListener("zoom_changed", function(){
+		new_zoom = actualmap.getZoom();
+		if (new_zoom>map_zoom){
+			console.log("zoom out");
+		}
+		else {
+			console.log("zoom in");
+		}
+		map_zoom=new_zoom;
+	});
+
 
 	refresh($http);
 });
