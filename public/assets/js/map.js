@@ -195,7 +195,8 @@ map.controller('filterSection', function($scope, $http){
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         	
     	}).success(function(data, status, headers, config) {
-			console.log("success")
+			console.log("success");
+			console.log(scope.activity)
 		});
 	}
 
