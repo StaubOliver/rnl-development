@@ -25,6 +25,11 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	padding: 0 !important;
 }
 */
+
+.col-md-9{
+	margin:0px;
+}
+
 .main-layout-right{
 	overflow: auto;
 }
