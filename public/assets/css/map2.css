@@ -50,7 +50,6 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 .filter-element{
 	margin-top:15px;
 	margin-bottom:15px;
-	background-color: red;
 	padding-top: 6px;
 	padding-bottom: 6px;
 
@@ -64,8 +63,6 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 
 .feedback-section{
 	margin-top: 20px;
-	margin-left:20px;
-	margin-right:20px;
 
 	padding-top:10px;
 	padding-left:15px;
