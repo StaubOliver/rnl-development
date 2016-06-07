@@ -182,7 +182,10 @@ map.controller('filterSection', function($scope, $http){
 		console.log($a);
 		$scope.activity = {};
 		$scope.activity.activity = $a;
-		$scope.activity.user_id = "1";
+		$http.get('/api/profile/getdetails/').success(function(data, status, headers, config) {
+			// Update the profile page and taskbar
+			$scope.activity.user_id = data.profile.id;
+		});
 		// Do the ajax call
 		$http({
             method : 'POST',
