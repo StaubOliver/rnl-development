@@ -20,7 +20,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	height:100%;
 }
 
-.main-layout-left, .margin-right, .col-md-9, .col-md-3{
+.main-layout-left, .margin-right, .col-md-9, .col-md-3, .col-md-12{
 	padding: 0 !important;
 }
 
