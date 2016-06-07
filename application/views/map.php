@@ -55,7 +55,7 @@
 
 <body>
 	<!-- Header -->
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller='map-navbar'>
 		<div class="container-fluid">
 
 			<div class="navbar-header">
@@ -64,7 +64,7 @@
 
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li><p class="navbar-text">Hello Stranger</p></li>
+					<li><p class="navbar-text">Hello {{profile.first_name}}</p></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><p class="navbar-text">Profil</p></li>
