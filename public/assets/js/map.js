@@ -59,6 +59,7 @@ function refresh(http)
 			info['lat'] = item['lat'];
 			info['lng'] = item['lng'];
 			info['id'] = item['data_id'];
+			info['location'] = item['place']+ ' ' + item['country'];
 			var info_window_genus = "";
 
 			if (item['genus'] == 'Not listed')
@@ -86,6 +87,7 @@ function refresh(http)
 							+ "</br> <strong> Species : </strong> " + item["species"]
 							+ "</br> <strong> Age : </strong>" + item['age']
 							+ "</br> <strong> Collector : </strong>"+ item["collector"]
+							+ "</br> <strong> Location : </strong>" + item["place"] + " " + item["country"]
 						+ "</p>"
 
 					+ "</div>"

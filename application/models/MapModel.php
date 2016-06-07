@@ -354,10 +354,7 @@ class MapModel extends CI_Model {
                             'lng' => $temp[1]
                             );
 
-                        $this->db->update($table, $up);
-
-
-                    
+                        $this->db->update($table, $up);                    
                     }
 
                     //return $row;
