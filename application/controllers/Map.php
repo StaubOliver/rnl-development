@@ -35,6 +35,7 @@ class map extends CI_Controller {
 			$data['collectors'] = $this->MapModel->loadCollector();
 			$data['is_admin'] = $this->ProfileModel->isAdmin();
 			$data['logged_in'] = false;
+			
 			if ($this->ion_auth->logged_in()){
 				$data['logged_in'] = true;
 			}
