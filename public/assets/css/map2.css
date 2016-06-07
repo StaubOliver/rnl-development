@@ -7,6 +7,10 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	height:100%;
 }
 
+.main-layout{
+	width: 100px;
+}
+
 .map-section{
 	background-color:#EEEEEE;
 	border-radius: 2px;
