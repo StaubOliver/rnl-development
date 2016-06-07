@@ -82,13 +82,23 @@ function refresh(http)
 
 					+ "<div class='col-md-6'>"
 
-						+ "<p> "
-							+ "<strong> Genus : </strong> " + info_window_genus
-							+ "</br> <strong> Species : </strong> " + item["species"]
-							+ "</br> <strong> Age : </strong>" + item['age']
-							+ "</br> <strong> Collector : </strong>"+ item["collector"]
-							+ "</br> <strong> Location : </strong>" + item["place"] + " " + item["country"]
-						+ "</p>"
+						+ "<div class='row'>"
+							+ "<div class='col-xs-12'>"
+								+ "<p><strong> Genus : </strong> " + info_window_genus + "</p>"
+							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<p> <strong> Species : </strong> " + item["species"] + "</p>"
+							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<p> <strong> Age : </strong>" + item['age'] + "</p>"
+							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<p> <strong> Collector : </strong>"+ item["collector"] + "</p>"
+							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<p> <strong> Location : </strong>" + item["place"] + " " + item["country"] + "</p>"
+							+ "</div>"
+						+"</div>"
 
 					+ "</div>"
 				+ "</div>"
@@ -140,23 +150,23 @@ var map = angular.module('map', [])
 	
 	actualmap.addListener("click", function(){
 		console.log('map clicked');
-		logActivity($http, "Map click", user_id);
+		logActivity($http, "Map Click", user_id);
 	});
 
 	actualmap.addListener("dragend", function(){
 		console.log('map dragged');
-		logActivity($http, "Map drag", user_id);
+		logActivity($http, "Map Pan", user_id);
 	});
 
 	actualmap.addListener("zoom_changed", function(){
 		new_zoom = actualmap.getZoom();
 		if (new_zoom>map_zoom){
 			console.log("zoom in");
-			logActivity($http, "Map zoom in", user_id);
+			logActivity($http, "Map Zoom in", user_id);
 		}
 		else {
 			console.log("zoom out");
-			logActivity($http, "Map zoom out", user_id);
+			logActivity($http, "Map Zoom out", user_id);
 		}
 		map_zoom=new_zoom;
 	});
@@ -209,7 +219,7 @@ map.controller('filterSection', function($scope, $http){
 	$scope.newGenus = function(){
 		filter['genus'] = $scope.selectedGenus;
 		refresh($http);
-		logActivity($http, "Genus Selector Change Value", user_id);
+		logActivity($http, "Filter Genus Selector Change Value", user_id);
 	}
 
 	$scope.newAgeMin = function(){
@@ -225,7 +235,7 @@ map.controller('filterSection', function($scope, $http){
 	$scope.newCollector = function(){
 		filter['collector'] = $scope.selectedCollector;
 		refresh($http);
-		logActivity($http, "Collector Selector Change Value", user_id);
+		logActivity($http, "Filter Collector Selector Change Value", user_id);
 	}
 
 	$scope.recordActivity = function($a){
