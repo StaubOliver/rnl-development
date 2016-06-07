@@ -158,6 +158,7 @@ body{
 	width: 175px;
 	height:auto;
 	margin-right: 10px;
+	cursor: pointer;
 }
 
 .infowindow-text{
