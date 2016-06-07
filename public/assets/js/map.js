@@ -78,7 +78,7 @@ function refresh(http)
 			}
 			
 			info['content'] = 
-			"<div class='map-infowindow'>"
+			"<div class='container-fluid map-infowindow'>"
 				+ "<div class='row'>"
 
 					+ "<div class='col-md-6'>"
