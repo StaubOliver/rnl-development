@@ -7,10 +7,7 @@ body{
 	background-color:#EEEEEE;
 	border-radius: 2px;
 	box-shadow: 0px 1px 10px #CCCCCC;
-	position: absolute;
 	width:auto;
-	top:50px;
-	bottom: 0;
 }
 
 #googleMap{
