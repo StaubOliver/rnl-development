@@ -30,6 +30,10 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 
 .filter-section{
 	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+
+
 	padding-top:10px;
 	padding-left:15px;
 	padding-right:15px;
@@ -62,9 +66,9 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 
 
 .feedback-section{
-	margin-top: 25px;
+	margin-top: 20px;
 	margin-left:20px;
-	margin-right:60px;
+	margin-right:20px;
 
 	padding-top:10px;
 	padding-left:15px;
