@@ -81,7 +81,7 @@ function refresh(http)
 				+ "<div class='row'>"
 
 					+ "<div class='col-md-6'>"
-						+ "<img data-toggle='modal' data-target='#myModal' src='"+item["url"]+"' class='map-infowindow-img' onclick='show_img(123)''>"
+						+ "<img data-toggle='modal' data-target='#myModal' src='"+item["url"]+"' class='map-infowindow-img' onclick='show_img(123)'>"
 					+ "</div>"
 
 					+ "<div class='col-md-6'>"
