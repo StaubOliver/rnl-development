@@ -122,7 +122,7 @@ var map = angular.module('map', [])
 map.controller('navbarSection', function($scope, $http){
 
 	$scope.profile = {};
-	$scope.profile.first_name = 'John Smith';
+	$scope.profile.first_name = 'stranger, do you fancy a login ?';
 
 	$http.get('/api/profile/getdetails/').success(function(data, status, headers, config) {
 		// Update the profile page and taskbar
