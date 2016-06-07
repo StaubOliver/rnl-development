@@ -33,11 +33,13 @@ class map extends CI_Controller {
 			$data['projects'] = $this->MapModel->loadProject();
 			$data['genuses'] = $this->MapModel->loadGenuses();
 			$data['collectors'] = $this->MapModel->loadCollector();
-			$data['is_admin'] = $this->ProfileModel->isAdmin();
 			$data['logged_in'] = false;
-			
+
 			if ($this->ion_auth->logged_in()){
 				$data['logged_in'] = true;
+				$data['is_admin'] = $this->ProfileModel->isAdmin();
+			} else{
+				$data['is_admine'] = "0";
 			}
 
 			$this->load->view('map', $data);
