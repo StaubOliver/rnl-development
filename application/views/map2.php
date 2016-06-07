@@ -197,7 +197,7 @@
 
 						<!-- Geological Age --> 
 						<div class="row filter-element">
-							<div class="col-md-3">
+							<div class="col-md-4">
 								<h6>Geological Age</h6>
 							</div>
 							<div class="col-md-4">
@@ -288,7 +288,7 @@
 
 						<!-- Collector -->
 						<div class="row filter-element">
-							<div class="col-md-3">
+							<div class="col-md-4">
 								<h6>Collector</h6>
 							</div>
 							<div class="col-md-8">
