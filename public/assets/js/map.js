@@ -205,7 +205,7 @@ map.controller('filterSection', function($scope, $http){
 	}
 
 	$scope.recordActivity = function($a){
-		logActivity($a);
+		logActivity($http, $a, $scope.user_id);
 	};
 });
 
