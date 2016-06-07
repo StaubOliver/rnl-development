@@ -2,7 +2,7 @@ var actualmap;
 var markers = [];
 
 var infoWindow;
-var user_id = "0";
+var user_id;
 
 var filter = [];
 filter['project'] = "-1";
@@ -38,8 +38,7 @@ function createMarkers(info, http){
 
 	marker.addListener("click", function(){
 		infoWindow.close;
-		infoWindow.setContent(info["content"])
-		logActivity(http, ,)
+		infoWindow.setContent(info["content"]);
 		infoWindow.open('actualmap', marker);
 	});
 
@@ -143,7 +142,6 @@ map.controller('navbarSection', function($scope, $http){
 
 	$http.get('/api/profile/getdetails/').success(function(data, status, headers, config) {
 		// Update the profile page and taskbar
-		$scope.profile.id = data.profile.id;
 		user_id = data.profile.id;
 		$scope.profile.username = data.profile.username;
 		$scope.profile.email = data.profile.email;
