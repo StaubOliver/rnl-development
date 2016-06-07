@@ -161,7 +161,7 @@ map.controller('filterSection', function($scope, $http){
 	$scope.selectedAgeMax = "Precambrian";
 	$scope.selectedCollector = "-1";
 	*/
-	
+	/*
 	var refresh = function(){
 		deleteMarkers();
 		//retrieve the fossils and put them as marker in the map
@@ -205,6 +205,7 @@ map.controller('filterSection', function($scope, $http){
 			});
 		});
 	}
+	*/
 
 	var logActivity = function($a){
 		console.log($a);
@@ -225,28 +226,28 @@ map.controller('filterSection', function($scope, $http){
 
 	$scope.newProject = function (){
 		filter['project'] = $scope.selectedProject;
-		refresh();
+		refresh($http);
 	}
 
 	$scope.newGenus = function(){
 		filter['genus'] = $scope.selectedGenus;
-		refresh();
+		refresh($http);
 		logActivity("Genus Selector Change Value");
 	}
 
 	$scope.newAgeMin = function(){
 		filter['ageMin'] = $scope.selectedAgeMin;
-		refresh();
+		refresh($http);
 	}
 
 	$scope.newAgeMax = function(){
 		filter['ageMax'] = $scope.selectedAgeMax;
-		refresh();
+		refresh($http);
 	}
 
 	$scope.newCollector = function(){
 		filter['collector'] = $scope.selectedCollector;
-		refresh();
+		refresh($http);
 		logActivity("Collector Selector Change Value");
 	}
 
