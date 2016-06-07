@@ -130,8 +130,8 @@ body{
 .map-header{
 	z-index: 5;
 	position: absolute;
-	top: 95px;
-	left: 40px;
+	top: 50px;
+	left: 50px;
 	width: 169px;
 	height: 84px;
 	background-color: white;
