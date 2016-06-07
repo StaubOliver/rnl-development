@@ -76,7 +76,7 @@
 		 			<li><a href ="/auth/logout" class="navbar-link">Logout</a></li>
 					<?php endif; ?>	
 					<?php if($logged_in == false): ?>
-		 			<li><a href ="/auth/login_map" class="navbar-link">Login</a></li>
+		 			<li><a href ="/auth/login" class="navbar-link">Login</a></li>
 					<?php endif; ?>	
 				</ul>
 			</div>
