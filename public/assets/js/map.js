@@ -27,8 +27,6 @@ function deleteMarkers() {
   markers = [];
 }
 
-
-
 function createMarkers(info, http){
 	var marker = new google.maps.Marker({
 		map: actualmap,
@@ -99,7 +97,7 @@ function refresh(http)
 								+ "<p class='infowindow-text'> <strong> Location : </strong>" + item["place"] + " " + item["country"] + "</p>"
 							+ "</div>"
 							+ "<div class='col-xs-12'>"
-								+ "<p class='infowindow-text'style='text-align:right'>Wrong spot ?</p>"
+								+ "<p class='infowindow-text'>Wrong spot ?</p>"
 							+ "</div>"
 						+"</div>"
 
@@ -202,17 +200,7 @@ map.controller('filterSection', function($scope, $http){
 	$scope.selectedGenus = filter['genus'];
 	$scope.selectedAgeMin = filter['ageMin'];
 	$scope.selectedAgeMax = filter['ageMax'];
-	$scope.selectedCollector = filter['collector'];
-
-	/*
-	$scope.selectedProject = "-1";
-	$scope.selectedGenus = "-1";
-	$scope.selectedAgeMin = "Quaternary";
-	$scope.selectedAgeMax = "Precambrian";
-	$scope.selectedCollector = "-1";
-	*/
-
-	
+	$scope.selectedCollector = filter['collector'];	
 
 	$scope.newProject = function (){
 		filter['project'] = $scope.selectedProject;
