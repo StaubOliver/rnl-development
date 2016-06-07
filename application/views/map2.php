@@ -83,14 +83,16 @@
 		</div>
 	</nav>
 
+	<div class="map-header">
+		<img class="map-header-img" src="http://assets.manchester.ac.uk/logos/museum-1.png" alt="Hello there" height="84" width="169">
+	</div>
+
 	<div class="row main-layout">
 
 		<div class="col-md-9 main-layout-left">
 			<!-- Map -->
 			<div class='controller-googleMap' ng-controller='GoogleMap'>
-				<div class="map-header">
-					<img class="map-header-img" src="http://assets.manchester.ac.uk/logos/museum-1.png" alt="Hello there" height="84" width="169">
-				</div>
+				
 
 				<!-- Modal to show large pictures -->
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -319,7 +321,7 @@
 							</div>
 						</div>
 
-						
+
 						<div class="feedback-message-form">
 							<form>
 								<div class="row feedback-form">
