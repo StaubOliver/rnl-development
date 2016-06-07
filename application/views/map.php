@@ -132,7 +132,7 @@
 			
 					<div class="row">
 						<div class="col-md-12 filter-title">
-							<h4>Filter what's plotted on the map</h4>
+							<h4>Filter what's being plotted on the map</h4>
 						</div>
 					</div>
 
@@ -315,7 +315,7 @@
 
 					<div class="row">
 						<div class="col-md-12 feedback-title">
-							<h4>Feedback</h4>
+							<h4>Share your thoughts</h4>
 						</div>
 					</div>
 
