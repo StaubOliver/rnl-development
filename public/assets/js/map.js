@@ -39,7 +39,7 @@ function createMarkers(info, http){
 	marker.addListener("click", function(){
 		infoWindow.close;
 		infoWindow.setContent(info["content"]);
-		logActivity(http, "Click on fossil "+info['data_id'], user_id);
+		logActivity(http, "Click on fossil "+info['id'], user_id);
 		infoWindow.open('actualmap', marker);
 	});
 
