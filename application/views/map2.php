@@ -174,7 +174,7 @@
 						-->
 						<!-- Genus --> 
 						<div class="row filter-element">
-							<div class="col-md-3">
+							<div class="col-md-4">
 								<h6>Genus</h6>
 							</div>
 							<div class="col-md-8">
