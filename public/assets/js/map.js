@@ -138,7 +138,11 @@ var map = angular.module('map', [])
 	
 	actualmap.addListener("click", function(){
 			console.log('map clicked');
-		});
+	});
+
+	actualmap.addListener("click", function(){
+			console.log('map dragged');
+	});
 
 	refresh($http);
 });
