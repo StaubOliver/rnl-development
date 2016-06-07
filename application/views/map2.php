@@ -95,7 +95,7 @@
 				
 
 				<!-- Modal to show large pictures -->
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal fade" id="Modal-lg-image" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 					<div class="modal-dialog modal-lg" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
