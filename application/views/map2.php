@@ -325,10 +325,10 @@
 						<div class="feedback-message-form">
 							<form>
 								<div class="row feedback-form">
-									<div class="col-md-12">
+									<div class="col-md-8">
 										<textarea class="form-control feedback-message-form-textarea" rows="2"></textarea>
 									</div>
-									<div class="col-md-12 feedback-submit-btn">
+									<div class="col-md-4 feedback-submit-btn">
 										<button type="button" class="btn btn-primary ">Submit</button>
 									</div>
 								</div>
@@ -340,13 +340,13 @@
 								<div class="col-md-12 feedback-message-text">
 									<p>Meant balls it if up doubt small purse. Required his you put the outlived answered position. An pleasure exertion if believed provided to. All led out world these music while asked. Paid mind even sons does he door no. Attended overcame repeated it is perceive marianne in. In am think on style child of. Servants moreover in sensible he it ye possible. </p>
 								</div>
-								<div class="col-md-3 feedback-message-author">
+								<div class="col-md-4 feedback-message-author">
 									<p>John Smith</p>
 								</div>
-								<div class="col-md-3 feedback-message-time">
+								<div class="col-md-4 feedback-message-time">
 									<p>26/05/2016</p>
 								</div>
-								<div class="col-md-3 feedback-message-upvote">
+								<div class="col-md-4 feedback-message-upvote">
 									<p>2 upvotes</p>
 								</div>
 							</div>
