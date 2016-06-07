@@ -164,7 +164,7 @@ var map = angular.module('map', [])
 	actualmap.addListener("dragend", function(){
 		console.log('map dragged');
 		logActivity($http, "Map Pan", user_id);
-		console.log(actualmap.getCenter());
+		console.log(actualmap.getCenter().toString());
 	});
 
 	actualmap.addListener("zoom_changed", function(){
