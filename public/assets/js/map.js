@@ -196,7 +196,7 @@ map.controller('filterSection', function($scope, $http){
         	
     	}).success(function(data, status, headers, config) {
 			console.log("success");
-			console.log(scope.activity)
+			console.log($scope.activity)
 		});
 	}
 
