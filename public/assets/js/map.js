@@ -27,18 +27,32 @@ function deleteMarkers() {
   markers = [];
 }
 
+function pinSymbol(color) {
+    return {
+        path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z M -2,-30 a 2,2 0 1,1 4,0 2,2 0 1,1 -4,0',
+        fillColor: color,
+        fillOpacity: 1,
+        strokeColor: '#000',
+        strokeWeight: 2,
+        scale: 1,
+   };
+}
+
+
 function createMarkers(info, http){
 	var marker = new google.maps.Marker({
 		map: actualmap,
 		position: new google.maps.LatLng(info['lat'], info['lng']),
 		title: info['title'],
-		icon: {
+		/*icon: {
 	        path: google.maps.SymbolPath.CIRCLE,
-	        scale: 2.5,
+	        scale: 6,
 	        fillColor: "#F00",
 	        fillOpacity: 1,
 	        strokeWeight: 0.4
-	    }
+	    }, */
+	    icon: pinSymbol('#fff'),
+	    text:"false"
 	});
 
 	marker.addListener("mouseover", function(){
@@ -72,7 +86,7 @@ function createMarkers(info, http){
 	});
 
 	marker.addListener("click", function(){
-		marker.setIcon({
+			marker.setIcon({
             path: google.maps.SymbolPath.CIRCLE,
             scale: 10,
             fillColor: "#00F",
