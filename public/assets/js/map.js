@@ -275,6 +275,7 @@ var map = angular.module('map', [])
 		console.log(index);
 		console.log($scope.selected_markers.length);
 		console.log("yeah");
+		infoWindow.close;
 	}
 
 
