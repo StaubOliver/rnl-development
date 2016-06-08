@@ -85,7 +85,7 @@ var map = angular.module('map', [])
 			//log activity
 			logActivity(http, "Hover on fossil "+info['id']+" "+info['title'], user_id);
 
-			//marker_clicked_for_selection = marker;
+			marker_clicked_for_selection = marker;
 			//info window
 			infoWindow.close;
 			var content =
@@ -230,12 +230,12 @@ var map = angular.module('map', [])
 
 	$scope.click_on_marker_for_selection = function(){
 		//marker selection
-		var index = selected_markers.indexOf(marker);
+		var index = selected_markers.indexOf(marker_clicked_for_selection);
 		if (index==-1){
-			select_marker(marker);
+			select_marker(marker_clicked_for_selection);
 			logActivity(http, "Fossil selected "+info['id']+" "+info['title'], user_id)
 		} else {
-			deselect_marker(marker, index);
+			deselect_marker(marker_clicked_for_selection, index);
 			logActivity(http, "Fossil deselected "+info['id']+" "+info['title'], user_id)
 
 		}
