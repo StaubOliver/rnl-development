@@ -37,7 +37,7 @@ function pinSymbol(color) {
         scale: 1,
    };
 }*/
-
+var pinColor = "FE7569";
 var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
         new google.maps.Size(21, 34),
         new google.maps.Point(0,0),
