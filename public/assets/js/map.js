@@ -37,7 +37,7 @@ function createMarkers(info, http){
 	marker.addListener("mouseover", function(){
 		infoWindow.close;
 		infoWindow.setContent(info["content"]);
-		logActivity(http, "Click on fossil "+info['id']+" "+info['title'], user_id);
+		logActivity(http, "Hover on fossil "+info['id']+" "+info['title'], user_id);
 		document.getElementById('modal-image-title').innerHTML = "Fossil details";
 		document.getElementById('modal-image-body').innerHTML =
 		"<div class='row'>"
@@ -62,6 +62,10 @@ function createMarkers(info, http){
 		+ "</div>";
 
 		infoWindow.open('actualmap', marker);
+	});
+
+	marker.addListener("click", function(){
+		//select the marker
 	});
 
 	markers.push(marker);
@@ -252,7 +256,7 @@ map.controller('filterSection', function($scope, $http){
 	$scope.newGenus = function(){
 		filter['genus'] = $scope.selectedGenus;
 		refresh($http);
-		logActivity($http, "Filter Genus Selector Change Value", user_id);
+		logActivity($http, "Filter Genus Selector Change Value "+$scope.selectedGenus, user_id);
 	}
 
 	$scope.newAgeMin = function(){
@@ -268,7 +272,7 @@ map.controller('filterSection', function($scope, $http){
 	$scope.newCollector = function(){
 		filter['collector'] = $scope.selectedCollector;
 		refresh($http);
-		logActivity($http, "Filter Collector Selector Change Value", user_id);
+		logActivity($http, "Filter Collector Selector Change Value "+$scope.selectedCollector, user_id);
 	}
 
 	$scope.recordActivity = function($a){
