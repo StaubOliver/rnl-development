@@ -337,10 +337,10 @@
 										</div>
 									</div>
 									<div class="col-md-6 feedback-clear-btn">
-										<button type="button" class="btn btn-default" ng-show="selected_markers.length > 0" ng-click="clear_selected_markers()">Clear</button>
+										<button type="button" class="btn btn-default btn-sm" ng-show="selected_markers.length > 0" ng-click="clear_selected_markers()">Clear</button>
 									</div>
 									<div class="col-md-6 feedback-submit-btn">
-										<button type="button" class="btn btn-primary ">Save</button>
+										<button type="button" class="btn btn-primary btn-sm">Save</button>
 									</div>
 								</div>
 							</form>
