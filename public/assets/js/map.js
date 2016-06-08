@@ -127,7 +127,7 @@ var map = angular.module('map', [])
 			+ "</div>"
 			;
 
-			var compiled = $compile(content)(scope);
+			var compiled = $compile(content)($scope);
 
 			infoWindow.setContent(compiled[0]);
 			
