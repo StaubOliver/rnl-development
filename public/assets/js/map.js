@@ -29,18 +29,9 @@ function deleteMarkers() {
   markers = [];
 }
 
-function pinSymbol(color) {
-    return {
-        path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z M -2,-30 a 2,2 0 1,1 4,0 2,2 0 1,1 -4,0',
-        fillColor: color,
-        fillOpacity: 1,
-        strokeColor: '#000',
-        strokeWeight: 2,
-        scale: 1,
-   };
+var getPin = function(color){
+	return "http://www.googlemapsmarkers.com/v1/"+color+"/"
 }
-
-var pinWhite= pinSymbol('#FFF');
 
 function createMarkers(info, http){
 
@@ -56,7 +47,7 @@ function createMarkers(info, http){
 	        strokeWeight: 0.4
 	    }, */
 	    //icon: pinSymbol('#fff'),
-	    icon: "http://www.googlemapsmarkers.com/v1/009900/",
+	    icon: getPin("009900"),
 	    text:"false"
 	});
 
@@ -91,13 +82,10 @@ function createMarkers(info, http){
 	});
 
 	marker.addListener("click", function(){
-			marker.setIcon({
-            path: google.maps.SymbolPath.CIRCLE,
-            scale: 10,
-            fillColor: "#00F",
-            fillOpacity: 0.8,
-            strokeWeight: 1
-        });
+		if (selected_markers.indexOf(marker)==-1){
+			selected_markers.push(marker);
+			marker.setIcon()
+		};
 	});
 
 	markers.push(marker);
