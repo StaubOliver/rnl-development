@@ -6,7 +6,7 @@ var map = angular.module('map', [])
 	var actualmap;
 
 	var markers = [];
-	var selected_markers = [];
+	var $scope.selected_markers = [];
 
 	var infoWindow;
 	var user_id;
@@ -47,18 +47,18 @@ var map = angular.module('map', [])
 	}
 
 	function deselect_all_marker(){
-		for (var i=0; i < selected_markers.length; i++){
-			selected_markers[i].setIcon(getPin("009900"));
+		for (var i=0; i < $scope.selected_markers.length; i++){
+			$scope.selected_markers[i].setIcon(getPin("009900"));
 		}
 	}
 
 	function select_marker(marker){
-		selected_markers.push(marker);
+		$scope.selected_markers.push(marker);
 		marker.setIcon(getPin("ff4d79"));
 	}
 
 	function deselect_marker(marker, index){
-		selected_markers.splice(index,1);
+		$scope.selected_markers.splice(index,1);
 		marker.setIcon(getPin("212a33"));
 	}
 
@@ -91,7 +91,7 @@ var map = angular.module('map', [])
 			//info window
 			infoWindow.close;
 			var text_select_btn = "";
-			var index = selected_markers.indexOf(marker_clicked_for_selection);
+			var index = $scope.selected_markers.indexOf(marker_clicked_for_selection);
 			if (index==-1){
 				$scope.text_select_btn = "Select this Fossil";
 			} else {
@@ -239,7 +239,7 @@ var map = angular.module('map', [])
 
 	$scope.click_on_marker_for_selection = function(id){
 		//marker selection
-		var index = selected_markers.indexOf(marker_clicked_for_selection);
+		var index = $scope.selected_markers.indexOf(marker_clicked_for_selection);
 		if (index==-1){
 			select_marker(marker_clicked_for_selection);
 			logActivity($http, "Fossil selected "+id+" "+marker_clicked_for_selection['title'], user_id);
@@ -251,7 +251,7 @@ var map = angular.module('map', [])
 
 		}
 		console.log(index);
-		console.log(selected_markers.length);
+		console.log($scope.selected_markers.length);
 		console.log("yeah");
 	}
 
