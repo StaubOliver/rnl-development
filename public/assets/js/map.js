@@ -129,7 +129,7 @@ var map = angular.module('map', [])
 
 			var compiled = $compile(content)($scope);
 
-			infoWindow.setContent(compiled);
+			infoWindow.setContent(compiled[0]);
 			
 			//modal for large image view
 			document.getElementById('modal-image-title').innerHTML = "Fossil details";
