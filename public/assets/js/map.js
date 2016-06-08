@@ -118,7 +118,7 @@ var map = angular.module('map', [])
 								+ "<a class='infowindow-text' href='#'>Wrong spot ?</a>"
 							+ "</div>"
 							+ "<div class='col-xs-12'>"
-								+ "<a href='#' ng-click='$parent.click_on_marker_for_selection();'>Select this fossil</a>"
+								+ "<a href='#' ng-click='$click_on_marker_for_selection();'>Select this fossil</a>"
 							+ "</div>"
 						+"</div>"
 
@@ -127,8 +127,9 @@ var map = angular.module('map', [])
 			+ "</div>"
 			;
 
+			var compiled = $compile(content)($scope);
 
-			infoWindow.setContent(content);
+			infoWindow = new google.maps.infoWindow({content:compiled[0]});
 			
 			//modal for large image view
 			document.getElementById('modal-image-title').innerHTML = "Fossil details";
