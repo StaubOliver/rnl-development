@@ -99,7 +99,7 @@ var map = angular.module('map', [])
 			//log activity
 			logActivity(http, "Hover on fossil "+info['id']+" "+info['title'], user_id);
 
-			marker_clicked_for_selection = marker;
+			//marker_clicked_for_selection = marker;
 			//info window
 			infoWindow.close;
 			var content = 
@@ -174,7 +174,6 @@ var map = angular.module('map', [])
 	}
 
 	
-
 	function refresh(http)
 	{
 		deleteMarkers();
