@@ -88,7 +88,7 @@ function createMarkers(info, http){
 			selected_markers.push(marker);
 			marker.setIcon(getPin("DD0000"));
 		} else{
-			selected_markers = selected_markers.splice(index,1);
+			selected_markers.splice(index,1);
 			marker.setIcon(getPin("009900"));
 		}
 		console.log(index);
