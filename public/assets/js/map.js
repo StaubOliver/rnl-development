@@ -38,7 +38,7 @@ function createMarkers(info, http){
 		infoWindow.close;
 		infoWindow.setContent(info["content"]);
 		logActivity(http, "Click on fossil "+info['id']+" "+info['title'], user_id);
-		document.getElementById('modal-image-title').innerHTML = info['title'] + " | " + info['age'];
+		document.getElementById('modal-image-title').innerHTML = "Fossil details";
 		document.getElementById('modal-image-body').innerHTML =
 		"<div class='row'>"
 			+ "<div class='col-md-12'>"
