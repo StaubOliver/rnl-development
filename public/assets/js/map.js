@@ -242,11 +242,11 @@ var map = angular.module('map', [])
 		var index = selected_markers.indexOf(marker_clicked_for_selection);
 		if (index==-1){
 			select_marker(marker_clicked_for_selection);
-			logActivity(http, "Fossil selected "+info['id']+" "+info['title'], user_id);
+			logActivity($http, "Fossil selected "+info['id']+" "+info['title'], user_id);
 			$scope.text_select_btn = "Select this Fossil";
 		} else {
 			deselect_marker(marker_clicked_for_selection, index);
-			logActivity(http, "Fossil deselected "+info['id']+" "+info['title'], user_id);
+			logActivity($http, "Fossil deselected "+info['id']+" "+info['title'], user_id);
 			$scope.text_select_btn = "Deselect this Fossil";
 
 		}
