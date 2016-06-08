@@ -53,10 +53,10 @@ var map = angular.module('map', [])
 	}
 
 	$scope.remove_marker = function(marker, index){
-		deselect_marker(marker, index);
-		if (marker === $scope.marker_clicked_for_selection){
+		if (index == $scope.selected_markers.indexOf(marker_clicked_for_selection)){
 			$scope.text_select_btn = "Select this Fossil";
 		}
+		deselect_marker(marker, index);
 	}
 
 	function select_marker(marker){
