@@ -38,7 +38,7 @@ var map = angular.module('map', [])
 		console.log(index);
 		console.log(selected_markers.length);*/
 		console.log("yeah");
-	}
+	};
 
 	// Sets the map on all markers in the array.
 	function setMapOnAll(map) {
