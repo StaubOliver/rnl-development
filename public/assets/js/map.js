@@ -62,6 +62,8 @@ var map = angular.module('map', [])
 		marker.setIcon(getPin("212a33"));
 	}
 
+	$scope.text_select_btn = "";
+
 	function createMarkers(info, http){
 
 		var marker = new google.maps.Marker({
@@ -91,9 +93,9 @@ var map = angular.module('map', [])
 			var text_select_btn = "";
 			var index = selected_markers.indexOf(marker_clicked_for_selection);
 			if (index==-1){
-				text_select_btn = "Select this Fossil";
+				$scope.text_select_btn = "Select this Fossil";
 			} else {
-				text_select_btn = "Deselect this Fossil";
+				$scope.text_select_btn = "Deselect this Fossil";
 			}
 			var content =
 			"<div class='container-fluid map-infowindow'>"
@@ -125,7 +127,7 @@ var map = angular.module('map', [])
 								+ "<a class='infowindow-text' href='#'>Wrong spot ?</a>"
 							+ "</div>"
 							+ "<div class='col-xs-12'>"
-								+ "<div class='btn btn-primary' ng-click='click_on_marker_for_selection();'>"+text_select_btn+"</div>"
+								+ "<div class='btn btn-primary' ng-click='click_on_marker_for_selection();'>{{text_select_btn}}</div>"
 							+ "</div>"
 						+"</div>"
 
@@ -240,10 +242,12 @@ var map = angular.module('map', [])
 		var index = selected_markers.indexOf(marker_clicked_for_selection);
 		if (index==-1){
 			select_marker(marker_clicked_for_selection);
-			logActivity(http, "Fossil selected "+info['id']+" "+info['title'], user_id)
+			logActivity(http, "Fossil selected "+info['id']+" "+info['title'], user_id);
+			$scope.text_select_btn = "Deselect this Fossil";
 		} else {
 			deselect_marker(marker_clicked_for_selection, index);
-			logActivity(http, "Fossil deselected "+info['id']+" "+info['title'], user_id)
+			logActivity(http, "Fossil deselected "+info['id']+" "+info['title'], user_id);
+			$scope.text_select_btn = "Select this Fossil";
 
 		}
 		console.log(index);
