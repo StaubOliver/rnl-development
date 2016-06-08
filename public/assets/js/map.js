@@ -1,7 +1,7 @@
 
 
 var map = angular.module('map', [])
-.controller('GoogleMap', function($scope, $http){
+.controller('GoogleMap', function($scope, $http, $compile){
 	
 	var actualmap;
 
