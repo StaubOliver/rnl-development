@@ -132,7 +132,7 @@ var map = angular.module('map', [])
 								+ "<a class='infowindow-text' href='#'>Wrong spot ?</a>"
 							+ "</div>"
 							+ "<div class='col-xs-12'>"
-								+ "<div ng-click='click_on_marker_for_selection();'>Select this fossil</div>"
+								+ "<a href='' ng-click='click_on_marker_for_selection();'>Select this fossil</a>"
 							+ "</div>"
 						+"</div>"
 
