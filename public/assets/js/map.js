@@ -102,7 +102,7 @@ var map = angular.module('map', [])
 			//marker_clicked_for_selection = marker;
 			//info window
 			infoWindow.close;
-			var content = 
+			var content = $compile(
 			"<div class='container-fluid map-infowindow'>"
 				+ "<div class='row'>"
 
@@ -139,7 +139,8 @@ var map = angular.module('map', [])
 					+ "</div>"
 				+ "</div>"
 			+ "</div>"
-			;
+			);
+			
 			infoWindow.setContent(content);
 			
 			//modal for large image view
