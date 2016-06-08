@@ -155,7 +155,7 @@ class MapModel extends CI_Model {
     }
 
 
-    function loadFeedbacks($filter){
+    function loadFeedbacks($data){
     	//using the data from the filter we create the where statement for querying the database
     	$where = [];
     	$i = 0;
