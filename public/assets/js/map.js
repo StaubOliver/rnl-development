@@ -181,6 +181,7 @@ var map = angular.module('map', [])
 	actualmap.addListener("click", function(){
 		console.log('map clicked');
 		logActivity($http, "Map Click", user_id);
+		infoWindow.close;
 	});
 
 	actualmap.addListener("dragend", function(){
