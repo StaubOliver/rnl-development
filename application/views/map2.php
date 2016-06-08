@@ -332,7 +332,7 @@
 									<div class="col-md-12">
 										<p>You can select fossils on the map:</p>
 										<div ng-repeat='fossil in selected_markers'>
-											<div class='col-md-6'>
+											<div class='btn btn-default'> 
 												{{fossil['title']}}
 											</div>
 										</div>
