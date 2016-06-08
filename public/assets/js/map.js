@@ -7,7 +7,6 @@ var map = angular.module('map', [])
 
 	var markers = [];
 	$scope.selected_markers = [];
-	$scope.text_select_btn = "";
 
 	var infoWindow;
 	var user_id;
@@ -61,8 +60,9 @@ var map = angular.module('map', [])
 	}
 
 	function select_marker(marker){
-		$scope.selected_markers.splice(index,1);
-		marker.setIcon(getPin("212a33"));
+		$scope.selected_markers.push(marker);
+		marker.setIcon(getPin("ff4d79"));
+		
 	}
 
 	function deselect_marker(marker, index){
@@ -70,7 +70,7 @@ var map = angular.module('map', [])
 		marker.setIcon(getPin("212a33"));
 	}
 
-	
+	$scope.text_select_btn = "";
 
 	function createMarkers(info, http){
 
