@@ -146,6 +146,11 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	text-align: right;
 }
 
+.feedback-clear-btn{
+	margin-top: 10px;
+	text-align: left;
+}
+
 .map-header{
 	z-index: 5;
 	position: absolute;
