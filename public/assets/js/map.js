@@ -16,7 +16,7 @@ var map = angular.module('map', [])
 	filter['ageMax'] = 'Precambrian';
 	filter['collector'] = '-1';
 
-	var $scope.marker_clicked_for_selection;
+	var $scope.marker_clicked_for_selection = {};
 
 	// Sets the map on all markers in the array.
 	function setMapOnAll(map) {
@@ -146,10 +146,8 @@ var map = angular.module('map', [])
 
 			infoWindow.open('actualmap', marker);
 
-			
 		});
 		
-
 		markers.push(marker);
 	}
 
