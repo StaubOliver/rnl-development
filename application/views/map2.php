@@ -333,7 +333,7 @@
 										<p>You can select fossils on the map:</p>
 										<div ng-repeat='fossil in selected_markers track by $index'>
 											<div class='btn btn-default' ng-click="click_on_marker_for_selection($index)"> 
-												{{fossil['title']}}
+												<button type="button" class="close"  aria-label="Close"><span aria-hidden="true">&times;</span></button>{{fossil['title']}}
 											</div>
 										</div>
 									</div>
