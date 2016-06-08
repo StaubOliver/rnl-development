@@ -332,7 +332,7 @@
 									<div class="col-md-12">
 										<p>You can select fossils on the map:</p>
 										<div ng-repeat='marker in selected_markers'>
-											<div class='btn btn-default btn-xs' ng-click="remove_marker(marker, $index)" > <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>{{ marker['title']}}
+											<div class='btn btn-default btn-xs' ng-click="remove_marker(marker, $index)" ng-mouseover="highlight_marker(marker)" ng-mouseleave="remove_highlight(marker)"> <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>{{ marker['title']}}
 											</div>
 										</div>
 									</div>

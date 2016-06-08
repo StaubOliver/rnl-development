@@ -46,6 +46,14 @@ var map = angular.module('map', [])
 		return "http://www.googlemapsmarkers.com/v1/"+color+"/"
 	}
 
+	$scope.highlight_marker(marker){
+		marker.setIcon(getPin("FF0000"));
+	}
+
+	$scope.remove_highlight(marker){
+		marker.setIcon(getPin("ff4d79"));
+	}
+
 	function deselect_all_marker(){
 		for (var i=0; i < $scope.selected_markers.length; i++){
 			$scope.selected_markers[i].setIcon(getPin("212a33"));
