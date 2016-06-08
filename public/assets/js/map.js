@@ -89,6 +89,7 @@ function createMarkers(info, http){
 			selected_markers = selected_markers.splice(selected_markers.indexOf(marker),1);
 			marker.setIcon(getPin("009900"));
 		}
+		console.log(selected_markers);
 	});
 
 	markers.push(marker);
