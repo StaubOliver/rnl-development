@@ -336,7 +336,10 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-md-12 feedback-submit-btn">
+									<div class="col-md-6 feedback-clear-btn">
+										<button type="button" class="btn btn-default ">Clear</button>
+									</div>
+									<div class="col-md-6 feedback-submit-btn">
 										<button type="button" class="btn btn-primary ">Save</button>
 									</div>
 								</div>
