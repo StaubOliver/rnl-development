@@ -169,13 +169,13 @@ class MapModel extends CI_Model {
     		$where[$i] = "species = " . $data['species'];
     		$i += 1;
     	}
-
+/*
 		$where[$i] = "age_min = " . $data['age_min'];
 		$i += 1;
 
         $where[$i] = "age_max = " . $data['age_max'];
         $i += 1;
-        
+ */       
 
     	if ($data['collector'] != "-1"){
     		$where[$i] = "colletor = " . $data['collector'];
@@ -184,11 +184,19 @@ class MapModel extends CI_Model {
 
     	$where_string = "";
 
-    	for ($j=0; $j<$i-1; $j++)
-    	{
-			$where_string .= $where[$j] . " AND ";
-    	}
-    	$where_string .= $where[$i-1];
+    	if ($i != 0)
+        {
+            for ($j=0; $j<$i-1; $j++)
+            {
+                $where_string .= $where[$j] . " AND ";
+            }
+            
+            $where_string .= $where[$i-1]; 
+        }
+        else {
+            $where_string = " 1";
+        }
+
 
     	//querying the database to find the filter id
     	$query = $this->db->query('SELECT filter_id FROM filter WHERE '.$where_string);
