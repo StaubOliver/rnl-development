@@ -52,9 +52,14 @@ var map = angular.module('map', [])
 		}
 	}
 
+	$scope.clear_selected_marker(){
+		deselect_all_marker();
+		$scope.text_select_btn = "Select this fossil"
+	}
+
 	$scope.remove_marker = function(marker, index){
 		if (index == $scope.selected_markers.indexOf(marker_clicked_for_selection)){
-			$scope.text_select_btn = "Select this Fossil";
+			$scope.text_select_btn = "Select this fossil";
 		}
 		deselect_marker(marker, index);
 	}
@@ -101,9 +106,9 @@ var map = angular.module('map', [])
 			var text_select_btn = "";
 			var index = $scope.selected_markers.indexOf(marker_clicked_for_selection);
 			if (index==-1){
-				$scope.text_select_btn = "Select this Fossil";
+				$scope.text_select_btn = "Select this fossil";
 			} else {
-				$scope.text_select_btn = "Deselect this Fossil";
+				$scope.text_select_btn = "Deselect this fossil";
 			}
 			var content =
 			"<div class='container-fluid map-infowindow'>"
@@ -250,12 +255,12 @@ var map = angular.module('map', [])
 		var index = $scope.selected_markers.indexOf(marker_clicked_for_selection);
 		if (index==-1){
 			select_marker(marker_clicked_for_selection);
-			logActivity($http, "Fossil selected "+id+" "+marker_clicked_for_selection['title'], user_id);
-			$scope.text_select_btn = "Deselect this Fossil";
+			logActivity($http, "fossil selected "+id+" "+marker_clicked_for_selection['title'], user_id);
+			$scope.text_select_btn = "Deselect this fossil";
 		} else {
 			deselect_marker(marker_clicked_for_selection, index);
-			logActivity($http, "Fossil deselected "+id+" "+marker_clicked_for_selection['title'], user_id);
-			$scope.text_select_btn = "Select this Fossil";
+			logActivity($http, "fossil deselected "+id+" "+marker_clicked_for_selection['title'], user_id);
+			$scope.text_select_btn = "Select this fossil";
 
 		}
 		console.log(index);
