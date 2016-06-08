@@ -47,7 +47,7 @@ var map = angular.module('map', [])
 	}
 
 	$scope.highlight_marker = function(marker){
-		marker.setIcon(getPin("FF0000"));
+		marker.setIcon(getPin("FFFFFF"));
 	}
 
 	$scope.remove_highlight = function(marker){
