@@ -24,7 +24,7 @@ var map = angular.module('map', [])
 
 	var marker_clicked_for_selection = {};
 
-	$scope.click_on_marker_for_selection = function(){
+	function click_on_marker_for_selection(){
 		//marker selection
 		/*var index = selected_markers.indexOf(marker);
 		if (index==-1){
@@ -102,7 +102,7 @@ var map = angular.module('map', [])
 			//marker_clicked_for_selection = marker;
 			//info window
 			infoWindow.close;
-			var content = $compile(
+			var content =
 			"<div class='container-fluid map-infowindow'>"
 				+ "<div class='row'>"
 
@@ -132,15 +132,15 @@ var map = angular.module('map', [])
 								+ "<a class='infowindow-text' href='#'>Wrong spot ?</a>"
 							+ "</div>"
 							+ "<div class='col-xs-12'>"
-								+ "<a href='#' ng-click='click_on_marker_for_selection();'>Select this fossil</a>"
+								+ "<a href='#' onclick='click_on_marker_for_selection();'>Select this fossil</a>"
 							+ "</div>"
 						+"</div>"
 
 					+ "</div>"
 				+ "</div>"
 			+ "</div>"
-			);
-			
+			;
+
 			infoWindow.setContent(content);
 			
 			//modal for large image view
