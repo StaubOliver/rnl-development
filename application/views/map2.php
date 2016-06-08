@@ -178,7 +178,7 @@
 								<h6>Genus</h6>
 							</div>
 							<div class="col-md-8">
-								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="newGenus()" ng-mouseover="recordActivity('Genus Selector Hover')">
+								<select class="form-control" id="fossilGenusSelect" ng-init="selectedGenus='-1'" ng-model="selectedGenus" ng-change="newGenus()" ng-mouseover="recordActivity('Genus Selector Hover')">
 									<option value="-1" selected>All Genuses</option>
 									<optgroup label="Coral genera">	
 									<?php
@@ -200,7 +200,7 @@
 								<h6>Geological Age</h6>
 							</div>
 							<div class="col-md-4">
-								<select class="form-control" id="fossilAge-min" ng-model="selectedAgeMin" ng-mouseover="recordActivity('Age Min Hover')" ng-init="selectedGenus='-1'">
+								<select class="form-control" id="fossilAge-min" ng-model="selectedAgeMin" ng-mouseover="recordActivity('Age Min Hover')">
 							  		<optgroup label="Geological ages">
 										<option value="Quaternary" selected>Quaternary</option>
 										<option value="Pliocene">Pliocene</option>
