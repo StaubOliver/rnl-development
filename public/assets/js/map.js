@@ -34,9 +34,9 @@ function createMarkers(info, http){
 		title: info['title'],
 		icon: {
 	        path: google.maps.SymbolPath.CIRCLE,
-	        scale: 8.5,
+	        scale: 2.5,
 	        fillColor: "#F00",
-	        fillOpacity: 0.4,
+	        fillOpacity: 1,
 	        strokeWeight: 0.4
 	    }
 	});
