@@ -51,7 +51,7 @@ function createMarkers(info, http){
 	        fillOpacity: 1,
 	        strokeWeight: 0.4
 	    }, */
-	    icon: pinSymbol('#fff'),
+	    //icon: pinSymbol('#fff'),
 	    text:"false"
 	});
 
