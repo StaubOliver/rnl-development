@@ -131,6 +131,9 @@ function refresh(http)
 							+ "<div class='col-xs-12'>"
 								+ "<a class='infowindow-text' href='#'>Wrong spot ?</a>"
 							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<button type='button' class='btn btn-primary'>Select this fossil</button>"
+							+ "</div>"
 						+"</div>"
 
 					+ "</div>"
