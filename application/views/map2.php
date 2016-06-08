@@ -332,9 +332,9 @@
 									<div class="col-md-12">
 										<p>You can select fossils on the map:</p>
 										<div ng-repeat='fossil in selected_markers track by $index'>
-											<div class='btn btn-default' ng-click="click_on_marker_for_selection($index)"> 
-												<button type="button" class="close"  aria-label="Close"><span aria-hidden="true">&times;</span></button>{{fossil['title']}}
-											</div>
+											<button class='btn btn-default' ng-click="click_on_marker_for_selection($index)"> 
+												<span class="glyphicon glyphicon-remove"></span>{{fossil['title']}}
+											</button>
 										</div>
 									</div>
 									<div class="col-md-12 feedback-submit-btn">
