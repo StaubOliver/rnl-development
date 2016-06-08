@@ -24,7 +24,7 @@ var map = angular.module('map', [])
 
 	var marker_clicked_for_selection = {};
 
-	function click_on_marker_for_selection(){
+	var click_on_marker_for_selection = function(){
 		//marker selection
 		/*var index = selected_markers.indexOf(marker);
 		if (index==-1){
