@@ -151,7 +151,7 @@ var map = angular.module('map', [])
 		markers.push(marker);
 	}
 
-	function click_on_marker_for_selection(){
+	function $scope.click_on_marker_for_selection(){
 		//marker selection
 		var index = selected_markers.indexOf(marker);
 		if (index==-1){
