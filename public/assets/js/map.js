@@ -26,7 +26,7 @@ function deleteMarkers() {
   clearMarkers();
   markers = [];
 }
-
+/*
 function pinSymbol(color) {
     return {
         path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z M -2,-30 a 2,2 0 1,1 4,0 2,2 0 1,1 -4,0',
@@ -36,8 +36,12 @@ function pinSymbol(color) {
         strokeWeight: 2,
         scale: 1,
    };
-}
+}*/
 
+var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+        new google.maps.Size(21, 34),
+        new google.maps.Point(0,0),
+        new google.maps.Point(10, 34));
 
 function createMarkers(info, http){
 	var marker = new google.maps.Marker({
@@ -52,6 +56,7 @@ function createMarkers(info, http){
 	        strokeWeight: 0.4
 	    }, */
 	    //icon: pinSymbol('#fff'),
+	    icon: pinImage,
 	    text:"false"
 	});
 
