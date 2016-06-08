@@ -127,7 +127,7 @@ var map = angular.module('map', [])
 								+ "<a class='infowindow-text' href='#'>Wrong spot ?</a>"
 							+ "</div>"
 							+ "<div class='col-xs-12'>"
-								+ "<div class='btn btn-primary' ng-click='click_on_marker_for_selection();'>{{text_select_btn}}</div>"
+								+ "<div class='btn btn-primary' ng-click='click_on_marker_for_selection("+info['id']+");'>{{text_select_btn}}</div>"
 							+ "</div>"
 						+"</div>"
 
@@ -237,16 +237,16 @@ var map = angular.module('map', [])
 		console.log(url);
 	}
 
-	$scope.click_on_marker_for_selection = function(){
+	$scope.click_on_marker_for_selection = function(id){
 		//marker selection
 		var index = selected_markers.indexOf(marker_clicked_for_selection);
 		if (index==-1){
 			select_marker(marker_clicked_for_selection);
-			logActivity($http, "Fossil selected "+info['id']+" "+info['title'], user_id);
+			logActivity($http, "Fossil selected "+id+" "+marker_clicked_for_selection['title'], user_id);
 			$scope.text_select_btn = "Select this Fossil";
 		} else {
 			deselect_marker(marker_clicked_for_selection, index);
-			logActivity($http, "Fossil deselected "+info['id']+" "+info['title'], user_id);
+			logActivity($http, "Fossil deselected "+id+" "+marker_clicked_for_selection['title'], user_id);
 			$scope.text_select_btn = "Deselect this Fossil";
 
 		}
