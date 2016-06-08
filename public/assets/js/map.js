@@ -230,7 +230,7 @@ var map = angular.module('map', [])
 
 	$scope.click_on_marker_for_selection = function(){
 		//marker selection
-		/*var index = selected_markers.indexOf(marker);
+		var index = selected_markers.indexOf(marker);
 		if (index==-1){
 			select_marker(marker);
 			logActivity(http, "Fossil selected "+info['id']+" "+info['title'], user_id)
@@ -240,7 +240,7 @@ var map = angular.module('map', [])
 
 		}
 		console.log(index);
-		console.log(selected_markers.length);*/
+		console.log(selected_markers.length);
 		console.log("yeah");
 	}
 
