@@ -24,6 +24,22 @@ var map = angular.module('map', [])
 
 	var marker_clicked_for_selection = {};
 
+	$scope.click_on_marker_for_selection = function(){
+		//marker selection
+		/*var index = selected_markers.indexOf(marker);
+		if (index==-1){
+			select_marker(marker);
+			logActivity(http, "Fossil selected "+info['id']+" "+info['title'], user_id)
+		} else {
+			deselect_marker(marker, index);
+			logActivity(http, "Fossil deselected "+info['id']+" "+info['title'], user_id)
+
+		}
+		console.log(index);
+		console.log(selected_markers.length);*/
+		console.log("yeah");
+	}
+
 	// Sets the map on all markers in the array.
 	function setMapOnAll(map) {
 		for (var i = 0; i < markers.length; i++) {
@@ -157,21 +173,7 @@ var map = angular.module('map', [])
 		markers.push(marker);
 	}
 
-	$scope.click_on_marker_for_selection = function(){
-		//marker selection
-		/*var index = selected_markers.indexOf(marker);
-		if (index==-1){
-			select_marker(marker);
-			logActivity(http, "Fossil selected "+info['id']+" "+info['title'], user_id)
-		} else {
-			deselect_marker(marker, index);
-			logActivity(http, "Fossil deselected "+info['id']+" "+info['title'], user_id)
-
-		}
-		console.log(index);
-		console.log(selected_markers.length);*/
-		console.log("yeah");
-	}
+	
 
 	function refresh(http)
 	{
