@@ -16,6 +16,8 @@ var map = angular.module('map', [])
 	filter['ageMax'] = 'Precambrian';
 	filter['collector'] = '-1';
 
+	var $scope.marker_clicked_for_selection;
+
 	// Sets the map on all markers in the array.
 	function setMapOnAll(map) {
 		for (var i = 0; i < markers.length; i++) {
@@ -71,10 +73,54 @@ var map = angular.module('map', [])
 		});
 		
 		marker.addListener("click", function(){
+
+			//log activity
+			logActivity(http, "Hover on fossil "+info['id']+" "+info['title'], user_id);
+
+			$scope.marker_clicked_for_selection = marker;
 			//info window
 			infoWindow.close;
-			infoWindow.setContent(info["content"]);
-			logActivity(http, "Hover on fossil "+info['id']+" "+info['title'], user_id);
+			var content = 
+			"<div class='container-fluid map-infowindow'>"
+				+ "<div class='row'>"
+
+					+ "<div class='col-md-6'>"
+						+ "<img data-toggle='modal' data-target='#Modal-lg-image' src='"+info["url"]+"' class='map-infowindow-img' onclick='show_img(\""+item['url']+"\")'>"
+					+ "</div>"
+
+					+ "<div class='col-md-6'>"
+
+						+ "<div class='row'>"
+							+ "<div class='col-xs-12'>"
+								+ "<p class='infowindow-text'><strong> Genus : </strong> " + info['title'] + "</p>"
+							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<p class='infowindow-text'> <strong> Species : </strong> " + info["species"] + "</p>"
+							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<p class='infowindow-text'> <strong> Age : </strong>" + info['age'] + "</p>"
+							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<p class='infowindow-text'> <strong> Collector : </strong>"+ info["collector"] + "</p>"
+							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<p class='infowindow-text'> <strong> Location : </strong>" + info["place"] + " " + info["country"] + "</p>"
+							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<a class='infowindow-text' href='#'>Wrong spot ?</a>"
+							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<button type='button' class='btn btn-primary' ng-click='click_on_marker_for_selection()'>Select this fossil</button>"
+							+ "</div>"
+						+"</div>"
+
+					+ "</div>"
+				+ "</div>"
+			+ "</div>"
+			;
+			infoWindow.setContent(content);
+			
+			//modal for large image view
 			document.getElementById('modal-image-title').innerHTML = "Fossil details";
 			document.getElementById('modal-image-body').innerHTML =
 			"<div class='row'>"
@@ -100,22 +146,26 @@ var map = angular.module('map', [])
 
 			infoWindow.open('actualmap', marker);
 
-			//marquer selection
-			var index = selected_markers.indexOf(marker);
-			if (index==-1){
-				select_marker(marker);
-				logActivity(http, "Fossil selected "+info['id']+" "+info['title'], user_id)
-			} else {
-				deselect_marker(marker, index);
-				logActivity(http, "Fossil deselected "+info['id']+" "+info['title'], user_id)
-
-			}
-			console.log(index);
-			console.log(selected_markers.length);
+			
 		});
 		
 
 		markers.push(marker);
+	}
+
+	function click_on_marker_for_selection(){
+		//marker selection
+		var index = selected_markers.indexOf(marker);
+		if (index==-1){
+			select_marker(marker);
+			logActivity(http, "Fossil selected "+info['id']+" "+info['title'], user_id)
+		} else {
+			deselect_marker(marker, index);
+			logActivity(http, "Fossil deselected "+info['id']+" "+info['title'], user_id)
+
+		}
+		console.log(index);
+		console.log(selected_markers.length);
 	}
 
 	function refresh(http)
@@ -142,52 +192,11 @@ var map = angular.module('map', [])
 				if (item['genus'] == 'Not listed')
 				{
 					info['title'] = item['genuscustom'] + " " + item['species'];
-					info_window_genus = item['genuscustom'];
 				}
 				else{
 					info['title'] = item['genus'] + " " + item['species'];
-					info_window_genus = item['genus'];
 				}
 				
-				info['content'] = 
-				"<div class='container-fluid map-infowindow'>"
-					+ "<div class='row'>"
-
-						+ "<div class='col-md-6'>"
-							+ "<img data-toggle='modal' data-target='#Modal-lg-image' src='"+item["url"]+"' class='map-infowindow-img' onclick='show_img(\""+item['url']+"\")'>"
-						+ "</div>"
-
-						+ "<div class='col-md-6'>"
-
-							+ "<div class='row'>"
-								+ "<div class='col-xs-12'>"
-									+ "<p class='infowindow-text'><strong> Genus : </strong> " + info_window_genus + "</p>"
-								+ "</div>"
-								+ "<div class='col-xs-12'>"
-									+ "<p class='infowindow-text'> <strong> Species : </strong> " + item["species"] + "</p>"
-								+ "</div>"
-								+ "<div class='col-xs-12'>"
-									+ "<p class='infowindow-text'> <strong> Age : </strong>" + item['age'] + "</p>"
-								+ "</div>"
-								+ "<div class='col-xs-12'>"
-									+ "<p class='infowindow-text'> <strong> Collector : </strong>"+ item["collector"] + "</p>"
-								+ "</div>"
-								+ "<div class='col-xs-12'>"
-									+ "<p class='infowindow-text'> <strong> Location : </strong>" + item["place"] + " " + item["country"] + "</p>"
-								+ "</div>"
-								+ "<div class='col-xs-12'>"
-									+ "<a class='infowindow-text' href='#'>Wrong spot ?</a>"
-								+ "</div>"
-								+ "<div class='col-xs-12'>"
-									+ "<button type='button' class='btn btn-primary' >Select this fossil</button>"
-								+ "</div>"
-							+"</div>"
-
-						+ "</div>"
-					+ "</div>"
-				+ "</div>"
-				;
-
 				createMarkers(info, http);	
 			});
 		});
