@@ -44,7 +44,7 @@ function select_marker(marker){
 	marker.setIcon(getPin("DD0000"));
 }
 
-function deselect_marker(marker){
+function deselect_marker(marker, index){
 	selected_markers.splice(index,1);
 	marker.setIcon(getPin("009900"));
 }
@@ -103,8 +103,8 @@ function createMarkers(info, http){
 		if (index==-1){
 			select_marker(marker);
 			logActivity(http, "Fossil selected "+info['id']+" "+info['title'], user_id)
-		} else{
-			deselect_marker(marker);
+		} else {
+			deselect_marker(marker, index);
 			logActivity(http, "Fossil deselected "+info['id']+" "+info['title'], user_id)
 
 		}
