@@ -142,10 +142,12 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 }
 
 .feedback-submit-btn{
+	margin-top: 5px;
 	text-align: right;
 }
 
 .feedback-clear-btn{
+	margin-top: 5px;
 	text-align: left;
 }
 
