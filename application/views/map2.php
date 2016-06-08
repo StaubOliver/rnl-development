@@ -330,6 +330,7 @@
 										<textarea class="form-control feedback-message-form-textarea" rows="2"></textarea>
 									</div>
 									<div class="col-md-12">
+										<p>You can select fossils on the map:</p>
 										<div ng-repeat='fossil in selected_markers'>
 											{{fossil['title']}}
 										</div>
