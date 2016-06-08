@@ -85,7 +85,7 @@ var map = angular.module('map', [])
 				+ "<div class='row'>"
 
 					+ "<div class='col-md-6'>"
-						+ "<img data-toggle='modal' data-target='#Modal-lg-image' src='"+info["url"]+"' class='map-infowindow-img' onclick='show_img(\""+item['url']+"\")'>"
+						+ "<img data-toggle='modal' data-target='#Modal-lg-image' src='"+info["url"]+"' class='map-infowindow-img' onclick='show_img(\""+info['url']+"\")'>"
 					+ "</div>"
 
 					+ "<div class='col-md-6'>"
