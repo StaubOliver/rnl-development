@@ -160,15 +160,9 @@ class MapModel extends CI_Model {
     	$where = [];
     	$i = 0;
     	
-    	if ($data['genus'] != "-1"){
-    		$where[$i] = "genus = " . $data['genus'];
-			$i += 1;
-    	}
+		$where[$i] = "genus = " . $data['genus'];
+		$i += 1;
 
-    	if ($data['species'] != "-1"){
-    		$where[$i] = "species = " . $data['species'];
-    		$i += 1;
-    	}
 /*
 		$where[$i] = "age_min = " . $data['age_min'];
 		$i += 1;
@@ -177,10 +171,8 @@ class MapModel extends CI_Model {
         $i += 1;
  */       
 
-    	if ($data['collector'] != "-1"){
-    		$where[$i] = "colletor = " . $data['collector'];
-    		$i += 1;
-    	}
+		$where[$i] = "colletor = " . $data['collector'];
+		$i += 1;
 
     	$where_string = "";
 
@@ -203,23 +195,28 @@ class MapModel extends CI_Model {
 
     	if ($query->num_rows() > 0)
     	{
+            $return = array();
     		//if the filter is found we use it to retrieve the feedabcks
     		$row = $query->row_array();
     		$filter_id = $row['filter_id'];
 
-    		$query = $this->db->query('SELECT feedback_id, user_id, time, message FROM feedback WHERE filter_id='.$filter_id);
+    		$query2 = $this->db->query('SELECT feedback_id, user_id, time, message FROM feedback WHERE filter_id='.$filter_id);
 
-    		if ($query->num_rows > 0)
+    		if ($query2->num_rows > 0)
     		{
     			//we found some feedbacks related to that filter
-    			return $query->result_array();
+    			foreach ($query2->result_array() as $row){
+                    $return[] = $row;
+                }
+
+                return $return;
     		} else {
     			//if we didn't we return an empty array
-    			return array();
+    			return $return;
     		}
     	} else {
     		//if the filter is not found then no feedbacks are recorded. We return an emty array
-    		return array();
+    		return $return;
     	}
     }
 
