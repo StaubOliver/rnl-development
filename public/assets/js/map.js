@@ -50,7 +50,7 @@ function createMarkers(info, http){
 	    icon: getPin("009900"),
 	    text:"false"
 	});
-
+	/*
 	marker.addListener("mouseover", function(){
 		infoWindow.close;
 		infoWindow.setContent(info["content"]);
@@ -80,7 +80,7 @@ function createMarkers(info, http){
 
 		infoWindow.open('actualmap', marker);
 	});
-
+	*/
 	marker.addListener("click", function(){
 
 		var index = selected_markers.indexOf(marker);
@@ -92,6 +92,7 @@ function createMarkers(info, http){
 			marker.setIcon(getPin("009900"));
 		}
 		console.log(index);
+		console.log(selected_markers.length);
 	});
 
 	markers.push(marker);
