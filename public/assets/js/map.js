@@ -11,13 +11,13 @@ var map = angular.module('map', [])
 
 	var filter = [];
 	filter['project'] = "-1";
-	filter['genus'] = "-1";
+	filter['genus'] = $scope.selectedGenus;
 	filter['ageMin'] = "Quaternary";
 	filter['ageMax'] = 'Precambrian';
 	filter['collector'] = '-1';
 
 	$scope.selectedProject = filter['project'];
-	$scope.selectedGenus = filter['genus'];
+	//$scope.selectedGenus = filter['genus'];
 	$scope.selectedAgeMin = filter['ageMin'];
 	$scope.selectedAgeMax = filter['ageMax'];
 	$scope.selectedCollector = filter['collector'];	

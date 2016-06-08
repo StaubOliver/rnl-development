@@ -200,7 +200,7 @@
 								<h6>Geological Age</h6>
 							</div>
 							<div class="col-md-4">
-								<select class="form-control" id="fossilAge-min" ng-model="selectedAgeMin" ng-mouseover="recordActivity('Age Min Hover')">
+								<select class="form-control" id="fossilAge-min" ng-model="selectedAgeMin" ng-mouseover="recordActivity('Age Min Hover')" ng-init="selectedGenus='-1'">
 							  		<optgroup label="Geological ages">
 										<option value="Quaternary" selected>Quaternary</option>
 										<option value="Pliocene">Pliocene</option>
