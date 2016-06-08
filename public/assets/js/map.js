@@ -71,6 +71,7 @@ var map = angular.module('map', [])
 		});
 		
 		marker.addListener("cilck", function(){
+			//info window
 			infoWindow.close;
 			infoWindow.setContent(info["content"]);
 			logActivity(http, "Hover on fossil "+info['id']+" "+info['title'], user_id);
@@ -98,10 +99,8 @@ var map = angular.module('map', [])
 			+ "</div>";
 
 			infoWindow.open('actualmap', marker);
-		});
-		
-		marker.addListener("click", function(){
 
+			//marquer selection
 			var index = selected_markers.indexOf(marker);
 			if (index==-1){
 				select_marker(marker);
@@ -114,6 +113,7 @@ var map = angular.module('map', [])
 			console.log(index);
 			console.log(selected_markers.length);
 		});
+		
 
 		markers.push(marker);
 	}
