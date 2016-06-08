@@ -39,6 +39,16 @@ function deselect_all_marker(){
 	}
 }
 
+function select_marker(marker){
+	selected_markers.push(marker);
+	marker.setIcon(getPin("DD0000"));
+}
+
+function deselect_marker(marker){
+	selected_markers.splice(index,1);
+	marker.setIcon(getPin("009900"));
+}
+
 function createMarkers(info, http){
 
 	var marker = new google.maps.Marker({
@@ -56,7 +66,7 @@ function createMarkers(info, http){
 	    icon: getPin("009900"),
 	    text:"false"
 	});
-	/*
+	
 	marker.addListener("mouseover", function(){
 		infoWindow.close;
 		infoWindow.setContent(info["content"]);
@@ -86,16 +96,17 @@ function createMarkers(info, http){
 
 		infoWindow.open('actualmap', marker);
 	});
-	*/
+	
 	marker.addListener("click", function(){
 
 		var index = selected_markers.indexOf(marker);
 		if (index==-1){
-			selected_markers.push(marker);
-			marker.setIcon(getPin("DD0000"));
+			select_marker(marker);
+			logActivity(http, "Fossil selected "+info['id']+" "+info['title'], user_id)
 		} else{
-			selected_markers.splice(index,1);
-			marker.setIcon(getPin("009900"));
+			deselect_marker(marker);
+			logActivity(http, "Fossil deselected "+info['id']+" "+info['title'], user_id)
+
 		}
 		console.log(index);
 		console.log(selected_markers.length);
