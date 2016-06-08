@@ -16,6 +16,12 @@ var map = angular.module('map', [])
 	filter['ageMax'] = 'Precambrian';
 	filter['collector'] = '-1';
 
+	$scope.selectedProject = filter['project'];
+	$scope.selectedGenus = filter['genus'];
+	$scope.selectedAgeMin = filter['ageMin'];
+	$scope.selectedAgeMax = filter['ageMax'];
+	$scope.selectedCollector = filter['collector'];	
+
 	var marker_clicked_for_selection = {};
 
 	// Sets the map on all markers in the array.
@@ -110,7 +116,7 @@ var map = angular.module('map', [])
 								+ "<a class='infowindow-text' href='#'>Wrong spot ?</a>"
 							+ "</div>"
 							+ "<div class='col-xs-12'>"
-								+ "<button type='button' class='btn btn-primary' ng-click='click_on_marker_for_selection()'>Select this fossil</button>"
+								+ "<div type='button' class='btn btn-primary' ng-click='click_on_marker_for_selection()'>Select this fossil</div>"
 							+ "</div>"
 						+"</div>"
 
@@ -293,13 +299,7 @@ var map = angular.module('map', [])
 
 	});
 
-	//Filter Section
-	$scope.selectedProject = filter['project'];
-	$scope.selectedGenus = filter['genus'];
-	$scope.selectedAgeMin = filter['ageMin'];
-	$scope.selectedAgeMax = filter['ageMax'];
-	$scope.selectedCollector = filter['collector'];	
-
+	//filter Section
 	$scope.newProject = function (){
 		filter['project'] = $scope.selectedProject;
 		refresh($http);
