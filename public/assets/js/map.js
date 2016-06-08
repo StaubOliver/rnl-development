@@ -54,7 +54,7 @@ function createMarkers(info, http){
 				+ "<p><strong>Age : </strong>" + info['age'] + "</p>"
 			+ "</div>"
 			+ "<div class='col-md-8'>"
-				+ "<p><strong>Location : </strong>" + info['species'] + "</p>"
+				+ "<p><strong>Location : </strong>" + info['location'] + "</p>"
 			+ "</div>"
 			+ "<div class='col-md-4'>"
 				+ "<p><strong>Collector : </strong>" + info['collector'] + "</p>"
