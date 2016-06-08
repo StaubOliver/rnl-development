@@ -1,3 +1,7 @@
+show_img = function(url){
+	console.log(url);
+}
+
 var map = angular.module('map', [])
 .controller('GoogleMap', function($scope, $http){
 	
@@ -220,7 +224,7 @@ var map = angular.module('map', [])
 		});
 	}
 
-	var show_img = function(url){
+	function show_img = function(url){
 		console.log(url);
 	}
 
