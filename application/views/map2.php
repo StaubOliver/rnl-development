@@ -53,9 +53,9 @@
 
 </head>
 
-<body>
+<body ng-controller="GoogleMap">
 	<!-- Header -->
-	<nav ng-controller='navbarSection' class="navbar navbar-inverse navbar-fixed-top" >
+	<nav class="navbar navbar-inverse navbar-fixed-top" >
 		<div class="container-fluid">
 
 			<div class="navbar-header">
@@ -91,7 +91,7 @@
 
 		<div class="col-md-9 main-layout-left">
 			<!-- Map -->
-			<div class='controller-googleMap' ng-controller='GoogleMap'>
+			<div class='controller-googleMap'>
 				
 
 				<!-- Modal to show large pictures -->
@@ -129,7 +129,7 @@
 			<!-- Filter  & Feedback -->
 			<div class="row">
 				<!-- Filter -->
-				<div class="col-md-12" ng-controller='filterSection'>
+				<div class="col-md-12" >
 					<div class="filter-section">
 				
 						<div class="row">

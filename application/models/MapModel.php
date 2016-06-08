@@ -208,7 +208,6 @@ class MapModel extends CI_Model {
     			foreach ($query2->result_array() as $row){
                     $return[] = $row;
                 }
-
                 return $return;
     		} else {
     			//if we didn't we return an empty array

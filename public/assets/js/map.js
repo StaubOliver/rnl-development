@@ -1,4 +1,7 @@
-var actualmap;
+var map = angular.module('map', [])
+.controller('GoogleMap', function($scope, $http){
+	
+	var actualmap;
 
 var markers = [];
 var selected_markers = [];
@@ -221,9 +224,7 @@ function show_img(url){
 	console.log(url);
 }
 
-var map = angular.module('map', [])
-.controller('GoogleMap', function($scope, $http){
-	
+
 	$scope.loading = false;
 
 	$scope.map_zoom = 3;
@@ -267,9 +268,7 @@ var map = angular.module('map', [])
 
 
 	refresh($http);
-});
 
-map.controller('navbarSection', function($scope, $http){
 
 	$scope.profile = {};
 	$scope.profile.first_name = 'stranger, do you fancy a login ?';
@@ -285,9 +284,6 @@ map.controller('navbarSection', function($scope, $http){
 		$scope.profile.last_name = data.profile.last_name;
 
 	});
-});
-
-map.controller('filterSection', function($scope, $http){
 
 	$scope.selectedProject = filter['project'];
 	$scope.selectedGenus = filter['genus'];
@@ -330,6 +326,8 @@ map.controller('filterSection', function($scope, $http){
 	$scope.recordActivity = function($a){
 		logActivity($http, $a, user_id);
 	};
+
+	
 });
 
 
