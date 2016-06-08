@@ -329,6 +329,11 @@
 									<div class="col-md-12">
 										<textarea class="form-control feedback-message-form-textarea" rows="2"></textarea>
 									</div>
+									<div class="col-md-12">
+										<div ng-repeat='fossil in selected_markers'>
+											{{fossil['title']}}
+										</div>
+									</div>
 									<div class="col-md-12 feedback-submit-btn">
 										<button type="button" class="btn btn-primary ">Save</button>
 									</div>
