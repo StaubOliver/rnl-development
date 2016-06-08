@@ -16,7 +16,7 @@ var map = angular.module('map', [])
 	filter['ageMax'] = 'Precambrian';
 	filter['collector'] = '-1';
 
-	var $scope.marker_clicked_for_selection = {};
+	var marker_clicked_for_selection = {};
 
 	// Sets the map on all markers in the array.
 	function setMapOnAll(map) {
@@ -77,7 +77,7 @@ var map = angular.module('map', [])
 			//log activity
 			logActivity(http, "Hover on fossil "+info['id']+" "+info['title'], user_id);
 
-			$scope.marker_clicked_for_selection = marker;
+			marker_clicked_for_selection = marker;
 			//info window
 			infoWindow.close;
 			var content = 
