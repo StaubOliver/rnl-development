@@ -44,12 +44,12 @@ var map = angular.module('map', [])
 
 	function select_marker(marker){
 		selected_markers.push(marker);
-		marker.setIcon(getPin("DD0000"));
+		marker.setIcon(getPin("ff4d79"));
 	}
 
 	function deselect_marker(marker, index){
 		selected_markers.splice(index,1);
-		marker.setIcon(getPin("009900"));
+		marker.setIcon(getPin("212a33"));
 	}
 
 	function createMarkers(info, http){
@@ -66,7 +66,7 @@ var map = angular.module('map', [])
 		        strokeWeight: 0.4
 		    }, */
 		    //icon: pinSymbol('#fff'),
-		    icon: getPin("009900"),
+		    icon: getPin("212a33"),
 		    text:"false"
 		});
 		
