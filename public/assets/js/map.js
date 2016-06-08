@@ -84,8 +84,11 @@ function createMarkers(info, http){
 	marker.addListener("click", function(){
 		if (selected_markers.indexOf(marker)==-1){
 			selected_markers.push(marker);
-			marker.setIcon()
-		};
+			marker.setIcon(getPin("990000"));
+		} else{
+			selected_markers = selected_markers.splice(selected_markers.indexOf(marker),1);
+			marker.setIcon(getPin("009900"));
+		}
 	});
 
 	markers.push(marker);
