@@ -24,7 +24,7 @@ var map = angular.module('map', [])
 	}
 
 	function clearMarkers() {
-	 	setpOnAll(null);
+	 	setMapOnAll(null);
 	}
 
 	function deleteMarkers() {
