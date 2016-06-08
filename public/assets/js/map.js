@@ -34,7 +34,7 @@ function createMarkers(info, http){
 		title: info['title']
 	});
 
-	marker.addListener("click", function(){
+	marker.addListener("mouseover", function(){
 		infoWindow.close;
 		infoWindow.setContent(info["content"]);
 		logActivity(http, "Click on fossil "+info['id']+" "+info['title'], user_id);
