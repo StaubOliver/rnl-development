@@ -65,7 +65,7 @@ function createMarkers(info, http){
 	});
 
 	marker.addListener("click", function(){
-		//select the marker
+		marker.icon='https://maps.google.com/mapfiles/kml/shapes/info-i_maps.png';
 	});
 
 	markers.push(marker);
@@ -281,14 +281,6 @@ map.controller('filterSection', function($scope, $http){
 	$scope.recordActivity = function($a){
 		logActivity($http, $a, user_id);
 	};
-});
-
-map.controller('feedbackSection', function($scope, $http){
-
-
-	
-
-
 });
 
 
