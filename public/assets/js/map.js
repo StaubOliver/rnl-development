@@ -7,6 +7,7 @@ var map = angular.module('map', [])
 
 	var markers = [];
 	$scope.selected_markers = [];
+	$scope.text_select_btn = "";
 
 	var infoWindow;
 	var user_id;
@@ -25,7 +26,6 @@ var map = angular.module('map', [])
 	//$scope.selectedCollector = filter['collector'];	
 
 	var marker_clicked_for_selection = {};
-	$scope.marker_from_list = {};
 
 	// Sets the map on all markers in the array.
 	function setMapOnAll(map) {
@@ -55,11 +55,14 @@ var map = angular.module('map', [])
 
 	$scope.remove_marker = function(marker, index){
 		deselect_marker(marker, index);
+		if (marker == $scope.marker_clicked_for_selection){
+			$scope.text_select_btn = "Select this Fossil";
+		}
 	}
 
 	function select_marker(marker){
-		$scope.selected_markers.push(marker);
-		marker.setIcon(getPin("ff4d79"));
+		$scope.selected_markers.splice(index,1);
+		marker.setIcon(getPin("212a33"));
 	}
 
 	function deselect_marker(marker, index){
@@ -67,7 +70,7 @@ var map = angular.module('map', [])
 		marker.setIcon(getPin("212a33"));
 	}
 
-	$scope.text_select_btn = "";
+	
 
 	function createMarkers(info, http){
 
