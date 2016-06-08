@@ -224,7 +224,7 @@ var map = angular.module('map', [])
 		});
 	}
 
-	function show_img = function(url){
+	show_img = function(url){
 		console.log(url);
 	}
 
