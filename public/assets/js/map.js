@@ -70,7 +70,7 @@ var map = angular.module('map', [])
 		    text:"false"
 		});
 		
-		marker.addListener("mouseover", function(){
+		marker.addListener("cilck", function(){
 			infoWindow.close;
 			infoWindow.setContent(info["content"]);
 			logActivity(http, "Hover on fossil "+info['id']+" "+info['title'], user_id);
@@ -179,7 +179,7 @@ var map = angular.module('map', [])
 									+ "<a class='infowindow-text' href='#'>Wrong spot ?</a>"
 								+ "</div>"
 								+ "<div class='col-xs-12'>"
-									+ "<button type='button' class='btn btn-primary'>Select this fossil</button>"
+									+ "<button type='button' class='btn btn-primary' ng-click="">Select this fossil</button>"
 								+ "</div>"
 							+"</div>"
 
