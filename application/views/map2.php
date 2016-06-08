@@ -103,6 +103,8 @@
 								<h4 class="modal-title" id="modal-image-title"></h4>
 							</div>
 							<div class="modal-body" id="modal-image-body">
+				
+
 							</div>
 							<!--
 							<div class="modal-footer">
