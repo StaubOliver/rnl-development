@@ -171,7 +171,7 @@ class MapModel extends CI_Model {
         $i += 1;
  */       
 
-		$where[$i] = "colletor = " . $data['collector'];
+		$where[$i] = "collector = " . $data['collector'];
 		$i += 1;
 
     	$where_string = "";
