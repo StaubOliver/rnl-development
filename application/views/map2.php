@@ -331,8 +331,8 @@
 									</div>
 									<div class="col-md-12">
 										<p>You can select fossils on the map:</p>
-										<div ng-repeat='fossil in selected_markers'>
-											<div class='btn btn-default' ng-click="click_on_marker_for_selection()"> {{fossil['title']}} {{$index}}
+										<div ng-repeat='marker in selected_markers'>
+											<div class='btn btn-default' ng-click="remove_marker(fossil, $index)"> {{marker['title']}} {{$index}}
 											</div>
 										</div>
 									</div>

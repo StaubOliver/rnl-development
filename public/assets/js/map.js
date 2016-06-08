@@ -25,6 +25,7 @@ var map = angular.module('map', [])
 	//$scope.selectedCollector = filter['collector'];	
 
 	var marker_clicked_for_selection = {};
+	$scope.marker_from_list = {};
 
 	// Sets the map on all markers in the array.
 	function setMapOnAll(map) {
@@ -50,6 +51,10 @@ var map = angular.module('map', [])
 		for (var i=0; i < $scope.selected_markers.length; i++){
 			$scope.selected_markers[i].setIcon(getPin("009900"));
 		}
+	}
+
+	$scope.remove_marker = function(marker, index){
+		deselect_marker(marker, index);
 	}
 
 	function select_marker(marker){
