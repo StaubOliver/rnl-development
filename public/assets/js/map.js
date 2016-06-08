@@ -31,7 +31,14 @@ function createMarkers(info, http){
 	var marker = new google.maps.Marker({
 		map: actualmap,
 		position: new google.maps.LatLng(info['lat'], info['lng']),
-		title: info['title']
+		title: info['title'],
+		icon: {
+	        path: google.maps.SymbolPath.CIRCLE,
+	        scale: 8.5,
+	        fillColor: "#F00",
+	        fillOpacity: 0.4,
+	        strokeWeight: 0.4
+	    }
 	});
 
 	marker.addListener("mouseover", function(){
@@ -65,7 +72,13 @@ function createMarkers(info, http){
 	});
 
 	marker.addListener("click", function(){
-		marker.icon='https://maps.google.com/mapfiles/kml/shapes/info-i_maps.png';
+		marker.setIcon({
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 10,
+            fillColor: "#00F",
+            fillOpacity: 0.8,
+            strokeWeight: 1
+        });
 	});
 
 	markers.push(marker);
