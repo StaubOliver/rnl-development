@@ -339,7 +339,7 @@
 									<div class="col-md-6 feedback-clear-btn">
 										<button type="button" class="btn btn-default ">Clear</button>
 									</div>
-									<div class="col-md-6 feedback-submit-btn">
+									<div class="col-md-6 feedback-submit-btn" ng-show="selected_markers.length > 0">
 										<button type="button" class="btn btn-primary ">Save</button>
 									</div>
 								</div>
