@@ -334,6 +334,17 @@
 								</div>
 							</form>
 						</div>
+					</div>
+				</div>
+
+				</div class='col-md-12'>
+					<div class='feedback-section'>
+
+						<div class="row">
+							<div class="col-md-12 feedback-title">
+								<h4>See what others have found</h4>
+							</div>
+						</div>
 
 						<div id="feedbacks">
 							<div class="feedback-message">
