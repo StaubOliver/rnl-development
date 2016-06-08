@@ -14,13 +14,13 @@ var map = angular.module('map', [])
 	filter['genus'] = $scope.selectedGenus;
 	filter['ageMin'] = "Quaternary";
 	filter['ageMax'] = 'Precambrian';
-	filter['collector'] = '-1';
+	filter['collector'] = $scope.selectedCollector;
 
 	$scope.selectedProject = filter['project'];
 	//$scope.selectedGenus = filter['genus'];
 	$scope.selectedAgeMin = filter['ageMin'];
 	$scope.selectedAgeMax = filter['ageMax'];
-	$scope.selectedCollector = filter['collector'];	
+	//$scope.selectedCollector = filter['collector'];	
 
 	var marker_clicked_for_selection = {};
 

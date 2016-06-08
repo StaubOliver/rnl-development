@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="map" ng-init="selectedGenus=-1" >
+<html lang="en" ng-app="map" ng-init="selectedGenus=-1; selectedCollector=-1" >
 <head>
 	<!-- Metadata -->
 	<meta charset="utf-8">
