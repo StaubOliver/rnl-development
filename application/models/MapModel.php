@@ -188,7 +188,7 @@ class MapModel extends CI_Model {
     	{
 			$where_string .= $where[$j] . " AND ";
     	}
-    	$where_string .= $where[$i];
+    	$where_string .= $where[$i-1];
 
     	//querying the database to find the filter id
     	$query = $this->db->query('SELECT filter_id FROM filter WHERE '.$where_string);
