@@ -48,8 +48,9 @@ var map = angular.module('map', [])
 
 	function deselect_all_marker(){
 		for (var i=0; i < $scope.selected_markers.length; i++){
-			$scope.selected_markers[i].setIcon(getPin("009900"));
+			$scope.selected_markers[i].setIcon(getPin("212a33"));
 		}
+		$scope.selected_markers = [];
 	}
 
 	$scope.clear_selected_markers = function(){
