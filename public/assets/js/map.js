@@ -88,6 +88,13 @@ var map = angular.module('map', [])
 			marker_clicked_for_selection = marker;
 			//info window
 			infoWindow.close;
+			var text_select_btn = "";
+			var index = selected_markers.indexOf(marker_clicked_for_selection);
+			if (index==-1){
+				text_select_btn = "Select this Fossil";
+			} else {
+				text_select_btn = "Deselect this Fossil";
+			}
 			var content =
 			"<div class='container-fluid map-infowindow'>"
 				+ "<div class='row'>"
@@ -118,7 +125,7 @@ var map = angular.module('map', [])
 								+ "<a class='infowindow-text' href='#'>Wrong spot ?</a>"
 							+ "</div>"
 							+ "<div class='col-xs-12'>"
-								+ "<a href='#' ng-click='click_on_marker_for_selection();'>Select this fossil</a>"
+								+ "<div class='btn btn-primary' ng-click='click_on_marker_for_selection();'>"+text_select_btn+"</div>"
 							+ "</div>"
 						+"</div>"
 
