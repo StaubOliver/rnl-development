@@ -6,7 +6,7 @@ var map = angular.module('map', [])
 	var actualmap;
 
 	var markers = [];
-	var $scope.selected_markers = [];
+	$scope.selected_markers = [];
 
 	var infoWindow;
 	var user_id;
