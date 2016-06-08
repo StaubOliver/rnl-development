@@ -1,5 +1,7 @@
 var actualmap;
+
 var markers = [];
+var selected_markers = [];
 
 var infoWindow;
 var user_id;
@@ -54,7 +56,7 @@ function createMarkers(info, http){
 	        strokeWeight: 0.4
 	    }, */
 	    //icon: pinSymbol('#fff'),
-	    icon: pinWhite,
+	    icon: "http://www.googlemapsmarkers.com/v1/009900/",
 	    text:"false"
 	});
 
