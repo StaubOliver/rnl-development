@@ -70,7 +70,7 @@ var map = angular.module('map', [])
 		    text:"false"
 		});
 		
-		marker.addListener("cilck", function(){
+		marker.addListener("click", function(){
 			//info window
 			infoWindow.close;
 			infoWindow.setContent(info["content"]);
