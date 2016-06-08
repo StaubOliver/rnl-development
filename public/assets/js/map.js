@@ -52,7 +52,7 @@ var map = angular.module('map', [])
 		}
 	}
 
-	$scope.clear_selected_marker = function(){
+	$scope.clear_selected_markers = function(){
 		deselect_all_marker();
 		$scope.text_select_btn = "Select this fossil"
 	}
