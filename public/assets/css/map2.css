@@ -117,14 +117,16 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	box-shadow: 0px 0px 3px #CCCCCC;
 }
 
-.feedback-message{
+.feedback-message-clicked{
 	margin-left: 5px;
 	margin-right: 5px;
 	padding: 10px;
 	background-color: white;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	color:#ff4d79;
+	border-color: #ff4d79;
+	border-style: line;
+	border-width: 0.1em;
 	box-shadow: 0px 0px 3px #CCCCCC;
 }
 
