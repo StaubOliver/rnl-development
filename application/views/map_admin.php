@@ -83,12 +83,10 @@
 		<div class='row'>
 
 
-			<?php echo $feedbacks; ?>
-
 			<?php foreach($feedbacks as $feedback): ?>
 				</div class='col-md-4'>
 
-					<?php echo $feedback->message; ?>
+					<?php echo $feedback ?>
 
 				</div>
 			<?php endforeach; ?>
