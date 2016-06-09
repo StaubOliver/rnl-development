@@ -343,6 +343,9 @@
 									<div class="col-md-6 feedback-submit-btn">
 										<button type="button" class="btn btn-primary btn-sm" ng-click="submitfeedback()">Save</button>
 									</div>
+									<div class="col-md-12 feedback-form-error">
+										<button type="button" class="btn btn-primary btn-sm" ng-show="feedback_form_error">{{feedback_form_eror}}</button>
+									</div>
 								</div>
 							</form>
 						</div>

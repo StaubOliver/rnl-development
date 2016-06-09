@@ -259,39 +259,46 @@ var map = angular.module('map', [])
 	}
 
 	$scope.feedback_form_text = "";
+	$scope.feedback_form_error = "";
 
 	$scope.submitfeedback = function(){
-		data = {};
-		data.message = $scope.feedback_form_text;
-		data.user_id = user_id;
-		data.genus = filter['genus'];
-		data.age_min = filter['age_min'];
-		data.age_max = filter['age_max'];
-		data.collector = filter['collector'];
-		data.map_lat_ne = actualmap.getBounds().getNorthEast().lat();
-		data.map_lng_ne = actualmap.getBounds().getNorthEast().lng();
-		data.map_lat_sw = actualmap.getBounds().getSouthWest().lat();
-		data.map_lng_sw = actualmap.getBounds().getSouthWest().lng();
-		data.map_zoom = actualmap.getZoom();
-		data.map_center_lat = actualmap.getCenter().lat();
-		data.map_center_lng = actualmap.getCenter().lng();
+		if ($scope.feedback_form_text != ""){
+			data = {};
+			data.message = $scope.feedback_form_text;
+			data.user_id = user_id;
+			data.genus = filter['genus'];
+			data.age_min = filter['age_min'];
+			data.age_max = filter['age_max'];
+			data.collector = filter['collector'];
+			data.map_lat_ne = actualmap.getBounds().getNorthEast().lat();
+			data.map_lng_ne = actualmap.getBounds().getNorthEast().lng();
+			data.map_lat_sw = actualmap.getBounds().getSouthWest().lat();
+			data.map_lng_sw = actualmap.getBounds().getSouthWest().lng();
+			data.map_zoom = actualmap.getZoom();
+			data.map_center_lat = actualmap.getCenter().lat();
+			data.map_center_lng = actualmap.getCenter().lng();
 
 
-		// Do the ajax call
-		$http({
-	        method : 'POST',
-	        url: '/api/map/submitfeedback',
-	        data: $.param(data),
-	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-	    	
-		}).success(function(data, status, headers, config) {
-			console.log("success");
-			refreshFeedback($http);
-			$scope.feedback_form_text = "";
+			// Do the ajax call
+			$http({
+		        method : 'POST',
+		        url: '/api/map/submitfeedback',
+		        data: $.param(data),
+		        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+		    	
+			}).success(function(data, status, headers, config) {
+				console.log("success");
+				refreshFeedback($http);
+				$scope.feedback_form_text = "";
 
-		}).error(function(data, status, headers, config){
-			console.log(data);
-		});
+			}).error(function(data, status, headers, config){
+				console.log(data);
+			});
+		}
+		else {
+			$scope.feedback_form_error = "You must write some comments before saving"
+		}
+
 	}
 
 	show_img = function(url){

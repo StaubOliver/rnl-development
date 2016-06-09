@@ -151,6 +151,10 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	text-align: left;
 }
 
+.feedback-form-error{
+	color:red;
+}
+
 .map-header{
 	z-index: 5;
 	position: absolute;
