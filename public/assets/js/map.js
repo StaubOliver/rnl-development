@@ -234,7 +234,7 @@ var map = angular.module('map', [])
 		$scope.feedbacks = [];
 		http.get('/api/map/loadfeedbacks/'+filter['genus']+'/-1/ee/ee/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
 			data.forEach(function(item, index){
-				$scope.feedbacks[] = item;
+				$scope.feedbacks.push(item);
 			});
 		});
 	}
