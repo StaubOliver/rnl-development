@@ -337,7 +337,7 @@ class MapModel extends CI_Model {
                 //for each feedback we query its filter information
                 $query_filter= $this->db->query("SELECT genus, collector, age_min, age_max, collector  FROM filter WHERE filter_id='".$row["filter_id"]."'");
                 if ($query_filter->num_rows()>0){
-                    $coor = $query_map_coord->row_array();
+                    $coor = $query_filter->row_array();
                     $row["genus"] = $coor['genus'];
                     $row["age_min"] = $coor['age_min'];
                     $row["age_max"] = $coor["age_max"];
