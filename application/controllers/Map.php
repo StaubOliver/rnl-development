@@ -50,9 +50,17 @@ class map extends CI_Controller {
 	}
 
 	public function map_admin(){
-		$data['feedbacks'] = $this->MapModel->adminFeedbacks();
 
-		$this->load->view('map_admin', $data);
+		if($this->ProfileModel->isAdmin() == 1) 
+		{
+			$data['feedbacks'] = $this->MapModel->adminFeedbacks();
+
+			$this->load->view('map_admin', $data);
+		}
+		else
+		{
+			redirect('/map');
+		}
 	}
 /*
 	public function old() {		
