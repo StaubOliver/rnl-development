@@ -327,7 +327,7 @@
 							<form>
 								<div class="row feedback-form">
 									<div class="col-md-12">
-										<textarea class="form-control feedback-message-form-textarea" rows="2"></textarea>
+										<textarea class="form-control feedback-message-form-textarea" ng-model='feedback_form_text' rows="2"></textarea>
 									</div>
 									<div class="col-md-12">
 										<p>You can select fossils on the map:</p>
@@ -341,7 +341,7 @@
 										<button type="button" class="btn btn-default btn-sm" ng-show="selected_markers.length > 0" ng-click="clear_selected_markers()">Clear</button>
 									</div>
 									<div class="col-md-6 feedback-submit-btn">
-										<button type="button" class="btn btn-primary btn-sm">Save</button>
+										<button type="button" class="btn btn-primary btn-sm" ng-click="submitfeedback()">Save</button>
 									</div>
 								</div>
 							</form>

@@ -58,7 +58,7 @@ var map = angular.module('map', [])
 
 	function deselect_all_marker(){
 		for (var i=0; i < $scope.selected_markers.length; i++){
-			$scope.selected_markers[i].setIcon(getPin("212a33"));
+			$scope.selected_markers[i].setIcon(getPin("51ccca"));
 		}
 		$scope.selected_markers = [];
 	}
@@ -83,7 +83,7 @@ var map = angular.module('map', [])
 
 	function deselect_marker(marker, index){
 		$scope.selected_markers.splice(index,1);
-		marker.setIcon(getPin("212a33"));
+		marker.setIcon(getPin("51ccca"));
 	}
 
 	$scope.text_select_btn = "";
@@ -102,7 +102,7 @@ var map = angular.module('map', [])
 		        strokeWeight: 0.4
 		    }, */
 		    //icon: pinSymbol('#fff'),
-		    icon: getPin("212a33"),
+		    icon: getPin("51ccca"),
 		    text:"false"
 		});
 		
@@ -251,6 +251,33 @@ var map = angular.module('map', [])
 	        method : 'POST',
 	        url: '/api/map/logmapactivity',
 	        data: $.param(activity),
+	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+	    	
+		}).success(function(data, status, headers, config) {
+			console.log("success");
+		});
+	}
+
+	$scope.feedback_form_text = "";
+
+	$scope.submitfeedback = function(){
+		data = {};
+		data.message = $scope.feedback_form_text;
+		data.user_id = user_id;
+		data.genus = filter['genus'];
+		data.age_min = filter['age_min'];
+		data.age_max = filter['age_max'];
+		data.collector = filter['collector'];
+		data.map_lat_ne = 
+		
+
+
+		
+		// Do the ajax call
+		http({
+	        method : 'POST',
+	        url: '/api/map/submitfeedback',
+	        data: $.param(data),
 	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 	    	
 		}).success(function(data, status, headers, config) {
