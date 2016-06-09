@@ -278,7 +278,7 @@ var map = angular.module('map', [])
 
 
 		// Do the ajax call
-		http({
+		$http({
 	        method : 'POST',
 	        url: '/api/map/submitfeedback',
 	        data: $.param(data),
