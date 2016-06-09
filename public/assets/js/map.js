@@ -286,6 +286,9 @@ var map = angular.module('map', [])
 	    	
 		}).success(function(data, status, headers, config) {
 			console.log("success");
+			refreshFeedback($http);
+			$scope.feedback_form_text = "";
+
 		}).error(function(data, status, headers, config){
 			console.log(data);
 		});
