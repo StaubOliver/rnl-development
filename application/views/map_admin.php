@@ -80,13 +80,14 @@
 
 
 				<?php foreach($feedbacks as $feedback): ?>
-					<div class='col-md-6'>
+					<div class='col-md-6 col-md-offset-3'>
 						<div class='admin-feedback'>
 							<?php echo 'Feedback from '.$feedback['first_name'].' '.$feedback['last_name']; ?>
 							<?php echo $feedback['message']; ?>
 							<?php echo $feedback['time']; ?>
 							<?php echo $feedback['upvote']." upvote"; ?>
-							<?php echo count($feedback['selection']); ?>
+							<?php echo count($feedback['selection'])." fossils selected"; ?>
+
 						</div>
 					</div>
 				<?php endforeach; ?>
