@@ -74,7 +74,7 @@ var map = angular.module('map', [])
 		}
 		id = markers.indexOf(marker_clicked_for_selection);
 		deselect_marker(marker, index);
-		logActivity($http, "Fossil deselected "+id+" "+marker_clicked_for_selection['title'], user_id);
+		logActivity($http, "Fossil deselected "+id['id']+" "+marker_clicked_for_selection['title'], user_id);
 	}
 
 	function select_marker(marker){
@@ -105,7 +105,8 @@ var map = angular.module('map', [])
 		    }, */
 		    //icon: pinSymbol('#fff'),
 		    icon: getPin("51ccca"),
-		    text:"false"
+		    text:"false", 
+		    id:info['id']
 		});
 		
 		marker.addListener("click", function(){
@@ -216,6 +217,7 @@ var map = angular.module('map', [])
 				info['age'] = item['age'];
 				info['species'] = item['species'];
 				info['collector'] = item['collector'];
+				info['id'] = item['data_id'];
 
 				var info_window_genus = "";
 
