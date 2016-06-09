@@ -271,6 +271,16 @@ class MapModel extends CI_Model {
                         $row["map_center_lat"] = $coor['map_center_lat'];
                         $row["map_center_lng"] = $coor['map_center_lng'];
                     }
+
+                    //querying selected fossils for each feedback
+                    $query_selection = $this->db->query("SELECT data_table, data_id FROM feedback_fossil WHERE feedback_id='".$row['feedback_id']."'");
+                    if($query_selection->num_rows()>0){
+                        $row["selection"] = [];
+                        foreach ($query_selection->result_array() as $select) 
+                        {
+                            $row['selection'][] = $select;
+                        }
+                    }
                     
                     $return[] = $row;
                 }
