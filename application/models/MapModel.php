@@ -327,7 +327,7 @@ class MapModel extends CI_Model {
         if ($query_filter->num_rows() > 0)
         {
             //if we found a matching filter we get its id to save the new feddback
-            $temp = $query->row_array();
+            $temp = $query_filter->row_array();
             $filter_id = $temp['filter_id'];
 
         } else {
@@ -336,7 +336,7 @@ class MapModel extends CI_Model {
             $query_filter_second = $this->db->query('SELECT filter_id FROM filter WHERE '.$where_string);
             if ($query_filter_second->num_rows() > 0)
             {
-                $temp = $query->row_array();
+                $temp = $query_filter_second->row_array();
                 $filter_id = $temp['filter_id'];
             }
 
