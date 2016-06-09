@@ -128,7 +128,7 @@ var map = angular.module('map', [])
 
 					+ "<div class='col-md-6'>"
 						+ "<img data-toggle='modal' data-target='#Modal-lg-image' src='"+info["url"]+"' class='map-infowindow-img' onclick='show_img(\""+info['url']+"\")'>"
-						+ "</br> Click to enlarge"
+						+ "</br> [+] Click to enlarge"
 					+ "</div>"
 
 					+ "<div class='col-md-6'>"
