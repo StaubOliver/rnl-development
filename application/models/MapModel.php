@@ -286,7 +286,7 @@ class MapModel extends CI_Model {
         $where = [];
         $i = 0;
         
-        $where[$i] = "genus = " . $filter['genus'];
+        $where[$i] = "genus = '" . $data['genus']."'";
         $i += 1;
 
 /*
@@ -295,9 +295,9 @@ class MapModel extends CI_Model {
 
         $where[$i] = "age_max = " . $data['age_max'];
         $i += 1;
- */       
+*/      
 
-        $where[$i] = "collector = " . $filter['collector'];
+        $where[$i] = "collector = '" . $data['collector']."'";
         $i += 1;
 
         $where[$i] = "";
