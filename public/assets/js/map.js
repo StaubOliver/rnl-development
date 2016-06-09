@@ -296,7 +296,7 @@ var map = angular.module('map', [])
 				refreshFeedback($http);
 				$scope.feedback_form_text = "";
 				$scope.clear_selected_markers();
-				recordActivity('Submit feedback');
+				$scope.recordActivity('Submit feedback');
 				console.log(data);
 
 			}).error(function(data, status, headers, config){
