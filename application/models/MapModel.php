@@ -300,7 +300,7 @@ class MapModel extends CI_Model {
         $where[$i] = "collector = " . $data['collector'];
         $i += 1;
 
-        $where[$i] = ""
+        $where[$i] = "";
 
         $where_string = "";
 
