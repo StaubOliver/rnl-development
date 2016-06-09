@@ -224,7 +224,7 @@ class MapModel extends CI_Model {
                     if ($query_upvote->num_rows()>0){
                         $count = 0;
                         foreach ($query_upvote as $up) {
-                            $count += 1;
+                            $count ++;
                         }
                         $row['upvote'] = $count;
                     } else {
