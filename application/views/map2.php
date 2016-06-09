@@ -373,11 +373,11 @@
 										<div class="col-md-6 feedback-message-time">
 											<p>{{feedback['time']}}</p>
 										</div>
-										<div class="col-md-6 feedback-message-upvote" ng-show="feedback.upvote > 0">
-											<p>{{feedback.upvote}} upvotes</p>
+										<div class="col-md-6 feedback-message-upvote" >
+											<p ng-show="feedback.upvote > 0">{{feedback.upvote}} upvotes</p>
 										</div>
-										<div class="col-md-6 feedback-message-upvote" ng-show="feedback.selection.length">
-											<p>{{feedback.selection.length}} fossils selected</p>
+										<div class="col-md-6 feedback-message-upvote" >
+											<p ng-show="feedback.selection.length">{{feedback.selection.length}} fossils selected</p>
 										</div>
 									</div>
 								</div>
