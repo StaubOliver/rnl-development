@@ -367,7 +367,7 @@ class MapModel extends CI_Model {
                     );
                     $this->db->insert("feedback_fossil", $data);
                 }
-            }*
+            }
         }
 
         //$this->db->insert('map_coordinates', $map_coordinates);
