@@ -265,11 +265,16 @@ class MapModel extends CI_Model {
                     $row['upvote'] = $query_upvote->num_rows();
 
                     //querying map information for each feedback
-                    $query_map_coord = $this->db->query("SELECT map_center_lat, map_center_lng FROM map_coordinates WHERE map_coordinates_id='".$row["map_coordinates_id"]."'");
+                    $query_map_coord = $this->db->query("SELECT map_center_lat, map_center_lng, map_lat_ne, map_lng_ne, map_lat_sw, map_lng_sw, map_zoom FROM map_coordinates WHERE map_coordinates_id='".$row["map_coordinates_id"]."'");
                     if ($query_map_coord->num_rows()>0){
                         $coor = $query_map_coord->row_array();
                         $row["map_center_lat"] = $coor['map_center_lat'];
                         $row["map_center_lng"] = $coor['map_center_lng'];
+                        $row["map_lat_ne"] = $coor["map_lat_ne"];
+                        $row["map_lng_ne"] = $coor["map_lng_ne"];
+                        $row["map_lat_sw"] = $coor["map_lat_sw"];
+                        $row["map_lng_sw"] = $coor["map_lng_sw"];
+                        $row["map_zoom"] = $coor["map_zoom"];
                     }
 
                     //querying selected fossils for each feedback

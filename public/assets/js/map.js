@@ -264,6 +264,24 @@ var map = angular.module('map', [])
 			$scope.feedback_selection_marker.push(marker);
 		});
 		
+		var triangleCoords = [
+		    {lat: feedback['map_lat_ne'], lng: feedback['map_lng_ne']},
+		    {lat: feedback['map_lat_sw'], lng: feedback['map_lng_ne']},
+		    {lat: feedback['map_lat_sw'], lng: feedback['map_lng_sw']},
+		    {lat: feedback['map_lat_sw'], lng: feedback['map_lng_ne']},
+		    {lat: feedback['map_lat_ne'], lng: feedback['map_lng_ne']}
+		  ];
+
+		// Construct the polygon.
+		var bermudaTriangle = new google.maps.Polygon({
+		paths: triangleCoords,
+		strokeColor: '#FF0000',
+		strokeOpacity: 0.8,
+		strokeWeight: 2,
+		fillColor: '#FF0000',
+		fillOpacity: 0.35
+		});
+		bermudaTriangle.setMap(map);
 	}
 
 	$scope.mouseleaveFeedback = function(){
