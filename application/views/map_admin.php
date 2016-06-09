@@ -60,16 +60,15 @@
 		<div class="container-fluid">
 
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Map Admin Section</a>
+				<a class="navbar-brand" href="#">Map</a>
 			</div>
 
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li><p class="navbar-text">Hello {{ profile.first_name }}</p></li>
+					<li><p class="navbar-text">Administrator panel</p></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 		 			<li><a href="/map/admin">Back to the map</a></li>
-					<?php endif; ?>	
 					<li><p class="navbar-text">Share</p></li>
 		 			<li><a href ="/auth/logout" class="navbar-link">Logout</a></li>
 				</ul>
