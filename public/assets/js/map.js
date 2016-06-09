@@ -109,7 +109,7 @@ var map = angular.module('map', [])
 		marker.addListener("click", function(){
 
 			//log activity
-			logActivity(http, "Hover on fossil "+info['id']+" "+info['title'], user_id);
+			logActivity(http, "Click on fossil "+info['id']+" "+info['title'], user_id);
 
 			marker_clicked_for_selection = marker;
 			//info window
@@ -270,7 +270,7 @@ var map = angular.module('map', [])
 			data.age_min = filter['age_min'];
 			data.age_max = filter['age_max'];
 			data.collector = filter['collector'];
-			
+
 			data.map_lat_ne = actualmap.getBounds().getNorthEast().lat();
 			data.map_lng_ne = actualmap.getBounds().getNorthEast().lng();
 			data.map_lat_sw = actualmap.getBounds().getSouthWest().lat();
@@ -312,11 +312,11 @@ var map = angular.module('map', [])
 		var index = $scope.selected_markers.indexOf(marker_clicked_for_selection);
 		if (index==-1){
 			select_marker(marker_clicked_for_selection);
-			logActivity($http, "fossil selected "+id+" "+marker_clicked_for_selection['title'], user_id);
+			logActivity($http, "Fossil selected "+id+" "+marker_clicked_for_selection['title'], user_id);
 			$scope.text_select_btn = "Deselect this fossil";
 		} else {
 			deselect_marker(marker_clicked_for_selection, index);
-			logActivity($http, "fossil deselected "+id+" "+marker_clicked_for_selection['title'], user_id);
+			logActivity($http, "Fossil deselected "+id+" "+marker_clicked_for_selection['title'], user_id);
 			$scope.text_select_btn = "Select this fossil";
 
 		}
