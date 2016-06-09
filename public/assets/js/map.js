@@ -257,7 +257,7 @@ var map = angular.module('map', [])
 			    }, */
 			    //icon: pinSymbol('#fff'),
 			    icon: getPin("FFFFFF") , 
-			    zIndex: markers.length;
+			    zIndex: markers.length
 			});
 			$scope.feedback_selection_marker.push(marker);
 		});
