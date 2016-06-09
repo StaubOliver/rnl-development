@@ -84,11 +84,13 @@
 						<div class='admin-feedback'>
 
 							<div class='row'>
+								
 								<div class='col-md-6'>
 									<?php echo 'Feedback from '.$feedback['first_name'].' '.$feedback['last_name']; ?>
 								</div>
 								
 								<div class='col-md-6'>
+									vide
 								</div>
 								
 								<div class='col-md-6'>
@@ -96,6 +98,7 @@
 								</div>
 								
 								<div class='col-md-6'>
+									vide
 								</div>
 								
 								<div class='col-md-6'>
@@ -103,6 +106,7 @@
 								</div>
 								
 								<div class='col-md-6'>
+									vide
 								</div>
 								
 								<div class='col-md-6'>
@@ -110,6 +114,7 @@
 								</div>
 								
 								<div class='col-md-6'>
+									vide
 								</div>
 								
 								<div class='col-md-6'>
@@ -117,6 +122,7 @@
 								</div>
 
 								<div class='col-md-6'>
+									vide
 								</div>
 							</div>
 
