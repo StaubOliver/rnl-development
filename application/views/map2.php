@@ -367,14 +367,17 @@
 										<div class="col-md-12 feedback-message-text">
 											<p>{{feedback['message']}}</p>
 										</div>
-										<div class="col-md-4 feedback-message-author">
+										<div class="col-md-6 feedback-message-author">
 											<p>{{feedback['first_name']}} {{feedback['last_name']}}</p>
 										</div>
-										<div class="col-md-4 feedback-message-time">
+										<div class="col-md-6 feedback-message-time">
 											<p>{{feedback['time']}}</p>
 										</div>
-										<div class="col-md-4 feedback-message-upvote" ng-show="feedback.upvote > 0">
+										<div class="col-md-6 feedback-message-upvote" ng-show="feedback.upvote > 0">
 											<p>{{feedback.upvote}} upvotes</p>
+										</div>
+										<div class="col-md-6 feedback-message-upvote" ng-show="feedback.selection.length">
+											<p>{{feedback.selection.length}} fossils selected</p>
 										</div>
 									</div>
 								</div>
