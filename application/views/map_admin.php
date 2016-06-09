@@ -107,11 +107,11 @@
 								</div>
 
 								
-								<div class='col-md-12'>
-									vide
+								<div class='col-md-6'>
+									<?php echo "Genus :".$feedback['genus']; ?>
 								</div>
-								<div class='col-md-12'>
-									vide
+								<div class='col-md-6'>
+									<?php echo "Collector :".$feedback['collector']; ?>
 								</div>
 								<div class='col-md-12'>
 									vide
