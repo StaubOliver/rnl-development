@@ -377,7 +377,7 @@
 								</div>
 							</div>
 
-							<div ng-hide='feedbacks'>
+							<div ng-hide='feedbacks.length'>
 								<div class="feedback-message">
 									<div class="row">
 										<div class="col-md-12 feedback-message-text">
