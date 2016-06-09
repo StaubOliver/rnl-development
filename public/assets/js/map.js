@@ -316,7 +316,7 @@ var map = angular.module('map', [])
 		rectangle = null;
 	}
 
-	refreshFeedback($http);
+	
 
 
 	function logActivity(http, message, user_id){
@@ -433,6 +433,7 @@ var map = angular.module('map', [])
 
 	actualmap.addListener("dragend", function(){
 		logActivity($http, "Map Pan", user_id);
+		refreshFeedback($http);
 		console.log(actualmap.getCenter().toString());
 	});
 
@@ -450,6 +451,7 @@ var map = angular.module('map', [])
 	});
 
 	refresh($http);
+	refreshFeedback($http);
 
 
 	//Nav bar
