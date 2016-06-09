@@ -235,7 +235,7 @@ var map = angular.module('map', [])
 		$scope.feedbacks = [];
 		http.get('/api/map/loadfeedbacks/'+filter['genus']+'/-1/ee/ee/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
 			data.forEach(function(item, index){
-
+				/*
 				currentBounds = actualmap.getBounds();
 
 				var view = [
@@ -249,8 +249,10 @@ var map = angular.module('map', [])
 				center = new google.maps.LatLng(item['map_center_lat'], item['map_center_lng']);
 
 				if (google.maps.geometry.poly.containsLocation(center, view)){
-					$scope.feedbacks.push(item);
-				}
+					
+				}*/
+
+				$scope.feedbacks.push(item);
 
 			});
 		});
@@ -433,7 +435,7 @@ var map = angular.module('map', [])
 
 	actualmap.addListener("dragend", function(){
 		logActivity($http, "Map Pan", user_id);
-		refreshFeedback($http);
+		//refreshFeedback($http);
 		console.log(actualmap.getCenter().toString());
 	});
 
