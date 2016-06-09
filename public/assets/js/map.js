@@ -286,6 +286,8 @@ var map = angular.module('map', [])
 	    	
 		}).success(function(data, status, headers, config) {
 			console.log("success");
+		}).error(function(data, status, headers, config){
+			console.log(data);
 		});
 	}
 
