@@ -358,7 +358,7 @@
 							</div>
 						</div>
 
-						<div ng-repeat='feedback in feedbacks'>
+						<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length > 0'>
 							<div class="feedback-message">
 								<div class="row">
 									<div class="col-md-12 feedback-message-text">
@@ -370,7 +370,7 @@
 									<div class="col-md-4 feedback-message-time">
 										<p>26/05/2016</p>
 									</div>
-									<div class="col-md-4 feedback-message-upvote">
+									<div class="col-md-4 feedback-message-upvote" ng-show="feedback.upvote > 0">
 										<p>{{feedback.upvote}} upvotes</p>
 									</div>
 								</div>
