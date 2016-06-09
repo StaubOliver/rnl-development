@@ -332,7 +332,7 @@ class MapModel extends CI_Model {
             //if not we create this new filter before inserting the new feedback
             if($this->db->insert('filter', $filter))
             {
-                    $query_filter_second = $this->db->query('SELECT filter_id FROM filter WHERE '.$where_string);
+                $query_filter_second = $this->db->query('SELECT filter_id FROM filter WHERE '.$where_string);
                 if ($query_filter_second->num_rows() > 0)
                 {
                     $temp = $query_filter_second->row_array();
