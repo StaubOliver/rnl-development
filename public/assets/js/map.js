@@ -259,7 +259,7 @@ var map = angular.module('map', [])
 	}
 
 	$scope.feedback_form_text = "";
-	$scope.feedback_form_error = "error";
+	$scope.feedback_form_error = "";
 
 	$scope.submitfeedback = function(){
 		if ($scope.feedback_form_text){
