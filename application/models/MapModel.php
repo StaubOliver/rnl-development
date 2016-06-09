@@ -214,10 +214,12 @@ class MapModel extends CI_Model {
                         $user = $query_user->row_array();
                         $row['first_name'] = $user['first_name'];
                         $row['last_name'] = $user['last_name'];
-                        
+                    } else {
+                        $row['first_name'] = "John";
+                        $row['last_name'] = "Smith";
                     }
 
-                    $query_upvote = $this->db->query('SELECT upvote_id,  FROM "up_vote" WHERE feedback_id = '.$row['feedback_id']);
+                    $query_upvote = $this->db->query('SELECT upvote_id,  FROM "up vote" WHERE feedback_id = '.$row['feedback_id']);
                     
                     if ($query_feedback->num_rows()>0){
                         $count = 0;
@@ -225,7 +227,10 @@ class MapModel extends CI_Model {
                             $count += 1;
                         }
                         $row['upvote'] = $count;
+                    } else {
+                        $['upvote'] = 0;
                     }
+
                     $return[] = $row;
                 }
                 return $return;
