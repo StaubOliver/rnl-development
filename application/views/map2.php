@@ -327,7 +327,7 @@
 							<form>
 								<div class="row feedback-form">
 									<div class="col-md-12">
-										<textarea class="form-control feedback-message-form-textarea" ng-model='feedback_form_text' rows="2"></textarea>
+										<textarea class="form-control feedback-message-form-textarea" ng-model='feedback_form_text' ng-change="feedback_form_error=''" rows="2"></textarea>
 									</div>
 									<div class="col-md-12">
 										<p>You can select fossils on the map:</p>
