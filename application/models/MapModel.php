@@ -308,10 +308,80 @@ class MapModel extends CI_Model {
     }
 
     function adminFeedback(){
-        
+
+        $return = [];
+
+        $query_feedbacks = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id FROM feedback');
+
+        if ($query_feedbacks->num_rows()>0){
+            foreach ($query_feedbacks->result_array() as $feedback) {
+                
+                //for each feedback we query its user information
+                $query_user = $this->db->query('SELECT first_name, last_name FROM users WHERE id = '.$row['user_id']);
+                    
+                if ($query_user->num_rows()>0){
+                    $result_query_user = array();
+                    $user = $query_user->row_array();
+                    $row['first_name'] = $user['first_name'];
+                    $row['last_name'] = $user['last_name'];
+                } else {
+                    $row['first_name'] = "John";
+                    $row['last_name'] = "Smith";
+                }
+
+                //for each feedback we query its upvote information
+                $query_upvote = $this->db->query('SELECT upvote_id  FROM up_vote WHERE feedback_id = '.$row['feedback_id']);
+                
+                $row['upvote'] = $query_upvote->num_rows();
+
+                //for each feedback we query its filter information
+                $query_filter= $this->db->query("SELECT genus, collector, age_min, age_max, collector  FROM filter WHERE filter_id='".$row["filter_id"]."'");
+                if ($query_map_coord->num_rows()>0){
+                    $coor = $query_map_coord->row_array();
+                    $row["genus"] = $coor['genus'];
+                    $row["age_min"] = $coor['age_min'];
+                    $row["age_max"] = $coor["age_max"];
+                    $row["collector"] = $coor["collector"];
+                }
 
 
-        
+                //for each feedback we query its map coordinates information
+                $query_map_coord = $this->db->query("SELECT map_center_lat, map_center_lng, map_lat_ne, map_lng_ne, map_lat_sw, map_lng_sw, map_zoom FROM map_coordinates WHERE map_coordinates_id='".$row["map_coordinates_id"]."'");
+                if ($query_map_coord->num_rows()>0){
+                    $coor = $query_map_coord->row_array();
+                    $row["map_center_lat"] = $coor['map_center_lat'];
+                    $row["map_center_lng"] = $coor['map_center_lng'];
+                    $row["map_lat_ne"] = $coor["map_lat_ne"];
+                    $row["map_lng_ne"] = $coor["map_lng_ne"];
+                    $row["map_lat_sw"] = $coor["map_lat_sw"];
+                    $row["map_lng_sw"] = $coor["map_lng_sw"];
+                    $row["map_zoom"] = $coor["map_zoom"];
+                }
+
+
+                //for each feedback we query it selected fossils
+                $query_selection = $this->db->query("SELECT data_table, data_id FROM feedback_fossil WHERE feedback_id='".$row['feedback_id']."'");
+                if($query_selection->num_rows()>0){
+                    $row["selection"] = [];
+                    foreach ($query_selection->result_array() as $select) 
+                    {
+                        //$row['selection'][] = $select;
+                        $query_fossil = $this->db->query("SELECT lat, lng FROM ".$select["data_table"]." WHERE data_id='".$select["data_id"]."'");
+                        if ($query_fossil->num_rows()>0)
+                        {
+                            $temp = $query_fossil->row_array();
+                            $temp['id'] = $select["data_id"];
+                            $row['selection'][] = $temp;
+                        }
+                    }
+                }
+
+                //we add the completed feedbaack to the result array
+                $return[] = $row;
+            }
+        }
+        return $return;
+
     }
 
     function submitFeedback($data, $filter, $map_coordinates, $fossil_selection){
