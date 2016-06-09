@@ -337,7 +337,7 @@ var map = angular.module('map', [])
 			});
 		}
 		else {
-			$scope.feedback_form_error = "You must write some comments before saving"
+			$scope.feedback_form_error = "You must write some comment before saving"
 		}
 
 	}
