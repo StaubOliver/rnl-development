@@ -59,8 +59,47 @@ class MapModel extends CI_Model {
         }
     }
 
-    function in_age_range($min, $max, $test){
+    function get_where_statement($data){
 
+    }
+
+    function in_age_range($min, $max, $test){
+        //using the data from the filter we create the where statement for querying the database
+        $where = [];
+        $i = 0;
+        
+        if ($data['genus'] != "-1"){
+            $where[$i] = "genus = '" . $data['genus']."'";
+            $i += 1;
+        }
+
+/*
+        $where[$i] = "age_min = " . $data['age_min'];
+        $i += 1;
+
+        $where[$i] = "age_max = " . $data['age_max'];
+        $i += 1;
+*/      
+
+        if ($data['collector'] != "-1"){
+            $where[$i] = "collector = '" . $data['collector']."'";
+            $i += 1;
+        }
+
+        $where_string = "";
+
+        if ($i != 0)
+        {
+            for ($j=0; $j<$i-1; $j++)
+            {
+                $where_string .= $where[$j] . " AND ";
+            }
+            
+            $where_string .= $where[$i-1]; 
+        }
+        else {
+            $where_string = " 1";
+        }
     }
 
     /**
@@ -207,6 +246,7 @@ class MapModel extends CI_Model {
     			//we found some feedbacks related to that filter
     			foreach ($query2->result_array() as $row){
                     
+                    //fetching user information related to each feedback
                     $query_user = $this->db->query('SELECT first_name, last_name FROM users WHERE id = '.$row['user_id']);
                     
                     if ($query_user->num_rows()>0){
@@ -219,9 +259,14 @@ class MapModel extends CI_Model {
                         $row['last_name'] = "Smith";
                     }
 
+                    //querying upvote information for each feedback
                     $query_upvote = $this->db->query('SELECT upvote_id  FROM up_vote WHERE feedback_id = '.$row['feedback_id']);
                     
                     $row['upvote'] = $query_upvote->num_rows();
+
+                    //querying map information for each feedback
+
+
 
                     $return[] = $row;
                 }
@@ -234,6 +279,78 @@ class MapModel extends CI_Model {
     		//if the filter is not found then no feedbacks are recorded. We return an emty array
     		return $return;
     	}
+    }
+
+    function submitFeedback($data, $filter, $map_coordinates){
+        //using the data from the filter we create the where statement for querying the database
+        $where = [];
+        $i = 0;
+        
+        $where[$i] = "genus = " . $data['genus'];
+        $i += 1;
+
+/*
+        $where[$i] = "age_min = " . $data['age_min'];
+        $i += 1;
+
+        $where[$i] = "age_max = " . $data['age_max'];
+        $i += 1;
+ */       
+
+        $where[$i] = "collector = " . $data['collector'];
+        $i += 1;
+
+        $where[$i] = ""
+
+        $where_string = "";
+
+        if ($i != 0)
+        {
+            for ($j=0; $j<$i-1; $j++)
+            {
+                $where_string .= $where[$j] . " AND ";
+            }
+            
+            $where_string .= $where[$i-1]; 
+        }
+        else {
+            $where_string = " 1";
+        }
+
+        $filter_id = -1;
+        //$map_coordinates_id = -1;
+
+        //querying the database to find the filter id
+        $query_filter = $this->db->query('SELECT filter_id FROM filter WHERE '.$where_string);
+
+
+        if ($query_filter->num_rows() > 0)
+        {
+            //if we found a matching filter we get its id to save the new feddback
+            $temp = $query->row_array();
+            $filter_id = $temp['filter_id'];
+
+        } else {
+            //if not we create this new filter before inserting the new feedback
+            $this->db->insert('filter', $filter);
+            $query_filter_second = $this->db->query('SELECT filter_id FROM filter WHERE '.$where_string);
+            if ($query_filter_second->num_rows() > 0)
+            {
+                $temp = $query->row_array();
+                $filter_id = $temp['filter_id'];
+            }
+
+        }
+
+        $data['filter_id'] = $filter_id;
+        $data['map_coordinates_id'] = 0;
+
+        $this->db->insert('feedback', $data)
+
+        //$this->db->insert('map_coordinates', $map_coordinates);
+
+        //adding the map_coordinates
+
     }
 
     function loadGenuses(){

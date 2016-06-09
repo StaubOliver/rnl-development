@@ -130,31 +130,25 @@ class Map extends MY_Controller {
 			'message' => $message
 		);
 
-		$genus = $this->uri->segment(4);
-		$species = $this->uri->segment(5);
-		$age_min = $this->uri->segment(6);
-		$age_max = $this->uri->segment(7);
-		$collector = $this->uri->segment(8);
-		$map_lat_ne = $this->uri->segment(9);
-		$map_lng_ne = $this->uri->segment(10);
-		$map_lat_sw = $this->uri->segment(11);
-		$map_lng_sw = $this->uri->segment(12);
-		$map_zoom = $this->uri->segment(13);
-
 		$filter = array(
-			'genus' => $genus,
-			'species' => $species,
-			'age_min' => $age_min,
-			'age_max' => $age_max,
-			'collector' => $collector,
-			'map_lat_ne' => $map_lat_ne,
-			'map_lng_ne' => $map_lng_ne,
-			'map_lat_sw' => $map_lat_sw,
-			'map_lng_sw' => $map_lng_sw,
-			'map_zoom' => $map_zoom
+			'genus' => $this->input->post('genus'),
+			'age_min' => $this->input->post('age_min'),
+			'age_max' => $this->input->post('age_max'),
+			'collector' => $this->input->post('collector')
+			
 		);
 
-		$this->MapModel->submitFeedback($data, $filter);
+		$map_coordinates = array(
+			'map_lat_ne' => $this->input->post('map_lat_ne'),
+			'map_lng_ne' => $this->input->post('map_lng_ne'),
+			'map_lat_sw' => $this->input->post('map_lat_sw'),
+			'map_lng_sw' => $this->input->post('map_lng_sw'),
+			'map_center_lat' => $this->input->post('map_center_lat'),
+			'map_center_lng' => $this->input->post('map_center_lng'),
+			'map_zoom' => $this->input->post('map_zoom')
+		);
+
+		$this->MapModel->submitFeedback($data, $filter, $map_coordinates);
 
 		echo json_encode($data);
 	}

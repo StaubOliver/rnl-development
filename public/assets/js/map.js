@@ -268,11 +268,15 @@ var map = angular.module('map', [])
 		data.age_min = filter['age_min'];
 		data.age_max = filter['age_max'];
 		data.collector = filter['collector'];
-		data.map_lat_ne = 
-		
+		data.map_lat_ne = actualmap.getBounds().getNorthEast().lat();
+		data.map_lng_ne = actualmap.getBounds().getNorthEast().lng();
+		data.map_lat_sw = actualmap.getBounds().getSouthWest().lat();
+		data.map_lng_sw = actualmap.getBounds().getSouthWest().lng();
+		data.map_zoom = actualmap.getZoom();
+		data.map_center_lat = actualmap.getCenter().lat();
+		data.map_center_lng = actualmap.getCenter().lng();
 
 
-		
 		// Do the ajax call
 		http({
 	        method : 'POST',
