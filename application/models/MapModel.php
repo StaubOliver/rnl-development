@@ -361,7 +361,8 @@ class MapModel extends CI_Model {
 
                 //for each feedback we query it selected fossils
                 $query_selection = $this->db->query("SELECT data_table, data_id FROM feedback_fossil WHERE feedback_id='".$row['feedback_id']."'");
-                if($query_selection->num_rows()>0){
+                if($query_selection->num_rows()>0)
+                {
                     $row["selection"] = [];
                     foreach ($query_selection->result_array() as $select) 
                     {
@@ -372,11 +373,12 @@ class MapModel extends CI_Model {
                             $temp = $query_fossil->row_array();
                             $temp['id'] = $select["data_id"];
                             $row['selection'][] = $temp;
-                        } else
-                        {
-                            $row['selection'] = [];
                         }
                     }
+                } 
+                else
+                {
+                    $row['selection'] = [];
                 }
 
                 //we add the completed feedbaack to the result array
