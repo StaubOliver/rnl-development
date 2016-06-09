@@ -307,6 +307,13 @@ class MapModel extends CI_Model {
     	}
     }
 
+    function adminFeedback(){
+        
+
+
+        
+    }
+
     function submitFeedback($data, $filter, $map_coordinates, $fossil_selection){
         //using the data from the filter we create the where statement for querying the database
         $where = [];

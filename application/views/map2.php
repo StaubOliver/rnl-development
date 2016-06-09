@@ -68,7 +68,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<?php if($is_admin == 1): ?>
-		 			<li><a href="/map/admin">Admin area</a></li>
+		 			<li><a href="/map/map_admin">Admin area</a></li>
 					<?php endif; ?>	
 					<li><p class="navbar-text">Profil</p></li>
 					<li><p class="navbar-text">Share</p></li>

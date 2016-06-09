@@ -68,7 +68,7 @@
 					<li><p class="navbar-text">Administrator panel</p></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-		 			<li><a href="/map/admin">Back to the map</a></li>
+		 			<li><a href="/map">Back to the map</a></li>
 					<li><p class="navbar-text">Share</p></li>
 		 			<li><a href ="/auth/logout" class="navbar-link">Logout</a></li>
 				</ul>
