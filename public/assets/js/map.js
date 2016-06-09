@@ -150,7 +150,7 @@ var map = angular.module('map', [])
 							+ "</div>"
 
 							+ "<div class='col-xs-12'>"
-								+ "<div class='btn btn-custom-primary' ng-click='click_on_marker_for_selection("+info['id']+");'>{{text_select_btn}}</div>"
+								+ "<div class='btn btn-custom-primary btn-sm' ng-click='click_on_marker_for_selection("+info['id']+");'>{{text_select_btn}}</div>"
 							+ "</div>"
 						+"</div>"
 
