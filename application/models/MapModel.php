@@ -266,8 +266,6 @@ class MapModel extends CI_Model {
 
                     //querying map information for each feedback
 
-
-
                     $return[] = $row;
                 }
                 return $return;
@@ -347,7 +345,15 @@ class MapModel extends CI_Model {
         $data['filter_id'] = $filter_id;
         $data['map_coordinates_id'] = 0;
 
-        $feedback_id = 0;
+        //adding the map_coordinates
+        if($this->db->insert('map_coordinates', $map_coordinates)){
+            
+            $query_map_coord = $this->db->query("SELECT map_coordinates_id FROM map_coordinates_id WHERE map_lat_ne='".$map_coordinates['map_lat_ne']."' and map_lng_ne='".$map_coordinates['map_lng_ne']."' and map_lat_sw='".$map_coordinates['map_lat_sw']."' and map_lng_sw='".$map_coordinates['map_lng_sw']."' and map_center_lat='".$map_coordinates['map_center_lat']."' and map_center_lng='".$map_coordinates['map_center_lng']."'and map_zoom='".$map_coordinates['map_zoom']."'");
+            if($query_map_coord->num_rows() > 0){
+                $temp->$query_map_coord->row_array();
+                $data['map_coordinates_id'] = $temp["map_coordinates_id"];
+            }
+        }
 
         if($this->db->insert('feedback', $data))
         {
@@ -369,9 +375,8 @@ class MapModel extends CI_Model {
             }
         }
 
-        //$this->db->insert('map_coordinates', $map_coordinates);
 
-        //adding the map_coordinates
+        
 
     }
 
