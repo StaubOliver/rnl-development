@@ -307,7 +307,7 @@ class MapModel extends CI_Model {
     	}
     }
 
-    function adminFeedback(){
+    function adminFeedbacks(){
 
         $return = [];
 
