@@ -73,7 +73,7 @@ var map = angular.module('map', [])
 			$scope.text_select_btn = "Select this fossil";
 		}$
 		deselect_marker(marker, index);
-		logActivity($http, "Fossil deselected "+id['title'].split("-")[0]+" "+marker_clicked_for_selection['title'], user_id);
+		logActivity($http, "Fossil deselected "+marker['title'].split("-")[0]+" "+marker_clicked_for_selection['title'], user_id);
 	}
 
 	function select_marker(marker){
