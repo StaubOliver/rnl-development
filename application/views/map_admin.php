@@ -84,20 +84,39 @@
 						<div class='admin-feedback'>
 
 							<div class='row'>
-								<div class='col-md-12'>
+								<div class='col-md-6'>
 									<?php echo 'Feedback from '.$feedback['first_name'].' '.$feedback['last_name']; ?>
 								</div>
-								<div class='col-md-12'>
+								
+								<div class='col-md-6'>
+								</div>
+								
+								<div class='col-md-6'>
 									<?php echo $feedback['message']; ?>
 								</div>
-								<div class='col-md-12'>
+								
+								<div class='col-md-6'>
+								</div>
+								
+								<div class='col-md-6'>
 									<?php echo $feedback['time']; ?>
 								</div>
-								<div class='col-md-12'>
-									<?php echo $feedback['upvote']." upvote"; ?>
-								<div class='col-md-12'>
+								
+								<div class='col-md-6'>
 								</div>
+								
+								<div class='col-md-6'>
+									<?php echo $feedback['upvote']." upvote"; ?>
+								</div>
+								
+								<div class='col-md-6'>
+								</div>
+								
+								<div class='col-md-6'>
 									<?php echo count($feedback['selection'])." fossils selected"; ?>
+								</div>
+
+								<div class='col-md-6'>
 								</div>
 							</div>
 
