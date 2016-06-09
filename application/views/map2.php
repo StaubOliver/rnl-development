@@ -358,7 +358,7 @@
 							</div>
 						</div>
 
-							<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length > 0'>
+							<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 								<div class="feedback-message">
 									<div class="row">
 										<div class="col-md-12 feedback-message-text">
@@ -377,11 +377,11 @@
 								</div>
 							</div>
 
-							<div ng-show='feedbacks.length = 0'>
+							<div ng-hide='feedbacks'>
 								<div class="feedback-message">
 									<div class="row">
 										<div class="col-md-12 feedback-message-text">
-											<p>No messages here yet.</p>
+											<p>No messages here yet</p>
 										</div>
 									</div>
 								</div>
