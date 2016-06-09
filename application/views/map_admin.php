@@ -86,7 +86,7 @@
 			<?php foreach($feedbacks as $feedback): ?>
 				</div class='col-md-4'>
 
-					<?php echo $feedback ?>
+					<?php echo $feedback['message']; ?>
 
 				</div>
 			<?php endforeach; ?>
