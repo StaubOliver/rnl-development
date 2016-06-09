@@ -266,14 +266,12 @@ class MapModel extends CI_Model {
 
                     //querying map information for each feedback
                     $query_map_coord = $this->db->query("SELECT map_center_lat, map_center_lng FROM map_coordinates WHERE map_coordinates_id='".$row["map_coordinates_id"]."'");
-                    if ($query_map_coord->num_rows>0){
+                    if ($query_map_coord->num_rows()>0){
                         $coor = $query_map_coord->row_array();
                         $row["map_center_lat"] = $coor['map_center_lat'];
                         $row["map_center_lng"] = $coor['map_center_lng'];
                     }
                     
-
-
                     $return[] = $row;
                 }
                 return $return;
