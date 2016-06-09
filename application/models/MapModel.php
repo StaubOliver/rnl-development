@@ -286,7 +286,7 @@ class MapModel extends CI_Model {
         $where = [];
         $i = 0;
         
-        $where[$i] = "genus = '" . $data['genus']."'";
+        $where[$i] = "genus = '" . $filter['genus']."'";
         $i += 1;
 
 /*
@@ -297,7 +297,7 @@ class MapModel extends CI_Model {
         $i += 1;
 */      
 
-        $where[$i] = "collector = '" . $data['collector']."'";
+        $where[$i] = "collector = '" . $filter['collector']."'";
         $i += 1;
 
         $where[$i] = "";
@@ -333,7 +333,7 @@ class MapModel extends CI_Model {
         } else {
             //if not we create this new filter before inserting the new feedback
             if($this->db->insert('filter', $filter))
-            {
+                filter{
                     $query_filter_second = $this->db->query('SELECT filter_id FROM filter WHERE '.$where_string);
                 if ($query_filter_second->num_rows() > 0)
                 {
