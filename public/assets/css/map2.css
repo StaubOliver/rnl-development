@@ -194,3 +194,95 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 }
 
 
+.ban-custom-primary { 
+  color: #FFFFFF; 
+  background-color: #FF4D79; 
+  border-color: #FF4D79; 
+} 
+ 
+.ban-custom-primary:hover, 
+.ban-custom-primary:focus, 
+.ban-custom-primary:active, 
+.ban-custom-primary.active, 
+.open .dropdown-toggle.ban-custom-primary { 
+  color: #FFFFFF; 
+  background-color: #FF4D79; 
+  border-color: #FF4D79; 
+} 
+ 
+.ban-custom-primary:active, 
+.ban-custom-primary.active, 
+.open .dropdown-toggle.ban-custom-primary { 
+  background-image: none; 
+} 
+ 
+.ban-custom-primary.disabled, 
+.ban-custom-primary[disabled], 
+fieldset[disabled] .ban-custom-primary, 
+.ban-custom-primary.disabled:hover, 
+.ban-custom-primary[disabled]:hover, 
+fieldset[disabled] .ban-custom-primary:hover, 
+.ban-custom-primary.disabled:focus, 
+.ban-custom-primary[disabled]:focus, 
+fieldset[disabled] .ban-custom-primary:focus, 
+.ban-custom-primary.disabled:active, 
+.ban-custom-primary[disabled]:active, 
+fieldset[disabled] .ban-custom-primary:active, 
+.ban-custom-primary.disabled.active, 
+.ban-custom-primary[disabled].active, 
+fieldset[disabled] .ban-custom-primary.active { 
+  background-color: #FF4D79; 
+  border-color: #FF4D79; 
+} 
+ 
+.ban-custom-primary .badge { 
+  color: #FF4D79; 
+  background-color: #FFFFFF; 
+}
+
+.ban-custom-default { 
+  color: #000000; 
+  background-color: #EAEAEA; 
+  border-color: #EAEAEA; 
+} 
+ 
+.ban-custom-default:hover, 
+.ban-custom-default:focus, 
+.ban-custom-default:active, 
+.ban-custom-default.active, 
+.open .dropdown-toggle.ban-custom-default { 
+  color: #000000; 
+  background-color: #EAEAEA; 
+  border-color: #EAEAEA; 
+} 
+ 
+.ban-custom-default:active, 
+.ban-custom-default.active, 
+.open .dropdown-toggle.ban-custom-default { 
+  background-image: none; 
+} 
+ 
+.ban-custom-default.disabled, 
+.ban-custom-default[disabled], 
+fieldset[disabled] .ban-custom-default, 
+.ban-custom-default.disabled:hover, 
+.ban-custom-default[disabled]:hover, 
+fieldset[disabled] .ban-custom-default:hover, 
+.ban-custom-default.disabled:focus, 
+.ban-custom-default[disabled]:focus, 
+fieldset[disabled] .ban-custom-default:focus, 
+.ban-custom-default.disabled:active, 
+.ban-custom-default[disabled]:active, 
+fieldset[disabled] .ban-custom-default:active, 
+.ban-custom-default.disabled.active, 
+.ban-custom-default[disabled].active, 
+fieldset[disabled] .ban-custom-default.active { 
+  background-color: #EAEAEA; 
+  border-color: #EAEAEA; 
+} 
+ 
+.ban-custom-default .badge { 
+  color: #EAEAEA; 
+  background-color: #000000; 
+}
+

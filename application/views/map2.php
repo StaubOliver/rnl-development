@@ -338,10 +338,10 @@
 										</div>
 									</div>
 									<div class="col-md-6 feedback-clear-btn">
-										<button type="button" class="btn btn-default btn-sm" ng-show="selected_markers.length > 0" ng-click="clear_selected_markers(); recordActivity('Clear Fossil selection')">Clear</button>
+										<button type="button" class="btn btn-custom-default btn-sm" ng-show="selected_markers.length > 0" ng-click="clear_selected_markers(); recordActivity('Clear Fossil selection')">Clear</button>
 									</div>
 									<div class="col-md-6 feedback-submit-btn">
-										<button type="button" class="btn btn-primary btn-sm" ng-click="submitfeedback()">Save</button>
+										<button type="button" class="btn btn-custom-primary btn-sm" ng-click="submitfeedback()">Save</button>
 									</div>
 									<div class="col-md-12 feedback-form-error" ng-show="feedback_form_error">
 										{{feedback_form_error}}
