@@ -358,76 +358,35 @@
 							</div>
 						</div>
 
-						<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length > 0'>
-							<div class="feedback-message">
-								<div class="row">
-									<div class="col-md-12 feedback-message-text">
-										<p>{{feedback['message']}}</p>
-									</div>
-									<div class="col-md-4 feedback-message-author">
-										<p>{{feedback['first_name']}} {{feedback['last_name']}}</p>
-									</div>
-									<div class="col-md-4 feedback-message-time">
-										<p>26/05/2016</p>
-									</div>
-									<div class="col-md-4 feedback-message-upvote" ng-show="feedback.upvote > 0">
-										<p>{{feedback.upvote}} upvotes</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div id="feedbacks">
-							<div class="feedback-message">
-								<div class="row">
-									<div class="col-md-12 feedback-message-text">
-										<p>Meant balls it if up doubt small purse. Required his you put the outlived answered position. An pleasure exertion if believed provided to. All led out world these music while asked. Paid mind even sons does he door no. Attended overcame repeated it is perceive marianne in. In am think on style child of. Servants moreover in sensible he it ye possible. </p>
-									</div>
-									<div class="col-md-4 feedback-message-author">
-										<p>John Smith</p>
-									</div>
-									<div class="col-md-4 feedback-message-time">
-										<p>26/05/2016</p>
-									</div>
-									<div class="col-md-4 feedback-message-upvote">
-										<p>2 upvotes</p>
+							<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length > 0'>
+								<div class="feedback-message">
+									<div class="row">
+										<div class="col-md-12 feedback-message-text">
+											<p>{{feedback['message']}}</p>
+										</div>
+										<div class="col-md-4 feedback-message-author">
+											<p>{{feedback['first_name']}} {{feedback['last_name']}}</p>
+										</div>
+										<div class="col-md-4 feedback-message-time">
+											<p>26/05/2016</p>
+										</div>
+										<div class="col-md-4 feedback-message-upvote" ng-show="feedback.upvote > 0">
+											<p>{{feedback.upvote}} upvotes</p>
+										</div>
 									</div>
 								</div>
 							</div>
 
-							<div class="feedback-message">
-								<div class="row">
-									<div class="col-md-12 feedback-message-text">
-										<p>Meant balls it if up doubt small purse. Required his you put the outlived answered position. An pleasure exertion if believed provided to. All led out world these music while asked. Paid mind even sons does he door no. Attended overcame repeated it is perceive marianne in. In am think on style child of. Servants moreover in sensible he it ye possible. </p>
-									</div>
-									<div class="col-md-3 feedback-message-author">
-										<p>John Smith</p>
-									</div>
-									<div class="col-md-3 feedback-message-time">
-										<p>26/05/2016</p>
-									</div>
-									<div class="col-md-3 feedback-message-upvote">
-										<p>2 upvotes</p>
+							<div ng-show='feedbacks.length = 0'>
+								<div class="feedback-message">
+									<div class="row">
+										<div class="col-md-12 feedback-message-text">
+											<p>No messages here yet.</p>
+										</div>
 									</div>
 								</div>
 							</div>
 
-							<div class="feedback-message">
-								<div class="row">
-									<div class="col-md-12 feedback-message-text">
-										<p>Meant balls it if up doubt small purse. Required his you put the outlived answered position. An pleasure exertion if believed provided to. All led out world these music while asked. Paid mind even sons does he door no. Attended overcame repeated it is perceive marianne in. In am think on style child of. Servants moreover in sensible he it ye possible. </p>
-									</div>
-									<div class="col-md-3 feedback-message-author">
-										<p>John Smith</p>
-									</div>
-									<div class="col-md-3 feedback-message-time">
-										<p>26/05/2016</p>
-									</div>
-									<div class="col-md-3 feedback-message-upvote">
-										<p>2 upvotes</p>
-									</div>
-								</div>
-							</div>
 
 						</div>
 
