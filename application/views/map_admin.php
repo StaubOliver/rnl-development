@@ -76,23 +76,23 @@
 		</div>
 	</nav>
 
-
-	<div class='container-fluid'>
-		<div class='row'>
-
-
-			<?php foreach($feedbacks as $feedback): ?>
-				<div class='col-md-4'>
-
-					<?php echo $feedback['message']; ?>
-
-				</div>
-			<?php endforeach; ?>
+	<div class=container>
+		<div class='container-fluid'>
+			<div class='row'>
 
 
+				<?php foreach($feedbacks as $feedback): ?>
+					<div class='col-md-4'>
+
+						<?php echo $feedback['message']; ?>
+
+					</div>
+				<?php endforeach; ?>
+
+
+			</div>
 		</div>
 	</div>
-
 
 </body>
 
