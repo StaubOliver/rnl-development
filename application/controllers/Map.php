@@ -50,31 +50,7 @@ class map extends CI_Controller {
 	}
 
 	public function map_admin(){
-		$genus = '-1';
-		$species = '-1';
-		$age_min = '-1';
-		$age_max = '-1';
-		$collector = '-1';
-		$map_lat_ne = '-1';
-		$map_lng_ne = '-1';
-		$map_lat_sw = '-1';
-		$map_lng_sw = '-1';
-		$map_zoom = '-1';
-
-		$filter = array(
-			'genus' => '-1',
-			'species' => '-1',
-			'age_min' => '-1',
-			'age_max' => '-1',
-			'collector' => '-1',
-			'map_lat_ne' => '-1',
-			'map_lng_ne' => '-1',
-			'map_lat_sw' => '-1',
-			'map_lng_sw' => '-1',
-			'map_zoom' => '-1'
-		);
-
-		$data['feedbacks'] = $this->MapModel->loadFeedbacks($filter);
+		$data['feedbacks'] = $this->MapModel->adminFeedbacks();
 
 		$this->load->view('map_admin', $data);
 	}
