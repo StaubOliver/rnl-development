@@ -314,7 +314,7 @@ class MapModel extends CI_Model {
         $query_feedbacks = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id FROM feedback');
 
         if ($query_feedbacks->num_rows()>0){
-            foreach ($query_feedbacks->result_array() as $feedback) {
+            foreach ($query_feedbacks->result_array() as $row) {
                 
                 //for each feedback we query its user information
                 $query_user = $this->db->query('SELECT first_name, last_name FROM users WHERE id = '.$row['user_id']);
