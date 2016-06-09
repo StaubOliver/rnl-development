@@ -265,11 +265,11 @@ var map = angular.module('map', [])
 		});
 		
 		var triangleCoords = [
-		    {lat: feedback['map_lat_ne'], lng: feedback['map_lng_ne']},
-		    {lat: feedback['map_lat_sw'], lng: feedback['map_lng_ne']},
-		    {lat: feedback['map_lat_sw'], lng: feedback['map_lng_sw']},
-		    {lat: feedback['map_lat_sw'], lng: feedback['map_lng_ne']},
-		    {lat: feedback['map_lat_ne'], lng: feedback['map_lng_ne']}
+		    {lat: parseFloat(feedback['map_lat_ne']), lng: parseFloat(feedback['map_lng_ne'])},
+		    {lat: parseFloat(feedback['map_lat_sw']), lng: parseFloat(feedback['map_lng_ne'])},
+		    {lat: parseFloat(feedback['map_lat_sw']), lng: parseFloat(feedback['map_lng_sw'])},
+		    {lat: parseFloat(feedback['map_lat_sw']), lng: parseFloat(feedback['map_lng_ne'])},
+		    {lat: parseFloat(feedback['map_lat_ne']), lng: parseFloat(feedback['map_lng_ne'])}
 		  ];
 
 		// Construct the polygon.
