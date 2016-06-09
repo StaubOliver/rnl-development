@@ -64,7 +64,7 @@ class map extends CI_Controller {
 		$filter = array(
 			'genus' => '-1',
 			'species' => '-1',
-			'age_min' => '-1'
+			'age_min' => '-1',
 			'age_max' => '-1',
 			'collector' => '-1',
 			'map_lat_ne' => '-1',
