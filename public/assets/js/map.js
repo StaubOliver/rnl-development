@@ -254,7 +254,7 @@ var map = angular.module('map', [])
 	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 	    	
 		}).success(function(data, status, headers, config) {
-			console.log("success");
+			console.log(message);
 		});
 	}
 
