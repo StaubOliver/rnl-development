@@ -281,7 +281,7 @@ var map = angular.module('map', [])
 		fillColor: '#FF0000',
 		fillOpacity: 0.35
 		});
-		bermudaTriangle.setMap(map);
+		bermudaTriangle.setMap(actualmap);
 	}
 
 	$scope.mouseleaveFeedback = function(){
