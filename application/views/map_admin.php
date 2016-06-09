@@ -80,9 +80,13 @@
 
 
 				<?php foreach($feedbacks as $feedback): ?>
-					<div class='col-md-4'>
+					<div class='col-md-6'>
 						<div class='admin-feedback'>
+							<?php echo 'Feedback from '.$feedback['first_name'].' '.$feedback['last_name']; ?>
 							<?php echo $feedback['message']; ?>
+							<?php echo $feedback['time']; ?>
+							<?php echo $feedback['upvote']." upvote"; ?>
+							
 						</div>
 					</div>
 				<?php endforeach; ?>
