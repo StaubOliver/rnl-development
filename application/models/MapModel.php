@@ -221,7 +221,7 @@ class MapModel extends CI_Model {
 
                     $query_upvote = $this->db->query('SELECT upvote_id  FROM up_vote WHERE feedback_id = '.$row['feedback_id']);
                     
-                    if ($query_feedback->num_rows()>0){
+                    if ($query_upvote->num_rows()>0){
                         $count = 0;
                         foreach ($query_upvote as $up) {
                             $count += 1;
