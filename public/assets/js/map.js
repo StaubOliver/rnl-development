@@ -71,10 +71,9 @@ var map = angular.module('map', [])
 	$scope.remove_marker = function(marker, index){
 		if (index == $scope.selected_markers.indexOf(marker_clicked_for_selection)){
 			$scope.text_select_btn = "Select this fossil";
-		}
-		id = markers.indexOf(marker_clicked_for_selection);
+		}$
 		deselect_marker(marker, index);
-		logActivity($http, "Fossil deselected "+id['id']+" "+marker_clicked_for_selection['title'], user_id);
+		logActivity($http, "Fossil deselected "+id['title'].split("-")[0]+" "+marker_clicked_for_selection['title'], user_id);
 	}
 
 	function select_marker(marker){
@@ -95,7 +94,7 @@ var map = angular.module('map', [])
 		var marker = new google.maps.Marker({
 			map: actualmap,
 			position: new google.maps.LatLng(info['lat'], info['lng']),
-			title: info['title'],
+			title: info['id'] + "-" +info['title'],
 			/*icon: {
 		        path: google.maps.SymbolPath.CIRCLE,
 		        scale: 6,
@@ -106,7 +105,6 @@ var map = angular.module('map', [])
 		    //icon: pinSymbol('#fff'),
 		    icon: getPin("51ccca"),
 		    text:"false", 
-		    id:info['id']
 		});
 		
 		marker.addListener("click", function(){
