@@ -48,7 +48,7 @@ class map extends CI_Controller {
         	//$this->LoggerModel->logData();
 		//}
 	}
-
+/*
 	public function old() {		
 		// Check if logged in
 		//if(!$this->ion_auth->logged_in()) {
@@ -83,6 +83,7 @@ class map extends CI_Controller {
         	//$this->LoggerModel->logData();
 		//}
 	}
+	*/
 }
 
 /* End of file map.php */

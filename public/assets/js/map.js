@@ -147,7 +147,7 @@ var map = angular.module('map', [])
 								+ "<p class='infowindow-text'> <strong> Collector : </strong>"+ info["collector"] + "</p>"
 							+ "</div>"
 							+ "<div class='col-xs-12'>"
-								+ "<p class='infowindow-text'> <strong> Location : </strong>" + info["place"] + " " + info["country"] + "</p>"
+								+ "<p class='infowindow-text'> <strong> Location : </strong>" + info["location"] + "</p>"
 							+ "</div>"
 
 							+ "<div class='col-xs-12'>"
