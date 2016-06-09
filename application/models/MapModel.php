@@ -368,7 +368,7 @@ class MapModel extends CI_Model {
                     $this->db->insert("feedback_fossil", $data);
                 }
             }*/
-            return "SELECT feedback_id FROM feedback WHERE user_id='"+$data['user_id'] +"' and time='" + $data['time']+"' and message='" + $data['message']+ "' and filter_id='" + $data['filter_id']+"' and map_coordinates_id='" + $data['map_coordinates_id']+"';"
+            return "SELECT feedback_id FROM feedback WHERE user_id='"+$data['user_id'] +"' and time='" + $data['time']+"' and message='" + $data['message']+ "' and filter_id='" + $data['filter_id']+"' and map_coordinates_id='" + $data['map_coordinates_id']+"';";
         }
 
         //$this->db->insert('map_coordinates', $map_coordinates);
