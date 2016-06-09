@@ -262,7 +262,7 @@ var map = angular.module('map', [])
 	$scope.feedback_form_error = "error";
 
 	$scope.submitfeedback = function(){
-		if ($scope.feedback_form_text != ""){
+		if ($scope.feedback_form_text){
 			data = {};
 			data.message = $scope.feedback_form_text;
 			data.user_id = user_id;
