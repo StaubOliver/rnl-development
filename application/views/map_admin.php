@@ -68,7 +68,6 @@
 					<li><p class="navbar-text">Hello {{ profile.first_name }}</p></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<?php if($is_admin == 1): ?>
 		 			<li><a href="/map/admin">Back to the map</a></li>
 					<?php endif; ?>	
 					<li><p class="navbar-text">Share</p></li>
