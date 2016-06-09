@@ -228,7 +228,7 @@ class MapModel extends CI_Model {
                         }
                         $row['upvote'] = $count;
                     } else {
-                        $['upvote'] = 0;
+                        $row['upvote'] = 0;
                     }
 
                     $return[] = $row;
