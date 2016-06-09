@@ -151,7 +151,6 @@ class Map extends MY_Controller {
 
 		$this->MapModel->submitFeedback($data, $filter, $map_coordinates, $fossil_selection);
 
-		echo json_encode($data);
 	}
 
 	/**
