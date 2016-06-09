@@ -347,13 +347,11 @@ class MapModel extends CI_Model {
         $data['filter_id'] = $filter_id;
         $data['map_coordinates_id'] = 0;
 
-        $message = $data["message"];
         $feedback_id = 0;
 
         if($this->db->insert('feedback', $data))
         {
-            
-            $query_feedback = $this->db->query("SELECT feedback_id FROM feedback WHERE message='"+$message+"'");
+            $query_feedback = $this->db->query("SELECT feedback_id FROM feedback WHERE user_id='".$data['user_id'] . "' and time='" . $data['time']."' and message='" . $data['message']. "' and filter_id='" . $data['filter_id']."' and map_coordinates_id='" . $data['map_coordinates_id']."'");
 
             if ($query_feedback->num_rows() > 0)
             {
