@@ -278,7 +278,14 @@ class MapModel extends CI_Model {
                         $row["selection"] = [];
                         foreach ($query_selection->result_array() as $select) 
                         {
-                            $row['selection'][] = $select;
+                            //$row['selection'][] = $select;
+                            $query_fossil = $this->db->query("SELECT lat, lng FROM ".$select["data_table"]."WHERE data_id='".$select["data_id"]."'");
+                            if ($query_fossil->num_rows()>0)
+                            {
+                                $temp = $query_fossil->row_array();
+                                $temp['id'] = $select["data_id"];
+                                $row['selection'][] = $temp;
+                            }
                         }
                     }
                     
