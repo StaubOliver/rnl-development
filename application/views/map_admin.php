@@ -108,19 +108,16 @@
 
 								
 								<div class='col-md-6'>
-									<?php echo "Genus :".$feedback['genus']; ?>
+									<?php echo "Genus: ".$feedback['genus']; ?>
 								</div>
 								<div class='col-md-6'>
-									<?php echo "Collector :".$feedback['collector']; ?>
+									<?php echo "Collector: ".$feedback['collector']; ?>
 								</div>
-								<div class='col-md-12'>
-									vide
+								<div class='col-md-6'>
+									See comment on the map
 								</div>
-								<div class='col-md-12'>
-									vide
-								</div>
-								<div class='col-md-12'>
-									vide
+								<div class='col-md-6'>
+									Delete comment
 								</div>
 
 							</div>
