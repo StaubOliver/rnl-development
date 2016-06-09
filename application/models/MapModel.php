@@ -239,7 +239,7 @@ class MapModel extends CI_Model {
     		$row = $query->row_array();
     		$filter_id = $row['filter_id'];
 
-    		$query2 = $this->db->query('SELECT feedback_id, user_id, time, message FROM feedback WHERE filter_id='.$filter_id);
+    		$query2 = $this->db->query('SELECT feedback_id, user_id, time, message, map_coordinates_id FROM feedback WHERE filter_id='.$filter_id);
 
     		if ($query2->num_rows() > 0)
     		{
@@ -265,6 +265,14 @@ class MapModel extends CI_Model {
                     $row['upvote'] = $query_upvote->num_rows();
 
                     //querying map information for each feedback
+                    $query_map_coord = $this->db->query("SELECT map_center_lat, map_center_lng FROM map_coordinates WHERE map_coordinates='".$row["map_corrdinates_id"]."'");
+                    if ($query_feedback->num_rows>0){
+                        $coor = $query_map_coord->row_array();
+                        $row["map_center_lat"] = $coor['map_center_lat'];
+                        $row["map_center_lng"] = $coor['map_center_lng'];
+                    }
+                    
+
 
                     $return[] = $row;
                 }
