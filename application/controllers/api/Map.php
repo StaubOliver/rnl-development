@@ -92,7 +92,7 @@ class Map extends MY_Controller {
 		$species = $this->uri->segment(5);
 		$age_min = $this->uri->segment(6);
 		$age_max = $this->uri->segment(7);
-		$collector = $this->uri->segment(8);
+		$collector = urldecode($this->uri->segment(8));
 		$map_lat_ne = $this->uri->segment(9);
 		$map_lng_ne = $this->uri->segment(10);
 		$map_lat_sw = $this->uri->segment(11);
@@ -135,7 +135,6 @@ class Map extends MY_Controller {
 			'age_min' => $this->input->post('age_min'),
 			'age_max' => $this->input->post('age_max'),
 			'collector' => $this->input->post('collector')
-			
 		);
 
 		$map_coordinates = array(
