@@ -104,7 +104,7 @@ var map = angular.module('map', [])
 		    }, */
 		    //icon: pinSymbol('#fff'),
 		    icon: getPin("51ccca"),
-		    text:"false", 
+		    zIndex: marker.length
 		});
 		
 		marker.addListener("click", function(){
