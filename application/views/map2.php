@@ -55,7 +55,7 @@
 
 <body ng-controller="GoogleMap">
 	<!-- Header -->
-	<nav class="navbar navbar-inverse navbar-fixed-top" >
+	<nav class="navbar-default  navbar-fixed-top" >
 		<div class="container-fluid">
 
 			<div class="navbar-header">
