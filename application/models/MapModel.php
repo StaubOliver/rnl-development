@@ -281,7 +281,7 @@ class MapModel extends CI_Model {
     	}
     }
 
-    function submitFeedback($data, $filter, $map_coordinates){
+    function submitFeedback($data, $filter, $map_coordinates, $fossil_selection){
         //using the data from the filter we create the where statement for querying the database
         $where = [];
         $i = 0;
@@ -347,7 +347,31 @@ class MapModel extends CI_Model {
         $data['filter_id'] = $filter_id;
         $data['map_coordinates_id'] = 0;
 
-        $this->db->insert('feedback', $data);
+        $feedback_id = 0;
+
+        if($this->db->insert('feedback', $data))
+        {
+            $query_feedback = $this->db->query("SELECT feedback_id FROM feedback WHERE 
+                user_id='"+$data['user_id']
+                + "' and time='" + $data['time']
+                + "' and message='" + $data['message']
+                + "' and filter_id='" + $data['filter_id']
+                + "' and map_coordinates_id='" + $data['map_coordinates_id']+"'");
+            if ($query_feedback->num_rows() > 0)
+            {
+                $temp = $query_feedback->row_array();
+                $feedback_id = $temp['feedback_id'];
+
+                foreach ($fossil_selection as $fossil) {
+                    $data = array(
+                          'feedback_id' => $feedback_id,
+                          'data_table' => "project_1_data",
+                          'data_id' => $fossil
+                    );
+                    $this->db->insert("feedback_fossil", $data);
+                }
+            }
+        }
 
         //$this->db->insert('map_coordinates', $map_coordinates);
 

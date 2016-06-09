@@ -279,6 +279,10 @@ var map = angular.module('map', [])
 			data.map_center_lat = actualmap.getCenter().lat();
 			data.map_center_lng = actualmap.getCenter().lng();
 
+			data.fossil_selection = [];
+			$scope.selected_markers.forEach(function(item, index){
+				data.fossil_selection.push(item['title'].split("-")[0]);
+			});
 
 			// Do the ajax call
 			$http({

@@ -147,7 +147,9 @@ class Map extends MY_Controller {
 			'map_zoom' => $this->input->post('map_zoom')
 		);
 
-		$this->MapModel->submitFeedback($data, $filter, $map_coordinates);
+		$fossil_selection = $this->input->post('fossil_selection');
+
+		$this->MapModel->submitFeedback($data, $filter, $map_coordinates, $fossil_selection);
 
 		echo json_encode($data);
 	}
