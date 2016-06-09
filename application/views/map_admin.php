@@ -72,12 +72,7 @@
 		 			<li><a href="/map/admin">Back to the map</a></li>
 					<?php endif; ?>	
 					<li><p class="navbar-text">Share</p></li>
-					<?php if($logged_in == true): ?>
 		 			<li><a href ="/auth/logout" class="navbar-link">Logout</a></li>
-					<?php endif; ?>	
-					<?php if($logged_in == false): ?>
-		 			<li><a href ="/auth/login" class="navbar-link">Login</a></li>
-					<?php endif; ?>	
 				</ul>
 			</div>
 		</div>
