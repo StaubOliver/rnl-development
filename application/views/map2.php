@@ -371,7 +371,7 @@
 											<p>{{feedback['first_name']}} {{feedback['last_name']}}</p>
 										</div>
 										<div class="col-md-4 feedback-message-time">
-											<p>26/05/2016</p>
+											<p>{{feedback['time']}}</p>
 										</div>
 										<div class="col-md-4 feedback-message-upvote" ng-show="feedback.upvote > 0">
 											<p>{{feedback.upvote}} upvotes</p>
