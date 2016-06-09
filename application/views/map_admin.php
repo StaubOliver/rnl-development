@@ -86,7 +86,7 @@
 							<?php echo $feedback['message']; ?>
 							<?php echo $feedback['time']; ?>
 							<?php echo $feedback['upvote']." upvote"; ?>
-							
+							<?php echo count($feedback['selection']); ?>
 						</div>
 					</div>
 				<?php endforeach; ?>
