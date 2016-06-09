@@ -14,7 +14,6 @@
 	<!-- JS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-	<script src="/assets/js/map.js"></script>
 	<!-- Icons -->
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	
@@ -69,7 +68,6 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 		 			<li><a href="/map">Back to the map</a></li>
-					<li><p class="navbar-text">Share</p></li>
 		 			<li><a href ="/auth/logout" class="navbar-link">Logout</a></li>
 				</ul>
 			</div>
