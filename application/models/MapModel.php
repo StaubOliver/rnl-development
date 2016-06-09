@@ -199,19 +199,19 @@ class MapModel extends CI_Model {
     	$where = [];
     	$i = 0;
     	
-		$where[$i] = "genus = " . $data['genus'];
-		$i += 1;
+		$where[$i] = "genus = '" . $data['genus']."'";
+        $i += 1;
 
 /*
-		$where[$i] = "age_min = " . $data['age_min'];
-		$i += 1;
+        $where[$i] = "age_min = " . $data['age_min'];
+        $i += 1;
 
         $where[$i] = "age_max = " . $data['age_max'];
         $i += 1;
- */       
+*/      
 
-		$where[$i] = "collector = " . $data['collector'];
-		$i += 1;
+        $where[$i] = "collector = '" . $data['collector']."'";
+        $i += 1;
 
     	$where_string = "";
 
