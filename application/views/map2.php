@@ -327,7 +327,7 @@
 							<form>
 								<div class="row feedback-form">
 									<div class="col-md-12">
-										<textarea class="form-control feedback-message-form-textarea" ng-model='feedback_form_text' ng-change="feedback_form_error=''" rows="2"></textarea>
+										<textarea class="form-control feedback-message-form-textarea" ng-model='feedback_form_text' ng-change="feedback_form_error=''; recordActivity('Writing comment : '+feedback_form_text)" rows="2"></textarea>
 									</div>
 									<div class="col-md-12">
 										<p>You can select fossils on the map:</p>
@@ -338,7 +338,7 @@
 										</div>
 									</div>
 									<div class="col-md-6 feedback-clear-btn">
-										<button type="button" class="btn btn-default btn-sm" ng-show="selected_markers.length > 0" ng-click="clear_selected_markers()">Clear</button>
+										<button type="button" class="btn btn-default btn-sm" ng-show="selected_markers.length > 0" ng-click="clear_selected_markers(); recordActivity('Clear Fossil selection')">Clear</button>
 									</div>
 									<div class="col-md-6 feedback-submit-btn">
 										<button type="button" class="btn btn-primary btn-sm" ng-click="submitfeedback()">Save</button>
@@ -362,7 +362,7 @@
 						</div>
 
 							<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
-								<div class="feedback-message">
+								<div class="feedback-message" ng-mouseover="recordActivity('Feedback mouse over '+feedback['feedback_id']+ ' '+feedback['message'])">
 									<div class="row">
 										<div class="col-md-12 feedback-message-text">
 											<p>{{feedback['message']}}</p>
