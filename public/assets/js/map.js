@@ -235,13 +235,28 @@ var map = angular.module('map', [])
 		$scope.feedbacks = [];
 		http.get('/api/map/loadfeedbacks/'+filter['genus']+'/-1/ee/ee/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
 			data.forEach(function(item, index){
-				$scope.feedbacks.push(item);
+
+				currentBounds = actualmap.getBounds();
+
+				var view = [
+				    {lat: currentBounds.getNorthEast().lat(), lng: currentBounds.getNorthEast().lng()},
+				    {lat: currentBounds.getSouthWest().lat(), lng: currentBounds.getNorthEast().lng()},
+				    {lat: currentBounds.getSouthWest().lat(), lng: currentBounds.getSouthWest().lng()},
+				    {lat: currentBounds.getNorthEast().lat(), lng: currentBounds.getSouthWest().lng()},
+				    {lat: currentBounds.getNorthEast().lat(), lng: currentBounds.getNorthEast().lng()}
+				];
+
+				center = new google.maps.LatLng(item['map_center_lat'], item['map_center_lng']);
+
+				if (google.maps.geometry.poly.containsLocation(center, view)){
+					$scope.feedbacks.push(item);
+				}
+
 			});
 		});
 	}
 
 	$scope.feedback_selection_marker = [];
-	var rectangle = null;
 
 	$scope.mouseoverFeedback = function(feedback){
 		console.log(feedback['selection']);
@@ -267,6 +282,7 @@ var map = angular.module('map', [])
 				$scope.feedback_selection_marker.push(marker);
 			});
 		}
+		/*
 		rectangle.setMap(null);
 		
 		var triangleCoords = [
@@ -287,7 +303,7 @@ var map = angular.module('map', [])
 		fillOpacity: 0.35
 		});
 		rectangle.setMap(actualmap);
-		
+		*/
 	}
 
 	$scope.mouseleaveFeedback = function(){
