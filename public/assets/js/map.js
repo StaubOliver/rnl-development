@@ -32,6 +32,7 @@ var map = angular.module('map', [])
 	function setMapOnAll(map) {
 		for (var i = 0; i < markers.length; i++) {
 			markers[i].setMap(map);
+			marker[i] = null;
 		}
 	}
 
