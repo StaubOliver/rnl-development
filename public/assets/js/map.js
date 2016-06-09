@@ -148,9 +148,7 @@ var map = angular.module('map', [])
 							+ "<div class='col-xs-12'>"
 								+ "<p class='infowindow-text'> <strong> Location : </strong>" + info["place"] + " " + info["country"] + "</p>"
 							+ "</div>"
-							+ "<div class='col-xs-12'>"
-								+ "<a class='infowindow-text' href='#'>Wrong spot ?</a>"
-							+ "</div>"
+
 							+ "<div class='col-xs-12'>"
 								+ "<div class='btn btn-custom-primary' ng-click='click_on_marker_for_selection("+info['id']+");'>{{text_select_btn}}</div>"
 							+ "</div>"
