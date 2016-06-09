@@ -372,6 +372,9 @@ class MapModel extends CI_Model {
                             $temp = $query_fossil->row_array();
                             $temp['id'] = $select["data_id"];
                             $row['selection'][] = $temp;
+                        } else
+                        {
+                            $row['selection'] = [];
                         }
                     }
                 }
