@@ -82,11 +82,24 @@
 				<?php foreach($feedbacks as $feedback): ?>
 					<div class='col-md-8 col-md-offset-2'>
 						<div class='admin-feedback'>
-							<?php echo 'Feedback from '.$feedback['first_name'].' '.$feedback['last_name']; ?>
-							<?php echo $feedback['message']; ?>
-							<?php echo $feedback['time']; ?>
-							<?php echo $feedback['upvote']." upvote"; ?>
-							<?php echo count($feedback['selection'])." fossils selected"; ?>
+
+							<div class='row'>
+								<div class='col-md-12'>
+									<?php echo 'Feedback from '.$feedback['first_name'].' '.$feedback['last_name']; ?>
+								</div>
+								<div class='col-md-12'>
+									<?php echo $feedback['message']; ?>
+								</div>
+								<div class='col-md-12'>
+									<?php echo $feedback['time']; ?>
+								</div>
+								<div class='col-md-12'>
+									<?php echo $feedback['upvote']." upvote"; ?>
+								<div class='col-md-12'>
+								</div>
+									<?php echo count($feedback['selection'])." fossils selected"; ?>
+								</div>
+							</div>
 
 						</div>
 					</div>
