@@ -82,6 +82,9 @@
 	<div class='container-fluid'>
 		<div class='row'>
 
+
+			<?php echo $feedbacks; ?>
+
 			<?php foreach($feedbacks as $feedback): ?>
 				</div class='col-md-4'>
 
