@@ -241,6 +241,7 @@ var map = angular.module('map', [])
 	}
 
 	$scope.feedback_selection_marker = [];
+	var rectangle = null;
 
 	$scope.mouseoverFeedback = function(feedback){
 		console.log(feedback['selection']);
@@ -276,7 +277,7 @@ var map = angular.module('map', [])
 		  ];
 
 		// Construct the polygon.
-		var bermudaTriangle = new google.maps.Polygon({
+		rectangle = new google.maps.Polygon({
 		paths: triangleCoords,
 		strokeColor: '#FF0000',
 		strokeOpacity: 0.8,
@@ -285,6 +286,7 @@ var map = angular.module('map', [])
 		fillOpacity: 0.35
 		});
 		bermudaTriangle.setMap(actualmap);
+		
 	}
 
 	$scope.mouseleaveFeedback = function(){
@@ -293,6 +295,7 @@ var map = angular.module('map', [])
 			item = null;
 		})
 		$scope.feedback_selection_marker = [];
+		rectangle.setMap(null);
 	}
 
 	refreshFeedback($http);
