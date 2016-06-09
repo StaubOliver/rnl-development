@@ -241,7 +241,7 @@ var map = angular.module('map', [])
 
 	$scope.feedback_selection_marker = [];
 
-	$scope.mousehoverFeedback = function(feedback){
+	$scope.mouseoverFeedback = function(feedback){
 		console.log(feedback['selection']);
 		feedback['selection'].forEach(function(item, index){
 			var marker = new google.maps.Marker({
