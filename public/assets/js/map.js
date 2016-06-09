@@ -8,6 +8,8 @@ var map = angular.module('map', [])
 	var markers = [];
 	$scope.selected_markers = [];
 
+	$scope.feedbacks = [];
+
 	var infoWindow;
 	var user_id;
 
@@ -229,14 +231,15 @@ var map = angular.module('map', [])
 	}
 
 	function refreshFeedback(http){
-
-		var feedbacks = "";
-		http.get('/api/map/loadfossils/'+filter['genus']+'/-1/ee/ee/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
+		$scope.feedbacks = [];
+		http.get('/api/map/loadfeedbacks/'+filter['genus']+'/-1/ee/ee/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
 			data.forEach(function(item, index){
-				//feedbacks += 
+				$scope.feedbacks[] = item;
 			});
 		});
 	}
+
+	refreshFeedback($http);
 
 
 	function logActivity(http, message, user_id){

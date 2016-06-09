@@ -358,6 +358,25 @@
 							</div>
 						</div>
 
+						<div ng-repeat='feedback in feedbacks'>
+							<div class="feedback-message">
+								<div class="row">
+									<div class="col-md-12 feedback-message-text">
+										<p>{{feedback['text']}}</p>
+									</div>
+									<div class="col-md-4 feedback-message-author">
+										<p>{{feedback['first_name']}} {{feedback['last_name']}}</p>
+									</div>
+									<div class="col-md-4 feedback-message-time">
+										<p>26/05/2016</p>
+									</div>
+									<div class="col-md-4 feedback-message-upvote">
+										<p>{{feedback.upvote}} upvotes</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
 						<div id="feedbacks">
 							<div class="feedback-message">
 								<div class="row">
