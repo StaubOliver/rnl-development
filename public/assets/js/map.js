@@ -267,6 +267,7 @@ var map = angular.module('map', [])
 				$scope.feedback_selection_marker.push(marker);
 			});
 		}
+		rectangle.setMap(null);
 		
 		var triangleCoords = [
 		    {lat: parseFloat(feedback['map_lat_ne']), lng: parseFloat(feedback['map_lng_ne'])},
@@ -296,6 +297,7 @@ var map = angular.module('map', [])
 		})
 		$scope.feedback_selection_marker = [];
 		rectangle.setMap(null);
+		rectangle = null;
 	}
 
 	refreshFeedback($http);
