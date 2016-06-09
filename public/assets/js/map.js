@@ -103,8 +103,7 @@ var map = angular.module('map', [])
 		        strokeWeight: 0.4
 		    }, */
 		    //icon: pinSymbol('#fff'),
-		    icon: getPin("51ccca"),
-		    zIndex: markers.length
+		    icon: getPin("51ccca")
 		});
 		
 		marker.addListener("click", function(){
