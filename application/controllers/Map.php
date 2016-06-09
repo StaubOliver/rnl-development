@@ -75,6 +75,8 @@ class map extends CI_Controller {
 		);
 
 		$data['feedbacks'] = $this->MapModel->loadFeedbacks($filter);
+
+		$this->load->view('map_admin', $data);
 	}
 /*
 	public function old() {		
