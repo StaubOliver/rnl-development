@@ -244,31 +244,34 @@ var map = angular.module('map', [])
 
 	$scope.mouseoverFeedback = function(feedback){
 		console.log(feedback['selection']);
-		feedback['selection'].forEach(function(item, index){
-			var marker = new google.maps.Marker({
-				map: actualmap,
-				position: new google.maps.LatLng(item['lat'], item['lng']),
-				title: item['id'],
-				/*icon: {
-			        path: google.maps.SymbolPath.CIRCLE,
-			        scale: 6,
-			        fillColor: "#F00",
-			        fillOpacity: 1,
-			        strokeWeight: 0.4
-			    }, */
-			    //icon: pinSymbol('#fff'),
-			    icon: getPin("FFFFFF"),
-			    optimized: false, 
-			    zIndex: markers.length
+		if(feedback['selection'].length > 0)
+		{
+			feedback['selection'].forEach(function(item, index){
+				var marker = new google.maps.Marker({
+					map: actualmap,
+					position: new google.maps.LatLng(item['lat'], item['lng']),
+					title: item['id'],
+					/*icon: {
+				        path: google.maps.SymbolPath.CIRCLE,
+				        scale: 6,
+				        fillColor: "#F00",
+				        fillOpacity: 1,
+				        strokeWeight: 0.4
+				    }, */
+				    //icon: pinSymbol('#fff'),
+				    icon: getPin("FFFFFF"),
+				    optimized: false, 
+				    zIndex: markers.length
+				});
+				$scope.feedback_selection_marker.push(marker);
 			});
-			$scope.feedback_selection_marker.push(marker);
-		});
+		}
 		
 		var triangleCoords = [
 		    {lat: parseFloat(feedback['map_lat_ne']), lng: parseFloat(feedback['map_lng_ne'])},
 		    {lat: parseFloat(feedback['map_lat_sw']), lng: parseFloat(feedback['map_lng_ne'])},
 		    {lat: parseFloat(feedback['map_lat_sw']), lng: parseFloat(feedback['map_lng_sw'])},
-		    {lat: parseFloat(feedback['map_lat_sw']), lng: parseFloat(feedback['map_lng_ne'])},
+		    {lat: parseFloat(feedback['map_lat_ne']), lng: parseFloat(feedback['map_lng_sw'])},
 		    {lat: parseFloat(feedback['map_lat_ne']), lng: parseFloat(feedback['map_lng_ne'])}
 		  ];
 
