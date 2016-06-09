@@ -345,7 +345,7 @@ class MapModel extends CI_Model {
         $data['filter_id'] = $filter_id;
         $data['map_coordinates_id'] = 0;
 
-        $this->db->insert('feedback', $data)
+        $this->db->insert('feedback', $data);
 
         //$this->db->insert('map_coordinates', $map_coordinates);
 
