@@ -206,6 +206,7 @@ class MapModel extends CI_Model {
     		{
     			//we found some feedbacks related to that filter
     			foreach ($query2->result_array() as $row){
+                    
                     $query_user = $this->db->query('SELECT first_name, last_name FROM users WHERE id = '.$row['user_id']);
                     
                     if ($query_user->num_rows()>0){
@@ -213,8 +214,19 @@ class MapModel extends CI_Model {
                         $user = $query_user->row_array();
                         $row['first_name'] = $user['first_name'];
                         $row['last_name'] = $user['last_name'];
-                        $return[] = $row;
+                        
                     }
+
+                    $query_upvote = $this->db->query('SELECT upvote_id,  FROM "up_vote" WHERE feedback_id = '.$row['feedback_id']);
+                    
+                    if ($query_feedback->num_rows()>0){
+                        $count = 0;
+                        foreach ($query_upvote as $up) {
+                            $count += 1;
+                        }
+                        $row['upvote'] = $count;
+                    }
+                    $return[] = $row;
                 }
                 return $return;
     		} else {
