@@ -290,6 +290,7 @@ var map = angular.module('map', [])
 				console.log("success");
 				refreshFeedback($http);
 				$scope.feedback_form_text = "";
+				$scope.clear_selected_markers();
 
 			}).error(function(data, status, headers, config){
 				console.log(data);
