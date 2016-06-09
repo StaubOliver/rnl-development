@@ -239,6 +239,37 @@ var map = angular.module('map', [])
 		});
 	}
 
+	$scope.feedback_selection_marker = [];
+
+	$scope.mousehoverFeedback = function(feedback){
+
+		feedback['selection'].forEach(function(item, index){
+			var marker = new google.maps.Marker({
+				map: actualmap,
+				position: new google.maps.LatLng(item['lat'], item['lng']),
+				title: item['id'],
+				/*icon: {
+			        path: google.maps.SymbolPath.CIRCLE,
+			        scale: 6,
+			        fillColor: "#F00",
+			        fillOpacity: 1,
+			        strokeWeight: 0.4
+			    }, */
+			    //icon: pinSymbol('#fff'),
+			    icon: getPin("FFFFFF") 
+			});
+			$scope.feedback_selection_marker.push(marker);
+		});
+		
+	}
+
+	$scope.mouseleaveFeedback = function(){
+		$scope.feedback_selection_marker.forEach(function(item,index){
+			marker.setMap(null);
+		})
+		$scope.feedback_selection_marker = [];
+	}
+
 	refreshFeedback($http);
 
 
