@@ -87,6 +87,11 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	width:auto;
 }
 
+.fossil-selection{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
 .feedback-title{
 	margin-left: 5px;
 }
