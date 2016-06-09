@@ -345,37 +345,37 @@ var map = angular.module('map', [])
 	//filter Section
 	$scope.newProject = function (){
 		filter['project'] = $scope.selectedProject;
-		refresh($http);
 		refreshFeedback($http);
+		refresh($http);
 		deselect_all_marker();
 	}
 
 	$scope.newGenus = function(){
 		filter['genus'] = $scope.selectedGenus;
-		refresh($http);
 		refreshFeedback($http);
+		refresh($http);
 		logActivity($http, "Filter Genus Selector Change Value "+$scope.selectedGenus, user_id);
 		deselect_all_marker();
 	}
 
 	$scope.newAgeMin = function(){
 		filter['ageMin'] = $scope.selectedAgeMin;
-		refresh($http);
 		refreshFeedback($http);
+		refresh($http);
 		deselect_all_marker();
 	}
 
 	$scope.newAgeMax = function(){
 		filter['ageMax'] = $scope.selectedAgeMax;
-		refresh($http);
 		refreshFeedback($http);
+		refresh($http);
 		deselect_all_marker();
 	}
 
 	$scope.newCollector = function(){
 		filter['collector'] = $scope.selectedCollector;
-		refresh($http);
 		refreshFeedback($http);
+		refresh($http);
 		logActivity($http, "Filter Collector Selector Change Value "+$scope.selectedCollector, user_id);
 		deselect_all_marker();
 	}
