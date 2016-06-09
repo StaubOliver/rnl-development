@@ -348,7 +348,7 @@ class MapModel extends CI_Model {
         //adding the map_coordinates
         if($this->db->insert('map_coordinates', $map_coordinates)){
             
-            $query_map_coord = $this->db->query("SELECT map_coordinates_id FROM map_coordinates_id WHERE map_lat_ne='".$map_coordinates['map_lat_ne']."' and map_lng_ne='".$map_coordinates['map_lng_ne']."' and map_lat_sw='".$map_coordinates['map_lat_sw']."' and map_lng_sw='".$map_coordinates['map_lng_sw']."' and map_center_lat='".$map_coordinates['map_center_lat']."' and map_center_lng='".$map_coordinates['map_center_lng']."'and map_zoom='".$map_coordinates['map_zoom']."'");
+            $query_map_coord = $this->db->query("SELECT map_coordinates_id FROM map_coordinates WHERE map_lat_ne='".$map_coordinates['map_lat_ne']."' and map_lng_ne='".$map_coordinates['map_lng_ne']."' and map_lat_sw='".$map_coordinates['map_lat_sw']."' and map_lng_sw='".$map_coordinates['map_lng_sw']."' and map_center_lat='".$map_coordinates['map_center_lat']."' and map_center_lng='".$map_coordinates['map_center_lng']."'and map_zoom='".$map_coordinates['map_zoom']."'");
             if($query_map_coord->num_rows() > 0){
                 $temp->$query_map_coord->row_array();
                 $data['map_coordinates_id'] = $temp["map_coordinates_id"];
