@@ -376,7 +376,7 @@
 											<p>{{feedback['time']}}</p>
 										</div>
 										
-										<div class='col-md-2' ng-hide="{{feedback.user_has_upvote}}" >
+										<div class='col-md-2' ng-hide="{{feedback.user_has_upvote}}" ng-click="upvoteFeedback(feedback.feedback_id)">
 											<button class='btn btn-custom-default btn-xs'>Upvote</button>
 										</div>
 

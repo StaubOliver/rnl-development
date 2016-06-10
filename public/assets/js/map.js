@@ -318,7 +318,24 @@ var map = angular.module('map', [])
 		rectangle = null;
 	}
 
-	
+	$scope.upvoteFeedback = function(id){
+		recordActivity("Upvote feedback "+data.feedback_id);
+		data = {};
+		data.feedback_id = id;
+		data.user_id = user_id;
+		// Do the ajax call
+		http({
+	        method : 'POST',
+	        url: '/api/map/upvotefeedback',
+	        data: $.param(data),
+	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+	    	
+		}).success(function(data, status, headers, config) {
+			console.log(message);
+
+		});
+
+	}
 
 
 	function logActivity(http, message, user_id){
