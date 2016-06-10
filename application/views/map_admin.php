@@ -113,7 +113,11 @@
 									}?>
 								</div>
 								<div class='col-md-6'>
-									<?php echo "Collector: ".$feedback['collector']; ?>
+									<?php if($feedback['collector']=="-1"){
+										echo("Collector: ALL");
+									} else {
+										echo "Collector: ".$feedback['collector']; 
+									}?>
 								</div>
 								<div class='col-md-6'>
 									See comment on the map
