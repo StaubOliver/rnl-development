@@ -75,10 +75,13 @@
 	</nav>
 
 	<div class=container>
-		<h4><?php echo count($feedbacks).' feedbacks recorded'; ?></h4>
+
 		<div class='container-fluid'>
 			<div class='row'>
 
+				<div class='col-md-8 col-md-offset-2'>
+					<h4><?php echo count($feedbacks).' feedbacks recorded'; ?></h4>
+				</div>
 
 				<?php foreach($feedbacks as $feedback): ?>
 					<div class='col-md-8 col-md-offset-2'>
