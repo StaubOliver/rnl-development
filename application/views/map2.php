@@ -376,11 +376,11 @@
 											<p>{{feedback['time']}}</p>
 										</div>
 										
-										<div  ng-hide="{{feedback.user_has_upvote}}" ng-class="{col-md-6:feedback.upvote==0, col-md-2:feedback.upvote > 0}">
+										<div class='col-md-2' ng-hide="{{feedback.user_has_upvote}}" >
 											<button class='btn btn-custom-default btn-xs'>Upvote</button>
 										</div>
 
-										<div class="feedback-message-upvote" ng-show="feedback.upvote > 0" ng-class="{ col-md-4:feedback.user_has_upvote, col-md-6 : !feedback.user_has_upvote}">
+										<div class="feedback-message-upvote" ng-show="feedback.upvote > 0" ng-class="{ col-md-4:feedback.user_has_upvote}">
 											<p >{{feedback.upvote}} upvotes</p>
 										</div>
 
