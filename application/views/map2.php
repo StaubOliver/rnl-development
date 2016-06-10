@@ -374,8 +374,8 @@
 											<p>{{feedback['time']}}</p>
 										</div>
 										
-										<div class="col-md-4 feedback-message-upvote"  >
-											<p ng-show="feedback.upvote > 0">{{feedback.upvote}} upvotes</p>
+										<div class="col-md-4 feedback-message-upvote" g-show="feedback.upvote > 0">
+											<p n>{{feedback.upvote}} upvotes</p>
 										</div>
 										<div class='col-md-2' ng-hide={{feedback.user_has_upvote}}>
 											<button class='btn btn-custom-default btn-xs'>Upvote</button>
