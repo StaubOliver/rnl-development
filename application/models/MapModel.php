@@ -311,7 +311,7 @@ class MapModel extends CI_Model {
 
         $return = [];
 
-        $query_feedbacks = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id FROM feedback ORDER BY time ASC');
+        $query_feedbacks = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id FROM feedback ORDER BY time DESC');
 
         if ($query_feedbacks->num_rows()>0){
             foreach ($query_feedbacks->result_array() as $row) {
