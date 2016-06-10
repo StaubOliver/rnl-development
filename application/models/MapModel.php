@@ -265,7 +265,7 @@ class MapModel extends CI_Model {
                     $row['upvote'] = $query_upvote->num_rows();
                     $row['user_has_upvote'] = false;
 
-                    if ($query->num_rows() > 0){
+                    if ($query_upvote->num_rows() > 0){
                         foreach ($query_upvote->result_array() as $up) 
                         {
                             if ($up['user_id'] == $user_id){
