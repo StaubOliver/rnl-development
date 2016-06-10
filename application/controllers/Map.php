@@ -12,6 +12,7 @@ class map extends CI_Controller {
         $this->load->model('ProjectModel');
         $this->load->model('ProfileModel');
         $this->load->model('MapModel');
+        $this->load->model('LoggerModel');
     }
     
 	public function index() {		

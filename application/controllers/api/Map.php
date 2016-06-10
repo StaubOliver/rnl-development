@@ -9,7 +9,8 @@ class Map extends MY_Controller {
 	    function __construct() {
         parent::__construct();
         
-         $this->load->model('MapModel');
+        $this->load->model('MapModel');
+        $this->load->model('LoggerModel');
     }
 
 	public function index() {
@@ -121,11 +122,13 @@ class Map extends MY_Controller {
 	public function submitfeedback(){
 		//get the data
 		$user_id = $this->input->post('user_id');
+		$unique_id = $this->LoggerModel->getUniqueID();
 		$time = date('Y-m-d H:i:s');
 		$message = $this->input->post('message');
 
 		$data = array(
 			'user_id' => $user_id,
+			'unique_id' => $unique_id,
 			'time' => $time,
 			'message' => $message
 		);
@@ -182,11 +185,13 @@ class Map extends MY_Controller {
 	public function logmapactivity(){
 		//get the data
 		$user_id = ($this->input->post('user_id')) ? $this->input->post('user_id'): 0;
+		$unique_id = $this->LoggerModel->getUniqueID();
 		$time = date('Y-m-d H:i:s');
 		$activity = $this->input->post('activity');
 
 		$data = array(
 			'user_id' => $user_id,
+			'unique_id' => $unique_id,
 			'time' => $time,
 			'activity' => $activity
 		);
