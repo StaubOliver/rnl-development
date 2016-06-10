@@ -426,8 +426,8 @@ fieldset[disabled] .btn-custom-default.active {
 }
 
 .admin-feedback{
-	margin-top: 20px;
-
+	margin-top: 10px;
+	margin-bottom: 10px;
 	padding-top:10px;
 	padding-left:10px;
 	padding-right:10px;
