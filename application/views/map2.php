@@ -343,6 +343,9 @@
 									<div class="col-md-6 feedback-submit-btn">
 										<button type="button" class="btn btn-custom-primary btn-sm" ng-click="submitfeedback()">Save</button>
 									</div>
+									<div class="col-md-12 feedback-form-error" ng-show="!logged_in">
+										Since you're not logged in your message will be anonymous
+									</div>
 									<div class="col-md-12 feedback-form-error" ng-show="feedback_form_error">
 										{{feedback_form_error}}
 									</div>
