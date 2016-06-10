@@ -64,7 +64,7 @@
 
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li><p class="navbar-text">Administrator panel</p></li>
+					<li><p class="navbar-text">Admin panel</p></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 		 			<li><a href="/map">Back to the map</a></li>
