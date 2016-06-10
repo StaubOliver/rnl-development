@@ -380,7 +380,7 @@
 											<button class='btn btn-custom-default btn-xs'>Upvote</button>
 										</div>
 
-										<div feedback-message-upvote" ng-show="feedback.upvote > 0" ng-class="{ col-md-4:feedback.user_has_upvote, col-md-6 : !feedback.user_has_upvote}">
+										<div class="feedback-message-upvote" ng-show="feedback.upvote > 0" ng-class="{ col-md-4:feedback.user_has_upvote, col-md-6 : !feedback.user_has_upvote}">
 											<p >{{feedback.upvote}} upvotes</p>
 										</div>
 
