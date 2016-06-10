@@ -86,9 +86,7 @@
 							<div class='row'>
 									
 								<div class='col-md-6'>
-									<strong>
-										<?php echo 'Feedback from '.$feedback['first_name'].' '.$feedback['last_name']; ?>
-									</strong>
+									<?php echo 'Feedback from '.$feedback['first_name'].' '.$feedback['last_name']; ?>
 								</div>
 
 								<div class='col-md-6'>
@@ -96,7 +94,9 @@
 								</div>
 								
 								<div class='col-md-12'>
-									<?php echo $feedback['message']; ?>
+									<strong>
+										<?php echo $feedback['message']; ?>
+									</strong>
 								</div>
 								
 								<div class='col-md-6'>
