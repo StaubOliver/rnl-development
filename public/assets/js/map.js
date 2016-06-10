@@ -319,7 +319,7 @@ var map = angular.module('map', [])
 	}
 
 	$scope.upvoteFeedback = function(id){
-		$scope.recordActivity("Upvote feedback "+data.feedback_id);
+		$scope.recordActivity("Upvote feedback "+id);
 		data = {};
 		data.feedback_id = id;
 		data.user_id = user_id;
