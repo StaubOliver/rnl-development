@@ -106,7 +106,11 @@
 								</div>
 								
 								<div class='col-md-6'>
-									<?php echo "Genus: ".$feedback['genus']; ?>
+									<?php if($feedback['genus']=="-1"){
+										echo("Genus: ALL");
+									} else {
+										echo "Genus: ".$feedback['genus']; 
+									}?>
 								</div>
 								<div class='col-md-6'>
 									<?php echo "Collector: ".$feedback['collector']; ?>
