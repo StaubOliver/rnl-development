@@ -324,7 +324,7 @@ var map = angular.module('map', [])
 		data.feedback_id = id;
 		data.user_id = user_id;
 		// Do the ajax call
-		http({
+		$http({
 	        method : 'POST',
 	        url: '/api/map/upvotefeedback',
 	        data: $.param(data),
