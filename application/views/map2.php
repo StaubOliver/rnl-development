@@ -384,7 +384,7 @@
 											<p >{{feedback.upvote}} upvotes</p>
 										</div>
 
-										<div class="col-md-6 feedback-message-upvote" ng-class="{'col-md-offset-2':feedback.user_has_upvote}">
+										<div class="col-md-6 feedback-message-upvote" ng-class="{'col-md-offset-2':feedback.user_has_upvote, 'col-md-offset-4':feedback.upvote==0}">
 											<p ng-show="feedback.selection.length">{{feedback.selection.length}} fossils selected</p>
 										</div>
 									</div>
