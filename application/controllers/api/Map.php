@@ -181,7 +181,7 @@ class Map extends MY_Controller {
 			'time'=> $time
 		);
 
-		if($this->db->insert('upvote', $data)){
+		if($this->db->insert('up_vote', $data)){
 			//insert successful
 			echo json_encode($data);
 		} else {
