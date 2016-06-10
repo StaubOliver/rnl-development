@@ -53,7 +53,7 @@
 
 </head>
 
-<body>
+<body class='admin-body'>
 
 	<nav class="navbar-default  navbar-fixed-top" >
 		<div class="container-fluid">
