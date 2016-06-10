@@ -367,16 +367,16 @@
 										<div class="col-md-12 feedback-message-text">
 											<p>{{feedback['message']}}</p>
 										</div>
-										
+
 										<div class="col-md-6 feedback-message-author">
 											<p>{{feedback['first_name']}} {{feedback['last_name']}}</p>
 										</div>
-										
+
 										<div class="col-md-6 feedback-message-time">
 											<p>{{feedback['time']}}</p>
 										</div>
 										
-										<div class='col-md-2' ng-hide={{feedback.user_has_upvote}}>
+										<div ng-hide="{{feedback.user_has_upvote}}" ng-class="{feedback.upvote==0:col-md-6, feedback.upvote > 0:col-md-2}">
 											<button class='btn btn-custom-default btn-xs'>Upvote</button>
 										</div>
 
