@@ -114,7 +114,15 @@ class Map extends MY_Controller {
 			'map_zoom' => $map_zoom
 		);
 
-		$data = $this->MapModel->loadFeedbacks($filter);
+		if ($this->ion_auth->logged_in()){
+			$data['user_id'] = $this->ion_auth->get_user_id();
+		} 
+		else
+		{
+			$data['user_id'] = 0;
+		}
+
+		$data = $this->MapModel->loadFeedbacks($filter, $user_id);
 
 		echo json_encode($data);
 

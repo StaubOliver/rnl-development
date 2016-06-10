@@ -194,7 +194,7 @@ class MapModel extends CI_Model {
     }
 
 
-    function loadFeedbacks($data){
+    function loadFeedbacks($data, $user_id){
     	//using the data from the filter we create the where statement for querying the database
     	$where = [];
     	$i = 0;
@@ -260,9 +260,19 @@ class MapModel extends CI_Model {
                     }
 
                     //querying upvote information for each feedback
-                    $query_upvote = $this->db->query('SELECT upvote_id  FROM up_vote WHERE feedback_id = '.$row['feedback_id']);
+                    $query_upvote = $this->db->query('SELECT upvote_id, user_id  FROM up_vote WHERE feedback_id = '.$row['feedback_id']);
                     
                     $row['upvote'] = $query_upvote->num_rows();
+                    $row['user_has_upvote'] = false;
+
+                    if ($query->num_rows() > 0){
+                        foreach ($query_upvote->result_array() as $up) 
+                        {
+                            if ($up['user_id'] == $user_id){
+                                $row['user_has_upvote'] = true;
+                            }
+                        }
+                    }
 
                     //querying map information for each feedback
                     $query_map_coord = $this->db->query("SELECT map_center_lat, map_center_lng, map_lat_ne, map_lng_ne, map_lat_sw, map_lng_sw, map_zoom FROM map_coordinates WHERE map_coordinates_id='".$row["map_coordinates_id"]."'");
