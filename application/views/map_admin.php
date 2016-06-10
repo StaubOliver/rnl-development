@@ -126,10 +126,10 @@
 									}?>
 								</div>
 								<div class='col-md-6'>
-									See comment on the map
+									<div class='btn btn-custom-default btn-sm'>See comment on the map</div>
 								</div>
 								<div class='col-md-6'>
-									Delete comment
+									<div class='btn btn-custom-primary btn-sm'>Delete comment</div>
 								</div>
 
 							</div>
