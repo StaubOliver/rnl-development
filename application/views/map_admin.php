@@ -75,6 +75,7 @@
 	</nav>
 
 	<div class=container>
+		<h4><?php echo count($feedbacks).' feedbacks recorded'; ?></h4>
 		<div class='container-fluid'>
 			<div class='row'>
 
