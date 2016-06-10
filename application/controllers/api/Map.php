@@ -168,7 +168,7 @@ class Map extends MY_Controller {
 	/**
 	 *  Upvote a feedback message
 	 */
-	public function upvote(){
+	public function upvotefeedback(){
 		//get the data
 		$user_id = ($this->input->post('user_id')) ? $this->input->post('user_id'): 0;
 		$feedback_id = $this->input->post('feedback_id');
