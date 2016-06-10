@@ -264,7 +264,7 @@ class MapModel extends CI_Model {
                     
                     $row['upvote'] = $query_upvote->num_rows();
                     $row['user_has_upvote'] = false;
-                    /*
+                    
                     if ($query_upvote->num_rows() > 0){
                         foreach ($query_upvote->result_array() as $up) 
                         {
@@ -273,7 +273,7 @@ class MapModel extends CI_Model {
                             }
                         }
                     }
-                    */
+                    
 
                     //querying map information for each feedback
                     $query_map_coord = $this->db->query("SELECT map_center_lat, map_center_lng, map_lat_ne, map_lng_ne, map_lat_sw, map_lng_sw, map_zoom FROM map_coordinates WHERE map_coordinates_id='".$row["map_coordinates_id"]."'");
