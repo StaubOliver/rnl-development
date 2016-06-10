@@ -374,7 +374,7 @@
 											<p>{{feedback['time']}}</p>
 										</div>
 										<div class="col-md-6 feedback-message-upvote" >
-											<p ng-show="feedback.upvote > 0">{{feedback.upvote}} upvotes</p><button class='btn btn-custom-default btn-sm'>Upvote</button>
+											<p ng-show="feedback.upvote > 0">{{feedback.upvote}} upvotes</p><button class='btn btn-custom-default btn-xs'>Upvote</button>
 										</div>
 										<div class="col-md-6 feedback-message-upvote" >
 											<p ng-show="feedback.selection.length">{{feedback.selection.length}} fossils selected</p>
