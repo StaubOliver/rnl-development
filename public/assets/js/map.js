@@ -319,7 +319,7 @@ var map = angular.module('map', [])
 	}
 
 	$scope.upvoteFeedback = function(id){
-		recordActivity("Upvote feedback "+data.feedback_id);
+		$scope.recordActivity("Upvote feedback "+data.feedback_id);
 		data = {};
 		data.feedback_id = id;
 		data.user_id = user_id;
@@ -331,7 +331,7 @@ var map = angular.module('map', [])
 	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 	    	
 		}).success(function(data, status, headers, config) {
-			console.log(message);
+			refreshFeedback($http);
 
 		});
 
