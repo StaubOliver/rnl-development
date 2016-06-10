@@ -373,10 +373,10 @@
 										<div class="col-md-6 feedback-message-time">
 											<p>{{feedback['time']}}</p>
 										</div>
-										<div class='col-md-3'>
+										<div class='col-md-2'>
 											<button class='btn btn-custom-default btn-xs'>Upvote</button>
 										</div>
-										<div class="col-md-3 feedback-message-upvote" >
+										<div class="col-md-4 feedback-message-upvote" >
 											<p ng-show="feedback.upvote > 0">{{feedback.upvote}} upvotes</p>
 										</div>
 										<div class="col-md-6 feedback-message-upvote" >
