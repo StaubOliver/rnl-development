@@ -11,6 +11,7 @@ class Map extends MY_Controller {
         
         $this->load->model('MapModel');
         $this->load->model('LoggerModel');
+        $this->load->model('ProfileModel');
     }
 
 	public function index() {
