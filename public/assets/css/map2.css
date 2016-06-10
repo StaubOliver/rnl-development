@@ -426,6 +426,9 @@ fieldset[disabled] .btn-custom-default.active {
 
 }
 
+.admin-feedback-btn-see-comment{
+	text-align: right;
+}
 
 
 
