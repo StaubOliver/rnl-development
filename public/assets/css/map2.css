@@ -411,6 +411,19 @@ fieldset[disabled] .btn-custom-default.active {
 	padding-bottom: 40px;
 }
 
+.admin-title{
+	margin-top: 20px;
+
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+
+	background-color:#FFFFFF;
+	border-radius: 2px;
+	box-shadow: 0px 1px 10px #CCCCCC;
+
+}
 
 .admin-feedback{
 	margin-top: 20px;
