@@ -13,6 +13,7 @@ var map = angular.module('map', [])
 	var infoWindow;
 	var user_id;
 	$scope.user_id;
+	$scope.logged_in;
 
 	var filter = [];
 	filter['project'] = "-1";

@@ -1,5 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="map" ng-init="selectedGenus=-1; selectedCollector=-1" >
+<html lang="en" ng-app="map" ng-init="selectedGenus=-1; selectedCollector=-1; logged_in=" 
+<?php if($logged_in == true){
+	echo 'ng-init = "selectedGenus=-1; selectedCollector=-1; logged_in=true';
+	}
+	else
+	{
+		echo 'ng-init = "selectedGenus=-1; selectedCollector=-1; logged_in=false';
+	}
+?>
+>
 <head>
 	<!-- Metadata -->
 	<meta charset="utf-8">
