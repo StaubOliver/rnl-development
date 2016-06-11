@@ -201,6 +201,7 @@ class Map extends MY_Controller {
 			);
 			$this->MapModel->deleteFeedback($data);
 		}
+		echo 'You have to be logged in to delete feedbacks';
 	}
 
 	public function logmapactivity(){

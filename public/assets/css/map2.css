@@ -118,7 +118,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	background-color: white;
 	margin-top: 10px;
 	margin-bottom: 10px;
-
+	position: relative;
 	box-shadow: 0px 0px 3px #CCCCCC;
 }
 
