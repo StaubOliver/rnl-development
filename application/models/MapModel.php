@@ -495,10 +495,19 @@ class MapModel extends CI_Model {
                 }
             }
         }
+    }
 
+    function deleteFeedback($data){
+        $query_feedback = $this->db->query("SELECT user_id, filter_id, map_coordinates_id FROM feedback WHERE feedback_id=".$data['feedback_id']);
+        if ($query_feedback->num_rows()>0){
+            $temp = $query_feedback->row_array();
 
-        
-
+            if(($temp['user_id']==$data['user_id']) || ($data['admin']==1))
+            {
+                $query_delete = $this->db->delete('map_coordinates', array('map_coordinates_id':$data["map_coordinates_id"]));
+                $query_delete = $this->db->delete('feedback', array('feedback_id':$data['feedback_id']));
+            }
+        }
     }
 
     function loadGenuses(){

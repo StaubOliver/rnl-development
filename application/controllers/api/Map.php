@@ -188,7 +188,19 @@ class Map extends MY_Controller {
 			//else return an error
 			echo 0;
 		}
+	}
 
+	public function deletefeedback(){
+		if ($this->ion_auth->logged_in())
+		{
+			$admin = ;
+			$data = array(
+				'feedback_id' => $this->uri->segment(4),
+				'user_id' => $this->ion_auth->get_user_id(),
+				'admin'=> $this->ProfileModel->isAdmin()
+			);
+			$this->MapModel->deleteFeedback($data);
+		}
 	}
 
 	public function logmapactivity(){

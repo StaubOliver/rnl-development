@@ -63,6 +63,8 @@ class map extends CI_Controller {
 			redirect('/map');
 		}
 	}
+
+	
 /*
 	public function old() {		
 		// Check if logged in
