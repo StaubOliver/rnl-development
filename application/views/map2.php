@@ -16,7 +16,7 @@
 		$admin="false";
 	}
 
-	echo 'ng-init = "selectedGenus=-1; selectedCollector=-1; logged_in='.$log.'; admin='.$admin.'"';
+	echo 'ng-init = "selectedGenus='.$genus.'; selectedCollector=-1; logged_in='.$log.'; admin='.$admin.'"';
 ?>
 >
 <head>
