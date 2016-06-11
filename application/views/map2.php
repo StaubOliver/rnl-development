@@ -17,7 +17,6 @@
 	}
 
 	echo 'ng-init = "selectedGenus=-1; selectedCollector=-1; logged_in='.$log.'; admin='.$admin.'"';
-	}
 ?>
 >
 <head>
