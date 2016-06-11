@@ -12,6 +12,7 @@ var map = angular.module('map', [])
 
 	var infoWindow;
 	var user_id;
+	$scope.user_id;
 
 	var filter = [];
 	filter['project'] = "-1";
@@ -479,6 +480,7 @@ var map = angular.module('map', [])
 
 	$http.get('/api/profile/getdetails/').success(function(data, status, headers, config) {
 		// Update the profile page and taskbar
+		$scope.user_id = data.profile.id;
 		user_id = data.profile.id;
 		$scope.profile.username = data.profile.username;
 		$scope.profile.email = data.profile.email;
