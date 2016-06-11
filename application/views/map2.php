@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="map" 
-<?php if($logged_in == true){
-	echo 'ng-init = "selectedGenus=-1; selectedCollector=-1; logged_in=true"';
+<?php if($logged_in == true)
+	{
+		$log = "true";
 	}
 	else
 	{
-		echo 'ng-init = "selectedGenus=-1; selectedCollector=-1; logged_in=false"';
+		$log = "false";
+	}
+	if($is_admin==1){
+		$admin="true";
+	}
+	else
+	{
+		$admin="false";
+	}
+
+	echo 'ng-init = "selectedGenus=-1; selectedCollector=-1; logged_in='.$log.'; admin='.$admin.'"';
 	}
 ?>
 >
@@ -377,7 +388,7 @@
 
 
 								<div class="feedback-message " ng-mouseover="recordActivity('Feedback mouse over '+feedback['feedback_id']+ ' '+feedback['message']); mouseoverFeedback(feedback)" ng-mouseleave="mouseleaveFeedback()">
-									<div class='feedback-message-delete-btn' ng-click="" ng-show="logged_in && feedback['user_id']==user_id"> 
+									<div class='feedback-message-delete-btn' ng-click="" ng-show="(logged_in && feedback['user_id']==user_id) || "> 
 										<span class="glyphicon glyphicon-remove"></span>
 									</div>
 									<div class="row">

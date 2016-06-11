@@ -14,6 +14,7 @@ var map = angular.module('map', [])
 	var user_id;
 	$scope.user_id;
 	$scope.logged_in;
+	$scope.admin;
 
 	var filter = [];
 	filter['project'] = "-1";
