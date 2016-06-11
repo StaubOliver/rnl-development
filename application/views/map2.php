@@ -365,7 +365,12 @@
 						</div>
 
 							<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
+
+
 								<div class="feedback-message " ng-mouseover="recordActivity('Feedback mouse over '+feedback['feedback_id']+ ' '+feedback['message']); mouseoverFeedback(feedback)" ng-mouseleave="mouseleaveFeedback()">
+									<div class='feedback-message-delete-btn' ng-click=""> 
+										<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+									</div>
 									<div class="row">
 										<div class="col-md-12 feedback-message-text">
 											<p>{{feedback['message']}}</p>
