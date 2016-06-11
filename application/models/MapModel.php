@@ -504,8 +504,8 @@ class MapModel extends CI_Model {
 
             if(($temp['user_id']==$data['user_id']) || ($data['admin']==1))
             {
-                $query_delete = $this->db->delete('map_coordinates', array('map_coordinates_id':$data["map_coordinates_id"]));
-                $query_delete = $this->db->delete('feedback', array('feedback_id':$data['feedback_id']));
+                $query_delete = $this->db->delete('map_coordinates', array('map_coordinates_id'=>$data["map_coordinates_id"]));
+                $query_delete = $this->db->delete('feedback', array('feedback_id'=>$data['feedback_id']));
             }
         }
     }
