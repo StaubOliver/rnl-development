@@ -388,7 +388,7 @@
 
 
 								<div class="feedback-message " ng-mouseover="recordActivity('Feedback mouse over '+feedback['feedback_id']+ ' '+feedback['message']); mouseoverFeedback(feedback)" ng-mouseleave="mouseleaveFeedback()">
-									<div class='feedback-message-delete-btn' ng-click="" ng-show="(logged_in && feedback['user_id']==user_id) || "> 
+									<div class='feedback-message-delete-btn' ng-click="" ng-show="(logged_in && feedback['user_id']==user_id) || admin"> 
 										<span class="glyphicon glyphicon-remove"></span>
 									</div>
 									<div class="row">
