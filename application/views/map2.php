@@ -106,6 +106,14 @@
 		<img class="map-header-img" src="http://assets.manchester.ac.uk/logos/museum-1.png" alt="Hello there" height="84" width="169">
 	</div>
 
+	<div class="map-legend">
+		<div class='row'>
+			<div class='col-md-12'>
+				<h4>Legend</h4>
+			</div>
+		</div>
+	</div>
+
 	<div class="row main-layout">
 
 		<div class="col-md-9 main-layout-left">

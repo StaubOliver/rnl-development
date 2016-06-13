@@ -318,8 +318,12 @@ var map = angular.module('map', [])
 				else{
 					info['title'] = item['genus'] + " " + item['species'];
 				}
-				
+
+				//create the markers to plot on the map
 				createMarkers(info, http);	
+				
+				//refresh the legend
+				
 			});
 		});
 	}
