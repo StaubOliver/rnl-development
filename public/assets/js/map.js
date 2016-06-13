@@ -53,21 +53,21 @@ var map = angular.module('map', [])
 	}
 
 	var pin_standard = getPin("51ccca")
-	var pin_highlight = getPin("#FFFFFF");
-	var pin_selected = getPin("#ff4d79");
+	var pin_highlight = getPin("FFFFFF");
+	var pin_selected = getPin("ff4d79");
 
-	var pin_quaternary = getPin("#F9F97F");
-	var pin_neogene = getPin("#");
-	var pin_paleogene = getPin("#");
-	var pin_cretaceous = getPin("#");
-	var pin_jurassic = getPin("#");
-	var pin_triassic = getPin("#");
-	var pin_permian = getPin("#");
-	var pin_carboniferous = getPin("#");
-	var pin_devonian = getPin("#");
-	var pin_silurian = getPin("#");
-	var pin_ordovician = getPin("#");
-	var pin_cambrian = getPin("#");
+	var pin_quaternary = getPin("F9F97F");
+	var pin_neogene = getPin("");
+	var pin_paleogene = getPin("");
+	var pin_cretaceous = getPin("");
+	var pin_jurassic = getPin("");
+	var pin_triassic = getPin("");
+	var pin_permian = getPin("");
+	var pin_carboniferous = getPin("");
+	var pin_devonian = getPin("");
+	var pin_silurian = getPin("");
+	var pin_ordovician = getPin("");
+	var pin_cambrian = getPin("");
 
 
 	$scope.highlight_marker = function(marker){
