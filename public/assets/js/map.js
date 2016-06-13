@@ -125,7 +125,7 @@ var map = angular.module('map', [])
 		        strokeWeight: 0.4
 		    }, */
 		    //icon: pinSymbol('#fff'),
-		    icon: pin_standard;
+		    icon: pin_standard
 		});
 		
 		marker.addListener("click", function(){
