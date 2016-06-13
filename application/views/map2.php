@@ -109,10 +109,10 @@
 	<div class="map-legend">
 		<div class='row'>
 			<div class='col-md-12'>
-				<h4 class='map-legend-title'>Legend</h4>
+				<h4 class='map-legend-title' ng-click="show_legend=!show_legend">Legend</h4>
 			</div>
 		</div>
-		<div class='row'>
+		<div class='row' ng-show="show_legend">
 			<div class='col-md-3'>
 				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/F9F97F/" alt="Hello there">
 			</div>

@@ -30,6 +30,8 @@ var map = angular.module('map', [])
 	$scope.selectedAgeMax = filter['ageMax'];
 	//$scope.selectedCollector = filter['collector'];	
 
+	$scope.show_legend = true;
+
 	var marker_clicked_for_selection = {};
 
 	// Sets the map on all markers in the array.
@@ -323,7 +325,7 @@ var map = angular.module('map', [])
 				createMarkers(info, http);	
 				
 				//refresh the legend
-				
+
 			});
 		});
 	}
