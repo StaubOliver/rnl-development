@@ -204,9 +204,9 @@
 									<optgroup label="Coral genera">	
 									<?php
 										foreach($genuses as $genus){
-											if ($genus != "" and $genus != "Not listed" and $genus != "Missing") {
+											//if ($genus != "" and $genus != "Not listed" and $genus != "Missing") {
 												echo "<option value='".$genus."'>".$genus."</option>";
-											}
+											//}
 										}
 
 									?>
