@@ -34,6 +34,7 @@ class map extends CI_Controller {
 			else
 			{
 				$data['genus'] = "-1";
+			}
 
 			$this->load->view('map2', $data);
 	}
