@@ -38,7 +38,7 @@ class map extends CI_Controller {
 			$this->load->view('map2', $data);
 	}
 
-
+	/*
 	public function map_admin(){
 
 		if($this->ProfileModel->isAdmin() == 1) 
@@ -51,7 +51,7 @@ class map extends CI_Controller {
 		{
 			redirect('/map');
 		}
-	}
+	}*/
 
 	
 /*
