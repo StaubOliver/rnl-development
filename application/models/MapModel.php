@@ -525,7 +525,7 @@ class MapModel extends CI_Model {
                 foreach($query2->result_array() as $row){
                     $return[] = array(
                         'genus' => $row['genus'],
-                        'count' => $row['count']
+                        'count' => $row['nb']
                     );
                 }
                 
