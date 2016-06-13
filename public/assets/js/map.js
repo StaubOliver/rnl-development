@@ -6,6 +6,7 @@ var map = angular.module('map', [])
 	var actualmap;
 
 	var markers = [];
+	var markers_age = [];
 	$scope.selected_markers = [];
 
 	$scope.feedbacks = [];
@@ -176,7 +177,7 @@ var map = angular.module('map', [])
 
 	function deselect_marker(marker, index){
 		$scope.selected_markers.splice(index,1);
-		marker.setIcon(pin_standard);
+		marker.setIcon(markers_age[markers.indexOf(marker)]);
 	}
 
 	$scope.text_select_btn = "";
@@ -284,6 +285,7 @@ var map = angular.module('map', [])
 		});
 		
 		markers.push(marker);
+		markers_age.push(info['age']);
 	}
 
 	
