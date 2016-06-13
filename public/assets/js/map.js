@@ -52,6 +52,24 @@ var map = angular.module('map', [])
 		return "http://www.googlemapsmarkers.com/v1/"+color+"/"
 	}
 
+	var pin_standard = getPin("")
+	var pin_highlight = getPin("#FFFFFF");
+	var pin_selected = getPin("");
+
+	var pin_quaternary = getPin("#F9F97F");
+	var pin_neogene = getPin("#");
+	var pin_paleogene = getPin("#");
+	var pin_cretaceous = getPin("#");
+	var pin_jurassic = getPin("#");
+	var pin_triassic = getPin("#");
+	var pin_permian = getPin("#");
+	var pin_carboniferous = getPin("#");
+	var pin_devonian = getPin("#");
+	var pin_silurian = getPin("#");
+	var pin_ordovician = getPin("#");
+	var pin_cambrian = getPin("#");
+
+
 	$scope.highlight_marker = function(marker){
 		marker.setIcon(getPin("FFFFFF"));
 	}
@@ -107,7 +125,7 @@ var map = angular.module('map', [])
 		        strokeWeight: 0.4
 		    }, */
 		    //icon: pinSymbol('#fff'),
-		    icon: getPin("51ccca")
+		    icon: pin_standard;
 		});
 		
 		marker.addListener("click", function(){
