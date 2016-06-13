@@ -109,7 +109,7 @@
 	<div class="map-legend">
 		<div class='row'>
 			<div class='col-md-12'>
-				<h4>Legend</h4>
+				<h4 class='map-legend-title'>Legend</h4>
 			</div>
 		</div>
 	</div>
