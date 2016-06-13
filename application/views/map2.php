@@ -381,10 +381,10 @@
 
 						<!-- Collector -->
 						<div class="row filter-element">
-							<div class="col-md-3">
+							<div class="col-md-4">
 								<h6>Collector</h6>
 							</div>
-							<div class="col-md-9">
+							<div class="col-md-8">
 								<select class="form-control" id="fossilCollectorSelect" ng-model="selectedCollector" ng-change="newCollector()"  ng-mouseover="recordActivity('Collector Selector Hover')">
 									<option value="-1" selected>All Collectors</option>
 									<optgroup label="Collectors">	
