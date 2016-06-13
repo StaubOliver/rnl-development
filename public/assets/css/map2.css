@@ -195,7 +195,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	padding:10px;
 }
 
-.map-header{
+.map-legend{
 	z-index: 5;
 	position: absolute;
 	top: 120px;
