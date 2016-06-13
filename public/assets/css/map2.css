@@ -216,7 +216,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 }
 
 .map-legend-pin{
-	height:32px;
+	height:24px;
 	width:auto;
 	margin-left: 10px;
 }
