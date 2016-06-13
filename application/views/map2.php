@@ -130,6 +130,14 @@
 		</div>
 		<div class='row'>
 			<div class='col-md-3'>
+				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/FD9A52/" alt="Hello there">
+			</div>
+			<div class='col-md-9'>
+				<h6>Paleogene</h6>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-md-3'>
 				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/7FC64E/" alt="Hello there">
 			</div>
 			<div class='col-md-9'>
