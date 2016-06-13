@@ -52,9 +52,9 @@ var map = angular.module('map', [])
 		return "http://www.googlemapsmarkers.com/v1/"+color+"/"
 	}
 
-	var pin_standard = getPin("")
+	var pin_standard = getPin("51ccca")
 	var pin_highlight = getPin("#FFFFFF");
-	var pin_selected = getPin("");
+	var pin_selected = getPin("#ff4d79");
 
 	var pin_quaternary = getPin("#F9F97F");
 	var pin_neogene = getPin("#");
@@ -71,16 +71,16 @@ var map = angular.module('map', [])
 
 
 	$scope.highlight_marker = function(marker){
-		marker.setIcon(getPin("FFFFFF"));
+		marker.setIcon(pin_highlight);
 	}
 
 	$scope.remove_highlight = function(marker){
-		marker.setIcon(getPin("ff4d79"));
+		marker.setIcon(pin_selected);
 	}
 
 	function deselect_all_marker(){
 		for (var i=0; i < $scope.selected_markers.length; i++){
-			$scope.selected_markers[i].setIcon(getPin("51ccca"));
+			$scope.selected_markers[i].setIcon(pin_standard);
 		}
 		$scope.selected_markers = [];
 	}
@@ -100,13 +100,13 @@ var map = angular.module('map', [])
 
 	function select_marker(marker){
 		$scope.selected_markers.push(marker);
-		marker.setIcon(getPin("ff4d79"));
+		marker.setIcon(pin_selected);
 		
 	}
 
 	function deselect_marker(marker, index){
 		$scope.selected_markers.splice(index,1);
-		marker.setIcon(getPin("51ccca"));
+		marker.setIcon(pin_standard);
 	}
 
 	$scope.text_select_btn = "";
@@ -298,7 +298,7 @@ var map = angular.module('map', [])
 				        strokeWeight: 0.4
 				    }, */
 				    //icon: pinSymbol('#fff'),
-				    icon: getPin("FFFFFF"),
+				    icon: pin_highlight,
 				    optimized: false, 
 				    zIndex: markers.length
 				});
