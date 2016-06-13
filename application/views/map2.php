@@ -193,27 +193,6 @@
 							</div>
 						</div>
 						-->
-						<!-- Genus --> 
-						<div class="row filter-element">
-							<div class="col-md-4">
-								<h6>Genus</h6>
-							</div>
-							<div class="col-md-8">
-								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="newGenus()" ng-mouseover="recordActivity('Genus Selector Hover')">
-									<option value="-1" selected>All Genera</option>
-									<optgroup label="Coral genera">	
-									<?php
-										foreach($genuses as $genus){
-											//if ($genus != "" and $genus != "Not listed" and $genus != "Missing") {
-												echo "<option value='".$genus['genus']."'>".$genus['count']." ".$genus['genus']."</option>";
-											//}
-										}
-
-									?>
-									</optgroup>
-								</select>
-							</div>
-						</div>
 
 						<!-- Geological Age --> 
 						<div class="row filter-element">
@@ -319,6 +298,28 @@
 										foreach($collectors as $collector){
 											//if ($genus != "" and $genus != "Not listed" and $genus != "Missing") {
 												echo "<option value='".$collector."'>".$collector."</option>";
+											//}
+										}
+
+									?>
+									</optgroup>
+								</select>
+							</div>
+						</div>
+
+						<!-- Genus --> 
+						<div class="row filter-element">
+							<div class="col-md-4">
+								<h6>Genus</h6>
+							</div>
+							<div class="col-md-8">
+								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="newGenus()" ng-mouseover="recordActivity('Genus Selector Hover')">
+									<option value="-1" selected>All Genera</option>
+									<optgroup label="Coral genera">	
+									<?php
+										foreach($genuses as $genus){
+											//if ($genus != "" and $genus != "Not listed" and $genus != "Missing") {
+												echo "<option value='".$genus['genus']."'>".$genus['count']." ".$genus['genus']."</option>";
 											//}
 										}
 
