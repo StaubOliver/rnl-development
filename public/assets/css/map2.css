@@ -210,8 +210,9 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 }
 
 .map-legend-pin{
-	height:24px;
+	height:32px;
 	width:auto;
+	margin-left: 10px;
 }
 
 .map-loading{
