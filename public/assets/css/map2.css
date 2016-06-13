@@ -211,6 +211,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 
 .map-legend-title-glyph{
 	float:right;
+	margin-right: 10px;
 	cursor: pointer;
 }
 
