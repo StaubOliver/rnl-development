@@ -290,7 +290,7 @@
 
 						<!-- Geological Age --> 
 						<div class="row filter-element">
-							<div class="col-md-4">
+							<div class="col-md-3">
 								<p>Geological Age</p>
 							</div>
 							<div class="col-md-4">
@@ -381,10 +381,10 @@
 
 						<!-- Collector -->
 						<div class="row filter-element">
-							<div class="col-md-4">
+							<div class="col-md-3">
 								<p>Collector</p>
 							</div>
-							<div class="col-md-8">
+							<div class="col-md-9">
 								<select class="form-control" id="fossilCollectorSelect" ng-model="selectedCollector" ng-change="newCollector()"  ng-mouseover="recordActivity('Collector Selector Hover')">
 									<option value="-1" selected>All Collectors</option>
 									<optgroup label="Collectors">	
@@ -403,10 +403,10 @@
 
 						<!-- Genus --> 
 						<div class="row filter-element">
-							<div class="col-md-4">
+							<div class="col-md-3">
 								<p>Genus</p>
 							</div>
-							<div class="col-md-8">
+							<div class="col-md-9">
 								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="newGenus()" ng-mouseover="recordActivity('Genus Selector Hover')">
 									<option value="-1" selected>All Genera</option>
 									<optgroup label="Coral genera">	
