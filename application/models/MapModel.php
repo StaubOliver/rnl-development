@@ -520,10 +520,13 @@ class MapModel extends CI_Model {
             foreach($query->result_array() as $row)
             {
                 //we retrieve the data from each fossil from each project
-                $query2=$this->db->query('SELECT distinct  genus FROM '.$row['data_table'].' ORDER BY genus ASC');
+                $query2=$this->db->query('SELECT distinct genus, count(distinct genus) as nb FROM '.$row['data_table'].' GROUP BY nb ORDER BY nb DESC LIMIT 10');
 
                 foreach($query2->result_array() as $row){
-                    $return[] = $row['genus'];
+                    $return[] = array(
+                        'genus' => $row['genus'],
+                        'count' => $row['count']
+                    );
                 }
                 
             }
