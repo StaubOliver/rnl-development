@@ -403,10 +403,10 @@
 
 						<!-- Genus --> 
 						<div class="row filter-element">
-							<div class="col-md-3">
+							<div class="col-md-4">
 								<h6>Genus</h6>
 							</div>
-							<div class="col-md-9">
+							<div class="col-md-8">
 								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="newGenus()" ng-mouseover="recordActivity('Genus Selector Hover')">
 									<option value="-1" selected>All Genera</option>
 									<optgroup label="Coral genera">	
