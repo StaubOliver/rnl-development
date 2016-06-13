@@ -200,7 +200,7 @@
 							</div>
 							<div class="col-md-8">
 								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="newGenus()" ng-mouseover="recordActivity('Genus Selector Hover')">
-									<option value="-1" selected>All Genuses</option>
+									<option value="-1" selected>All Genera</option>
 									<optgroup label="Coral genera">	
 									<?php
 										foreach($genuses as $genus){
