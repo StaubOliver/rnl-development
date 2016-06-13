@@ -413,7 +413,7 @@
 									<?php
 										foreach($genuses as $genus){
 											//if ($genus != "" and $genus != "Not listed" and $genus != "Missing") {
-												echo "<option value='".$genus['genus']."'>".$genus['count']." ".$genus['genus']."</option>";
+												echo "<option value='".$genus['genus']."'>".$genus['genus']." (".$genus['count'].")"."</option>";
 											//}
 										}
 
