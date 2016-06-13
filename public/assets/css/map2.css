@@ -221,6 +221,10 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	margin-left: 10px;
 }
 
+.map-legend-content{
+	overflow:auto;
+}
+
 .map-loading{
 	z-index: 5;
 	position: absolute;
