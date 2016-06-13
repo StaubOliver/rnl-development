@@ -57,17 +57,85 @@ var map = angular.module('map', [])
 	var pin_selected = getPin("ff4d79");
 
 	var pin_quaternary = getPin("F9F97F");
-	var pin_neogene = getPin("");
-	var pin_paleogene = getPin("");
-	var pin_cretaceous = getPin("");
-	var pin_jurassic = getPin("");
-	var pin_triassic = getPin("");
-	var pin_permian = getPin("");
-	var pin_carboniferous = getPin("");
-	var pin_devonian = getPin("");
-	var pin_silurian = getPin("");
-	var pin_ordovician = getPin("");
-	var pin_cambrian = getPin("");
+	var pin_neogene = getPin("FFE619");
+	var pin_paleogene = getPin("FD9A52");
+	var pin_cretaceous = getPin("7FC64E");
+	var pin_jurassic = getPin("98B2C9");
+	var pin_triassic = getPin("C72B92");
+	var pin_permian = getPin("F04028");
+	var pin_carboniferous = getPin("67A599");
+	var pin_devonian = getPin("CB8C37");
+	var pin_silurian = getPin("B3E1B6");
+	var pin_ordovician = getPin("009270");
+	var pin_cambrian = getPin("7F1056");
+	var pin_precambrian = getPin("934370");
+
+
+	var getPinColor = function(age){
+		//quaternary
+		if (age=="Quaternary") { return pin_quaternary; }
+
+		//neogene
+		if (age=="Neogene") { return pin_neogene; }
+		if (age=="Pliocene") { return pin_neogene; }
+		if (age=="Miocene") { return pin_neogene; }
+
+		//paleogene
+		if (age=="Paleogene") { return pin_paleogene; }
+		if (age=="Oligocene") { return pin_paleogene; }
+		if (age=="Eocene") { return pin_paleogene; }
+		if (age=="Paleocene") { return pin_paleogene; }
+
+		//cretaceous
+		if (age=="Cretaceous") { return pin_cretaceous; }
+		if (age=="Cretaceous, Upper") { return pin_cretaceous; }
+		if (age=="Cretaceous, Lower") { return pin_cretaceous; }
+
+		//jurassic
+		if (age=="Jurassic") { return pin_jurassic; }
+		if (age=="Jurassic, Upper") { return pin_jurassic; }
+		if (age=="Jurassic, Middle") { return pin_jurassic; }
+		if (age=="Jurassic, Lower (Lias)") { return pin_jurassic; }
+
+		//triassic
+		if (age=="Triassic") { return pin_triassic; }
+		if (age=="Triassic, Upper") { return pin_triassic; }
+		if (age=="Triassic, Middle") { return pin_triassic; }
+		if (age=="Triassic, lower") { return pin_triassic; }
+
+		//permian
+		if (age=="Permian") { return pin_permian; }
+
+		//carboniferous
+		if (age=="Carboniferous") { return pin_carboniferous; }
+		if (age=="Carboniferous Upper (Coal Measeures") { return pin_carboniferous; }
+		if (age=="Carboniferous Lower (Limestone)") { return pin_carboniferous; }
+
+		//denovian
+		if (age=="Devonian") { return pin_devonian; }
+		if (age=="Devonian, Upper") { return pin_devonian; }
+		if (age=="Devonian, Middle") { return pin_devonian; }
+		if (age=="Devonian, Lower") { return pin_devonian; }
+
+		//silurian
+		if (age=="Silurian") { return pin_silurian; }
+		if (age=="Silurian, Pridoli") { return pin_silurian; }
+		if (age=="Silurian, Ludlow") { return pin_silurian; }
+		if (age=="Silurian, Wenlock") { return pin_silurian; }
+		if (age=="Silurian, Llandovery") { return pin_silurian; }
+
+		//ordovician
+		if (age=="Ordovician") { return pin_ordovician; }
+		if (age=="Ordovician, Upper") { return pin_ordovician; }
+		if (age=="Ordovician, Middle") { return pin_ordovician; }
+		if (age=="Ordovician, Lower") { return pin_ordovician; }
+
+		//cambrian
+		if (age=="Cambrian") { return pin_cambrian; }
+
+		//precambrian
+		if (age=="Precambrain") { return pin_precambrian; }
+	}
 
 
 	$scope.highlight_marker = function(marker){
@@ -101,7 +169,6 @@ var map = angular.module('map', [])
 	function select_marker(marker){
 		$scope.selected_markers.push(marker);
 		marker.setIcon(pin_selected);
-		
 	}
 
 	function deselect_marker(marker, index){
