@@ -112,6 +112,14 @@
 				<h4 class='map-legend-title'>Legend</h4>
 			</div>
 		</div>
+		<div class='row'>
+			<div class='col-md-3'>
+				<img class="map-header-img" src="http://www.googlemapsmarkers.com/v1/F9F97F/" alt="Hello there">
+			</div>
+			<div class='col-md-9'>
+				<h6>Quaternary</h6>
+			</div>
+		</div>
 	</div>
 
 	<div class="row main-layout">
