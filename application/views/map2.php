@@ -208,6 +208,14 @@
 				<h6>Precambrian</h6>
 			</div>
 		</div>
+		<div class='row'>
+			<div class='col-md-3'>
+				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/909090/" alt="Hello there">
+			</div>
+			<div class='col-md-9'>
+				<h6>Data Missing</h6>
+			</div>
+		</div>
 	</div>
 
 	<div class="row main-layout">
