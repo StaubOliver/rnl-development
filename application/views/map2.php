@@ -109,7 +109,7 @@
 	<div class="map-legend">
 		<div class='row'>
 			<div class='col-md-12'>
-				<h4 class='map-legend-title' >Legend</h4><span class="glyphicon glyphicon-chevron-down map-legend-title-glyph" aria-hidden="true" ng-click="show_legend=!show_legend"></span>
+				<h4 class='map-legend-title' >Legend<span class="glyphicon glyphicon-chevron-down map-legend-title-glyph" aria-hidden="true" ng-click="show_legend=!show_legend"></span></h4>
 			</div>
 		</div>
 		<div class='row' ng-show="show_legend">
