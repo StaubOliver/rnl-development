@@ -177,7 +177,7 @@ var map = angular.module('map', [])
 
 	function deselect_marker(marker, index){
 		$scope.selected_markers.splice(index,1);
-		marker.setIcon(markers_age[markers.indexOf(marker)]);
+		marker.setIcon(getPinColor(markers_age[markers.indexOf(marker)]));
 	}
 
 	$scope.text_select_btn = "";
@@ -292,7 +292,7 @@ var map = angular.module('map', [])
 	function refresh(http)
 	{
 		deleteMarkers();
-
+		markers_age = [];
 		infoWindow = new google.maps.InfoWindow({maxWidth:400});
 
 		//retrieve the fossils and put them as marker in the map
