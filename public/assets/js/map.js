@@ -52,7 +52,8 @@ var map = angular.module('map', [])
 		return "http://www.googlemapsmarkers.com/v1/"+color+"/"
 	}
 
-	var pin_standard = getPin("51ccca")
+	//var pin_standard = getPin("51ccca")
+	var pin_standard = getPin("909090");
 	var pin_highlight = getPin("FFFFFF");
 	var pin_selected = getPin("ff4d79");
 
@@ -135,6 +136,8 @@ var map = angular.module('map', [])
 
 		//precambrian
 		if (age=="Precambrain") { return pin_precambrian; }
+
+		return pin_standard;
 	}
 
 
