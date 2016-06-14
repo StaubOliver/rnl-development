@@ -70,6 +70,10 @@
 
 	</script>-->
 
+	<!-- RZ Slider -->
+	<script src="/assets/js/rzslider.js"></script>
+	<link rel="stylesheet" href="/assets/css/rzslider.css">
+
 </head>
 
 <body ng-controller="GoogleMap">

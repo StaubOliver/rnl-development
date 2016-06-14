@@ -1,6 +1,6 @@
 
 
-var map = angular.module('map', [])
+var map = angular.module('map', ['rzModule'])
 .controller('GoogleMap', function($scope, $http, $compile){
 	
 	var actualmap;
