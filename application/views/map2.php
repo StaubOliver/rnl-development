@@ -294,10 +294,10 @@
 
 						<!-- Geological Age --> 
 						<div class="row filter-element">
-							<div class="col-md-4">
-								<h6>Geological Age</h6>
+							<div class="col-md-12">
+								<p>Geological Age</p>
 							</div>
-							<div class="col-md-8">
+							<div class="col-md-12">
 								<rzslider
 							    rz-slider-model="selectedAgeMin"
 							    rz-slider-high="selectedAgeMax"
