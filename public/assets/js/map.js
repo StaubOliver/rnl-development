@@ -511,12 +511,9 @@ var map = angular.module('map', ['rzModule'])
 		//marker selection
 		var index = $scope.selected_markers.indexOf(marker_clicked_for_selection);
 		if (index==-1){
-			if (selected_markers.indexOf(marker_clicked_for_selection)==-1)
-			{
-				select_marker(marker_clicked_for_selection);
-				logActivity($http, "Fossil selected "+id+" "+marker_clicked_for_selection['title'], user_id);
-				$scope.text_select_btn = "Deselect this fossil";
-			}
+			select_marker(marker_clicked_for_selection);
+			logActivity($http, "Fossil selected "+id+" "+marker_clicked_for_selection['title'], user_id);
+			$scope.text_select_btn = "Deselect this fossil";
 		} else {
 			deselect_marker(marker_clicked_for_selection, index);
 			logActivity($http, "Fossil deselected "+id+" "+marker_clicked_for_selection['title'], user_id);
