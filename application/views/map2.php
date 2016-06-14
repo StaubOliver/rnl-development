@@ -299,8 +299,8 @@
 							</div>
 							<div class="col-md-8">
 								<rzslider
-							    rz-slider-model="slider.min"
-							    rz-slider-high="slider.max"
+							    rz-slider-model="selectedAgeMin"
+							    rz-slider-high="selectedAgeMax"
 							    rz-slider-options="slider.options"></rzslider>
 							</div>
 							<div class="col-md-4">
