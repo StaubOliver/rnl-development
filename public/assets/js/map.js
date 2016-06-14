@@ -330,7 +330,7 @@ var map = angular.module('map', ['rzModule'])
 		});
 	}
 
-	function LegendItem($color, $age){
+	function LegendItem(color, age){
 		return "<div class='col-md-3'>"
 				+ "<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/"+color+"/' alt='Hello there'>"
 			+ "</div>"
