@@ -370,9 +370,9 @@
 										<textarea class="form-control feedback-message-form-textarea" ng-model='feedback_form_text' ng-change="feedback_form_error=''; recordActivity('Writing comment : '+feedback_form_text)" rows="2"></textarea>
 									</div>
 									<div class="col-md-12">
-										<p ng-show="selected_markers.length==0">You can select fossils from the map:</p>
-										<p ng-show="selected_markers.length==1">You can select fossils : {{selected_markers.length}} fossil selected</p>
-										<p ng-show="selected_markers.length>1">You can select fossils : {{selected_markers.length}} fossil(s) selected</p>
+										<p ng-show="selected_markers.length==0">You can select fossils from the map</p>
+										<p ng-show="selected_markers.length==1">{{selected_markers.length}} fossil selected</p>
+										<p ng-show="selected_markers.length>1">{{selected_markers.length}} fossil selected</p>
 
 										<div ng-repeat='marker in selected_markers'>
 											<div class='btn btn-custom-default btn-xs fossil-selection' ng-click="remove_marker(marker, $index)" ng-mouseover="highlight_marker(marker)" ng-mouseleave="remove_highlight(marker)"> <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>{{ marker['title'].split("-")[1]}}
