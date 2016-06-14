@@ -230,7 +230,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 }
 
 .map-legend-content-title{
-	margin-bottom: 2px !important;
+	/*margin-bottom: 2px !important;*/
 }
 
 .map-loading{
