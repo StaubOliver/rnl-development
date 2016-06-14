@@ -410,13 +410,13 @@
 							<form>
 								<div class="row feedback-form">
 									<div class='col-md-4'>
-										<img src="/assets/img/socialnetworks/twitter.png" alt="There should be an awsome logo" height="64" width="64">
+										<img src="/assets/img/socialnetworks/twitter.png" alt="There should be an awsome logo" height="50" width="50">
 									</div>
 									<div class='col-md-4'>
-										<img class="map-header-img" src="/assets/img/socialnetworks/facebook.png" alt="There should be an awsome logo" height="64" width="64">
+										<img src="/assets/img/socialnetworks/facebook.png" alt="There should be an awsome logo" height="50" width="50">
 									</div>
 									<div class='col-md-4'>
-										<img class="map-header-img" src="/assets/img/socialnetworks/google.png" alt="There should be an awsome logo" height="64" width="64">
+										<img src="/assets/img/socialnetworks/google.png" alt="There should be an awsome logo" height="50" width="50">
 									</div>
 								</div>
 							</form>
