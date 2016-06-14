@@ -465,10 +465,10 @@ class MapModel extends CI_Model {
         $i += 1;
 
 
-        $where[$i] = "age_min = " . $data['age_min'];
+        $where[$i] = "age_min = " . $filter['age_min'];
         $i += 1;
 
-        $where[$i] = "age_max = " . $data['age_max'];
+        $where[$i] = "age_max = " . $filter['age_max'];
         $i += 1;
       
 
