@@ -641,7 +641,7 @@ var map = angular.module('map', ['rzModule'])
 				getSelectionBarColor: function(value) {
 					return '#909090';
 				}, 
-				onChange: function(modelValue, highValue){
+				onEnd: function(modelValue, highValue){
 					$scope.clear_selected_markers(); 
 					refresh($http);
 					refreshFeedback($http);
