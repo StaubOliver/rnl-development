@@ -449,9 +449,21 @@
 								</div>
 							</div>
 
+						</div>
+					</div>
+				</div>
 
+				<!-- Share on social media -->
+				<div class="col-md-12">
+					<div class="feedback-section">
+
+						<div class="row">
+							<div class="col-md-12 feedback-title">
+								<h4>Share on your networks</h4>
+							</div>
 						</div>
 
+						
 					</div>
 				</div>
 
