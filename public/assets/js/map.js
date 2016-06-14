@@ -286,8 +286,11 @@ var map = angular.module('map', ['rzModule'])
 
 		});
 		
-		markers.push(marker);
-		markers_age.push(info['age']);
+		if (markers.indexOf(marker)==-1)
+		{
+			markers.push(marker);
+			markers_age.push(info['age']);
+		}
 	}
 
 	
