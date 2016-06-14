@@ -404,8 +404,6 @@
 						<div class="row">
 							<div class="col-md-7 feedback-title">
 								<h4>Share on your networks</h4>
-							</div>
-							<div class="col-md-4">
 								<img class='social-network-icon' src="/assets/img/socialnetworks/twitter.png" alt="There should be an awsome logo" height="24" width="24"> 
 								<img class='social-network-icon' src="/assets/img/socialnetworks/facebook.png" alt="There should be an awsome logo" height="24" width="24"> 
 								<img class='social-network-icon' src="/assets/img/socialnetworks/google.png" alt="There should be an awsome logo" height="24" width="24">
