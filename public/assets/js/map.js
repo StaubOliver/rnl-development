@@ -678,7 +678,7 @@ var map = angular.module('map', ['rzModule'])
 	}
 
 	$scope.recordActivity = function($a){
-		logActivitcly($http, $a, user_id);
+		logActivity($http, $a, user_id);
 	};
 
 
