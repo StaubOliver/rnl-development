@@ -605,7 +605,11 @@ var map = angular.module('map', ['rzModule'])
 					if (value==10) return '#009270';
 					if (value==11) return '#7F1056';
 					if (value==12) return '#934370';
-				}
+				}, 
+				showSelectionBar: true,
+				getSelectionBarColor: function(value) {
+					return '#909090';
+				}	
 			}
 	};
 
