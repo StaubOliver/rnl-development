@@ -611,9 +611,9 @@ var map = angular.module('map', ['rzModule'])
 					return '#909090';
 				}, 
 				onChange: function(modelValue, highValue){
+					$scope.clear_selected_markers(); 
 					refresh($http);
 					refreshFeedback($http);
-					$scope.clear_selected_markers(); 
 					logActivity($http, "Filter Geological Age changed new range "+$scope.selectedAgeMin+" - "+$scope.selectedAgeMax, user_id);
 				}	
 			}
