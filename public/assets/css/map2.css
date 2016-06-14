@@ -229,6 +229,10 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	overflow:auto;
 }
 
+.map-legend-content-title{
+	margin-bottom: 2px !important;
+}
+
 .map-loading{
 	z-index: 5;
 	position: absolute;
