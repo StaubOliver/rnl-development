@@ -148,6 +148,7 @@ class MapModel extends CI_Model {
 
         $temp[] = 'Illegible';
         $temp[] = 'Missing';
+        $temp[] = '';
 
         for ($i = 0; $i < count($temp)-1; ++$i){
             $list .= "'".$temp[$i]."', ";
