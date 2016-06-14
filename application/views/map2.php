@@ -409,7 +409,15 @@
 						<div class="feedback-message-form">
 							<form>
 								<div class="row feedback-form">
-									
+									<div class='col-md-3'>
+										twitter
+									</div>
+									<div class='col-md-3'>
+										facebook
+									</div>
+									<div class='col-md-3'>
+										google+
+									</div>
 								</div>
 							</form>
 						</div>
