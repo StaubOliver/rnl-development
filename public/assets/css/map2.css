@@ -188,6 +188,10 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	float: right;
 }
 
+.social-network-icon{
+	cursor: pointer;
+}
+
 .map-header{
 	z-index: 5;
 	position: absolute;
