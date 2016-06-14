@@ -23,8 +23,8 @@ class Map extends MY_Controller {
 		$project = "-1";
 		$genus = urldecode($this->uri->segment(4));
 		$species = $this->uri->segment(5);
-		$age_min = $this->uri->segment(6);
-		$age_max = $this->uri->segment(7);
+		$age_min = urldecode($this->uri->segment(6));
+		$age_max = urldecode($this->uri->segment(7));
 		$collector = urldecode($this->uri->segment(8));
 		$map_lat_ne = $this->uri->segment(9);
 		$map_lng_ne = $this->uri->segment(10);

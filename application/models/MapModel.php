@@ -63,44 +63,101 @@ class MapModel extends CI_Model {
 
     }
 
-    function in_age_range($min, $max, $test){
-        //using the data from the filter we create the where statement for querying the database
-        $where = [];
-        $i = 0;
-        
-        if ($data['genus'] != "-1"){
-            $where[$i] = "genus = '" . $data['genus']."'";
-            $i += 1;
+    function age_criteria($age_min, $age_max){
+        //using the data from the filter we create the where statement for the age criterai
+
+        $min = intval($age_min);
+        $max = intval($age_max);
+
+        $temp = [];
+
+        $list = "";
+
+        if (0>=$min and 0<=$max){
+            $temp[] = 'Quaternary';
+            $temp[] = 'Holocene';
+            $temp[] = 'Pleistone';
         }
 
-/*
-        $where[$i] = "age_min = " . $data['age_min'];
-        $i += 1;
-
-        $where[$i] = "age_max = " . $data['age_max'];
-        $i += 1;
-*/      
-
-        if ($data['collector'] != "-1"){
-            $where[$i] = "collector = '" . $data['collector']."'";
-            $i += 1;
+        if (1>=$min and 1<=$max){
+            $temp[] = 'Pleicene';
+            $temp[] = 'Miocene';
         }
 
-        $where_string = "";
+        if (2>=$min and 2<=$max){
+            $temp[] = 'Oligocene';
+            $temp[] = 'Eocene';
+            $temp[] = 'Paleocene';
+        }
 
-        if ($i != 0)
-        {
-            for ($j=0; $j<$i-1; $j++)
-            {
-                $where_string .= $where[$j] . " AND ";
-            }
-            
-            $where_string .= $where[$i-1]; 
+        if (3>=$min and 3<=$max){
+            $temp[] = 'Cretaceous';
+            $temp[] = 'Cretaceous, Upper';
+            $temp[] = 'Cretaceous, Lower';
         }
-        else {
-            $where_string = " 1";
+
+        if (4>=$min and 4<=$max){
+            $temp[] = 'Jurassic';
+            $temp[] = 'Jurassic, Upper';
+            $temp[] = 'Jurassic, Middle';
+            $temp[] = 'Jurassic, Lower (Lias)';
         }
+
+        if (5>=$min and 5<=$max){
+            $temp[] = 'Triassic';
+            $temp[] = 'Triassic, Upper';
+            $temp[] = 'Triassic, Middle';
+            $temp[] = 'Triassic, lower';
+        }
+
+        if (6>=$min and 6<=$max){
+            $temp[] = 'Permian';
+        }
+
+        if (7>=$min and 7<=$max){
+            $temp[] = 'Carboniferous';
+            $temp[] = 'Carboniferous, Upper (Coal Measeures)';
+            $temp[] = 'Carboniferous, Lower (Limestone)';
+        }
+
+        if (8>=$min and 8<=$max){
+            $temp[] = 'Denovian';
+            $temp[] = 'Denovian, Upper';
+            $temp[] = 'Denovian, Middle';
+            $temp[] = 'Denovian, Lower';
+        }
+
+        if (9>=$min and 9<=$max){
+            $temp[] = 'Silurian';
+            $temp[] = 'Silurian, Pridoli';
+            $temp[] = 'Silurian, Ludlow';
+            $temp[] = 'Silurian, Wenlock';
+            $temp[] = 'Silurian, Llandovery';
+        }
+
+        if (10>=$min and 10<=$max){
+            $temp[] = 'Ordovician';
+            $temp[] = 'Ordovician, Upper';
+            $temp[] = 'Ordovician, Middle';
+            $temp[] = 'Ordovician, Lower';
+        }
+
+        if (11>=$min and 11<=$max){
+            $temp[] = 'Cambrian';
+        }
+
+        if (12>=$min and 12<=$max){
+            $temp[] = 'Precambrian';
+        }
+
+        for ($i = 0; $i < count($temp)-1; ++$i){
+            $list .= "'".$temp[$i]."', ";
+        }
+        $list .= "'".$temp[count($temp)-1]."'";
+
+        return "age IN (".$list.")";
     }
+
 
     /**
     *   Load all fossils given the informations of genus, species, age and collector form every project
@@ -116,13 +173,16 @@ class MapModel extends CI_Model {
 			$i += 1;
     	}
 
-/*
+        /*
     	$where[$i] = "age_min = " . $data['age_min'];
         $i += 1;
 
         $where[$i] = "age_max = " . $data['age_max'];
+        $i += 1;*/
+
+        $where[$i] = age_criteria($data["age_min"], $data["age_max"]);
         $i += 1;
-*/      
+      
 
     	if ($data['collector'] != "-1"){
     		$where[$i] = "collector = '" . $data['collector']."'";

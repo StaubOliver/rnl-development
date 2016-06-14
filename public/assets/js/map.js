@@ -296,7 +296,7 @@ var map = angular.module('map', ['rzModule'])
 		infoWindow = new google.maps.InfoWindow({maxWidth:400});
 
 		//retrieve the fossils and put them as marker in the map
-		http.get('/api/map/loadfossils/'+filter['genus']+'/-1/ee/ee/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
+		http.get('/api/map/loadfossils/'+filter['genus']+'/-1/'+$scope.selectedAgeMin+'/'+$scope.selectedAgeMax+'/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
 			data.forEach(function(item, index){
 				var info = [];
 				info['lat'] = item['lat'];
@@ -330,7 +330,7 @@ var map = angular.module('map', ['rzModule'])
 
 	function refreshFeedback(http){
 		$scope.feedbacks = [];
-		http.get('/api/map/loadfeedbacks/'+filter['genus']+'/-1/ee/ee/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
+		http.get('/api/map/loadfeedbacks/'+filter['genus']+'/-1/'+$scope.selectedAgeMin+'/'+$scope.selectedAgeMax+'/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
 			data.forEach(function(item, index){
 				/*
 				currentBounds = actualmap.getBounds();
@@ -460,8 +460,8 @@ var map = angular.module('map', ['rzModule'])
 			data.message = $scope.feedback_form_text;
 			data.user_id = user_id;
 			data.genus = filter['genus'];
-			data.age_min = filter['age_min'];
-			data.age_max = filter['age_max'];
+			data.age_min = $scope.selectedAgeMin;
+			data.age_max = $scope.selectedAgeMax;
 			data.collector = filter['collector'];
 
 			data.map_lat_ne = actualmap.getBounds().getNorthEast().lat();
@@ -611,6 +611,8 @@ var map = angular.module('map', ['rzModule'])
 				onChange: function(modelValue, highValue){
 					refresh($http);
 					refreshFeedback($http);
+					deselect_all_marker();
+					logActivity($http, "Filter Geological Age changed new range "+$scope.selectedAgeMin+" - "+$scope.selectedAgeMax, user_id);
 				}	
 			}
 	};
@@ -651,7 +653,7 @@ var map = angular.module('map', ['rzModule'])
 		logActivity($http, "Filter Genus Selector Change Value "+$scope.selectedGenus, user_id);
 		deselect_all_marker();
 	}
-
+	/*
 	$scope.newAgeMin = function(){
 		filter['ageMin'] = $scope.selectedAgeMin;
 		refreshFeedback($http);
@@ -664,7 +666,7 @@ var map = angular.module('map', ['rzModule'])
 		refreshFeedback($http);
 		refresh($http);
 		deselect_all_marker();
-	}
+	}*/
 
 	$scope.newCollector = function(){
 		filter['collector'] = $scope.selectedCollector;
