@@ -295,7 +295,7 @@
 						<!-- Geological Age --> 
 						<div class="row filter-element">
 							<div class="col-md-12">
-								<p>Geological Age</p>
+								<p class='filter-element-title'>Geological Age</p>
 							</div>
 							<div class="col-md-12">
 								<rzslider
@@ -308,7 +308,7 @@
 						<!-- Collector -->
 						<div class="row filter-element">
 							<div class="col-md-12">
-								<p>Collector</p>
+								<p class='filter-element-title'>Collector</p>
 							</div>
 							<div class="col-md-12">
 								<select class="form-control" id="fossilCollectorSelect" ng-model="selectedCollector" ng-change="newCollector()"  ng-mouseover="recordActivity('Collector Selector Hover')">
@@ -330,7 +330,7 @@
 						<!-- Genus --> 
 						<div class="row filter-element">
 							<div class="col-md-12">
-								<p>Genus</p>
+								<p class='filter-element-title'>Genus</p>
 							</div>
 							<div class="col-md-12">
 								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="newGenus()" ng-mouseover="recordActivity('Genus Selector Hover')">
