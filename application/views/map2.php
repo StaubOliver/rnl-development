@@ -401,7 +401,7 @@
 
 						<div class="row">
 							<div class="col-md-12 feedback-title">
-								<h4>Share on your network</h4>
+								<h4>Share on your networks</h4>
 							</div>
 						</div>
 
