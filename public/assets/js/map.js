@@ -20,14 +20,12 @@ var map = angular.module('map', ['rzModule'])
 	var filter = [];
 	filter['project'] = "-1";
 	filter['genus'] = $scope.selectedGenus;
-	filter['ageMin'] = "Quaternary";
-	filter['ageMax'] = 'Precambrian';
 	filter['collector'] = $scope.selectedCollector;
 
 	$scope.selectedProject = filter['project'];
 	//$scope.selectedGenus = filter['genus'];
-	$scope.selectedAgeMin = filter['ageMin'];
-	$scope.selectedAgeMax = filter['ageMax'];
+	$scope.selectedAgeMin = 0;
+	$scope.selectedAgeMax = 12;
 	//$scope.selectedCollector = filter['collector'];	
 
 	$scope.show_legend = true;
@@ -569,8 +567,8 @@ var map = angular.module('map', ['rzModule'])
 	});
 
 	$scope.slider = {
-			min: 0,
-			max: 12,
+			min: $scope.selectedAgeMin,
+			max: $scope.selectedAgeMax,
 			options: {
 				floor: 0,
 				ceil: 12, 
