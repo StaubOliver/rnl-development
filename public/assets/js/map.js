@@ -345,7 +345,17 @@ var map = angular.module('map', ['rzModule'])
 		if (markers_age.indexOf('Pliocene')!=-1 || markers_age.indexOf('Miocene')!=-1){ legend += LegendItem('FFE619', 'Neogene'); }
 		if (markers_age.indexOf('Oligocene')!=-1 || markers_age.indexOf('Eocene')!=-1 || markers_age.indexOf('Palocene')!=-1 ){ legend += LegendItem('FD9A52', 'Paleogene'); }
 		if (markers_age.indexOf('Cretaceous')!=-1 || markers_age.indexOf('Cretaceous, Upper')!=-1 || markers_age.indexOf('Cretaceous, Lower')!=-1){ legend += LegendItem('7FC64E', 'Cretaceous'); }
+		if (markers_age.indexOf('Jurassic')!=-1 || markers_age.indexOf('Jurassic, Upper')!=-1 || markers_age.indexOf('Jurassic, Middle')!=-1 || markers_age.indexOf('Jurassic, Lower (Lias)')!=-1){ legend += LegendItem('34B2C9', 'Jurassic'); }
+		if (markers_age.indexOf('Triassic')!=-1 || markers_age.indexOf('Triassic, Upper')!=-1 || markers_age.indexOf('Triassic, Middle')!=-1 || markers_age.indexOf('Triassic, lower')!=-1){ legend += LegendItem('C72B92', 'Triassic'); }
+		if (markers_age.indexOf('Permian')!=-1){ legend += LegendItem('F04028', 'Permian'); }
+		if (markers_age.indexOf('Carboniferous')!=-1 || markers_age.indexOf('Carboniferous, Upper (Coal Measeures)')!=-1 || markers_age.indexOf('Carboniferous, Lower (Limestone)')!=-1){ legend += LegendItem('67A599', 'Carboniferous'); }
+		if (markers_age.indexOf('Devonian')!=-1 || markers_age.indexOf('Devonian, Upper')!=-1 || markers_age.indexOf('Devonian, Middle')!=-1 || markers_age.indexOf('Devonian, Lower')!=-1){ legend += LegendItem('CB8C37', 'Devonian'); }
+		if (markers_age.indexOf('Silurian')!=-1 || markers_age.indexOf('Silurian, Pridoli')!=-1 || markers_age.indexOf('Silurian, Ludlow')!=-1 || markers_age.indexOf('Silurian, Wenlock')!=-1 || markers_age.indexOf('Silurian, Llandovery')!=-1){ legend += LegendItem('B3E1B6', 'Silurian'); }
+		if (markers_age.indexOf('Ordovician')!=-1 || markers_age.indexOf('Ordovician, Upper')!=-1 || markers_age.indexOf('Ordovician, Middle')!=-1 || markers_age.indexOf('Ordovician, Middle')!=-1 || markers_age.indexOf('Ordovician, Lower')!=-1){ legend += LegendItem('009270', 'Ordovician'); }
+		if (markers_age.indexOf('Cambrian')!=-1){ legend += LegendItem('7FA056', 'Cambrian'); }
+		if (markers_age.indexOf('Precambrain')!=-1){ legend += LegendItem('934370', 'Precambrain'); }
 
+		legend += LegendItem('909090', 'Data Missing');
 
 		document.getElementById('map-legend-content').innerHTML = legend;
 	}
