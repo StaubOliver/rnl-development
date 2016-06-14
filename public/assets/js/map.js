@@ -326,7 +326,7 @@ var map = angular.module('map', ['rzModule'])
 				createMarkers(info, http);	
 				
 				//refresh the legend
-				//refreshLegend();
+				refreshLegend();
 			});
 		});
 	}
@@ -620,7 +620,6 @@ var map = angular.module('map', ['rzModule'])
 					if (value==10) return 'Ordovician';
 					if (value==11) return 'Cambrian';
 					if (value==12) return 'Precambrain';
-
 				}, 
 				getPointerColor: function(value){
 					if (value==0) return '#F9F97F';
