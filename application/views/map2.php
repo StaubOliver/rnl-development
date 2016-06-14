@@ -402,7 +402,7 @@
 					<div class="feedback-section">
 
 						<div class="row">
-							<div class="col-md-9 feedback-title">
+							<div class="col-md-8 feedback-title">
 								<h4>Share on your networks</h4>
 							</div>
 							<div class="col-md-1">
