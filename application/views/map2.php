@@ -403,7 +403,7 @@
 
 						<div class="row">
 							<div class="col-md-12 feedback-title">
-								<h4>Share on your networks  <img src="/assets/img/socialnetworks/twitter.png" alt="There should be an awsome logo" height="24" width="24"> <img src="/assets/img/socialnetworks/facebook.png" alt="There should be an awsome logo" height="24" width="24"> <img src="/assets/img/socialnetworks/google.png" alt="There should be an awsome logo" height="24" width="24"></h4>
+								<h4>Share on your networks  <div class="social-network-icons"><img src="/assets/img/socialnetworks/twitter.png" alt="There should be an awsome logo" height="32" width="32"> <img src="/assets/img/socialnetworks/facebook.png" alt="There should be an awsome logo" height="32" width="32"> <img src="/assets/img/socialnetworks/google.png" alt="There should be an awsome logo" height="32" width="32"></div></h4>
 							</div>
 						</div>
 
