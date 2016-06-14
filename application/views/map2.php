@@ -116,7 +116,7 @@
 				<h4 class='map-legend-title'><span class="glyphicon map-legend-title-glyph" aria-hidden="true" ng-click="show_legend=!show_legend" ng-class="{'glyphicon-chevron-down':!show_legend, 'glyphicon-chevron-up':show_legend}"></span>Legend</h4>
 			</div>
 		</div>
-		<div class='row map-legend-content' ng-show="show_legend">
+		<div class='row map-legend-content' id='map-legend-content' ng-show="show_legend">
 			<div class='col-md-3'>
 				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/F9F97F/" alt="Hello there">
 			</div>
