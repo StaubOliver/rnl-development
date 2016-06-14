@@ -107,7 +107,7 @@
 	</nav>
 
 	<div class="map-header">
-		<img class="map-header-img" src="http://assets.manchester.ac.uk/logos/museum-1.png" alt="Hello there" height="84" width="169">
+		<img class="map-header-img" src="http://assets.manchester.ac.uk/logos/museum-1.png" alt="There should be an awsome logo" height="84" width="169">
 	</div>
 
 	<div class="map-legend">
@@ -410,13 +410,13 @@
 							<form>
 								<div class="row feedback-form">
 									<div class='col-md-4'>
-										twitter
+										<img src="/assets/img/socialnetworks/twitter.png" alt="There should be an awsome logo" height="64" width="64">
 									</div>
 									<div class='col-md-4'>
-										facebook
+										<img class="map-header-img" src="/assets/img/socialnetworks/facebook.png" alt="There should be an awsome logo" height="64" width="64">
 									</div>
 									<div class='col-md-4'>
-										google+
+										<img class="map-header-img" src="/assets/img/socialnetworks/google.png" alt="There should be an awsome logo" height="64" width="64">
 									</div>
 								</div>
 							</form>
