@@ -343,9 +343,9 @@ var map = angular.module('map', ['rzModule'])
 	function refreshLegend(){
 		legend = "";
 		if (markers_age.indexOf('Quaternary')!=-1){ legend += LegendItem('F9F97F', 'Quaternary'); }
-		if (markers_age.indexOf('Pliocene')!=-1 or markers_age.indexOf('Miocene')!=-1){ legend += LegendItem('FFE619', 'Neogene'); }
-		if (markers_age.indexOf('Oligocene')!=-1 or markers_age.indexOf('Eocene')!=-1 or markers_age.indexOf('Palocene')!=-1 ){ legend += LegendItem('FD9A52', 'Paleogene'); }
-		if (markers_age.indexOf('Cretaceous')!=-1 or markers_age.indexOf('Cretaceous, Upper')!=-1 or markers_age.indexOf('Cretaceous, Lower')!=-1){ legend += LegendItem('7FC64E', 'Cretaceous'); }
+		if (markers_age.indexOf('Pliocene')!=-1 || markers_age.indexOf('Miocene')!=-1){ legend += LegendItem('FFE619', 'Neogene'); }
+		if (markers_age.indexOf('Oligocene')!=-1 || markers_age.indexOf('Eocene')!=-1 || markers_age.indexOf('Palocene')!=-1 ){ legend += LegendItem('FD9A52', 'Paleogene'); }
+		if (markers_age.indexOf('Cretaceous')!=-1 || markers_age.indexOf('Cretaceous, Upper')!=-1 || markers_age.indexOf('Cretaceous, Lower')!=-1){ legend += LegendItem('7FC64E', 'Cretaceous'); }
 
 
 		document.getElementById('map-legend-content').innerHTML = legend;
