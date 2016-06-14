@@ -117,6 +117,7 @@
 			</div>
 		</div>
 		<div class='row map-legend-content' id='map-legend-content' ng-show="show_legend">
+			<!--
 			<div class='col-md-3'>
 				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/F9F97F/" alt="Hello there">
 			</div>
@@ -201,6 +202,7 @@
 			<div class='col-md-9'>
 				<p class='map-legend-content-title'>Data Missing</p>
 			</div>
+			-->
 		</div>
 	</div>
 
