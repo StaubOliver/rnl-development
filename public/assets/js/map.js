@@ -325,7 +325,7 @@ var map = angular.module('map', ['rzModule'])
 				createMarkers(info, http);	
 				
 				//refresh the legend
-				//refreshLegend();
+				refreshLegend();
 			});
 		});
 	}
