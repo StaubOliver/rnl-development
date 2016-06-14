@@ -152,7 +152,9 @@ var map = angular.module('map', ['rzModule'])
 
 	function deselect_all_marker(){
 		for (var i=0; i < $scope.selected_markers.length; i++){
-			$scope.selected_markers[i].setIcon(pin_standard);
+			index = markers.indexOf($scope.selected_markers[i])
+			markers[index].setIcon(getPinColor(markers_age[index]));
+			//$scope.selected_markers[i].setIcon(pin_standard);
 		}
 		$scope.selected_markers = [];
 	}
