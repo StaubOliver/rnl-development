@@ -395,6 +395,27 @@
 					</div>
 				</div>
 
+				<!-- Share on social media -->
+				<div class="col-md-12">
+					<div class="feedback-section">
+
+						<div class="row">
+							<div class="col-md-12 feedback-title">
+								<h4>Share on your network</h4>
+							</div>
+						</div>
+
+
+						<div class="feedback-message-form">
+							<form>
+								<div class="row feedback-form">
+									
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
 				</div class='col-md-12'>
 					<div class='feedback-section'>
 
@@ -453,48 +474,7 @@
 					</div>
 				</div>
 
-				<!-- Share on social media -->
-				<div class="col-md-12">
-					<div class="feedback-section">
-
-						<div class="row">
-							<div class="col-md-12 feedback-title">
-								<h4>Share on your network</h4>
-							</div>
-						</div>
-
-
-						<div class="feedback-message-form">
-							<form>
-								<div class="row feedback-form">
-									<div class="col-md-12">
-										<textarea class="form-control feedback-message-form-textarea" ng-model='feedback_form_text' ng-change="feedback_form_error=''; recordActivity('Writing comment : '+feedback_form_text)" rows="2"></textarea>
-									</div>
-									<div class="col-md-12">
-										<p>You can select fossils on the map:</p>
-
-										<div ng-repeat='marker in selected_markers'>
-											<div class='btn btn-custom-default btn-xs fossil-selection' ng-click="remove_marker(marker, $index)" ng-mouseover="highlight_marker(marker)" ng-mouseleave="remove_highlight(marker)"> <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>{{ marker['title'].split("-")[1]}}
-											</div>
-										</div>
-									</div>
-									<div class="col-md-6 feedback-clear-btn">
-										<button type="button" class="btn btn-custom-default btn-sm" ng-show="selected_markers.length > 0" ng-click="clear_selected_markers(); recordActivity('Clear Fossil selection')">Clear</button>
-									</div>
-									<div class="col-md-6 feedback-submit-btn">
-										<button type="button" class="btn btn-custom-primary btn-sm" ng-click="submitfeedback()">Save</button>
-									</div>
-									<div class="col-md-12 feedback-form-error" ng-show="feedback_form_error">
-										{{feedback_form_error}}
-									</div>
-									<div class="col-md-12 " ng-show="!logged_in">
-										Since you're not logged in your message will be anonymous
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
+				
 
 			</div>
 
