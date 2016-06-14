@@ -372,7 +372,7 @@
 									<div class="col-md-12">
 										<p ng-show="selected_markers.length==0">You can select fossils from the map</p>
 										<p ng-show="selected_markers.length==1">{{selected_markers.length}} fossil selected</p>
-										<p ng-show="selected_markers.length>1">{{selected_markers.length}} fossil selected</p>
+										<p ng-show="selected_markers.length>1">{{selected_markers.length}} fossils selected</p>
 
 										<div ng-repeat='marker in selected_markers'>
 											<div class='btn btn-custom-default btn-xs fossil-selection' ng-click="remove_marker(marker, $index)" ng-mouseover="highlight_marker(marker)" ng-mouseleave="remove_highlight(marker)"> <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>{{ marker['title'].split("-")[1]}}
@@ -403,7 +403,7 @@
 
 						<div class="row">
 							<div class="col-md-12 feedback-title">
-								<h4>Share on your networks</h4>
+								<h4>Share on your networks</h4><img src="/assets/img/socialnetworks/twitter.png" alt="There should be an awsome logo" height="24" width="24"><img src="/assets/img/socialnetworks/facebook.png" alt="There should be an awsome logo" height="24" width="24"><img src="/assets/img/socialnetworks/google.png" alt="There should be an awsome logo" height="24" width="24">
 							</div>
 						</div>
 
@@ -412,13 +412,13 @@
 							<form>
 								<div class="row feedback-form">
 									<div class='col-md-4'>
-										<img src="/assets/img/socialnetworks/twitter.png" alt="There should be an awsome logo" height="64" width="64">
+										
 									</div>
 									<div class='col-md-4'>
-										<img src="/assets/img/socialnetworks/facebook.png" alt="There should be an awsome logo" height="64" width="64">
+										
 									</div>
 									<div class='col-md-4'>
-										<img src="/assets/img/socialnetworks/google.png" alt="There should be an awsome logo" height="64" width="64">
+										
 									</div>
 								</div>
 							</form>
