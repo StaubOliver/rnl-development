@@ -569,8 +569,8 @@ var map = angular.module('map', ['rzModule'])
 	});
 
 	$scope.slider = {
-			min: 100,
-			max: 180,
+			min: 0,
+			max: 12,
 			options: {
 				floor: 0,
 				ceil: 450
