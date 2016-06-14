@@ -331,13 +331,12 @@ var map = angular.module('map', ['rzModule'])
 	}
 
 	function LegendItem($color, $age){
-		return 
-			"<div class='col-md-3'>"
+		return "<div class='col-md-3'>"
 				+ "<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/"+color+"/' alt='Hello there'>"
 			+ "</div>"
 			+ "<div class='col-md-9'>"
 				+ "<p class='map-legend-content-title'>"+age+"</p>"
-			+ "</div>"
+			+ "</div>";
 	}
 
 	function refreshLegend(){
