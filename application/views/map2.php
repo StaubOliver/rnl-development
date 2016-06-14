@@ -370,7 +370,7 @@
 										<textarea class="form-control feedback-message-form-textarea" ng-model='feedback_form_text' ng-change="feedback_form_error=''; recordActivity('Writing comment : '+feedback_form_text)" rows="2"></textarea>
 									</div>
 									<div class="col-md-12">
-										<p>You can select fossils on the map:</p>
+										<p>You can select fossils on the map:{{selected_markers.length}}</p>
 
 										<div ng-repeat='marker in selected_markers'>
 											<div class='btn btn-custom-default btn-xs fossil-selection' ng-click="remove_marker(marker, $index)" ng-mouseover="highlight_marker(marker)" ng-mouseleave="remove_highlight(marker)"> <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>{{ marker['title'].split("-")[1]}}
@@ -410,13 +410,13 @@
 							<form>
 								<div class="row feedback-form">
 									<div class='col-md-4'>
-										<img src="/assets/img/socialnetworks/twitter.png" alt="There should be an awsome logo" height="50" width="50">
+										<img src="/assets/img/socialnetworks/twitter.png" alt="There should be an awsome logo" height="64" width="64">
 									</div>
 									<div class='col-md-4'>
-										<img src="/assets/img/socialnetworks/facebook.png" alt="There should be an awsome logo" height="50" width="50">
+										<img src="/assets/img/socialnetworks/facebook.png" alt="There should be an awsome logo" height="64" width="64">
 									</div>
 									<div class='col-md-4'>
-										<img src="/assets/img/socialnetworks/google.png" alt="There should be an awsome logo" height="50" width="50">
+										<img src="/assets/img/socialnetworks/google.png" alt="There should be an awsome logo" height="64" width="64">
 									</div>
 								</div>
 							</form>

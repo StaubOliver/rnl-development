@@ -655,6 +655,7 @@ var map = angular.module('map', ['rzModule'])
 		logActivity($http, "Filter Genus Selector Change Value "+$scope.selectedGenus, user_id);
 		deselect_all_marker();
 	}
+
 	/*
 	$scope.newAgeMin = function(){
 		filter['ageMin'] = $scope.selectedAgeMin;
@@ -679,7 +680,7 @@ var map = angular.module('map', ['rzModule'])
 	}
 
 	$scope.recordActivity = function($a){
-		logActivity($http, $a, user_id);
+		logActivitcly($http, $a, user_id);
 	};
 
 
