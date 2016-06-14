@@ -59,10 +59,6 @@ class MapModel extends CI_Model {
         }
     }
 
-    function get_where_statement($data){
-
-    }
-
     function age_criteria($age_min, $age_max){
         //using the data from the filter we create the where statement for the age criterai
 
