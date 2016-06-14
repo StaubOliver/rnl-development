@@ -645,7 +645,6 @@ var map = angular.module('map', ['rzModule'])
 		filter['project'] = $scope.selectedProject;
 		refreshFeedback($http);
 		refresh($http);
-		clear_selected_markers();
 	}
 
 	$scope.newGenus = function(){
@@ -653,7 +652,7 @@ var map = angular.module('map', ['rzModule'])
 		refreshFeedback($http);
 		refresh($http);
 		logActivity($http, "Filter Genus Selector Change Value "+$scope.selectedGenus, user_id);
-		clear_selected_markers();
+
 	}
 
 	/*
@@ -676,7 +675,6 @@ var map = angular.module('map', ['rzModule'])
 		refreshFeedback($http);
 		refresh($http);
 		logActivity($http, "Filter Collector Selector Change Value "+$scope.selectedCollector, user_id);
-		clear_selected_markers();
 	}
 
 	$scope.recordActivity = function($a){

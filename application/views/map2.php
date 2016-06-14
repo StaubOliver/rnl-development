@@ -333,7 +333,7 @@
 								<p class='filter-element-title'>Genus</p>
 							</div>
 							<div class="col-md-12">
-								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="newGenus()" ng-mouseover="recordActivity('Genus Selector Hover')">
+								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="clear_selected_markers(); newGenus()" ng-mouseover="recordActivity('Genus Selector Hover')">
 									<option value="-1" selected>All Genera</option>
 									<optgroup label="Coral genera">	
 									<?php
