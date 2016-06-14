@@ -573,7 +573,24 @@ var map = angular.module('map', ['rzModule'])
 			max: 12,
 			options: {
 				floor: 0,
-				ceil: 450
+				ceil: 12, 
+				step: 1,
+				translate: function(value){
+					if (value==0) return 'Quaternary';
+					if (value==1) return 'Neogene';
+					if (value==2) return 'Palogene';
+					if (value==3) return 'Cretaceous';
+					if (value==4) return 'Jurassic';
+					if (value==5) return 'Triassic';
+					if (value==6) return 'Permian';
+					if (value==7) return 'Carboniferous';
+					if (value==8) return 'Denovian';
+					if (value==9) return 'Silurian';
+					if (value==10) return 'Ordovician';
+					if (value==11) return 'Cambrian';
+					if (value==12) return 'Precambrain';
+
+				}
 			}
 	};
 
