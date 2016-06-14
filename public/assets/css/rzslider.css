@@ -113,7 +113,7 @@
 .rzslider .rz-bubble {
   bottom: 16px;
   padding: 1px 3px;
-  color: #55637d;
+  color: #000000;
   cursor: default;
 }
 
@@ -122,7 +122,7 @@
 }
 
 .rzslider .rz-bubble.rz-limit {
-  color: #55637d;
+  color: #000000;
 }
 
 .rzslider .rz-ticks {
