@@ -582,7 +582,7 @@ var map = angular.module('map', ['rzModule'])
 					if (value==5) return 'Triassic';
 					if (value==6) return 'Permian';
 					if (value==7) return 'Carboniferous';
-					if (value==8) return 'Denovian';
+					if (value==8) return 'Devonian';
 					if (value==9) return 'Silurian';
 					if (value==10) return 'Ordovician';
 					if (value==11) return 'Cambrian';

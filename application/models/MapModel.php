@@ -117,10 +117,10 @@ class MapModel extends CI_Model {
         }
 
         if (8>=$min and 8<=$max){
-            $temp[] = 'Denovian';
-            $temp[] = 'Denovian, Upper';
-            $temp[] = 'Denovian, Middle';
-            $temp[] = 'Denovian, Lower';
+            $temp[] = 'Devonian';
+            $temp[] = 'Devonian, Upper';
+            $temp[] = 'Devonian, Middle';
+            $temp[] = 'Devonian, Lower';
         }
 
         if (9>=$min and 9<=$max){
