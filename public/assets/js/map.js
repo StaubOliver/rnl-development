@@ -607,6 +607,10 @@ var map = angular.module('map', ['rzModule'])
 				showSelectionBar: true,
 				getSelectionBarColor: function(value) {
 					return '#909090';
+				}, 
+				onChange: function(modelValue, highValue){
+					$scope.selectedAgeMin = modelValue;
+					$scope.selectedAgeMax = highValue;
 				}	
 			}
 	};
