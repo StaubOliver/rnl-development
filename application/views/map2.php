@@ -302,13 +302,6 @@
 							    rz-slider-model="selectedAgeMin"
 							    rz-slider-high="selectedAgeMax"
 							    rz-slider-options="slider.options"></rzslider>
-							</div>
-							<div class="col-md-4">
-								<h6>{{selectedAgeMin}}</h6>
-							</div>
-							<div class="col-md-4">
-								<h6>{{selectedAgeMax}}</h6>
-							</div>
 						</div>
 						<!--
 						<div class="row filter-element">

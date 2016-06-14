@@ -609,6 +609,8 @@ var map = angular.module('map', ['rzModule'])
 					return '#909090';
 				}, 
 				onChange: function(modelValue, highValue){
+					refresh($http);
+					refreshFeedback($http);
 				}	
 			}
 	};
