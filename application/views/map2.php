@@ -294,6 +294,18 @@
 
 						<!-- Geological Age --> 
 						<div class="row filter-element">
+							<div class="col-md-4">
+								<h6>Geological Age</h6>
+							</div>
+							<div class="col-md-8">
+								<rzslider
+							    rz-slider-model="slider.min"
+							    rz-slider-high="slider.max"
+							    rz-slider-options="slider.options"></rzslider>
+							</div>
+						</div>
+						<!--
+						<div class="row filter-element">
 							<div class="col-md-3">
 								<h6>Geological Age</h6>
 							</div>
@@ -382,6 +394,7 @@
 							  	</select>
 							</div>
 						</div>
+						-->
 
 						<!-- Collector -->
 						<div class="row filter-element">

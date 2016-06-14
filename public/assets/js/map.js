@@ -568,6 +568,15 @@ var map = angular.module('map', ['rzModule'])
 		$scope.map_zoom=new_zoom;
 	});
 
+	$scope.slider = {
+			min: 100,
+			max: 180,
+			options: {
+				floor: 0,
+				ceil: 450
+			}
+	};
+
 	refresh($http);
 	refreshFeedback($http);
 
