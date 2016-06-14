@@ -180,7 +180,7 @@ class MapModel extends CI_Model {
         $where[$i] = "age_max = " . $data['age_max'];
         $i += 1;*/
 
-        $where[$i] = age_criteria($data["age_min"], $data["age_max"]);
+        $where[$i] = $this->age_criteria($data["age_min"], $data["age_max"]);
         $i += 1;
       
 
