@@ -590,6 +590,21 @@ var map = angular.module('map', ['rzModule'])
 					if (value==11) return 'Cambrian';
 					if (value==12) return 'Precambrain';
 
+				}, 
+				getPointerColor: function(value){
+					if (value==0) return '#F9F97F';
+					if (value==1) return '#FFE619';
+					if (value==2) return '#FD9A52';
+					if (value==3) return '#7FC64E';
+					if (value==4) return '#34B2C9';
+					if (value==5) return '#C72B92';
+					if (value==6) return '#F04028';
+					if (value==7) return '#67A599';
+					if (value==8) return '#CB8C37';
+					if (value==9) return '#B3E1B6';
+					if (value==10) return '#009270';
+					if (value==11) return '#7F1056';
+					if (value==12) return '#934370';
 				}
 			}
 	};
