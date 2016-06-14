@@ -399,7 +399,7 @@
 						<!-- Collector -->
 						<div class="row filter-element">
 							<div class="col-md-4">
-								<h6>Collector</h6>
+								<p>Collector</p>
 							</div>
 							<div class="col-md-8">
 								<select class="form-control" id="fossilCollectorSelect" ng-model="selectedCollector" ng-change="newCollector()"  ng-mouseover="recordActivity('Collector Selector Hover')">
@@ -421,7 +421,7 @@
 						<!-- Genus --> 
 						<div class="row filter-element">
 							<div class="col-md-4">
-								<h6>Genus</h6>
+								<p>Genus</p>
 							</div>
 							<div class="col-md-8">
 								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="newGenus()" ng-mouseover="recordActivity('Genus Selector Hover')">
