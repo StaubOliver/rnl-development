@@ -513,8 +513,8 @@ fieldset[disabled] .btn-custom-default.active {
 	content: url("/assets/img/star/star_full.png");
 }
 
-.rating > img:hover, 
-.rating > img:hover ~ img{
+.rating:hover, 
+.rating:hover ~ .rating{
 	content: url("/assets/img/star/star_empty.png");
 }
 /*

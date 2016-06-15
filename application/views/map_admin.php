@@ -164,8 +164,8 @@
 								<div class='col-md-6'>
 									<div class='btn btn-custom-default btn-sm'>See comment on the map</div><div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
 								</div>
-								<div class='col-md-6' class="rating">
-									<img class="rating-star rating-empty"><img class="rating-star rating-empty"><img class="rating-star rating-empty"><img class="rating-star rating-empty"><img class="rating-star rating-empty">
+								<div class='col-md-6'>
+									<img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty">
 								</div>
 
 							</div>
