@@ -147,6 +147,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 }
 
 .feedback-message-text{
+	display: inline;
 	text-align: justify;
 	border-radius: 10px;
 }
