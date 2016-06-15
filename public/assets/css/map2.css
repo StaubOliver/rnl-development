@@ -510,7 +510,7 @@ fieldset[disabled] .btn-custom-default.active {
 }
 */
 .rating-empty{
-	content: url("/assets/img/star/star_highlight.png");
+	content: url("/assets/img/star/star_full.png");
 }
 
 .rating:hover, 
