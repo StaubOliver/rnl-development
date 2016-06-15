@@ -139,7 +139,8 @@ class Map extends MY_Controller {
 			'user_id' => $user_id,
 			'unique_id' => $unique_id,
 			'time' => $time,
-			'message' => $message
+			'message' => $message,
+			'rating' => 0
 		);
 
 		$filter = array(
