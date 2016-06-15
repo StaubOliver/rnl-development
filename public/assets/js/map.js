@@ -730,7 +730,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		$scope.feedbacks = [];
 		$http.get('/api/map/loadAdminFeedback/').success(function(data, status, headers, config){
 			data.forEach(function(item, index){
-				for (i=1; i<6; i++){
+				for (var i=1; i<6; i++){
 					if (parseInt(item['rating'])>=i){
 						document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_full;
 					}
