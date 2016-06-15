@@ -730,14 +730,14 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		$scope.feedbacks = [];
 		$http.get('/api/map/loadAdminFeedback/').success(function(data, status, headers, config){
 			data.forEach(function(item, index){
-				for (i=1; i<6; i++){
+				/*for (i=1; i<6; i++){
 					if (parseInt(item['rating'])>=i){
 						document.getElementById("rating-"+item["feedback_id"]+i).src = url_full;
 					}
 					else{
 						document.getElementById("rating-"+item["feedback_id"]+i).src = url_empty;
 					}
-				}
+				}*/
 				$scope.feedbacks.push(item);
 			});
 		});
