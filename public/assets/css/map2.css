@@ -525,7 +525,16 @@ fieldset[disabled] .btn-custom-default.active {
 }
 */
 
-
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: center;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
 
 .rating > span:hover,
 .rating > span:hover ~ span {
