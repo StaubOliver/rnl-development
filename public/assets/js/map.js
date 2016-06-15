@@ -326,10 +326,11 @@ var map = angular.module('map', ['rzModule'])
 
 				//create the markers to plot on the map
 				createMarkers(info, http);	
+				refreshLegend();
 			});
 		});
 		//refresh the legend
-		refreshLegend();
+		
 
 		$scope.nb_fossils = markers.length;
 	}
