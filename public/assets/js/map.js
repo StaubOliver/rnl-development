@@ -726,18 +726,21 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	var url_full = "/assets/img/star/star_full.png";
 	var url_hightlight = "/assets/img/star/star_highlight";
 
+	$scope.init_rating_img = [][];
+
 	function refreshFeedback(){
 		$scope.feedbacks = [];
+		$scope.init_rating_img = [][];
 		$http.get('/api/map/loadAdminFeedback/').success(function(data, status, headers, config){
 			data.forEach(function(item, index){
 				for (var i = 1; i < 6; i++){
 					if (parseInt(item['rating'])>=i){
-						document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_full;
+						//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_full;
+						$scope.init_rating_img[feedback_id][i] = url_full;
 					}
 					else{
-						if (document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString())!= null){
-							document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_empty;
-					}
+						//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_empty;
+						$scope.init_rating_img[feedback_id][i] = url_empty;
 				}
 				$scope.feedbacks.push(item);
 			});
