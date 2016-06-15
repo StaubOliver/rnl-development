@@ -330,9 +330,6 @@ var map = angular.module('map', ['rzModule'])
 			});
 		});
 		//refresh the legend
-		
-
-		$scope.nb_fossils = markers.length;
 	}
 
 	function LegendItem(color, age){
