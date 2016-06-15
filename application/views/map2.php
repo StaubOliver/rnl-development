@@ -459,7 +459,7 @@
 									</div>
 									<div class="row">
 										<div class="col-md-12 feedback-message-text">
-											<p>{{feedback['message']}} - {{feedback['first_name']}} {{feedback['last_name']}}</p>
+											<p>{{feedback['message']}}</p><p class="feedback-message-author"> - {{feedback['first_name']}} {{feedback['last_name']}}</p>
 										</div>
 
 										<div class="col-md-6 feedback-message-author">
