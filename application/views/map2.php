@@ -88,6 +88,7 @@
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li><p class="navbar-text">Hello {{ profile.first_name }}</p></li>
+					<li><p class="navbar-text">nb fossils: {{nbfossils}}</p></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<?php if($is_admin == 1): ?>
@@ -113,7 +114,7 @@
 	<div class="map-legend">
 		<div class='row'>
 			<div class='col-md-12'>
-				<h4 class='map-legend-title'><span class="glyphicon map-legend-title-glyph" aria-hidden="true" ng-click="show_legend=!show_legend" ng-class="{'glyphicon-chevron-down':!show_legend, 'glyphicon-chevron-up':show_legend}"></span>Legend {{ nbfossils }}</h4>
+				<h4 class='map-legend-title'><span class="glyphicon map-legend-title-glyph" aria-hidden="true" ng-click="show_legend=!show_legend" ng-class="{'glyphicon-chevron-down':!show_legend, 'glyphicon-chevron-up':show_legend}"></span>Legend</h4>
 			</div>
 		</div>
 		<div class='row map-legend-content' id='map-legend-content' ng-show="show_legend">
