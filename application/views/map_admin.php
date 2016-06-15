@@ -172,9 +172,27 @@
 							<div class='row'>
 									
 								<div class='col-md-6'>
-									Feedback from {{feedback["first_name"]}}
+									Feedback from {{feedback["first_name"]}} {{feedback["last_name"]}}
 								</div>
 
+								<div class='col-md-6'>
+									{{feedback["upvote"]} upvotes
+								</div>
+								
+								<div class='col-md-12'>
+									<strong>
+										{{feedback['message']}}
+									</strong>
+								</div>
+								
+								<div class='col-md-6'>
+									{{feedback[time]}
+								</div>
+								
+								<div class='col-md-6'>
+									{{feedback['selection']}} fossils selected
+								</div>
+								
 							</div>
 
 						</div>
