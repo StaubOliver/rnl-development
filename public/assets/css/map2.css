@@ -516,6 +516,7 @@ fieldset[disabled] .btn-custom-default.active {
 .rating:hover:before,
 .rating:hover ~ .rating:before{
 	content: url("/assets/img/star/star_highlight.png");
+	background-color: red;
 }
 
 
