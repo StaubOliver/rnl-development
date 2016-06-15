@@ -517,9 +517,9 @@ fieldset[disabled] .btn-custom-default.active {
 .rating:hover ~ .rating{
 	content: url("/assets/img/star/star_empty.png");
 }
-/*
-.rating > img:hover:before,
-.rating > img:hover ~ img:before{
+
+.rating:hover::before,
+.rating:hover ~ .rating::before{
 	content: url("/assets/img/star/star_highlight.png");
 }
 
