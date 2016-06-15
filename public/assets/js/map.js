@@ -723,6 +723,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.test = 'Hello World';
 	$scope.feedbacks = [];
 
+	refreshFeedback();
+
 	function refreshFeedback(){
 		$scope.feedbacks = [];
 		$http.get('/api/map/loadAdminFeedback/').success(function(data, status, headers, config){
