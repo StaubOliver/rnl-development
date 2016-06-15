@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='map_admin'>
 
 <head>
 	<!-- Metadata -->
@@ -36,24 +36,27 @@
 	<!-- Google Map API -->
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
 	
-	<!--<script>
-		function initialize() {
-		  var mapProp = {
-		    center:new google.maps.LatLng(51.508742,-0.120850),
-		    zoom:5,
-		    mapTypeId:google.maps.MapTypeId.ROADMAP,
-		    mapTypeControl:false,
-		    streetViewControl:false
-		  };
-		  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-		}
-		google.maps.event.addDomListener(window, 'load', initialize);
+	<script>
 
-	</script>-->
+		function rating_highlight(id){
+			if (id==1){
+				document.getElementById('rating-1').src="/assets/img/star/star_highlight.png";
+			}
+		}
+
+
+		var map = angular.module('map_admin', []).controller('admin_map_feedbacks', function($scope, $http, $compile){
+
+
+
+		});
+	
+
+	</script>
 
 </head>
 
-<body class='admin-body'>
+<body class='admin-body' ng-controller='admin_map_feedbacks'>
 
 	<nav class="navbar-default  navbar-fixed-top" >
 		<div class="container-fluid">
@@ -165,11 +168,11 @@
 									<div class='btn btn-custom-default btn-sm'>See comment on the map</div><div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
 								</div>
 								<div class='col-md-6'>
-								<!--
-									<img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty">-->
-									<div class='rating'>
-										<span><img class='rating rating-empty'></span><span><img class='rating rating-empty'></span><span><img class='rating rating-empty'></span><span><img class='rating rating-empty'></span><span><img class='rating rating-empty'></span>
-									</div>
+									<img id="rating-1" class="rating rating-star rating-empty" onmouseover="rating_highlight(1)">
+									<img id="rating-2" class="rating rating-star rating-empty">
+									<img id="rating-3" class="rating rating-star rating-empty">
+									<img id="rating-4" class="rating rating-star rating-empty">
+									<img id="rating-5" class="rating rating-star rating-empty">
 								</div>
 
 							</div>
