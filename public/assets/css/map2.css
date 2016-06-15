@@ -158,8 +158,6 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 .feedback-message-author{
 	text-align: left;
 	color:#AAAAAA;
-	background-color: #EEEEEE;
-	margin-left:4px;
 }
 
 .feedback-message-time{
