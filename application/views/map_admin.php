@@ -166,6 +166,7 @@
 								</div>
 								<div class='col-md-6'>
 									<img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty">
+									<div>/assets/img/star/star_empty.png</div>
 								</div>
 
 							</div>
