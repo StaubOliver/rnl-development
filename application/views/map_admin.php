@@ -113,8 +113,8 @@
 									<?php echo count($feedback['selection'])." fossils selected"; ?>
 								</div>
 								<div class='col-md-6'>
-									<?php 
-										echo "From: ".$feedback['age_min']; 
+									<?php if ($feedback['age_min']=="0")
+										echo "From: <strong>Quaternary</strong>"; 
 									?>
 								</div>
 								<div class='col-md-6'>
