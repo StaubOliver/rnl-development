@@ -165,7 +165,11 @@
 									<div class='btn btn-custom-default btn-sm'>See comment on the map</div><div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
 								</div>
 								<div class='col-md-6'>
-									<img src='/assets/img/star/star_empty.png' height="24"><img src='/assets/img/star/star_empty.png' height="24"><img src='/assets/img/star/star_empty.png' height="24"><img src='/assets/img/star/star_empty.png' height="24"><img src='/assets/img/star/star_empty.png' height="24">
+									<img class="" src='/assets/img/star/star_empty.png' height="24">
+									<img class="" src='/assets/img/star/star_empty.png' height="24">
+									<img class="" src='/assets/img/star/star_empty.png' height="24">
+									<img class="" src='/assets/img/star/star_empty.png' height="24">
+									<img class="" src='/assets/img/star/star_empty.png' height="24">
 								</div>
 
 							</div>
