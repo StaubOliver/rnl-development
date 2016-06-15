@@ -40,7 +40,7 @@
 
 		var rating_highlight = function(feedback_id, star){
 			console.log(feedback_id+'-'+star);
-				document.getElementById('rating-'+feedback_id+'-'+star).src="/assets/img/star/star_highlight.png";
+				document.getElementById('rating-'+feedback_id+'-'+star).src="http://assets.manchester.ac.uk/logos/museum-1.png";
 			
 		}
 
@@ -170,7 +170,7 @@
 								</div>
 								<div class='col-md-6'>
 									<?php for($i=1; $i<6; $i++): ?>
-									<img id=<?php echo "rating-".$feedback['feedback_id']."-".$i; ?> class="rating rating-star rating-empty" onmouseover="rating_highlight(<?php echo $feedback['feedback_id'].",".$i; ?> )">
+										<img id=<?php echo "rating-".$feedback['feedback_id']."-".$i; ?> class="rating rating-star rating-empty" onmouseover="rating_highlight(<?php echo $feedback['feedback_id'].",".$i; ?> )">
 									<?php endfor; ?>
 								</div>
 
