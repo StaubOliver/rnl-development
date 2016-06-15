@@ -720,6 +720,8 @@ var map = angular.module('map', ['rzModule'])
 
 var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks', function($scope, $http, $compile){
 
+	$scope.test = 'Hello World';
+
 	var rating_highlight = function(feedback_id, star){
 		console.log(feedback_id+'-'+star);
 		if (star=="1"){

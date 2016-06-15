@@ -46,7 +46,7 @@
 		<div class="container-fluid">
 
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Map</a>
+				<a class="navbar-brand" href="#">{{test}}</a>
 			</div>
 
 			<div class="collapse navbar-collapse">
