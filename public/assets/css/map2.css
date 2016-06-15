@@ -513,7 +513,7 @@ fieldset[disabled] .btn-custom-default.active {
 	content: url("/assets/img/star/star_full.png");
 }
 
- 
+/* 
 .rating:hover ~ .rating{
 	content: url("/assets/img/star/star_empty.png");
 }
@@ -523,10 +523,10 @@ fieldset[disabled] .btn-custom-default.active {
 .rating:hover ~ .rating::before*/{
 	content: url("/assets/img/star/star_highlight.png");
 }
+*/
 
 
 
-/*
 .rating > span:hover,
 .rating > span:hover ~ span {
   color: transparent;
@@ -538,7 +538,7 @@ fieldset[disabled] .btn-custom-default.active {
    left: 0; 
    color: gold;
 }
-*/
+
 
 
 
