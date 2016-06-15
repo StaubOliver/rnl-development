@@ -7,7 +7,7 @@ var map = angular.module('map', ['rzModule'])
 
 	var markers = [];
 	$scope.nb_fossils = 0;
-	
+
 	var markers_age = [];
 	$scope.selected_markers = [];
 
@@ -331,7 +331,7 @@ var map = angular.module('map', ['rzModule'])
 		//refresh the legend
 		refreshLegend();
 
-		$scope.nb_fossils = markers.length;
+		//$scope.nb_fossils = markers.length;
 	}
 
 	function LegendItem(color, age){

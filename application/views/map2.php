@@ -113,7 +113,7 @@
 	<div class="map-legend">
 		<div class='row'>
 			<div class='col-md-12'>
-				<h4 class='map-legend-title'><span class="glyphicon map-legend-title-glyph" aria-hidden="true" ng-click="show_legend=!show_legend" ng-class="{'glyphicon-chevron-down':!show_legend, 'glyphicon-chevron-up':show_legend}"></span>Legend</h4>
+				<h4 class='map-legend-title'><span class="glyphicon map-legend-title-glyph" aria-hidden="true" ng-click="show_legend=!show_legend" ng-class="{'glyphicon-chevron-down':!show_legend, 'glyphicon-chevron-up':show_legend}"></span>Legend {{nb_fossils}}</h4>
 			</div>
 		</div>
 		<div class='row map-legend-content' id='map-legend-content' ng-show="show_legend">
@@ -297,7 +297,7 @@
 						<!-- Geological Age --> 
 						<div class="row filter-element">
 							<div class="col-md-12">
-								<p class='filter-element-title'>{{nb_fossils}}</p>
+								<p class='filter-element-title'>Geological Age</p>
 							</div>
 							<div class="col-md-12">
 								<rzslider
