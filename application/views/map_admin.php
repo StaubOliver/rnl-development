@@ -176,7 +176,7 @@
 								</div>
 
 								<div class='col-md-6'>
-									{{feedback["upvote"]} upvotes
+									{{feedback["upvote"]}} upvotes
 								</div>
 								
 								<div class='col-md-12'>
@@ -186,13 +186,13 @@
 								</div>
 								
 								<div class='col-md-6'>
-									{{feedback[time]}
+									{{feedback[time]}}
 								</div>
 								
 								<div class='col-md-6'>
-									{{feedback['selection']}} fossils selected
+									{{feedback['selection'].length}} fossils selected
 								</div>
-								
+
 							</div>
 
 						</div>
