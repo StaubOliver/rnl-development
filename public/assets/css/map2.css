@@ -499,24 +499,22 @@ fieldset[disabled] .btn-custom-default.active {
 }
 
 
-
+.rating-star{
+	height:24px;
+	width: auto;
+	cursor: pointer;
+}
 
 .rating-1-empty{
 	content: url("/assets/img/star/star_empty.png");
-	height:24px;
-	width: auto;
+
 }
 
 .rating-1-full{
-	content: url("/assets/img/star/star_full.png");
-	height:24px;
-	width: auto;
-}
+	content: url("/assets/img/star/star_full.png");}
 
 .rating-1:hover{
 	content: url("/assets/img/star/star_highlight.png");
-	height:24px;
-	width: auto;
 }
 
 
