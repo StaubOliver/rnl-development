@@ -193,6 +193,14 @@
 									{{feedback['selection'].length}} fossils selected
 								</div>
 
+								<div class='col-md-6'>
+									From: {{feedback['age_min']}}
+								</div>
+
+								<div class='col-md-6'>
+									To: {{feedback['age_max']}}
+								</div>
+
 							</div>
 
 						</div>
