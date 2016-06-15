@@ -458,7 +458,7 @@
 										<span class="glyphicon glyphicon-remove"></span>
 									</div>
 									<div class="row">
-									
+
 										<div class="col-md-12 feedback-message-author">
 											<p>{{feedback['first_name']}} {{feedback['last_name']}} on {{feedback['time'].split(" ")[0]}}</p>
 										</div>
@@ -473,6 +473,10 @@
 
 										<div class="col-md-6 feedback-message-time">
 											<p>{{feedback['time']}}</p>
+										</div>
+
+										<div class="col-md-12 feedback-message-author">
+											<p>Upvote Reply 4 upvotes 3 replies<p>
 										</div>
 
 										
