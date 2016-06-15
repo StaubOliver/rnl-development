@@ -800,7 +800,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}
 	}
 
-	$scope.rating_click = function(feedback, star){
+	$scope.rating_click = function(feedback_id, star){
 		data = {};
 		data.feedback_id = feedback['feedback_id'];
 		data.rating = star;
