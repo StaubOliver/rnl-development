@@ -741,6 +741,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 					else{
 						//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_empty;
 						$scope.init_rating_img[feedback_id][i] = url_empty;
+					}
 				}
 				$scope.feedbacks.push(item);
 			});
