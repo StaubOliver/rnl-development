@@ -718,66 +718,66 @@ var map = angular.module('map', ['rzModule'])
 
 });
 
-var map = angular.module('map_admin', []).controller('admin_map_feedbacks', function($scope, $http, $compile){
+var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks', function($scope, $http, $compile){
 
-			var rating_highlight = function(feedback_id, star){
-				console.log(feedback_id+'-'+star);
-				if (star=="1"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
-				}
-				if (star=="2"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
-				}
-				if (star=="3"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_highlight.png";
-				}
-				if (star=="4"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-4').src="/assets/img/star/star_highlight.png";
-				}
-				if (star=="5"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-4').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-5').src="/assets/img/star/star_highlight.png";
-				}
-			}
+	var rating_highlight = function(feedback_id, star){
+		console.log(feedback_id+'-'+star);
+		if (star=="1"){
+			document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
+		}
+		if (star=="2"){
+			document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
+			document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
+		}
+		if (star=="3"){
+			document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
+			document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
+			document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_highlight.png";
+		}
+		if (star=="4"){
+			document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
+			document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
+			document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_highlight.png";
+			document.getElementById('rating-'+feedback_id+'-4').src="/assets/img/star/star_highlight.png";
+		}
+		if (star=="5"){
+			document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
+			document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
+			document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_highlight.png";
+			document.getElementById('rating-'+feedback_id+'-4').src="/assets/img/star/star_highlight.png";
+			document.getElementById('rating-'+feedback_id+'-5').src="/assets/img/star/star_highlight.png";
+		}
+	}
 
-			var rating_unhighlight = function(feedback_id, star){
-				if (star=="1"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
-				}
-				if (star=="2"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_empty.png";
-				}
-				if (star=="3"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_empty.png";
-				}
-				if (star=="4"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-4').src="/assets/img/star/star_empty.png";
-				}
-				if (star=="5"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-4').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-5').src="/assets/img/star/star_empty.png";
-				}
-			}
+	var rating_unhighlight = function(feedback_id, star){
+		if (star=="1"){
+			document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
+		}
+		if (star=="2"){
+			document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
+			document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_empty.png";
+		}
+		if (star=="3"){
+			document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
+			document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_empty.png";
+			document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_empty.png";
+		}
+		if (star=="4"){
+			document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
+			document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_empty.png";
+			document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_empty.png";
+			document.getElementById('rating-'+feedback_id+'-4').src="/assets/img/star/star_empty.png";
+		}
+		if (star=="5"){
+			document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
+			document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_empty.png";
+			document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_empty.png";
+			document.getElementById('rating-'+feedback_id+'-4').src="/assets/img/star/star_empty.png";
+			document.getElementById('rating-'+feedback_id+'-5').src="/assets/img/star/star_empty.png";
+		}
+	}
 
-		});
-	
+});
+
 
 
