@@ -505,12 +505,11 @@ fieldset[disabled] .btn-custom-default.active {
 	cursor: pointer;
 }
 
-.rating-1-empty{
+.rating-empty{
 	content: url("/assets/img/star/star_empty.png");
-
 }
 
-.rating-1-full{
+.rating-full{
 	content: url("/assets/img/star/star_full.png");}
 
 .rating-1:hover{
