@@ -323,10 +323,10 @@ var map = angular.module('map', ['rzModule'])
 
 				//create the markers to plot on the map
 				createMarkers(info, http);	
-				
 			});
 			//refresh the legend
 			refreshLegend();
+			$scope.nbfossils = markers.length;
 		});
 
 	}
@@ -684,7 +684,6 @@ var map = angular.module('map', ['rzModule'])
 		refreshFeedback($http);
 		refresh($http);
 		logActivity($http, "Filter Genus Selector Change Value "+$scope.selectedGenus, user_id);
-
 	}
 
 	/*
