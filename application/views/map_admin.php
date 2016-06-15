@@ -40,7 +40,31 @@
 
 		var rating_highlight = function(feedback_id, star){
 			console.log(feedback_id+'-'+star);
-			document.getElementById('rating-'+feedback_id+'-'+star).src="/assets/img/star/star_highlight.png";
+			if (star=="1"){
+				document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
+			}
+			if (star=="2"){
+				document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
+				document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
+			}
+			if (star=="3"){
+				document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
+				document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
+				document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_highlight.png";
+			}
+			if (star=="4"){
+				document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
+				document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
+				document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_highlight.png";
+				document.getElementById('rating-'+feedback_id+'-4').src="/assets/img/star/star_highlight.png";
+			}
+			if (star=="5"){
+				document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
+				document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
+				document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_highlight.png";
+				document.getElementById('rating-'+feedback_id+'-4').src="/assets/img/star/star_highlight.png";
+				document.getElementById('rating-'+feedback_id+'-5').src="/assets/img/star/star_highlight.png";
+			}
 		}
 
 		var rating_unhighlight = function(feedback_id, star){
