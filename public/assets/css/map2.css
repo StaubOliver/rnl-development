@@ -504,24 +504,26 @@ fieldset[disabled] .btn-custom-default.active {
 	width: auto;
 	cursor: pointer;
 }
-
+/*
 .rating-empty{
 	content: url("/assets/img/star/star_empty.png");
 }
-
+*/
 .rating-empty{
 	content: url("/assets/img/star/star_full.png");
-}
-
-.rating:hover, 
-.rating:hover ~ .rating{
-	content: url("/assets/img/star/star_empty.png");
 }
 
 .rating:hover:before,
 .rating:hover ~ .rating:before{
 	content: url("/assets/img/star/star_highlight.png");
 }
+
+
+.rating:hover, 
+.rating:hover ~ .rating{
+	content: url("/assets/img/star/star_empty.png");
+}
+
 
 
 /*
