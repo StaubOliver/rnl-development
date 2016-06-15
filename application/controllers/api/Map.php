@@ -53,7 +53,7 @@ class Map extends MY_Controller {
 		echo json_encode($data);
 	}
 
-	public function loadAdminFeedabck(){
+	public function loadAdminFeedback(){
 		if ($this->ion_auth->logged_in()){
 			if ($this->ProfileModel->isAdmin()==1){
 				$data = $this->MapModel->loadAdminFeedabcks();
