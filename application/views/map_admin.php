@@ -40,7 +40,7 @@
 
 		var rating_highlight = function(feedback_id, star){
 			console.log(feedback_id+'-'+star);
-				document.getElementById('rating-'+feedback_id+'-'+star).src="http://assets.manchester.ac.uk/logos/museum-1.png";
+			document.getElementById('rating-'+feedback_id+'-'+star).src="/assets/img/star/star_highlight.png";
 			
 		}
 
