@@ -88,7 +88,7 @@
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li><p class="navbar-text">Hello {{ profile.first_name }}</p></li>
-					<li><p class="navbar-text">nb fossils: {{nbfossils}}</p></li>
+					<li><p class="navbar-text">nb fossils: {{selectedAgeMin}}</p></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<?php if($is_admin == 1): ?>
@@ -361,7 +361,7 @@
 
 						<div class="row">
 							<div class="col-md-12 feedback-title">
-								<h4>Share your discoveries {{nbfossils}}</h4>
+								<h4>Share your discoveries</h4>
 							</div>
 						</div>
 
