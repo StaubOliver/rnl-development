@@ -510,7 +510,8 @@ fieldset[disabled] .btn-custom-default.active {
 }
 
 .rating-full{
-	content: url("/assets/img/star/star_full.png");}
+	content: url("/assets/img/star/star_full.png");
+}
 
 #rating-1:hover{
 	content: url("/assets/img/star/star_highlight.png");
@@ -520,7 +521,7 @@ fieldset[disabled] .btn-custom-default.active {
 	content: url("/assets/img/star/star_highlight.png");
 }
 
-#rating-2 ~ #rating-1:hover{
+#rating-2:hover:before{
 	content: url("/assets/img/star/star_highlight.png");
 }
 
