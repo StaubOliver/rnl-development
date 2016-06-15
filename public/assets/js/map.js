@@ -722,9 +722,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	refreshFeedback();
 
-	url_empty = "/assets/img/star/star_empty.png";
-	url_full = "/assets/img/star/star_full.png";
-	url_hightlight = "/assets/img/star/star_highlight";
+	var url_empty = "/assets/img/star/star_empty.png";
+	var url_full = "/assets/img/star/star_full.png";
+	var url_hightlight = "/assets/img/star/star_highlight";
 
 	function refreshFeedback(){
 		$scope.feedbacks = [];
