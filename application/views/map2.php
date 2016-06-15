@@ -88,7 +88,9 @@
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li><p class="navbar-text">Hello {{ profile.first_name }}</p></li>
-					<li><p class="navbar-text">nb fossils: {{nbfossils}}</p></li>
+					<?php if($is_admin == 1): ?>
+		 				<li><p class="navbar-text">Fossils loaded: {{nbfossils}}</p></li>
+					<?php endif; ?>	
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<?php if($is_admin == 1): ?>
