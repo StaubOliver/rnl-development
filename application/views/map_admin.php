@@ -230,7 +230,7 @@
 											id=<?php echo "rating-{{feedback['feedback_id']}}-".$i; ?> 
 											class="rating rating-star" 
 											src="/assets/img/star/star_empty.png" 
-											ng-mouseover="rating_highlight(feedback, <?php echo $i ?>)"
+											ng-mouseover="rating_highlight(feedback['feedback_id'], <?php echo $i ?>)"
 											ng-mouseleave="rating_unhighlight(feedback, <?php echo $i ?>)"
 											>
 									<?php endfor; ?>
