@@ -6,7 +6,7 @@ var map = angular.module('map', ['rzModule'])
 	var actualmap;
 
 	var markers = [];
-	$scope.nbfossils = '1';
+	$scope.nbfossils = 0;
 
 	var markers_age = [];
 	$scope.selected_markers = [];
@@ -657,7 +657,7 @@ var map = angular.module('map', ['rzModule'])
 
 
 	//Nav bar
-	
+
 	$scope.profile = {};
 	$scope.profile.first_name = 'stranger, do you fancy a login ?';
 
