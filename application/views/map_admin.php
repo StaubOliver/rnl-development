@@ -168,7 +168,7 @@
 								<!--
 									<img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty"><img class="rating rating-star rating-empty">-->
 									<div class='rating'>
-										<span>0</span><span>0</span><span>0</span><span>0</span><span>0</span>
+										<span><img class='rating rating-empty'></span><span><img class='rating rating-empty'></span><span><img class='rating rating-empty'></span><span><img class='rating rating-empty'></span><span><img class='rating rating-empty'></span>
 									</div>
 								</div>
 

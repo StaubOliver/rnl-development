@@ -542,7 +542,7 @@ fieldset[disabled] .btn-custom-default.active {
 }
 .rating > span:hover:before,
 .rating > span:hover ~ span:before {
-   content: "0";
+   content: "<img class='rating rating-highlight'>";
    position: absolute;
    left: 0; 
    color: gold;
