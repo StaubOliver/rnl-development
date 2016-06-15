@@ -509,7 +509,7 @@ fieldset[disabled] .btn-custom-default.active {
 	content: url("/assets/img/star/star_empty.png");
 }
 
-.rating-full{
+.rating-empty{
 	content: url("/assets/img/star/star_full.png");
 }
 
