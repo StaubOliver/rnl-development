@@ -170,7 +170,7 @@
 								</div>
 								<div class='col-md-6'>
 									<?php for($i=1; $i<6; $i++): ?>
-									<img id=<?php echo "rating-".$feedback['feedback_id']."-".$i; ?> class="rating rating-star rating-empty" onmouseover="rating_highlight(<?php echo $feedback_id.",".$i; ?> )">
+									<img id=<?php echo "rating-".$feedback['feedback_id']."-".$i; ?> class="rating rating-star rating-empty" onmouseover="rating_highlight(<?php echo $feedback['feedback_id'].",".$i; ?> )">
 									<?php endfor; ?>
 								</div>
 
