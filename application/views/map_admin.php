@@ -112,6 +112,16 @@
 								<div class='col-md-6'>
 									<?php echo count($feedback['selection'])." fossils selected"; ?>
 								</div>
+								<div class='col-md-6'>
+									<?php 
+										echo "From: ".$feedback['age_min']; 
+									?>
+								</div>
+								<div class='col-md-6'>
+									<?php 
+										echo "To: ".$feedback['age_max']; 
+									?>
+								</div>
 								
 								<div class='col-md-6'>
 									<?php if($feedback['genus']=="-1"){
