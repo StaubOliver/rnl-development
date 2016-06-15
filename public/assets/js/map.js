@@ -822,6 +822,13 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 					if($scope.feedbacks[i]['feedback_id'] == feedback_id)
 					{
 						$scope.feedbacks[i]["rating"] = star;
+						for (var j = 1; j < 6; j++){
+							if (star>=j){
+								$scope.init_rating_img[feedback_id][j] = url_full;
+							} else {
+								$scope.init_rating_img[feedback_id][j] = url_empty;
+							}
+						}
 					}
 				}
 			}).error(function(data, status, headers, config){
