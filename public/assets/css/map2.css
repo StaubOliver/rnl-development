@@ -521,7 +521,7 @@ fieldset[disabled] .btn-custom-default.active {
 	content: url("/assets/img/star/star_highlight.png");
 }
 
-#rating-2:hover:before{
+#rating-2:hover:before, #rating-2:hover ~ #rating-2:before{
 	content: url("/assets/img/star/star_highlight.png");
 }
 
