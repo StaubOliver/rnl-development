@@ -6,7 +6,7 @@ var map = angular.module('map', ['rzModule'])
 	var actualmap;
 
 	var markers = [];
-	$scope.nbfossils = "1";
+	$scope.nbfossils = '1';
 
 	var markers_age = [];
 	$scope.selected_markers = [];
