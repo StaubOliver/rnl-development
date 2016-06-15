@@ -113,13 +113,37 @@
 									<?php echo count($feedback['selection'])." fossils selected"; ?>
 								</div>
 								<div class='col-md-6'>
-									<?php if ($feedback['age_min']=="0")
-										echo "From: <strong>Quaternary</strong>"; 
+									<?php 
+										if ($feedback['age_min']=="0") echo "From: <strong>Quaternary</strong>"; 
+										if ($feedback['age_min']=="1") echo "From: <strong>Neogene</strong>"; 
+										if ($feedback['age_min']=="2") echo "From: <strong>Paleogene</strong>"; 
+										if ($feedback['age_min']=="3") echo "From: <strong>Cretaceous</strong>"; 
+										if ($feedback['age_min']=="4") echo "From: <strong>Jurassic</strong>"; 
+										if ($feedback['age_min']=="5") echo "From: <strong>Triassic</strong>"; 
+										if ($feedback['age_min']=="6") echo "From: <strong>Permian</strong>"; 
+										if ($feedback['age_min']=="7") echo "From: <strong>Carboniferous</strong>"; 
+										if ($feedback['age_min']=="8") echo "From: <strong>Devonian</strong>"; 
+										if ($feedback['age_min']=="9") echo "From: <strong>Silurian</strong>"; 
+										if ($feedback['age_min']=="10") echo "From: <strong>Ordovician</strong>"; 
+										if ($feedback['age_min']=="11") echo "From: <strong>Cambrian</strong>"; 
+										if ($feedback['age_min']=="12") echo "From: <strong>Precambrian</strong>"; 
 									?>
 								</div>
 								<div class='col-md-6'>
 									<?php 
-										echo "To: ".$feedback['age_max']; 
+										if ($feedback['age_max']=="0") echo "To: <strong>Quaternary</strong>"; 
+										if ($feedback['age_max']=="1") echo "To: <strong>Neogene</strong>"; 
+										if ($feedback['age_max']=="2") echo "To: <strong>Paleogene</strong>"; 
+										if ($feedback['age_max']=="3") echo "To: <strong>Cretaceous</strong>"; 
+										if ($feedback['age_max']=="4") echo "To: <strong>Jurassic</strong>"; 
+										if ($feedback['age_max']=="5") echo "To: <strong>Triassic</strong>"; 
+										if ($feedback['age_max']=="6") echo "To: <strong>Permian</strong>"; 
+										if ($feedback['age_max']=="7") echo "To: <strong>Carboniferous</strong>"; 
+										if ($feedback['age_max']=="8") echo "To: <strong>Devonian</strong>"; 
+										if ($feedback['age_max']=="9") echo "To: <strong>Silurian</strong>"; 
+										if ($feedback['age_max']=="10") echo "To: <strong>Ordovician</strong>"; 
+										if ($feedback['age_max']=="11") echo "To: <strong>Cambrian</strong>"; 
+										if ($feedback['age_max']=="12") echo "To: <strong>Precambrian</strong>"; 
 									?>
 								</div>
 								
