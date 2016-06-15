@@ -504,15 +504,15 @@ fieldset[disabled] .btn-custom-default.active {
 	width: auto;
 	cursor: pointer;
 }
+
+.rating{
+	display: inline-block;
+}
 /*
 .rating-empty{
 	content: url("/assets/img/star/star_empty.png");
 }
 */
-.rating-empty{
-	content: url("/assets/img/star/star_full.png");
-}
-
 /* 
 .rating:hover ~ .rating{
 	content: url("/assets/img/star/star_empty.png");
