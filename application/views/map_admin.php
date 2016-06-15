@@ -38,8 +38,8 @@
 	
 	<script>
 
-		function rating_highlight(id){
-			if (id==1){
+		var rating_highlight = function(id){
+			if (id=='1'){
 				document.getElementById('rating-1').src="/assets/img/star/star_highlight.png";
 			}
 		}
