@@ -758,7 +758,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.rating_unhighlight = function(feedback_id, star){
 		var rate = 0;
-		for (var i = 0; i <  $scope.feedbacks.length, i++){
+		for (var i = 0; i <  $scope.feedbacks.length; i++){
 			if (feedbacks[i]['feedback_id'] == feedback_id){
 				rate = feedbacks[i]['rating'];
 			}
