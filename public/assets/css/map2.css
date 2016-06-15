@@ -518,8 +518,8 @@ fieldset[disabled] .btn-custom-default.active {
 	content: url("/assets/img/star/star_empty.png");
 }
 
-.rating:hover::before,
-.rating:hover ~ .rating::before{
+.rating:hover::before/*,
+.rating:hover ~ .rating::before*/{
 	content: url("/assets/img/star/star_highlight.png");
 }
 
