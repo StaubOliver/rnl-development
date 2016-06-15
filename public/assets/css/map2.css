@@ -501,7 +501,12 @@ fieldset[disabled] .btn-custom-default.active {
 
 
 
+.rating-1{
+	content: url("/assets/img/star/star_empty.png");
+	height:24px;
+	width: auto;
 
+}
 
 
 
