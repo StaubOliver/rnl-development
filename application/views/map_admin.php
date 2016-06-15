@@ -164,6 +164,23 @@
 					</div>
 				<?php endforeach; ?>
 
+				<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
+
+					<div class='col-md-8 col-md-offset-2'>
+						<div class='admin-feedback'>
+
+							<div class='row'>
+									
+								<div class='col-md-6'>
+									Feedback from {{feedback["first_name"]}}
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
 
 			</div>
 		</div>
