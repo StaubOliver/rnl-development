@@ -71,7 +71,7 @@
 						<h4><?php echo count($feedbacks).' feedbacks recorded'; ?></h4>
 					</div>
 				</div>
-
+				<!--
 				<?php foreach($feedbacks as $feedback): ?>
 					<div class='col-md-8 col-md-offset-2'>
 						<div class='admin-feedback'>
@@ -162,7 +162,7 @@
 
 						</div>
 					</div>
-				<?php endforeach; ?>
+				<?php endforeach; ?>-->
 
 				<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
