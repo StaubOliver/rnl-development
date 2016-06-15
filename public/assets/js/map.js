@@ -287,12 +287,9 @@ var map = angular.module('map', ['rzModule'])
 			infoWindow.open('actualmap', marker);
 
 		});
-		
 		markers.push(marker);
-		markers_age.push(info['age']);
-		
+		markers_age.push(info['age']);	
 	}
-
 	
 	function refresh(http)
 	{
@@ -342,6 +339,7 @@ var map = angular.module('map', ['rzModule'])
 	}
 
 	function refreshLegend(){
+		console.log("refresh legend");
 		legend = "";
 		if (markers_age.indexOf('Quaternary')!=-1){ legend += LegendItem('F9F97F', 'Quaternary'); }
 		if (markers_age.indexOf('Pliocene')!=-1 || markers_age.indexOf('Miocene')!=-1){ legend += LegendItem('FFE619', 'Neogene'); }
