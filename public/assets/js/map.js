@@ -732,10 +732,10 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			data.forEach(function(item, index){
 				for (i=1; i<6; i++){
 					if (intval(item['rating'])>=i){
-						document.getElementById("rating-"+item["feedback_id"+i]).src = url_full;
+						document.getElementById("rating-"+item["feedback_id"]+i).src = url_full;
 					}
 					else{
-						document.getElementById("rating-"item["feedback_id"]+i).src = url_empty;
+						document.getElementById("rating-"+item["feedback_id"]+i).src = url_empty;
 					}
 				}
 				$scope.feedbacks.push(item);
