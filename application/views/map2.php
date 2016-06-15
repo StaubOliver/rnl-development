@@ -469,6 +469,10 @@
 										<div class="col-md-6 feedback-message-time">
 											<p>{{feedback['time']}}</p>
 										</div>
+
+										<div class="col-md-12 feedback-message-author">
+											<p>{{feedback['first_name']}} {{feedback['last_name']}} - {{feedback['time'].split[0]}} </p>
+										</div>
 										
 										<div class='col-md-2' ng-hide="{{feedback.user_has_upvote}}" ng-click="upvoteFeedback(feedback.feedback_id)">
 											<button class='btn btn-custom-default btn-xs'>Upvote</button>
