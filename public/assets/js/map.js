@@ -760,7 +760,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		var rate = 0;
 		for (var i = 0; i <  $scope.feedbacks.length; i++){
 			if (feedbacks[i]['feedback_id'] == feedback_id){
-				rate = feedbacks[i]['rating'];
+				rate = $scope.feedbacks[i]['rating'];
 			}
 		}
 		for (var i = 1; i <= 6; i++){
