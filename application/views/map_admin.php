@@ -211,7 +211,12 @@
 								</div>
 
 								<div class='col-md-6'>
-									//collector
+									<div ng-show="feedback['genus']==-1">
+										Collector: All
+									</div>
+									<div ng-show="feedback['genus']!=-1">
+										Collector: {{feedback['collector']}}
+									</div>
 								</div>
 
 								<div class='col-md-6'>
