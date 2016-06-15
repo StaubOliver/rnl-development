@@ -162,7 +162,10 @@
 									}?>
 								</div>
 								<div class='col-md-6'>
-									<div class='btn btn-custom-default btn-sm admin-feedback-btn-see-comment'>See comment on the map</div>
+									<div class='btn btn-custom-default btn-sm'>See comment on the map</div>
+								</div>
+								<div class='col-md-6'>
+									Rate this contribution : 
 								</div>
 								<div class='col-md-6'>
 									<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
