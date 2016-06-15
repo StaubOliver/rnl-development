@@ -165,7 +165,8 @@
 									}?>
 								</div>
 								<div class='col-md-6'>
-									<div class='btn btn-custom-default btn-sm'>See comment on the map</div><div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
+									<div class='btn btn-custom-default btn-sm'>See comment on the map</div>
+									<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
 								</div>
 								<div class='col-md-6'>
 									<img id="rating-1" class="rating rating-star rating-empty" onmouseover="rating_highlight(1)">
