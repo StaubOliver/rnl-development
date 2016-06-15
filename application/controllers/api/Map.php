@@ -53,6 +53,15 @@ class Map extends MY_Controller {
 		echo json_encode($data);
 	}
 
+	public function loadAdminFeedabck(){
+		if ($this->ion_auth->logged_in()){
+			if ($this->ProfileModel->isAdmin()==1){
+				$data = $this->MapModel->loadAdminFeedabcks();
+				echo json_encode($data);
+			}
+		}
+	}
+
 	public function updatelocation(){
 
 		$project = "-1";
