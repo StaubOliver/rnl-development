@@ -165,11 +165,11 @@
 									<div class='btn btn-custom-default btn-sm'>See comment on the map</div><div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
 								</div>
 								<div class='col-md-6'>
-									<img class="rating-star rating-empty rating-1">
-									<img class="rating-star rating-empty rating-2">
-									<img class="rating-star rating-empty rating-3">
-									<img class="rating-star rating-empty rating-4">
-									<img class="rating-star rating-empty rating-5">
+									<img id="rating-1" class="rating-star rating-empty">
+									<img id="rating-2" class="rating-star rating-empty">
+									<img id="rating-3" class="rating-star rating-empty">
+									<img id="rating-4" class="rating-star rating-empty">
+									<img id="rating-5" class="rating-star rating-empty">
 								</div>
 
 							</div>
