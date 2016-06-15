@@ -458,8 +458,13 @@
 										<span class="glyphicon glyphicon-remove"></span>
 									</div>
 									<div class="row">
+									
+										<div class="col-md-12 feedback-message-author">
+											<p>{{feedback['first_name']}} {{feedback['last_name']}} on {{feedback['time'].split(" ")[0]}}</p>
+										</div>
+
 										<div class="col-md-12 feedback-message-text">
-											<p>{{feedback['message']}}</p><p class="feedback-message-author"> - {{feedback['first_name']}} {{feedback['last_name']}}</p>
+											<p>{{feedback['message']}}</p>
 										</div>
 
 										<div class="col-md-6 feedback-message-author">
@@ -470,9 +475,7 @@
 											<p>{{feedback['time']}}</p>
 										</div>
 
-										<div class="col-md-12 feedback-message-author">
-											<p>{{feedback['first_name']}} {{feedback['last_name']}} on {{feedback['time'].split(" ")[0]}}</p>
-										</div>
+										
 										
 										<div class='col-md-2' ng-hide="{{feedback.user_has_upvote}}" ng-click="upvoteFeedback(feedback.feedback_id)">
 											<button class='btn btn-custom-default btn-xs'>Upvote</button>
