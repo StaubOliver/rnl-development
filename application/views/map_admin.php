@@ -202,7 +202,12 @@
 								</div>
 
 								<div class='col-md-6'>
-									//genus
+									<div ng-show="feedback['genus']==-1">
+										Genus: All
+									</div>
+									<div ng-show="feedback['genus']!=-1">
+										Genus: {{feedback['genus']}}
+									</div>
 								</div>
 
 								<div class='col-md-6'>
