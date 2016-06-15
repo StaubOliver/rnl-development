@@ -812,7 +812,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		    	
 			}).success(function(data, status, headers, config) {
 				console.log("rating success");
-				for (var i = 0; i < feedbacks.length; i++) {
+				for (var i = 0; i < $scope.feedbacks.length; i++) {
 					if(feedbacks[i]['feedback_id'] == feedback_id)
 					{
 						feedback[i]["rating"] = star;
