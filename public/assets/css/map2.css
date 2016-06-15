@@ -501,11 +501,22 @@ fieldset[disabled] .btn-custom-default.active {
 
 
 
-.rating-1{
+.rating-1-empty{
 	content: url("/assets/img/star/star_empty.png");
 	height:24px;
 	width: auto;
+}
 
+.rating-1-full{
+	content: url("/assets/img/star/star_full.png");
+	height:24px;
+	width: auto;
+}
+
+.rating-1:hover{
+	content: url("/assets/img/star/star_highlight.png");
+	height:24px;
+	width: auto;
 }
 
 
