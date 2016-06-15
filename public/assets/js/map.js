@@ -757,8 +757,18 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	}
 
 	$scope.rating_unhighlight = function(feedback_id, star){
-		for (var i = 1; i <= star; i++){
-			$scope.init_rating_img[feedback_id][i] = url_empty;
+		var rate = 0;
+		for (var i = 0; i <  $scope.feedbacks.length, i++){
+			if (feedbacks[i]['feedback_id'] == feedback_id){
+				rate = feedbacks[i]['rating'];
+			}
+		}
+		for (var i = 1; i <= 6; i++){
+			if (rate>=i){
+				$scope.init_rating_img[feedback_id][i] = url_full;
+			} else {
+				$scope.init_rating_img[feedback_id][i] = url_empty;
+			}
 		}
 	}
 
