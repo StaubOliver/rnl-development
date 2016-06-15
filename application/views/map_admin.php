@@ -201,6 +201,29 @@
 									To: {{feedback['age_max']}}
 								</div>
 
+								<div class='col-md-6'>
+									//genus
+								</div>
+
+								<div class='col-md-6'>
+									//collector
+								</div>
+
+								<div class='col-md-6'>
+									<div class='btn btn-custom-default btn-sm'>See comment on the map</div>
+									<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
+								</div>
+
+								<div class='col-md-6 rating'>
+									<?php for($i=1; $i<6; $i++): ?>
+										<img 
+											id=<?php echo "rating-{{feedback['feedback_id']}}-".$i; ?> 
+											class="rating rating-star" 
+											src="/assets/img/star/star_empty.png" 
+											ng-mouseover="rating_highlight(<?php echo "{{feedback[\"feedback_id\"]}},".$i; ?>)"
+									<?php endfor; ?>
+								</div>
+
 							</div>
 
 						</div>
