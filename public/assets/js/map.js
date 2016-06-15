@@ -724,7 +724,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	var url_empty = "/assets/img/star/star_empty.png";
 	var url_full = "/assets/img/star/star_full.png";
-	var url_hightlight = "/assets/img/star/star_highlight";
+	var url_hightlight = "/assets/img/star/star_highlight.png";
 
 	$scope.init_rating_img = [];
 
