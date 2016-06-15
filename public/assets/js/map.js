@@ -721,6 +721,16 @@ var map = angular.module('map', ['rzModule'])
 var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks', function($scope, $http, $compile){
 
 	$scope.test = 'Hello World';
+	$scope.feedbacks = [];
+
+	function refreshFeedback(){
+		$scope.feedbacks = [];
+		$http.get('/api/map/loadAdminFeedback/').success(function(data, status, headers, config){
+			data.forEach(function(item, index){
+				$scope.feedbacks.push(item);
+			});
+		});
+	}
 
 	$scope.rating_highlight = function(feedback_id, star){
 		console.log(feedback_id+'-'+star);

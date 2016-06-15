@@ -410,8 +410,35 @@ class MapModel extends CI_Model {
                 if ($query_filter->num_rows()>0){
                     $coor = $query_filter->row_array();
                     $row["genus"] = $coor['genus'];
-                    $row["age_min"] = $coor['age_min'];
-                    $row["age_max"] = $coor["age_max"];
+
+                    if ($coor['age_min']=="0") {$row["age_min"] = 'Quaternary';} 
+                    if ($coor['age_min']=="1") {$row["age_min"] = 'Neogene';} 
+                    if ($coor['age_min']=="2") {$row["age_min"] = 'Paleogene';} 
+                    if ($coor['age_min']=="3") {$row["age_min"] = 'Cretaceous';} 
+                    if ($coor['age_min']=="4") {$row["age_min"] = 'Jurassic';} 
+                    if ($coor['age_min']=="5") {$row["age_min"] = 'Triassic';} 
+                    if ($coor['age_min']=="6") {$row["age_min"] = 'Permian';} 
+                    if ($coor['age_min']=="7") {$row["age_min"] = 'Carboniferous';} 
+                    if ($coor['age_min']=="8") {$row["age_min"] = 'Devonian';} 
+                    if ($coor['age_min']=="9") {$row["age_min"] = 'Silurian';} 
+                    if ($coor['age_min']=="10") {$row["age_min"] = 'Ordovician';} 
+                    if ($coor['age_min']=="11") {$row["age_min"] = 'Cambrian';} 
+                    if ($coor['age_min']=="12") {$row["age_min"] = 'Precambrian';} 
+
+                    if ($coor['age_max']=="0") {$row["age_max"] = 'Quaternary';} 
+                    if ($coor['age_max']=="1") {$row["age_max"] = 'Neogene';} 
+                    if ($coor['age_max']=="2") {$row["age_max"] = 'Paleogene';} 
+                    if ($coor['age_max']=="3") {$row["age_max"] = 'Cretaceous';} 
+                    if ($coor['age_max']=="4") {$row["age_max"] = 'Jurassic';} 
+                    if ($coor['age_max']=="5") {$row["age_max"] = 'Triassic';} 
+                    if ($coor['age_max']=="6") {$row["age_max"] = 'Permian';} 
+                    if ($coor['age_max']=="7") {$row["age_max"] = 'Carboniferous';} 
+                    if ($coor['age_max']=="8") {$row["age_max"] = 'Devonian';} 
+                    if ($coor['age_max']=="9") {$row["age_max"] = 'Silurian';} 
+                    if ($coor['age_max']=="10") {$row["age_max"] = 'Ordovician';} 
+                    if ($coor['age_max']=="11") {$row["age_max"] = 'Cambrian';} 
+                    if ($coor['age_max']=="12") {$row["age_max"] = 'Precambrian';} 
+
                     $row["collector"] = $coor["collector"];
                 }
 
