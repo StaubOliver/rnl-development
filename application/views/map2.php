@@ -361,7 +361,7 @@
 
 						<div class="row">
 							<div class="col-md-12 feedback-title">
-								<h4>Share your discoveries</h4>
+								<h4>Share your discoveries {{nbfossils}}</h4>
 							</div>
 						</div>
 
