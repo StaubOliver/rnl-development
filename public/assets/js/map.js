@@ -722,7 +722,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.test = 'Hello World';
 
-	var rating_highlight = function(feedback_id, star){
+	$scope.rating_highlight = function(feedback_id, star){
 		console.log(feedback_id+'-'+star);
 		if (star=="1"){
 			document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
@@ -751,7 +751,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}
 	}
 
-	var rating_unhighlight = function(feedback_id, star){
+	$scope.rating_unhighlight = function(feedback_id, star){
 		if (star=="1"){
 			document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
 		}

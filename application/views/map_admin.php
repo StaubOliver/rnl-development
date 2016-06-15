@@ -46,7 +46,7 @@
 		<div class="container-fluid">
 
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">{{test}}</a>
+				<a class="navbar-brand" href="#">Map</a>
 			</div>
 
 			<div class="collapse navbar-collapse">
@@ -154,7 +154,7 @@
 								</div>
 								<div class='col-md-6 rating'>
 									<?php for($i=1; $i<6; $i++): ?>
-										<img id=<?php echo "rating-".$feedback['feedback_id']."-".$i; ?> class="rating rating-star" src='/assets/img/star/star_empty.png' onmouseover="rating_highlight(<?php echo $feedback['feedback_id'].",".$i; ?>)" onmouseleave="rating_unhighlight(<?php echo $feedback['feedback_id'].",".$i; ?>)">
+										<img id=<?php echo "rating-".$feedback['feedback_id']."-".$i; ?> class="rating rating-star" src='/assets/img/star/star_empty.png' ng-mouseover="rating_highlight(<?php echo $feedback['feedback_id'].",".$i; ?>)" onmouseleave="rating_unhighlight(<?php echo $feedback['feedback_id'].",".$i; ?>)">
 									<?php endfor; ?>
 								</div>
 
