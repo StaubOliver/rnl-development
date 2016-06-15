@@ -507,6 +507,7 @@ fieldset[disabled] .btn-custom-default.active {
 
 .rating{
 	display: inline-block;
+	text-align: right;
 }
 /*
 .rating-empty{

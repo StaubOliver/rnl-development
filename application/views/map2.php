@@ -94,15 +94,15 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<?php if($is_admin == 1): ?>
-		 			<li><a href="/map/map_admin">Admin panel</a></li>
+		 				<li><a href="/map/map_admin">Admin panel</a></li>
 					<?php endif; ?>	
 					<li><p class="navbar-text">Profil</p></li>
 					<li><p class="navbar-text">Share</p></li>
 					<?php if($logged_in == true): ?>
-		 			<li><a href ="/auth/logout" class="navbar-link">Logout</a></li>
+		 				<li><a href ="/auth/logout" class="navbar-link">Logout</a></li>
 					<?php endif; ?>	
 					<?php if($logged_in == false): ?>
-		 			<li><a href ="/auth/login" class="navbar-link">Login</a></li>
+		 				<li><a href ="/auth/login" class="navbar-link">Login</a></li>
 					<?php endif; ?>	
 				</ul>
 			</div>
