@@ -736,11 +736,11 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				for (var i = 1; i < 6; i++){
 					if (parseInt(item['rating'])>=i){
 						//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_full;
-						$scope.init_rating_img[feedback_id][i] = url_full;
+						$scope.init_rating_img[item["feedback_id"]][i] = url_full;
 					}
 					else{
 						//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_empty;
-						$scope.init_rating_img[feedback_id][i] = url_empty;
+						$scope.init_rating_img[item["feedback_id"]][i] = url_empty;
 					}
 				}
 				$scope.feedbacks.push(item);
