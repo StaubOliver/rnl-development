@@ -512,11 +512,15 @@ fieldset[disabled] .btn-custom-default.active {
 .rating-full{
 	content: url("/assets/img/star/star_full.png");}
 
-.rating-1:hover{
+#rating-1:hover{
 	content: url("/assets/img/star/star_highlight.png");
 }
 
-.rating-2:hover ~ .rating-1{
+#rating-2:hover{
+	content: url("/assets/img/star/star_highlight.png");
+}
+
+#rating-2:hover ~ #rating-1{
 	content: url("/assets/img/star/star_highlight.png");
 }
 
