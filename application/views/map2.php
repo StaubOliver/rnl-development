@@ -255,7 +255,7 @@
 				
 						<div class="row">
 							<div class="col-md-12 filter-title">
-								<h4>Filter what's being plotted on the map {{nb_fossils}}</h4>
+								<h4>Filter what's being plotted on the map</h4>
 							</div>
 						</div>
 
@@ -297,7 +297,7 @@
 						<!-- Geological Age --> 
 						<div class="row filter-element">
 							<div class="col-md-12">
-								<p class='filter-element-title'>Geological Age</p>
+								<p class='filter-element-title'>{{nb_fossils}}</p>
 							</div>
 							<div class="col-md-12">
 								<rzslider
