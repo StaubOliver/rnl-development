@@ -14,6 +14,7 @@
 	<!-- JS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="/assets/js/map.js"></script>
 	<!-- Icons -->
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	
@@ -36,74 +37,6 @@
 	<!-- Google Map API -->
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
 	
-	<script>
-
-		
-
-
-		var map = angular.module('map_admin', []).controller('admin_map_feedbacks', function($scope, $http, $compile){
-
-			var rating_highlight = function(feedback_id, star){
-				console.log(feedback_id+'-'+star);
-				if (star=="1"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
-				}
-				if (star=="2"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
-				}
-				if (star=="3"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_highlight.png";
-				}
-				if (star=="4"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-4').src="/assets/img/star/star_highlight.png";
-				}
-				if (star=="5"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-4').src="/assets/img/star/star_highlight.png";
-					document.getElementById('rating-'+feedback_id+'-5').src="/assets/img/star/star_highlight.png";
-				}
-			}
-
-			var rating_unhighlight = function(feedback_id, star){
-				if (star=="1"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
-				}
-				if (star=="2"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_empty.png";
-				}
-				if (star=="3"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_empty.png";
-				}
-				if (star=="4"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-4').src="/assets/img/star/star_empty.png";
-				}
-				if (star=="5"){
-					document.getElementById('rating-'+feedback_id+'-1').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-2').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-3').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-4').src="/assets/img/star/star_empty.png";
-					document.getElementById('rating-'+feedback_id+'-5').src="/assets/img/star/star_empty.png";
-				}
-			}
-
-		});
-	
-
-	</script>
 
 </head>
 
