@@ -487,6 +487,13 @@ class MapModel extends CI_Model {
 
     }
 
+    function adminEvaluateFeedback($data){
+        $rating = array('rating'=>$data['rating']);
+        $this->db->where("feedback_id", $data['feedback_id']);
+        $this->db->update('feedback', $rating);
+
+    }
+
     function submitFeedback($data, $filter, $map_coordinates, $fossil_selection){
         //using the data from the filter we create the where statement for querying the database
         $where = [];

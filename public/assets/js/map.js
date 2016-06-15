@@ -722,10 +722,22 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	refreshFeedback();
 
+	url_empty = "/assets/img/star/star_empty.png";
+	url_full = "/assets/img/star/star_full.png";
+	url_hightlight = "/assets/img/star/star_highlight";
+
 	function refreshFeedback(){
 		$scope.feedbacks = [];
 		$http.get('/api/map/loadAdminFeedback/').success(function(data, status, headers, config){
 			data.forEach(function(item, index){
+				for (i=1; i<6; i++){
+					if (intval(item['rating'])>=i){
+						document.getElementById("rating-"+item["feedback_id"+i]).src = url_full;
+					}
+					else{
+						document.getElementById("rating-"item["feedback_id"]+i).src = url_empty;
+					}
+				}
 				$scope.feedbacks.push(item);
 			});
 		});
@@ -786,6 +798,29 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			document.getElementById('rating-'+feedback_id+'-4').src="/assets/img/star/star_empty.png";
 			document.getElementById('rating-'+feedback_id+'-5').src="/assets/img/star/star_empty.png";
 		}
+	}
+
+	$scope.rating_click = function(feedback, star){
+		data = {};
+		data.feedback_id = feedback['feedback_id'];
+		data.rating = star;
+		$http({
+		        method : 'POST',
+		        url: '/api/map/adminEvaluateFeedback',
+		        data: $.param(data),
+		        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+		    	
+			}).success(function(data, status, headers, config) {
+				console.log("rating success");
+				for (var i = 0; i < feedbacks.length; i++) {
+					if(feedbacks[i]['feedback_id'] == feedback["feedback_id"])
+					{
+						feedback[i]["rating"] = star;
+					}
+				}
+			}).error(function(data, status, headers, config){
+				console.log(data);
+			});
 	}
 
 });

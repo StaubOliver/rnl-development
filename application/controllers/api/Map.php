@@ -53,15 +53,6 @@ class Map extends MY_Controller {
 		echo json_encode($data);
 	}
 
-	public function loadAdminFeedback(){
-		if ($this->ion_auth->logged_in()){
-			if ($this->ProfileModel->isAdmin()==1){
-				$data = $this->MapModel->adminFeedbacks();
-				echo json_encode($data);
-			}
-		}
-	}
-
 	public function updatelocation(){
 
 		$project = "-1";
@@ -231,6 +222,27 @@ class Map extends MY_Controller {
 		$this->db->insert('map_activity', $data);
 	}
 
+
+	public function loadAdminFeedback(){
+		if ($this->ion_auth->logged_in()){
+			if ($this->ProfileModel->isAdmin()==1){
+				$data = $this->MapModel->adminFeedbacks();
+				echo json_encode($data);
+			}
+		}
+	}
+
+	public function adminEvaluateFeedback(){
+		if ($this)>ion_auth->logged_in()){
+			if ($this->ProfileModel->is_admin()==1){
+				$data = array(
+					'feedback_id' => $this->input->post('feedback_id'), 
+					'rating' => $this->input->post('rating')
+				);
+				$this->MapModel->adminEvaluateFeedback($data);
+			}
+		}
+	}
 
 
 
