@@ -815,7 +815,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				for (var i = 0; i < $scope.feedbacks.length; i++) {
 					if($scope.feedbacks[i]['feedback_id'] == feedback_id)
 					{
-						$scope.feedback[i]["rating"] = star;
+						$scope.feedbacks[i]["rating"] = star;
 					}
 				}
 			}).error(function(data, status, headers, config){
