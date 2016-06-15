@@ -323,10 +323,12 @@ var map = angular.module('map', ['rzModule'])
 
 				//create the markers to plot on the map
 				createMarkers(info, http);	
-				refreshLegend();
+				
 			});
+			//refresh the legend
+			refreshLegend();
 		});
-		//refresh the legend
+
 	}
 
 	function LegendItem(color, age){
