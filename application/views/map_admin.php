@@ -39,8 +39,8 @@
 	<script>
 
 		var rating_highlight = function(feedback_id, star){
-			console.log(id);
-				document.getElementById('rating-'.feedback_id.'-'.star).src="/assets/img/star/star_highlight.png";
+			console.log(feedback_id+'-'+star);
+				document.getElementById('rating-'+feedback_id+'-'+star).src="/assets/img/star/star_highlight.png";
 			
 		}
 
