@@ -186,7 +186,7 @@
 								</div>
 								
 								<div class='col-md-6'>
-									{{feedback[time]}}
+									{{feedback['time']}}
 								</div>
 								
 								<div class='col-md-6'>
