@@ -550,6 +550,18 @@ fieldset[disabled] .btn-custom-default.active {
 
 }
 
+.admin-feedback-reply{
+	
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+
+	background-color:#FFFFFF;
+	border-radius: 2px;
+
+}
+
 .admin-feedback-btn-see-comment{
 	float: right;
 }
