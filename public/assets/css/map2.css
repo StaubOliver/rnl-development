@@ -171,9 +171,18 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	color:#AAAAAA;
 }
 
-.p-inline{
-	display: inline;
+.feedback-message-buttons{
+	text-align: left;
+	color:#AAAAAA;
 }
+
+.feedback-message-info{
+	text-align: right;
+	color:#AAAAAA;
+}
+
+
+
 
 .feedback-submit-btn{
 	margin-top: 5px;
