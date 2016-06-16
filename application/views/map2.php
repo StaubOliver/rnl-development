@@ -531,7 +531,7 @@
 
 								<div ng-repeat='rep in feedback.replies' ng-show='feedbacks.length'>
 
-									<div class="feedback-message-reply " ng-mouseover="recordActivity('Feedback mouse over '+rep['feedback_id']+ ' '+rep['message']); mouseoverFeedback(rep)" ng-mouseleave="mouseleaveFeedback()">
+									<div class="feedback-message " ng-mouseover="recordActivity('Feedback mouse over '+rep['feedback_id']+ ' '+rep['message']); mouseoverFeedback(rep)" ng-mouseleave="mouseleaveFeedback()">
 
 										<div class="col-md-12 feedback-message-text">
 											<p>{{rep['message']}}</p>
