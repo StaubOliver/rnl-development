@@ -314,8 +314,6 @@
 						<div class="row filter-element">
 							<div class="col-md-12">
 								<p class='filter-element-title'>Collector</p>
-							</div>
-							<div class="col-md-12">
 								<select class="form-control" id="fossilCollectorSelect" ng-model="selectedCollector" ng-change="clear_selected_markers(); newCollector()"  ng-mouseover="recordActivity('Collector Selector Hover')">
 									<option value="-1" selected>All Collectors</option>
 									<optgroup label="Collectors">	
