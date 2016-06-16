@@ -491,8 +491,8 @@ var map = angular.module('map', ['rzModule'])
 				$scope.replyto['reply'] = true;
 				console.log("replyto;")
 				console.log($scope.replyto);
-				for (var j = 0; j < replyto.selection.length; j++){
-					$scope.click_on_marker_for_selection(replyto.selection[j]);
+				for (var j = 0; j < $scope.replyto.selection.length; j++){
+					$scope.click_on_marker_for_selection($scope.replyto.selection[j]);
 				}
 			}
 		}
