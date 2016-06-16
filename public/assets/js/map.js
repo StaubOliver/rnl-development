@@ -478,8 +478,12 @@ var map = angular.module('map', ['rzModule'])
 					$scope.feedbacks[i]['user_has_upvote'] = true;
 				}
 				for (var j = 0; i < $scope.feedbacks[i]['replies'].length; j++){
-					$scope.feedbacks[i][replies][j]['upvote'] += 1;
-					$scope.feedbacks[i][replies][j]['user_has_upvote'] = true;
+
+					if ($scope.feedbacks[i]['replies'][j]['feedback_id'] == parseInt(id))
+					{
+						$scope.feedbacks[i]['replies'][j]['upvote'] += 1;
+						$scope.feedbacks[i]['replies'][j]['user_has_upvote'] = true;
+					}
 				}
 			}
 		});
