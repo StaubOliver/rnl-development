@@ -171,7 +171,7 @@
 
 							<div class='row'>
 
-								<div class='col-md-12' id='map-{{feedback.feedback_id}}'>
+								<div class='col-md-12 map-admin' id='map-{{feedback.feedback_id}}'>
 								
 								</div>
 
