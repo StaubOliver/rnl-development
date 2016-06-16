@@ -173,6 +173,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 
 .p-inline{
 	display: inline;
+	width:auto;
 }
 
 .feedback-submit-btn{
