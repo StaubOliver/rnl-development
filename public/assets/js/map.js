@@ -557,9 +557,9 @@ var map = angular.module('map', ['rzModule'])
 			data.map_center_lng = actualmap.getCenter().lng();
 
 			if ($scope.replyto['reply'] == true){
-				data.reply = $scope.replyto['feedback_id'];
+				data.replyto = $scope.replyto['feedback_id'];
 			} else {
-				data.reply = 0;
+				data.replyto = 0;
 			}
 
 			data.fossil_selection = [];
