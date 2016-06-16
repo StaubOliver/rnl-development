@@ -368,7 +368,7 @@ class MapModel extends CI_Model {
     			//we found some feedbacks related to that filter
     			foreach ($query2->result_array() as $row){
                     
-                    $new_row = getFeedbackDetails($row);
+                    $new_row = $this->getFeedbackDetails($row);
                     
                     $return[] = $new_row;
                 }
