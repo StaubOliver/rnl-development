@@ -912,13 +912,13 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		});
 	}
 
-	$( "#map-96" ).toggle( "fold" );
+	$( "#map-96" ).hide();
 
 	$scope.showMap = function(feedback_id, reply_id)
 	{
 		
-		$( "#map-96" ).toggle( "fold" );
-		$scope.map_zoom = 3;
+		$( "#map-96" ).show();
+		$scope.map_zoom = feedback;
 
 		var mapOpt = {
 		    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
