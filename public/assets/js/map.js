@@ -787,6 +787,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.test = 'Hello World';
 	$scope.feedbacks = [];
 
+	$( "#map-96" ).hide();
+
 	refreshFeedback();
 
 	var url_empty = "/assets/img/star/star_empty.png";
@@ -912,7 +914,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		});
 	}
 
-	$( "#map-96" ).hide();
+	
 
 	$scope.showMap = function(feedback_id, reply_id)
 	{
