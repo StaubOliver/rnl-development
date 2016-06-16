@@ -533,8 +533,17 @@
 
 									<div class="feedback-message " ng-mouseover="recordActivity('Feedback mouse over '+rep['feedback_id']+ ' '+rep['message']); mouseoverFeedback(rep)" ng-mouseleave="mouseleaveFeedback()">
 
-										<div class="col-md-12 feedback-message-text">
-											<p>{{rep['message']}}</p>
+										<div class='row'>
+
+											<div class="col-md-12 feedback-message-text">
+												<p>{{rep['message']}}</p>
+											</div>
+
+											<div class="col-md-12 feedback-message-author">
+												<p>{{feedback['first_name']}} {{feedback['last_name']}} on {{feedback['time'].split(" ")[0]}}</p>
+											</div>
+
+
 										</div>
 
 
