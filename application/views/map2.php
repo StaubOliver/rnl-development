@@ -476,7 +476,7 @@
 										</div>
 
 										<div class="col-md-12 feedback-message-author">
-											<p>Upvote Reply 4 upvotes 3 replies<p>
+											<p>Upvote Reply 4 up 3 fossils<p>
 										</div>
 
 										
@@ -486,7 +486,7 @@
 										</div>
 
 										<div class="col-md-4 feedback-message-upvote" ng-show="feedback.upvote > 0">
-											<p >{{feedback.upvote}} upvotes</p>
+											<p >{{feedback.upvote}} up</p>
 										</div>
 
 										<div class="col-md-6 feedback-message-upvote" ng-class="{'col-md-offset-2':feedback.user_has_upvote, 'col-md-offset-4':feedback.upvote==0}">
