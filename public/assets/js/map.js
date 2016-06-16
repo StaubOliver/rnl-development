@@ -484,11 +484,11 @@ var map = angular.module('map', ['rzModule'])
 		$scope.section_feedback_form_section_title = "Reply to a contribution";
 		for (var i = 0; i < $scope.feedbacks.length; i++)
 		{
-			replyto = [];
+			$scope.replyto = [];
 			if ($scope.feedbacks[i]['feedback_id']==parseInt(id))
 			{
-				replyto = $scope.feedbacks[i];
-				replyto['reply']  = true;
+				$scope.replyto = $scope.feedbacks[i];
+				$scope.replyto['reply']  = true;
 			}
 		}
 		
