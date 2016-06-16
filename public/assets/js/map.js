@@ -918,7 +918,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	{
 		
 		$( "#map-96" ).show();
-		$scope.map_zoom = feedback;
+
 
 		var mapOpt = {
 		    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
