@@ -503,7 +503,7 @@ class MapModel extends CI_Model {
 
         $query_feedbacks = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id, rating FROM feedback ORDER BY time DESC');
 
-        if ($query_feedbacks->num_rows()>0){
+        if ($query_feedbacks->num_rows() > 0){
             foreach ($query_feedbacks->result_array() as $row) {
                 
                 $new_row = $this->getAdminFeedbacksDetails($row);
@@ -514,7 +514,7 @@ class MapModel extends CI_Model {
                 $new_row['replies'] = array();
 
                 //query of replies for each feedback
-                $query_replies = $this->db->query('SELECT feedback_id, user_id, time, message, map_coordinates_id FROM feedback WHERE replyto='.$new_row['feedback_id'].' ORDER BY time ASC');
+                $query_replies = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id FROM feedback WHERE replyto='.$new_row['feedback_id'].' ORDER BY time ASC');
 
                 if ($query_replies->num_rows() > 0){
                     //for each replies, we get their details
