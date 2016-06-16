@@ -140,7 +140,8 @@ class Map extends MY_Controller {
 			'unique_id' => $unique_id,
 			'time' => $time,
 			'message' => $message,
-			'rating' => 0
+			'rating' => 0, 
+			'replyto' => $this->input->post('replyto')
 		);
 
 		$filter = array(
