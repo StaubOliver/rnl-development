@@ -476,15 +476,15 @@
 										</div>
 
 										<div class="col-md-6 feedback-message-author">
-											<p>Upvote Reply<p>
+											<button class='btn btn-custom-default btn-xs'>Upvote</button><button class='btn btn-custom-default btn-xs'>Upvote</button><p> Reply<p>
 										</div>
 
 										<div class="col-md-6 feedback-message-author">
-											<p>4 up 3 fossils<p>
+											<p>{{feedback.upvote}} up {{feedabck.selecter.length}} fossils<p>
 										</div>
 
 										
-										
+										<!--
 										<div class='col-md-2' ng-hide="{{feedback.user_has_upvote}}" ng-click="upvoteFeedback(feedback.feedback_id)">
 											<button class='btn btn-custom-default btn-xs'>Upvote</button>
 										</div>
@@ -496,6 +496,7 @@
 										<div class="col-md-6 feedback-message-upvote" ng-class="{'col-md-offset-2':feedback.user_has_upvote, 'col-md-offset-4':feedback.upvote==0}">
 											<p ng-show="feedback.selection.length">{{feedback.selection.length}} fossils</p>
 										</div>
+										-->
 									</div>
 								</div>
 							</div>
