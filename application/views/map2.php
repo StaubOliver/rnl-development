@@ -480,9 +480,9 @@
 											<a ng-click="upvoteFeedback(feedback.feedback_id)">Upvote</a> <a class=''>Reply</a>
 										</div>
 
-										<div class="col-md-6 feedback-message-info">
-											<span>{{feedback.upvote}} up </span> 
-											<span>{{feedback.selection.length}} fossils</span>
+										<div class="col-md-6 ">
+											<span class='feedback-message-info'>{{feedback.upvote}} up </span> 
+											<span class='feedback-message-info'>{{feedback.selection.length}} fossils</span>
 										</div>
 
 										
