@@ -124,8 +124,10 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 }
 
 .feedback-message{
+	/*
 	margin-left: 5px;
 	margin-right: 5px;
+	*/
 	padding: 10px;
 	background-color: white;
 	margin-top: 10px;
