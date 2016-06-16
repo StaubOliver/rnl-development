@@ -374,7 +374,7 @@
 								</div>
 
 								<div class="col-md-12 feedback-message-text">
-									<p>{{replyto.message}}</p>
+									<p>{{replyto.message}}</p><p>{{replyto.feedback_id}}</p>
 								</div>
 
 								<div class="col-md-6 feedback-form-info">
