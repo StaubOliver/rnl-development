@@ -299,11 +299,10 @@ class MapModel extends CI_Model {
     		$row = $query->row_array();
     		$filter_id = $row['filter_id'];
 
-    		$query2 = $this->db->query('SELECT feedback_id, user_id, time, message, map_coordinates_id FROM feedback WHERE filter_id='.$filter_id.' and replyto=0 ORDER BY time DESC');
+    		$query2 = $this->db->query('SELECT feedback_id, user_id, time, message, map_coordinates_id FROM feedback WHERE filter_id='.$filter_id.' ORDER BY time DESC');
 
     		if ($query2->num_rows() > 0)
     		{
-                $row["replyto"] = 0;
     			//we found some feedbacks related to that filter
     			foreach ($query2->result_array() as $row){
                     
