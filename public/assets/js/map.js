@@ -489,6 +489,7 @@ var map = angular.module('map', ['rzModule'])
 			{
 				replyto = $scope.feedbacks[i];
 				replyto['reply']  = true;
+				console.log(replyto);
 			}
 		}
 
