@@ -16,6 +16,7 @@ class map extends CI_Controller {
     }
     
 	public function index() {	
+		if ($this->ion_auth->logged_in()){
 			$data['projects'] = $this->MapModel->loadProject();
 			$data['genuses'] = $this->MapModel->loadGenuses();
 			$data['collectors'] = $this->MapModel->loadCollector();
@@ -37,7 +38,11 @@ class map extends CI_Controller {
 			}
 
 			$this->load->view('map2', $data);
-
+		}
+		else
+		{
+			redirect("/");
+		}
 	}
 
 	
