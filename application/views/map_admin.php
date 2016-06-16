@@ -172,7 +172,7 @@
 							<div class='row'>
 
 								<div class='col-md-12 map-admin' id='map-{{feedback.feedback_id}}'>
-								ss
+								
 								</div>
 
 								<div class='col-md-6'>
@@ -224,7 +224,7 @@
 								</div>
 
 								<div class='col-md-12 admin-feedback-tool'>
-									<div class='btn btn-custom-default btn-sm'>See comment on the map</div>
+									<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See comment on the map</div>
 									<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
 									<?php for($i=1; $i<6; $i++): ?>
 										<img 

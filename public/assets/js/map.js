@@ -926,7 +926,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		    streetViewControl:false
 		};
 
-		actualmap = new google.maps.Map(document.getElementById("googleMap"),mapOpt);
+		actualmap = new google.maps.Map(document.getElementById("map-"+feedback_id),mapOpt);
 
 	}
 
