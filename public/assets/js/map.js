@@ -488,7 +488,7 @@ var map = angular.module('map', ['rzModule'])
 			if ($scope.feedbacks[i]['feedback_id']==parseInt(id))
 			{
 				$scope.replyto = $scope.feedbacks[i];
-				$scope.replyto['reply']  = true;
+				$scope.replyto['reply'] = true;
 				console.log("replyto;")
 				console.log($scope.replyto);
 			}
