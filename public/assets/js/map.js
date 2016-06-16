@@ -912,8 +912,12 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		});
 	}
 
+	var actualmap;
+
 	$scope.showMap = function(feedback_id, reply_id){
 		
+		actualmap = null;
+
 		$scope.map_zoom = 3;
 
 		var mapOpt = {
