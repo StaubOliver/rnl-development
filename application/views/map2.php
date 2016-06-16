@@ -359,7 +359,7 @@
 
 				<!-- Feedback -->
 				<div class="col-md-12">
-					<div class="feedback-section">
+					<div name='write-section' class="feedback-section">
 
 						<div class="row">
 							<div class="col-md-12 feedback-title">
@@ -497,7 +497,7 @@
 										</div>-->
 
 										<div class="col-md-6 feedback-message-buttons">
-											<a class='feedback-message-button-up' href='#' ng-click="upvoteFeedback(feedback.feedback_id)">Upvote</a> <a class='feedback-message-button-reply' href='#' ng-click="replyFeedback(feedback.feedback_id)">Reply</a>
+											<a class='feedback-message-button-up' href='#' ng-click="upvoteFeedback(feedback.feedback_id)">Upvote</a> <a class='feedback-message-button-reply' href='#write-section' ng-click="replyFeedback(feedback.feedback_id)">Reply</a>
 										</div>
 
 										<div class="col-md-6 feedback-message-info">
