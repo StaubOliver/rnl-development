@@ -397,6 +397,100 @@ class MapModel extends CI_Model {
     	}
     }
 
+    function getAdminFeedbacksDetails($row){
+        //for each feedback we query its user information
+        $query_user = $this->db->query('SELECT first_name, last_name FROM users WHERE id = '.$row['user_id']);
+            
+        if ($query_user->num_rows()>0){
+            $result_query_user = array();
+            $user = $query_user->row_array();
+            $row['first_name'] = $user['first_name'];
+            $row['last_name'] = $user['last_name'];
+        } else {
+            $row['first_name'] = "John";
+            $row['last_name'] = "Smith";
+        }
+
+        //for each feedback we query its upvote information
+        $query_upvote = $this->db->query('SELECT upvote_id  FROM up_vote WHERE feedback_id = '.$row['feedback_id']);
+        
+        $row['upvote'] = $query_upvote->num_rows();
+
+        //for each feedback we query its filter information
+        $query_filter= $this->db->query("SELECT genus, collector, age_min, age_max, collector  FROM filter WHERE filter_id='".$row["filter_id"]."'");
+        if ($query_filter->num_rows()>0){
+            $coor = $query_filter->row_array();
+            $row["genus"] = $coor['genus'];
+
+            if ($coor['age_min']=="0") {$row["age_min"] = 'Quaternary';} 
+            if ($coor['age_min']=="1") {$row["age_min"] = 'Neogene';} 
+            if ($coor['age_min']=="2") {$row["age_min"] = 'Paleogene';} 
+            if ($coor['age_min']=="3") {$row["age_min"] = 'Cretaceous';} 
+            if ($coor['age_min']=="4") {$row["age_min"] = 'Jurassic';} 
+            if ($coor['age_min']=="5") {$row["age_min"] = 'Triassic';} 
+            if ($coor['age_min']=="6") {$row["age_min"] = 'Permian';} 
+            if ($coor['age_min']=="7") {$row["age_min"] = 'Carboniferous';} 
+            if ($coor['age_min']=="8") {$row["age_min"] = 'Devonian';} 
+            if ($coor['age_min']=="9") {$row["age_min"] = 'Silurian';} 
+            if ($coor['age_min']=="10") {$row["age_min"] = 'Ordovician';} 
+            if ($coor['age_min']=="11") {$row["age_min"] = 'Cambrian';} 
+            if ($coor['age_min']=="12") {$row["age_min"] = 'Precambrian';} 
+
+            if ($coor['age_max']=="0") {$row["age_max"] = 'Quaternary';} 
+            if ($coor['age_max']=="1") {$row["age_max"] = 'Neogene';} 
+            if ($coor['age_max']=="2") {$row["age_max"] = 'Paleogene';} 
+            if ($coor['age_max']=="3") {$row["age_max"] = 'Cretaceous';} 
+            if ($coor['age_max']=="4") {$row["age_max"] = 'Jurassic';} 
+            if ($coor['age_max']=="5") {$row["age_max"] = 'Triassic';} 
+            if ($coor['age_max']=="6") {$row["age_max"] = 'Permian';} 
+            if ($coor['age_max']=="7") {$row["age_max"] = 'Carboniferous';} 
+            if ($coor['age_max']=="8") {$row["age_max"] = 'Devonian';} 
+            if ($coor['age_max']=="9") {$row["age_max"] = 'Silurian';} 
+            if ($coor['age_max']=="10") {$row["age_max"] = 'Ordovician';} 
+            if ($coor['age_max']=="11") {$row["age_max"] = 'Cambrian';} 
+            if ($coor['age_max']=="12") {$row["age_max"] = 'Precambrian';} 
+
+            $row["collector"] = $coor["collector"];
+        }
+
+
+        //for each feedback we query its map coordinates information
+        $query_map_coord = $this->db->query("SELECT map_center_lat, map_center_lng, map_lat_ne, map_lng_ne, map_lat_sw, map_lng_sw, map_zoom FROM map_coordinates WHERE map_coordinates_id='".$row["map_coordinates_id"]."'");
+        if ($query_map_coord->num_rows()>0){
+            $coor = $query_map_coord->row_array();
+            $row["map_center_lat"] = $coor['map_center_lat'];
+            $row["map_center_lng"] = $coor['map_center_lng'];
+            $row["map_lat_ne"] = $coor["map_lat_ne"];
+            $row["map_lng_ne"] = $coor["map_lng_ne"];
+            $row["map_lat_sw"] = $coor["map_lat_sw"];
+            $row["map_lng_sw"] = $coor["map_lng_sw"];
+            $row["map_zoom"] = $coor["map_zoom"];
+        }
+
+
+        //for each feedback we query it selected fossils
+        $query_selection = $this->db->query("SELECT data_table, data_id FROM feedback_fossil WHERE feedback_id='".$row['feedback_id']."'");
+        if($query_selection->num_rows()>0)
+        {
+            $row["selection"] = [];
+            foreach ($query_selection->result_array() as $select) 
+            {
+                //$row['selection'][] = $select;
+                $query_fossil = $this->db->query("SELECT lat, lng FROM ".$select["data_table"]." WHERE data_id='".$select["data_id"]."'");
+                if ($query_fossil->num_rows()>0)
+                {
+                    $temp = $query_fossil->row_array();
+                    $temp['id'] = $select["data_id"];
+                    $row['selection'][] = $temp;
+                }
+            }
+        } 
+        else
+        {
+            $row['selection'] = [];
+        }
+    }
+
     
 
     function adminFeedbacks(){
@@ -408,100 +502,26 @@ class MapModel extends CI_Model {
         if ($query_feedbacks->num_rows()>0){
             foreach ($query_feedbacks->result_array() as $row) {
                 
-                //for each feedback we query its user information
-                $query_user = $this->db->query('SELECT first_name, last_name FROM users WHERE id = '.$row['user_id']);
-                    
-                if ($query_user->num_rows()>0){
-                    $result_query_user = array();
-                    $user = $query_user->row_array();
-                    $row['first_name'] = $user['first_name'];
-                    $row['last_name'] = $user['last_name'];
-                } else {
-                    $row['first_name'] = "John";
-                    $row['last_name'] = "Smith";
-                }
+                $new_row = $this->getAdminFeedbacksDetails($row);
 
-                //for each feedback we query its upvote information
-                $query_upvote = $this->db->query('SELECT upvote_id  FROM up_vote WHERE feedback_id = '.$row['feedback_id']);
+
+                $new_row['replyto'] = 0;
                 
-                $row['upvote'] = $query_upvote->num_rows();
+                $new_row['replies'] = array();
 
-                //for each feedback we query its filter information
-                $query_filter= $this->db->query("SELECT genus, collector, age_min, age_max, collector  FROM filter WHERE filter_id='".$row["filter_id"]."'");
-                if ($query_filter->num_rows()>0){
-                    $coor = $query_filter->row_array();
-                    $row["genus"] = $coor['genus'];
+                //query of replies for each feedback
+                $query_replies = $this->db->query('SELECT feedback_id, user_id, time, message, map_coordinates_id FROM feedback WHERE filter_id='.$filter_id.' AND replyto='.$new_row['feedback_id'].' ORDER BY time ASC');
 
-                    if ($coor['age_min']=="0") {$row["age_min"] = 'Quaternary';} 
-                    if ($coor['age_min']=="1") {$row["age_min"] = 'Neogene';} 
-                    if ($coor['age_min']=="2") {$row["age_min"] = 'Paleogene';} 
-                    if ($coor['age_min']=="3") {$row["age_min"] = 'Cretaceous';} 
-                    if ($coor['age_min']=="4") {$row["age_min"] = 'Jurassic';} 
-                    if ($coor['age_min']=="5") {$row["age_min"] = 'Triassic';} 
-                    if ($coor['age_min']=="6") {$row["age_min"] = 'Permian';} 
-                    if ($coor['age_min']=="7") {$row["age_min"] = 'Carboniferous';} 
-                    if ($coor['age_min']=="8") {$row["age_min"] = 'Devonian';} 
-                    if ($coor['age_min']=="9") {$row["age_min"] = 'Silurian';} 
-                    if ($coor['age_min']=="10") {$row["age_min"] = 'Ordovician';} 
-                    if ($coor['age_min']=="11") {$row["age_min"] = 'Cambrian';} 
-                    if ($coor['age_min']=="12") {$row["age_min"] = 'Precambrian';} 
-
-                    if ($coor['age_max']=="0") {$row["age_max"] = 'Quaternary';} 
-                    if ($coor['age_max']=="1") {$row["age_max"] = 'Neogene';} 
-                    if ($coor['age_max']=="2") {$row["age_max"] = 'Paleogene';} 
-                    if ($coor['age_max']=="3") {$row["age_max"] = 'Cretaceous';} 
-                    if ($coor['age_max']=="4") {$row["age_max"] = 'Jurassic';} 
-                    if ($coor['age_max']=="5") {$row["age_max"] = 'Triassic';} 
-                    if ($coor['age_max']=="6") {$row["age_max"] = 'Permian';} 
-                    if ($coor['age_max']=="7") {$row["age_max"] = 'Carboniferous';} 
-                    if ($coor['age_max']=="8") {$row["age_max"] = 'Devonian';} 
-                    if ($coor['age_max']=="9") {$row["age_max"] = 'Silurian';} 
-                    if ($coor['age_max']=="10") {$row["age_max"] = 'Ordovician';} 
-                    if ($coor['age_max']=="11") {$row["age_max"] = 'Cambrian';} 
-                    if ($coor['age_max']=="12") {$row["age_max"] = 'Precambrian';} 
-
-                    $row["collector"] = $coor["collector"];
-                }
-
-
-                //for each feedback we query its map coordinates information
-                $query_map_coord = $this->db->query("SELECT map_center_lat, map_center_lng, map_lat_ne, map_lng_ne, map_lat_sw, map_lng_sw, map_zoom FROM map_coordinates WHERE map_coordinates_id='".$row["map_coordinates_id"]."'");
-                if ($query_map_coord->num_rows()>0){
-                    $coor = $query_map_coord->row_array();
-                    $row["map_center_lat"] = $coor['map_center_lat'];
-                    $row["map_center_lng"] = $coor['map_center_lng'];
-                    $row["map_lat_ne"] = $coor["map_lat_ne"];
-                    $row["map_lng_ne"] = $coor["map_lng_ne"];
-                    $row["map_lat_sw"] = $coor["map_lat_sw"];
-                    $row["map_lng_sw"] = $coor["map_lng_sw"];
-                    $row["map_zoom"] = $coor["map_zoom"];
-                }
-
-
-                //for each feedback we query it selected fossils
-                $query_selection = $this->db->query("SELECT data_table, data_id FROM feedback_fossil WHERE feedback_id='".$row['feedback_id']."'");
-                if($query_selection->num_rows()>0)
-                {
-                    $row["selection"] = [];
-                    foreach ($query_selection->result_array() as $select) 
-                    {
-                        //$row['selection'][] = $select;
-                        $query_fossil = $this->db->query("SELECT lat, lng FROM ".$select["data_table"]." WHERE data_id='".$select["data_id"]."'");
-                        if ($query_fossil->num_rows()>0)
-                        {
-                            $temp = $query_fossil->row_array();
-                            $temp['id'] = $select["data_id"];
-                            $row['selection'][] = $temp;
-                        }
+                if ($query_replies->num_rows() > 0){
+                    //for each replies, we get their details
+                    foreach ($query_replies->result_array() as $rep){
+                        $new_row["replies"][] = $this->getAdminFeedbacksDetails($rep);
                     }
-                } 
-                else
-                {
-                    $row['selection'] = [];
+
                 }
 
                 //we add the completed feedbaack to the result array
-                $return[] = $row;
+                $return[] = $new_row;
             }
         }
         return $return;
