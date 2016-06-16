@@ -330,24 +330,24 @@ class MapModel extends CI_Model {
         if ($query_user->num_rows()>0){
             $result_query_user = array();
             $user = $query_user->row_array();
-            $row['first_name'] = $user['first_name'];
-            $row['last_name'] = $user['last_name'];
+            $res['first_name'] = $user['first_name'];
+            $res['last_name'] = $user['last_name'];
         } else {
-            $row['first_name'] = "John";
-            $row['last_name'] = "Smith";
+            $res['first_name'] = "John";
+            $res['last_name'] = "Smith";
         }
 
         //querying upvote information for each feedback
         $query_upvote = $this->db->query('SELECT upvote_id, user_id  FROM up_vote WHERE feedback_id = '.$row['feedback_id']);
         
-        $row['upvote'] = $query_upvote->num_rows();
-        $row['user_has_upvote'] = false;
+        $res['upvote'] = $query_upvote->num_rows();
+        $res['user_has_upvote'] = false;
         
         if ($query_upvote->num_rows() > 0){
             foreach ($query_upvote->result_array() as $up) 
             {
                 if ($up['user_id'] == $user_id){
-                    $row['user_has_upvote'] = true;
+                    $res['user_has_upvote'] = true;
                 }
             }
         }
@@ -356,18 +356,18 @@ class MapModel extends CI_Model {
         $query_map_coord = $this->db->query("SELECT map_center_lat, map_center_lng, map_lat_ne, map_lng_ne, map_lat_sw, map_lng_sw, map_zoom FROM map_coordinates WHERE map_coordinates_id='".$row["map_coordinates_id"]."'");
         if ($query_map_coord->num_rows()>0){
             $coor = $query_map_coord->row_array();
-            $row["map_center_lat"] = $coor['map_center_lat'];
-            $row["map_center_lng"] = $coor['map_center_lng'];
-            $row["map_lat_ne"] = $coor["map_lat_ne"];
-            $row["map_lng_ne"] = $coor["map_lng_ne"];
-            $row["map_lat_sw"] = $coor["map_lat_sw"];
-            $row["map_lng_sw"] = $coor["map_lng_sw"];
-            $row["map_zoom"] = $coor["map_zoom"];
+            $res["map_center_lat"] = $coor['map_center_lat'];
+            $res["map_center_lng"] = $coor['map_center_lng'];
+            $res["map_lat_ne"] = $coor["map_lat_ne"];
+            $res["map_lng_ne"] = $coor["map_lng_ne"];
+            $res["map_lat_sw"] = $coor["map_lat_sw"];
+            $res["map_lng_sw"] = $coor["map_lng_sw"];
+            $res["map_zoom"] = $coor["map_zoom"];
         }
 
         //querying selected fossils for each feedback
         $query_selection = $this->db->query("SELECT data_table, data_id FROM feedback_fossil WHERE feedback_id='".$row['feedback_id']."'");
-        $row["selection"] = [];
+        $res["selection"] = [];
         if($query_selection->num_rows()>0){
             foreach ($query_selection->result_array() as $select) 
             {
@@ -377,7 +377,7 @@ class MapModel extends CI_Model {
                 {
                     $temp = $query_fossil->row_array();
                     $temp['id'] = $select["data_id"];
-                    $row['selection'][] = $temp;
+                    $res['selection'][] = $temp;
                 }
             }
         }
