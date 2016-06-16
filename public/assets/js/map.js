@@ -37,7 +37,9 @@ var map = angular.module('map', ['rzModule'])
 	$scope.section_filter_title = "Filter what's being plotted on the map";
 	$scope.section_feedback_form_section_title = "Share your discoveries";
 	$scope.section_social_sharing_title = "Share on your networks";
-	$scope.section_feedbacks_title = "See what others have found"
+	$scope.section_feedbacks_title = "See what others have found";
+
+	$scope.replyto = {'reply':true} ;
 
 
 	// Sets the map on all markers in the array.
@@ -474,9 +476,19 @@ var map = angular.module('map', ['rzModule'])
 					$scope.feedbacks[i]['user_has_upvote'] = true;
 				}
 			}
-
 		});
+	}
 
+	$scope.replyFeedback = function(id){
+		$scope.recordActivity("Click on reply feedback "+id);
+		$scope.section_feedback_form_section_title = "Reply to a contribution";
+		$scope.replyto = {
+			'reply' : true};
+	}
+
+	$scope.cancelReplyFeedback = function(id){
+		$scope.recordActivity("Cancel reply on feedback "+id);
+		$scope.section_feedback_form_section_title = "Share your discoveries";
 	}
 
 

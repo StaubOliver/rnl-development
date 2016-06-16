@@ -367,6 +367,13 @@
 							</div>
 						</div>
 
+						<div ng-show="replyto.reply" class="feedback-message-form">
+							<div class='row feedback-form'>
+							 	<
+
+							</div>
+						</div>
+
 
 						<div class="feedback-message-form">
 							<form>
