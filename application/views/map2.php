@@ -466,17 +466,18 @@
 										<div class="col-md-12 feedback-message-text">
 											<p>{{feedback['message']}}</p>
 										</div>
-
+										
+										<!--
 										<div class="col-md-6 feedback-message-author">
 											<p>{{feedback['first_name']}} {{feedback['last_name']}}</p>
 										</div>
 
 										<div class="col-md-6 feedback-message-time">
 											<p>{{feedback['time']}}</p>
-										</div>
+										</div>-->
 
 										<div class="col-md-6 feedback-message-author">
-											<button class='btn btn-custom-default btn-xs'>Upvote</button><button class='btn btn-custom-default btn-xs'>Upvote</button><p> Reply<p>
+											<button class='btn btn-custom-default btn-xs'>Upvote</button> <button class='btn btn-custom-default btn-xs'>Reply</button>
 										</div>
 
 										<div class="col-md-6 feedback-message-author">
