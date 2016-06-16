@@ -459,7 +459,14 @@ var map = angular.module('map', ['rzModule'])
 	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 	    	
 		}).success(function(data, status, headers, config) {
-			refreshFeedback($http);
+			//refreshFeedback($http);
+			for(var i = 0; i < $scope.feedbacks.length; i++)
+			{
+				if ($scope.feedbacks[i] == id){
+					$scope.feedbacks[i]['upvote'] += 1;
+					$scope.feedbacks[i]['user_has_upvote'] = true;
+				}
+			}
 
 		});
 
