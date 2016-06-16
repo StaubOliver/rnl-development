@@ -481,8 +481,8 @@
 										</div>
 
 										<div class="col-md-6 feedback-message-author">
-											<p class="p-inline">{{feedback.upvote}} up </p> 
-											<p class="p-inline">{{feedback.selection.length}} fossils<p>
+											<span>{{feedback.upvote}} up </span> 
+											<span>{{feedback.selection.length}} fossils<span>
 										</div>
 
 										
