@@ -39,7 +39,7 @@ var map = angular.module('map', ['rzModule'])
 	$scope.section_social_sharing_title = "Share on your networks";
 	$scope.section_feedbacks_title = "See what others have found";
 
-	$scope.replyto = {'reply':true} ;
+	$scope.replyto = {'reply':false} ;
 
 
 	// Sets the map on all markers in the array.
