@@ -500,7 +500,7 @@ var map = angular.module('map', ['rzModule'])
 							//logActivity($http, "Fossil selected "+id+" "+marker_clicked_for_selection['title'], user_id);
 							$scope.text_select_btn = "Deselect this fossil";
 						} else {
-
+							console.log('nop');
 						}
 
 					}
