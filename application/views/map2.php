@@ -527,6 +527,9 @@
 								<div ng-repeat='rep in feedback.replies' ng-show='feedbacks.length'>
 
 									<div class="feedback-message-reply " ng-mouseover="recordActivity('Feedback mouse over '+rep['feedback_id']+ ' '+rep['message']); mouseoverFeedback(rep)" ng-mouseleave="mouseleaveFeedback()">
+										<div class='feedback-message-delete-btn' ng-click="" ng-show="(logged_in && feedback['user_id']==user_id) || admin"> 
+											<span class="glyphicon glyphicon-remove"></span>
+										</div>
 
 										<div class='row'>
 
