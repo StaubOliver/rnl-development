@@ -372,6 +372,7 @@ var map = angular.module('map', ['rzModule'])
 
 	function refreshFeedback(http){
 		$scope.feedbacks = [];
+		$scope.replyto = {'reply': false};
 		http.get('/api/map/loadfeedbacks/'+filter['genus']+'/-1/'+$scope.selectedAgeMin+'/'+$scope.selectedAgeMax+'/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
 			data.forEach(function(item, index){
 				/*
