@@ -16,34 +16,29 @@ class map extends CI_Controller {
     }
     
 	public function index() {	
+		$data['projects'] = $this->MapModel->loadProject();
+		$data['genuses'] = $this->MapModel->loadGenuses();
+		$data['collectors'] = $this->MapModel->loadCollector();
+
 		if ($this->ion_auth->logged_in()){
-			$data['projects'] = $this->MapModel->loadProject();
-			$data['genuses'] = $this->MapModel->loadGenuses();
-			$data['collectors'] = $this->MapModel->loadCollector();
+			$data['logged_in'] = true;
+			$data['is_admin'] = $this->ProfileModel->isAdmin();
+		} else{
+			$data['logged_in'] = false;
+			$data['is_admin'] = "0";
+		}
 
-			if ($this->ion_auth->logged_in()){
-				$data['logged_in'] = true;
-				$data['is_admin'] = $this->ProfileModel->isAdmin();
-			} else{
-				$data['logged_in'] = false;
-				$data['is_admin'] = "0";
-			}
-
-			if($this->uri->segment(3)){
-				$data['genus'] = $this->uri->segment(3);
-			}
-			else
-			{
-				$data['genus'] = "-1";
-			}
-
-			$this->load->view('map2', $data);
+		if($this->uri->segment(3)){
+			$data['genus'] = $this->uri->segment(3);
 		}
 		else
 		{
-			redirect("/");
+			$data['genus'] = "-1";
 		}
+
+		$this->load->view('map2', $data);
 	}
+	
 
 	
 	public function map_admin(){
