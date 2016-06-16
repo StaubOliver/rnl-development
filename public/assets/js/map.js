@@ -787,7 +787,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.test = 'Hello World';
 	$scope.feedbacks = [];
 
-
 	refreshFeedback();
 
 	var url_empty = "/assets/img/star/star_empty.png";
@@ -917,6 +916,19 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.showMap = function(feedback_id, reply_id)
 	{
+		var $temp;
+		for (var i = 0; i < $scope.feedbacks.length; i++)
+		{
+			if ($scope.feedbacks[i]['feedback_id'] == feedback_id)
+			{
+				$temp = $scope.feedbacks[i];
+			}
+		}
+
+		for (var i = 0; i < $temp.selection.length; i++)
+		{
+			
+		}
 
 		var mapOpt = {
 		    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
