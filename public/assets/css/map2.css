@@ -124,13 +124,13 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 
 
 .feedback-form-info {
-	text-align: left;
+	text-align: right;
 	color:#AAAAAA;
 	margin: 0px;
 }
 
 .feedback-form-button-cancel{
-	text-align: right;
+	text-align: left;
 }
 
 
