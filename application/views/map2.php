@@ -477,7 +477,7 @@
 										</div>-->
 
 										<div class="col-md-6 feedback-message-author">
-											<button class='btn btn-custom-default btn-xs'>Upvote</button> <button class='btn btn-custom-default btn-xs'>Reply</button>
+											<a class='btn btn-custom-default btn-xs'>Upvote</a> <a class='btn btn-custom-default btn-xs'>Reply</a>
 										</div>
 
 										<div class="col-md-6 feedback-message-author">
