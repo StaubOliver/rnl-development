@@ -494,14 +494,14 @@ var map = angular.module('map', ['rzModule'])
 				
 				for (var j = 0; j < markers.length; j++){
 					for (var k = 0; k < $scope.replyto.selection.length; k++){
-						console.log(markers[j]['title'].split('-')[0]+' '+$scope.replyto.selection[k]['id']);
+						//console.log(markers[j]['title'].split('-')[0]+' '+$scope.replyto.selection[k]['id']);
 						
 						//console.log(markers[j]);
 
 						if (markers[j]['title'].split('-')[0] == $scope.replyto.selection[k]['id']){
 							
 							console.log('found');
-							select_marker(markers[k]);
+							select_marker(markers[j]);
 							//logActivity($http, "Fossil selected "+id+" "+marker_clicked_for_selection['title'], user_id);
 							$scope.text_select_btn = "Deselect this fossil";
 						} else {
