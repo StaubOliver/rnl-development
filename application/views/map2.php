@@ -380,7 +380,7 @@
 								<div class="col-md-6 feedback-form-button-cancel">
 									<a class='' href='#' ng-click="cancelReplyFeedback(replyto.feedback_id)">Cancel reply</a>
 								</div>
-								
+
 								<div class="col-md-6 feedback-form-info">
 									<span>{{replyto.upvote}} up </span> 
 									<span>{{replyto.selection.length}} fossils</span>
@@ -523,7 +523,22 @@
 										-->
 									</div>
 								</div>
+
+								<div ng-repeat='rep in feedbacks.replies' ng-show='feedbacks.length'>
+
+									<div class="feedback-message-reply " ng-mouseover="recordActivity('Feedback mouse over '+rep['feedback_id']+ ' '+rep['message']); mouseoverFeedback(rep)" ng-mouseleave="mouseleaveFeedback()">
+									
+										<div class="col-md-12 feedback-message-text">
+											<p>{{feedback['message']}}</p>
+										</div>
+
+
+									</div>
+								</div>
+
 							</div>
+
+
 
 							<div ng-hide='feedbacks.length'>
 								<div class="feedback-message">
