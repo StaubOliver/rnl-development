@@ -480,7 +480,7 @@
 											<a ng-click="upvoteFeedback(feedback.feedback_id)">Upvote</a> <a class=''>Reply</a>
 										</div>
 
-										<div class="col-md-6 feedback-message-author">
+										<div class="col-md-6 feedback-message-info">
 											<span>{{feedback.upvote}} up </span> 
 											<span>{{feedback.selection.length}} fossils</span>
 										</div>
