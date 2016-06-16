@@ -415,11 +415,11 @@ class MapModel extends CI_Model {
 
         //for each feedback we query its upvote information
         $query_upvote = $this->db->query('SELECT upvote_id  FROM up_vote WHERE feedback_id = '.$row['feedback_id']);
-        
         $new_row['upvote'] = $query_upvote->num_rows();
 
         //for each feedback we query its filter information
-        $query_filter= $this->db->query("SELECT genus, collector, age_min, age_max, collector  FROM filter WHERE filter_id='".$new_row["filter_id"]."'");
+        $query_filter= $this->db->query("SELECT genus, collector, age_min, age_max, collector  FROM filter WHERE filter_id=".$row["filter_id"]);
+
         if ($query_filter->num_rows()>0){
             $coor = $query_filter->row_array();
             $new_row["genus"] = $coor['genus'];
