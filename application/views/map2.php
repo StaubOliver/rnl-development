@@ -369,8 +369,18 @@
 
 						<div ng-show="replyto.reply" class="feedback-message-form">
 							<div class='row feedback-form'>
-							 	<
+							 	<div class="col-md-12 feedback-message-author">
+									<p>{{replyto.first_name}} {{replyto.last_name}} on {{replyto.time.split(" ")[0]}}</p>
+								</div>
 
+								<div class="col-md-12 feedback-message-text">
+									<p>{{replyto.message}}</p>
+								</div>
+
+								<div class="col-md-6 feedback-message-info">
+									<span>{{replyto.upvote}} up </span> 
+									<span>{{replyto.selection.length}} fossils</span>
+								</div>
 							</div>
 						</div>
 
