@@ -844,10 +844,12 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			if ($scope.feedbacks[i]['feedback_id'] == feedback_id){
 				rate = $scope.feedbacks[i]['rating'];
 			}
-			for (var j = 0; j < $scope.feedbacks[i]['replies'].length; j++){
-				if ($scope.feedbacks[i]['replies'][j]['feedback_id'] == feedback_id){
-				rate = $scope.feedbacks[i]['replies'][j]['rating'];
-			}
+			for (var j = 0; j < $scope.feedbacks[i]['replies'].length; j++)
+			{
+				if ($scope.feedbacks[i]['replies'][j]['feedback_id'] == feedback_id)
+				{
+					rate = $scope.feedbacks[i]['replies'][j]['rating'];
+				}
 			}
 		}
 		for (var i = 1; i <= 6; i++){
@@ -882,7 +884,27 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 								$scope.init_rating_img[feedback_id][j] = url_empty;
 							}
 						}
-						
+					}
+					else
+					{
+						for (var j = 0; j < $scope.feedbacks[i]['replies'].length; j++)
+						{
+							if ($scope.feedbacks[i]['replies'][j]['feedback_id'] == feedback_id)
+							{
+								$scope.feedbacks[i]['replies'][j]['rating'] == star;
+								for (var k = 1; k < 6; k++)
+								{
+									if (star>=k)
+									{
+										$scope.init_rating_img[feedback_id][k] = url_full;
+									} 
+									else 
+									{
+										$scope.init_rating_img[feedback_id][k] = url_empty;
+									}
+								}
+							}
+						}
 					}
 				}
 			}).error(function(data, status, headers, config){
