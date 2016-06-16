@@ -253,7 +253,7 @@ class MapModel extends CI_Model {
     	}
     }
 
-    function getFeedbackDetails($row){
+    function getFeedbackDetails($row, $user_id){
         $res = $row;
          //fetching user information related to each feedback
         $query_user = $this->db->query('SELECT first_name, last_name FROM users WHERE id = '.$row['user_id']);
@@ -368,7 +368,7 @@ class MapModel extends CI_Model {
     			//we found some feedbacks related to that filter
     			foreach ($query2->result_array() as $row){
                     
-                    $new_row = $this->getFeedbackDetails($row);
+                    $new_row = $this->getFeedbackDetails($row, $user_id);
                     
                     $return[] = $new_row;
                 }
