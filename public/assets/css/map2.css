@@ -171,6 +171,10 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	color:#AAAAAA;
 }
 
+.p-inline{
+	display: inline;
+}
+
 .feedback-submit-btn{
 	margin-top: 5px;
 	text-align: right;
