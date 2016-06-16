@@ -112,18 +112,18 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	box-shadow: 0px 0px 3px #CCCCCC;
 }
 
-.feedback-form-author{
+.feedback-form-author p{
 	text-align: left;
 	color:#AAAAAA;
 	margin: 0px;
 }
 
-.feedback-form-message{
+.feedback-form-message p{
 	margin: 0px;
 }
 
 
-.feedback-form-info{
+.feedback-form-info p{
 	text-align: left;
 	color:#AAAAAA;
 	margin: 0px;
