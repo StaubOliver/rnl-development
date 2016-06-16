@@ -477,7 +477,7 @@
 										</div>-->
 
 										<div class="col-md-6 feedback-message-buttons">
-											<a ng-click="upvoteFeedback(feedback.feedback_id)">Upvote</a> <a class=''>Reply</a>
+											<a href='#' ng-click="upvoteFeedback(feedback.feedback_id)">Upvote</a> <a href='#'>Reply</a>
 										</div>
 
 										<div class="col-md-6 feedback-message-info">
