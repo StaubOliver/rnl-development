@@ -112,9 +112,21 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	box-shadow: 0px 0px 3px #CCCCCC;
 }
 
+.feedback-form-author{
+	text-align: left;
+	color:#AAAAAA;
+	margin-bottom: 0px;
+}
+
+.feedback-form-message{
+	margin-bottom: 0px;
+}
+
+
 .feedback-form-info{
 	text-align: left;
 	color:#AAAAAA;
+	margin-bottom: 0px;
 }
 
 .feedback-message-delete-btn{
