@@ -845,8 +845,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				rate = $scope.feedbacks[i]['rating'];
 			}
 			for (var j = 0; j < $scope.feedbacks[i]['replies'].length; j++){
-				if ($scope.feedbacks[i]['replies'][i]['feedback_id'] == feedback_id){
-				rate = $scope.feedbacks[i]['replies'][i]['rating'];
+				if ($scope.feedbacks[i]['replies'][j]['feedback_id'] == feedback_id){
+				rate = $scope.feedbacks[i]['replies'][j]['rating'];
 			}
 			}
 		}
@@ -882,19 +882,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 								$scope.init_rating_img[feedback_id][j] = url_empty;
 							}
 						}
-						// do the same for the replies
-						for (var j = 0; j < $scope.feedbacks[i]['replies'].length; j++){
-							$scope.init_rating_img[$scope.feedbacks[i]['replies'][j]['feedback_id']] = [];
-							for (var i = 1; i < 6; i++){
-								if (parseInt($scope.feedbacks[i]['replies'][j]['rating'])>=i){
-									//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_full;
-									$scope.init_rating_img[$scope.feedbacks[i]['replies'][j]['feedback_id']][i] = url_full;
-								}
-								else{
-									//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_empty;
-									$scope.init_rating_img[$scope.feedbacks[i]['replies'][j]['feedback_id']][i] = url_empty;
-								}
-							}
 
 						}
 					}
