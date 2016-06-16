@@ -399,7 +399,7 @@ class MapModel extends CI_Model {
 
     function getAdminFeedbacksDetails($row){
 
-        $new_row = $row
+        $new_row = $row;
         //for each feedback we query its user information
         $query_user = $this->db->query('SELECT first_name, last_name FROM users WHERE id = '.$row['user_id']);
             
