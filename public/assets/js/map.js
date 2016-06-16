@@ -509,11 +509,12 @@ var map = angular.module('map', ['rzModule'])
 		
 	}
 
-	$scope.cancelReplyFeedback = function(id){
+	$scope.cancelReplyFeedback = function(){
 		$scope.recordActivity("Cancel reply on feedback "+id);
 		$scope.section_feedback_form_section_title = "Share your discoveries";
 		//$scope.replyto = {'reply' : false};
 		deselect_all_marker();
+		$scope.replyto = {'reply:false'};
 	}
 
 
