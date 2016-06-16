@@ -882,8 +882,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 								$scope.init_rating_img[feedback_id][j] = url_empty;
 							}
 						}
-
-						}
+						
 					}
 				}
 			}).error(function(data, status, headers, config){
