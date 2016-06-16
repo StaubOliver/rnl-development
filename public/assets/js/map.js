@@ -463,6 +463,7 @@ var map = angular.module('map', ['rzModule'])
 			for(var i = 0; i < $scope.feedbacks.length; i++)
 			{
 				if ($scope.feedbacks[i] == id){
+					console.log(('update'));
 					$scope.feedbacks[i]['upvote'] += 1;
 					$scope.feedbacks[i]['user_has_upvote'] = true;
 				}
