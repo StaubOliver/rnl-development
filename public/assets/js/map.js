@@ -39,7 +39,7 @@ var map = angular.module('map', ['rzModule'])
 	$scope.section_social_sharing_title = "Share on your networks";
 	$scope.section_feedbacks_title = "See what others have found";
 
-	$scope.replyto = {'reply':false} ;
+	$scope.replyto = {'reply':false};
 
 
 	// Sets the map on all markers in the array.
@@ -514,7 +514,7 @@ var map = angular.module('map', ['rzModule'])
 		$scope.recordActivity("Cancel reply on feedback "+id);
 		$scope.section_feedback_form_section_title = "Share your discoveries";
 		//$scope.replyto = {'reply' : false};
-		//deselect_all_marker();
+		deselect_all_marker();
 		$scope.replyto = {'reply':false};
 	}
 
