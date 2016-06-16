@@ -444,10 +444,7 @@ var map = angular.module('map', ['rzModule'])
 			item.setMap(null);
 			item = null;
 		})
-		$scope.feedback_selection_marker = [];
-		rectangle.setMap(null);
-		rectangle = null;
-	}
+		$scope.feedback_selection_marker = [];	}
 
 	$scope.upvoteFeedback = function(id){
 		$scope.recordActivity("Upvote feedback "+id);
