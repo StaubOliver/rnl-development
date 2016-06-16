@@ -495,6 +495,9 @@ var map = angular.module('map', ['rzModule'])
 				for (var j = 0; j < markers.length; j++){
 					for (var k = 0; k < $scope.replyto.selection.length; k++){
 						console.log(markers[j]['id']+' '+$scope.replyto.selection[k]['id']);
+						
+						console.log(markers[j]);
+
 						if (markers[j]['id'] == $scope.replyto.selection[k]['id']){
 							
 							console.log('found');
