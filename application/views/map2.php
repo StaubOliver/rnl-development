@@ -258,7 +258,7 @@
 				
 						<div class="row">
 							<div class="col-md-12 filter-title">
-								<h4>Filter what's being plotted on the map</h4>
+								<h4>{{section_filter_title}}</h4>
 							</div>
 						</div>
 
