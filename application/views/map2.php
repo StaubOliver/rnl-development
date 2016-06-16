@@ -477,11 +477,11 @@
 										</div>-->
 
 										<div class="col-md-6 feedback-message-author">
-											<a class='btn btn-custom-default btn-xs'>Upvote</a> <a class='btn btn-custom-default btn-xs'>Reply</a>
+											<a ng-click="upvoteFeedback(feedback.feedback_id)">Upvote</a> <a class=''>Reply</a>
 										</div>
 
 										<div class="col-md-6 feedback-message-author">
-											<p>{{feedback.upvote}} up </p> <p>{{feedback.selection.length}} fossils<p>
+											<p >{{feedback.upvote}} up </p> <p>{{feedback.selection.length}} fossils<p>
 										</div>
 
 										
