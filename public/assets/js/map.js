@@ -34,6 +34,12 @@ var map = angular.module('map', ['rzModule'])
 
 	var marker_clicked_for_selection = {};
 
+	$scope.section_filter_title = "Filter what's being plotted on the map";
+	$scope.section_feedback_form_section_title = "Share your discoveries";
+	$scope.section_social_sharing_title = "Share on your networks";
+	$scope.section_feedbacks_title = "See what others have found"
+
+
 	// Sets the map on all markers in the array.
 	function setMapOnAll(map) {
 		for (var i = 0; i < markers.length; i++) {

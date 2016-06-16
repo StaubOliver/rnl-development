@@ -258,7 +258,7 @@
 				
 						<div class="row">
 							<div class="col-md-12 filter-title">
-								<h4>Filter what's being plotted on the map</h4>
+								<h4>{{section_filter_title}}</h4>
 							</div>
 						</div>
 
@@ -363,7 +363,7 @@
 
 						<div class="row">
 							<div class="col-md-12 feedback-title">
-								<h4>Share your discoveries</h4>
+								<h4>{{section_feedback_form_section_title}}</h4>
 							</div>
 						</div>
 
@@ -408,7 +408,7 @@
 
 						<div class="row">
 							<div class="col-md-8 feedback-title">
-								<h4>Share on your networks</h4>
+								<h4>{{section_social_sharing_title}}</h4>
 							</div>
 							<div class="col-md-1">
 								<img class='social-network-icon' src="/assets/img/socialnetworks/twitter.png" alt="There should be an awsome logo" height="24" width="24">
@@ -446,7 +446,7 @@
 
 						<div class="row">
 							<div class="col-md-12 feedback-title">
-								<h4>See what others have found</h4>
+								<h4>{{section_feedbacks_title}}</h4>
 							</div>
 						</div>
 
@@ -477,7 +477,7 @@
 										</div>-->
 
 										<div class="col-md-6 feedback-message-buttons">
-											<a class='feedback-message-button-up' href='#' ng-click="upvoteFeedback(feedback.feedback_id)">Upvote</a> <a class='feedback-message-button-reply' href='#'>Reply</a>
+											<a class='feedback-message-button-up' href='#' ng-click="upvoteFeedback(feedback.feedback_id)">Upvote</a> <a class='feedback-message-button-reply' href='#' ng-click="replyFeedback(feedback.feedback_id)">Reply</a>
 										</div>
 
 										<div class="col-md-6 feedback-message-info">
