@@ -912,12 +912,12 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		});
 	}
 
-	var actualmap;
+	$( "#map-96" ).toggle( "fold" );
 
-	$scope.showMap = function(feedback_id, reply_id){
+	$scope.showMap = function(feedback_id, reply_id)
+	{
 		
-		actualmap = null;
-
+		$( "#map-96" ).toggle( "fold" );
 		$scope.map_zoom = 3;
 
 		var mapOpt = {
