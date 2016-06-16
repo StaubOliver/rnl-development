@@ -369,7 +369,7 @@ class MapModel extends CI_Model {
     			foreach ($query2->result_array() as $row){
                     
                     $new_row = $this->getFeedbackDetails($row, $user_id);
-                    
+                    $new_row['replyto'] = 0;
                     $return[] = $new_row;
                 }
                 return $return;
