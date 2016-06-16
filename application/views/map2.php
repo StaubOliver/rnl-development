@@ -499,7 +499,9 @@
 										</div>-->
 
 										<div class="col-md-6 feedback-message-buttons">
-											<a class='feedback-message-button-up' href='#' ng-click="upvoteFeedback(feedback.feedback_id)">Upvote</a> <a class='feedback-message-button-reply' href='#write-section' ng-click="replyFeedback(feedback.feedback_id)">Reply</a>
+											<a class='feedback-message-button-up' href='#' ng-hide="{{feedback.user_has_upvote}}" ng-click="upvoteFeedback(feedback.feedback_id)">Upvote</a> 
+											<span ng-show="{{feedback.user_has_upvote}}">Upvoted</span>
+											<a class='feedback-message-button-reply' href='#write-section' ng-click="replyFeedback(feedback.feedback_id)">Reply</a>
 										</div>
 
 										<div class="col-md-6 feedback-message-info">
