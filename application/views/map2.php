@@ -382,7 +382,7 @@
 									<span>{{replyto.selection.length}} fossils</span>
 								</div>
 								<div class="col-md-6 feedback-form-reply-info">
-									<a class='feedback-form-button-cancel' href='#' ng-click="cancenReplyFeedback(feedback.feedback_id)">Cancel reply</a>
+									<a class='feedback-form-button-cancel' href='#' ng-click="cancenReplyFeedback(replyto.feedback_id)">Cancel reply</a>
 								</div>
 							</div>
 						</div>
