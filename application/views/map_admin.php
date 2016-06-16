@@ -170,7 +170,11 @@
 						<div class='admin-feedback'>
 
 							<div class='row'>
-									
+
+								<div class='col-md-12' id='map-{{feedback.feedback_id}}'>
+								
+								</div>
+
 								<div class='col-md-6'>
 									Feedback from {{feedback["first_name"]}} {{feedback["last_name"]}}
 								</div>

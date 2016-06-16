@@ -871,46 +871,65 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		        data: $.param(data),
 		        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		    	
-			}).success(function(data, status, headers, config) {
-				console.log("rating success");
-				for (var i = 0; i < $scope.feedbacks.length; i++) {
-					if($scope.feedbacks[i]['feedback_id'] == feedback_id)
-					{
-						$scope.feedbacks[i]["rating"] = star;
-						for (var j = 1; j < 6; j++){
-							if (star>=j){
-								$scope.init_rating_img[feedback_id][j] = url_full;
-							} else {
-								$scope.init_rating_img[feedback_id][j] = url_empty;
-							}
+		}).success(function(data, status, headers, config) {
+			console.log("rating success");
+			for (var i = 0; i < $scope.feedbacks.length; i++) {
+				if($scope.feedbacks[i]['feedback_id'] == feedback_id)
+				{
+					$scope.feedbacks[i]["rating"] = star;
+					for (var j = 1; j < 6; j++){
+						if (star>=j){
+							$scope.init_rating_img[feedback_id][j] = url_full;
+						} else {
+							$scope.init_rating_img[feedback_id][j] = url_empty;
 						}
 					}
-					else
+				}
+				else
+				{
+					for (var j = 0; j < $scope.feedbacks[i]['replies'].length; j++)
 					{
-						for (var j = 0; j < $scope.feedbacks[i]['replies'].length; j++)
+						if ($scope.feedbacks[i]['replies'][j]['feedback_id'] == feedback_id)
 						{
-							if ($scope.feedbacks[i]['replies'][j]['feedback_id'] == feedback_id)
+							$scope.feedbacks[i]['replies'][j]['rating'] = star;
+							for (var k = 1; k < 6; k++)
 							{
-								$scope.feedbacks[i]['replies'][j]['rating'] = star;
-								for (var k = 1; k < 6; k++)
+								if (star>=k)
 								{
-									if (star>=k)
-									{
-										$scope.init_rating_img[feedback_id][k] = url_full;
-									} 
-									else 
-									{
-										$scope.init_rating_img[feedback_id][k] = url_empty;
-									}
+									$scope.init_rating_img[feedback_id][k] = url_full;
+								} 
+								else 
+								{
+									$scope.init_rating_img[feedback_id][k] = url_empty;
 								}
 							}
 						}
 					}
 				}
-			}).error(function(data, status, headers, config){
-				console.log(data);
-			});
+			}
+		}).error(function(data, status, headers, config){
+			console.log(data);
+		});
 	}
+
+	$scope.showMap = function(feedback_id, reply_id){
+		
+		$scope.map_zoom = 3;
+
+		var mapOpt = {
+		    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
+		    zoom:$scope.map_zoom,
+		    maxZoom: 12,
+		    minZoom: 2,
+		    mapTypeId:google.maps.MapTypeId.ROADMAP,
+		    mapTypeControl:false,
+		    streetViewControl:false
+		};
+
+		actualmap = new google.maps.Map(document.getElementById("googleMap"),mapOpt);
+
+	}
+
 
 });
 
