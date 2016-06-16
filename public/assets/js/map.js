@@ -815,7 +815,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				for (var j = 0; j < item['replies'].length; j++){
 					$scope.init_rating_img[item['replies'][j]['feedback_id']] = [];
 					for (var i = 1; i < 6; i++){
-					if (parseInt(item['rating'])>=i){
+					if (parseInt(item['replies'][j]['rating'])>=i){
 						//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_full;
 						$scope.init_rating_img[item['replies'][j]['feedback_id']][i] = url_full;
 					}
