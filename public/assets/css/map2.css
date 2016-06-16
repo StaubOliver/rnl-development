@@ -123,21 +123,22 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 }
 
 
-.feedback-form-info p{
+.feedback-form-info {
 	text-align: left;
 	color:#AAAAAA;
 	margin: 0px;
 }
+
+.feedback-form-button-cancel{
+	text-align: right;
+}
+
 
 .feedback-message-delete-btn{
 	position: absolute;
 	top: 5px;
 	right: 5px;
 	cursor: pointer;
-}
-
-.feedback-form-button-cancel{
-	text-align: right;
 }
 
 .feedback-message-form-textarea{
