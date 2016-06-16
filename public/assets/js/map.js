@@ -815,15 +815,15 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				for (var j = 0; j < item['replies'].length; j++){
 					$scope.init_rating_img[item['replies'][j]['feedback_id']] = [];
 					for (var i = 1; i < 6; i++){
-					if (parseInt(item['replies'][j]['rating'])>=i){
-						//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_full;
-						$scope.init_rating_img[item['replies'][j]['feedback_id']][i] = url_full;
+						if (parseInt(item['replies'][j]['rating'])>=i){
+							//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_full;
+							$scope.init_rating_img[item['replies'][j]['feedback_id']][i] = url_full;
+						}
+						else{
+							//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_empty;
+							$scope.init_rating_img[item['replies'][j]['feedback_id']][i] = url_empty;
+						}
 					}
-					else{
-						//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_empty;
-						$scope.init_rating_img[item['replies'][j]['feedback_id']][i] = url_empty;
-					}
-				}
 
 				}
 				$scope.feedbacks.push(item);
@@ -843,6 +843,11 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		for (var i = 0; i <  $scope.feedbacks.length; i++){
 			if ($scope.feedbacks[i]['feedback_id'] == feedback_id){
 				rate = $scope.feedbacks[i]['rating'];
+			}
+			for (var j = 0; j < $scope.feedbacks[i]['replies'].length; j++){
+				if ($scope.feedbacks[i]['replies'][i]['feedback_id'] == feedback_id){
+				rate = $scope.feedbacks[i]['replies'][i]['rating'];
+			}
 			}
 		}
 		for (var i = 1; i <= 6; i++){
@@ -876,6 +881,21 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 							} else {
 								$scope.init_rating_img[feedback_id][j] = url_empty;
 							}
+						}
+						// do the same for the replies
+						for (var j = 0; j < $scope.feedbacks[i]['replies'].length; j++){
+							$scope.init_rating_img[$scope.feedbacks[i]['replies'][j]['feedback_id']] = [];
+							for (var i = 1; i < 6; i++){
+								if (parseInt($scope.feedbacks[i]['replies'][j]['rating'])>=i){
+									//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_full;
+									$scope.init_rating_img[$scope.feedbacks[i]['replies'][j]['feedback_id']][i] = url_full;
+								}
+								else{
+									//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_empty;
+									$scope.init_rating_img[$scope.feedbacks[i]['replies'][j]['feedback_id']][i] = url_empty;
+								}
+							}
+
 						}
 					}
 				}
