@@ -54,6 +54,11 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	width:auto;
 }
 
+.filter-title, 
+.feedback-title
+{
+
+}
 
 .filter-element{
 	margin-top:5px;
@@ -93,13 +98,12 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	margin-bottom: 2px;
 }
 
-.feedback-title{
-	margin-left: 5px;
-}
 
 .feedback-message-form{
+	/*
 	margin-left: 5px;
 	margin-right: 5px;
+	*/
 	padding: 10px;
 	background-color: white;
 	margin-top: 10px;
