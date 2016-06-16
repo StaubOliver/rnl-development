@@ -374,7 +374,7 @@
 								</div>
 
 								<div class="col-md-12 ">
-									<p>{{replyto.message}}</p>
+									<p><strong>{{replyto.message}}</strong></p>
 								</div>
 
 								<div class="col-md-6 feedback-form-info">
