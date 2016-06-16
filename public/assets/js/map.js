@@ -492,7 +492,9 @@ var map = angular.module('map', ['rzModule'])
 				console.log("replyto;")
 				console.log($scope.replyto);
 				for (var j = 0; j < $scope.replyto.selection.length; j++){
-					$scope.click_on_marker_for_selection($scope.replyto.selection[j]);
+					select_marker(markers[$scope.replyto.selection[j]]);
+					//logActivity($http, "Fossil selected "+id+" "+marker_clicked_for_selection['title'], user_id);
+					$scope.text_select_btn = "Deselect this fossil";
 				}
 			}
 		}
@@ -589,9 +591,9 @@ var map = angular.module('map', ['rzModule'])
 			$scope.text_select_btn = "Select this fossil";
 
 		}
-		console.log(index);
-		console.log($scope.selected_markers.length);
-		console.log("yeah");
+		//console.log(index);
+		//console.log($scope.selected_markers.length);
+		//console.log("yeah");
 		infoWindow.close;
 	}
 
