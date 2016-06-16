@@ -493,7 +493,7 @@ var map = angular.module('map', ['rzModule'])
 				console.log($scope.replyto);
 				for (var j = 0; j < $scope.replyto.selection.length; j++){
 					for (var k = 0; k < markers.length; k++){
-						if (markers[k]['id'] = $scope.replyto.selection[j]['id']){
+						if (markers[k]['id'] == $scope.replyto.selection[j]['id']){
 							select_marker(markers[$scope.replyto.selection[j]['id']]);
 							//logActivity($http, "Fossil selected "+id+" "+marker_clicked_for_selection['title'], user_id);
 							$scope.text_select_btn = "Deselect this fossil";
