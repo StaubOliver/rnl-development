@@ -563,8 +563,7 @@ fieldset[disabled] .btn-custom-default.active {
 
 .admin-feedback-tool{
 	display: inline-block;
-	text-align: right;
-	float: right;
+	text-align: center;
 }
 /*
 .rating-empty{

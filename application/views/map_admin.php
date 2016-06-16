@@ -241,7 +241,7 @@
 					<!-- replies -->
 					<div ng-repeat='rep in feedback.replies' ng-show='feedback.replies.length'>
 
-						<div class='col-md-7 col-md-offset-3'>
+						<div class='col-md-6 col-md-offset-3'>
 							<div class='admin-feedback'>
 
 								<div class='row'>
@@ -294,12 +294,9 @@
 										</div>
 									</div>
 
-									<div class='col-md-6'>
+									<div class='col-md-12 admin-feedback-tool'>
 										<div class='btn btn-custom-default btn-sm'>See comment on the map</div>
 										<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
-									</div>
-
-									<div class='col-md-6 rating'>
 										<?php for($i=1; $i<6; $i++): ?>
 											<img 
 												id=<?php echo "rating-{{rep['feedback_id']}}-".$i; ?> 
