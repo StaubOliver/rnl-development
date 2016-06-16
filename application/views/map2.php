@@ -481,7 +481,7 @@
 										</div>
 
 										<div class="col-md-6 feedback-message-author">
-											<p>{{feedback.upvote}} up {{feedback.selection.length}} fossils<p>
+											<p>{{feedback.upvote}} up </p><p>{{feedback.selection.length}} fossils<p>
 										</div>
 
 										
