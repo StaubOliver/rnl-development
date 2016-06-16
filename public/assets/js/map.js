@@ -477,7 +477,7 @@ var map = angular.module('map', ['rzModule'])
 					$scope.feedbacks[i]['upvote'] += 1;
 					$scope.feedbacks[i]['user_has_upvote'] = true;
 				}
-				for (var j = 0; i < $scope.feedbacks[i]['replies'].length; j++){
+				for (var j = 0; j < $scope.feedbacks[i]['replies'].length; j++){
 
 					if ($scope.feedbacks[i]['replies'][j]['feedback_id'] == parseInt(id))
 					{
