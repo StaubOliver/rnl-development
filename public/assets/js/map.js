@@ -556,6 +556,12 @@ var map = angular.module('map', ['rzModule'])
 			data.map_center_lat = actualmap.getCenter().lat();
 			data.map_center_lng = actualmap.getCenter().lng();
 
+			if ($scope.replyto['reply'] == true){
+				data.reply = $scope.replyto['feedback_id'];
+			} else {
+				data.reply = 0;
+			}
+
 			data.fossil_selection = [];
 			$scope.selected_markers.forEach(function(item, index){
 				data.fossil_selection.push(item['title'].split("-")[0]);
@@ -574,6 +580,7 @@ var map = angular.module('map', ['rzModule'])
 				$scope.feedback_form_text = "";
 				$scope.clear_selected_markers();
 				$scope.recordActivity('Submit feedback');
+				replyto = {'reply':false};
 
 			}).error(function(data, status, headers, config){
 				console.log(data);
