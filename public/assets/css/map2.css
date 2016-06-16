@@ -191,7 +191,8 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	border-radius: 10px;
 }
 
-.feedback-message p{
+.feedback-message p, 
+.feedback-message-reply p{
 	margin: 0px;
 }
 
