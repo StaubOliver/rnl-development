@@ -157,7 +157,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 }
 
 .feedback-message-author{
-	text-align: right;
+	text-align: left;
 	color:#AAAAAA;
 }
 
@@ -177,12 +177,9 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 }
 
 .feedback-message-info{
-	text-align: right;
+	text-align: left;
 	color:#AAAAAA;
 }
-
-
-
 
 .feedback-submit-btn{
 	margin-top: 5px;
