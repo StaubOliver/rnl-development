@@ -813,15 +813,15 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				}
 				// do the same for the replies
 				for (var j = 0; j < item['replies'].length; j++){
-					$scope.init_rating_img[item['feedback_id']['replies'][j]['feedback_id']] = [];
+					$scope.init_rating_img[item['replies'][j]['feedback_id']] = [];
 					for (var i = 1; i < 6; i++){
 					if (parseInt(item['rating'])>=i){
 						//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_full;
-						$scope.init_rating_img[item['feedback_id']['replies'][j]['feedback_id']][i] = url_full;
+						$scope.init_rating_img[item['replies'][j]['feedback_id']][i] = url_full;
 					}
 					else{
 						//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_empty;
-						$scope.init_rating_img[item['feedback_id']['replies'][j]['feedback_id']][i] = url_empty;
+						$scope.init_rating_img[item['replies'][j]['feedback_id']][i] = url_empty;
 					}
 				}
 
