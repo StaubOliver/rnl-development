@@ -561,9 +561,9 @@ fieldset[disabled] .btn-custom-default.active {
 	cursor: pointer;
 }
 
-.rating{
+.admin-feedback-tool{
 	display: inline-block;
-	text-align: center;
+	text-align: right;
 }
 /*
 .rating-empty{
