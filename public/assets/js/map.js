@@ -482,7 +482,8 @@ var map = angular.module('map', ['rzModule'])
 	$scope.replyFeedback = function(id){
 		$scope.recordActivity("Click on reply feedback "+id);
 		$scope.section_feedback_form_section_title = "Reply to a contribution";
-		for (var i = 0; i < $scope.feedbacks.length; i++)
+		$scope.replyto['reply'] = true;
+		/*for (var i = 0; i < $scope.feedbacks.length; i++)
 		{
 			$scope.replyto = [];
 			if ($scope.feedbacks[i]['feedback_id']==parseInt(id))
@@ -492,7 +493,7 @@ var map = angular.module('map', ['rzModule'])
 				console.log("replyto;")
 				console.log($scope.replyto);
 			}
-		}
+		}*/
 		
 	}
 
