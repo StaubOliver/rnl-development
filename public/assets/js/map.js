@@ -489,6 +489,7 @@ var map = angular.module('map', ['rzModule'])
 			{
 				$scope.replyto = $scope.feedbacks[i];
 				$scope.replyto['reply']  = true;
+				console.log($scope.replyto);
 			}
 		}
 		
@@ -497,7 +498,7 @@ var map = angular.module('map', ['rzModule'])
 	$scope.cancelReplyFeedback = function(id){
 		$scope.recordActivity("Cancel reply on feedback "+id);
 		$scope.section_feedback_form_section_title = "Share your discoveries";
-		$scope.replyto = {'reply' : false};
+		//$scope.replyto = {'reply' : false};
 	}
 
 
