@@ -219,7 +219,7 @@
 									</div>
 								</div>
 
-								<div class='col-md-6'>
+								<div class='col-md-12 admin-feedback-tool'>
 									<div class='btn btn-custom-default btn-sm'>See comment on the map</div>
 									<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
 									<?php for($i=1; $i<6; $i++): ?>
@@ -231,10 +231,6 @@
 											ng-mouseleave="rating_unhighlight(feedback['feedback_id'], <?php echo $i ?>)"
 											ng-click="rating_click(feedback['feedback_id'], <?php echo $i ?>)"">
 									<?php endfor; ?>
-								</div>
-
-								<div class='col-md-6 rating'>
-									
 								</div>
 
 							</div>
