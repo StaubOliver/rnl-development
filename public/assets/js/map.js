@@ -491,7 +491,6 @@ var map = angular.module('map', ['rzModule'])
 				replyto['reply']  = true;
 			}
 		}
-
 		
 	}
 
