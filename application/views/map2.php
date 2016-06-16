@@ -475,8 +475,12 @@
 											<p>{{feedback['time']}}</p>
 										</div>
 
-										<div class="col-md-12 feedback-message-author">
-											<p>Upvote Reply 4 up 3 fossils<p>
+										<div class="col-md-6 feedback-message-author">
+											<p>Upvote Reply<p>
+										</div>
+
+										<div class="col-md-6 feedback-message-author">
+											<p>4 up 3 fossils<p>
 										</div>
 
 										
