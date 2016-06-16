@@ -787,7 +787,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.test = 'Hello World';
 	$scope.feedbacks = [];
 
-	$( "#map-96" ).hide();
 
 	refreshFeedback();
 
@@ -918,9 +917,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.showMap = function(feedback_id, reply_id)
 	{
-		
-		$( "#map-96" ).show();
-
 
 		var mapOpt = {
 		    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
