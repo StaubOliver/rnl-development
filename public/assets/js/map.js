@@ -514,7 +514,7 @@ var map = angular.module('map', ['rzModule'])
 		$scope.section_feedback_form_section_title = "Share your discoveries";
 		//$scope.replyto = {'reply' : false};
 		deselect_all_marker();
-		$scope.replyto = {'reply:false'};
+		$scope.replyto = {'reply':false};
 	}
 
 
