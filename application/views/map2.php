@@ -524,11 +524,6 @@
 									</div>
 								</div>
 
-								<div>
-								<p>{{feedback.replies}}</p>
-
-								</div>
-
 								<div ng-repeat='rep in feedback.replies' ng-show='feedbacks.length'>
 
 									<div class="feedback-message-reply " ng-mouseover="recordActivity('Feedback mouse over '+rep['feedback_id']+ ' '+rep['message']); mouseoverFeedback(rep)" ng-mouseleave="mouseleaveFeedback()">
@@ -542,6 +537,15 @@
 											<div class="col-md-12 feedback-message-text">
 												<p>{{rep['message']}}</p>
 											</div>
+
+											<div class="col-md-6 feedback-message-buttons">
+											<a class='feedback-message-button-up' href='#' ng-click="upvoteFeedback(rep.feedback_id)">Upvote</a>
+										</div>
+
+										<div class="col-md-6 feedback-message-info">
+											<span>{{rep.upvote}} up </span> 
+											<span>{{rep.selection.length}} fossils</span>
+										</div>
 
 
 										</div>
