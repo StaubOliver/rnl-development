@@ -42,12 +42,16 @@ class map extends CI_Controller {
 
 	
 	public function map_admin(){
-
-		if($this->ProfileModel->isAdmin() == 1) 
-		{
-			$data['feedbacks'] = $this->MapModel->adminFeedbacks();
-
-			$this->load->view('map_admin', $data);
+		if ($this->ion_auth->logged_in()){
+			if($this->ProfileModel->isAdmin() == 1) 
+			{
+				$data['feedbacks'] = $this->MapModel->adminFeedbacks();
+				$this->load->view('map_admin', $data);
+			}
+			else
+			{
+				redirect('/map');
+			}
 		}
 		else
 		{
