@@ -33,17 +33,17 @@ class Map extends MY_Controller {
 		$map_zoom = $this->uri->segment(13);
 
 		$data = array(
-			'project' => $project,
-			'genus' => $genus,
-			'species' => $species,
-			'age_min' => $age_min,
-			'age_max' => $age_max,
-			'collector' => $collector,
-			'map_lat_ne' => $map_lat_ne,
-			'map_lng_ne' => $map_lng_ne,
-			'map_lat_sw' => $map_lat_sw,
-			'map_lng_sw' => $map_lng_sw,
-			'map_zoom' => $map_zoom
+			'project' => "-1",
+			'genus' => urldecode($this->uri->segment(4)),
+			'species' => $this->uri->segment(5),
+			'age_min' => urldecode($this->uri->segment(6)),
+			'age_max' => urldecode($this->uri->segment(7)),
+			'collector' => urldecode($this->uri->segment(8)),
+			'map_lat_ne' => $this->uri->segment(9),
+			'map_lng_ne' => $this->uri->segment(10),
+			'map_lat_sw' => $this->uri->segment(11),
+			'map_lng_sw' => $this->uri->segment(12),
+			'map_zoom' => $this->uri->segment(13)
 		);
 
 		//fetch the data from the database
@@ -90,28 +90,17 @@ class Map extends MY_Controller {
 
 	public function loadfeedbacks(){
 
-		$genus = urldecode($this->uri->segment(4));
-		$species = $this->uri->segment(5);
-		$age_min = $this->uri->segment(6);
-		$age_max = $this->uri->segment(7);
-		$collector = urldecode($this->uri->segment(8));
-		$map_lat_ne = $this->uri->segment(9);
-		$map_lng_ne = $this->uri->segment(10);
-		$map_lat_sw = $this->uri->segment(11);
-		$map_lng_sw = $this->uri->segment(12);
-		$map_zoom = $this->uri->segment(13);
-
 		$filter = array(
-			'genus' => $genus,
-			'species' => $species,
-			'age_min' => $age_min,
-			'age_max' => $age_max,
-			'collector' => $collector,
-			'map_lat_ne' => $map_lat_ne,
-			'map_lng_ne' => $map_lng_ne,
-			'map_lat_sw' => $map_lat_sw,
-			'map_lng_sw' => $map_lng_sw,
-			'map_zoom' => $map_zoom
+			'genus' => urldecode($this->uri->segment(4)),
+			'species' => $this->uri->segment(5),
+			'age_min' => $this->uri->segment(6),
+			'age_max' => $this->uri->segment(7),
+			'collector' => urldecode($this->uri->segment(8)),
+			'map_lat_ne' => $this->uri->segment(9),
+			'map_lng_ne' => $this->uri->segment(10),
+			'map_lat_sw' => $this->uri->segment(11),
+			'map_lng_sw' => $this->uri->segment(12),
+			'map_zoom' => $this->uri->segment(13)
 		);
 
 
@@ -119,26 +108,19 @@ class Map extends MY_Controller {
 
 		$data = $this->MapModel->loadFeedbacks($filter, $user_id);
 
-
 		shuffle($data);
-
 
 		echo json_encode($data);
 
 	}
 
 	public function submitfeedback(){
-		//get the data
-		$user_id = $this->input->post('user_id');
-		$unique_id = $this->LoggerModel->getUniqueID();
-		$time = date('Y-m-d H:i:s');
-		$message = $this->input->post('message');
 
 		$data = array(
-			'user_id' => $user_id,
-			'unique_id' => $unique_id,
-			'time' => $time,
-			'message' => $message,
+			'user_id' => $this->input->post('user_id'),
+			'unique_id' => $this->LoggerModel->getUniqueID(),
+			'time' => date('Y-m-d H:i:s'),
+			'message' => $this->input->post('message'),
 			'rating' => 0, 
 			'replyto' => $this->input->post('replyto')
 		);
