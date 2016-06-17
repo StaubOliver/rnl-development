@@ -116,16 +116,11 @@ class Map extends MY_Controller {
 
 
 		$this->ion_auth->logged_in() ? $user_id = $this->ion_auth->get_user_id() : $user_id = 0;
-		/*
-		if ($this->ion_auth->logged_in()){
-			$user_id = $this->ion_auth->get_user_id();
-		} 
-		else
-		{
-			$user_id = 0;
-		}
-		*/
+
 		$data = $this->MapModel->loadFeedbacks($filter, $user_id);
+
+
+		shuffle($data);
 
 
 		echo json_encode($data);
