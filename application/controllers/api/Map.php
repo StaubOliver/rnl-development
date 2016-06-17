@@ -124,9 +124,9 @@ class Map extends MY_Controller {
 		{
 			$user_id = 0;
 		}
-
-		$data = $this->MapModel->loadFeedbacks($filter, $user_id);
 		*/
+		$data = $this->MapModel->loadFeedbacks($filter, $user_id);
+
 
 		echo json_encode($data);
 
