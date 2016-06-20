@@ -96,7 +96,10 @@ class Map extends MY_Controller {
 
 		$data = $this->MapModel->loadFeedbacks($filter, $user_id);
 
-		shuffle($data);
+		//for rfeedbacks in random order
+		//shuffle($data);
+
+		//for feedbacks ordered according to upvotes
 
 		echo json_encode($data);
 
