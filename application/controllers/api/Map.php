@@ -76,7 +76,7 @@ class Map extends MY_Controller {
 		echo json_encode($data);
 	}
 
-	function compare_feedbacks($a, $b){
+	static function compare_feedbacks($a, $b){
 		if (intval($a['upvote'])==intval($b["upvote"])){
 			return 0;
 		} else {
