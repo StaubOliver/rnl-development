@@ -108,7 +108,7 @@ class Map extends MY_Controller {
 		//shuffle($data);
 
 		//for feedbacks ordered according to upvotes
-		usort($data, 'compare_feedbacks');
+		usort($data, array($this, 'compare_feedbacks'));
 
 		echo json_encode($data);
 
