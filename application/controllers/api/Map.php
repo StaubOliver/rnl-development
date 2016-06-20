@@ -80,7 +80,7 @@ class Map extends MY_Controller {
 		if (intval($a['upvote'])==intval($b["upvote"])){
 			return 0;
 		} else {
-			return (intval($a['upvote']) < intval($b['upvote'])) ? -1 : 1;
+			return (intval($a['upvote']) < intval($b['upvote'])) ? 1 : -1;
 		}
 	}
 
