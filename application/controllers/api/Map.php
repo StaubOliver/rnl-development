@@ -76,6 +76,14 @@ class Map extends MY_Controller {
 		echo json_encode($data);
 	}
 
+	function compare_feedbacks($a, $b){
+		if (intval($a['upvote'])==intval($b["upvote"])){
+			return 0;
+		} else {
+			return (intval($a['upvote']) < intval($b['upvote'])) ? -1 : 1;
+		}
+	}
+
 	public function loadfeedbacks(){
 
 		$filter = array(
@@ -100,6 +108,7 @@ class Map extends MY_Controller {
 		//shuffle($data);
 
 		//for feedbacks ordered according to upvotes
+		usort($data, 'compare_feedbacks');
 
 		echo json_encode($data);
 
