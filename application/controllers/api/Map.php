@@ -108,7 +108,7 @@ class Map extends MY_Controller {
 		$data = $this->MapModel->loadFeedbacks($filter, $user_id);
 
 
-			if($this->MapABModel->getABGroup()=='A'){
+			if($this->MapABModel->getABGroup($unique_id)=='A'){
 				shuffle($data);
 			}
 			else
