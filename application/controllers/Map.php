@@ -5,7 +5,7 @@
   * 
   */
 
-class map extends CI_Controller {
+class map extends CI_Model {
     function __construct() {
         parent::__construct();
         
