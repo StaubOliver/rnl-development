@@ -107,7 +107,8 @@ class Map extends MY_Controller {
 
 		$data = $this->MapModel->loadFeedbacks($filter, $user_id);
 
-
+		if ($this->ProfileModel->isAdmin() == 0)
+		{
 			if($this->MapABModel->getABGroup($unique_id)=='A'){
 				shuffle($data);
 			}
@@ -115,7 +116,7 @@ class Map extends MY_Controller {
 			{
 				usort($data, array($this, 'compare_feedbacks'));
 			}
-		
+		}
 
 		echo json_encode($data);	
 }
