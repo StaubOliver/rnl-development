@@ -28,7 +28,7 @@ class map extends CI_Controller {
 			$data['is_admin'] = "0";
 		}
 		
-		/*
+		
 		if($this->uri->segment(3)){
 			$data['genus'] = $this->uri->segment(3);
 		}
@@ -36,7 +36,7 @@ class map extends CI_Controller {
 		{
 			$data['genus'] = "-1";
 		}
-		*/
+		
 
 		$this->load->view('map2', $data);
 	}
