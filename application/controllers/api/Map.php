@@ -107,7 +107,7 @@ class Map extends MY_Controller {
 
 		$data = $this->MapModel->loadFeedbacks($filter, $user_id);
 
-		if ($this->ProfileModel->isAdmin() == 0)
+		if ((!$this->ion_auth->logged_in()) || (($this->ProfileModel->isAdmin() == 0) && ($this->ion_auth->logged_in())))
 		{
 			if($this->MapABModel->getABGroup($unique_id)=='A'){
 				shuffle($data);
