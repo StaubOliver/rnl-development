@@ -12,6 +12,7 @@ class Map extends MY_Controller {
         $this->load->model('MapModel');
         $this->load->model('LoggerModel');
         $this->load->model('ProfileModel');
+        $this->load->model('MapABModel');
     }
 
 	public function index() {
@@ -102,17 +103,24 @@ class Map extends MY_Controller {
 
 		$this->ion_auth->logged_in() ? $user_id = $this->ion_auth->get_user_id() : $user_id = 0;
 
+		$unique_id = $this->LoggerModel->getUniqueID();
+
 		$data = $this->MapModel->loadFeedbacks($filter, $user_id);
 
-		//for rfeedbacks in random order
-		//shuffle($data);
 
-		//for feedbacks ordered according to upvotes
-		usort($data, array($this, 'compare_feedbacks'));
+		if ($this->ProfileModel->isAdmin() == 0)
+		{
+			if($this->MapABModel->getABGroup()=='A'){
+				shuffle($data);
+			}
+			else
+			{
+				usort($data, array($this, 'compare_feedbacks'));
+			}
+		}
 
-		echo json_encode($data);
-
-	}
+		echo json_encode($data);	
+}
 
 	public function submitfeedback(){
 
