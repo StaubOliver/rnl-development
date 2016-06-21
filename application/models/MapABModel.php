@@ -29,9 +29,12 @@ class MapABModel extends CI_Model {
 
 
     function setABGroup(){
+    	$group = 'C';
+    	rand(1,2) == 2 ? $group = 'A' : $group = 'B';
+
     	$data = array(
     		'unique_id' => $this->LoggerModel->getUniqueID(),
-    		'ab_group' => 'B',
+    		'ab_group' => $group,
     		'date_time' => date('Y-m-d H:i:s')
 		);
     	$this->db->insert('map_ab', $data);
