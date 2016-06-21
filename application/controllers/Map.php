@@ -27,7 +27,8 @@ class map extends CI_Controller {
 			$data['logged_in'] = false;
 			$data['is_admin'] = "0";
 		}
-
+		
+		/*
 		if($this->uri->segment(3)){
 			$data['genus'] = $this->uri->segment(3);
 		}
@@ -35,6 +36,7 @@ class map extends CI_Controller {
 		{
 			$data['genus'] = "-1";
 		}
+		*/
 
 		$this->load->view('map2', $data);
 	}
@@ -42,16 +44,10 @@ class map extends CI_Controller {
 
 	
 	public function map_admin(){
-		if ($this->ion_auth->logged_in()){
-			if($this->ProfileModel->isAdmin() == 1) 
-			{
-				$data['feedbacks'] = $this->MapModel->adminFeedbacks();
-				$this->load->view('map_admin', $data);
-			}
-			else
-			{
-				redirect('/map');
-			}
+		if ($this->ion_auth->logged_in() && ($this->ProfileModel->isAdmin() == 1)){
+			$data['feedbacks'] = $this->MapModel->adminFeedbacks();
+			$this->load->view('map_admin', $data);
+
 		}
 		else
 		{
