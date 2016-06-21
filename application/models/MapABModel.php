@@ -35,7 +35,7 @@ class MapABModel extends CI_Model {
     		'ip' => $this->input->ip_adress(),
     		'date_time' => date('Y-m-d H:i:s')
 		);
-    	$this->db->insert->('map_ab', $data);
+    	$this->db->insert('map_ab', $data);
     	return $this->getABGroup($this->LoggerModel->getUniqueID());
     }
 
