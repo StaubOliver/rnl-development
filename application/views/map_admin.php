@@ -185,7 +185,7 @@
 								</div>
 
 								<div class='col-md-4'>
-									{{feedback["upvote"]}} upvotes
+									{{feedback["upvote"]}} upvotes {{feedback['selection'].length}} fossils selected
 								</div>
 
 								<div class='col-md-4'>
@@ -198,21 +198,20 @@
 									</strong>
 								</div>
 								
-								
-								
-								<div class='col-md-6'>
-									{{feedback['selection'].length}} fossils selected
-								</div>
+		
 
-								<div class='col-md-6'>
+								<div class='col-md-4'>
 									From: {{feedback['age_min']}}
 								</div>
 
-								<div class='col-md-6'>
+								<div class='col-md-4'>
 									To: {{feedback['age_max']}}
 								</div>
 
-								<div class='col-md-6'>
+								<div class='col-md-4'>
+								</div>
+
+								<div class='col-md-4'>
 									<div ng-show="feedback['genus']==-1">
 										Genus: All
 									</div>
@@ -221,13 +220,16 @@
 									</div>
 								</div>
 
-								<div class='col-md-6'>
+								<div class='col-md-4'>
 									<div ng-show="feedback['genus']==-1">
 										Collector: All
 									</div>
 									<div ng-show="feedback['genus']!=-1">
 										Collector: {{feedback['collector']}}
 									</div>
+								</div>
+
+								<div class='col-md-4'>
 								</div>
 
 								<div class='col-md-12 admin-feedback-tool'>
