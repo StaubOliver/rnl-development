@@ -65,13 +65,16 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	margin-bottom:5px;
 	padding-top: 6px;
 	padding-bottom: 6px;
-	width:50%;
 /*
 	margin-left: 5px;
 	margin-right: 5px;
 */
 	background-color: white;
 	/*box-shadow: 0px 0px 3px #CCCCCC;*/
+}
+
+.filter-element-half{
+	width: 50%;
 }
 
 .filter-element-title{

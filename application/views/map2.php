@@ -311,8 +311,8 @@
 						</div>
 						
 						<!-- Collector -->
-						<div class="row filter-element">
-							<div class="col-md-6">
+						<div class="row ">
+							<div class="col-md-6 filter-element">
 								<p class='filter-element-title'>Collector</p>
 								<select class="form-control" id="fossilCollectorSelect" ng-model="selectedCollector" ng-change="clear_selected_markers(); newCollector()"  ng-mouseover="recordActivity('Collector Selector Hover')">
 									<option value="-1" selected>All Collectors</option>
@@ -328,10 +328,9 @@
 									</optgroup>
 								</select>
 							</div>
-						</div>
+						
 
-						<!-- Genus --> 
-						<div class="row filter-element">
+							<!-- Genus --> 
 							<div class="col-md-6">
 								<p class='filter-element-title'>Genus</p>
 								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="clear_selected_markers(); newGenus()" ng-mouseover="recordActivity('Genus Selector Hover')">
