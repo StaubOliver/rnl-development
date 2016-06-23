@@ -331,7 +331,7 @@
 						
 
 							<!-- Genus --> 
-							<div class="col-md-6">
+							<div class="col-md-6 filter-elmeent">
 								<p class='filter-element-title'>Genus</p>
 								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="clear_selected_markers(); newGenus()" ng-mouseover="recordActivity('Genus Selector Hover')">
 									<option value="-1" selected>All Genera</option>
