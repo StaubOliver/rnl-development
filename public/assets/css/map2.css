@@ -57,7 +57,8 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 .filter-title, 
 .feedback-title
 {
-
+	margin-top: 4px;
+	margin-bottom: 4px;
 }
 
 .filter-element{
