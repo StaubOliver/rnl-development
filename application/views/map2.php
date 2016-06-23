@@ -421,6 +421,7 @@
 				</div>
 
 				<!-- Share on social media -->
+				<!--
 				<div class="col-md-12">
 					<div class="feedback-section">
 
@@ -438,26 +439,9 @@
 								<img class='social-network-icon' src="/assets/img/socialnetworks/google.png" alt="There should be an awsome logo" height="24" width="24">
 							</div>
 						</div>
-
-						<!--
-						<div class="feedback-message-form">
-							<form>
-								<div class="row feedback-form">
-									<div class='col-md-4'>
-										
-									</div>
-									<div class='col-md-4'>
-										
-									</div>
-									<div class='col-md-4'>
-										
-									</div>
-								</div>
-							</form>
-						</div>
-						-->
 					</div>
 				</div>
+				-->
 
 				<div class='col-md-12'>
 					<div class='feedback-section'>
