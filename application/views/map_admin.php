@@ -180,12 +180,16 @@
 								</div>
 								-->
 
-								<div class='col-md-6'>
+								<div class='col-md-4'>
 									Feedback from {{feedback["first_name"]}} {{feedback["last_name"]}}
 								</div>
 
-								<div class='col-md-6'>
+								<div class='col-md-4'>
 									{{feedback["upvote"]}} upvotes
+								</div>
+
+								<div class='col-md-4'>
+									{{feedback['time']}}
 								</div>
 								
 								<div class='col-md-12'>
@@ -194,9 +198,7 @@
 									</strong>
 								</div>
 								
-								<div class='col-md-6'>
-									{{feedback['time']}}
-								</div>
+								
 								
 								<div class='col-md-6'>
 									{{feedback['selection'].length}} fossils selected
