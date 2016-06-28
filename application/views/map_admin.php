@@ -253,6 +253,7 @@
 							</div>
 
 							<div class='col-md-12'>
+								Incorrect
 								<?php for($i=1; $i<6; $i++): ?>
 									<img 
 										id=<?php echo "rating-{{feedback['feedback_id']}}-".$i; ?> 
@@ -262,6 +263,7 @@
 										ng-mouseleave="rating_unhighlight(feedback['feedback_id'], <?php echo $i ?>)"
 										ng-click="rating_click(feedback['feedback_id'], <?php echo $i ?>)"">
 								<?php endfor; ?>
+								Correct
 							</div>
 						</div>
 
