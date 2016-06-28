@@ -249,7 +249,7 @@
 
 							</div>
 							<div class='col-md-5'>
-								<div class='row admin-feedback-rating'>
+								<div class='row '>
 									<div class='col-md-12'>
 										Contribution rating
 									</div>
