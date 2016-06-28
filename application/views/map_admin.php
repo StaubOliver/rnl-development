@@ -175,26 +175,6 @@
 							<div class='col-md-6 admin-feedback-vertical-ligne'>
 
 								<div class='row '>
-									<!--
-									<div class='col-md-12 map-admin' id='map-{{feedback.feedback_id}}'>
-									
-									</div>
-									-->
-									<!--
-									<div class='col-md-4'>
-										Feedback from {{feedback["first_name"]}} {{feedback["last_name"]}}
-									</div>
-
-									<div class='col-md-4'>
-										{{feedback["upvote"]}} upvotes {{feedback['selection'].length}} fossils selected
-									</div>
-
-									<div class='col-md-4'>
-										{{feedback['time']}}
-									</div>
-									-->
-
-									
 									
 									<div class='col-md-12'>
 										<strong>
@@ -218,7 +198,6 @@
 									<div class='col-md-4'>
 										{{feedback['time']}}
 									</div>
-
 									
 									<div class='col-md-4'>
 										<div ng-show="feedback['genus']==-1">
