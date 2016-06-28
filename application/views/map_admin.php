@@ -170,7 +170,7 @@
 
 				<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
-					<div class='col-md-6 col-md-offset-1'>
+					<div class='col-md-7 col-md-offset-1'>
 						<div class='admin-feedback'>
 
 							<div class='row'>
