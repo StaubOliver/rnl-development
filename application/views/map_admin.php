@@ -70,101 +70,10 @@
 		<div class='container-fluid'>
 			<div class='row'>
 
-				<div class='col-md-12 admin-title'>
+				<div class='col-md-10 col-md-offset-1 admin-title'>
 					<h4><?php echo count($feedbacks).' feedbacks recorded'; ?></h4>
 				</div>
-				<!--
-				<?php foreach($feedbacks as $feedback): ?>
-					<div class='col-md-8 col-md-offset-2'>
-						<div class='admin-feedback'>
-
-							<div class='row'>
-									
-								<div class='col-md-6'>
-									<?php echo 'Feedback from '.$feedback['first_name'].' '.$feedback['last_name']; ?>
-								</div>
-
-								<div class='col-md-6'>
-									<?php echo $feedback['upvote']." upvote"; ?>
-								</div>
-								
-								<div class='col-md-12'>
-									<strong>
-										<?php echo $feedback['message']; ?>
-									</strong>
-								</div>
-								
-								<div class='col-md-6'>
-									<?php echo $feedback['time']; ?>
-								</div>
-								
-								<div class='col-md-6'>
-									<?php echo count($feedback['selection'])." fossils selected"; ?>
-								</div>
-								<div class='col-md-6'>
-									<?php 
-										if ($feedback['age_min']=="0") echo "From: <strong>Quaternary</strong>"; 
-										if ($feedback['age_min']=="1") echo "From: <strong>Neogene</strong>"; 
-										if ($feedback['age_min']=="2") echo "From: <strong>Paleogene</strong>"; 
-										if ($feedback['age_min']=="3") echo "From: <strong>Cretaceous</strong>"; 
-										if ($feedback['age_min']=="4") echo "From: <strong>Jurassic</strong>"; 
-										if ($feedback['age_min']=="5") echo "From: <strong>Triassic</strong>"; 
-										if ($feedback['age_min']=="6") echo "From: <strong>Permian</strong>"; 
-										if ($feedback['age_min']=="7") echo "From: <strong>Carboniferous</strong>"; 
-										if ($feedback['age_min']=="8") echo "From: <strong>Devonian</strong>"; 
-										if ($feedback['age_min']=="9") echo "From: <strong>Silurian</strong>"; 
-										if ($feedback['age_min']=="10") echo "From: <strong>Ordovician</strong>"; 
-										if ($feedback['age_min']=="11") echo "From: <strong>Cambrian</strong>"; 
-										if ($feedback['age_min']=="12") echo "From: <strong>Precambrian</strong>"; 
-									?>
-								</div>
-								<div class='col-md-6'>
-									<?php 
-										if ($feedback['age_max']=="0") echo "To: <strong>Quaternary</strong>"; 
-										if ($feedback['age_max']=="1") echo "To: <strong>Neogene</strong>"; 
-										if ($feedback['age_max']=="2") echo "To: <strong>Paleogene</strong>"; 
-										if ($feedback['age_max']=="3") echo "To: <strong>Cretaceous</strong>"; 
-										if ($feedback['age_max']=="4") echo "To: <strong>Jurassic</strong>"; 
-										if ($feedback['age_max']=="5") echo "To: <strong>Triassic</strong>"; 
-										if ($feedback['age_max']=="6") echo "To: <strong>Permian</strong>"; 
-										if ($feedback['age_max']=="7") echo "To: <strong>Carboniferous</strong>"; 
-										if ($feedback['age_max']=="8") echo "To: <strong>Devonian</strong>"; 
-										if ($feedback['age_max']=="9") echo "To: <strong>Silurian</strong>"; 
-										if ($feedback['age_max']=="10") echo "To: <strong>Ordovician</strong>"; 
-										if ($feedback['age_max']=="11") echo "To: <strong>Cambrian</strong>"; 
-										if ($feedback['age_max']=="12") echo "To: <strong>Precambrian</strong>"; 
-									?>
-								</div>
-								
-								<div class='col-md-6'>
-									<?php if($feedback['genus']=="-1"){
-										echo("Genus: ALL");
-									} else {
-										echo "Genus: ".$feedback['genus']; 
-									}?>
-								</div>
-								<div class='col-md-6'>
-									<?php if($feedback['collector']=="-1"){
-										echo("Collector: ALL");
-									} else {
-										echo "Collector: ".$feedback['collector']; 
-									}?>
-								</div>
-								<div class='col-md-6'>
-									<div class='btn btn-custom-default btn-sm'>See comment on the map</div>
-									<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
-								</div>
-								<div class='col-md-6 rating'>
-									<?php for($i=1; $i<6; $i++): ?>
-										<img id=<?php echo "rating-".$feedback['feedback_id']."-".$i; ?> class="rating rating-star" src='/assets/img/star/star_empty.png' ng-mouseover="rating_highlight(<?php echo $feedback['feedback_id'].",".$i; ?>)" ng-mouseleave="rating_unhighlight(<?php echo $feedback['feedback_id'].",".$i; ?>)">
-									<?php endfor; ?>
-								</div>
-
-							</div>
-
-						</div>
-					</div>
-				<?php endforeach; ?>-->
+				
 
 				<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
