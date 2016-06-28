@@ -170,83 +170,81 @@
 
 				<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
-					<div class='col-md-7 col-md-offset-1'>
-						<div class='admin-feedback'>
+					<div class='col-md-7 col-md-offset-1 admin-feedback'>
 
-							<div class='row'>
-								<!--
-								<div class='col-md-12 map-admin' id='map-{{feedback.feedback_id}}'>
+						<div class='row'>
+							<!--
+							<div class='col-md-12 map-admin' id='map-{{feedback.feedback_id}}'>
+							
+							</div>
+							-->
+							<!--
+							<div class='col-md-4'>
+								Feedback from {{feedback["first_name"]}} {{feedback["last_name"]}}
+							</div>
+
+							<div class='col-md-4'>
+								{{feedback["upvote"]}} upvotes {{feedback['selection'].length}} fossils selected
+							</div>
+
+							<div class='col-md-4'>
+								{{feedback['time']}}
+							</div>
+							-->
+
+							
+							
+							<div class='col-md-12'>
+								<strong>
+									{{feedback['message']}}
+								</strong>
+							</div>
+							
+							<div class='col-md-4'>
+								{{feedback["first_name"]}} {{feedback["last_name"]}}
+							</div>
+							
+
+							<div class='col-md-4'>
+								From: {{feedback['age_min']}}
+							</div>
+
+							<div class='col-md-4'>
+								To: {{feedback['age_max']}}
+							</div>
+
+							<div class='col-md-4'>
+								{{feedback['time']}}
+							</div>
+
+							
+							<div class='col-md-4'>
+								<div ng-show="feedback['genus']==-1">
+									Genus: All
+								</div>
+								<div ng-show="feedback['genus']!=-1">
+									Genus: {{feedback['genus']}}
+								</div>
+							</div>
+
+							<div class='col-md-4'>
+								<div ng-show="feedback['genus']==-1">
+									Collector: All
+								</div>
+								<div ng-show="feedback['genus']!=-1">
+									Collector: {{feedback['collector']}}
+								</div>
+							</div>
+
+
+							<div class='col-md-12 admin-feedback-tool'>
+								<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See comment on the map</div>
+								<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
 								
-								</div>
-								-->
-								<!--
-								<div class='col-md-4'>
-									Feedback from {{feedback["first_name"]}} {{feedback["last_name"]}}
-								</div>
-
-								<div class='col-md-4'>
-									{{feedback["upvote"]}} upvotes {{feedback['selection'].length}} fossils selected
-								</div>
-
-								<div class='col-md-4'>
-									{{feedback['time']}}
-								</div>
-								-->
-
-								
-								
-								<div class='col-md-12'>
-									<strong>
-										{{feedback['message']}}
-									</strong>
-								</div>
-								
-								<div class='col-md-4'>
-									{{feedback["first_name"]}} {{feedback["last_name"]}}
-								</div>
-								
-
-								<div class='col-md-4'>
-									From: {{feedback['age_min']}}
-								</div>
-
-								<div class='col-md-4'>
-									To: {{feedback['age_max']}}
-								</div>
-
-								<div class='col-md-4'>
-									{{feedback['time']}}
-								</div>
-
-								
-								<div class='col-md-4'>
-									<div ng-show="feedback['genus']==-1">
-										Genus: All
-									</div>
-									<div ng-show="feedback['genus']!=-1">
-										Genus: {{feedback['genus']}}
-									</div>
-								</div>
-
-								<div class='col-md-4'>
-									<div ng-show="feedback['genus']==-1">
-										Collector: All
-									</div>
-									<div ng-show="feedback['genus']!=-1">
-										Collector: {{feedback['collector']}}
-									</div>
-								</div>
-
-
-								<div class='col-md-12 admin-feedback-tool'>
-									<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See comment on the map</div>
-									<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
-									
-								</div>
-
 							</div>
 
 						</div>
+
 					</div>
 					<div class='col-md-4'>
 						<div class='row admin-feedback-rating'>
