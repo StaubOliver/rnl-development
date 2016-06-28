@@ -179,7 +179,7 @@
 								
 								</div>
 								-->
-
+								<!--
 								<div class='col-md-4'>
 									Feedback from {{feedback["first_name"]}} {{feedback["last_name"]}}
 								</div>
@@ -190,6 +190,12 @@
 
 								<div class='col-md-4'>
 									{{feedback['time']}}
+								</div>
+								-->
+
+								<div class='col-md-12'>
+									Feedback from {{feedback["first_name"]}} {{feedback["last_name"]}} {{feedback['time']}} {{feedback["upvote"]}} upvotes {{feedback['selection'].length}} fossils selected
+
 								</div>
 								
 								<div class='col-md-12'>
