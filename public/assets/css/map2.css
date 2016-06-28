@@ -568,6 +568,7 @@ fieldset[disabled] .btn-custom-default.active {
 
 .admin-feedback-rating-left{
 	text-align: right;
+	margin-right: 0px !important;
 }
 
 .admin-feedback-rating-stars{
