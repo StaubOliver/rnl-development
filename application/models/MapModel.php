@@ -501,7 +501,7 @@ class MapModel extends CI_Model {
 
         $return = [];
 
-        $query_feedbacks = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id, rating FROM feedback WHERE replyto=0 ORDER BY time DESC');
+        $query_feedbacks = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id, rating_correctness FROM feedback WHERE replyto=0 ORDER BY time DESC');
 
         if ($query_feedbacks->num_rows() > 0){
             foreach ($query_feedbacks->result_array() as $row) {
@@ -514,7 +514,7 @@ class MapModel extends CI_Model {
                 $new_row['replies'] = array();
 
                 //query of replies for each feedback
-                $query_replies = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id, rating FROM feedback WHERE replyto='.$new_row['feedback_id'].' ORDER BY time ASC');
+                $query_replies = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id, rating_correctness FROM feedback WHERE replyto='.$new_row['feedback_id'].' ORDER BY time ASC');
 
                 if ($query_replies->num_rows() > 0){
                     //for each replies, we get their details
@@ -533,7 +533,7 @@ class MapModel extends CI_Model {
     }
 
     function adminEvaluateFeedback($data){
-        $rating = array('rating'=>$data['rating']);
+        $rating = array('rating_correctness'=>$data['rating']);
         $this->db->where("feedback_id", $data['feedback_id']);
         $this->db->update('feedback', $rating);
 
