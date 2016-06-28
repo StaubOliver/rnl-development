@@ -573,10 +573,13 @@ fieldset[disabled] .btn-custom-default.active {
 
 .admin-feedback-rating-stars{
 	text-align: center;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
 }
 
 .admin-feedback-rating-right{
 	text-align: left;
+	padding-left: 0px !important;
 }
 
 
