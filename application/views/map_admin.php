@@ -172,7 +172,7 @@
 					<div class='col-md-10 col-md-offset-1 admin-feedback'>
 						<div class='row'>
 
-							<div class='col-md-6 admin-feedback-vertical-ligne'>
+							<div class='col-md-7 admin-feedback-vertical-ligne'>
 
 								<div class='row '>
 									
@@ -228,8 +228,8 @@
 
 							</div>
 
-							<div class='col-md-4'>
-								<div class='row a'>
+							<div class='col-md-5'>
+								<div class='row'>
 									<div class='col-md-12'>
 										Contribution rating
 									</div>
