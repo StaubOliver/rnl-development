@@ -566,17 +566,10 @@ fieldset[disabled] .btn-custom-default.active {
 	box-shadow: 0px 1px 10px #CCCCCC;
 }
 
-.admin-feedback-rating-left{
-	text-align: right;
-}
-
-.admin-feedback-rating-stars{
+.admin-feedback-rating{
 	text-align: center;
 }
 
-.admin-feedback-rating-right{
-	text-align: left;
-}
 
 
 .admin-feedback-reply{
