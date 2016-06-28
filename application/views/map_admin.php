@@ -70,10 +70,8 @@
 		<div class='container-fluid'>
 			<div class='row'>
 
-				<div class='col-md-12'>
-					<div class='admin-title'>
-						<h4><?php echo count($feedbacks).' feedbacks recorded'; ?></h4>
-					</div>
+				<div class='col-md-12 admin-title'>
+					<h4><?php echo count($feedbacks).' feedbacks recorded'; ?></h4>
 				</div>
 				<!--
 				<?php foreach($feedbacks as $feedback): ?>
