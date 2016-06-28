@@ -174,7 +174,7 @@
 
 							<div class='col-md-7  '>
 
-								<div class='row'>
+								<div class='row dmin-feedback-vertical-ligne'>
 									<!--
 									<div class='col-md-12 map-admin' id='map-{{feedback.feedback_id}}'>
 									
@@ -250,7 +250,7 @@
 							</div>
 
 							<div class='col-md-5'>
-								<div class='row admin-feedback-rating'>
+								<div class='row a'>
 									<div class='col-md-12'>
 										Contribution rating
 									</div>

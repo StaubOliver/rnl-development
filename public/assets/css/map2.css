@@ -555,9 +555,8 @@ fieldset[disabled] .btn-custom-default.active {
 
 }
 
-.admin-feedback-rating{
-	border-left: 1px solid black;
-	
+.admin-feedback-vertical-ligne{
+	border-right: 1px solid #EAEAEA;
 }
 
 .admin-feedback-rating-left{
