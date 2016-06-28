@@ -253,10 +253,10 @@
 							</div>
 
 							<div class='row'>
-								<div class='col-md-3'>
+								<div class='col-md-3 admin-feedback-rating-left'>
 									Incorrect
 								</div>
-								<div class='col-md-6'>
+								<div class='col-md-6 admin-feedback-rating-stars'>
 									<?php for($i=1; $i<6; $i++): ?>
 										<img 
 											id=<?php echo "rating-{{feedback['feedback_id']}}-".$i; ?> 
@@ -267,7 +267,7 @@
 											ng-click="rating_click(feedback['feedback_id'], <?php echo $i ?>)"">
 									<?php endfor; ?>
 								</div>
-								<div class='col-md-3'>
+								<div class='col-md-3 admin-feedback-rating-right'>
 									Correct
 								</div>
 							</div>
