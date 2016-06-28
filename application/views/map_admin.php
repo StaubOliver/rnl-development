@@ -249,7 +249,7 @@
 
 							</div>
 
-							<div class='col-md-5'>
+							<div class='col-md-4'>
 								<div class='row a'>
 									<div class='col-md-12'>
 										Contribution rating
