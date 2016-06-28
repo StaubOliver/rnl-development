@@ -172,9 +172,9 @@
 					<div class='col-md-11 col-md-offset-1 admin-feedback'>
 						<div class='row'>
 
-							<div class='col-md-7  '>
+							<div class='col-md-7 admin-feedback-vertical-ligne'>
 
-								<div class='row dmin-feedback-vertical-ligne'>
+								<div class='row '>
 									<!--
 									<div class='col-md-12 map-admin' id='map-{{feedback.feedback_id}}'>
 									
