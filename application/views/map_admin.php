@@ -263,7 +263,7 @@
 					<!-- replies -->
 					<div ng-repeat='rep in feedback.replies' ng-show='feedback.replies.length'>
 
-						<div class='col-md-8 col-md-offset-2'>
+						<div class='col-md-7 col-md-offset-3'>
 							<div class='admin-feedback-reply'>
 
 								<div class='row'>
