@@ -193,10 +193,7 @@
 								</div>
 								-->
 
-								<div class='col-md-12'>
-									Feedback from {{feedback["first_name"]}} {{feedback["last_name"]}} {{feedback['time']}} {{feedback["upvote"]}} upvotes {{feedback['selection'].length}} fossils selected
-
-								</div>
+								
 								
 								<div class='col-md-12'>
 									<strong>
@@ -204,7 +201,10 @@
 									</strong>
 								</div>
 								
-		
+								<div class='col-md-4'>
+									{{feedback["first_name"]}} {{feedback["last_name"]}}
+								</div>
+								
 
 								<div class='col-md-4'>
 									From: {{feedback['age_min']}}
@@ -212,6 +212,10 @@
 
 								<div class='col-md-4'>
 									To: {{feedback['age_max']}}
+								</div>
+
+								<div class='col-md-4'>
+									{{feedback['time']}}
 								</div>
 
 								
@@ -233,8 +237,6 @@
 									</div>
 								</div>
 
-								<div class='col-md-4'>
-								</div>
 
 								<div class='col-md-12 admin-feedback-tool'>
 									<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See comment on the map</div>
