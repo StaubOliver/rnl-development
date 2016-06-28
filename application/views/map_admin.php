@@ -172,7 +172,7 @@
 					<div class='col-md-11 col-md-offset-1 admin-feedback'>
 						<div class='row'>
 
-							<div class='col-md-7 admin-feedback-vertical-ligne'>
+							<div class='col-md-6 admin-feedback-vertical-ligne'>
 
 								<div class='row '>
 									<!--
