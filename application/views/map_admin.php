@@ -170,8 +170,10 @@
 
 				<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
-					<div class='col-md-6 col-md-offset-2'>
-						<div class='admin-feedback'>
+					<div class='admin-feedback'>
+
+						<div class='col-md-6 col-md-offset-2'>
+							
 
 							<div class='row'>
 								<!--
@@ -264,24 +266,26 @@
 							</div>
 
 						</div>
-					</div>
-					<div class='col-md-2'>
-						<div class='row admin-feedback'>
-							<div class='col-md-12'>
-								Contribution rating
+
+						<div class='col-md-2'>
+							<div class='row'>
+								<div class='col-md-12'>
+									Contribution rating
+								</div>
+
+								<div class='col-md-12'>
+									<?php for($i=1; $i<6; $i++): ?>
+										<img 
+											id=<?php echo "rating-{{feedback['feedback_id']}}-".$i; ?> 
+											class="rating rating-star" 
+											src="{{init_rating_img[feedback['feedback_id']][<?php echo $i ?>]}}" 
+											ng-mouseover="rating_highlight(feedback['feedback_id'], <?php echo $i ?>)"
+											ng-mouseleave="rating_unhighlight(feedback['feedback_id'], <?php echo $i ?>)"
+											ng-click="rating_click(feedback['feedback_id'], <?php echo $i ?>)"">
+									<?php endfor; ?>
+								</div>
 							</div>
 
-							<div class='col-md-12'>
-								<?php for($i=1; $i<6; $i++): ?>
-									<img 
-										id=<?php echo "rating-{{feedback['feedback_id']}}-".$i; ?> 
-										class="rating rating-star" 
-										src="{{init_rating_img[feedback['feedback_id']][<?php echo $i ?>]}}" 
-										ng-mouseover="rating_highlight(feedback['feedback_id'], <?php echo $i ?>)"
-										ng-mouseleave="rating_unhighlight(feedback['feedback_id'], <?php echo $i ?>)"
-										ng-click="rating_click(feedback['feedback_id'], <?php echo $i ?>)"">
-								<?php endfor; ?>
-							</div>
 						</div>
 
 					</div>
