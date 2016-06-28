@@ -235,5 +235,11 @@ class Map extends MY_Controller {
 	}
 
 
+	public function decluster(){
+		$this->MapModel->decluster();
+
+
+
+	}
 
 }

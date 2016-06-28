@@ -803,4 +803,29 @@ class MapModel extends CI_Model {
         }
     }
 
+    public function decluster(){
+
+        $query_projects = $this->db->query('SELECT id, name, image, blurb, data_table, image_table FROM projects_master');
+
+        if($query_projects->num_rows()>0){
+            foreach ($query_projects->result_array() as $project) 
+            {
+                $query_fossil_ref = $this->db->query("SELECT lat, lng FROM ". $project['data_table']);
+                foreach ($query_fossil_ref as $fossil) 
+                {
+                    $query_fossil = $this->db->query("SELECT data_id, image_id, genus, species, age, country, place, collector FROM ". $project["data_table"]." WHERE lat = '".$fossil["lat"]. "'' AND lng = '". $fossil['lng']."'");
+
+                    if ($query_fossil->num_rows() > 1){
+                        $i = 0;
+                        foreach ($query_fossil as $temp) 
+                        {
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 }
