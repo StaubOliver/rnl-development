@@ -214,18 +214,7 @@
 									To: {{feedback['age_max']}}
 								</div>
 
-								<div class='col-md-4'>
-									<?php for($i=1; $i<6; $i++): ?>
-											<img 
-												id=<?php echo "rating-{{feedback['feedback_id']}}-".$i; ?> 
-												class="rating rating-star" 
-												src="{{init_rating_img[feedback['feedback_id']][<?php echo $i ?>]}}" 
-												ng-mouseover="rating_highlight(feedback['feedback_id'], <?php echo $i ?>)"
-												ng-mouseleave="rating_unhighlight(feedback['feedback_id'], <?php echo $i ?>)"
-												ng-click="rating_click(feedback['feedback_id'], <?php echo $i ?>)"">
-									<?php endfor; ?>
-								</div>
-
+								
 								<div class='col-md-4'>
 									<div ng-show="feedback['genus']==-1">
 										Genus: All
@@ -250,15 +239,7 @@
 								<div class='col-md-12 admin-feedback-tool'>
 									<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See comment on the map</div>
 									<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
-									<?php for($i=1; $i<6; $i++): ?>
-										<img 
-											id=<?php echo "rating-{{feedback['feedback_id']}}-".$i; ?> 
-											class="rating rating-star" 
-											src="{{init_rating_img[feedback['feedback_id']][<?php echo $i ?>]}}" 
-											ng-mouseover="rating_highlight(feedback['feedback_id'], <?php echo $i ?>)"
-											ng-mouseleave="rating_unhighlight(feedback['feedback_id'], <?php echo $i ?>)"
-											ng-click="rating_click(feedback['feedback_id'], <?php echo $i ?>)"">
-									<?php endfor; ?>
+									
 								</div>
 
 							</div>
