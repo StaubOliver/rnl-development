@@ -253,7 +253,7 @@
 							</div>
 
 							<div class='row'>
-								<div class='col-md-12 admin-feedback-rating'>
+								<div class='col-md-12 admin-feedback-center'>
 									Incorrect
 									<?php for($i=1; $i<6; $i++): ?>
 										<img 
