@@ -168,132 +168,138 @@
 
 				<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
-					<div class='col-md-7 col-md-offset-1 admin-feedback'>
 
+					<div class='col-md-12 admin-feedback'>
 						<div class='row'>
-							<!--
-							<div class='col-md-12 map-admin' id='map-{{feedback.feedback_id}}'>
-							
-							</div>
-							-->
-							<!--
-							<div class='col-md-4'>
-								Feedback from {{feedback["first_name"]}} {{feedback["last_name"]}}
-							</div>
 
-							<div class='col-md-4'>
-								{{feedback["upvote"]}} upvotes {{feedback['selection'].length}} fossils selected
-							</div>
+							<div class='col-md-7 col-md-offset-1 '>
 
-							<div class='col-md-4'>
-								{{feedback['time']}}
-							</div>
-							-->
+								<div class='row'>
+									<!--
+									<div class='col-md-12 map-admin' id='map-{{feedback.feedback_id}}'>
+									
+									</div>
+									-->
+									<!--
+									<div class='col-md-4'>
+										Feedback from {{feedback["first_name"]}} {{feedback["last_name"]}}
+									</div>
 
-							
-							
-							<div class='col-md-12'>
-								<strong>
-									{{feedback['message']}}
-								</strong>
-							</div>
-							
-							<div class='col-md-4'>
-								{{feedback["first_name"]}} {{feedback["last_name"]}}
-							</div>
-							
+									<div class='col-md-4'>
+										{{feedback["upvote"]}} upvotes {{feedback['selection'].length}} fossils selected
+									</div>
 
-							<div class='col-md-4'>
-								From: {{feedback['age_min']}}
-							</div>
+									<div class='col-md-4'>
+										{{feedback['time']}}
+									</div>
+									-->
 
-							<div class='col-md-4'>
-								To: {{feedback['age_max']}}
-							</div>
+									
+									
+									<div class='col-md-12'>
+										<strong>
+											{{feedback['message']}}
+										</strong>
+									</div>
+									
+									<div class='col-md-4'>
+										{{feedback["first_name"]}} {{feedback["last_name"]}}
+									</div>
+									
 
-							<div class='col-md-4'>
-								{{feedback['time']}}
-							</div>
+									<div class='col-md-4'>
+										From: {{feedback['age_min']}}
+									</div>
 
-							
-							<div class='col-md-4'>
-								<div ng-show="feedback['genus']==-1">
-									Genus: All
+									<div class='col-md-4'>
+										To: {{feedback['age_max']}}
+									</div>
+
+									<div class='col-md-4'>
+										{{feedback['time']}}
+									</div>
+
+									
+									<div class='col-md-4'>
+										<div ng-show="feedback['genus']==-1">
+											Genus: All
+										</div>
+										<div ng-show="feedback['genus']!=-1">
+											Genus: {{feedback['genus']}}
+										</div>
+									</div>
+
+									<div class='col-md-4'>
+										<div ng-show="feedback['genus']==-1">
+											Collector: All
+										</div>
+										<div ng-show="feedback['genus']!=-1">
+											Collector: {{feedback['collector']}}
+										</div>
+									</div>
+
+
+									<div class='col-md-12 admin-feedback-tool'>
+										<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See comment on the map</div>
+										<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
+										
+									</div>
+
 								</div>
-								<div ng-show="feedback['genus']!=-1">
-									Genus: {{feedback['genus']}}
-								</div>
-							</div>
 
+							</div>
 							<div class='col-md-4'>
-								<div ng-show="feedback['genus']==-1">
-									Collector: All
+								<div class='row admin-feedback-rating'>
+									<div class='col-md-12'>
+										Contribution rating
+									</div>
+
+									<div class='row'>
+										<div class='col-md-3 admin-feedback-rating-left'>
+											Incorrect
+										</div>
+										<div class='col-md-6 admin-feedback-rating-stars'>
+											<?php for($i=1; $i<6; $i++): ?>
+												<img 
+													id=<?php echo "rating-{{feedback['feedback_id']}}-".$i; ?> 
+													class="rating rating-star" 
+													src="{{init_rating_img[feedback['feedback_id']][<?php echo $i ?>]}}" 
+													ng-mouseover="rating_highlight(feedback['feedback_id'], <?php echo $i ?>)"
+													ng-mouseleave="rating_unhighlight(feedback['feedback_id'], <?php echo $i ?>)"
+													ng-click="rating_click(feedback['feedback_id'], <?php echo $i ?>)"">
+											<?php endfor; ?>
+										</div>
+										<div class='col-md-3 admin-feedback-rating-right'>
+											Correct
+										</div>
+									</div>
+
+									<div class='row'>
+										<div class='col-md-3 admin-feedback-rating-left'>
+											Known fact
+										</div>
+										<div class='col-md-6 admin-feedback-rating-stars'>
+											<?php for($i=1; $i<6; $i++): ?>
+												<img 
+													id=<?php echo "rating-{{feedback['feedback_id']}}-".$i; ?> 
+													class="rating rating-star" 
+													src="{{init_rating_img[feedback['feedback_id']][<?php echo $i ?>]}}" 
+													ng-mouseover="rating_highlight(feedback['feedback_id'], <?php echo $i ?>)"
+													ng-mouseleave="rating_unhighlight(feedback['feedback_id'], <?php echo $i ?>)"
+													ng-click="rating_click(feedback['feedback_id'], <?php echo $i ?>)"">
+											<?php endfor; ?>
+										</div>
+										<div class='col-md-3 admin-feedback-rating-right'>
+											New discovery
+										</div>
+
+
+
+									</div>
 								</div>
-								<div ng-show="feedback['genus']!=-1">
-									Collector: {{feedback['collector']}}
-								</div>
+
 							</div>
-
-
-							<div class='col-md-12 admin-feedback-tool'>
-								<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See comment on the map</div>
-								<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
-								
-							</div>
-
 						</div>
-
-					</div>
-					<div class='col-md-4'>
-						<div class='row admin-feedback-rating'>
-							<div class='col-md-12'>
-								Contribution rating
-							</div>
-
-							<div class='row'>
-								<div class='col-md-3 admin-feedback-rating-left'>
-									Incorrect
-								</div>
-								<div class='col-md-6 admin-feedback-rating-stars'>
-									<?php for($i=1; $i<6; $i++): ?>
-										<img 
-											id=<?php echo "rating-{{feedback['feedback_id']}}-".$i; ?> 
-											class="rating rating-star" 
-											src="{{init_rating_img[feedback['feedback_id']][<?php echo $i ?>]}}" 
-											ng-mouseover="rating_highlight(feedback['feedback_id'], <?php echo $i ?>)"
-											ng-mouseleave="rating_unhighlight(feedback['feedback_id'], <?php echo $i ?>)"
-											ng-click="rating_click(feedback['feedback_id'], <?php echo $i ?>)"">
-									<?php endfor; ?>
-								</div>
-								<div class='col-md-3 admin-feedback-rating-right'>
-									Correct
-								</div>
-							</div>
-
-							<div class='row'>
-								<div class='col-md-3 admin-feedback-rating-left'>
-									Known fact
-								</div>
-								<div class='col-md-6 admin-feedback-rating-stars'>
-									<?php for($i=1; $i<6; $i++): ?>
-										<img 
-											id=<?php echo "rating-{{feedback['feedback_id']}}-".$i; ?> 
-											class="rating rating-star" 
-											src="{{init_rating_img[feedback['feedback_id']][<?php echo $i ?>]}}" 
-											ng-mouseover="rating_highlight(feedback['feedback_id'], <?php echo $i ?>)"
-											ng-mouseleave="rating_unhighlight(feedback['feedback_id'], <?php echo $i ?>)"
-											ng-click="rating_click(feedback['feedback_id'], <?php echo $i ?>)"">
-									<?php endfor; ?>
-								</div>
-								<div class='col-md-3 admin-feedback-rating-right'>
-									New discovery
-								</div>
-
-
-
-							</div>
-						</div>
-
 					</div>
 
 					<!-- replies -->
