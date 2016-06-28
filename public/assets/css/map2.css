@@ -556,13 +556,8 @@ fieldset[disabled] .btn-custom-default.active {
 }
 
 .admin-feedback-rating{
-	margin-top: 10px;
+	border-left: 1px solid black;
 	
-	padding-top:10px;
-	padding-bottom:10px;
-
-	background-color:#FFFFFF;
-	border-radius: 2px;
 }
 
 .admin-feedback-rating-left{
