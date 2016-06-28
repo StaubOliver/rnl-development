@@ -586,6 +586,7 @@ fieldset[disabled] .btn-custom-default.active {
 
 	background-color:#FFFFFF;
 	border-radius: 2px;
+	border-left: 2px solid #ff4d79;
 
 }
 
