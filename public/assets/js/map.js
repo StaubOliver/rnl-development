@@ -802,7 +802,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			data.forEach(function(item, index){
 				$scope.init_rating_img[item["feedback_id"]] = [];
 				for (var i = 1; i < 6; i++){
-					if (parseInt(item['rating'])>=i){
+					if (parseInt(item['rating_correctness'])>=i){
 						//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_full;
 						$scope.init_rating_img[item["feedback_id"]][i] = url_full;
 					}
@@ -876,7 +876,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			for (var i = 0; i < $scope.feedbacks.length; i++) {
 				if($scope.feedbacks[i]['feedback_id'] == feedback_id)
 				{
-					$scope.feedbacks[i]["rating"] = star;
+					$scope.feedbacks[i]["rating_correctness"] = star;
 					for (var j = 1; j < 6; j++){
 						if (star>=j){
 							$scope.init_rating_img[feedback_id][j] = url_full;
