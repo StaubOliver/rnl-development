@@ -842,13 +842,13 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		var rate = 0;
 		for (var i = 0; i <  $scope.feedbacks.length; i++){
 			if ($scope.feedbacks[i]['feedback_id'] == feedback_id){
-				rate = $scope.feedbacks[i]['rating'];
+				rate = $scope.feedbacks[i]['rating_correctness'];
 			}
 			for (var j = 0; j < $scope.feedbacks[i]['replies'].length; j++)
 			{
 				if ($scope.feedbacks[i]['replies'][j]['feedback_id'] == feedback_id)
 				{
-					rate = $scope.feedbacks[i]['replies'][j]['rating'];
+					rate = $scope.feedbacks[i]['replies'][j]['rating_correctness'];
 				}
 			}
 		}
@@ -891,7 +891,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 					{
 						if ($scope.feedbacks[i]['replies'][j]['feedback_id'] == feedback_id)
 						{
-							$scope.feedbacks[i]['replies'][j]['rating'] = star;
+							$scope.feedbacks[i]['replies'][j]['rating_correctness'] = star;
 							for (var k = 1; k < 6; k++)
 							{
 								if (star>=k)
