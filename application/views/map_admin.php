@@ -213,7 +213,7 @@
 										</div>
 
 										<div class="col-md-6 rating-right">
-											<div class='btn btn-custom-default btn-xs margin-btn-right'> <img class='rating-btn-img rating-btn-img-right' src='/assets/img/star/circle_highlight.png'>Revelant<div>
+											<div class='btn btn-custom-default btn-xs margin-btn-right'> <img class='rating-btn-img rating-btn-img-right' src='/assets/img/star/circle_highlight.png'>Revelant</div>
 										</div>
 									</div>
 
