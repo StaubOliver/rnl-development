@@ -953,6 +953,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}
 	}*/
 
+
+
 	$scope.rating_click = function(feedback_id, rating, rate)
 	{
 		data = {};
@@ -960,7 +962,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		data.rating = rating;
 		data.rate = rate;
 
-		
 		$http({
 		        method : 'POST',
 		        url: '/api/map/adminEvaluateFeedback',
@@ -993,7 +994,30 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 							$scope.rating_img[feedback_id][1] = url_empty;
 							$scope.rating_img[feedback_id][2] = url_hightlight;
 						}
-						
+					}
+					if (rating == 2){
+						$scope.feedbacks[i]['rating_discovery'] = rate;
+						if (rate == 1){
+							$scope.rating_img[feedback_id][3] = url_hightlight;
+							$scope.rating_img[feedback_id][4] = url_empty;
+						} 
+						else 
+						{
+							$scope.rating_img[feedback_id][3] = url_empty;
+							$scope.rating_img[feedback_id][4] = url_hightlight;
+						}
+					}
+					if (rating == 3){
+						$scope.feedbacks[i]['rating_relevance'] = rate;
+						if (rate == 1){
+							$scope.rating_img[feedback_id][5] = url_hightlight;
+							$scope.rating_img[feedback_id][6] = url_empty;
+						} 
+						else 
+						{
+							$scope.rating_img[feedback_id][5] = url_empty;
+							$scope.rating_img[feedback_id][6] = url_hightlight;
+						}
 					}
 
 
