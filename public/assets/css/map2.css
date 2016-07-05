@@ -607,12 +607,12 @@ fieldset[disabled] .btn-custom-default.active {
 }
 
 .rating-btn-left{
-	text-align: right;
+	float: right;
 	margin-right: 5px;
 }
 
 .rating-btn-right{
-	text-align: left;
+	float: left;
 	margin-left: 5px;
 }
 
