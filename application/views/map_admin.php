@@ -187,12 +187,12 @@
 									<!-- rating incorrect - correct -->
 									<div class="row rating-correctness">
 										<div class="col-md-6 rating-left">
-											<div class='btn btn-custom-default btn-xs rating-btn-left' ng-click="rating_click(feedback['feedback_id'], 1, 1)">Incorrect<img class='rating-btn-img rating-btn-img-left' ng-src="{{rating_img[feedback['feedback_id']][1]}}"></div>
+											<div class='rating-btn-left' ng-click="rating_click(feedback['feedback_id'], 1, 1)">Incorrect<img class='rating-btn-img rating-btn-img-left' ng-src="{{rating_img[feedback['feedback_id']][1]}}"></div>
 
 										</div>
 
 										<div class="col-md-6 rating-right">
-											<div class='btn btn-custom-default btn-xs margin-btn-right' ng-click="rating_click(feedback['feedback_id'], 1, 2)"> <img class='rating-btn-img rating-btn-img-right' ng-src="{{rating_img[feedback['feedback_id']][2]}}">Correct</div>
+											<div class='margin-btn-right' ng-click="rating_click(feedback['feedback_id'], 1, 2)"> <img class='rating-btn-img rating-btn-img-right' ng-src="{{rating_img[feedback['feedback_id']][2]}}">Correct</div>
 										</div>
 									</div>
 
