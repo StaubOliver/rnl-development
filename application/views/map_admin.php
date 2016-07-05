@@ -258,36 +258,36 @@
 										<!-- rating incorrect - correct -->
 										<div class="row rating-correctness">
 											<div class="col-md-6 rating-left">
-												<div class='rating-btn-left' ng-click="rating_click(feedback['feedback_id'], 1, 1)">Incorrect<img class='rating-btn-img rating-btn-img-left' ng-src="{{rating_img[feedback['feedback_id']][1]}}"></div>
+												<div class='rating-btn-left' ng-click="rating_click(rep['feedback_id'], 1, 1)">Incorrect<img class='rating-btn-img rating-btn-img-left' ng-src="{{rating_img[rep['feedback_id']][1]}}"></div>
 
 											</div>
 
 											<div class="col-md-6 rating-right">
-												<div class='rating-btn-right' ng-click="rating_click(feedback['feedback_id'], 1, 2)"> <img class='rating-btn-img rating-btn-img-right' ng-src="{{rating_img[feedback['feedback_id']][2]}}">Correct</div>
+												<div class='rating-btn-right' ng-click="rating_click(rep['feedback_id'], 1, 2)"> <img class='rating-btn-img rating-btn-img-right' ng-src="{{rating_img[rep['feedback_id']][2]}}">Correct</div>
 											</div>
 										</div>
 
 										<!-- rating known fact - new discovery -->
 										<div class="row rating-discovery">
 											<div class="col-md-6 rating-left">
-												<div class='rating-btn-left' ng-click="rating_click(feedback['feedback_id'], 2, 1)">Known Fact<img class='rating-btn-img  rating-btn-img-left' src="{{rating_img[feedback['feedback_id']][3]}}"></div>
+												<div class='rating-btn-left' ng-click="rating_click(rep['feedback_id'], 2, 1)">Known Fact<img class='rating-btn-img  rating-btn-img-left' src="{{rating_img[rep['feedback_id']][3]}}"></div>
 
 											</div>
 
 											<div class="col-md-6 rating-right">
-												<div class='rating-btn-right' ng-click="rating_click(feedback['feedback_id'], 2, 2)"> <img class='rating-btn-img rating-btn-img-right' src="{{rating_img[feedback['feedback_id']][4]}}">New Discovery</div>
+												<div class='rating-btn-right' ng-click="rating_click(rep['feedback_id'], 2, 2)"> <img class='rating-btn-img rating-btn-img-right' src="{{rating_img[rep['feedback_id']][4]}}">New Discovery</div>
 											</div>
 										</div>
 
 										<!-- rating unrelevant - relevant -->
 										<div class="row">
 											<div class="col-md-6 rating-left">
-												<div class='rating-btn-left' ng-click="rating_click(feedback['feedback_id'], 3, 1)">Unrelevant<img class='rating-btn-img rating-btn-img-left' src="{{rating_img[feedback['feedback_id']][5]}}"></div>
+												<div class='rating-btn-left' ng-click="rating_click(rep['feedback_id'], 3, 1)">Unrelevant<img class='rating-btn-img rating-btn-img-left' src="{{rating_img[rep['feedback_id']][5]}}"></div>
 
 											</div>
 
 											<div class="col-md-6 rating-right">
-												<div class='rating-btn-right' ng-click="rating_click(feedback['feedback_id'], 3, 2)"> <img class='rating-btn-img rating-btn-img-right' src="{{rating_img[feedback['feedback_id']][6]}}">Revelant</div>
+												<div class='rating-btn-right' ng-click="rating_click(rep['feedback_id'], 3, 2)"> <img class='rating-btn-img rating-btn-img-right' src="{{rating_img[rep['feedback_id']][6]}}">Revelant</div>
 											</div>
 										</div>
 
