@@ -784,8 +784,8 @@ var map = angular.module('map', ['rzModule'])
 
 var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks', function($scope, $http, $compile){
 
-	$scope.test = 'Hello World';
 	$scope.feedbacks = [];
+	$scope.rating_img = [];
 
 	refreshFeedback();
 
@@ -793,7 +793,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	var url_full = "/assets/img/star/circle_full.png";
 	var url_hightlight = "/assets/img/star/circle_highlight.png";
 
-	$scope.rating_img = [];
+	
 
 	function refreshFeedback(){
 		$scope.feedbacks = [];
