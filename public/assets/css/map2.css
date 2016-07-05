@@ -602,7 +602,7 @@ fieldset[disabled] .btn-custom-default.active {
 }
 
 .rating-correctness{
-	padding: 3px;
+	margin-bottom: 3px;
 }
 
 .rating-btn-img{
