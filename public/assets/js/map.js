@@ -794,7 +794,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	var url_hightlight = "/assets/img/star/circle_highlight.png";
 
 	
-
 	function refreshFeedback(){
 		$scope.feedbacks = [];
 		$scope.rating_img = [];
