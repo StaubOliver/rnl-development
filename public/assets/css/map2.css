@@ -608,12 +608,10 @@ fieldset[disabled] .btn-custom-default.active {
 
 .rating-btn-left{
 	float: right;
-	margin-right: 2px;
 }
 
 .rating-btn-right{
 	float: left;
-	margin-left: 2px;
 }
 
 .admin-feedback-tool{
