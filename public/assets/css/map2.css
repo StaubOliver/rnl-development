@@ -601,6 +601,10 @@ fieldset[disabled] .btn-custom-default.active {
 	cursor: pointer;
 }
 
+.rating-correctness{
+	padding: 3px;
+}
+
 .rating-btn-img{
 	height:24px;
 	width: auto;
