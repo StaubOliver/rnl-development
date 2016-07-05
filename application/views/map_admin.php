@@ -191,13 +191,13 @@
 										</div>
 
 										<div class="col-md-6 rating-right">
-											<div class='btn btn-custom-default btn-xs margin-btn-right'> <img class='rating-btn-img' src='/assets/img/star/circle_highlight.png'>Correct</div>
+											<div class='btn btn-custom-default btn-xs margin-btn-right'> <img class='rating-btn-img rating-btn-img-left' src='/assets/img/star/circle_highlight.png'>Correct</div>
 										</div>
 									</div>
 
 									<div class="row rating-discovery">
 										<div class="col-md-6 rating-left">
-											<div class='btn btn-custom-default btn-xs rating-btn-left'>Known Fact<img class='rating-btn-img' src='/assets/img/star/circle_empty.png'></div>
+											<div class='btn btn-custom-default btn-xs rating-btn-left'>Known Fact<img class='rating-btn-img rating-btn-img-right' src='/assets/img/star/circle_empty.png'></div>
 
 										</div>
 

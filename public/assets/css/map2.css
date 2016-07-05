@@ -614,6 +614,14 @@ fieldset[disabled] .btn-custom-default.active {
 	width: auto;
 }
 
+.rating-btn-img-left{
+	margin:left 2px;
+}
+
+.rating-btn-img-right{
+	margin-right: 2px;
+}
+
 .rating-left{
 	padding-right: 4px !important;
 }
