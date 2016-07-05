@@ -628,6 +628,7 @@ fieldset[disabled] .btn-custom-default.active {
 
 .rating-btn-left{
 	float: right;
+	cursor: pointer;
 }
 
 .rating-right{
@@ -637,6 +638,7 @@ fieldset[disabled] .btn-custom-default.active {
 
 .rating-btn-right{
 	float: left;
+	cursor: pointer;
 }
 
 .admin-feedback-tool{
