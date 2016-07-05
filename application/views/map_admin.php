@@ -184,7 +184,7 @@
 
 									</div>
 
-									<div class="row">
+									<div class="row rating-correctness">
 										<div class="col-md-6 rating-left">
 											<div class='btn btn-custom-default btn-xs rating-btn-left'>Incorrect<img class='rating-btn-img' src='/assets/img/star/circle_empty.png'></div>
 
