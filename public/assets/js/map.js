@@ -985,13 +985,13 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 					if (rating == 1){
 						$scope.feedbacks[i]['rating_correctness'] = rate;
 						if (rate == 1){
-							$scope.rating_img[item['feedback_id']][1] = url_hightlight;
-							$scope.rating_img[item['feedback_id']][2] = url_empty;
+							$scope.rating_img[feedback_id][1] = url_hightlight;
+							$scope.rating_img[feedback_id][2] = url_empty;
 						} 
 						else 
 						{
-							$scope.rating_img[item['feedback_id']][1] = url_empty;
-							$scope.rating_img[item['feedback_id']][2] = url_hightlight;
+							$scope.rating_img[feedback_id][1] = url_empty;
+							$scope.rating_img[feedback_id][2] = url_hightlight;
 						}
 						
 					}
