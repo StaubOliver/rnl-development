@@ -191,7 +191,7 @@
 										</div>
 
 										<div class="col-md-6">
-											<div class='btn btn-custom-default btn-xs'> Correct
+											<div class='btn btn-custom-default btn-xs'> <img class='rating-btn' src='/assets/img/star/circle_highlight.png'>Correct
 											</div>
 
 
