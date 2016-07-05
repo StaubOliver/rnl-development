@@ -1028,6 +1028,46 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 					{
 						if ($scope.feedbacks[i]['replies'][j]['feedback_id'] == feedback_id)
 						{
+
+							//rating correctness
+							if (rating == 1){
+								$scope.feedbacks[i]['replies'][j]['rating_correctness'] = rate;
+								if (rate == 1){
+									$scope.rating_img[feedback_id][1] = url_hightlight;
+									$scope.rating_img[feedback_id][2] = url_empty;
+								} 
+								else 
+								{
+									$scope.rating_img[feedback_id][1] = url_empty;
+									$scope.rating_img[feedback_id][2] = url_hightlight;
+								}
+							}
+							if (rating == 2){
+								$scope.feedbacks[i]['replies'][j]['rating_discovery'] = rate;
+								if (rate == 1){
+									$scope.rating_img[feedback_id][3] = url_hightlight;
+									$scope.rating_img[feedback_id][4] = url_empty;
+								} 
+								else 
+								{
+									$scope.rating_img[feedback_id][3] = url_empty;
+									$scope.rating_img[feedback_id][4] = url_hightlight;
+								}
+							}
+							if (rating == 3){
+								$scope.feedbacks[i]['replies'][j]['rating_relevance'] = rate;
+								if (rate == 1){
+									$scope.rating_img[feedback_id][5] = url_hightlight;
+									$scope.rating_img[feedback_id][6] = url_empty;
+								} 
+								else 
+								{
+									$scope.rating_img[feedback_id][5] = url_empty;
+									$scope.rating_img[feedback_id][6] = url_hightlight;
+								}
+							}
+
+							/*
 							$scope.feedbacks[i]['replies'][j]['rating_correctness'] = star;
 							for (var k = 1; k < 6; k++)
 							{
@@ -1040,6 +1080,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 									$scope.init_rating_img[feedback_id][k] = url_empty;
 								}
 							}
+							*/
+
+
 						}
 					}
 				}
