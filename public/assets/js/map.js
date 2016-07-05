@@ -803,7 +803,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				$scope.rating_img[item["feedback_id"]] = [];
 
 				//rating correctness
-				if (parseInt(item['rating_correctness'] == 0)){
+				if (parseInt(item['rating_correctness'] === 0)){
 					console.log('test');
 					$scope.rating_img[item['feedback_id']][1] = url_empty;
 					$scope.rating_img[item['feedback_id']][2] = url_empty;
