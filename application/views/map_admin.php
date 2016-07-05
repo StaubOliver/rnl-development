@@ -142,7 +142,7 @@
 									<div class='col-md-12'>
 										Contribution rating
 									</div>
-
+									<!--
 									<div class='row'>
 										<div class='col-md-4 admin-feedback-rating-left'>
 											Incorrect
@@ -182,7 +182,7 @@
 											New discovery 
 										</div>
 
-									</div>
+									</div> -->
 
 									<div class="row rating-correctness">
 										<div class="col-md-6 rating-left">
