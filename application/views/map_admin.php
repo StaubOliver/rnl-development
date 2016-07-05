@@ -285,15 +285,6 @@
 									<div class='col-md-12 admin-feedback-tool'>
 										<div class='btn btn-custom-default btn-sm'>See comment on the map</div>
 										<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
-										<?php for($i=1; $i<6; $i++): ?>
-											<img 
-												id=<?php echo "rating-{{rep['feedback_id']}}-".$i; ?> 
-												class="rating rating-star" 
-												src="{{init_rating_img[rep['feedback_id']][<?php echo $i ?>]}}" 
-												ng-mouseover="rating_highlight(rep['feedback_id'], <?php echo $i ?>)"
-												ng-mouseleave="rating_unhighlight(rep['feedback_id'], <?php echo $i ?>)"
-												ng-click="rating_click(rep['feedback_id'], <?php echo $i ?>)"">
-										<?php endfor; ?>
 									</div>
 
 								</div>
