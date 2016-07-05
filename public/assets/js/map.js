@@ -803,15 +803,15 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				$scope.rating_img[item["feedback_id"]] = [];
 				
 				//rating correctness
-				if (item['rating_correctness'] == "0")){
+				if (item['rating_correctness'] == "0"){
 					$scope.rating_img[item['feedback_id']][1] = url_empty;
 					$scope.rating_img[item['feedback_id']][2] = url_empty;
 				}
-				if (item['rating_correctness'] == "1")){
+				if (item['rating_correctness'] == "1"){
 					$scope.rating_img[item['feedback_id']][1] = url_hightlight;
 					$scope.rating_img[item['feedback_id']][2] = url_empty;
 				}
-				if (item['rating_correctness'] == "2")){
+				if (item['rating_correctness'] == "2"){
 					console.log('test');
 					$scope.rating_img[item['feedback_id']][1] = url_empty;
 					$scope.rating_img[item['feedback_id']][2] = url_hightlight;
