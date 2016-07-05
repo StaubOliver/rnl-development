@@ -615,11 +615,11 @@ fieldset[disabled] .btn-custom-default.active {
 }
 
 .rating-btn-img-left{
-	margin:left 2px;
+	margin:left 12px;
 }
 
 .rating-btn-img-right{
-	margin-right: 2px;
+	margin-right: 12px;
 }
 
 .rating-left{
