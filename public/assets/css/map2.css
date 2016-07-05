@@ -601,6 +601,11 @@ fieldset[disabled] .btn-custom-default.active {
 	cursor: pointer;
 }
 
+.rating-btn{
+	height:24px;
+	width: auto;
+}
+
 .admin-feedback-tool{
 	display: inline-block;
 	text-align: center;

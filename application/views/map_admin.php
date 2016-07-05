@@ -179,15 +179,14 @@
 											<?php endfor; ?>
 										</div>
 										<div class='col-md-4 admin-feedback-rating-right'>
-											New discovery <img src='/assets/img/star/circle_empty.png'>
+											New discovery 
 										</div>
 
 									</div>
 
 									<div class="row">
 										<div class="col-md-6">
-											<div class='btn btn-custom-default btn-xs'> Incorrect
-											</div>
+											<div class='btn btn-custom-default btn-xs'> Incorrect<img class='rating-btn' src='/assets/img/star/circle_empty.png'></div>
 
 										</div>
 
