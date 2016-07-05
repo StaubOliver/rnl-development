@@ -140,7 +140,7 @@
 							<div class='col-md-5'>
 								<div class='row'>
 									<div class='col-md-12'>
-										Contribution rating  {{rating_img[feedback[96]][1]}}
+										Contribution rating  {{rating_img}}
 									</div>
 									<!--
 									<div class='row'>
