@@ -196,6 +196,52 @@
 								<div class='col-md-7 admin-feedback-vertical-ligne'>
 
 									<div class='row'>
+
+										<div class='col-md-12'>
+											<strong>
+												{{rep['message']}}
+											</strong>
+										</div>
+										
+										<div class='col-md-4'>
+											{{rep["first_name"]}} {{rep["last_name"]}}
+										</div>
+
+										<div class='col-md-4'>
+										From: {{rep['age_min']}}
+										</div>
+
+										<div class='col-md-4'>
+											To: {{rep['age_max']}}
+										</div>
+
+										<div class='col-md-4'>
+											{{rep['time']}}
+										</div>
+										
+										<div class='col-md-4'>
+											<div ng-show="rep['genus']==-1">
+												Genus: All
+											</div>
+											<div ng-show="rep['genus']!=-1">
+												Genus: {{rep['genus']}}
+											</div>
+										</div>
+
+										<div class='col-md-4'>
+											<div ng-show="rep['genus']==-1">
+												Collector: All
+											</div>
+											<div ng-show="rep['genus']!=-1">
+												Collector: {{feedback['collector']}}
+											</div>
+										</div>
+
+
+
+
+
+
 									
 										<div class='col-md-6'>
 											Feedback from {{rep["first_name"]}} {{rep["last_name"]}}
