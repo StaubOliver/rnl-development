@@ -797,7 +797,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	function refreshFeedback(){
 		$scope.feedbacks = [];
-		$scope.init_rating_img = [];
+		$scope.rating_img = [];
 		$http.get('/api/map/loadAdminFeedback/').success(function(data, status, headers, config){
 			data.forEach(function(item, index)
 			{
