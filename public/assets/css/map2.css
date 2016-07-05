@@ -614,6 +614,11 @@ fieldset[disabled] .btn-custom-default.active {
 	float: right;
 }
 
+.rating-right{
+	padding-left: 5px !important;
+}
+
+
 .rating-btn-right{
 	float: left;
 }
