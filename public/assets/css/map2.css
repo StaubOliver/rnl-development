@@ -601,9 +601,19 @@ fieldset[disabled] .btn-custom-default.active {
 	cursor: pointer;
 }
 
-.rating-btn{
+.rating-btn-img{
 	height:24px;
 	width: auto;
+}
+
+.rating-btn-left{
+	text-align: right;
+	margin-right: 5px;
+}
+
+.rating-btn-right{
+	text-align: left;
+	margin-left: 5px;
 }
 
 .admin-feedback-tool{

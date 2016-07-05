@@ -186,12 +186,12 @@
 
 									<div class="row">
 										<div class="col-md-6">
-											<div class='btn btn-custom-default btn-xs'> Incorrect<img class='rating-btn' src='/assets/img/star/circle_empty.png'></div>
+											<div class='btn btn-custom-default btn-xs rating-btn-left'> Incorrect<img class='rating-btn-img' src='/assets/img/star/circle_empty.png'></div>
 
 										</div>
 
 										<div class="col-md-6">
-											<div class='btn btn-custom-default btn-xs'> <img class='rating-btn' src='/assets/img/star/circle_highlight.png'>Correct
+											<div class='btn btn-custom-default btn-xs margin-btn-right'> <img class='rating-btn-img' src='/assets/img/star/circle_highlight.png'>Correct
 											</div>
 
 
