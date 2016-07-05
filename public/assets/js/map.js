@@ -818,29 +818,29 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				}
 
 				//rating discovery
-				if (parseInt(item['rating_discovery'] == 0)){
+				if (item['rating_discovery'] == "0"){
 					$scope.rating_img[item['feedback_id']][3] = url_empty;
 					$scope.rating_img[item['feedback_id']][4] = url_empty;
 				}
-				if (parseInt(item['rating_discovery'] == 1)){
+				if (item['rating_discovery'] == "1"){
 					$scope.rating_img[item['feedback_id']][3] = url_hightlight;
 					$scope.rating_img[item['feedback_id']][4] = url_empty;
 				}
-				if (parseInt(item['rating_discovery'] == 2)){
+				if (item['rating_discovery'] == "2"){
 					$scope.rating_img[item['feedback_id']][3] = url_empty;
 					$scope.rating_img[item['feedback_id']][4] = url_hightlight;
 				}
 
 				//rating discovery
-				if (parseInt(item['rating_relevance'] == 0)){
+				if (item['rating_relevance'] == "0"){
 					$scope.rating_img[item['feedback_id']][5] = url_empty;
 					$scope.rating_img[item['feedback_id']][6] = url_empty;
 				}
-				if (parseInt(item['rating_relevance'] == 1)){
+				if (item['rating_relevance'] == "1"){
 					$scope.rating_img[item['feedback_id']][5] = url_hightlight;
 					$scope.rating_img[item['feedback_id']][6] = url_empty;
 				}
-				if (parseInt(item['rating_relevance'] == 2)){
+				if (item['rating_relevance'] == "2"){
 					$scope.rating_img[item['feedback_id']][5] = url_empty;
 					$scope.rating_img[item['feedback_id']][6] = url_hightlight;
 				}
@@ -866,43 +866,43 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 					$scope.rating_img[item['replies'][j]['feedback_id']] = [];
 					
 					//rating correctness
-					if (parseInt(item['replies'][j]['rating_correctness'] == 0)){
+					if (item['replies'][j]['rating_correctness'] == "0"){
 						$scope.rating_img[item['replies'][j]['feedback_id']][1] = url_empty;
 						$scope.rating_img[item['replies'][j]['feedback_id']][2] = url_empty;
 					}
-					if (parseInt(item['replies'][j]['rating_correctness'] == 1)){
+					if (item['replies'][j]['rating_correctness'] == "1"){
 						$scope.rating_img[item['replies'][j]['feedback_id']][1] = url_hightlight;
 						$scope.rating_img[item['replies'][j]['feedback_id']][2] = url_empty;
 					}
-					if (parseInt(item['replies'][j]['rating_correctness'] == 2)){
+					if (item['replies'][j]['rating_correctness'] == "2"){
 						$scope.rating_img[item['replies'][j]['feedback_id']][1] = url_empty;
 						$scope.rating_img[item['replies'][j]['feedback_id']][2] = url_hightlight;
 					}
 
 					//rating discovery
-					if (parseInt(item['replies'][j]['rating_discovery'] == 0)){
+					if (item['replies'][j]['rating_discovery'] == "0"){
 						$scope.rating_img[item['replies'][j]['feedback_id']][3] = url_empty;
 						$scope.rating_img[item['replies'][j]['feedback_id']][4] = url_empty;
 					}
-					if (parseInt(item['replies'][j]['rating_discovery'] == 1)){
+					if (item['replies'][j]['rating_discovery'] == "1"){
 						$scope.rating_img[item['replies'][j]['feedback_id']][3] = url_hightlight;
 						$scope.rating_img[item['replies'][j]['feedback_id']][4] = url_empty;
 					}
-					if (parseInt(item['replies'][j]['rating_discovery'] == 2)){
+					if (item['replies'][j]['rating_discovery'] == "2"){
 						$scope.rating_img[item['replies'][j]['feedback_id']][3] = url_empty;
 						$scope.rating_img[item['replies'][j]['feedback_id']][4] = url_hightlight;
 					}
 
 					//rating discovery
-					if (parseInt(item['replies'][j]['rating_relevance'] == 0)){
+					if (item['replies'][j]['rating_relevance'] == "0"){
 						$scope.rating_img[item['replies'][j]['feedback_id']][5] = url_empty;
 						$scope.rating_img[item['replies'][j]['feedback_id']][6] = url_empty;
 					}
-					if (parseInt(item['replies'][j]['rating_relevance'] == 1)){
+					if (item['replies'][j]['rating_relevance'] == "1"){
 						$scope.rating_img[item['replies'][j]['feedback_id']][5] = url_hightlight;
 						$scope.rating_img[item['replies'][j]['feedback_id']][6] = url_empty;
 					}
-					if (parseInt(item['replies'][j]['rating_relevance'] == 2)){
+					if (item['replies'][j]['rating_relevance'] == "2"){
 						$scope.rating_img[item['replies'][j]['feedback_id']][5] = url_empty;
 						$scope.rating_img[item['replies'][j]['feedback_id']][6] = url_hightlight;
 					}
