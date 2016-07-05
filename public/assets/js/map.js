@@ -801,10 +801,10 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			data.forEach(function(item, index)
 			{
 				$scope.rating_img[item["feedback_id"]] = [];
-
+				console.log('test');
 				//rating correctness
-				if (parseInt(item['rating_correctness'] === 0)){
-					console.log('test');
+				if (parseInt(item['rating_correctness'] == 0)){
+					
 					$scope.rating_img[item['feedback_id']][1] = url_empty;
 					$scope.rating_img[item['feedback_id']][2] = url_empty;
 				}
