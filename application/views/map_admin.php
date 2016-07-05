@@ -194,60 +194,114 @@
 							<div class='row'>
 
 								<div class='col-md-7 admin-feedback-vertical-ligne'>
+
+									<div class='row'>
 									
-									<div class='col-md-6'>
-										Feedback from {{rep["first_name"]}} {{rep["last_name"]}}
-									</div>
-
-									<div class='col-md-6'>
-										{{rep["upvote"]}} upvotes
-									</div>
-									
-									<div class='col-md-12'>
-										<strong>
-											{{rep['message']}}
-										</strong>
-									</div>
-									
-									<div class='col-md-6'>
-										{{rep['time']}}
-									</div>
-									
-									<div class='col-md-6'>
-										{{rep['selection'].length}} fossils selected
-									</div>
-
-									<div class='col-md-6'>
-										From: {{rep['age_min']}}
-									</div>
-
-									<div class='col-md-6'>
-										To: {{rep['age_max']}}
-									</div>
-
-									<div class='col-md-6'>
-										<div ng-show="rep['genus']==-1">
-											Genus: All
+										<div class='col-md-6'>
+											Feedback from {{rep["first_name"]}} {{rep["last_name"]}}
 										</div>
-										<div ng-show="rep['genus']!=-1">
-											Genus: {{rep['genus']}}
-										</div>
-									</div>
 
-									<div class='col-md-6'>
-										<div ng-show="rep['genus']==-1">
-											Collector: All
+										<div class='col-md-6'>
+											{{rep["upvote"]}} upvotes
 										</div>
-										<div ng-show="rep['genus']!=-1">
-											Collector: {{rep['collector']}}
+										
+										<div class='col-md-12'>
+											<strong>
+												{{rep['message']}}
+											</strong>
 										</div>
-									</div>
+										
+										<div class='col-md-6'>
+											{{rep['time']}}
+										</div>
+										
+										<div class='col-md-6'>
+											{{rep['selection'].length}} fossils selected
+										</div>
 
-									<div class='col-md-12 admin-feedback-tool'>
-										<div class='btn btn-custom-default btn-sm'>See comment on the map</div>
-										<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
+										<div class='col-md-6'>
+											From: {{rep['age_min']}}
+										</div>
+
+										<div class='col-md-6'>
+											To: {{rep['age_max']}}
+										</div>
+
+										<div class='col-md-6'>
+											<div ng-show="rep['genus']==-1">
+												Genus: All
+											</div>
+											<div ng-show="rep['genus']!=-1">
+												Genus: {{rep['genus']}}
+											</div>
+										</div>
+
+										<div class='col-md-6'>
+											<div ng-show="rep['genus']==-1">
+												Collector: All
+											</div>
+											<div ng-show="rep['genus']!=-1">
+												Collector: {{rep['collector']}}
+											</div>
+										</div>
+
+										<div class='col-md-12 admin-feedback-tool'>
+											<div class='btn btn-custom-default btn-sm'>See comment on the map</div>
+											<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
+										</div>
+
 									</div>
 								</div>
+
+
+								<div class='col-md-5'>
+
+									<div class='row'>
+
+										<div class='col-md-12'>
+											Contribution rating
+										</div>
+
+										<!-- rating incorrect - correct -->
+										<div class="row rating-correctness">
+											<div class="col-md-6 rating-left">
+												<div class='rating-btn-left' ng-click="rating_click(feedback['feedback_id'], 1, 1)">Incorrect<img class='rating-btn-img rating-btn-img-left' ng-src="{{rating_img[feedback['feedback_id']][1]}}"></div>
+
+											</div>
+
+											<div class="col-md-6 rating-right">
+												<div class='rating-btn-right' ng-click="rating_click(feedback['feedback_id'], 1, 2)"> <img class='rating-btn-img rating-btn-img-right' ng-src="{{rating_img[feedback['feedback_id']][2]}}">Correct</div>
+											</div>
+										</div>
+
+										<!-- rating known fact - new discovery -->
+										<div class="row rating-discovery">
+											<div class="col-md-6 rating-left">
+												<div class='rating-btn-left' ng-click="rating_click(feedback['feedback_id'], 2, 1)">Known Fact<img class='rating-btn-img  rating-btn-img-left' src="{{rating_img[feedback['feedback_id']][3]}}"></div>
+
+											</div>
+
+											<div class="col-md-6 rating-right">
+												<div class='rating-btn-right' ng-click="rating_click(feedback['feedback_id'], 2, 2)"> <img class='rating-btn-img rating-btn-img-right' src="{{rating_img[feedback['feedback_id']][4]}}">New Discovery</div>
+											</div>
+										</div>
+
+										<!-- rating unrelevant - relevant -->
+										<div class="row">
+											<div class="col-md-6 rating-left">
+												<div class='rating-btn-left' ng-click="rating_click(feedback['feedback_id'], 3, 1)">Unrelevant<img class='rating-btn-img rating-btn-img-left' src="{{rating_img[feedback['feedback_id']][5]}}"></div>
+
+											</div>
+
+											<div class="col-md-6 rating-right">
+												<div class='rating-btn-right' ng-click="rating_click(feedback['feedback_id'], 3, 2)"> <img class='rating-btn-img rating-btn-img-right' src="{{rating_img[feedback['feedback_id']][6]}}">Revelant</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+
 
 							</div>
 
