@@ -605,6 +605,10 @@ fieldset[disabled] .btn-custom-default.active {
 	margin-bottom: 4px;
 }
 
+.rating-discovery{
+	margin-bottom: 4px;
+}
+
 .rating-btn-img{
 	height:24px;
 	width: auto;
