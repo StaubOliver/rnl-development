@@ -190,14 +190,14 @@
 
 										</div>
 
-										<div class="col-md-6">
+										<div class="col-md-6 rating-right">
 											<div class='btn btn-custom-default btn-xs margin-btn-right'> <img class='rating-btn-img' src='/assets/img/star/circle_highlight.png'>Correct
 											</div>
-
-
 										</div>
-
 									</div>
+
+
+									
 								</div>
 
 							</div>
