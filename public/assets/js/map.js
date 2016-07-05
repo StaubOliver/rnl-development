@@ -863,7 +863,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 				// do the same for the replies
 				for (var j = 0; j < item['replies'].length; j++){
-					$scope.init_rating_img[item['replies'][j]['feedback_id']] = [];
+					$scope.rating_img[item['replies'][j]['feedback_id']] = [];
 					
 					//rating correctness
 					if (parseInt(item['replies'][j]['rating_correctness']] == 0)){
