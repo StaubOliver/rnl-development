@@ -238,59 +238,6 @@
 										</div>
 
 
-
-
-
-
-									
-										<div class='col-md-6'>
-											Feedback from {{rep["first_name"]}} {{rep["last_name"]}}
-										</div>
-
-										<div class='col-md-6'>
-											{{rep["upvote"]}} upvotes
-										</div>
-										
-										<div class='col-md-12'>
-											<strong>
-												{{rep['message']}}
-											</strong>
-										</div>
-										
-										<div class='col-md-6'>
-											{{rep['time']}}
-										</div>
-										
-										<div class='col-md-6'>
-											{{rep['selection'].length}} fossils selected
-										</div>
-
-										<div class='col-md-6'>
-											From: {{rep['age_min']}}
-										</div>
-
-										<div class='col-md-6'>
-											To: {{rep['age_max']}}
-										</div>
-
-										<div class='col-md-6'>
-											<div ng-show="rep['genus']==-1">
-												Genus: All
-											</div>
-											<div ng-show="rep['genus']!=-1">
-												Genus: {{rep['genus']}}
-											</div>
-										</div>
-
-										<div class='col-md-6'>
-											<div ng-show="rep['genus']==-1">
-												Collector: All
-											</div>
-											<div ng-show="rep['genus']!=-1">
-												Collector: {{rep['collector']}}
-											</div>
-										</div>
-
 										<div class='col-md-12 admin-feedback-tool'>
 											<div class='btn btn-custom-default btn-sm'>See comment on the map</div>
 											<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
