@@ -796,6 +796,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	
 	function refreshFeedback(){
 		$scope.feedbacks = [];
+		$scope.rating_img = [];
 		$http.get('/api/map/loadAdminFeedback/').success(function(data, status, headers, config){
 			data.forEach(function(item, index)
 			{
@@ -803,7 +804,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 				//rating correctness
 				if (parseInt(item['rating_correctness'] == 0)){
-					$scope.rating_img[item['feedback_id']][1] = url_empty;
+					console.log('test');
+;					$scope.rating_img[item['feedback_id']][1] = url_empty;
 					$scope.rating_img[item['feedback_id']][2] = url_empty;
 				}
 				if (parseInt(item['rating_correctness'] == 1)){
