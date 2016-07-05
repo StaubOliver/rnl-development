@@ -514,7 +514,7 @@ class MapModel extends CI_Model {
                 $new_row['replies'] = array();
 
                 //query of replies for each feedback
-                $query_replies = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id, rating_correctness FROM feedback WHERE replyto='.$new_row['feedback_id'].' ORDER BY time ASC');
+                $query_replies = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id, rating_correctness, rating_discovery, rating_relevance FROM feedback WHERE replyto='.$new_row['feedback_id'].' ORDER BY time ASC');
 
                 if ($query_replies->num_rows() > 0){
                     //for each replies, we get their details
@@ -533,10 +533,19 @@ class MapModel extends CI_Model {
     }
 
     function adminEvaluateFeedback($data){
-        $rating = array('rating_correctness'=>$data['rating']);
+
+        if ($data['rating'] == 1){
+            $rating = array('rating_correctness'=>$data['rate']);
+        }
+        if ($data['rating'] == 2){
+            $rating = array('rating_discovery'=>$data['rate']);
+        }
+        if ($data['rating'] == 3){
+            $rating = array('rating_relevance'=>$data['rate']);
+        }
+
         $this->db->where("feedback_id", $data['feedback_id']);
         $this->db->update('feedback', $rating);
-
     }
 
     function submitFeedback($data, $filter, $map_coordinates, $fossil_selection){

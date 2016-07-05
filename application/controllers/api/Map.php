@@ -226,8 +226,9 @@ class Map extends MY_Controller {
 		if ($this->ion_auth->logged_in()){
 			if ($this->ProfileModel->isAdmin()==1){
 				$data = array(
-					'feedback_id' => $this->input->post('feedback_id'), 
-					'rating' => $this->input->post('rating')
+					'feedback_id' => $this->input->post('feedback_id'),
+					'rating' => $this->input->post('rating'),
+					'rate' => $this->input->post('rate')
 				);
 				$this->MapModel->adminEvaluateFeedback($data);
 			}

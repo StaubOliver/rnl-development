@@ -793,14 +793,62 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	var url_full = "/assets/img/star/circle_full.png";
 	var url_hightlight = "/assets/img/star/circle_highlight.png";
 
-	$scope.init_rating_img = [];
+	$scope.rating_img = [];
 
 	function refreshFeedback(){
 		$scope.feedbacks = [];
 		$scope.init_rating_img = [];
 		$http.get('/api/map/loadAdminFeedback/').success(function(data, status, headers, config){
-			data.forEach(function(item, index){
-				$scope.init_rating_img[item["feedback_id"]] = [];
+			data.forEach(function(item, index)
+			{
+				$scope.rating_img[item["feedback_id"]] = [];
+
+				//rating correctness
+				if (parseInt(item['rating_correctness'] == 0)){
+					$scope.rating_img[item['feedback_id']][1] = url_empty;
+					$scope.rating_img[item['feedback_id']][2] = url_empty;
+				}
+				if (parseInt(item['rating_correctness'] == 1)){
+					$scope.rating_img[item['feedback_id']][1] = url_hightlight;
+					$scope.rating_img[item['feedback_id']][2] = url_empty;
+				}
+				if (parseInt(item['rating_correctness'] == 2)){
+					$scope.rating_img[item['feedback_id']][1] = url_empty;
+					$scope.rating_img[item['feedback_id']][2] = url_hightlight;
+				}
+
+				//rating discovery
+				if (parseInt(item['rating_discovery'] == 0)){
+					$scope.rating_img[item['feedback_id']][3] = url_empty;
+					$scope.rating_img[item['feedback_id']][4] = url_empty;
+				}
+				if (parseInt(item['rating_discovery'] == 1)){
+					$scope.rating_img[item['feedback_id']][3] = url_hightlight;
+					$scope.rating_img[item['feedback_id']][4] = url_empty;
+				}
+				if (parseInt(item['rating_discovery'] == 2)){
+					$scope.rating_img[item['feedback_id']][3] = url_empty;
+					$scope.rating_img[item['feedback_id']][4] = url_hightlight;
+				}
+
+				//rating discovery
+				if (parseInt(item['rating_relevance'] == 0)){
+					$scope.rating_img[item['feedback_id']][5] = url_empty;
+					$scope.rating_img[item['feedback_id']][6] = url_empty;
+				}
+				if (parseInt(item['rating_relevance'] == 1)){
+					$scope.rating_img[item['feedback_id']][5] = url_hightlight;
+					$scope.rating_img[item['feedback_id']][6] = url_empty;
+				}
+				if (parseInt(item['rating_relevance'] == 2)){
+					$scope.rating_img[item['feedback_id']][5] = url_empty;
+					$scope.rating_img[item['feedback_id']][6] = url_hightlight;
+				}
+
+
+
+
+				/*
 				for (var i = 1; i < 6; i++){
 					if (parseInt(item['rating_correctness'])>=i){
 						//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_full;
@@ -811,10 +859,55 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 						$scope.init_rating_img[item["feedback_id"]][i] = url_empty;
 					}
 				}
+				*/
+
 				// do the same for the replies
 				for (var j = 0; j < item['replies'].length; j++){
 					$scope.init_rating_img[item['replies'][j]['feedback_id']] = [];
-					for (var i = 1; i < 6; i++){
+					
+					//rating correctness
+					if (parseInt(item['replies'][j]['rating_correctness']] == 0)){
+						$scope.rating_img[item['replies'][j]['feedback_id']][1] = url_empty;
+						$scope.rating_img[item['replies'][j]['feedback_id']][2] = url_empty;
+					}
+					if (parseInt(item['replies'][j]['rating_correctness']] == 1)){
+						$scope.rating_img[item['replies'][j]['feedback_id']][1] = url_hightlight;
+						$scope.rating_img[item['replies'][j]['feedback_id']][2] = url_empty;
+					}
+					if (parseInt(item['replies'][j]['rating_correctness']] == 2)){
+						$scope.rating_img[item['replies'][j]['feedback_id']][1] = url_empty;
+						$scope.rating_img[item['replies'][j]['feedback_id']][2] = url_hightlight;
+					}
+
+					//rating discovery
+					if (parseInt(item['replies'][j]['rating_discovery']] == 0)){
+						$scope.rating_img[item['replies'][j]['feedback_id']][3] = url_empty;
+						$scope.rating_img[item['replies'][j]['feedback_id']][4] = url_empty;
+					}
+					if (parseInt(item['replies'][j]['rating_discovery']] == 1)){
+						$scope.rating_img[item['replies'][j]['feedback_id']][3] = url_hightlight;
+						$scope.rating_img[item['replies'][j]['feedback_id']][4] = url_empty;
+					}
+					if (parseInt(item['replies'][j]['rating_discovery']] == 2)){
+						$scope.rating_img[item['replies'][j]['feedback_id']][3] = url_empty;
+						$scope.rating_img[item['replies'][j]['feedback_id']][4] = url_hightlight;
+					}
+
+					//rating discovery
+					if (parseInt(item['replies'][j]['rating_relevance']] == 0)){
+						$scope.rating_img[item['replies'][j]['feedback_id']][5] = url_empty;
+						$scope.rating_img[item['replies'][j]['feedback_id']][6] = url_empty;
+					}
+					if (parseInt(item['replies'][j]['rating_relevance']] == 1)){
+						$scope.rating_img[item['replies'][j]['feedback_id']][5] = url_hightlight;
+						$scope.rating_img[item['replies'][j]['feedback_id']][6] = url_empty;
+					}
+					if (parseInt(item['replies'][j]['rating_relevance']] == 2)){
+						$scope.rating_img[item['replies'][j]['feedback_id']][5] = url_empty;
+						$scope.rating_img[item['replies'][j]['feedback_id']][6] = url_hightlight;
+					}
+
+					/*for (var i = 1; i < 6; i++){
 						if (parseInt(item['replies'][j]['rating'])>=i){
 							//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_full;
 							$scope.init_rating_img[item['replies'][j]['feedback_id']][i] = url_full;
@@ -823,7 +916,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 							//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_empty;
 							$scope.init_rating_img[item['replies'][j]['feedback_id']][i] = url_empty;
 						}
-					}
+					}*/
 
 				}
 				$scope.feedbacks.push(item);
@@ -831,7 +924,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		});
 	}
 
-	$scope.rating_highlight = function(feedback_id, star){
+	/*$scope.rating_highlight = function(feedback_id, star){
 		console.log(feedback_id+'-'+star);
 		for (var i = 1; i <= star; i++){
 			$scope.init_rating_img[feedback_id][i] = url_hightlight;
@@ -859,12 +952,15 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				$scope.init_rating_img[feedback_id][i] = url_empty;
 			}
 		}
-	}
+	}*/
 
-	$scope.rating_click = function(feedback_id, star){
-		data = {};
+	$scope.rating_click = function(feedback_id, rating, rate)
+	{
 		data.feedback_id = feedback_id;
-		data.rating = star;
+		data.rating = rating;
+		data.rate = rate;
+
+		data = {};
 		$http({
 		        method : 'POST',
 		        url: '/api/map/adminEvaluateFeedback',
@@ -876,14 +972,15 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			for (var i = 0; i < $scope.feedbacks.length; i++) {
 				if($scope.feedbacks[i]['feedback_id'] == feedback_id)
 				{
-					$scope.feedbacks[i]["rating_correctness"] = star;
+					/*$scope.feedbacks[i]["rating_correctness"] = star;
 					for (var j = 1; j < 6; j++){
 						if (star>=j){
 							$scope.init_rating_img[feedback_id][j] = url_full;
 						} else {
 							$scope.init_rating_img[feedback_id][j] = url_empty;
 						}
-					}
+					}*/
+
 				}
 				else
 				{
@@ -907,6 +1004,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 					}
 				}
 			}
+
 		}).error(function(data, status, headers, config){
 			console.log(data);
 		});
