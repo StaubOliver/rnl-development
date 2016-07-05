@@ -956,11 +956,12 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.rating_click = function(feedback_id, rating, rate)
 	{
+		data = {};
 		data.feedback_id = feedback_id;
 		data.rating = rating;
 		data.rate = rate;
 
-		data = {};
+		
 		$http({
 		        method : 'POST',
 		        url: '/api/map/adminEvaluateFeedback',
