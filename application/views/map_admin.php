@@ -140,7 +140,7 @@
 							<div class='col-md-5'>
 								<div class='row'>
 									<div class='col-md-12'>
-										Contribution rating  {{rating_img}}
+										Contribution rating
 									</div>
 									<!--
 									<div class='row'>
@@ -192,7 +192,7 @@
 										</div>
 
 										<div class="col-md-6 rating-right">
-											<div class='btn btn-custom-default btn-xs margin-btn-right' ng-click="rating_click(feedback['feedback_id'], 1, 2)"> <img class='rating-btn-img rating-btn-img-right' src="{{rating_img['feedback_id'][2]}}">Correct</div>
+											<div class='btn btn-custom-default btn-xs margin-btn-right' ng-click="rating_click(feedback['feedback_id'], 1, 2)"> <img class='rating-btn-img rating-btn-img-right' ng-src="{{rating_img['feedback_id'][2]}}">Correct</div>
 										</div>
 									</div>
 
