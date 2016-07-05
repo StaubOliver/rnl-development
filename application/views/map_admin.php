@@ -179,7 +179,7 @@
 											<?php endfor; ?>
 										</div>
 										<div class='col-md-4 admin-feedback-rating-right'>
-											New discovery
+											New discovery <img src='/assets/img/star/circle_empty.png'>
 										</div>
 
 									</div>
