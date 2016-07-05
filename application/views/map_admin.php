@@ -182,7 +182,21 @@
 											New discovery
 										</div>
 
+									</div>
 
+									<div class="row">
+										<div class="col-md-6">
+											<div class='btn btn-custom-default btn-xs'> Incorrect
+											</div>
+
+										</div>
+
+										<div class="col-md-6">
+											<div class='btn btn-custom-default btn-xs'> Correct
+											</div>
+
+
+										</div>
 
 									</div>
 								</div>
