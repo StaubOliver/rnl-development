@@ -8,6 +8,7 @@
 	{
 		$log = "false";
 	}
+	
 	if($is_admin==1){
 		$admin="true";
 	}
@@ -228,22 +229,15 @@
 				
 
 							</div>
-							<!--
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							</div>
-							-->
 						</div>
 					</div>
 				</div>
-				<!--
-				<div class="map-loading" ng-show="loading">
-					<h2 >Loading...</h2>
-				</div>
-				-->
+
+				<!-- map canvas -->
 				<div class="map-section">
 					<div id="googleMap"></div>
 				</div>
+
 			</div>
 
 		</div>
@@ -252,7 +246,9 @@
 
 			<!-- Filter  & Feedback -->
 			<div class="row">
-				<!-- Filter -->
+				
+
+				<!-- Filter tool -->
 				<div class="col-md-12" >
 					<div class="filter-section">
 				
@@ -347,12 +343,14 @@
 									</optgroup>
 								</select>
 							</div>
+
+
 						</div>
 
 					</div>	
 				</div>
 
-				<!-- Feedback -->
+				<!-- Write a feedback -->
 				<div class="col-md-12">
 					<div name='write-section' class="feedback-section">
 
@@ -442,6 +440,8 @@
 				</div>
 				-->
 
+
+				<!-- Contributions from the comunity -->
 				<div class='col-md-12'>
 					<div class='feedback-section'>
 
@@ -552,6 +552,7 @@
 									</div>
 								</div>
 							</div>
+
 
 						</div>
 					</div>
