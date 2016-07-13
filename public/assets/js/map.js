@@ -179,7 +179,7 @@ var map = angular.module('map', ['rzModule'])
 			$scope.text_select_btn = "Select this fossil";
 		}$
 		deselect_marker(marker, index);
-		logActivity($http, "Fossil deselected "+marker['title'].split("-")[0]+" "+marker_clicked_for_selection['title'], user_id);
+		logActivity($http, "Fossil deselected ", ""+marker['title'].split("-")[0]+" "+marker_clicked_for_selection['title'], user_id);
 	}
 
 	function select_marker(marker){
@@ -214,7 +214,7 @@ var map = angular.module('map', ['rzModule'])
 		marker.addListener("click", function(){
 
 			//log activity
-			logActivity(http, "Click on fossil "+info['id']+" "+info['title'], user_id);
+			logActivity(http, "Click on fossil",  ""+info['id']+" "+info['title'], user_id);
 
 			marker_clicked_for_selection = marker;
 			//info window
@@ -457,7 +457,7 @@ var map = angular.module('map', ['rzModule'])
 		$scope.feedback_selection_marker = [];	}
 
 	$scope.upvoteFeedback = function(id){
-		$scope.recordActivity("Upvote feedback "+id);
+		$scope.recordActivity("Upvote", "Feedback "+id);
 		data = {};
 		data.feedback_id = id;
 		data.user_id = user_id;
@@ -490,7 +490,7 @@ var map = angular.module('map', ['rzModule'])
 	}
 
 	$scope.replyFeedback = function(id){
-		$scope.recordActivity("Click on reply feedback "+id);
+		$scope.recordActivity("Click reply", "Feedback "+id);
 		$scope.section_feedback_form_section_title = "You are replying to:";
 		deselect_all_marker();
 		for (var i = 0; i < $scope.feedbacks.length; i++)
@@ -521,7 +521,7 @@ var map = angular.module('map', ['rzModule'])
 
 	$scope.cancelReplyFeedback = function(id){
 		console.log('cancel reply');
-		$scope.recordActivity("Cancel reply on feedback "+id);
+		$scope.recordActivity("Cancel reply", "Feedback "+id);
 		$scope.section_feedback_form_section_title = "Share your discoveries";
 		//$scope.replyto = {'reply' : false};
 		deselect_all_marker();
@@ -529,15 +529,16 @@ var map = angular.module('map', ['rzModule'])
 	}
 
 
-	function logActivity(http, message, user_id){
-		activity = {};
-		activity.activity = message;
-		activity.user_id = user_id;
+	function logActivity(http, action, details, user_id){
+		data = {};
+		data.action = action;
+		data.details = details;
+		data.user_id = user_id;
 		// Do the ajax call
 		http({
 	        method : 'POST',
 	        url: '/api/map/logmapactivity',
-	        data: $.param(activity),
+	        data: $.param(data),
 	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 	    	
 		}).success(function(data, status, headers, config) {
@@ -589,7 +590,7 @@ var map = angular.module('map', ['rzModule'])
 				refreshFeedback($http);
 				$scope.feedback_form_text = "";
 				$scope.clear_selected_markers();
-				$scope.recordActivity('Submit feedback');
+				$scope.recordActivity('Submit feedback', '');
 				$scope.replyto = {'reply':false};
 
 			}).error(function(data, status, headers, config){
@@ -611,11 +612,11 @@ var map = angular.module('map', ['rzModule'])
 		var index = $scope.selected_markers.indexOf(marker_clicked_for_selection);
 		if (index==-1){
 			select_marker(marker_clicked_for_selection);
-			logActivity($http, "Fossil selected "+id+" "+marker_clicked_for_selection['title'], user_id);
+			logActivity($http, "Fossil selected ", ""+id+" "+marker_clicked_for_selection['title'], user_id);
 			$scope.text_select_btn = "Deselect this fossil";
 		} else {
 			deselect_marker(marker_clicked_for_selection, index);
-			logActivity($http, "Fossil deselected "+id+" "+marker_clicked_for_selection['title'], user_id);
+			logActivity($http, "Fossil deselected", ""+id+" "+marker_clicked_for_selection['title'], user_id);
 			$scope.text_select_btn = "Select this fossil";
 
 		}
@@ -644,12 +645,12 @@ var map = angular.module('map', ['rzModule'])
 
 	actualmap.addListener("click", function(){
 		console.log('map clicked');
-		logActivity($http, "Map Click", user_id);
+		logActivity($http, "Map Click", "", user_id);
 		infoWindow.close;
 	});
 
 	actualmap.addListener("dragend", function(){
-		logActivity($http, "Map Pan", user_id);
+		logActivity($http, "Map Pan", "", user_id);
 		//refreshFeedback($http);
 		console.log(actualmap.getCenter().toString());
 	});
@@ -658,11 +659,11 @@ var map = angular.module('map', ['rzModule'])
 		new_zoom = actualmap.getZoom();
 		if (new_zoom>$scope.map_zoom){
 			console.log("zoom in");
-			logActivity($http, "Map Zoom in", user_id);
+			logActivity($http, "Map Zoom in", "New Zoom "+$scope.map_zoom, user_id);
 		}
 		else {
 			console.log("zoom out");
-			logActivity($http, "Map Zoom out", user_id);
+			logActivity($http, "Map Zoom out", "New Zoom "+$scope.map_zoom, user_id);
 		}
 		$scope.map_zoom=new_zoom;
 	});
@@ -712,7 +713,7 @@ var map = angular.module('map', ['rzModule'])
 					$scope.clear_selected_markers(); 
 					refresh($http);
 					refreshFeedback($http);
-					logActivity($http, "Filter Geological Age changed new range "+$scope.selectedAgeMin+" - "+$scope.selectedAgeMax, user_id);
+					logActivity($http, "Filter Geological Age changed", "New range "+$scope.selectedAgeMin+" - "+$scope.selectedAgeMax, user_id);
 				}	
 			}
 	};
@@ -750,7 +751,7 @@ var map = angular.module('map', ['rzModule'])
 		filter['genus'] = $scope.selectedGenus;
 		refreshFeedback($http);
 		refresh($http);
-		logActivity($http, "Filter Genus Selector Change Value "+$scope.selectedGenus, user_id);
+		logActivity($http, "Filter Genus Selector Change", "Value "+$scope.selectedGenus, user_id);
 	}
 
 	/*
@@ -772,11 +773,11 @@ var map = angular.module('map', ['rzModule'])
 		filter['collector'] = $scope.selectedCollector;
 		refreshFeedback($http);
 		refresh($http);
-		logActivity($http, "Filter Collector Selector Change Value "+$scope.selectedCollector, user_id);
+		logActivity($http, "Filter Collector Selector Change", "Value "+$scope.selectedCollector, user_id);
 	}
 
-	$scope.recordActivity = function($a){
-		logActivity($http, $a, user_id);
+	$scope.recordActivity = function($action, $details){
+		logActivity($http, $action, $details, user_id);
 	};
 
 

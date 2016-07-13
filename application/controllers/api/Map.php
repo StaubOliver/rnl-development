@@ -198,13 +198,15 @@ class Map extends MY_Controller {
 		$user_id = ($this->input->post('user_id')) ? $this->input->post('user_id'): 0;
 		$unique_id = $this->LoggerModel->getUniqueID();
 		$time = date('Y-m-d H:i:s');
-		$activity = $this->input->post('activity');
+		$action = $this->input->post('action');
+		$details = $this->input->post('details');
 
 		$data = array(
 			'user_id' => $user_id,
 			'unique_id' => $unique_id,
 			'time' => $time,
-			'activity' => $activity
+			'action' => $action,
+			'details' => $details
 		);
 
 		//insert the data in the database
