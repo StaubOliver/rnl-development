@@ -310,7 +310,7 @@
 						<div class="row ">
 							<div class="col-md-6 filter-element">
 								<p class='filter-element-title'>Collector</p>
-								<select class="form-control" id="fossilCollectorSelect" ng-model="selectedCollector" ng-change="clear_selected_markers(); newCollector()"  ng-mouseover="recordActivity('Collector Selector Hover')">
+								<select class="form-control" id="fossilCollectorSelect" ng-model="selectedCollector" ng-change="clear_selected_markers(); newCollector()"  ng-mouseover="recordActivity('Collector Selector Hover', '')">
 									<option value="-1" selected>All Collectors</option>
 									<optgroup label="Collectors">	
 									<?php
@@ -329,7 +329,7 @@
 							<!-- Genus --> 
 							<div class="col-md-6 filter-element">
 								<p class='filter-element-title'>Genus</p>
-								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="clear_selected_markers(); newGenus()" ng-mouseover="recordActivity('Genus Selector Hover')">
+								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="clear_selected_markers(); newGenus()" ng-mouseover="recordActivity('Genus Selector Hover', '')">
 									<option value="-1" selected>All Genera</option>
 									<optgroup label="Coral genera">	
 									<?php
@@ -387,7 +387,7 @@
 							<form>
 								<div class="row feedback-form">
 									<div class="col-md-12">
-										<textarea class="form-control feedback-message-form-textarea" ng-model='feedback_form_text' ng-change="feedback_form_error=''; recordActivity('Writing comment : '+feedback_form_text)" rows="2"></textarea>
+										<textarea class="form-control feedback-message-form-textarea" ng-model='feedback_form_text' ng-change="feedback_form_error=''; recordActivity('Writing comment, feedback_form_text)" rows="2"></textarea>
 									</div>
 									<div class="col-md-12">
 										<span ng-show="selected_markers.length==0">You can select fossils from the map</span>
@@ -400,7 +400,7 @@
 										</div>
 									</div>
 									<div class="col-md-6 feedback-clear-btn">
-										<button type="button" class="btn btn-custom-default btn-sm" ng-show="selected_markers.length > 0" ng-click="clear_selected_markers(); recordActivity('Clear Fossil selection')">Clear</button>
+										<button type="button" class="btn btn-custom-default btn-sm" ng-show="selected_markers.length > 0" ng-click="clear_selected_markers(); recordActivity('Clear Fossil selection', '')">Clear</button>
 									</div>
 									<div class="col-md-6 feedback-submit-btn">
 										<button type="button" class="btn btn-custom-primary btn-sm" ng-click="submitfeedback()">Send</button>
@@ -454,7 +454,7 @@
 							<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
 
-								<div class="feedback-message " ng-mouseover="recordActivity('Feedback mouse over '+feedback['feedback_id']+ ' '+feedback['message']); mouseoverFeedback(feedback)" ng-mouseleave="mouseleaveFeedback()">
+								<div class="feedback-message " ng-mouseover="recordActivity('Feedback mouse over', feedback['feedback_id']+ ' '+feedback['message']); mouseoverFeedback(feedback)" ng-mouseleave="mouseleaveFeedback()">
 									<div class='feedback-message-delete-btn' ng-click="" ng-show="(logged_in && feedback['user_id']==user_id) || admin"> 
 										<span class="glyphicon glyphicon-remove"></span>
 									</div>
@@ -507,7 +507,7 @@
 
 								<div ng-repeat='rep in feedback.replies' ng-show='feedbacks.length'>
 
-									<div class="feedback-message-reply " ng-mouseover="recordActivity('Feedback mouse over '+rep['feedback_id']+ ' '+rep['message']); mouseoverFeedback(rep)" ng-mouseleave="mouseleaveFeedback()">
+									<div class="feedback-message-reply " ng-mouseover="recordActivity('Feedback mouse over', rep['feedback_id']+ ' '+rep['message']); mouseoverFeedback(rep)" ng-mouseleave="mouseleaveFeedback()">
 										<div class='feedback-message-delete-btn' ng-click="" ng-show="(logged_in && feedback['user_id']==user_id) || admin"> 
 											<span class="glyphicon glyphicon-remove"></span>
 										</div>
