@@ -39,8 +39,9 @@ var map = angular.module('map', ['rzModule'])
 	$scope.section_social_sharing_title = "Share on your networks";
 	$scope.section_feedbacks_title = "See what others have found";
 
-	$scope.replyto = {'reply':false};
+	//$scope.replyto = {'reply':false};
 
+	$scope.feedback_form_text_reply = [];
 
 	// Sets the map on all markers in the array.
 	function setMapOnAll(map) {
@@ -395,6 +396,8 @@ var map = angular.module('map', ['rzModule'])
 
 				$scope.feedbacks.push(item);
 
+				$scope.feedback_form_text_reply[item.feedback_id]="";
+
 			});
 		});
 	}
@@ -491,7 +494,7 @@ var map = angular.module('map', ['rzModule'])
 
 	$scope.replyFeedback = function(id){
 		$scope.recordActivity("Click reply", "Feedback "+id);
-		$scope.section_feedback_form_section_title = "You are replying to:";
+		//$scope.section_feedback_form_section_title = "You are replying to:";
 		deselect_all_marker();
 		for (var i = 0; i < $scope.feedbacks.length; i++)
 		{
@@ -499,8 +502,8 @@ var map = angular.module('map', ['rzModule'])
 			{
 				$scope.replyto = $scope.feedbacks[i];
 				$scope.replyto['reply'] = true;
-				console.log("replyto;")
-				console.log($scope.replyto);
+				//console.log("replyto;")
+				//console.log($scope.replyto);
 				
 				for (var j = 0; j < markers.length; j++){
 					for (var k = 0; k < $scope.replyto.selection.length; k++){
