@@ -246,6 +246,10 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	color:#ff4d79;
 }
 
+.feedback-submit-reply-btn{
+	margin-top: 5px;
+}
+
 .social-network-icons{
 	/*float: right;*/
 }
