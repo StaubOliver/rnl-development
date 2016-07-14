@@ -146,6 +146,10 @@
 										<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide'>Hide comment</div>	
 									</div>
 
+									<div class='col-md-12' ng-show="feedback['hidden'] == 1">
+										This feedback is hidden
+									</div>
+
 								</div>
 							</div>
 
