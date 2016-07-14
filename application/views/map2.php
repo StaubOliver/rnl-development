@@ -99,7 +99,7 @@
 					<?php endif; ?>	
 
 					<li><p class="navbar-text">Share</p></li>
-					<li><a href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map" target="#"><img class='social-network-icon' src="/assets/img/socialnetworks/twitter_white.png" alt="There should be an awsome logo" height="32" width="32"></a></li>
+					<li><a class="social-network-link" href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map" target="#"><img class='social-network-icon' src="/assets/img/socialnetworks/twitter_white.png" alt="There should be an awsome logo" height="32" width="32"></a></li>
 					<li><img class='social-network-icon' src="/assets/img/socialnetworks/facebook_white.png" alt="Twitter" height="32" width="32"></li>
 					<li><img class='social-network-icon' src="/assets/img/socialnetworks/google_white.png" alt="There should be an awsome logo" height="32" width="32"></li>
 
