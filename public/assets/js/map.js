@@ -602,22 +602,16 @@ var map = angular.module('map', ['rzModule'])
 				$scope.feedback_form_text = "";
 				$scope.clear_selected_markers();
 				
-				refreshFeedback($http);
+
 				if (typeof(feedback_reply) == 'undefined'){
-					
+					refreshFeedback($http);
 					$scope.recordActivity('Submit feedback', data.message);
 				}
 				else {
 					$scope.recordActivity('Submit reply', feedback_reply+' '+data.message);
 					$scope.feedback_form_text_reply[feedback_reply]  = "";
 					
-					/*for (var i = 0; i < $scope.feedbacks.length; i++)
-					{
-						if ($scope.feedbacks[i]['feedback_id'] == feedback_reply)
-						{
-							$scope.feedbacks[i][replies].push
-						}
-					}*/
+				}
 
 				//$scope.replyto = {'reply':false};
 
