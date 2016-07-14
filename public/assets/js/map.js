@@ -1140,6 +1140,13 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			{
 				index = i;
 			}
+			else {
+				for (var j = 0; j < $scope.feedbacks[i]["replies"].length; j++){
+					if ($scope.feedbacks[i]["replies"][j]["feedback_id"] == id){
+						index = j;
+					}
+				}
+			}
 		}
 
 		data = {};

@@ -228,21 +228,18 @@
 										
 										<div class='col-md-4'>
 											{{rep["first_name"]}} {{rep["last_name"]}}
+											{{rep['time']}}
 										</div>
 
-										<div class='col-md-4'>
+										<div class='col-md-6'>
 										From: {{rep['age_min']}}
 										</div>
 
-										<div class='col-md-4'>
+										<div class='col-md-6'>
 											To: {{rep['age_max']}}
 										</div>
-
-										<div class='col-md-4'>
-											{{rep['time']}}
-										</div>
 										
-										<div class='col-md-4'>
+										<div class='col-md-6'>
 											<div ng-show="rep['genus']==-1">
 												Genus: All
 											</div>
@@ -251,19 +248,13 @@
 											</div>
 										</div>
 
-										<div class='col-md-4'>
+										<div class='col-md-6'>
 											<div ng-show="rep['genus']==-1">
 												Collector: All
 											</div>
 											<div ng-show="rep['genus']!=-1">
 												Collector: {{feedback['collector']}}
 											</div>
-										</div>
-
-
-										<div class='col-md-12 admin-feedback-tool'>
-											<div class='btn btn-custom-default btn-sm'>See comment on the map</div>
-											<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
 										</div>
 
 									</div>
