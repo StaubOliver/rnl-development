@@ -104,7 +104,7 @@
 									<div class='col-md-6'>
 										To: {{feedback['age_max']}}
 									</div>
-									
+
 									<div class='col-md-6'>
 										<div ng-show="feedback['genus']==-1">
 											Genus: All
@@ -139,11 +139,11 @@
 								<div class='row'>
 
 									<div class='col-md-12'>
-										<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See on the map</div>
+										<div class='btn btn-custom-default btn-sm btn-admin' ng-click='showMap(feedback.feedback_id, 0)'>See on the map</div>
 									</div>
 
 									<div class='col-md-12'>
-										<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
+										<div class='btn btn-custom-primary btn-sm btn-admin'>Delete comment</div>	
 									</div>
 
 								</div>

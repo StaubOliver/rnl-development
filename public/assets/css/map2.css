@@ -569,6 +569,7 @@ fieldset[disabled] .btn-custom-default.active {
 
 .btn-admin{
 	width: 150px;
+	text-align: center;
 }
 
 .admin-feedback-vertical-ligne{
