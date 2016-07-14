@@ -91,24 +91,21 @@
 										</strong>
 									</div>
 									
-									<div class='col-md-4'>
+									<div class='col-md-12'>
 										{{feedback["first_name"]}} {{feedback["last_name"]}}
-									</div>
-									
-
-									<div class='col-md-4'>
-										From: {{feedback['age_min']}}
-									</div>
-
-									<div class='col-md-4'>
-										To: {{feedback['age_max']}}
-									</div>
-
-									<div class='col-md-4'>
 										{{feedback['time']}}
 									</div>
 									
-									<div class='col-md-4'>
+
+									<div class='col-md-6'>
+										From: {{feedback['age_min']}}
+									</div>
+
+									<div class='col-md-6'>
+										To: {{feedback['age_max']}}
+									</div>
+									
+									<div class='col-md-6'>
 										<div ng-show="feedback['genus']==-1">
 											Genus: All
 										</div>
@@ -117,7 +114,7 @@
 										</div>
 									</div>
 
-									<div class='col-md-4'>
+									<div class='col-md-6'>
 										<div ng-show="feedback['genus']==-1">
 											Collector: All
 										</div>
@@ -133,7 +130,7 @@
 										
 									</div>
 									-->
-									
+
 								</div>
 
 							</div>
