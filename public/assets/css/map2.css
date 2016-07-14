@@ -36,7 +36,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 
 
 .main-layout-right{
-	overflow: auto;
+	/*overflow: auto;*/
 }
 
 .filter-section{
@@ -96,6 +96,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	box-shadow: 0px 1px 10px #CCCCCC;
 
 	width:auto;
+	overflow: auto;
 }
 
 .fossil-selection{
