@@ -99,8 +99,8 @@
 					<?php endif; ?>	
 
 					<li><p class="navbar-text">Share</p></li>
-					<li><img class='social-network-icon' src="/assets/img/socialnetworks/twitter_white.png" alt="There should be an awsome logo" height="24" width="24"></li>
-					<li><img class='social-network-icon' src="/assets/img/socialnetworks/facebook_white.png" alt="There should be an awsome logo" height="24" width="24"></li>
+					<li><img class='social-network-icon' src="/assets/img/socialnetworks/twitter_white.png" alt="There should be an awsome logo" height="32" width="32"></li>
+					<li><img class='social-network-icon' src="/assets/img/socialnetworks/facebook_white.png" alt="There should be an awsome logo" height="32" width="32"></li>
 					<li><img class='social-network-icon' src="/assets/img/socialnetworks/google_white.png" alt="There should be an awsome logo" height="32" width="32"></li>
 
 					<?php if($logged_in == true): ?>
