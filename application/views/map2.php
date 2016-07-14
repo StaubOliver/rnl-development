@@ -524,13 +524,15 @@
 											</div>
 
 											<div class="col-md-6 feedback-message-buttons">
-											<a ng-show="!rep.user_has_upvote" class='feedback-message-button-up' href='#' ng-click="upvoteFeedback(rep.feedback_id)">Upvote</a>
-											<span ng-show="rep.user_has_upvote">Upvoted</span>
-										</div>
+												<a ng-show="!rep.user_has_upvote" class='feedback-message-button-up' href='#' ng-click="upvoteFeedback(rep.feedback_id)">Upvote</a>
+												<span ng-show="rep.user_has_upvote">Upvoted</span>
+											</div>
 
-										<div class="col-md-6 feedback-message-info">
-											<span>{{rep.upvote}} up </span> 
-											<span>{{rep.selection.length}} fossils</span>
+											<div class="col-md-6 feedback-message-info">
+												<span>{{rep.upvote}} up </span> 
+												<span>{{rep.selection.length}} fossils</span>
+											</div>
+
 										</div>
 
 									</div>
@@ -542,7 +544,11 @@
 									<div class='row'>
 
 										<div class="col-md-12">
-											<textarea class="form-control feedback-message-form-textarea" ng-model="'feedback_form_text_reply'+feedback.id" ng-change=" recordActivity('Writing reply', feedback.id+feedback_form_text)" rows="2"></textarea>
+											<textarea class="form-control feedback-message-form-textarea" ng-model="'feedback_form_text_reply'+feedback.id" ng-change=" recordActivity('Writing reply', feedback.id+feedback_form_text)" rows="1"></textarea>
+										</div>
+
+										<div class="col-md-6 feedback-submit-btn">
+											<button type="button" class="btn btn-custom-primary btn-sm" ng-click="submitfeedbackreply()">Send</button>
 										</div>
 
 
