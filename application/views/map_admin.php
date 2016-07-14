@@ -78,10 +78,10 @@
 				<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
 
-					<div class='col-md-9 col-md-offset-1 admin-feedback'>
+					<div class='col-md-10 col-md-offset-1 admin-feedback'>
 						<div class='row'>
 
-							<div class='col-md-7 admin-feedback-vertical-ligne'>
+							<div class='col-md-6 admin-feedback-vertical-ligne'>
 
 								<div class='row '>
 									
@@ -137,6 +137,20 @@
 
 							</div>
 
+							<div class='col-md-2'>
+								<div class='row'>
+
+									<div class='col-md-12'>
+										<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See on the map</div>
+									</div>
+
+									<div class='col-md-12'>
+										<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
+									</div>
+
+								</div>
+							</div>
+
 							<div class='col-md-5'>
 								<div class='row'>
 
@@ -183,6 +197,8 @@
 								</div>
 
 							</div>
+
+
 						</div>
 					</div>
 
