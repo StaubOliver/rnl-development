@@ -596,7 +596,7 @@ var map = angular.module('map', ['rzModule'])
 		        data: $.param(data),
 		        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		    	
-			}).success(function(data, status, headers, config) {
+			}).success(function(dat, status, headers, config) {
 				console.log("success");
 				
 				$scope.feedback_form_text = "";
