@@ -1134,7 +1134,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.hideComment = function(id){
 		index = 0; 
-		feedback = 0;
+		feedback = -1;
 		for (var i = 0; i < $scope.feedbacks.length; i++)
 		{
 			if ($scope.feedbacks[i]['feedback_id'] == id)
@@ -1156,7 +1156,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		data = {};
 		data.feedback_id = id;
 
-		if (feedback == 0){
+		if (feedback == -1){
 			$scope.feedbacks[index]["hidden"] == 0 ? data.hidden = 1 : data.hidden = 0;
 		}
 		else{
@@ -1171,7 +1171,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		    	
 		}).success(function(data, status, headers, config) {
 			
-			if (feedback == 0){
+			if (feedback == -1){
 				$scope.feedbacks[index]["hidden"] == 0 ? $scope.feedbacks[index]["hidden"] = 1 : $scope.feedbacks[index]["hidden"] = 0;
 			}
 			else{
