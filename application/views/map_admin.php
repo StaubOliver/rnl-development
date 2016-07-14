@@ -73,7 +73,7 @@
 				<div class='col-md-10 col-md-offset-1 admin-title'>
 					<h4><?php echo count($feedbacks).' feedbacks recorded'; ?></h4>
 				</div>
-				
+
 
 				<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
@@ -137,7 +137,7 @@
 
 							</div>
 
-							<div class='col-md-5'>
+							<div class='col-md-4'>
 								<div class='row'>
 
 									<div class='col-md-12'>
