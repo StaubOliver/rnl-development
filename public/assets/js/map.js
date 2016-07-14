@@ -555,7 +555,7 @@ var map = angular.module('map', ['rzModule'])
 	$scope.feedback_form_error = "";
 
 	$scope.submitfeedback = function(feedback_reply){
-		if ((($scope.feedback_form_text != "") && (typeof(feedback_reply) == 'undefined')) || ( (typeof(feedback_reply) != 'undefined') || ($scope.feedback_form_text_reply[feedback_reply] != "") )) {
+		if ((($scope.feedback_form_text != "") && (typeof(feedback_reply) == 'undefined')) || ( (typeof(feedback_reply) != 'undefined') && ($scope.feedback_form_text_reply[feedback_reply] != "") )) {
 			data = {};
 
 
@@ -610,7 +610,7 @@ var map = angular.module('map', ['rzModule'])
 				else {
 					$scope.recordActivity('Submit reply', feedback_reply+' '+data.message);
 					$scope.feedback_form_text_reply[feedback_reply]  = "";
-					
+
 				}
 
 				//$scope.replyto = {'reply':false};
