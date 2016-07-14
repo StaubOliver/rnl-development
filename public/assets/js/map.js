@@ -555,9 +555,20 @@ var map = angular.module('map', ['rzModule'])
 	$scope.feedback_form_error = "";
 
 	$scope.submitfeedback = function(feedback_reply){
-		if ((($scope.feedback_form_text != "") && (typeof(feedback_reply) == 'undefined')) || ($scope.feedback_form_text=='')) {
+		if ((($scope.feedback_form_text != "") && (typeof(feedback_reply) == 'undefined')) || ( (typeof(feedback_reply) != 'undefined') || ($scope.feedback_form_text_reply[feedback_reply] != "") )) {
 			data = {};
-			data.message = $scope.feedback_form_text;
+
+
+			if (typeof(feedback_reply) == "undefined"){
+				data.replyto = 0;
+				data.message = $scope.feedback_form_text;
+			}
+			else {
+				data.replyto = feedback_reply;
+				data.message = $scope.feedback_form_text_reply[feedback_reply];
+			}
+			
+			
 			data.user_id = user_id;
 			data.genus = filter['genus'];
 			data.age_min = $scope.selectedAgeMin;
@@ -572,14 +583,6 @@ var map = angular.module('map', ['rzModule'])
 			data.map_center_lat = actualmap.getCenter().lat();
 			data.map_center_lng = actualmap.getCenter().lng();
 
-			//feedback_reply is used when we submit a reply, is 0 if not
-			
-			if (typeof(feedback_reply) == "undefined"){
-				data.replyto = 0;
-			}
-			else {
-				data.replyto = feedback_reply;
-			}
 
 			data.fossil_selection = [];
 			$scope.selected_markers.forEach(function(item, index){
@@ -605,7 +608,7 @@ var map = angular.module('map', ['rzModule'])
 					$scope.recordActivity('Submit feedback', data.message);
 				}
 				else {
-					$scope.recordActivity('Submit reply', feedback_reply+' '+data.message);
+					$scope.recordActivity('Submit reply', feedback_reply+' '+data.);
 				}
 
 				//$scope.replyto = {'reply':false};
@@ -615,7 +618,12 @@ var map = angular.module('map', ['rzModule'])
 			});
 		}
 		else {
-			$scope.feedback_form_error = "Please write a comment before saving"
+			if (typeof(feedback_reply) == 'undefined'){
+				$scope.feedback_form_error = "Please write a comment before saving";
+			}
+			else {
+
+			}
 		}
 
 	}
