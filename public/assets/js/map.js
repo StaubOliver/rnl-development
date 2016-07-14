@@ -1134,6 +1134,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.hideComment = function(id){
 		index = 0; 
+		feedback = 0;
 		for (var i = 0; i < $scope.feedbacks.length; i++)
 		{
 			if ($scope.feedbacks[i]['feedback_id'] == id)
@@ -1144,6 +1145,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				for (var j = 0; j < $scope.feedbacks[i]["replies"].length; j++){
 					if ($scope.feedbacks[i]["replies"][j]["feedback_id"] == id){
 						index = j;
+						feedback = i;
 					}
 				}
 			}
@@ -1151,7 +1153,13 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 		data = {};
 		data.feedback_id = id;
-		$scope.feedbacks[index]["hidden"] == 0 ? data.hidden = 1 : data.hidden = 0;
+
+		if (j == 0){
+			$scope.feedbacks[index]["hidden"] == 0 ? data.hidden = 1 : data.hidden = 0;
+		}
+		else{
+			$scope.feedbacks[feedback]["replies"][index]["hidden"] == 0 ? data.hidden = 1 : data.hidden = 0;
+		}
 
 		$http({
 		        method : 'POST',
@@ -1160,7 +1168,13 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		    	
 		}).success(function(data, status, headers, config) {
-			$scope.feedbacks[index]["hidden"] == 0 ? $scope.feedbacks[index]["hidden"] = 1 : $scope.feedbacks[index]["hidden"] = 0;
+			
+			if (j == 0){
+				$scope.feedbacks[index]["hidden"] == 0 ? $scope.feedbacks[index]["hidden"] = 1 : $scope.feedbacks[index]["hidden"] = 0;
+			}
+			else{
+				$scope.feedbacks[feedback]["replies"][index]["hidden"] == 0 ? $scope.feedbacks[feedback]["replies"][index]["hidden"] = 1 : $scope.feedbacks[feedback]["replies"][index]["hidden"] = 0;
+			}
 			console.log("un/hide comment")
 		}).error(function(data, status, headers, config){
 			console.log(data);
