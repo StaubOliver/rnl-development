@@ -1145,7 +1145,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		    	
 		}).success(function(data, status, headers, config) {
-			$scope.feedbacks[index]["hidden"] == 0 ? scope.feedbacks[index]["hidden"] = 1 : scope.feedbacks[index]["hidden"] = 0;
+			$scope.feedbacks[index]["hidden"] == 0 ? $scope.feedbacks[index]["hidden"] = 1 : $scope.feedbacks[index]["hidden"] = 0;
 			console.log("un/hide comment")
 		}).error(function(data, status, headers, config){
 			console.log(data);
