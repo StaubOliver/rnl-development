@@ -543,11 +543,11 @@
 								<div class="feedback-message-reply">
 									<div class='row'>
 
-										<div class="col-md-8">
+										<div class="col-md-11">
 											<textarea class="form-control feedback-message-form-textarea" ng-model="'feedback_form_text_reply'+feedback.id" ng-change=" recordActivity('Writing reply', feedback.id+feedback_form_text)" rows="1"></textarea>
 										</div>
 
-										<div class="col-md-4 feedback-submit-btn">
+										<div class="col-md-1 feedback-submit-btn">
 											<button type="button" class="btn btn-custom-primary btn-xs" ng-click="submitfeedbackreply()">Send</button>
 										</div>
 
