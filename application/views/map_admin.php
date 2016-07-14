@@ -139,11 +139,11 @@
 								<div class='row'>
 
 									<div class='col-md-12'>
-										<div class='btn btn-custom-default btn-sm btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id, 0)'>See on the map</div>
+										<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id, 0)'>See on the map</div>
 									</div>
 
 									<div class='col-md-12'>
-										<div class='btn btn-custom-primary btn-sm btn-admin btn-admin-hide'>Hide comment</div>	
+										<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide'>Hide comment</div>	
 									</div>
 
 								</div>
