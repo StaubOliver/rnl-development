@@ -128,7 +128,9 @@ class Map extends MY_Controller {
 			'unique_id' => $this->LoggerModel->getUniqueID(),
 			'time' => date('Y-m-d H:i:s'),
 			'message' => $this->input->post('message'),
-			'rating' => 0, 
+			'rating_correctness' => 0, 
+			'rating_discovery' => 0,
+			'rating_relevance' => 0,
 			'replyto' => $this->input->post('replyto')
 		);
 

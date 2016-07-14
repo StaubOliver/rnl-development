@@ -550,7 +550,7 @@
 										</div>
 
 										<div class="col-md-2 feedback-submit-reply-btn">
-											<button type="button" class="btn btn-custom-primary btn-xs" ng-click="submitfeedbackreply(feedback.feedback_id)">Send</button>
+											<button type="button" class="btn btn-custom-primary btn-xs" ng-click="submitfeedback(feedback.feedback_id)">Send</button>
 										</div>
 
 									</div>
