@@ -84,11 +84,6 @@
 							<div class='col-md-6 admin-feedback-vertical-ligne'>
 
 								<div class='row'>
-
-									<div class='col-md-12' ng-show="feedback.hidden==1">
-										This feedback is hidden
-									</div>
-									
 									
 									<div class='col-md-12'>
 										<strong>
