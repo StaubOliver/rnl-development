@@ -495,13 +495,13 @@ var map = angular.module('map', ['rzModule'])
 	$scope.replyFeedback = function(id){
 		$scope.recordActivity("Click reply", "Feedback "+id);
 		//$scope.section_feedback_form_section_title = "You are replying to:";
-		deselect_all_marker();
+		//deselect_all_marker();
 		for (var i = 0; i < $scope.feedbacks.length; i++)
 		{
 			if ($scope.feedbacks[i]['feedback_id']==parseInt(id))
 			{
-				$scope.replyto = $scope.feedbacks[i];
-				$scope.replyto['reply'] = true;
+				//$scope.replyto = $scope.feedbacks[i];
+				//$scope.replyto['reply'] = true;
 				//console.log("replyto;")
 				//console.log($scope.replyto);
 				
