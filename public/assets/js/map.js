@@ -44,6 +44,8 @@ var map = angular.module('map', ['rzModule'])
 	$scope.feedback_form_text_reply = [];
 	$scope.show_feedback_reply = [];
 
+	$scope.share_url = window.location.hostname;
+
 	// Sets the map on all markers in the array.
 	function setMapOnAll(map) {
 		for (var i = 0; i < markers.length; i++) {
