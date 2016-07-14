@@ -307,6 +307,7 @@ var map = angular.module('map', ['rzModule'])
 		markers_age = [];
 		infoWindow = new google.maps.InfoWindow({maxWidth:400});
 
+		console.log(window.location.hostname);
 		//retrieve the fossils and put them as marker in the map
 		http.get('/api/map/loadfossils/'+filter['genus']+'/-1/'+$scope.selectedAgeMin+'/'+$scope.selectedAgeMax+'/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
 			data.forEach(function(item, index){
