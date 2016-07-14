@@ -247,8 +247,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 }
 
 .feedback-submit-reply-btn{
-	margin-top: 5px;
-	text-align: left;
+	padding: 0px !important;
 }
 
 .social-network-icons{
