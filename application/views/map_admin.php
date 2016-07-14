@@ -74,7 +74,6 @@
 					<h4><?php echo count($feedbacks).' feedbacks recorded'; ?></h4>
 				</div>
 				
-				{{feedbacks}}
 
 				<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
