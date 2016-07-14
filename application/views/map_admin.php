@@ -128,7 +128,7 @@
 
 
 									<div class='col-md-12 admin-feedback-tool'>
-										<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See on the map</div>
+										<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See comment on the map</div>
 										<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
 										
 									</div>
@@ -137,7 +137,7 @@
 
 							</div>
 
-							<div class='col-md-4'>
+							<div class='col-md-5'>
 								<div class='row'>
 
 									<div class='col-md-12'>
