@@ -78,7 +78,7 @@
 				<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
 
-					<div class='col-md-10 col-md-offset-1 admin-feedback'>
+					<div class='col-md-10 col-md-offset-1' ng-class="{'admin-feedback':feedback.hidden==0, 'admin-feedback-hidden':feedback.hidden==1}"'>
 						<div class='row'>
 
 							<div class='col-md-6 admin-feedback-vertical-ligne'>
@@ -144,10 +144,6 @@
 
 									<div class='col-md-12'>
 										<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide'>Hide comment</div>	
-									</div>
-
-									<div class='col-md-12' ng-show="feedback['hidden'] == 1">
-										This feedback is hidden
 									</div>
 
 								</div>
