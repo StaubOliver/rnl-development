@@ -542,7 +542,7 @@
 
 								<!-- reply area -->
 
-								<div class="feedback-message-reply">
+								<div class="feedback-message-reply" ng-show='show_feedback_reply[feedback_feedback_id]'>
 									<div class='row'>
 
 										<div class="col-md-10">

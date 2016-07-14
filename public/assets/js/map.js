@@ -42,6 +42,7 @@ var map = angular.module('map', ['rzModule'])
 	//$scope.replyto = {'reply':false};
 
 	$scope.feedback_form_text_reply = [];
+	$scope.show_feedback_reply = [];
 
 	// Sets the map on all markers in the array.
 	function setMapOnAll(map) {
@@ -397,6 +398,7 @@ var map = angular.module('map', ['rzModule'])
 				$scope.feedbacks.push(item);
 
 				$scope.feedback_form_text_reply[item.feedback_id]="";
+				$scope.show_feedback_reply[item.feedback_id] = false;
 
 			});
 		});
@@ -496,6 +498,7 @@ var map = angular.module('map', ['rzModule'])
 		$scope.recordActivity("Click reply", "Feedback "+id);
 		//$scope.section_feedback_form_section_title = "You are replying to:";
 		//deselect_all_marker();
+		$scope.show_feedback_reply[id] = true;
 		for (var i = 0; i < $scope.feedbacks.length; i++)
 		{
 			if ($scope.feedbacks[i]['feedback_id']==parseInt(id))
