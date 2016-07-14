@@ -628,6 +628,19 @@ fieldset[disabled] .btn-custom-default.active {
 	border-left: 2px solid #ff4d79;
 }
 
+.admin-feedback-reply-hidden{
+	margin-top: 2px;
+
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+
+	background-color:#F8F8F8;
+	border-radius: 2px;
+	border-left: 2px solid #ff4d79;
+}
+
 .admin-feedback-btn-see-comment{
 	float: right;
 }
