@@ -544,7 +544,7 @@
 									<div class='row'>
 
 										<div class="col-md-10">
-											<textarea class="form-control feedback-message-form-textarea" ng-model="'feedback_form_text_reply'+feedback.id" ng-change=" recordActivity('Writing reply', feedback.id+feedback_form_text)" rows="1"></textarea>
+											<textarea class="form-control feedback-message-form-textarea" ng-model="'feedback_form_text_reply'+feedback.feedback_id" ng-change=" recordActivity('Writing reply', feedback.id+feedback_form_text)" rows="1"></textarea>
 										</div>
 
 										<div class="col-md-2 feedback-submit-reply-btn">
