@@ -83,7 +83,7 @@
 
 							<div class='col-md-6 admin-feedback-vertical-ligne'>
 
-								<div class='row '>
+								<div class='row'>
 
 									<div class='col-md-12' ng-show="feedback.hidden==1">
 										This feedback is hidden
@@ -216,7 +216,7 @@
 
 							<div class='row'>
 
-								<div class='col-md-7 admin-feedback-vertical-ligne'>
+								<div class='col-md-6 admin-feedback-vertical-ligne'>
 
 									<div class='row'>
 
@@ -269,8 +269,26 @@
 									</div>
 								</div>
 
+								<div class='col-md-2'>
+									<div class='row'>
 
-								<div class='col-md-5'>
+										<div class='col-md-12'>
+											<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id, 0)'>See on the map</div>
+										</div>
+
+										<div class='col-md-12' ng-show="feedback.hidden == 0">
+											<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide' ng-click="hideComment(feedback.feedback_id)">Hide comment</div>	
+										</div>
+
+										<div class='col-md-12' ng-show="feedback.hidden == 1">
+											<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide' ng-click="hideComment(feedback.feedback_id)">Unhide comment</div>	
+										</div>
+
+									</div>
+								</div>
+
+
+								<div class='col-md-4'>
 
 									<div class='row'>
 

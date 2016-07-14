@@ -559,16 +559,26 @@ var map = angular.module('map', ['rzModule'])
 
 	$scope.submitfeedback = function(feedback_reply){
 		if ((($scope.feedback_form_text != "") && (typeof(feedback_reply) == 'undefined')) || ( (typeof(feedback_reply) != 'undefined') && ($scope.feedback_form_text_reply[feedback_reply] != "") )) {
+			
 			data = {};
-
 
 			if (typeof(feedback_reply) == "undefined"){
 				data.replyto = 0;
 				data.message = $scope.feedback_form_text;
+				
+				data.fossil_selection = [];
+				$scope.selected_markers.forEach(function(item, index){
+				data.fossil_selection.push(item['title'].split("-")[0]);
+			});
 			}
 			else {
 				data.replyto = feedback_reply;
 				data.message = $scope.feedback_form_text_reply[feedback_reply];
+				
+				data.fossil_selection = [];
+				$scope.selected_markers.forEach(function(item, index){
+				data.fossil_selection.push(item['title'].split("-")[0]);
+			});
 			}
 			
 			
@@ -587,10 +597,7 @@ var map = angular.module('map', ['rzModule'])
 			data.map_center_lng = actualmap.getCenter().lng();
 
 
-			data.fossil_selection = [];
-			$scope.selected_markers.forEach(function(item, index){
-				data.fossil_selection.push(item['title'].split("-")[0]);
-			});
+			
 
 			// Do the ajax call
 			$http({
