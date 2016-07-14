@@ -78,7 +78,7 @@
 				<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
 
-					<div class='col-md-10 col-md-offset-1' ng-class="{'admin-feedback':feedback.hidden==0, 'admin-feedback-hidden':feedback.hidden==1}"'>
+					<div class='col-md-10 col-md-offset-1' ng-class="{'admin-feedback':feedback.hidden==0, 'admin-feedback-hidden':feedback.hidden==1}">
 						<div class='row'>
 
 							<div class='col-md-6 admin-feedback-vertical-ligne'>
@@ -212,7 +212,7 @@
 					<!-- replies -->
 					<div ng-repeat='rep in feedback.replies' ng-show='feedback.replies.length'>
 
-						<div class='col-md-10 col-md-offset-1 admin-feedback-reply'>
+						<div class='col-md-10 col-md-offset-1' ng-class="{'admin-feedback-reply':feedback.hidden==0, 'admin-feedback-hidden':feedback.hidden==1}">
 
 							<div class='row'>
 
