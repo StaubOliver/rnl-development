@@ -568,8 +568,16 @@ fieldset[disabled] .btn-custom-default.active {
 }
 
 .btn-admin{
-	width: 150px;
+	width: 120px;
 	text-align: center;
+}
+
+.btn-admin-map{
+	padding-top: 8px;
+}
+
+.btn-admin-hide{
+	padding-top: 8px;
 }
 
 .admin-feedback-vertical-ligne{
