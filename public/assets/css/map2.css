@@ -259,8 +259,11 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 
 .social-network-icon{
 	cursor: pointer;
-	padding: 0px !important;
+	margin-top: 8px;
+}
 
+.social-network-link{
+	padding: 0px !important;
 }
 
 .map-header{
