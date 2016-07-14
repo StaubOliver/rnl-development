@@ -507,7 +507,7 @@ var map = angular.module('map', ['rzModule'])
 				//$scope.replyto['reply'] = true;
 				//console.log("replyto;")
 				//console.log($scope.replyto);
-				
+				/*
 				for (var j = 0; j < markers.length; j++){
 					for (var k = 0; k < $scope.replyto.selection.length; k++){
 
@@ -519,7 +519,7 @@ var map = angular.module('map', ['rzModule'])
 						}
 
 					}
-				}
+				}*/
 			}
 		}
 		
