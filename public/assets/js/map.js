@@ -1151,6 +1151,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			}
 		}
 
+		console.log(feedback+" "+index);
+
 		data = {};
 		data.feedback_id = id;
 
@@ -1162,10 +1164,10 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}
 
 		$http({
-		        method : 'POST',
-		        url: '/api/map/hidefeedback',
-		        data: $.param(data),
-		        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+	        method : 'POST',
+	        url: '/api/map/hidefeedback',
+	        data: $.param(data),
+	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		    	
 		}).success(function(data, status, headers, config) {
 			
