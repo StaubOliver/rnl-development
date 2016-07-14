@@ -74,6 +74,7 @@
 					<h4><?php echo count($feedbacks).' feedbacks recorded'; ?></h4>
 				</div>
 				
+				{{feedbacks}}
 
 				<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
@@ -128,7 +129,7 @@
 
 
 									<div class='col-md-12 admin-feedback-tool'>
-										<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See comment on the map</div>
+										<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See on the map</div>
 										<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
 										
 									</div>
