@@ -361,7 +361,7 @@ class MapModel extends CI_Model {
     		$row = $query->row_array();
     		$filter_id = $row['filter_id'];
 
-    		$query2 = $this->db->query('SELECT feedback_id, user_id, time, message, map_coordinates_id FROM feedback WHERE filter_id='.$filter_id.' AND replyto=0 ORDER BY time DESC');
+    		$query2 = $this->db->query('SELECT feedback_id, user_id, time, message, map_coordinates_id FROM feedback WHERE filter_id='.$filter_id.' AND replyto=0 AND hidden=0 ORDER BY time DESC');
 
     		if ($query2->num_rows() > 0)
     		{
@@ -374,7 +374,7 @@ class MapModel extends CI_Model {
                     $new_row['replies'] = array();
 
                     //query of replies for each feedback
-                    $query_replies = $this->db->query('SELECT feedback_id, user_id, time, message, map_coordinates_id FROM feedback WHERE filter_id='.$filter_id.' AND replyto='.$new_row['feedback_id'].' ORDER BY time ASC');
+                    $query_replies = $this->db->query('SELECT feedback_id, user_id, time, message, map_coordinates_id FROM feedback WHERE filter_id='.$filter_id.' AND replyto='.$new_row['feedback_id'].'AND hidden=0 ORDER BY time ASC');
 
                     if ($query_replies->num_rows() > 0){
                         //for each replies, we get their details

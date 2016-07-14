@@ -244,7 +244,7 @@ class Map extends MY_Controller {
 
 	public function hidefeedback(){
 		$data = array(
-			'hidden' => $this->input->post("hidden");
+			'hidden' => $this->input->post("hidden")
 		);
 
 		$this->db->where("feedback_id", $this->input->post("feedback_id"));
