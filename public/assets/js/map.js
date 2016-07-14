@@ -550,7 +550,7 @@ var map = angular.module('map', ['rzModule'])
 	$scope.feedback_form_text = "";
 	$scope.feedback_form_error = "";
 
-	$scope.submitfeedback = function(){
+	$scope.submitfeedback = function(feedback_reply = 0){
 		if ($scope.feedback_form_text){
 			data = {};
 			data.message = $scope.feedback_form_text;
@@ -568,11 +568,8 @@ var map = angular.module('map', ['rzModule'])
 			data.map_center_lat = actualmap.getCenter().lat();
 			data.map_center_lng = actualmap.getCenter().lng();
 
-			if ($scope.replyto['reply'] == true){
-				data.replyto = $scope.replyto['feedback_id'];
-			} else {
-				data.replyto = 0;
-			}
+			//feedback_reply is used when we submit a reply, is 0 if not
+			data.replyto = feedback_reply;
 
 			data.fossil_selection = [];
 			$scope.selected_markers.forEach(function(item, index){
@@ -592,7 +589,7 @@ var map = angular.module('map', ['rzModule'])
 				$scope.feedback_form_text = "";
 				$scope.clear_selected_markers();
 				$scope.recordActivity('Submit feedback', '');
-				$scope.replyto = {'reply':false};
+				//$scope.replyto = {'reply':false};
 
 			}).error(function(data, status, headers, config){
 				console.log(data);

@@ -360,6 +360,7 @@
 							</div>
 						</div>
 
+						<!--
 						<div ng-show="replyto['reply']" class="feedback-message-form">
 							<div class='row feedback-form'>
 							 	<div class="col-md-12 feedback-form-author">
@@ -381,6 +382,7 @@
 								
 							</div>
 						</div>
+						-->
 
 
 						<div class="feedback-message-form">
