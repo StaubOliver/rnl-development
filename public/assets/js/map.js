@@ -1124,6 +1124,32 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		});
 	}
 
+	$scope.hideComment = function(id){
+		index = 0; 
+		for (var i = 0; i < $scope.feedbacks.length; i++)
+		{
+			if ($scope.feedbacks[i]['feedback_id'] == id)
+			{
+				index = i;
+			}
+		}
+
+		data = {};
+		data.feedback_id = id;
+		data.hidden = !$scope.feedbacks[index]["hidden"];
+
+		$http({
+		        method : 'POST',
+		        url: '/api/map/hidefeedback',
+		        data: $.param(data),
+		        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+		    	
+		}).success(function(data, status, headers, config) {
+			$scope.feedbacks[index]["hidden"] = !$scope.feedbacks[index]["hidden"];
+		}
+
+	}
+
 	
 
 	$scope.showMap = function(feedback_id, reply_id)

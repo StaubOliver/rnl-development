@@ -148,11 +148,11 @@
 									</div>
 
 									<div class='col-md-12' ng-show="feedback.hidden == 0">
-										<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide'>Hide comment</div>	
+										<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide' ng-click="hideComment(feedback.feedback_id)">Hide comment</div>	
 									</div>
 
 									<div class='col-md-12' ng-show="feedback.hidden == 1">
-										<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide'>Unhide comment</div>	
+										<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide' ng-click="hideComment(feedback.feedback_id)">Unhide comment</div>	
 									</div>
 
 								</div>

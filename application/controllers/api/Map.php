@@ -243,12 +243,16 @@ class Map extends MY_Controller {
 	}
 
 	public function hidefeedback(){
-		$data = array(
-			'hidden' => $this->input->post("hidden")
-		);
+		if ($this->ion_auth->logged_in()){
+			if ($this->ProfileModel->isAdmin()==1){
+				$data = array(
+					'hidden' => $this->input->post("hidden")
+				);
 
-		$this->db->where("feedback_id", $this->input->post("feedback_id"));
-		$this->db->update("feedback", $data);
+				$this->db->where("feedback_id", $this->input->post("feedback_id"));
+				$this->db->update("feedback", $data);
+			}
+		}
 	}
 
 
