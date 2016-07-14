@@ -361,7 +361,7 @@ class MapModel extends CI_Model {
     		$row = $query->row_array();
     		$filter_id = $row['filter_id'];
 
-    		$query2 = $this->db->query('SELECT feedback_id, user_id, time, message, map_coordinates_id FROM feedback WHERE filter_id='.$filter_id.' AND replyto=0 ORDER BY time DESC');
+    		$query2 = $this->db->query('SELECT feedback_id, user_id, time, message, map_coordinates_id FROM feedback WHERE filter_id='.$filter_id.' AND replyto=0 AND hidden=0 ORDER BY time DESC');
 
     		if ($query2->num_rows() > 0)
     		{
@@ -501,7 +501,7 @@ class MapModel extends CI_Model {
 
         $return = [];
 
-        $query_feedbacks = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id, rating_correctness, rating_discovery, rating_relevance  FROM feedback WHERE replyto=0 ORDER BY time DESC');
+        $query_feedbacks = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id, rating_correctness, rating_discovery, rating_relevance, hidden  FROM feedback WHERE replyto=0 ORDER BY time DESC');
 
         if ($query_feedbacks->num_rows() > 0){
             foreach ($query_feedbacks->result_array() as $row) {

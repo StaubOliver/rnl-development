@@ -131,7 +131,8 @@ class Map extends MY_Controller {
 			'rating_correctness' => 0, 
 			'rating_discovery' => 0,
 			'rating_relevance' => 0,
-			'replyto' => $this->input->post('replyto')
+			'replyto' => $this->input->post('replyto'),
+			'hidden' => 0
 		);
 
 		$filter = array(
@@ -156,6 +157,8 @@ class Map extends MY_Controller {
 		$this->MapModel->submitFeedback($data, $filter, $map_coordinates, $fossil_selection);
 
 	}
+
+
 
 	/**
 	 *  Upvote a feedback message
@@ -237,6 +240,15 @@ class Map extends MY_Controller {
 				$this->MapModel->adminEvaluateFeedback($data);
 			}
 		}
+	}
+
+	public function hidefeedback(){
+		$data = array(
+			'hidden' => $this->input->post("hidden");
+		);
+
+		$this->db->where("feedback_id", $this->input->post("feedback_id"));
+		$this->db->update("feedback", $data);
 	}
 
 
