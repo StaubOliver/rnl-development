@@ -402,6 +402,7 @@ var map = angular.module('map', ['rzModule'])
 
 			});
 		});
+		console.log($scope.show_feedback_reply);
 	}
 
 	$scope.feedback_selection_marker = [];
