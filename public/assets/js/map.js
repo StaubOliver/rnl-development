@@ -595,10 +595,19 @@ var map = angular.module('map', ['rzModule'])
 		    	
 			}).success(function(data, status, headers, config) {
 				console.log("success");
-				refreshFeedback($http);
+				
 				$scope.feedback_form_text = "";
 				$scope.clear_selected_markers();
-				$scope.recordActivity('Submit feedback', '');
+				
+
+				if (typeof(feedback_reply) == 'undefined'){
+					refreshFeedback($http);
+					$scope.recordActivity('Submit feedback', data.message);
+				}
+				else {
+					$scope.recordActivity('Submit reply', feedback_reply+' '+data.message);
+				}
+
 				//$scope.replyto = {'reply':false};
 
 			}).error(function(data, status, headers, config){
