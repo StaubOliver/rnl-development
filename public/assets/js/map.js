@@ -610,7 +610,7 @@ var map = angular.module('map', ['rzModule'])
 				else {
 					$scope.recordActivity('Submit reply', feedback_reply+' '+data.message);
 					$scope.feedback_form_text_reply[feedback_reply]  = "";
-
+					console.log(data.message);
 				}
 
 				//$scope.replyto = {'reply':false};
