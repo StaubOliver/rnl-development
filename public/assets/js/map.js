@@ -555,7 +555,7 @@ var map = angular.module('map', ['rzModule'])
 	$scope.feedback_form_error = "";
 
 	$scope.submitfeedback = function(feedback_reply){
-		if (($scope.feedback_form_text && (typeof(feedback_reply) != 'undefined')) || (!$scope.feedback_form_text)) {
+		if ((($scope.feedback_form_text != "") && (typeof(feedback_reply) != 'undefined')) || ($scope.feedback_form_text=='')) {
 			data = {};
 			data.message = $scope.feedback_form_text;
 			data.user_id = user_id;
