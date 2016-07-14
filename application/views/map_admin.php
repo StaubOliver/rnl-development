@@ -78,10 +78,10 @@
 				<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
 
-					<div class='col-md-10 col-md-offset-1 admin-feedback'>
+					<div class='col-md-8 col-md-offset-1 admin-feedback'>
 						<div class='row'>
 
-							<div class='col-md-7 admin-feedback-vertical-ligne'>
+							<div class='col-md-6 admin-feedback-vertical-ligne'>
 
 								<div class='row '>
 									
