@@ -1175,14 +1175,14 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 		actualmap = new google.maps.Map(document.getElementById("map-"+feedback_id),mapOpt);
 		
-		console.log(feedback['map_ne_lat']);
-		/*
-		var ne = new google.maps.LatLng(temp['map_ne_lat'], temp['map_ne_lng']);
-		var sw = new google.maps.LatLng(temp['map_sw_lat'], temp['map_sw_lng']);
+		console.log(feedback['map_lat_ne']);
+		
+		var ne = new google.maps.LatLng(temp['map_lat_ne'], temp['map_lng_ne']);
+		var sw = new google.maps.LatLng(temp['map_lat_sw'], temp['map_lng_sw']);
 		var bounds = new google.maps.LatLngBounds(sw, ne);
-		*/
+		
 
-		//actualmap.fitBounds(bounds);
+		actualmap.fitBounds(bounds);
 
 		if (feedback.selection.length > 0){
 			for (var i = 0; i < feedback.selection.length; i++)
