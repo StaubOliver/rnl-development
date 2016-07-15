@@ -1222,7 +1222,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 		var mapOpt = {
 		    center:new google.maps.LatLng($temp['map_center_lat'],$temp['map_center_lng']),
-		    zoom:$temp['map_zoom'],
+		    zoom:parseInt($temp['map_zoom']),
 		    maxZoom: 12,
 		    minZoom: 2,
 		    mapTypeId:google.maps.MapTypeId.ROADMAP,
