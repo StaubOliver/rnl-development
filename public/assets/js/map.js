@@ -1196,11 +1196,12 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.showMap = function(feedback_id)
 	{
 		$scope.show_map[feedback_id] = true;
-		document.getElementById('map-'+feedback_id).setAttribute("style","height:400px");
+		document.getElementById('map-'+feedback_id).setAttribute("style","height:500px");
+		document.getElementById('map-'+feedback_id).setAttribute("display","inline");
 
 		var $temp;
 		
-		/*for (var i = 0; i < $scope.feedbacks.length; i++)
+		for (var i = 0; i < $scope.feedbacks.length; i++)
 		{
 			if ($scope.feedbacks[i]['feedback_id'] == feedback_id)
 			{
@@ -1208,10 +1209,16 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			}
 		}
 
-		for (var i = 0; i < $temp.selection.length; i++)
-		{
-			
-		}*/
+		if ($temp.selection.length > 0){
+			for (var i = 0; i < $temp.selection.length; i++)
+			{
+				
+			}
+		}
+		else {
+
+		}
+		
 
 		var mapOpt = {
 		    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
@@ -1230,6 +1237,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	{
 		$scope.show_map[feedback_id] = false;
 		document.getElementById('map-'+feedback_id).setAttribute("style","height:-1px");
+		document.getElementById('map-'+feedback_id).setAttribute("display","none");
 	}
 
 
