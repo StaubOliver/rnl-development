@@ -262,7 +262,7 @@
 									<div class='row'>
 
 										<div class='col-md-12'>
-											<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id, 0)'>See on the map</div>
+											<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id, rep.feedback_id)'>See on the map</div>
 										</div>
 
 										<div class='col-md-12' ng-show="rep.hidden == 0">
