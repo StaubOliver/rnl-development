@@ -1160,8 +1160,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		marker.addListener("click", function()
 		{
 
-			console.log(select);
-
 			//info window
 			infoWindowadmin.close;
 			var content =
