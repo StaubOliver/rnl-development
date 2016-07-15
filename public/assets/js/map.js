@@ -830,6 +830,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.show_map = [];
 
+	var infoWindow;
 
 	refreshFeedback();
 
