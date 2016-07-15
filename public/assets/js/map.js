@@ -1157,15 +1157,15 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		{
 			if ($scope.feedbacks[i]['feedback_id'] == feedback_id)
 			{
-				temp = $scope.feedbacks[i];
+				feedback = $scope.feedbacks[i];
 			}
 		}
 
-		console.log(temp);
+		console.log(feedback);
 		
 		var mapOpt = {
-		    center:new google.maps.LatLng(temp['map_center_lat'],temp['map_center_lng']),
-		    zoom:parseInt(temp['map_zoom']),
+		    center:new google.maps.LatLng(feedback['map_center_lat'],feedback['map_center_lng']),
+		    zoom:parseInt(feedback['map_zoom']),
 		    maxZoom: 12,
 		    minZoom: 2,
 		    mapTypeId:google.maps.MapTypeId.ROADMAP,
@@ -1175,7 +1175,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 		actualmap = new google.maps.Map(document.getElementById("map-"+feedback_id),mapOpt);
 		
-		console.log(temp['map_ne_lat']);
+		console.log(feedback['map_ne_lat']);
 		/*
 		var ne = new google.maps.LatLng(temp['map_ne_lat'], temp['map_ne_lng']);
 		var sw = new google.maps.LatLng(temp['map_sw_lat'], temp['map_sw_lng']);
@@ -1184,16 +1184,16 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 		//actualmap.fitBounds(bounds);
 
-		if (temp.selection.length > 0){
+		if (feedback.selection.length > 0){
 			for (var i = 0; i < temp.selection.length; i++)
 			{
-				console.log(temp.selection[i]);
+				console.log(feedback.selection[i]);
 
 				var marker = new google.maps.Marker({
 					map: actualmap,
-					position: new google.maps.LatLng(temp.selection[i]['lat'], temp.selection[i]['lng']),
-					title: temp.selection[i]['id'] + "-" + temp.selection[i]['title'],
-				    icon: getPinColor(temp.selection[i]['age'])
+					position: new google.maps.LatLng(feedback.selection[i]['lat'], feedback.selection[i]['lng']),
+					title: feedback.selection[i]['id'] + "-" + feedback.selection[i]['title'],
+				    icon: getPinColor(feedback.selection[i]['age'])
 				});
 		
 				marker.addListener("click", function(){
