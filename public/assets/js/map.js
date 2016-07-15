@@ -1160,6 +1160,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				temp = $scope.feedbacks[i];
 			}
 		}
+
+		console.log(temp);
 		
 		var mapOpt = {
 		    center:new google.maps.LatLng(temp['map_center_lat'],temp['map_center_lng']),
@@ -1180,7 +1182,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		var bounds = new google.maps.LatLngBounds(sw, ne);
 		*/
 
-		actualmap.fitBounds(bounds);
+		//actualmap.fitBounds(bounds);
 
 		if (temp.selection.length > 0){
 			for (var i = 0; i < temp.selection.length; i++)
