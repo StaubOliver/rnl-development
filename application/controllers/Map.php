@@ -46,7 +46,7 @@ class map extends CI_Controller {
 		}
 
 		if($this->uri->segment(4)){
-			$data['agemin'] = urldecode($this->uri->segment(3));
+			$data['agemin'] = urldecode($this->uri->segment(4));
 		}
 		else
 		{
