@@ -132,6 +132,14 @@
 										</div>
 									</div>
 
+									<div class='col-md-6'>
+										{{feedback.selection.length}} fossils selected
+									</div>
+
+									<div class='col-md-6'>
+										{{feedback['upvote']}} upvotes
+									</div>
+
 									<!--
 									<div class='col-md-12 admin-feedback-tool'>
 										<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See on the map</div>
