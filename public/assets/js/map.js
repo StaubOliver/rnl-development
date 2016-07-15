@@ -1217,7 +1217,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			}
 		}
 
-		
+
 		
 		var mapOpt = {
 		    center:new google.maps.LatLng($temp['map_center_lat'],$temp['map_center_lng']),
@@ -1238,9 +1238,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 				var marker = new google.maps.Marker({
 					map: actualmap,
-					position: new google.maps.LatLng(info['lat'], info['lng']),
-					title: info['id'] + "-" +info['title'],
-				    icon: getPinColor(info['age'])
+					position: new google.maps.LatLng($temp.selection[i]['lat'], $temp.selection[i]['lng']),
+					title: info['id'] + "-" +$temp.selection[i]['title'],
+				    icon: getPinColor($temp.selection[i]['age'])
 				});
 		
 				marker.addListener("click", function(){
