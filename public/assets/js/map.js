@@ -1197,7 +1197,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	{
 		$scope.show_map[feedback_id] = true;
 		document.getElementById('map-'+feedback_id).setAttribute("style","height:500px");
-		document.getElementById('map-'+feedback_id).setAttribute("display","inline");
 
 		var $temp;
 		
@@ -1237,7 +1236,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	{
 		$scope.show_map[feedback_id] = false;
 		document.getElementById('map-'+feedback_id).setAttribute("style","height:-1px");
-		document.getElementById('map-'+feedback_id).setAttribute("display","none");
 	}
 
 
