@@ -1246,7 +1246,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 						+ "<div class='row'>"
 
 							+ "<div class='col-md-6'>"
-								+ "<img data-toggle='modal' data-target='#Modal-lg-image' src='"+info["url"]+"' class='map-infowindow-img' onclick='show_img(\""+info['url']+"\")'>"
+								+ "<img data-toggle='modal' data-target='#Modal-lg-image' src='"+$temp.selection[i]["url"]+"' class='map-infowindow-img' onclick='show_img(\""+info['url']+"\")'>"
 								+ "</br> [+] Click to enlarge"
 							+ "</div>"
 
@@ -1254,19 +1254,19 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 								+ "<div class='row'>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'><strong> Genus : </strong> " + info['title'] + "</p>"
+										+ "<p class='infowindow-text'><strong> Genus : </strong> " + $temp.selection[i]['genus'] + "</p>"
 									+ "</div>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Species : </strong> " + info["species"] + "</p>"
+										+ "<p class='infowindow-text'> <strong> Species : </strong> " + $temp.selection[i]["species"] + "</p>"
 									+ "</div>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Age : </strong>" + info['age'] + "</p>"
+										+ "<p class='infowindow-text'> <strong> Age : </strong>" + $temp.selection[i]['age'] + "</p>"
 									+ "</div>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Collector : </strong>"+ info["collector"] + "</p>"
+										+ "<p class='infowindow-text'> <strong> Collector : </strong>"+ $temp.selection[i]["collector"] + "</p>"
 									+ "</div>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Location : </strong>" + info["location"] + "</p>"
+										+ "<p class='infowindow-text'> <strong> Location : </strong>" + $temp.selection[i]["location"] + "</p>"
 									+ "</div>"
 
 								+"</div>"

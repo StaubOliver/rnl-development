@@ -470,7 +470,7 @@ class MapModel extends CI_Model {
         }
 
 
-        //for each feedback we query it selected fossils
+        //for each feedback we query its selected fossils
         $query_selection = $this->db->query("SELECT data_table, data_id FROM feedback_fossil WHERE feedback_id='".$row['feedback_id']."'");
         if($query_selection->num_rows()>0)
         {
@@ -478,7 +478,8 @@ class MapModel extends CI_Model {
             foreach ($query_selection->result_array() as $select) 
             {
                 //$row['selection'][] = $select;
-                $query_fossil = $this->db->query("SELECT lat, lng, age FROM ".$select["data_table"]." WHERE data_id='".$select["data_id"]."'");
+                $query_fossil = $this->db->query("SELECT lat, lng, age, collector, location, genus, species  FROM ".$select["data_table"]." WHERE data_id='".$select["data_id"]."'");
+
                 if ($query_fossil->num_rows()>0)
                 {
                     $temp = $query_fossil->row_array();
