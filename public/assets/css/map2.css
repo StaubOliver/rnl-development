@@ -62,8 +62,9 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 }
 
 .filter-element{
-	margin-top:5px;
+	/*margin-top:5px;
 	margin-bottom:5px;
+	*/
 	padding-top: 6px;
 	padding-bottom: 6px;
 /*
