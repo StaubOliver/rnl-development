@@ -830,7 +830,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.show_map = [];
 
-	var infoWindow;
+	var infoWindow = new google.maps.InfoWindow({maxWidth:400});
 
 	refreshFeedback();
 
@@ -1193,13 +1193,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			console.log(data);
 		});
 
-	}
-
-	function createMarker(info)
-	{
-		
-
-		return marker;
 	}
 
 	
