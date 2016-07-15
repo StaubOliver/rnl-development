@@ -1194,6 +1194,13 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	}
 
+	function createMarker(info)
+	{
+		
+
+		return marker;
+	}
+
 	
 	$scope.showMap = function(feedback_id)
 	{
@@ -1201,6 +1208,19 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		document.getElementById('map-'+feedback_id).setAttribute("style","height:500px");
 
 		var $temp;
+
+		
+		var mapOpt = {
+		    center:new google.maps.LatLng($temp['map_center_lat'],$temp['map_center_lng']),
+		    zoom:parseInt($temp['map_zoom']),
+		    maxZoom: 12,
+		    minZoom: 2,
+		    mapTypeId:google.maps.MapTypeId.ROADMAP,
+		    mapTypeControl:false,
+		    streetViewControl:false
+		};
+
+		actualmap = new google.maps.Map(document.getElementById("map-"+feedback_id),mapOpt);
 		
 		for (var i = 0; i < $scope.feedbacks.length; i++)
 		{
@@ -1213,7 +1233,60 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		if ($temp.selection.length > 0){
 			for (var i = 0; i < $temp.selection.length; i++)
 			{
-				
+
+				var marker = new google.maps.Marker({
+					map: actualmap,
+					position: new google.maps.LatLng(info['lat'], info['lng']),
+					title: info['id'] + "-" +info['title'],
+				    icon: getPinColor(info['age'])
+				});
+		
+				marker.addListener("click", function(){
+
+					//info window
+					infoWindow.close;
+					var content =
+					"<div class='container-fluid map-infowindow'>"
+						+ "<div class='row'>"
+
+							+ "<div class='col-md-6'>"
+								+ "<img data-toggle='modal' data-target='#Modal-lg-image' src='"+info["url"]+"' class='map-infowindow-img' onclick='show_img(\""+info['url']+"\")'>"
+								+ "</br> [+] Click to enlarge"
+							+ "</div>"
+
+							+ "<div class='col-md-6'>"
+
+								+ "<div class='row'>"
+									+ "<div class='col-xs-12'>"
+										+ "<p class='infowindow-text'><strong> Genus : </strong> " + info['title'] + "</p>"
+									+ "</div>"
+									+ "<div class='col-xs-12'>"
+										+ "<p class='infowindow-text'> <strong> Species : </strong> " + info["species"] + "</p>"
+									+ "</div>"
+									+ "<div class='col-xs-12'>"
+										+ "<p class='infowindow-text'> <strong> Age : </strong>" + info['age'] + "</p>"
+									+ "</div>"
+									+ "<div class='col-xs-12'>"
+										+ "<p class='infowindow-text'> <strong> Collector : </strong>"+ info["collector"] + "</p>"
+									+ "</div>"
+									+ "<div class='col-xs-12'>"
+										+ "<p class='infowindow-text'> <strong> Location : </strong>" + info["location"] + "</p>"
+									+ "</div>"
+
+								+"</div>"
+
+							+ "</div>"
+						+ "</div>"
+					+ "</div>"
+					;
+
+					var compiled = $compile(content)($scope);
+
+					infoWindow.setContent(compiled[0]);
+
+				});
+
+
 			}
 		}
 		else {
@@ -1222,17 +1295,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		
 		//console.log($temp['map_center_lat'] + " "+ $temp['map_center_lng']+" "+$temp['map_zoom']);
 
-		var mapOpt = {
-		    center:new google.maps.LatLng($temp['map_center_lat'],$temp['map_center_lng']),
-		    zoom:parseInt($temp['map_zoom']),
-		    maxZoom: 12,
-		    minZoom: 2,
-		    mapTypeId:google.maps.MapTypeId.ROADMAP,
-		    mapTypeControl:false,
-		    streetViewControl:false
-		};
-
-		actualmap = new google.maps.Map(document.getElementById("map-"+feedback_id),mapOpt);
 	}
 
 	$scope.hideMap = function(feedback_id)
