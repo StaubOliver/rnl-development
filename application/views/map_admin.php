@@ -262,9 +262,11 @@
 								<div class='col-md-2'>
 									<div class='row'>
 
+									<!--
 										<div class='col-md-12'>
 											<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id, rep.feedback_id)'>See on the map</div>
 										</div>
+										-->
 
 										<div class='col-md-12' ng-show="rep.hidden == 0">
 											<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide' ng-click="hideComment(rep.feedback_id)">Hide comment</div>	
