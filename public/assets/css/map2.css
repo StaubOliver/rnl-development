@@ -70,7 +70,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 .filter-reset-btn{
 	position: absolute;
 	top: 20px;
-	right: 20px;
+	right: 25px;
 }
 
 .filter-element{
