@@ -41,6 +41,7 @@
 $route['default_controller'] = "app";
 $route['404_override'] = '';
 $route['api/'] = 'api/';
+$route['map/map_admin'] = 'map/map_admin';
 $route['map/(:any)'] = 'map/index/$1';
 //$route['account'] = "auth";
 
