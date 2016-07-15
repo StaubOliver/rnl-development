@@ -1177,8 +1177,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		
 		console.log(feedback['map_lat_ne']);
 		
-		var ne = new google.maps.LatLng(temp['map_lat_ne'], temp['map_lng_ne']);
-		var sw = new google.maps.LatLng(temp['map_lat_sw'], temp['map_lng_sw']);
+		var ne = new google.maps.LatLng(feedback['map_lat_ne'], feedback['map_lng_ne']);
+		var sw = new google.maps.LatLng(feedback['map_lat_sw'], feedback['map_lng_sw']);
 		var bounds = new google.maps.LatLngBounds(sw, ne);
 		
 
