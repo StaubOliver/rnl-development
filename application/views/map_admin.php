@@ -278,11 +278,11 @@
 										-->
 
 										<div class='col-md-12' ng-show="rep.hidden == 0">
-											<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide' ng-click="hideComment(rep.feedback_id)">Hide comment</div>	
+											<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide-reply' ng-click="hideComment(rep.feedback_id)">Hide comment</div>	
 										</div>
 
 										<div class='col-md-12' ng-show="rep.hidden == 1">
-											<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide' ng-click="hideComment(rep.feedback_id)">Unhide comment</div>	
+											<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide-reply' ng-click="hideComment(rep.feedback_id)">Unhide comment</div>	
 										</div>
 
 									</div>
