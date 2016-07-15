@@ -1196,6 +1196,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.showMap = function(feedback_id, reply_id)
 	{
 		$scope.show_map[feedback_id] = true;
+		document.getElementById('map-'+feedback_id).setAttribute("style","height:400px");
 
 		var $temp;
 		
@@ -1223,7 +1224,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		};
 
 		actualmap = new google.maps.Map(document.getElementById("map-"+feedback_id),mapOpt);
-		document.getElementById('map-'+feedback_id).setAttribute("style","height:400px");
 	}
 
 
