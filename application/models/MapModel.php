@@ -452,6 +452,9 @@ class MapModel extends CI_Model {
             if ($coor['age_max']=="11") {$new_row["age_max"] = 'Cambrian';} 
             if ($coor['age_max']=="12") {$new_row["age_max"] = 'Precambrian';} 
 
+            $new_row["age_min_filter"] = $coor["age_min"];
+            $new_row["age_max_filter"] = $coor["age_max"];
+
             $new_row["collector"] = $coor["collector"];
         }
 
