@@ -123,14 +123,14 @@ class Auth extends CI_Controller {
 				//if the login is successful
 				//redirect them back to the home page
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
-				redirect('/map', 'refresh');
+				redirect('/', 'refresh');
 			}
 			else
 			{
 				// if the login was un-successful
 				// redirect them back to the login page
 				$this->session->set_flashdata('message', $this->ion_auth->errors());
-				redirect('auth/login_map', 'refresh'); // use redirects instead of loading views for compatibility with MY_Controller libraries
+				redirect('auth/login', 'refresh'); // use redirects instead of loading views for compatibility with MY_Controller libraries
 			}
 		}
 		else
@@ -149,10 +149,11 @@ class Auth extends CI_Controller {
 				'type' => 'password',
 			);
 
-			$this->_render_page('auth/login_map', $this->data);
+			$this->_render_page('auth/login', $this->data);
 		}
 	}
 
+	
 	// log the user out
 	function logout()
 	{
