@@ -104,11 +104,11 @@
 					<li><img class='social-network-icon' src="/assets/img/socialnetworks/google_white.png" alt="There should be an awsome logo" height="32" width="32"></li>
 
 					<?php if($logged_in == true): ?>
-		 				<li><a href ="/auth/logout" class="navbar-link">Logout</a></li>
+		 				<li><a href ="/auth/logout_map" class="navbar-link">Logout</a></li>
 					<?php endif; ?>	
 					<?php if($logged_in == false): ?>
-						<li><a href ="/auth/login" class="navbar-link">Sign in</a></li>
-		 				<li><a href ="/auth/login" class="navbar-link">Login</a></li>
+						<li><a href ="/auth/create_user_map" class="navbar-link">Sign up</a></li>
+		 				<li><a href ="/auth/login_map" class="navbar-link">Login</a></li>
 					<?php endif; ?>	
 				</ul>
 			</div>
