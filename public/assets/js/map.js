@@ -1195,6 +1195,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 					title: feedback.selection[i]['id'] + "-" + feedback.selection[i]['genus'],
 				    icon: getPinColor(feedback.selection[i]['age'])
 				});
+
+				console.log(i);
 		
 				marker.addListener("click", function()
 				{
