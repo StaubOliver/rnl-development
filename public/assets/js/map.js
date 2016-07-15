@@ -1239,7 +1239,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				var marker = new google.maps.Marker({
 					map: actualmap,
 					position: new google.maps.LatLng($temp.selection[i]['lat'], $temp.selection[i]['lng']),
-					title: info['id'] + "-" +$temp.selection[i]['title'],
+					title: $temp.selection[i]['id'] + "-" +$temp.selection[i]['title'],
 				    icon: getPinColor($temp.selection[i]['age'])
 				});
 		
