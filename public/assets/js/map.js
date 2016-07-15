@@ -1224,7 +1224,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		};
 
 		actualmap = new google.maps.Map(document.getElementById("map-"+feedback_id),mapOpt);
-		actualmap.fitBounds(google.maps.LatLngBounds(google.maps.LatLng($temp['map_sw_lat'], $temp['map_sw_lng']), google.maps.LatLng($temp['map_ne_lat'], $temp['map_ne_lng'])))
+		actualmap.fitBounds(google.maps.LatLngBounds(new google.maps.LatLng($temp['map_sw_lat'], $temp['map_sw_lng']), new google.maps.LatLng($temp['map_ne_lat'], $temp['map_ne_lng'])))
 
 		if ($temp.selection.length > 0){
 			for (var i = 0; i < $temp.selection.length; i++)
