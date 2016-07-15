@@ -826,6 +826,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.feedbacks = [];
 	$scope.rating_img = [];
 
+	$scope.show_map = [];
+
+
 	refreshFeedback();
 
 	var url_empty = "/assets/img/star/circle_empty.png";
@@ -836,10 +839,15 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	function refreshFeedback(){
 		$scope.feedbacks = [];
 		$scope.rating_img = [];
+		$scope.show_map = [];
+
 		$http.get('/api/map/loadAdminFeedback/').success(function(data, status, headers, config){
 			data.forEach(function(item, index)
 			{
 				$scope.rating_img[item["feedback_id"]] = [];
+
+				$scope.show_map[item["feedback_id"]] = false;
+
 				
 				//rating correctness
 				if (item['rating_correctness'] == "0"){
@@ -1185,9 +1193,10 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	}
 
 	
-
 	$scope.showMap = function(feedback_id, reply_id)
 	{
+
+		$scope.show_map[feedback_id] = true;
 		var $temp;
 		for (var i = 0; i < $scope.feedbacks.length; i++)
 		{
