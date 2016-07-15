@@ -1187,7 +1187,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		if (feedback.selection.length > 0){
 			for (var i = 0; i < feedback.selection.length; i++)
 			{
-				console.log(feedback.selection[i]);
+				//console.log(feedback.selection[i]);
 
 				var marker = new google.maps.Marker({
 					map: actualmap,
