@@ -830,7 +830,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.show_map = [];
 
-	var infoWindowadmin = new google.maps.InfoWindow({maxWidth:400});
+	var infoWindowadmin = new google.maps.InfoWindow({maxWidth:200});
 
 	var actualmap;
 
@@ -1166,12 +1166,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			"<div class='container-fluid map-infowindow'>"
 				+ "<div class='row'>"
 
-					+ "<div class='col-md-6'>"
-						+ "<img data-toggle='modal' data-target='#Modal-lg-image' src='"+"url"+"' class='map-infowindow-img' >"
-						+ "</br> [+] Click to enlarge"
-					+ "</div>"
-
-					+ "<div class='col-md-6'>"
+					+ "<div class='col-md-12'>"
 
 						+ "<div class='row'>"
 							+ "<div class='col-xs-12'>"
