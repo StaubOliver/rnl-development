@@ -830,7 +830,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.show_map = [];
 
-	var infoWindow = new google.maps.InfoWindow({maxWidth:400});
+	var infoWindowadmin = new google.maps.InfoWindow({maxWidth:400});
 
 	refreshFeedback();
 
@@ -895,21 +895,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				}
 
 
-
-
-				/*
-				for (var i = 1; i < 6; i++){
-					if (parseInt(item['rating_correctness'])>=i){
-						//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_full;
-						$scope.init_rating_img[item["feedback_id"]][i] = url_full;
-					}
-					else{
-						//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_empty;
-						$scope.init_rating_img[item["feedback_id"]][i] = url_empty;
-					}
-				}
-				*/
-
 				// do the same for the replies
 				for (var j = 0; j < item['replies'].length; j++){
 					$scope.rating_img[item['replies'][j]['feedback_id']] = [];
@@ -956,16 +941,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 						$scope.rating_img[item['replies'][j]['feedback_id']][6] = url_hightlight;
 					}
 
-					/*for (var i = 1; i < 6; i++){
-						if (parseInt(item['replies'][j]['rating'])>=i){
-							//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_full;
-							$scope.init_rating_img[item['replies'][j]['feedback_id']][i] = url_full;
-						}
-						else{
-							//document.getElementById("rating-"+item["feedback_id"]+"-"+i.toString()).src = url_empty;
-							$scope.init_rating_img[item['replies'][j]['feedback_id']][i] = url_empty;
-						}
-					}*/
 
 				}
 				$scope.feedbacks.push(item);
@@ -1023,15 +998,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			for (var i = 0; i < $scope.feedbacks.length; i++) {
 				if($scope.feedbacks[i]['feedback_id'] == feedback_id)
 				{
-					/*$scope.feedbacks[i]["rating_correctness"] = star;
-					for (var j = 1; j < 6; j++){
-						if (star>=j){
-							$scope.init_rating_img[feedback_id][j] = url_full;
-						} else {
-							$scope.init_rating_img[feedback_id][j] = url_empty;
-						}
-					}*/
-
 					//rating correctness
 					if (rating == 1){
 						$scope.feedbacks[i]['rating_correctness'] = rate;
@@ -1116,22 +1082,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 									$scope.rating_img[feedback_id][6] = url_hightlight;
 								}
 							}
-
-							/*
-							$scope.feedbacks[i]['replies'][j]['rating_correctness'] = star;
-							for (var k = 1; k < 6; k++)
-							{
-								if (star>=k)
-								{
-									$scope.init_rating_img[feedback_id][k] = url_full;
-								} 
-								else 
-								{
-									$scope.init_rating_img[feedback_id][k] = url_empty;
-								}
-							}
-							*/
-
 
 						}
 					}
@@ -1223,11 +1173,11 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 		actualmap = new google.maps.Map(document.getElementById("map-"+feedback_id),mapOpt);
 		
-		/*var ne = new google.maps.LatLng($temp['map_ne_lat'], $temp['map_ne_lng']);
-		var sw = new google.maps.LatLng($temp['map_sw_lat'], $temp['map_sw_lng']);
+		var ne = new google.maps.LatLng(temp['map_ne_lat'], temp['map_ne_lng']);
+		var sw = new google.maps.LatLng(temp['map_sw_lat'], temp['map_sw_lng']);
 		var bounds = new google.maps.LatLngBounds(sw, ne)
 
-		actualmap.fitBounds(bounds);*/
+		actualmap.fitBounds(bounds);
 
 		if (temp.selection.length > 0){
 			for (var i = 0; i < temp.selection.length; i++)
@@ -1244,7 +1194,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				marker.addListener("click", function(){
 
 					//info window
-					infoWindow.close;
+					infoWindowadmin.close;
 					var content =
 					"<div class='container-fluid map-infowindow'>"
 						+ "<div class='row'>"
@@ -1282,7 +1232,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 					var compiled = $compile(content)($scope);
 
-					infoWindow.setContent(compiled[0]);
+					infoWindowadmin.setContent(compiled[0]);
+
+					infoWindowadmin.open('actualmap', marker);
 
 				});
 
