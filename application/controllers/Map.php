@@ -45,6 +45,22 @@ class map extends CI_Controller {
 			$data['collector'] = "-1";
 		}
 
+		if($this->uri->segment(4)){
+			$data['agemin'] = urldecode($this->uri->segment(3));
+		}
+		else
+		{
+			$data['agemin'] = 0;
+		}
+
+		if($this->uri->segment(5)){
+			$data['ageemax'] = urldecode($this->uri->segment(3));
+		}
+		else
+		{
+			$data['ageemax'] = 12;
+		}
+
 
 		
 		$data['test'] = urldecode($this->uri->segment(2)).urldecode($this->uri->segment(3)).urldecode($this->uri->segment(4)).urldecode($this->uri->segment(5));
