@@ -1192,7 +1192,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				var marker = new google.maps.Marker({
 					map: actualmap,
 					position: new google.maps.LatLng(feedback.selection[i]['lat'], feedback.selection[i]['lng']),
-					title: feedback.selection[i]['id'] + "-" + feedback.selection[i]['title'],
+					title: feedback.selection[i]['id'] + "-" + feedback.selection[i]['genus'],
 				    icon: getPinColor(feedback.selection[i]['age'])
 				});
 		
