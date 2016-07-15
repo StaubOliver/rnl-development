@@ -120,8 +120,8 @@ var map = angular.module('map', ['rzModule'])
 
 	$scope.selectedProject = filter['project'];
 	//$scope.selectedGenus = filter['genus'];
-	$scope.selectedAgeMin = 0;
-	$scope.selectedAgeMax = 12;
+	//$scope.selectedAgeMin = 0;
+	//$scope.selectedAgeMax = 12;
 	//$scope.selectedCollector = filter['collector'];	
 
 	$scope.show_legend = true;
