@@ -1201,13 +1201,13 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		$scope.show_map[feedback_id] = true;
 		document.getElementById('map-'+feedback_id).setAttribute("style","height:500px");
 
-		var $temp;
+		var temp;
 
 		for (var i = 0; i < $scope.feedbacks.length; i++)
 		{
 			if ($scope.feedbacks[i]['feedback_id'] == feedback_id)
 			{
-				$temp = $scope.feedbacks[i];
+				temp = $scope.feedbacks[i];
 			}
 		}
 
@@ -1215,8 +1215,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 		
 		var mapOpt = {
-		    center:new google.maps.LatLng($temp['map_center_lat'],$temp['map_center_lng']),
-		    zoom:parseInt($temp['map_zoom']),
+		    center:new google.maps.LatLng(temp['map_center_lat'],temp['map_center_lng']),
+		    zoom:parseInt(temp['map_zoom']),
 		    maxZoom: 12,
 		    minZoom: 2,
 		    mapTypeId:google.maps.MapTypeId.ROADMAP,
@@ -1232,15 +1232,15 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 		actualmap.fitBounds(bounds);*/
 
-		if ($temp.selection.length > 0){
-			for (var i = 0; i < $temp.selection.length; i++)
+		if (temp.selection.length > 0){
+			for (var i = 0; i < temp.selection.length; i++)
 			{
-				console.log($temp.selection[i]['title']);
+				console.log(temp.selection[i]);
 
 				var marker = new google.maps.Marker({
 					map: actualmap,
-					position: new google.maps.LatLng($temp.selection[i]['lat'], $temp.selection[i]['lng']),
-					title: $temp.selection[i]['id'] + "-" +$temp.selection[i]['title'],
+					position: new google.maps.LatLng(temp.selection[i]['lat'], temp.selection[i]['lng']),
+					title: temp.selection[i]['id'] + "-" +temp.selection[i]['title'],
 				    icon: getPinColor($temp.selection[i]['age'])
 				});
 		
@@ -1261,19 +1261,19 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 								+ "<div class='row'>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'><strong> Genus : </strong> " + $temp.selection[i]['genus'] + "</p>"
+										+ "<p class='infowindow-text'><strong> Genus : </strong> " + temp.selection[i]['genus'] + "</p>"
 									+ "</div>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Species : </strong> " + $temp.selection[i]["species"] + "</p>"
+										+ "<p class='infowindow-text'> <strong> Species : </strong> " + temp.selection[i]["species"] + "</p>"
 									+ "</div>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Age : </strong>" + $temp.selection[i]['age'] + "</p>"
+										+ "<p class='infowindow-text'> <strong> Age : </strong>" + temp.selection[i]['age'] + "</p>"
 									+ "</div>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Collector : </strong>"+ $temp.selection[i]["collector"] + "</p>"
+										+ "<p class='infowindow-text'> <strong> Collector : </strong>"+ temp.selection[i]["collector"] + "</p>"
 									+ "</div>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Location : </strong>" + $temp.selection[i]["place"] + "</p>"
+										+ "<p class='infowindow-text'> <strong> Location : </strong>" + temp.selection[i]["place"] + "</p>"
 									+ "</div>"
 
 								+"</div>"
