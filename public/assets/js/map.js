@@ -1209,6 +1209,15 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 		var $temp;
 
+		for (var i = 0; i < $scope.feedbacks.length; i++)
+		{
+			if ($scope.feedbacks[i]['feedback_id'] == feedback_id)
+			{
+				$temp = $scope.feedbacks[i];
+			}
+		}
+
+		
 		
 		var mapOpt = {
 		    center:new google.maps.LatLng($temp['map_center_lat'],$temp['map_center_lng']),
@@ -1222,13 +1231,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 		actualmap = new google.maps.Map(document.getElementById("map-"+feedback_id),mapOpt);
 		
-		for (var i = 0; i < $scope.feedbacks.length; i++)
-		{
-			if ($scope.feedbacks[i]['feedback_id'] == feedback_id)
-			{
-				$temp = $scope.feedbacks[i];
-			}
-		}
 
 		if ($temp.selection.length > 0){
 			for (var i = 0; i < $temp.selection.length; i++)
