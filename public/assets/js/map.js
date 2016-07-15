@@ -822,6 +822,7 @@ var map = angular.module('map', ['rzModule'])
 
 	$scope.resetFilter = function()
 	{
+		console.log("reset");
 		filter['genus'] = '-1';
 		$scope.selectedGenus = '-1';
 		filter['collector'] = '-1';
