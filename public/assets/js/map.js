@@ -1267,7 +1267,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			console.log('/api/map/loadfossils/'+feedback['genus']+'/-1/'+feedback['age_min']+'/'+feedback['age_max']+'/'+feedback['collector']+'/-1/-1/-1/-1/-1');
 			$http.get('/api/map/loadfossils/'+feedback['genus']+'/-1/'+feedback['age_min']+'/'+feedback['age_max']+'/'+feedback['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
 				data.forEach(function(item, index){
-					var info = [];
+					
+					var info = {};
 					info['lat'] = item['lat'];
 					info['lng'] = item['lng'];
 					info['id'] = item['data_id'];
