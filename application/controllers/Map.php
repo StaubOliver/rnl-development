@@ -37,7 +37,7 @@ class map extends CI_Controller {
 			$data['genus'] = "-1";
 		}
 		
-
+		$data['test'] = urldecode($this->uri->segment(4));
 		$this->load->view('map2', $data);
 	}
 	

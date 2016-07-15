@@ -92,6 +92,7 @@
 					<?php if($is_admin == 1): ?>
 		 				<li><p class="navbar-text">Fossils loaded: {{nbfossils}}</p></li>
 					<?php endif; ?>	
+					<li><?php echo $test ?></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<?php if($is_admin == 1): ?>
