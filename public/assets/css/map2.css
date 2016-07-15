@@ -72,6 +72,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	top: 20px;
 	right: 25px;
 	cursor:pointer;
+	z-index: 10;
 }
 
 .filter-element{
