@@ -174,7 +174,7 @@
 				
 						<div class="row">
 							<div class="col-md-12 filter-title">
-								<h4>{{section_filter_title}}</h4>
+								<h4>{{section_filter_title}}</h4><span class="glyphicon glyphicon-repeat"></span>
 							</div>
 						</div>
 
