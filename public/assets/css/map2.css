@@ -700,8 +700,9 @@ fieldset[disabled] .btn-custom-default.active {
 .map-admin{
 	width:100%;
 	height:400px;
-	margin-left: 15px;
-	margin-right: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-bottom: 5px;
 }
 /*
 .rating-empty{
