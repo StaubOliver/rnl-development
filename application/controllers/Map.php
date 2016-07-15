@@ -29,15 +29,27 @@ class map extends CI_Controller {
 		}
 		
 		
-		if($this->uri->segment(3)){
-			$data['genus'] = $this->uri->segment(3);
+		if($this->uri->segment(2)){
+			$data['genus'] = urldecode($this->uri->segment(2));
 		}
 		else
 		{
 			$data['genus'] = "-1";
 		}
+
+		if($this->uri->segment(3)){
+			$data['collector'] = urldecode($this->uri->segment(3));
+		}
+		else
+		{
+			$data['collector'] = "-1";
+		}
+
+
 		
 		$data['test'] = urldecode($this->uri->segment(2)).urldecode($this->uri->segment(3)).urldecode($this->uri->segment(4)).urldecode($this->uri->segment(5));
+
+
 		$this->load->view('map2', $data);
 	}
 	
