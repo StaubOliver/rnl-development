@@ -81,7 +81,7 @@
 					<div class='col-md-10 col-md-offset-1' ng-class="{'admin-feedback':feedback.hidden==0, 'admin-feedback-hidden':feedback.hidden==1}">
 						<div class='row'>
 
-							<div class="col-md-12 map-admin" id="map-{{feedback.feedback_id}}" >
+							<div class="col-md-12 " id="map-{{feedback.feedback_id}}" ng-class="{'map-admin':show_map[feedback.feedback_id]}">
 							</div>
 
 							<div class='col-md-6 admin-feedback-vertical-ligne'>
