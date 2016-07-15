@@ -1262,8 +1262,25 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 			}
 		}
-		else {
+		else 
+		{
+			http.get('/api/map/loadfossils/'+feedback['genus']+'/-1/'+feedback['age_min']+'/'+feedback['age_max']+'/'+feedback['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
+				data.forEach(function(item, index){
+					var info = [];
+					info['lat'] = item['lat'];
+					info['lng'] = item['lng'];
+					info['id'] = item['data_id'];
+					info['place'] = item['place']+ ' ' + item['country'];
+					info['age'] = item['age'];
+					info['species'] = item['species'];
+					info['collector'] = item['collector'];
+					info['id'] = item['data_id'];
 
+
+					//create the markers to plot on the map
+					createMarker(info);	
+				});
+			});
 		}
 		
 		//console.log($temp['map_center_lat'] + " "+ $temp['map_center_lng']+" "+$temp['map_zoom']);
