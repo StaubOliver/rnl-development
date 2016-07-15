@@ -1196,8 +1196,10 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				    icon: getPinColor(feedback.selection[i]['age'])
 				});
 		
-				marker.addListener("click", function(){
+				marker.addListener("click", function()
+				{
 
+					console.log(feedback['selection'][i]);
 					//info window
 					infoWindowadmin.close;
 					var content =
