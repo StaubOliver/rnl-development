@@ -706,7 +706,7 @@ fieldset[disabled] .btn-custom-default.active {
 }
 
 .map-admin-hidden{
-	display: none;
+	height:0px;
 }
 /*
 .rating-empty{
