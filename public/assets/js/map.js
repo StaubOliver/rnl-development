@@ -1266,7 +1266,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 										+ "<p class='infowindow-text'> <strong> Collector : </strong>"+ $temp.selection[i]["collector"] + "</p>"
 									+ "</div>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Location : </strong>" + $temp.selection[i]["location"] + "</p>"
+										+ "<p class='infowindow-text'> <strong> Location : </strong>" + $temp.selection[i]["place"] + "</p>"
 									+ "</div>"
 
 								+"</div>"
