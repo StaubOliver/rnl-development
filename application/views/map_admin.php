@@ -87,7 +87,7 @@
 							</div>
 						-->
 
-							<div id ='map-{{feedback.feedback_id}}' class='col-md-12 map-admin' ng-show='show_map[feedback.feedback_id]'>
+							<div id ='map-{{feedback.feedback_id}}' class='col-md-12 map-admin'>
 							</div>
 
 							<div class='col-md-6 admin-feedback-vertical-ligne'>
