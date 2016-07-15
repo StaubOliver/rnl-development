@@ -820,6 +820,18 @@ var map = angular.module('map', ['rzModule'])
 		logActivity($http, $action, $details, user_id);
 	};
 
+	$scope.resetFilter = function()
+	{
+		filter['genus'] = '-1';
+		$scope.selectedGenus = '-1';
+		filter['collector'] = '-1';
+		$scope.selectedCollector = '-1';
+		$scope.selectedAgeMin = 0;
+		$scope.selectedAgeMax = 12;
+		refreshFeedback($http);
+		refresh($http);
+	}
+
 
 });
 

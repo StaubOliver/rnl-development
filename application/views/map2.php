@@ -173,7 +173,7 @@
 					<div class="filter-section">
 
 						<div class='filter-reset-btn'>
-							<span class="glyphicon glyphicon-repeat"></span>
+							<span class="glyphicon glyphicon-repeat" ng-click="resetFilter()"></span>
 						</div>
 				
 						<div class="row">
