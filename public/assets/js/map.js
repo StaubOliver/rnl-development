@@ -1229,7 +1229,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.hideMap = function(feedback_id)
 	{
 		$scope.show_map[feedback_id] = false;
-		document.getElementById('map-'+feedback_id).setAttribute("style","height:0px");
+		document.getElementById('map-'+feedback_id).setAttribute("style","height:-1px");
 	}
 
 
