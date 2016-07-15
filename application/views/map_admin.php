@@ -133,11 +133,11 @@
 									</div>
 
 									<div class='col-md-6'>
-										{{feedback.selection.length}} fossils selected
+										{{feedback['upvote']}} upvotes
 									</div>
 
 									<div class='col-md-6'>
-										{{feedback['upvote']}} upvotes
+										{{feedback.selection.length}} fossils selected
 									</div>
 
 									<!--
@@ -271,6 +271,10 @@
 											<div ng-show="rep['genus']!=-1">
 												Collector: {{feedback['collector']}}
 											</div>
+										</div>
+
+										<div class='col-md-6'>
+											{{rep['upvote']}} upvotes
 										</div>
 
 									</div>
