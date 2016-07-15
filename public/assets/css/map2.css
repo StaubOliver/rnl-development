@@ -118,8 +118,9 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	*/
 	padding: 10px;
 	background-color: white;
-	margin-top: 10px;
+	/*margin-top: 10px;
 	margin-bottom: 10px;
+	*/
 
 	box-shadow: 0px 0px 3px #CCCCCC;
 }
