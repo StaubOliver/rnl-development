@@ -1271,11 +1271,10 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 					info['lat'] = item['lat'];
 					info['lng'] = item['lng'];
 					info['id'] = item['data_id'];
-					info['place'] = item['place']+ ' ' + item['country'];
 					info['age'] = item['age'];
 					info['species'] = item['species'];
 					info['collector'] = item['collector'];
-					info['id'] = item['data_id'];
+					info['place'] = item['place']+ ' ' + item['country'];
 
 
 					//create the markers to plot on the map
