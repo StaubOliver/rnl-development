@@ -148,11 +148,11 @@
 								<div class='row'>
 
 									<div class='col-md-12' ng-show="!show_map[feedback.feedback_id]">
-										<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id)'><span class="glyphicon glyphicon-chevron-up"></span>Show the map</div>
+										<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id)'><span class="glyphicon glyphicon-chevron-up"></span> Show the map</div>
 									</div>
 
 									<div class='col-md-12' ng-show="show_map[feedback.feedback_id]">
-										<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='hideMap(feedback.feedback_id)'>Hide the map</div>
+										<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='hideMap(feedback.feedback_id)'><span class="glyphicon glyphicon-chevron-down"></span> Hide the map</div>
 									</div>
 
 									<div class='col-md-12' ng-show="feedback.hidden == 0">
