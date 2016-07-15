@@ -1199,7 +1199,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 		var $temp;
 		
-		for (var i = 0; i < $scope.feedbacks.length; i++)
+		/*for (var i = 0; i < $scope.feedbacks.length; i++)
 		{
 			if ($scope.feedbacks[i]['feedback_id'] == feedback_id)
 			{
@@ -1210,7 +1210,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		for (var i = 0; i < $temp.selection.length; i++)
 		{
 			
-		}
+		}*/
 
 		var mapOpt = {
 		    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
