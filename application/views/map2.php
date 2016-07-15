@@ -254,7 +254,7 @@
 				
 
 				<!-- Filter tool -->
-				<div class="col-md-12" >
+				<div class="col-md-12 section" >
 					<div class="filter-section">
 				
 						<div class="row">
@@ -356,7 +356,7 @@
 				</div>
 
 				<!-- Write a feedback -->
-				<div class="col-md-12">
+				<div class="col-md-12 section">
 					<div name='write-section' class="feedback-section">
 
 						<div class="row">
@@ -449,7 +449,7 @@
 
 
 				<!-- Contributions from the comunity -->
-				<div class='col-md-12'>
+				<div class='col-md-12 section'>
 					<div class='feedback-section'>
 
 						<div class="row">

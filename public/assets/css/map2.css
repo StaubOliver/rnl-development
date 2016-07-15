@@ -39,6 +39,11 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	overflow: auto;
 }
 
+.section{
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+
 .filter-section{
 	/*margin-top: 20px;*/
 
@@ -86,7 +91,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 
 
 .feedback-section{
-	margin-top: 20px;
+	margin-top: 15px;
 
 	padding-top:10px;
 	padding-left:15px;
