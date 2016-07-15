@@ -242,7 +242,7 @@
 											</strong>
 										</div>
 										
-										<div class='col-md-4'>
+										<div class='col-md-12'>
 											{{rep["first_name"]}} {{rep["last_name"]}}
 											{{rep['time']}}
 										</div>
