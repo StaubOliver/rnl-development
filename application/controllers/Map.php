@@ -54,7 +54,7 @@ class map extends CI_Controller {
 		}
 
 		if($this->uri->segment(5)){
-			$data['agemax'] = urldecode($this->uri->segment(3));
+			$data['agemax'] = urldecode($this->uri->segment(5));
 		}
 		else
 		{
