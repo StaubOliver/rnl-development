@@ -15,7 +15,7 @@ class map extends CI_Controller {
         $this->load->model('LoggerModel');
     }
     
-	public function index($parameter) {	
+	public function index() {	
 		$data['projects'] = $this->MapModel->loadProject();
 		$data['genuses'] = $this->MapModel->loadGenuses();
 		$data['collectors'] = $this->MapModel->loadCollector();
