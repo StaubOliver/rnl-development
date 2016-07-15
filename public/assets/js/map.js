@@ -1235,7 +1235,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		if ($temp.selection.length > 0){
 			for (var i = 0; i < $temp.selection.length; i++)
 			{
-				console.log($temp.selection[i]);
+				console.log($temp.selection[i]['title']);
 
 				var marker = new google.maps.Marker({
 					map: actualmap,
