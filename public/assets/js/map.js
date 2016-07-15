@@ -1196,12 +1196,14 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				    icon: getPinColor(feedback.selection[i]['age'])
 				});
 
-				console.log(i);
+				select = feedback.selection[i];
+
 		
 				marker.addListener("click", function()
 				{
 
-					console.log(i);
+					console.log(select);
+
 					//info window
 					infoWindowadmin.close;
 					var content =
@@ -1217,19 +1219,19 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 								+ "<div class='row'>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'><strong> Genus : </strong> " + feedback.selection[i]['genus'] + "</p>"
+										+ "<p class='infowindow-text'><strong> Genus : </strong> " + select['genus'] + "</p>"
 									+ "</div>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Species : </strong> " + feedback.selection[i]["species"] + "</p>"
+										+ "<p class='infowindow-text'> <strong> Species : </strong> " + select["species"] + "</p>"
 									+ "</div>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Age : </strong>" + feedback.selection[i]['age'] + "</p>"
+										+ "<p class='infowindow-text'> <strong> Age : </strong>" + select['age'] + "</p>"
 									+ "</div>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Collector : </strong>"+ feedback.selection[i]["collector"] + "</p>"
+										+ "<p class='infowindow-text'> <strong> Collector : </strong>"+ select["collector"] + "</p>"
 									+ "</div>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Location : </strong>" + feedback.selection[i]["place"] + "</p>"
+										+ "<p class='infowindow-text'> <strong> Location : </strong>" + select["place"] + "</p>"
 									+ "</div>"
 
 								+"</div>"
