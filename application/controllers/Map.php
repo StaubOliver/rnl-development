@@ -61,11 +61,6 @@ class map extends CI_Controller {
 			$data['agemax'] = 12;
 		}
 
-
-		
-		$data['test'] = urldecode($this->uri->segment(2)).urldecode($this->uri->segment(3)).urldecode($this->uri->segment(4)).urldecode($this->uri->segment(5));
-
-
 		$this->load->view('map2', $data);
 	}
 	
