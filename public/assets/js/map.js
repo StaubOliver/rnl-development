@@ -1218,6 +1218,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 		}
 		
+		console.log($temp['map_center_lat'] + " "+ $temp['map_center_lng']+" "+$temp['map_zoom']);
 
 		var mapOpt = {
 		    center:new google.maps.LatLng($temp['map_center_lat'],$temp['map_center_lng']),
