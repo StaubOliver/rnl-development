@@ -832,6 +832,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	var infoWindowadmin = new google.maps.InfoWindow({maxWidth:400});
 
+	var actualmap;
+
 	refreshFeedback();
 
 	var url_empty = "/assets/img/star/circle_empty.png";
@@ -1145,6 +1147,69 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	}
 
+
+	function createMarker(info)
+	{
+		var marker = new google.maps.Marker({
+			map: actualmap,
+			position: new google.maps.LatLng(info['lat'], info['lng']),
+			title: info['id'] + "-" + info['genus'],
+		    icon: getPinColor(info['age'])
+		});
+
+		marker.addListener("click", function()
+		{
+
+			console.log(select);
+
+			//info window
+			infoWindowadmin.close;
+			var content =
+			"<div class='container-fluid map-infowindow'>"
+				+ "<div class='row'>"
+
+					+ "<div class='col-md-6'>"
+						+ "<img data-toggle='modal' data-target='#Modal-lg-image' src='"+"url"+"' class='map-infowindow-img' >"
+						+ "</br> [+] Click to enlarge"
+					+ "</div>"
+
+					+ "<div class='col-md-6'>"
+
+						+ "<div class='row'>"
+							+ "<div class='col-xs-12'>"
+								+ "<p class='infowindow-text'><strong> Genus : </strong> " + info['genus'] + "</p>"
+							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<p class='infowindow-text'> <strong> Species : </strong> " + info["species"] + "</p>"
+							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<p class='infowindow-text'> <strong> Age : </strong>" + info['age'] + "</p>"
+							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<p class='infowindow-text'> <strong> Collector : </strong>"+ info["collector"] + "</p>"
+							+ "</div>"
+							+ "<div class='col-xs-12'>"
+								+ "<p class='infowindow-text'> <strong> Location : </strong>" + info["place"] + "</p>"
+							+ "</div>"
+
+						+"</div>"
+
+					+ "</div>"
+				+ "</div>"
+			+ "</div>"
+			;
+
+			
+			infoWindowadmin.setContent(content);
+
+			infoWindowadmin.open('actualmap', marker);
+
+		});
+
+
+
+	}
+
 	
 	$scope.showMap = function(feedback_id)
 	{
@@ -1189,64 +1254,18 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			{
 				//console.log(feedback.selection[i]);
 
-				var marker = new google.maps.Marker({
-					map: actualmap,
-					position: new google.maps.LatLng(feedback.selection[i]['lat'], feedback.selection[i]['lng']),
-					title: feedback.selection[i]['id'] + "-" + feedback.selection[i]['genus'],
-				    icon: getPinColor(feedback.selection[i]['age'])
-				});
+				var info = {};
+				info['lat'] = feedback.selection[i]['lat'];
+				info['lng'] = feedback.selection[i]['lng'];
+				info['id'] = feedback.selection[i]['id'];
+				info['age'] = feedback.selection[i]['age'];
+				info['genus'] = feedback.selection[i]['genus'];
+				info['species'] = feedback.selection[i]['species'];
+				info['collector'] = feedback.selection[i]['collector'];
+				info['place'] = feedback.selection[i]['place'];
 
-				select = feedback.selection[i];
+				createMarker(info);
 
-		
-				marker.addListener("click", function()
-				{
-
-					console.log(select);
-
-					//info window
-					infoWindowadmin.close;
-					var content =
-					"<div class='container-fluid map-infowindow'>"
-						+ "<div class='row'>"
-
-							+ "<div class='col-md-6'>"
-								+ "<img data-toggle='modal' data-target='#Modal-lg-image' src='"+"url"+"' class='map-infowindow-img' >"
-								+ "</br> [+] Click to enlarge"
-							+ "</div>"
-
-							+ "<div class='col-md-6'>"
-
-								+ "<div class='row'>"
-									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'><strong> Genus : </strong> " + select['genus'] + "</p>"
-									+ "</div>"
-									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Species : </strong> " + select["species"] + "</p>"
-									+ "</div>"
-									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Age : </strong>" + select['age'] + "</p>"
-									+ "</div>"
-									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Collector : </strong>"+ select["collector"] + "</p>"
-									+ "</div>"
-									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'> <strong> Location : </strong>" + select["place"] + "</p>"
-									+ "</div>"
-
-								+"</div>"
-
-							+ "</div>"
-						+ "</div>"
-					+ "</div>"
-					;
-
-					
-					infoWindowadmin.setContent(content);
-
-					infoWindowadmin.open('actualmap', marker);
-
-				});
 
 			}
 		}
