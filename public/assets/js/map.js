@@ -1261,7 +1261,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 								+ "<div class='row'>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'><strong> Genus : </strong> " + temp.selection[i]['genus'] + "</p>"
+										+ "<p class='infowindow-text'><strong> Genus : </strong> " + temp.selection[i]['title'] + "</p>"
 									+ "</div>"
 									+ "<div class='col-xs-12'>"
 										+ "<p class='infowindow-text'> <strong> Species : </strong> " + temp.selection[i]["species"] + "</p>"
