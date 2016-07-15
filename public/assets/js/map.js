@@ -1235,12 +1235,12 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		if (temp.selection.length > 0){
 			for (var i = 0; i < temp.selection.length; i++)
 			{
-				console.log(temp.selection[i]);
+				console.log(temp.selection);
 
 				var marker = new google.maps.Marker({
 					map: actualmap,
 					position: new google.maps.LatLng(temp.selection[i]['lat'], temp.selection[i]['lng']),
-					title: temp.selection[i]['id'] + "-" +temp.selection[i]['title'],
+					title: temp.selection[i]['id'] + "-" + temp.selection[i]['title'],
 				    icon: getPinColor(temp.selection[i]['age'])
 				});
 		
@@ -1261,7 +1261,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 								+ "<div class='row'>"
 									+ "<div class='col-xs-12'>"
-										+ "<p class='infowindow-text'><strong> Genus : </strong> " + temp.selection[i]['title'] + "</p>"
+										+ "<p class='infowindow-text'><strong> Genus : </strong> " + temp.selection[i]['genus'] + "</p>"
 									+ "</div>"
 									+ "<div class='col-xs-12'>"
 										+ "<p class='infowindow-text'> <strong> Species : </strong> " + temp.selection[i]["species"] + "</p>"
@@ -1288,7 +1288,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 					infoWindow.setContent(compiled[0]);
 
 				});
-
 
 			}
 		}
