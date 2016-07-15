@@ -1235,9 +1235,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 					+ "</div>"
 					;
 
-					var compiled = $compile(content)($scope);
-
-					infoWindowadmin.setContent(compiled[0]);
+					
+					infoWindowadmin.setContent(content);
 
 					infoWindowadmin.open('actualmap', marker);
 
