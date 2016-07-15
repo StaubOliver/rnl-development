@@ -1195,9 +1195,10 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	
 	$scope.showMap = function(feedback_id, reply_id)
 	{
-
 		$scope.show_map[feedback_id] = true;
+
 		var $temp;
+		
 		for (var i = 0; i < $scope.feedbacks.length; i++)
 		{
 			if ($scope.feedbacks[i]['feedback_id'] == feedback_id)
