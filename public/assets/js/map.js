@@ -1,68 +1,4 @@
 
-
-var map = angular.module('map', ['rzModule'])
-.controller('GoogleMap', function($scope, $http, $compile){
-	
-	var actualmap;
-
-	var markers = [];
-	$scope.nbfossils = 0;
-
-	var markers_age = [];
-	$scope.selected_markers = [];
-
-	$scope.feedbacks = [];
-
-	var infoWindow;
-	var user_id;
-	$scope.user_id;
-	$scope.logged_in;
-	$scope.admin;
-
-	var filter = [];
-	filter['project'] = "-1";
-	filter['genus'] = $scope.selectedGenus;
-	filter['collector'] = $scope.selectedCollector;
-
-	$scope.selectedProject = filter['project'];
-	//$scope.selectedGenus = filter['genus'];
-	$scope.selectedAgeMin = 0;
-	$scope.selectedAgeMax = 12;
-	//$scope.selectedCollector = filter['collector'];	
-
-	$scope.show_legend = true;
-
-	var marker_clicked_for_selection = {};
-
-	$scope.section_filter_title = "Filter what's being plotted on the map";
-	$scope.section_feedback_form_section_title = "Share your discoveries";
-	$scope.section_social_sharing_title = "Share on your networks";
-	$scope.section_feedbacks_title = "See what others have found";
-
-	//$scope.replyto = {'reply':false};
-
-	$scope.feedback_form_text_reply = [];
-	$scope.show_feedback_reply = [];
-
-	$scope.share_url = window.location.hostname;
-
-	// Sets the map on all markers in the array.
-	function setMapOnAll(map) {
-		for (var i = 0; i < markers.length; i++) {
-			markers[i].setMap(map);
-			markers[i] = null;
-		}
-	}
-
-	function clearMarkers() {
-	 	setMapOnAll(null);
-	}
-
-	function deleteMarkers() {
-		clearMarkers();
-		markers = [];
-	}
-
 	var getPin = function(color){
 		return "http://www.googlemapsmarkers.com/v1/"+color+"/"
 	}
@@ -153,6 +89,72 @@ var map = angular.module('map', ['rzModule'])
 		if (age=="Precambrain") { return pin_precambrian; }
 
 		return pin_standard;
+	}
+
+
+
+
+var map = angular.module('map', ['rzModule'])
+.controller('GoogleMap', function($scope, $http, $compile){
+	
+	var actualmap;
+
+	var markers = [];
+	$scope.nbfossils = 0;
+
+	var markers_age = [];
+	$scope.selected_markers = [];
+
+	$scope.feedbacks = [];
+
+	var infoWindow;
+	var user_id;
+	$scope.user_id;
+	$scope.logged_in;
+	$scope.admin;
+
+	var filter = [];
+	filter['project'] = "-1";
+	filter['genus'] = $scope.selectedGenus;
+	filter['collector'] = $scope.selectedCollector;
+
+	$scope.selectedProject = filter['project'];
+	//$scope.selectedGenus = filter['genus'];
+	$scope.selectedAgeMin = 0;
+	$scope.selectedAgeMax = 12;
+	//$scope.selectedCollector = filter['collector'];	
+
+	$scope.show_legend = true;
+
+	var marker_clicked_for_selection = {};
+
+	$scope.section_filter_title = "Filter what's being plotted on the map";
+	$scope.section_feedback_form_section_title = "Share your discoveries";
+	$scope.section_social_sharing_title = "Share on your networks";
+	$scope.section_feedbacks_title = "See what others have found";
+
+	//$scope.replyto = {'reply':false};
+
+	$scope.feedback_form_text_reply = [];
+	$scope.show_feedback_reply = [];
+
+	$scope.share_url = window.location.hostname;
+
+	// Sets the map on all markers in the array.
+	function setMapOnAll(map) {
+		for (var i = 0; i < markers.length; i++) {
+			markers[i].setMap(map);
+			markers[i] = null;
+		}
+	}
+
+	function clearMarkers() {
+	 	setMapOnAll(null);
+	}
+
+	function deleteMarkers() {
+		clearMarkers();
+		markers = [];
 	}
 
 
@@ -1218,7 +1220,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 		}
 		
-		console.log($temp['map_center_lat'] + " "+ $temp['map_center_lng']+" "+$temp['map_zoom']);
+		//console.log($temp['map_center_lat'] + " "+ $temp['map_center_lng']+" "+$temp['map_zoom']);
 
 		var mapOpt = {
 		    center:new google.maps.LatLng($temp['map_center_lat'],$temp['map_center_lng']),
