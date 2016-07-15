@@ -1185,7 +1185,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		//actualmap.fitBounds(bounds);
 
 		if (feedback.selection.length > 0){
-			for (var i = 0; i < temp.selection.length; i++)
+			for (var i = 0; i < feedback.selection.length; i++)
 			{
 				console.log(feedback.selection[i]);
 
