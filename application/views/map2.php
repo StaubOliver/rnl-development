@@ -171,10 +171,14 @@
 				<!-- Filter tool -->
 				<div class="col-md-12 section" >
 					<div class="filter-section">
+
+						<div class='filter-reset-btn'>
+							<span class="glyphicon glyphicon-repeat"></span>
+						</div>
 				
 						<div class="row">
 							<div class="col-md-12 filter-title">
-								<h4>{{section_filter_title}} <span class="glyphicon glyphicon-repeat"></span></h4>
+								<h4>{{section_filter_title}} </h4>
 							</div>
 						</div>
 

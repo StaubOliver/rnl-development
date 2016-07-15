@@ -67,6 +67,12 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	*/
 }
 
+.filter-reset-btn{
+	position: absolute;
+	margin-right: 5px;
+	margin-top: 9px;
+}
+
 .filter-element{
 	/*margin-top:5px;
 	margin-bottom:5px;
