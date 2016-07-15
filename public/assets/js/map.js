@@ -1241,7 +1241,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 					map: actualmap,
 					position: new google.maps.LatLng(temp.selection[i]['lat'], temp.selection[i]['lng']),
 					title: temp.selection[i]['id'] + "-" +temp.selection[i]['title'],
-				    icon: getPinColor($temp.selection[i]['age'])
+				    icon: getPinColor(temp.selection[i]['age'])
 				});
 		
 				marker.addListener("click", function(){
