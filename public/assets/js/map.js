@@ -1246,7 +1246,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 						+ "<div class='row'>"
 
 							+ "<div class='col-md-6'>"
-								+ "<img data-toggle='modal' data-target='#Modal-lg-image' src='"+"url"+"' class='map-infowindow-img' onclick='show_img(\""+info['url']+"\")'>"
+								+ "<img data-toggle='modal' data-target='#Modal-lg-image' src='"+"url"+"' class='map-infowindow-img' >"
 								+ "</br> [+] Click to enlarge"
 							+ "</div>"
 
