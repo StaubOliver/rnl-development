@@ -126,92 +126,7 @@
 			</div>
 		</div>
 		<div class='row map-legend-content' id='map-legend-content' ng-show="show_legend">
-			<!--
-			<div class='col-md-3'>
-				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/F9F97F/" alt="Hello there">
-			</div>
-			<div class='col-md-9'>
-				<p class='map-legend-content-title'>Quaternary</p>
-			</div>
-			<div class='col-md-3'>
-				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/FFE619/" alt="Hello there">
-			</div>
-			<div class='col-md-9'>
-				<p class='map-legend-content-title'>Neogene</p>
-			</div>
-			<div class='col-md-3'>
-				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/FD9A52/" alt="Hello there">
-			</div>
-			<div class='col-md-9'>
-				<p class='map-legend-content-title'>Paleogene</p>
-			</div>
-			<div class='col-md-3'>
-				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/7FC64E/" alt="Hello there">
-			</div>
-			<div class='col-md-9'>
-				<p class='map-legend-content-title'>Cretaceous</p>
-			</div>
-			<div class='col-md-3'>
-				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/34B2C9/" alt="Hello there">
-			</div>
-			<div class='col-md-9'>
-				<p class='map-legend-content-title'>Jurassic</p>
-			</div>
-			<div class='col-md-3'>
-				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/C71B92/" alt="Hello there">
-			</div>
-			<div class='col-md-9'>
-				<p class='map-legend-content-title'>Triassic</p>
-			</div>
-			<div class='col-md-3'>
-				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/F04028/" alt="Hello there">
-			</div>
-			<div class='col-md-9'>
-				<p class='map-legend-content-title'>Permian</p>
-			</div>
-			<div class='col-md-3'>
-				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/67A599/" alt="Hello there">
-			</div>
-			<div class='col-md-9'>
-				<p class='map-legend-content-title'>Carboniferous</p>
-			</div>
-			<div class='col-md-3'>
-				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/CB8C37/" alt="Hello there">
-			</div>
-			<div class='col-md-9'>
-				<p class='map-legend-content-title'>Devonian</p>
-			</div>
-			<div class='col-md-3'>
-				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/B3E1B6/" alt="Hello there">
-			</div>
-			<div class='col-md-9'>
-				<p class='map-legend-content-title'>Silurian</p>
-			</div>
-			<div class='col-md-3'>
-				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/009270/" alt="Hello there">
-			</div>
-			<div class='col-md-9'>
-				<p class='map-legend-content-title'>Ordovician</p>
-			</div>
-			<div class='col-md-3'>
-				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/7F1056/" alt="Hello there">
-			</div>
-			<div class='col-md-9'>
-				<p class='map-legend-content-title'>Cambrian</p>
-			</div>
-			<div class='col-md-3'>
-				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/934370/" alt="Hello there">
-			</div>
-			<div class='col-md-9'>
-				<p class='map-legend-content-title'>Precambrian</p>
-			</div>
-			<div class='col-md-3'>
-				<img class="map-legend-pin" src="http://www.googlemapsmarkers.com/v1/909090/" alt="Hello there">
-			</div>
-			<div class='col-md-9'>
-				<p class='map-legend-content-title'>Data Missing</p>
-			</div>
-			-->
+			
 		</div>
 	</div>
 
@@ -491,7 +406,7 @@
 										<div class="col-md-6 feedback-message-buttons">
 											<a class='feedback-message-button-up' href='#' ng-show="!feedback.user_has_upvote" ng-click="upvoteFeedback(feedback.feedback_id)">Upvote</a> 
 											<span ng-show="feedback.user_has_upvote">Upvoted</span>
-											<a class='feedback-message-button-reply' href='#write-section' ng-click="replyFeedback(feedback.feedback_id)">Reply</a>
+											<a class='feedback-message-button-reply' href='' ng-click="replyFeedback(feedback.feedback_id)">Reply</a>
 										</div>
 
 										<div class="col-md-6 feedback-message-info">
