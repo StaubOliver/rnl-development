@@ -223,6 +223,10 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	color:#AAAAAA;
 }
 
+.feedback-message-social{
+	float: right;
+}
+
 .feedback-message-time{
 	text-align: left;
 	color:#AAAAAA;
