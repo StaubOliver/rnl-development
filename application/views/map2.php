@@ -110,7 +110,7 @@
 
 					<li>
 						<a class="social-network-link"
-						href=""
+						href="https://www.reddit.com/submit?url=https://{{share_url}}/map"
 						target="#"> 
 							<img class='social-network-icon' src="/assets/img/socialnetworks/reddit_white.png" alt="Reddit" height="32" width="32">
 						</a>
@@ -118,7 +118,7 @@
 
 					<li>
 						<a class="social-network-link"
-						href=""
+						href="https://www.facebook.com/sharer/sharer.php?u={{ share.url }}/map"
 						target="#">
 							<img class='social-network-icon' src="/assets/img/socialnetworks/facebook_white.png" alt="Facebook" height="32" width="32">
 						</a>
@@ -126,7 +126,7 @@
 					
 					<li>
 						<a class="social-network-link"
-						href=""
+						href="https://plus.google.com/share?url={{ share.url }}/map"
 						target="#"> 
 							<img class='social-network-icon' src="/assets/img/socialnetworks/google_white.png" alt="Google" height="32" width="32">
 						</a>
