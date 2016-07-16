@@ -99,9 +99,38 @@
 					<?php endif; ?>	
 
 					<li><p class="navbar-text">Share</p></li>
-					<li><a class="social-network-link" href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map" target="#"><img class='social-network-icon' src="/assets/img/socialnetworks/twitter_white.png" alt="There should be an awsome logo" height="32" width="32"></a></li>
-					<li><img class='social-network-icon' src="/assets/img/socialnetworks/facebook_white.png" alt="Twitter" height="32" width="32"></li>
-					<li><img class='social-network-icon' src="/assets/img/socialnetworks/google_white.png" alt="There should be an awsome logo" height="32" width="32"></li>
+
+					<li>
+						<a class="social-network-link" 
+					href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map" 
+					target="#">
+						<img class='social-network-icon' src="/assets/img/socialnetworks/twitter_white.png" alt="Twitter" height="32" width="32">
+						</a>
+					</li>
+
+					<li>
+						<a class="social-network-link"
+						href=""
+						target="#"> 
+							<img class='social-network-icon' src="/assets/img/socialnetworks/reddit_white.png" alt="Reddit" height="32" width="32">
+						</a>
+					</li>
+
+					<li>
+						<a class="social-network-link"
+						href=""
+						target="#">
+							<img class='social-network-icon' src="/assets/img/socialnetworks/facebook_white.png" alt="Facebook" height="32" width="32">
+						</a>
+					</li>
+					
+					<li>
+						<a class="social-network-link"
+						href=""
+						target="#"> 
+							<img class='social-network-icon' src="/assets/img/socialnetworks/google_white.png" alt="Google" height="32" width="32">
+						</a>
+					</li>
 
 					<?php if($logged_in == true): ?>
 		 				<li><a href ="/auth/logout_map" class="navbar-link">Logout</a></li>
