@@ -395,7 +395,7 @@
 										</div>
 
 										<div class='col-md-4 feedback-message-social'>
-											<img class='social-network-icon' src="/assets/img/socialnetworks/twitter_light.png" alt="Twitter" height="18" width="18">
+											<img class='feedback-message-social' src="/assets/img/socialnetworks/twitter_light.png" alt="Twitter" height="18" width="18">
 											<img class='social-network-icon' src="/assets/img/socialnetworks/facebook_light.png" alt="Twitter" height="18" width="18">
 											<img class='social-network-icon' src="/assets/img/socialnetworks/google_light.png" alt="Twitter" height="18" width="18">
 
