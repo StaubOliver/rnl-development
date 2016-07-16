@@ -829,6 +829,12 @@ var map = angular.module('map', ['rzModule'])
 		$scope.selectedCollector = '-1';
 		$scope.selectedAgeMin = 0;
 		$scope.selectedAgeMax = 12;
+
+
+		center = new google.maps.LatLng(31.42866248834942,-35.80444375000001);
+		actualmap.setCenter(center);
+		actualmap.setZoom(3);
+
 		refreshFeedback($http);
 		refresh($http);
 	}
