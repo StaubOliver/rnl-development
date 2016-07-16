@@ -225,6 +225,8 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 
 .feedback-message-social{
 	float: right;
+	cursor: pointer;
+	margin-top: 4px;
 }
 
 .feedback-message-time{
