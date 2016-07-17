@@ -490,9 +490,21 @@
 
 										<div class='row'>
 
-											<div class="col-md-12 feedback-message-author">
+											<div class="col-md-8 feedback-message-author">
 												<p>{{feedback['first_name']}} {{feedback['last_name']}} on {{feedback['time'].split(" ")[0]}}</p>
 											</div>
+
+											<div class='col-md-4 '>
+
+											<img class='feedback-message-social' src="/assets/img/socialnetworks/google_light.png" alt="Google" height="18" width="18">
+											
+											<img class='feedback-message-social' src="/assets/img/socialnetworks/facebook_light.png" alt="Facebook" height="18" width="18">
+
+											<img class='feedback-message-social' src="/assets/img/socialnetworks/reddit_light.png" alt="Reddit" height="18" width="18">
+											
+											<img class='feedback-message-social' src="/assets/img/socialnetworks/twitter_light.png" alt="Twitter" height="18" width="18">
+
+										</div>
 
 											<div class="col-md-12 feedback-message-text">
 												<p>{{rep['message']}}</p>
