@@ -237,7 +237,7 @@ var map = angular.module('map', ['rzModule'])
 				+ "<div class='row'>"
 
 					+ "<div class='col-md-6'>"
-						+ "<img data-toggle='modal' data-target='#Modal-lg-image' src='"+info["url"]+"' class='map-infowindow-img' onclick='show_img(\""+info['url']+"\")'>"
+						+ "<img data-toggle='modal-help' data-target='#Modal-lg-image' src='"+info["url"]+"' class='map-infowindow-img' onclick='show_img(\""+info['url']+"\")'>"
 						+ "</br> [+] Click to enlarge"
 					+ "</div>"
 
