@@ -134,7 +134,7 @@
 
 					<li>
 						<a href="" data-toggle='modal-help' data-target='#Modal-help'>
-
+							Help
 						</a>
 					</li>
 
