@@ -156,13 +156,13 @@
 	<div class="modal fade" id="ModalHelp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
-			
+
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id=""></h4>
+					<h4 class="modal-title">Mapping Manchester Museum Fossil Collection</h4>
 				</div>
 
-				<div class="modal-body" id="">
+				<div class="modal-body">
 					<p>Test</p>	
 				</div>
 			</div>
