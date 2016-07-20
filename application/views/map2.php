@@ -152,6 +152,21 @@
 		</div>
 	</nav>
 
+	<div class="modal fade modal-help" id="Modal-help" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="modal-image-title"></h4>
+							</div>
+							<div class="modal-body" id="modal-image-body">
+				
+
+							</div>
+						</div>
+					</div>
+				</div>
+
 
 	<div class="map-header">
 		<img class="map-header-img" src="http://assets.manchester.ac.uk/logos/museum-1.png" alt="There should be an awsome logo" height="84" width="169">
