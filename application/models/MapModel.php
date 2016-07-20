@@ -379,7 +379,9 @@ class MapModel extends CI_Model {
                     if ($query_replies->num_rows() > 0){
                         //for each replies, we get their details
                         foreach ($query_replies->result_array() as $rep){
-                            $new_row["replies"][] = $this->getFeedbackDetails($rep, $user_id);
+                            $temp = $this->getFeedbackDetails($rep, $user_id);
+                            $temp["selection"] = $new_row["selection"];
+                            $new_row["replies"][] = $temp;
                         }
 
                     }
