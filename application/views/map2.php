@@ -133,7 +133,7 @@
 					</li>
 
 					<li>
-						<a href="" data-toggle='modal' data-target='#Modal-help'>
+						<a href="" data-toggle='modal-help' data-target='#Modal-help'>
 							Help
 						</a>
 					</li>
@@ -152,7 +152,7 @@
 		</div>
 	</nav>
 
-	<div class="modal fade" id="Modal-help" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal fade modal-help" id="Modal-help" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -191,7 +191,7 @@
 				
 
 				<!-- Modal to show large pictures -->
-				<div class="modal fade" id="Modal-lg-image" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal fade modal-img" id="Modal-lg-image" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 					<div class="modal-dialog modal-lg" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
