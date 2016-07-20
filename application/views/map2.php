@@ -163,11 +163,11 @@
 				</div>
 
 				<div class="modal-body">
-					<h5>Welcome</h5>
+					<h4>Welcome</h4>
 					<p>This web site is an experiement built and ran by the Museum of Manchester and the School of Computer Science both from the Univrsity of Manchester.</p>
-					<h5>How to use it</h5>
+					<h4>How to use it</h4>
 					<p></p>
-					<h5>Terms and privacy</h5>
+					<h4>Terms and privacy</h4>
 					<p>To serve the purpose of the experiment this web site uses cookies.</p>	
 				</div>
 			</div>
