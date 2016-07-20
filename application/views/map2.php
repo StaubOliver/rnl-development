@@ -163,7 +163,8 @@
 				</div>
 
 				<div class="modal-body">
-					<p>Test</p>	
+					<h5>Welcome</h5>
+					<p>This web site is an experiement built and ran by the Museum of Manchester and the School of Computer Science both from the Univrsity of Manchester.</p>	
 				</div>
 			</div>
 		</div>
