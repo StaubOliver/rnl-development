@@ -457,15 +457,13 @@
 
 										<div class='col-md-4 '>
 
-											<li>
-												<a class="social-network-link" 
-												href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map" 
-												target="#" ng-click="recordActivity('Sharing', 'Twitter message '.feedback['feedback_id'])">
+											<a class="social-network-link" 
+											href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map" 
+											target="#" ng-click="recordActivity('Sharing', 'Twitter message '.feedback['feedback_id'])">
 
-													<img class='feedback-message-social' src="/assets/img/socialnetworks/google_light.png" alt="Google" height="18" width="18">
+												<img class='feedback-message-social' src="/assets/img/socialnetworks/google_light.png" alt="Google" height="18" width="18">
 
-												</a>
-											</li>
+											</a>
 											
 											<img class='feedback-message-social' src="/assets/img/socialnetworks/facebook_light.png" alt="Facebook" height="18" width="18">
 
