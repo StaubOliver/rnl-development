@@ -103,7 +103,7 @@
 					<li>
 						<a class="social-network-link" 
 					href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map" 
-					target="#">
+					target="#" ng-click="recordActivity('Sharing', 'Twitter')">
 						<img class='social-network-icon' src="/assets/img/socialnetworks/twitter_white.png" alt="Twitter" height="32" width="32">
 						</a>
 					</li>
@@ -111,7 +111,7 @@
 					<li>
 						<a class="social-network-link"
 						href="https://www.reddit.com/submit?url=https://{{share_url}}/map"
-						target="#"> 
+						target="#" ng-click="recordActivity('Sharing', 'Reddit')"> 
 							<img class='social-network-icon' src="/assets/img/socialnetworks/reddit_white.png" alt="Reddit" height="32" width="32">
 						</a>
 					</li>
@@ -119,7 +119,7 @@
 					<li>
 						<a class="social-network-link"
 						href="https://www.facebook.com/sharer/sharer.php?u={{ share.url }}/map"
-						target="#">
+						target="#" ng-click="recordActivity('Sharing', 'Facebook')">
 							<img class='social-network-icon' src="/assets/img/socialnetworks/facebook_white.png" alt="Facebook" height="32" width="32">
 						</a>
 					</li>
@@ -127,7 +127,7 @@
 					<li>
 						<a class="social-network-link"
 						href="https://plus.google.com/share?url={{ share.url }}/map"
-						target="#"> 
+						target="#" ng-click="recordActivity('Sharing', 'Google+')"> 
 							<img class='social-network-icon' src="/assets/img/socialnetworks/google_white.png" alt="Google" height="32" width="32">
 						</a>
 					</li>
@@ -164,9 +164,10 @@
 
 				<div class="modal-body">
 					<h4>Welcome</h4>
-					<p>This web site is an experiement built and ran by the Museum of Manchester and the School of Computer Science both from the Univrsity of Manchester.</p>
+					<p>This web site is an experiment built and ran by the Museum of Manchester and the School of Computer Science both from the Univrsity of Manchester.</p>
 					<h4>How to use it</h4>
-					<p></p>
+					<p>On the right hand side of the screen you will find three distinct sections:
+					</p>
 					<h4>Terms and privacy</h4>
 					<p>To serve the purpose of the experiment this web site uses cookies.</p>	
 				</div>
