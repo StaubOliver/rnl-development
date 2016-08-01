@@ -765,20 +765,27 @@ var map = angular.module('map', ['rzModule'])
 	//Nav bar
 
 	$scope.profile = {};
-	$scope.profile.first_name = 'stranger, do you fancy a login ?';
 
-	$http.get('/api/profile/getdetails/').success(function(data, status, headers, config) {
-		// Update the profile page and taskbar
-		$scope.user_id = data.profile.id;
-		user_id = data.profile.id;
-		$scope.profile.username = data.profile.username;
-		$scope.profile.email = data.profile.email;
-		$scope.profile.last_login = data.profile.last_login;
-		$scope.profile.location = data.profile.location;
-		$scope.profile.first_name = data.profile.first_name;
-		$scope.profile.last_name = data.profile.last_name;
-
-	});
+	if ($scope.logged_in)
+	{
+		$http.get('/api/profile/getdetails/').success(function(data, status, headers, config) {
+			// Update the profile page and taskbar
+			$scope.user_id = data.profile.id;
+			user_id = data.profile.id;
+			$scope.profile.username = data.profile.username;
+			$scope.profile.email = data.profile.email;
+			$scope.profile.last_login = data.profile.last_login;
+			$scope.profile.location = data.profile.location;
+			$scope.profile.first_name = data.profile.first_name;
+			$scope.profile.last_name = data.profile.last_name;
+		});
+	} 
+	else 
+	{
+		$scope.profile.first_name = 'stranger, do you fancy a login ?';
+		section_feedback_form_section_title = "Share your discoveries (anonymously)";
+	}
+	
 
 	//filter Section
 	$scope.newProject = function (){
