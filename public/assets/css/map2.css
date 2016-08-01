@@ -677,6 +677,7 @@ fieldset[disabled] .btn-custom-default.active {
 
 .no-margin{
 	margin:0px !important;
+	padding: 0px !important;
 }
 
 
