@@ -675,7 +675,7 @@ fieldset[disabled] .btn-custom-default.active {
 	float: right;
 }
 
-.admin-btn{
+.no-margin{
 	margin:0px !important;
 }
 
