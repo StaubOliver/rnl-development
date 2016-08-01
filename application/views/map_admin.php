@@ -322,7 +322,7 @@
 												<div class='col-md-12 no-margin' ng-show="rep.hidden == 1">
 													<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide-reply' ng-click="hideComment(rep.feedback_id)">Unhide comment</div>	
 												</div>
-												
+
 											</div>
 
 										</div>
@@ -333,26 +333,32 @@
 										<div class='row'>
 
 											<div class='col-md-12'>
-												<strong>
-													{{rep['message']}}
-												</strong>
+												<div class='well well-sm well-message'>
+													<strong>
+														{{rep['message']}}
+													</strong>
+												</div>
 											</div>
-											
+
 											<div class='col-md-12'>
-												{{rep["first_name"]}} {{rep["last_name"]}}
-												on
-												{{rep['time']}}
+												{{rep['upvote']}} upvotes
 											</div>
 
-											<div class='col-md-6'>
-											From: {{rep['age_min']}}
+											<!--
+
+											<div class='col-md-4'>
+												Filter
 											</div>
 
-											<div class='col-md-6'>
-												To: {{rep['age_max']}}
+											<div class='col-md-4'>
+												Geological Age
 											</div>
-											
-											<div class='col-md-6'>
+
+
+											<div class='col-md-4'>
+											</div>
+
+											<div class='col-md-4'>
 												<div ng-show="rep['genus']==-1">
 													Genus: All
 												</div>
@@ -361,30 +367,53 @@
 												</div>
 											</div>
 
-											<div class='col-md-6'>
+
+
+
+											
+
+											<div class='col-md-4'>
+											From: {{rep['age_min']}}
+											</div>
+
+											<div class='col-md-4'>
+											</div>
+
+											<div class='col-md-4'>
 												<div ng-show="rep['genus']==-1">
 													Collector: All
 												</div>
 												<div ng-show="rep['genus']!=-1">
-													Collector: {{feedback['collector']}}
+													Collector: {{rep['collector']}}
 												</div>
 											</div>
 
-											<div class='col-md-6'>
+
+											<div class='col-md-4'>
+												To: {{rep['age_max']}}
+											</div>
+											
+											
+
+											
+											<div class='col-md-4'>
 												{{rep['upvote']}} upvotes
 											</div>
+											-->
 
 										</div>
 									</div>
 
+									<!--
+
 									<div class='col-md-2'>
 										<div class='row'>
 
-										<!--
+										
 											<div class='col-md-12'>
 												<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id, rep.feedback_id)'>See on the map</div>
 											</div>
-											-->
+											
 
 											<div class='col-md-12' ng-show="rep.hidden == 0">
 												<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide-reply' ng-click="hideComment(rep.feedback_id)">Hide comment</div>	
@@ -396,6 +425,10 @@
 
 										</div>
 									</div>
+
+									-->
+
+	
 
 
 									<div class='col-md-4'>
