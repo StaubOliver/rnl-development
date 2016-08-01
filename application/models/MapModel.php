@@ -734,28 +734,7 @@ class MapModel extends CI_Model {
     }*/
 
 
-    public function updatelocationestimate()
-    {
-        $res = 0;
-
-        $query_projects = $this->db->query('SELECT id, name, image, blurb, data_table, image_table FROM projects_master');
-
-        if ($query_projects->num_rows() > 0)
-        {
-            foreach($query_fossil->result_array() as $row)
-            {
-                $query_fossils = $this->db->query('SELECT * FROM '.$row['data_table'].' WHERE ((country!="Missing" and place!="") or (country!="" and place!="")) and (lat=0 or lat IS NULL) and (lng=0 or lng IS NULL)');
-
-                $res += $query_fossils->num_rows();
-            }
-        }
-        else 
-        {
-            $res = 0;
-        }
-
-        return $res;
-    }
+   
 
     function updatelocation($data)
     {
