@@ -675,6 +675,10 @@ fieldset[disabled] .btn-custom-default.active {
 	float: right;
 }
 
+.admin-btn{
+	margin:0px !important;
+}
+
 
 .well-message{
 	margin-bottom: 2px !important;
