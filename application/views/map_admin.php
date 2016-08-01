@@ -72,7 +72,7 @@
 
 
 				<div class='col-md-10 col-md-offset-1 admin-title'>
-					<h4>Update location/h4>
+					<h4>Update location</h4>
 				</div>
 
 				<div class='col-md-10 col-md-offset-1 admin-title'>
