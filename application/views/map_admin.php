@@ -128,11 +128,12 @@
 
 								<div class='row'>
 									
-									<div class='col-md-12'>
+									<!--<div class='col-md-12'>
 										{{feedback["first_name"]}} {{feedback["last_name"]}}
 										on
 										{{feedback['time']}}
 									</div>
+									-->
 
 									<div class='col-md-12'>
 										<div class='well well-sm well-message'>
@@ -191,6 +192,8 @@
 
 							</div>
 
+							<!--
+
 							<div class='col-md-2'>
 								<div class='row'>
 
@@ -212,8 +215,9 @@
 
 								</div>
 							</div>
+							-->
 
-							<div class='col-md-4'>
+							<div class='col-md-6'>
 								<div class='row'>
 
 									<div class='col-md-12'>
