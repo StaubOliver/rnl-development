@@ -634,7 +634,7 @@ var map = angular.module('map', ['rzModule'])
 		}
 		else {
 			if (typeof(feedback_reply) == 'undefined'){
-				$scope.feedback_form_error = "Please write a comment before saving";
+				$scope.feedback_form_error = "Please write a comment before sending";
 			}
 			else {
 

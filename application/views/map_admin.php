@@ -94,15 +94,20 @@
 
 								<div class='row'>
 									
-									<div class='col-md-12'>
-										<strong>
-											{{feedback['message']}}
-										</strong>
-									</div>
+									
 									
 									<div class='col-md-12'>
 										{{feedback["first_name"]}} {{feedback["last_name"]}}
+										on
 										{{feedback['time']}}
+									</div>
+
+									<div class='col-md-12'>
+										<div class='well well-sm'>
+											<strong>
+												{{feedback['message']}}
+											</strong>
+										</div>
 									</div>
 									
 
