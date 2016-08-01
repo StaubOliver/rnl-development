@@ -90,7 +90,7 @@
 						</p>
 						</div>
 
-						<div class='col-md-12'>
+						<div class='col-md-12 admin-update-notice' ng-show='show_update_notice' ng-click='update_location()'>
 							<h5>The Update process is ongoing. It will take a while however this window can be closed.</h5>
 						</div>
 

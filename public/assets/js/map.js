@@ -855,6 +855,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.rating_img = [];
 
 	$scope.show_map = [];
+	$scope.show_update_notice = false;
 
 	var infoWindowadmin = new google.maps.InfoWindow({maxWidth:200});
 
@@ -1006,6 +1007,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}
 	}*/
 
+	$scope.update_location = function(){
+		$scope.show_update_notice = true;
+	}
 
 
 	$scope.rating_click = function(feedback_id, rating, rate)

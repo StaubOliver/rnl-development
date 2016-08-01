@@ -616,6 +616,10 @@ fieldset[disabled] .btn-custom-default.active {
 	margin:0px !important;
 }
 
+.admin-update-notice{
+	text-align: center;
+}
+
 .btn-admin{
 	width: 120px;
 	text-align: center;
