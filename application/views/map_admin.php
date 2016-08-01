@@ -288,9 +288,12 @@
 					</div>
 
 					<!-- replies -->
-					<div ng-repeat='rep in feedback.replies' ng-show='feedback.replies.length'>
 
-						<div class='collapse' id='{{feedback.feedback_id}}'>
+					<div class='collapse' id='{{feedback.feedback_id}}'>
+						
+						<div ng-repeat='rep in feedback.replies' ng-show='feedback.replies.length'>
+
+						
 
 							<div class='col-md-10 col-md-offset-1' ng-class="{'admin-feedback-reply':rep.hidden==0, 'admin-feedback-reply-hidden':rep.hidden==1||feedback.hidden==1}">
 
