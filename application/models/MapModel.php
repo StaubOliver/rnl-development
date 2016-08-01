@@ -754,7 +754,7 @@ class MapModel extends CI_Model {
             $res = 0;
         }
 
-        else $res;
+        return $res;
     }
 
     function updatelocation($data)
