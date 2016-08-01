@@ -85,7 +85,7 @@
 						</div>
 						
 						<div class='col-md-9'>	
-						<p>
+						<p class='p-update-location'>
 							Use this button to use the Google Maps api to translate the country and place information for each fossil into coordinates. Limit: 1000 items per 24 hours.
 						</p>
 						</div>

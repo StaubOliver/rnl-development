@@ -612,6 +612,10 @@ fieldset[disabled] .btn-custom-default.active {
 	margin: auto;
 }
 
+.p-update-location{
+	margin:0px !important;
+}
+
 .btn-admin{
 	width: 120px;
 	text-align: center;
