@@ -79,7 +79,7 @@
 					<div class='row'>
 
 						<div class='col-md-4'>
-						<div class='btn btn-custom-primary btn-xl btn-admin btn-admin-hide' ng-click="">Update Locations</div>	
+							<div class='btn btn-custom-primary btn-xl' ng-click="">Update Locations</div>	
 						</div>
 						
 						<div class='col-md-8'>	
