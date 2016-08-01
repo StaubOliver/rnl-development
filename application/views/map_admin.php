@@ -78,11 +78,11 @@
 				<div class='col-md-10 col-md-offset-1 admin-feedback'>
 					<div class='row'>
 
-						<div class='col-md-4'>
+						<div class='col-md-3'>
 							<div class='btn btn-custom-primary btn-xl' ng-click="">Update Locations</div>	
 						</div>
 						
-						<div class='col-md-8'>	
+						<div class='col-md-9'>	
 						<p>
 							Use this button to use the Google Maps api to translate the country and place information for each fossil into coordinates. Limit: 1000 items per 24 hours.
 						</p>
