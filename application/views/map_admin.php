@@ -93,13 +93,13 @@
 							<div class='col-md-12 admin-message-head'>
 								<div class='row'>
 
-									<div class='col-md-6'>
+									<div class='col-md-8'>
 										{{feedback["first_name"]}} {{feedback["last_name"]}}
 										on
 										{{feedback['time']}}
 									</div>
 
-									<div class='col-md-3'>
+									<div class='col-md-2'>
 										<div class='col-md-12' ng-show="!show_map[feedback.feedback_id]">
 											<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id)'><span class="glyphicon glyphicon-chevron-up"></span> Show the map</div>
 										</div>
@@ -109,7 +109,7 @@
 										</div>
 									</div>
 
-									<div class='col-md-3'>
+									<div class='col-md-2'>
 
 										<div class='col-md-12' ng-show="feedback.hidden == 0">
 											<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide' ng-click="hideComment(feedback.feedback_id)">Hide comment</div>	
