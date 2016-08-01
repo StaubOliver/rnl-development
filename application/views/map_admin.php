@@ -168,7 +168,7 @@
 										</div>
 									</div>
 									
-									<div class='col-md-4' ng-show=''>
+									<div class='col-md-4' >
 										From: {{feedback['age_min']}}
 									</div>
 
