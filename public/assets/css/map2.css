@@ -603,6 +603,10 @@ fieldset[disabled] .btn-custom-default.active {
 	border-left: 5px solid #6F6F6F;
 }
 
+.admin-message-head{
+	margin-bottom: 2px;
+}
+
 .btn-admin{
 	width: 120px;
 	text-align: center;

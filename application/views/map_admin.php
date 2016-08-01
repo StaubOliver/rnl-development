@@ -90,7 +90,7 @@
 							<div id ='map-{{feedback.feedback_id}}' class='col-md-12 map-admin'>
 							</div>
 
-							<div class='col-md-12'>
+							<div class='col-md-12 admin-message-head'>
 								<div class='row'>
 
 									<div class='col-md-6'>
