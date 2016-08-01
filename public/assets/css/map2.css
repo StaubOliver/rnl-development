@@ -607,6 +607,11 @@ fieldset[disabled] .btn-custom-default.active {
 	margin-bottom: 5px;
 }
 
+.btn-update-location{
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .btn-admin{
 	width: 120px;
 	text-align: center;
