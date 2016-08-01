@@ -124,7 +124,7 @@
 								</div>
 							</div>
 
-							<div class='col-md-6 admin-feedback-vertical-ligne'>
+							<div class='col-md-8 admin-feedback-vertical-ligne'>
 
 								<div class='row'>
 									
@@ -217,7 +217,7 @@
 							</div>
 							-->
 
-							<div class='col-md-6'>
+							<div class='col-md-4'>
 								<div class='row'>
 
 									<div class='col-md-12'>
