@@ -734,7 +734,7 @@ class MapModel extends CI_Model {
     }*/
 
 
-    function updatelocationestimate()
+    public function updatelocationestimate()
     {
         $res = 0;
 
