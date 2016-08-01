@@ -757,7 +757,7 @@ class MapModel extends CI_Model {
         return $res;
     }
 
-    function updatelocation($data)
+    function updatelocation()
     {
 
         //Now we look at the projects_master table to give us the data_table foreach project
