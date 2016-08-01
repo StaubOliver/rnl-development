@@ -75,6 +75,22 @@
 					<h4>Update location</h4>
 				</div>
 
+				<div class='col-md-10 col-md-offset-1 admin-feedback'>
+					<div class='row'>
+
+						<div class='col-md-4'>
+
+						</div>
+						
+						<div class='col-md-8'>	
+						<p>
+							Use this button to use the Google Maps api to translate the country and place information for each fossil into coordinates.
+						</p>
+						</div>
+
+					</div>	
+				</div>
+
 				<div class='col-md-10 col-md-offset-1 admin-title'>
 					<h4><?php echo count($feedbacks).' feedbacks recorded'; ?></h4>
 				</div>
