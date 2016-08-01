@@ -742,7 +742,7 @@ class MapModel extends CI_Model {
 
         if ($query_projects->num_rows() > 0)
         {
-            foreach($query_fossil->result_array() as $row)
+            foreach($query_projects->result_array() as $row)
             {
                 $query_fossils = $this->db->query('SELECT * FROM '.$row['data_table'].' WHERE ((country!="Missing" and place!="") or (country!="" and place!="")) and (lat=0 or lat IS NULL) and (lng=0 or lng IS NULL)');
 
