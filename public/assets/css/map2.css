@@ -672,6 +672,10 @@ fieldset[disabled] .btn-custom-default.active {
 }
 
 
+.well-message{
+	margin-bottom: 0px !important;
+}
+
 .rating-star{
 	height:24px;
 	width: auto;

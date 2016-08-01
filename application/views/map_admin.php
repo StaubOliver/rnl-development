@@ -103,7 +103,7 @@
 									</div>
 
 									<div class='col-md-12'>
-										<div class='well well-sm'>
+										<div class='well well-sm well-message'>
 											<strong>
 												{{feedback['message']}}
 											</strong>
