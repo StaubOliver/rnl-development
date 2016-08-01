@@ -395,9 +395,11 @@
 									<div class="col-md-12 feedback-form-error" ng-show="feedback_form_error">
 										{{feedback_form_error}}
 									</div>
+									<!--
 									<div class="col-md-12 " ng-show="!logged_in">
 										Since you're not logged in your message will be anonymous
 									</div>
+									-->
 								</div>
 							</form>
 						</div>
