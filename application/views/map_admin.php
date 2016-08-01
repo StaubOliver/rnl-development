@@ -75,7 +75,7 @@
 					<h4>Update location - <?php echo $location_update." Fossils to update" ?> </h4>
 				</div>
 
-				<div class='col-md-10 col-md-offset-1 admin-feedback'>
+				<div class='col-md-10 col-md-offset-1 admin-feedback update-info'>
 					<div class='row'>
 
 						<div class='col-md-3'>
