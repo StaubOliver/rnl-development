@@ -608,9 +608,8 @@ fieldset[disabled] .btn-custom-default.active {
 }
 
 .btn-update-location{
-	display: inline-block;
-	margin-left: auto;
-	margin-right: auto;
+	display: block;
+	margin: auto;
 }
 
 .btn-admin{

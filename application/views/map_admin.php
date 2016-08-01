@@ -79,7 +79,9 @@
 					<div class='row'>
 
 						<div class='col-md-3'>
-							<div class='btn btn-custom-primary btn-xl btn-update-location' ng-click="">Update Locations</div>	
+							<div class='btn btn-custom-primary btn-xl btn-update-location' ng-click="">
+								Update Locations
+							</div>	
 						</div>
 						
 						<div class='col-md-9'>	
