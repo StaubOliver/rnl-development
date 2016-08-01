@@ -168,16 +168,16 @@
 										</div>
 									</div>
 									
-									<div class='col-md-4'>
+									<div class='col-md-4' ng-show=''>
 										From: {{feedback['age_min']}}
 									</div>
 
-									<div class='col-md-4'>
-										{{feedback['replies'].length}} replies
+									<div class='col-md-4' ng-show='feedback.replies.length == 0'>
+										0 replies
 									</div>
 
 									<div class='col-md-4'>
-										<div class='btn btn-custom-default btn-xs btn-admin ' data-toggle='collapse' data-target='#{{feedback.feedback_id}}' aria-expanded="false" aria-controls='{{feedback.feedback_id}}' ng-click=''><span class="glyphicon glyphicon-chevron-down"></span> Show replies</div>
+										<div class='btn btn-custom-default btn-xs btn-admin ' data-toggle='collapse' data-target='#{{feedback.feedback_id}}' aria-expanded="false" aria-controls='{{feedback.feedback_id}}' ng-click='show_replies(feedback.feedback_id)'><span class="glyphicon glyphicon-chevron-down"></span> Show {{feedback.replies.length}} replies</div>
 									</div>
 
 									<div class='col-md-4'>
