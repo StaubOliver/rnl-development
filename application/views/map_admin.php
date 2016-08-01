@@ -304,6 +304,30 @@
 
 								<div class='row'>
 
+									<div class='col-md-12 admin-message-head'>
+										<div class='row'>
+
+											<div class='col-md-10'>
+												{{feedback["first_name"]}} {{feedback["last_name"]}}
+												on
+												{{feedback['time']}}
+											</div>
+
+											<div class='col-md-2 no-margin'>
+												
+												<div class='col-md-12 no-margin' ng-show="rep.hidden == 0">
+													<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide-reply' ng-click="hideComment(rep.feedback_id)">Hide comment</div>	
+												</div>
+
+												<div class='col-md-12 no-margin' ng-show="rep.hidden == 1">
+													<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide-reply' ng-click="hideComment(rep.feedback_id)">Unhide comment</div>	
+												</div>
+												
+											</div>
+
+										</div>
+									</div>
+
 									<div class='col-md-6 admin-feedback-vertical-ligne'>
 
 										<div class='row'>
@@ -316,6 +340,7 @@
 											
 											<div class='col-md-12'>
 												{{rep["first_name"]}} {{rep["last_name"]}}
+												on
 												{{rep['time']}}
 											</div>
 
