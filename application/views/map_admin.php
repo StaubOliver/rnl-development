@@ -177,6 +177,10 @@
 									</div>
 
 									<div class='col-md-4'>
+										<div class='btn btn-custom-default btn-xs btn-admin ' data-toggle='collapse' data-target='#{{feedback.feedback_id}}' aria-expanded='false' aria-controls='{{feedback.feedback_id}}' ng-click=''><span class="glyphicon glyphicon-chevron-down"></span> Show replies</div>
+									</div>
+
+									<div class='col-md-4'>
 										<div ng-show="feedback['collector']==-1">
 											Collector: All
 										</div>
@@ -286,7 +290,7 @@
 					<!-- replies -->
 					<div ng-repeat='rep in feedback.replies' ng-show='feedback.replies.length'>
 
-						<div class='col-md-10 col-md-offset-1' ng-class="{'admin-feedback-reply':rep.hidden==0, 'admin-feedback-reply-hidden':rep.hidden==1||feedback.hidden==1}">
+						<div class='col-md-10 col-md-offset-1' ng-class="{'admin-feedback-reply':rep.hidden==0, 'admin-feedback-reply-hidden':rep.hidden==1||feedback.hidden==1}" id="{{feedback.feedback_id}}">
 
 							<div class='row'>
 
