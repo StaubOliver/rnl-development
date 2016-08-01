@@ -734,38 +734,31 @@ class MapModel extends CI_Model {
     }*/
 
 
-    function updatelocation($data){
+    function updatelocationestimate()
+    {
+        $res = 0;
 
-        //using the data from the filter we create the where statement for querying the database
-        $where = [];
-        $i = 0;
-        
-        if ($data['genus'] != "-1"){
-            $where[$i] = "genus = '" . $data['genus']."'";
-            $i += 1;
-        }
+        $query_projects = $this->db->query('SELECT id, name, image, blurb, data_table, image_table FROM projects_master');
 
-        if ($data['collector'] != "-1"){
-            $where[$i] = "collector = '" . $data['collector']."'";
-            $i += 1;
-        }
-
-        $where_string = "";
-
-        if ($i != 0)
+        if ($query_projects->num_rows() > 0)
         {
-            for ($j=0; $j<$i-1; $j++)
+            foreach($query_fossil->result_array() as $row)
             {
-                $where_string .= $where[$j] . " AND ";
+                $query_fossils = $this->db->query('SELECT * FROM '.$row['data_table'].' WHERE ((country!="Missing" and place!="") or (country!="" and place!="")) and (lat=0 or lat IS NULL) and (lng=0 or lng IS NULL)');
+
+                $res += $query_fossils->num_rows();
             }
-            
-            $where_string .= $where[$i-1]; 
         }
-        else {
-            $where_string = " 1";
+        else 
+        {
+            $res = 0;
         }
 
-        $query=NULL;
+        else $res;
+    }
+
+    function updatelocation($data)
+    {
 
         //Now we look at the projects_master table to give us the data_table foreach project
         if($data['project']=="-1"){
@@ -778,7 +771,7 @@ class MapModel extends CI_Model {
             foreach($query->result_array() as $row)
             {
                 //we retrieve the data from each fossil from each project
-                $query2 = $this->db->query('SELECT data_id, image_id, genus, species, age, country, place, collector FROM ' . $row["data_table"].' WHERE '.$where_string.' limit 1300, 800');
+                $query2 = $this->db->query('SELECT data_id, image_id, genus, species, age, country, place, collector FROM ' . $row["data_table"].' WHERE 1 limit 1300, 800');
 
                 $table = $row['data_table'];
 
@@ -792,17 +785,27 @@ class MapModel extends CI_Model {
                     $temp = $this->geocode($row['country'].' '.$row['place']);
                     
                     if ($temp != false) {
-                        $row['lattitude'] = $temp[0];
-                        $row['longitude'] = $temp[1];
 
-                        $this->db->where('data_id',$row['data_id']);
 
-                        $up = array(
-                            'lat' => $temp[0],
-                            'lng' => $temp[1]
-                            );
+                        $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $row["data_table"].' WHERE lat='.$temp[0].' AND lng='.$temp[1].' limit 1300, 800');
 
-                        $this->db->update($table, $up);                    
+                        if ($query_already_exist->num_rows() = 0)
+                        {
+                            $this->db->where('data_id',$row['data_id']);
+
+                            $coord = array(
+                                'lat' => $temp[0],
+                                'lng' => $temp[1]
+                                );
+
+                            $this->db->update($table, $coord);
+                        }
+                        else
+                        {
+                            
+                        }
+
+                                            
                     }
 
                     //return $row;
