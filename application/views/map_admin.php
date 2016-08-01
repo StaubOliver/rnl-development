@@ -92,7 +92,7 @@
 				</div>
 
 				<div class='col-md-10 col-md-offset-1 admin-title'>
-					<h4><?php echo count($feedbacks).' feedbacks recorded'; ?></h4>
+					<h4><?php echo 'Feedbacks - '.count($feedbacks).' feedbacks recorded'; ?></h4>
 				</div>
 
 
