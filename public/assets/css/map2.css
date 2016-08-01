@@ -609,15 +609,15 @@ fieldset[disabled] .btn-custom-default.active {
 }
 
 .btn-admin-map{
-	margin-top: 4px;
+
 }
 
 .btn-admin-hide{
-	margin-top: 8px;
+
 }
 
 .btn-admin-hide-reply{
-	margin-top: 4px;
+
 }
 
 .admin-feedback-vertical-ligne{
@@ -673,7 +673,6 @@ fieldset[disabled] .btn-custom-default.active {
 
 
 .well-message{
-	margin-top: 2px !important;
 	margin-bottom: 2px !important;
 }
 
