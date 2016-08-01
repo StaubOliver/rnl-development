@@ -173,6 +173,7 @@
 									</div>
 
 									<div class='col-md-4'>
+										{{feedback['replies'].length}} replies
 									</div>
 
 									<div class='col-md-4'>
