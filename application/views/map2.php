@@ -165,17 +165,35 @@
 
 				<div class="modal-body">
 					<h4>Welcome</h4>
-					<p>This web site is an experiment built and ran by the Museum of Manchester and the School of Computer Science both from the Univrsity of Manchester.</p>
-					<h4>How to use it</h4>
-					<p>On the right hand side of the screen you will find three distinct sections:
+					<p>
+						This web site is an experiment built and ran by the Museum of Manchester and the School of Computer Science both from the Univrsity of Manchester.
 					</p>
-					<li>
-						<ul>
-							The filter part
-						</ul>
-					</li>
+					
+					<h4>How to use it</h4>
+					<p>
+						The application is divided into two parts: the map and the tools.
+						On the right hand side of the screen you will find three distinct sections:
+					</p>
+					
+					<p>
+						<strong>The filter</strong>
+						Three selectors allow you to select which part of the collection is being displayed on the map. You can select a specific time period, display 
+					</p>
+
+					<p>
+						<strong>The contribution</strong>
+						This text box is here for you to share the discoveries you make about the data you explore. You can click on the markers on the map and select them to add them to your message.
+					</p>
+
+					<p>
+						<strong>The community</strong>
+						This is the community's contributions, its content adapts according to the state of the filters.
+					</p>
+					
 					<h4>Terms and privacy</h4>
-					<p>To serve the purpose of the experiment this web site uses cookies.</p>	
+					<p>
+						To serve the purpose of the experiment this web site uses cookies.
+					</p>	
 				</div>
 			</div>
 		</div>
