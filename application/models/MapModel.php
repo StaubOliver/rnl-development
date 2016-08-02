@@ -759,18 +759,15 @@ class MapModel extends CI_Model {
 
     function updatelocation()
     {
-
-        //Now we look at the projects_master table to give us the data_table foreach project
         $query = $this->db->query('SELECT id, name, image, blurb, data_table, image_table FROM projects_master');
         
-
         $return = array();
         
         if($query->num_rows() > 0) {
             foreach($query->result_array() as $row)
             {
                 //we retrieve the data from each fossil from each project
-                $query2 = $this->db->query('SELECT data_id, image_id, genus, species, age, country, place, collector FROM ' . $row['data_table'].' WHERE 1 limit 1300, 800');
+                $query2 = $this->db->query('SELECT data_id, image_id, genus, species, age, country, place, collector FROM ' . $row['data_table']);
 
                 $table = $row['data_table'];
 
