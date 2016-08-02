@@ -42,6 +42,7 @@ class MapModel extends CI_Model {
                 $data_arr = array();            
                  
                 array_push(
+                        $data_arr,
                         $lati, 
                         $longi, 
                         $formatted_address
@@ -782,11 +783,12 @@ class MapModel extends CI_Model {
                 foreach ($query2->result_array() as $row)
                 {
                     $temp = $this->geocode($row['country'].' '.$row['place']);
+                    return $temp;
                     $coord = array(
                         'lat' => $temp[0],
                         'lng' => $temp[1]
                     );
-                    return $temp;
+                    
                     if ($temp != false) 
                     {
 
