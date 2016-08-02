@@ -220,40 +220,64 @@
 						<div class='col-md-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/C72B92/' alt='Triassic'>
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-3'>
 							Triassic
 						</div>
 
-						<div class='col-md-1'>
+						<div class='col-md-1 col-md-offset-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/F04028/' alt='Permian'>
+						</div>
+						<div class='col-md-2'>
+							Permian
 						</div>
 
 						<div class='col-md-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/67A599/' alt='Carboniferous'>
 						</div>
+						<div class='col-md-2'>
+							Carboniferous
+						</div>
 
 						<div class='col-md-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/CB8C37/' alt='Devonian'>
 						</div>
+						<div class='col-md-3'>
+							Devonian
+						</div>
 
-						<div class='col-md-1'>
+						<div class='col-md-1 col-md-offset-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/B3E1B6/' alt='Silurian'>
+						</div>
+						<div class='col-md-2'>
+							Silurian
 						</div>
 
 						<div class='col-md-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/009270/' alt='Ordovician'>
 						</div>
+						<div class='col-md-2'>
+							Ordovician
+						</div>
 
 						<div class='col-md-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/7FA056/' alt='Cambrian'>
 						</div>
+						<div class='col-md-3'>
+							Cambrian
+						</div>
 
-						<div class='col-md-1'>
+						<div class='col-md-1 col-md-offset-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/934370/' alt='Precambrian'>
+						</div>
+						<div class='col-md-2'>
+							Precambrian
 						</div>
 
 						<div class='col-md-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/909090/' alt='Data Missing'>
+						</div>
+						<div class='col-md-2'>
+							Data Missing
 						</div>
 
 					</div>
