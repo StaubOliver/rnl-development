@@ -764,7 +764,7 @@ var map = angular.module('map', ['rzModule'])
 	refreshFeedback($http);
 
 	if($scope.firstVisit == true){
-		document.getElementById('helpBtn').click();
+		document.getElementById('helpButton').click();
 	}
 
 
