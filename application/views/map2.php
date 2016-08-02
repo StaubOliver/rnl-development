@@ -199,8 +199,10 @@
 						<div class='col-md-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/FD9A52/' alt='Paleogene'>
 						</div>
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							Paleogene
+						</div>
+						<div class='col-md-1'>
 						</div>
 
 						<div class='col-md-1 col-md-offset-1'>
