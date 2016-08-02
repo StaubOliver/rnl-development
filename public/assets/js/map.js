@@ -1017,10 +1017,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.update_location = function(){
 		$scope.show_update_notice = true;
-		http({
+		$http({
 		        method : 'POST',
 		        url: '/api/map/updateLocatio',
-		        data: $.param(data),
 		        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		    	
 		}).success(function(data, status, headers, config) {
