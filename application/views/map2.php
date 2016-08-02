@@ -183,55 +183,55 @@
 					<div class='row'>
 
 						<div class='col-md-1'>
-							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/F9F97F/' alt='Quaternary'>"
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/F9F97F/' alt='Quaternary'>
 						</div>
 
 						<div class='col-md-1'>
-							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/FFE619/' alt='Neogene'>"
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/FFE619/' alt='Neogene'>
 						</div>
 
 						<div class='col-md-1'>
-							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/FD9A52/' alt='Paleogene'>"
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/FD9A52/' alt='Paleogene'>
 						</div>
 
 						<div class='col-md-1'>
-							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/7FC64E/' alt='Cretaceous'>"
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/7FC64E/' alt='Cretaceous'>
 						</div>
 
 						<div class='col-md-1'>
-							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/34B2C9/' alt='Jurassic'>"
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/34B2C9/' alt='Jurassic'>
 						</div>
 
 						<div class='col-md-1'>
-							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/C72B92/' alt='Triassic'>"
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/C72B92/' alt='Triassic'>
 						</div>
 
 						<div class='col-md-1'>
-							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/F04028/' alt='Permian'>"
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/F04028/' alt='Permian'>
 						</div>
 
 						<div class='col-md-1'>
-							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/67A599/' alt='Carboniferous'>"
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/67A599/' alt='Carboniferous'>
 						</div>
 
 						<div class='col-md-1'>
-							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/CB8C37/' alt='Silurian'>"
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/CB8C37/' alt='Silurian'>
 						</div>
 
 						<div class='col-md-1'>
-							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/009270/' alt='Ordovician'>"
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/009270/' alt='Ordovician'>
 						</div>
 
 						<div class='col-md-1'>
-							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/7FA056/' alt='Cambrian'>"
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/7FA056/' alt='Cambrian'>
 						</div>
 
 						<div class='col-md-1'>
-							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/934370/' alt='Precambrian'>"
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/934370/' alt='Precambrian'>
 						</div>
 
 						<div class='col-md-1'>
-							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/909090/' alt='Data Missing'>"
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/909090/' alt='Data Missing'>
 						</div>
 
 
