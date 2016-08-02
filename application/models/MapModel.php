@@ -781,6 +781,8 @@ class MapModel extends CI_Model {
                 //}
                 foreach ($query2->result_array() as $row)
                 {
+                    $table = $row['data_table'];
+
                     $temp = $this->geocode($row['country'].' '.$row['place']);
                     $coord = array(
                         'lat' => $temp[0],
@@ -790,12 +792,12 @@ class MapModel extends CI_Model {
                     if ($temp != false) 
                     {
 
-                        $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $row["data_table"].' WHERE lat='.$coord['lat'].' AND lng='.$coord['lng']);
+                        $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $table.' WHERE lat='.$coord['lat'].' AND lng='.$coord['lng']);
 
                         $i = 0;
                         while ($query_already_exist->num_rows() != 0) {
                             $test = $this->changeLocation($coord, $i);
-                            $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $row["data_table"].' WHERE lat='.$test['lat'].' AND lng='.$test['lng']);
+                            $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $table.' WHERE lat='.$test['lat'].' AND lng='.$test['lng']);
                             $i++;
                         }
 
@@ -803,7 +805,7 @@ class MapModel extends CI_Model {
                         {
                             $this->db->where('data_id',$row['data_id']);
 
-                            $this->db->update($row['data_table'], $coord);
+                            $this->db->update($table, $coord);
                         }
 
                     }
@@ -816,7 +818,7 @@ class MapModel extends CI_Model {
                             'lng' => 0
                             );
 
-                        $this->db->update($row['data_table'], $coord);
+                        $this->db->update($table, $coord);
                     }
 
                     //return $row;
