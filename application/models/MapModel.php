@@ -744,7 +744,7 @@ class MapModel extends CI_Model {
         {
             foreach($query_projects->result_array() as $row)
             {
-                $query_fossils = $this->db->query('SELECT * FROM '.$row['data_table'].' WHERE ((country!="Missing" and place!="") or (country!="" and place!="")) and lat IS NULL and lng IS NULL');
+                $query_fossils = $this->db->query('SELECT * FROM '.$row['data_table'].' WHERE ((country!="Missing" and place!="") or (country!="") or (place!="")) and lat IS NULL and lng IS NULL');
 
                 $res += $query_fossils->num_rows();
             }
@@ -774,7 +774,7 @@ class MapModel extends CI_Model {
             {
                 $table = $row['data_table'];
                 //we retrieve the data from each fossil from each project
-                $query2 = $this->db->query('SELECT * FROM ' . $table.' WHERE ((country!="Missing" and place!="") or (country!="" and place!="")) and lat IS NULL and lng IS NULL');
+                $query2 = $this->db->query('SELECT * FROM ' . $table.' WHERE ((country!="Missing" and place!="") or (country!="") or (place!="")) and lat IS NULL and lng IS NULL');
 
                 //return $query2->result_array(); 
     
@@ -793,7 +793,6 @@ class MapModel extends CI_Model {
                             'lng' => $temp[1]
                         );
                     
-
                         $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $table.' WHERE lat='.$coord['lat'].' AND lng='.$coord['lng']);
 
                         $i = 0;
