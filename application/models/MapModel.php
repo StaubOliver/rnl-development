@@ -767,12 +767,14 @@ class MapModel extends CI_Model {
         $query = $this->db->query('SELECT id, name, image, blurb, data_table, image_table FROM projects_master');
         
         $return = array();
+
+        $table = $row['data_table'];
         
         if($query->num_rows() > 0) {
             foreach($query->result_array() as $row)
             {
                 //we retrieve the data from each fossil from each project
-                $query2 = $this->db->query('SELECT * FROM ' . $row['data_table'].' WHERE ((country!="Missing" and place!="") or (country!="" and place!="")) and lat IS NULL and lng IS NULL');
+                $query2 = $this->db->query('SELECT * FROM ' . $table.' WHERE ((country!="Missing" and place!="") or (country!="" and place!="")) and lat IS NULL and lng IS NULL');
 
                 //return $query2->result_array(); 
     
@@ -781,8 +783,6 @@ class MapModel extends CI_Model {
                 //}
                 foreach ($query2->result_array() as $row)
                 {
-                    $table = $row['data_table'];
-
                     $temp = $this->geocode($row['country'].' '.$row['place']);
                     $coord = array(
                         'lat' => $temp[0],
