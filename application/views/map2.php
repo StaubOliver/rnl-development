@@ -177,12 +177,12 @@
 
 					<p>
 						<strong>The map</strong>
-						The map displays the fossils of the Manchester Museum Collection according to the filter tool's settings. Each marker represent a fossil. You can click on all of them to get a picture and more information. Markers colors is determined by the geological of the fossil :
+						The map displays the fossils of the Manchester Museum Collection according to the filter tool's settings. Each marker represent a fossil. You can click on all of them to get a picture and more information. Markers colors is determined by the geological age of the fossil :
 					</p>
 
 					<div class='row'>
 
-						<div class='col-md-1'>
+						<div class='col-md-1 col-md-offset-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/F9F97F/' alt='Quaternary'>
 						</div>
 
@@ -237,8 +237,6 @@
 						<div class='col-md-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/909090/' alt='Data Missing'>
 						</div>
-
-
 
 
 						<div class='col-md-1'>
