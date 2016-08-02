@@ -768,7 +768,8 @@ class MapModel extends CI_Model {
         
         $return = array();
         
-        if($query->num_rows() > 0) {
+        if($query->num_rows() > 0) 
+        {
             foreach($query->result_array() as $row)
             {
                 $table = $row['data_table'];
@@ -823,8 +824,8 @@ class MapModel extends CI_Model {
 
                 }       
             }
-            //return the data
-            return $return;
+
+
         }
     }
 
