@@ -72,7 +72,7 @@
 
 
 				<div class='col-md-10 col-md-offset-1 admin-title'>
-					<h4>Update location - <?php echo $location_update." Fossils to update" ?> </h4>
+					<h4>Update location - <?php echo $location_update." fossils to update" ?> </h4>
 				</div>
 
 				<div class='col-md-10 col-md-offset-1 admin-feedback update-info'>
