@@ -783,6 +783,7 @@ class MapModel extends CI_Model {
                 //}
                 foreach ($query2->result_array() as $row)
                 {
+                    if ($row["country"] == "Missing") {$row["country"] = "";}
                     $temp = $this->geocode($row['country'].' '.$row['place']);
 
                     
