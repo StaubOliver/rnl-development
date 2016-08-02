@@ -171,22 +171,90 @@
 					
 					<h4>How to use it</h4>
 					<p>
-						The application is divided into two parts: the map and the tools.
+						The application is divided into two parts: the map and the tools. 
 						On the right hand side of the screen you will find three distinct sections:
 					</p>
+
+					<p>
+						<strong>The map</strong>
+						The map displays the fossils of the Manchester Museum Collection according to the filter tool's settings. Each marker represent a fossil. You can click on all of them to get a picture and more information. Markers colors is determined by the geological of the fossil :
+					</p>
+
+					<div class='row'>
+
+						<div class='col-md-1'>
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/F9F97F/' alt='Quaternary'>"
+						</div>
+
+						<div class='col-md-1'>
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/FFE619/' alt='Neogene'>"
+						</div>
+
+						<div class='col-md-1'>
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/FD9A52/' alt='Paleogene'>"
+						</div>
+
+						<div class='col-md-1'>
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/7FC64E/' alt='Cretaceous'>"
+						</div>
+
+						<div class='col-md-1'>
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/34B2C9/' alt='Jurassic'>"
+						</div>
+
+						<div class='col-md-1'>
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/C72B92/' alt='Triassic'>"
+						</div>
+
+						<div class='col-md-1'>
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/F04028/' alt='Permian'>"
+						</div>
+
+						<div class='col-md-1'>
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/67A599/' alt='Carboniferous'>"
+						</div>
+
+						<div class='col-md-1'>
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/CB8C37/' alt='Silurian'>"
+						</div>
+
+						<div class='col-md-1'>
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/009270/' alt='Ordovician'>"
+						</div>
+
+						<div class='col-md-1'>
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/7FA056/' alt='Cambrian'>"
+						</div>
+
+						<div class='col-md-1'>
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/934370/' alt='Precambrian'>"
+						</div>
+
+						<div class='col-md-1'>
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/909090/' alt='Data Missing'>"
+						</div>
+
+
+
+
+						<div class='col-md-1'>
+							Quaternary
+						</div>
+
+					</div>
 					
 					<p>
-						<strong>The filter</strong>
+						<strong>The filter section</strong>
 						Three selectors allow you to select which part of the collection is being displayed on the map. You can select a specific time period, display 
 					</p>
 
 					<p>
-						<strong>The contribution</strong>
+						<strong>Your contribution</strong>
 						This text box is here for you to share the discoveries you make about the data you explore. You can click on the markers on the map and select them to add them to your message.
 					</p>
 
 					<p>
-						<strong>The community</strong>
+						<strong>The community's discoveries</strong>
 						This is the community's contributions, its content adapts according to the state of the filters.
 					</p>
 					
