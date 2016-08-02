@@ -215,7 +215,11 @@
 						</div>
 
 						<div class='col-md-1'>
-							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/CB8C37/' alt='Silurian'>
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/CB8C37/' alt='Devonian'>
+						</div>
+
+						<div class='col-md-1'>
+							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/B3E1B6/' alt='Silurian'>
 						</div>
 
 						<div class='col-md-1'>
