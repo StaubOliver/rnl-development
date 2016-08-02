@@ -768,11 +768,12 @@ class MapModel extends CI_Model {
         
         $return = array();
 
-        $table = $row['data_table'];
+        
         
         if($query->num_rows() > 0) {
             foreach($query->result_array() as $row)
             {
+                $table = $row['data_table'];
                 //we retrieve the data from each fossil from each project
                 $query2 = $this->db->query('SELECT * FROM ' . $table.' WHERE ((country!="Missing" and place!="") or (country!="" and place!="")) and lat IS NULL and lng IS NULL');
 
