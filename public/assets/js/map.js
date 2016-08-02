@@ -1023,7 +1023,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		    	
 		}).success(function(data, status, headers, config) {
-
+			$scope.showUpdateError = true;
+			document.getElementById('updateLocationError').innerHTML='An error occured'+data;
+			console.log(data);
 		}).error(function(data, status, headers, config){
 			$scope.showUpdateError = true;
 			document.getElementById('updateLocationError').innerHTML='An error occured'+data;

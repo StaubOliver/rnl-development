@@ -766,8 +766,6 @@ class MapModel extends CI_Model {
         $query = $this->db->query('SELECT id, name, image, blurb, data_table, image_table FROM projects_master');
         
         $return = array();
-
-        
         
         if($query->num_rows() > 0) {
             foreach($query->result_array() as $row)
@@ -788,7 +786,7 @@ class MapModel extends CI_Model {
                         'lat' => $temp[0],
                         'lng' => $temp[1]
                     );
-                    
+                    return $temp;
                     if ($temp != false) 
                     {
 
@@ -821,8 +819,6 @@ class MapModel extends CI_Model {
                         $this->db->update($table, $coord);
                     }
 
-                    //return $row;
-                    $return[] = $row; 
                 }       
             }
             //return the data
