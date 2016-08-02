@@ -1025,6 +1025,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}).success(function(data, status, headers, config) {
 
 		}).error(function(data, status, headers, config){
+			$scope.showUpdateError = true;
 			document.getElementById('updateLocationError').innerHTML='An error occured'+data;
 			console.log(data);
 		});
