@@ -202,8 +202,10 @@
 						<div class='col-md-2'>
 							Paleogene
 						</div>
-						<div class='col-md-1'>
-						</div>
+					
+					</div>
+
+					<div class='row'>
 
 						<div class='col-md-1 col-md-offset-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/7FC64E/' alt='Cretaceous'>
@@ -226,6 +228,10 @@
 							Triassic
 						</div>
 
+					</div>
+
+					<div class='row'>
+
 						<div class='col-md-1 col-md-offset-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/F04028/' alt='Permian'>
 						</div>
@@ -247,6 +253,10 @@
 							Devonian
 						</div>
 
+					</div>
+
+					<div class='row'>
+
 						<div class='col-md-1 col-md-offset-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/B3E1B6/' alt='Silurian'>
 						</div>
@@ -267,6 +277,10 @@
 						<div class='col-md-3'>
 							Cambrian
 						</div>
+
+					</div>
+
+					<div class='row'>
 
 						<div class='col-md-1 col-md-offset-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/934370/' alt='Precambrian'>
