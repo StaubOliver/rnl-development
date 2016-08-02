@@ -102,6 +102,8 @@ var map = angular.module('map', ['rzModule'])
 	var markers = [];
 	$scope.nbfossils = 0;
 
+	$scope.firstVisit;
+
 	var markers_age = [];
 	$scope.selected_markers = [];
 
