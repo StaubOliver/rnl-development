@@ -169,6 +169,11 @@
 					<h4>How to use it</h4>
 					<p>On the right hand side of the screen you will find three distinct sections:
 					</p>
+					<li>
+						<ul>
+							The filter part
+						</ul>
+					</li>
 					<h4>Terms and privacy</h4>
 					<p>To serve the purpose of the experiment this web site uses cookies.</p>	
 				</div>
