@@ -792,7 +792,7 @@ class MapModel extends CI_Model {
                                 'lng' => $temp[1]
                                 );
 
-                            $this->db->update($table, $coord);
+                            $this->db->update($row['data_table'], $coord);
                         }
                         else
                         {
