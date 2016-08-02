@@ -784,14 +784,15 @@ class MapModel extends CI_Model {
                 foreach ($query2->result_array() as $row)
                 {
                     $temp = $this->geocode($row['country'].' '.$row['place']);
-                    return $temp;
-                    $coord = array(
-                        'lat' => $temp[0],
-                        'lng' => $temp[1]
-                    );
+
                     
                     if ($temp != false) 
                     {
+                        $coord = array(
+                            'lat' => $temp[0],
+                            'lng' => $temp[1]
+                        );
+                    
 
                         $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $table.' WHERE lat='.$coord['lat'].' AND lng='.$coord['lng']);
 
