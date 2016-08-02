@@ -761,6 +761,10 @@ var map = angular.module('map', ['rzModule'])
 	refresh($http);
 	refreshFeedback($http);
 
+	if($scope.firstVisit == true){
+		document.getElementById('helpBtn').click();
+	}
+
 
 	//Nav bar
 

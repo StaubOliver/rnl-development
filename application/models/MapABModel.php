@@ -27,6 +27,18 @@ class MapABModel extends CI_Model {
     	}
     }
 
+    function firstVisit(){
+        $query_ab_group = $this->db->query("SELECT ab_group FROM map_ab WHERE unique_id='".$unique_id."'");
+        if ($query_ab_group->num_rows() > 0){
+            $result = $query_ab_group->row_array();
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
 
     function setABGroup(){
     	$group = 'C';

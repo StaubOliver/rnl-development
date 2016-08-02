@@ -13,6 +13,7 @@ class map extends CI_Controller {
         $this->load->model('ProfileModel');
         $this->load->model('MapModel');
         $this->load->model('LoggerModel');
+        $this->load->model('MapABModel');
     }
     
 	public function index() {	
@@ -27,6 +28,8 @@ class map extends CI_Controller {
 			$data['logged_in'] = false;
 			$data['is_admin'] = "0";
 		}
+
+		$data['firstVisit'] = $this->MapABModel->firstVisit($this->LoggerModel->getUniqueID());
 		
 		
 		if($this->uri->segment(2)){

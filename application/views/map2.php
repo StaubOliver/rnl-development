@@ -17,7 +17,8 @@
 		$admin="false";
 	}
 
-	echo 'ng-init = "selectedGenus=\''.$genus.'\'; selectedCollector=\''.$collector.'\'; selectedAgeMin='.$agemin.'; selectedAgeMax='.$agemax.'; logged_in='.$log.'; admin='.$admin.'"';
+
+	echo 'ng-init = "selectedGenus=\''.$genus.'\'; selectedCollector=\''.$collector.'\'; selectedAgeMin='.$agemin.'; selectedAgeMax='.$agemax.'; logged_in='.$log.'; admin='.$admin.'; firstVisit='.$firstVisit.'"';
 ?>
 >
 <head>
@@ -133,7 +134,7 @@
 					</li>
 
 					<li>
-						<a href="#" data-toggle='modal' data-target='#ModalHelp'>
+						<a href="#" data-toggle='modal' data-target='#ModalHelp' id='helpButton'>
 							Help
 						</a>
 					</li>
