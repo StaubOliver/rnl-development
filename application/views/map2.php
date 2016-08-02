@@ -185,25 +185,43 @@
 						<div class='col-md-1 col-md-offset-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/F9F97F/' alt='Quaternary'>
 						</div>
+						<div class='col-md-2'>
+							Quaternary
+						</div>
 
 						<div class='col-md-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/FFE619/' alt='Neogene'>
+						</div>
+						<div class='col-md-2'>
+							Neogene
 						</div>
 
 						<div class='col-md-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/FD9A52/' alt='Paleogene'>
 						</div>
+						<div class='col-md-2'>
+							Paleogene
+						</div>
 
-						<div class='col-md-1'>
+						<div class='col-md-1 col-md-offset-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/7FC64E/' alt='Cretaceous'>
+						</div>
+						<div class='col-md-2'>
+							Cretaceous
 						</div>
 
 						<div class='col-md-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/34B2C9/' alt='Jurassic'>
 						</div>
+						<div class='col-md-2'>
+							Jurassic
+						</div>
 
 						<div class='col-md-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/C72B92/' alt='Triassic'>
+						</div>
+						<div class='col-md-2'>
+							Triassic
 						</div>
 
 						<div class='col-md-1'>
@@ -236,11 +254,6 @@
 
 						<div class='col-md-1'>
 							<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/909090/' alt='Data Missing'>
-						</div>
-
-
-						<div class='col-md-1'>
-							Quaternary
 						</div>
 
 					</div>
