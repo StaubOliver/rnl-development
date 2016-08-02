@@ -372,7 +372,7 @@ var map = angular.module('map', ['rzModule'])
 		if (markers_age.indexOf('Silurian')!=-1 || markers_age.indexOf('Silurian, Pridoli')!=-1 || markers_age.indexOf('Silurian, Ludlow')!=-1 || markers_age.indexOf('Silurian, Wenlock')!=-1 || markers_age.indexOf('Silurian, Llandovery')!=-1){ legend += LegendItem('B3E1B6', 'Silurian'); }
 		if (markers_age.indexOf('Ordovician')!=-1 || markers_age.indexOf('Ordovician, Upper')!=-1 || markers_age.indexOf('Ordovician, Middle')!=-1 || markers_age.indexOf('Ordovician, Middle')!=-1 || markers_age.indexOf('Ordovician, Lower')!=-1){ legend += LegendItem('009270', 'Ordovician'); }
 		if (markers_age.indexOf('Cambrian')!=-1){ legend += LegendItem('7FA056', 'Cambrian'); }
-		if (markers_age.indexOf('Precambrain')!=-1){ legend += LegendItem('934370', 'Precambrain'); }
+		if (markers_age.indexOf('Precambrain')!=-1){ legend += LegendItem('934370', 'Precambrian'); }
 
 		legend += LegendItem('909090', 'Data Missing');
 
@@ -1013,22 +1013,21 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}
 	}*/
 
+	$scope.showUpdateError = false;
+
 	$scope.update_location = function(){
 		$scope.show_update_notice = true;
 		http({
 		        method : 'POST',
-		        url: '/api/map/updateLocation',
+		        url: '/api/map/updateLocatio',
 		        data: $.param(data),
 		        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		    	
 		}).success(function(data, status, headers, config) {
 
-
-
 		}).error(function(data, status, headers, config){
-
-
-
+			document.getElementById('updateLocationError').setContent('An error occured'+data);
+			console.log(data);
 		});
 	}
 
