@@ -757,6 +757,11 @@ class MapModel extends CI_Model {
         return $res;
     }
 
+    function changeLocation($coord)
+    {
+        return array('lat'=>$coord['lat'], 'lng'=>$coord['lng']);
+    }
+
     function updatelocation()
     {
         $query = $this->db->query('SELECT id, name, image, blurb, data_table, image_table FROM projects_master');
@@ -767,7 +772,7 @@ class MapModel extends CI_Model {
             foreach($query->result_array() as $row)
             {
                 //we retrieve the data from each fossil from each project
-                $query2 = $this->db->query('SELECT data_id, image_id, genus, species, age, country, place, collector FROM ' . $row['data_table']);
+                $query2 = $this->db->query('SELECT * FROM ' . $row['data_table'].' WHERE ((country!="Missing" and place!="") or (country!="" and place!="")) and (lat=0  or lat IS NULL) and (lng=0 or lng IS NULL)');
 
                 //return $query2->result_array(); 
     
@@ -777,27 +782,27 @@ class MapModel extends CI_Model {
                 foreach ($query2->result_array() as $row)
                 {
                     $temp = $this->geocode($row['country'].' '.$row['place']);
+                    $coord = array(
+                        'lat' => $temp[0],
+                        'lng' => $temp[1]
+                    );
                     
                     if ($temp != false) 
                     {
 
-                        $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $row["data_table"].' WHERE lat='.$temp[0].' AND lng='.$temp[1].' limit 1300, 800');
+                        $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $row["data_table"].' WHERE lat='.$coord['lat'].' AND lng='.$coord['lng']);
+
+                        while ($query_already_exist->num_rows() != 0) {
+                            $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $row["data_table"].' WHERE lat='.$coord['lat'].' AND lng='.$coord['lng']);
+                        }
 
                         if ($query_already_exist->num_rows() == 0)
                         {
                             $this->db->where('data_id',$row['data_id']);
 
-                            $coord = array(
-                                'lat' => $temp[0],
-                                'lng' => $temp[1]
-                                );
-
                             $this->db->update($row['data_table'], $coord);
                         }
-                        else
-                        {
-                            
-                        }                  
+                                       
                     }
                     else
                     {
