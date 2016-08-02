@@ -44,7 +44,7 @@ class Map extends MY_Controller {
 
 	public function updatelocation(){
 		//fetch the data from the database
-		echo $this->MapModel->updatelocation();
+		echo json_encode($this->MapModel->updatelocation());
 	}
 
 	static function compare_feedbacks($a, $b){
