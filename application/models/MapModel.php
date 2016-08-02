@@ -761,9 +761,8 @@ class MapModel extends CI_Model {
     {
 
         //Now we look at the projects_master table to give us the data_table foreach project
-        if($data['project']=="-1"){
-            $query = $this->db->query('SELECT id, name, image, blurb, data_table, image_table FROM projects_master');
-        }
+        $query = $this->db->query('SELECT id, name, image, blurb, data_table, image_table FROM projects_master');
+        
 
         $return = array();
         
