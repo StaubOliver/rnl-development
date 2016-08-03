@@ -39,7 +39,7 @@
 	<link rel="stylesheet" href="/assets/css/map2.css">
 	
 	<!-- Google Map API -->
-	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	
 
 </head>
