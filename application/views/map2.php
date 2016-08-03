@@ -55,7 +55,7 @@
 	<link rel="stylesheet" href="/assets/css/map2.css">
 	
 	<!-- Google Map API -->
-	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIwlL-wm53SyhrnSAqCRL9SDGwhTVsq7c"></script>
 	
 	<!--<script>
 		function initialize() {
