@@ -785,7 +785,7 @@ class MapModel extends CI_Model {
                 foreach ($query2->result_array() as $row)
                 {
                     $i++;
-                    if ($i < 950){
+                    if ($i > 950){
                         return "limit reached";
                     }
 
