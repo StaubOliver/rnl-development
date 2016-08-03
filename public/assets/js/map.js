@@ -1,6 +1,6 @@
 
 var getPin = function(color){
-	return "https://www.googlemapsmarkers.com/v1/"+color+"/"
+	return "http://www.googlemapsmarkers.com/v1/"+color+"/"
 }
 
 //var pin_standard = getPin("51ccca")
