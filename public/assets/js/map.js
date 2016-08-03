@@ -1,7 +1,7 @@
 
 var getPin = function(color){
 	//return "http://www.googlemapsmarkers.com/v1/"+color+"/"
-	return "https://natureslibrary.co.uk/assets/img/markers/"+color+".png/"
+	return "https://natureslibrary.co.uk/assets/img/markers/"+color+".png";
 }
 
 //var pin_standard = getPin("51ccca")
