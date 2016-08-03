@@ -1,12 +1,13 @@
 
 var getPin = function(color){
-	return "http://www.googlemapsmarkers.com/v1/"+color+"/"
+	//return "http://www.googlemapsmarkers.com/v1/"+color+"/"
+	return "https://natureslibrary.co.uk/assets/img/markers/"+color+".png/"
 }
 
 //var pin_standard = getPin("51ccca")
 var pin_standard = getPin("909090");
 var pin_highlight = getPin("FFFFFF");
-var pin_selected = getPin("ff4d79");
+var pin_selected = getPin("FF4D79");
 
 var pin_quaternary = getPin("F9F97F");
 var pin_neogene = getPin("FFE619");
