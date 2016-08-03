@@ -781,8 +781,14 @@ class MapModel extends CI_Model {
                 //if($query2->num_rows>0){
                 //$return[] = $query2->result_array();
                 //}
+                $i = 0;
                 foreach ($query2->result_array() as $row)
                 {
+                    $i++;
+                    if ($i < 950){
+                        return "limit reached";
+                    }
+
                     if ($row["country"] == "Missing") {$row["country"] = "";}
                     $temp = $this->geocode($row['country'].' '.$row['place']);
 
