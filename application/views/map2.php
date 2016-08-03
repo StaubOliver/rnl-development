@@ -272,7 +272,7 @@
 						</div>
 
 						<div class='col-md-1'>
-							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/7FA056.png' alt='Cambrian'>
+							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/7F1056.png' alt='Cambrian'>
 						</div>
 						<div class='col-md-3'>
 							Cambrian
