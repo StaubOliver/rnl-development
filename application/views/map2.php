@@ -319,7 +319,7 @@
 						This website and web application uses tracking session cookies for user authentication. Details including IP address, user-agent and user activity are logged on the server to improve the service and for research activities. By using this website and application you consent to the use of tracking and data logging.
 						</br>
 						<strong>Research activities</strong>
-						This website and web application is currently being used for a research study by the University of Manchester School of Computer Science. Further details of this study can be found here: <a href="natureslibrary.co.uk/doc/pis_map.pdf" target="_blank">natureslibrary.co.uk/doc/pis_map.pdf</a>.
+						This website and web application is currently being used for a research study by the University of Manchester School of Computer Science. Further details of this study can be found here: <a href="/doc/pis_map.pdf" target="_blank">natureslibrary.co.uk/doc/pis_map.pdf</a>.
 						</br>
 						<strong>Further information</strong>
 						Please contact support@natureslibrary.co.uk if you require further information or clarification of the terms and conditions of usage.
