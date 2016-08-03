@@ -666,7 +666,7 @@ class MapModel extends CI_Model {
 
         $return = array();
 
-        if($query->num_rows() >0) {
+        if($query->num_rows() > 0) {
             foreach($query->result_array() as $row)
             {
                 //we retrieve the data from each fossil from each project
