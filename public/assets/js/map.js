@@ -87,7 +87,7 @@ var getPinColor = function(age){
 	if (age=="Cambrian") { return pin_cambrian; }
 
 	//precambrian
-	if (age=="Precambrain") { return pin_precambrian; }
+	if (age=="Precambrian") { return pin_precambrian; }
 
 	return pin_standard;
 }
