@@ -759,7 +759,7 @@ class MapModel extends CI_Model {
 
     function changeLocation($coord)
     {
-        return array('lat'=>$coord['lat']-0,01+rand(0,10)*0,001, 'lng'=>$coord['lng']-0,02+rand(0,20)*0,001);
+        return array('lat'=>$coord['lat']-0.01+rand(0.10)*0.001, 'lng'=>$coord['lng']-0.02+rand(0.20)*0.001);
 
     }
 
@@ -806,7 +806,8 @@ class MapModel extends CI_Model {
                         if ($query_already_exist->num_rows() > 0) {
                             /*$test = $this->changeLocation($coord);
                             $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $table.' WHERE lat='.$test['lat'].' AND lng='.$test['lng']);*/
-                            $coord = array('lat'=>$coord['lat']+0.01, 'lng'=>$coord['lng']+0.01); 
+                           // $coord = array('lat'=>$coord['lat']+0.01, 'lng'=>$coord['lng']+0.01); 
+                            $coord = $this->changeLocation($coord);
                         }
                         /*
                         for ($i=0; $i < 100 ; $i++) { 
