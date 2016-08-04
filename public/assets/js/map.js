@@ -314,7 +314,7 @@ var map = angular.module('map', ['rzModule'])
 		markers_age = [];
 		infoWindow = new google.maps.InfoWindow({maxWidth:400});
 
-		console.log("host: "+window.location.hostname);
+		//console.log("host: "+window.location.hostname);
 		//retrieve the fossils and put them as marker in the map
 		http.get('/api/map/loadfossils/'+filter['genus']+'/-1/'+$scope.selectedAgeMin+'/'+$scope.selectedAgeMax+'/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
 			data.forEach(function(item, index){
@@ -359,7 +359,7 @@ var map = angular.module('map', ['rzModule'])
 	}
 
 	function refreshLegend(){
-		console.log("refresh legend");
+		//console.log("refresh legend");
 		legend = "";
 		if (markers_age.indexOf('Quaternary')!=-1){ legend += LegendItem('F9F97F', 'Quaternary'); }
 		if (markers_age.indexOf('Pliocene')!=-1 || markers_age.indexOf('Miocene')!=-1){ legend += LegendItem('FFE619', 'Neogene'); }
@@ -410,13 +410,13 @@ var map = angular.module('map', ['rzModule'])
 
 			});
 		});
-		console.log($scope.show_feedback_reply);
+		//console.log($scope.show_feedback_reply);
 	}
 
 	$scope.feedback_selection_marker = [];
 
 	$scope.mouseoverFeedback = function(feedback){
-		console.log(feedback['selection']);
+		//console.log(feedback['selection']);
 		if(feedback['selection'].length > 0)
 		{
 			feedback['selection'].forEach(function(item, index){
@@ -487,7 +487,7 @@ var map = angular.module('map', ['rzModule'])
 			for(var i = 0; i < $scope.feedbacks.length; i++)
 			{
 				if ($scope.feedbacks[i]['feedback_id'] == parseInt(id)){
-					console.log('update');
+					//console.log('update');
 					$scope.feedbacks[i]['upvote'] += 1;
 					$scope.feedbacks[i]['user_has_upvote'] = true;
 				}
@@ -535,7 +535,7 @@ var map = angular.module('map', ['rzModule'])
 	}
 
 	$scope.cancelReplyFeedback = function(id){
-		console.log('cancel reply');
+		//console.log('cancel reply');
 		$scope.recordActivity("Cancel reply", "Feedback "+id);
 		$scope.section_feedback_form_section_title = "Share your discoveries";
 		//$scope.replyto = {'reply' : false};
@@ -612,7 +612,7 @@ var map = angular.module('map', ['rzModule'])
 		        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		    	
 			}).success(function(dat, status, headers, config) {
-				console.log("success");
+				//console.log("success");
 				
 				$scope.feedback_form_text = "";
 				$scope.clear_selected_markers();
@@ -626,13 +626,13 @@ var map = angular.module('map', ['rzModule'])
 					$scope.recordActivity('Submit reply', feedback_reply+' '+data.message);
 					$scope.feedback_form_text_reply[feedback_reply]  = "";
 					refreshFeedback($http);
-					console.log(data.message);
+					//console.log(data.message);
 				}
 
 				//$scope.replyto = {'reply':false};
 
 			}).error(function(data, status, headers, config){
-				console.log(data);
+				//console.log(data);
 			});
 		}
 		else {
@@ -647,7 +647,7 @@ var map = angular.module('map', ['rzModule'])
 	}
 
 	show_img = function(url){
-		console.log(url);
+		//console.log(url);
 	}
 
 	$scope.click_on_marker_for_selection = function(id){
@@ -687,7 +687,7 @@ var map = angular.module('map', ['rzModule'])
 	actualmap = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
 	actualmap.addListener("click", function(){
-		console.log('map clicked');
+		//console.log('map clicked');
 		logActivity($http, "Map Click", "", user_id);
 		infoWindow.close;
 	});
@@ -695,17 +695,17 @@ var map = angular.module('map', ['rzModule'])
 	actualmap.addListener("dragend", function(){
 		logActivity($http, "Map Pan", "", user_id);
 		//refreshFeedback($http);
-		console.log(actualmap.getCenter().toString());
+		//console.log(actualmap.getCenter().toString());
 	});
 
 	actualmap.addListener("zoom_changed", function(){
 		new_zoom = actualmap.getZoom();
 		if (new_zoom>$scope.map_zoom){
-			console.log("zoom in");
+			//console.log("zoom in");
 			logActivity($http, "Map Zoom in", "New Zoom "+$scope.map_zoom, user_id);
 		}
 		else {
-			console.log("zoom out");
+			//console.log("zoom out");
 			logActivity($http, "Map Zoom out", "New Zoom "+$scope.map_zoom, user_id);
 		}
 		$scope.map_zoom=new_zoom;
@@ -836,7 +836,7 @@ var map = angular.module('map', ['rzModule'])
 
 	$scope.resetFilter = function()
 	{
-		console.log("reset");
+		//console.log("reset");
 		filter['genus'] = '-1';
 		$scope.selectedGenus = '-1';
 		filter['collector'] = '-1';
@@ -1047,7 +1047,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		    	
 		}).success(function(data, status, headers, config) {
-			console.log("rating success");
+			//console.log("rating success");
 			for (var i = 0; i < $scope.feedbacks.length; i++) {
 				if($scope.feedbacks[i]['feedback_id'] == feedback_id)
 				{
@@ -1142,7 +1142,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			}
 
 		}).error(function(data, status, headers, config){
-			console.log(data);
+			//console.log(data);
 		});
 	}
 
@@ -1165,7 +1165,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			}
 		}
 
-		console.log(feedback+" "+index);
+		//console.log(feedback+" "+index);
 
 		data = {};
 		data.feedback_id = id;
@@ -1191,9 +1191,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			else{
 				$scope.feedbacks[feedback]["replies"][index]["hidden"] == 0 ? $scope.feedbacks[feedback]["replies"][index]["hidden"] = 1 : $scope.feedbacks[feedback]["replies"][index]["hidden"] = 0;
 			}
-			console.log("un/hide comment")
+			//console.log("un/hide comment")
 		}).error(function(data, status, headers, config){
-			console.log(data);
+			//console.log(data);
 		});
 
 	}
@@ -1270,7 +1270,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			}
 		}
 
-		console.log(feedback);
+		//console.log(feedback);
 		
 		var mapOpt = {
 		    center:new google.maps.LatLng(feedback['map_center_lat'],feedback['map_center_lng']),
@@ -1284,7 +1284,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 		actualmap = new google.maps.Map(document.getElementById("map-"+feedback_id),mapOpt);
 		
-		console.log(feedback['map_lat_ne']);
+		//console.log(feedback['map_lat_ne']);
 		
 		var ne = new google.maps.LatLng(feedback['map_lat_ne'], feedback['map_lng_ne']);
 		var sw = new google.maps.LatLng(feedback['map_lat_sw'], feedback['map_lng_sw']);
