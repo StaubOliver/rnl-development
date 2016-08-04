@@ -759,7 +759,7 @@ class MapModel extends CI_Model {
 
     function changeLocation($coord)
     {
-        return array('lat'=>$coord['lat']-0.01+rand(0.10)*0.001, 'lng'=>$coord['lng']-0.02+rand(0.20)*0.001);
+        return array('lat'=>$coord['lat']-0.01+rand(0,10)*0.001, 'lng'=>$coord['lng']-0.02+rand(0,20)*0.001);
 
     }
 
