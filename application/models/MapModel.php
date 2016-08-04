@@ -217,7 +217,7 @@ class MapModel extends CI_Model {
     		foreach($query->result_array() as $row)
     		{
     			//we retrieve the data from each fossil from each project
-    			$query2 = $this->db->query('SELECT data_id, image_id, genus, species, age, country, place, collector, lat, lng FROM ' . $row["data_table"].' WHERE '.$where_string.' and ((lat!="" and lng!="") or (lat!=0 and lng!=0))');
+    			$query2 = $this->db->query('SELECT data_id, image_id, genus, species, age, country, place, collector, lat, lng FROM ' . $row["data_table"].' WHERE '.$where_string.' and lat!="0" and lng!="0"');
 
                 //return $query2->result_array(); 
                 $image_table = $row['image_table'];
