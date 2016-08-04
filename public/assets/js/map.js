@@ -731,7 +731,7 @@ var map = angular.module('map', ['rzModule'])
 					if (value==9) return 'Silurian';
 					if (value==10) return 'Ordovician';
 					if (value==11) return 'Cambrian';
-					if (value==12) return 'Precambrain';
+					if (value==12) return 'Precambrian';
 				}, 
 				getPointerColor: function(value){
 					if (value==0) return '#F9F97F';
