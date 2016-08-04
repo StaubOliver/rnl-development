@@ -803,11 +803,21 @@ class MapModel extends CI_Model {
                     
                         $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $table.' WHERE lat='.$coord['lat'].' AND lng='.$coord['lng']);
 
-                        while ($query_already_exist->num_rows() != 0) {
+                        if ($query_already_exist->num_rows() > 0) {
                             $test = $this->changeLocation($coord);
                             $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $table.' WHERE lat='.$test['lat'].' AND lng='.$test['lng']);
-                            
                         }
+                        /*
+                        for ($i=0; $i < 100 ; $i++) { 
+                            $test = $this->changeLocation($coord);
+                            $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $table.' WHERE lat='.$test['lat'].' AND lng='.$test['lng']);
+                        }
+
+                        for ($query_already_exist->num_rows() != 0) {
+                            $test = $this->changeLocation($coord);
+                            
+                            
+                        }*/
 
                         if ($query_already_exist->num_rows() == 0)
                         {
