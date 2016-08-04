@@ -757,10 +757,10 @@ class MapModel extends CI_Model {
         return $res;
     }
 
-    function changeLocation($coord, $i)
+    function changeLocation($coord)
     {
-        //return array('lat'=>$coord['lat']-0,01+rand(0,10)*0,001, 'lng'=>$coord['lng']-0,02+rand(0,20)*0,001);
-        return $coord;
+        return array('lat'=>$coord['lat']-0,01+rand(0,10)*0,001, 'lng'=>$coord['lng']-0,02+rand(0,20)*0,001);
+
     }
 
     function updatelocation()
@@ -803,11 +803,10 @@ class MapModel extends CI_Model {
                     
                         $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $table.' WHERE lat='.$coord['lat'].' AND lng='.$coord['lng']);
 
-                        $i = 0;
                         while ($query_already_exist->num_rows() != 0) {
-                            $test = $this->changeLocation($coord, $i);
+                            $test = $this->changeLocation($coord);
                             $query_already_exist = $this->db->query('SELECT data_id, lat, lng  FROM ' . $table.' WHERE lat='.$test['lat'].' AND lng='.$test['lng']);
-                            $i++;
+                            
                         }
 
                         if ($query_already_exist->num_rows() == 0)
