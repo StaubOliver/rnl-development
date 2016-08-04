@@ -745,7 +745,7 @@ var map = angular.module('map', ['rzModule'])
 					if (value==8) return '#CB8C37';
 					if (value==9) return '#B3E1B6';
 					if (value==10) return '#009270';
-					if (value==11) return '#7F1056';
+					if (value==11) return '#7FA056';
 					if (value==12) return '#934370';
 				}, 
 				showSelectionBar: true,
