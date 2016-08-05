@@ -175,11 +175,16 @@
 
 					<h4>How it works</h4>
 					<div class='row'>
-						<div clas='col-md-12'>
+						<div clas='col-md-6'>
+							<p class='help-tutorial-center'>Zoom, pan and filter to isolate something interesting.</p>
+							</br>
 							<img class='help-tutorial-img help-tutorial-center' src='https://natureslibrary.co.uk/assets/img/welcome_map/01.JPG' alt='Zoom, pan and filter to focus on something interesting'>
 						</div>
-						<div class='col-md-12'>
-							<p class='help-tutorial-center'>Zoom, pan and filter to isolate something interesting.</p>
+						<div class='col-md-6'>
+							<p class='help-tutorial-center'>Click on markers to get more information.
+							</p>
+							</br>
+							<img class='help-tutorial-img help-tutorial-center' src='https://natureslibrary.co.uk/assets/img/welcome_map/02.JPG' alt='Click on markers to get more information'>
 						</div>
 
 						<img class='help-tutorial-img help-tutorial-center' src='https://natureslibrary.co.uk/assets/img/welcome_map/02.JPG' alt='Click on markers to get more information'>
