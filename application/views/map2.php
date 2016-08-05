@@ -172,8 +172,15 @@
 						</br>
 						We'd love to read about what you've discovered.
 					</p>
+
+					<h4>How it works</h4>
+					<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/welcome_map/01.JPG' alt='Zoom pan explore to focus on something interesting'>
+					<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/welcome_map/02.JPG' alt='Click on markers to get more information'>
+					<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/welcome_map/03.JPG' alt='Click on the select button to add them to your comment'>
+					<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/welcome_map/04.JPG' alt='Write and send a comment !'>
+
 					
-					<h4>How to use it</h4>
+					<h4>In more details</h4>
 					<p>
 						The application is divided into two parts: the map and the tools. 
 						On the right hand side of the screen you will find three distinct sections:
@@ -181,7 +188,7 @@
 
 					<p>
 						<strong>The map</strong>
-						The map displays the fossils of the Manchester Museum Collection according to the filter tool's settings. Each marker represent a fossil. You can click on all of them to get a picture and more information. Markers colors is determined by the geological age of the fossil :
+						The map displays the fossils of the Manchester Museum Collection according to the filter tool's settings. Each marker represent a fossil. You can click on all of them to get a picture and more information. Markers color's is determined by the geological age of the fossil:
 					</p>
 
 					<div class='row'>
