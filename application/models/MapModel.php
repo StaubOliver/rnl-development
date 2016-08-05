@@ -112,8 +112,8 @@ class MapModel extends CI_Model {
 
         if (7>=$min and 7<=$max){
             $temp[] = 'Carboniferous';
-            $temp[] = 'Carboniferous, Upper (Coal Measeures)';
-            $temp[] = 'Carboniferous, Lower (Limestone)';
+            $temp[] = 'Carboniferous Upper (Coal Measeures)';
+            $temp[] = 'Carboniferous Lower (Limestone)';
         }
 
         if (8>=$min and 8<=$max){
@@ -759,7 +759,7 @@ class MapModel extends CI_Model {
 
     function changeLocation($coord)
     {
-        return array('lat'=>$coord['lat']-0.01+rand(0,10)*0.001, 'lng'=>$coord['lng']-0.02+rand(0,20)*0.001);
+        return array('lat'=>$coord['lat']-0.01+rand(0,10)*0.002, 'lng'=>$coord['lng']-0.02+rand(0,20)*0.002);
 
     }
 
