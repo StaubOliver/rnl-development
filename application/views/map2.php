@@ -353,7 +353,7 @@
 					<h4>The experiment</h4>
 					
 					<p>
-					This web application is also an experiment aiming at understanding the way people make dsiscoveries, particulary on the web.
+					This web application is also an experiment aiming at understanding the way people make discoveries, particularly on the web.
 
 
 
