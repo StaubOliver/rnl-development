@@ -174,10 +174,18 @@
 					</p>
 
 					<h4>How it works</h4>
-					<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/welcome_map/01.JPG' alt='Zoom pan explore to focus on something interesting'>
-					<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/welcome_map/02.JPG' alt='Click on markers to get more information'>
-					<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/welcome_map/03.JPG' alt='Click on the select button to add them to your comment'>
-					<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/welcome_map/04.JPG' alt='Write and send a comment !'>
+					<div class='row'>
+						<div clas='col-md-12'>
+							<img class='' src='https://natureslibrary.co.uk/assets/img/welcome_map/01.JPG' alt='Zoom, pan and filter to focus on something interesting'>
+						</div>
+						<div class='col-md-12'>
+							<p>Zoom, pan and filter to isolate something interesting.</p>
+						</div>
+
+						<img class='' src='https://natureslibrary.co.uk/assets/img/welcome_map/02.JPG' alt='Click on markers to get more information'>
+						<img class='' src='https://natureslibrary.co.uk/assets/img/welcome_map/03.JPG' alt='Click on the select button to add them to your comment'>
+						<img class='' src='https://natureslibrary.co.uk/assets/img/welcome_map/04.JPG' alt='Write and send a comment !'>
+					</div>
 
 					
 					<h4>In more details</h4>
