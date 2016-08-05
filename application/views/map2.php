@@ -175,7 +175,7 @@
 
 					<h4>How it works</h4>
 					<div class='row'>
-						<div clas='col-md-6'>
+						<div clas='col-md-4'>
 							</br>
 							<p class='help-tutorial-center'>Zoom, pan and filter to isolate something interesting.</p>
 							<img class='help-tutorial-img' src='https://natureslibrary.co.uk/assets/img/welcome_map/01.JPG' alt='Zoom, pan and filter to focus on something interesting'>
