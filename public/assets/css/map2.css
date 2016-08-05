@@ -31,10 +31,11 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 */
 
 .help-tutorial-img{
+	display: block;
 	height:250px;
 	width:auto;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto;	
 }
 
 .help-tutorial-center{
