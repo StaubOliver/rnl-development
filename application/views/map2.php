@@ -176,7 +176,7 @@
 					<h4>How it works</h4>
 					<div class='row'>
 
-						<div clas='col-md-6'>
+						<div clas='col-md-2'>
 							</br>
 							<p class='help-tutorial-center'>Zoom, pan and filter to isolate something interesting.
 							</p>
