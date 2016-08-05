@@ -176,15 +176,15 @@
 					<h4>How it works</h4>
 					<div class='row'>
 						<div clas='col-md-12'>
-							<img class='' src='https://natureslibrary.co.uk/assets/img/welcome_map/01.JPG' alt='Zoom, pan and filter to focus on something interesting'>
+							<img class='help-tutorial-img help-tutorial-center' src='https://natureslibrary.co.uk/assets/img/welcome_map/01.JPG' alt='Zoom, pan and filter to focus on something interesting'>
 						</div>
 						<div class='col-md-12'>
-							<p>Zoom, pan and filter to isolate something interesting.</p>
+							<p class='help-tutorial-center'>Zoom, pan and filter to isolate something interesting.</p>
 						</div>
 
-						<img class='' src='https://natureslibrary.co.uk/assets/img/welcome_map/02.JPG' alt='Click on markers to get more information'>
-						<img class='' src='https://natureslibrary.co.uk/assets/img/welcome_map/03.JPG' alt='Click on the select button to add them to your comment'>
-						<img class='' src='https://natureslibrary.co.uk/assets/img/welcome_map/04.JPG' alt='Write and send a comment !'>
+						<img class='help-tutorial-img help-tutorial-center' src='https://natureslibrary.co.uk/assets/img/welcome_map/02.JPG' alt='Click on markers to get more information'>
+						<img class='help-tutorial-img help-tutorial-center' src='https://natureslibrary.co.uk/assets/img/welcome_map/03.JPG' alt='Click on the select button to add them to your comment'>
+						<img class='help-tutorial-img help-tutorial-center' src='https://natureslibrary.co.uk/assets/img/welcome_map/04.JPG' alt='Write and send a comment !'>
 					</div>
 
 					
