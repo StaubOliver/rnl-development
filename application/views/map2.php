@@ -665,7 +665,7 @@
 											</a>
 
 											<a class="social-network-link" 
-											href=="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}/map" 
+											href=="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
 											target="#" ng-click="recordActivity('Sharing', 'Facebook message '.feedback['feedback_id'])">
 											
 												<img class='feedback-message-social' src="/assets/img/socialnetworks/facebook_light.png" alt="Facebook" height="18" width="18">
@@ -673,7 +673,7 @@
 											</a>
 
 											<a class="social-network-link" 
-											href="https://www.reddit.com/submit?url=https://{{share_url}}/map" 
+											href="https://www.reddit.com/submit?url=https://{{share_url}}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
 											target="#" ng-click="recordActivity('Sharing', 'Reddit message '.feedback['feedback_id'])">
 
 												<img class='feedback-message-social' src="/assets/img/socialnetworks/reddit_light.png" alt="Reddit" height="18" width="18">
@@ -681,7 +681,7 @@
 											</a>
 
 											<a class="social-network-link" 
-											href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map" 
+											href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
 											target="#" ng-click="recordActivity('Sharing', 'Twitter message '.feedback['feedback_id'])">
 											
 												<img class='feedback-message-social' src="/assets/img/socialnetworks/twitter_light.png" alt="Twitter" height="18" width="18">
@@ -750,17 +750,9 @@
 											</div>
 
 											<div class='col-md-4 '>
-
-												<img class='feedback-message-social' src="/assets/img/socialnetworks/google_light.png" alt="Google" height="18" width="18">
-												
-												<img class='feedback-message-social' src="/assets/img/socialnetworks/facebook_light.png" alt="Facebook" height="18" width="18">
-
-												<img class='feedback-message-social' src="/assets/img/socialnetworks/reddit_light.png" alt="Reddit" height="18" width="18">
-												
-												<img class='feedback-message-social' src="/assets/img/socialnetworks/twitter_light.png" alt="Twitter" height="18" width="18">
-
+											
 												<a class="social-network-link" 
-												href="https://plus.google.com/share?url={{ share_url }}/map"
+												href="https://plus.google.com/share?url={{ share_url }}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}"
 												target="#" ng-click="recordActivity('Sharing', 'Google+ message '.rep['feedback_id'])">
 
 													<img class='feedback-message-social' src="/assets/img/socialnetworks/google_light.png" alt="Google" height="18" width="18">
@@ -768,7 +760,7 @@
 												</a>
 
 												<a class="social-network-link" 
-												href=="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}/map" 
+												href=="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
 												target="#" ng-click="recordActivity('Sharing', 'Facebook message '.rep['feedback_id'])">
 												
 													<img class='feedback-message-social' src="/assets/img/socialnetworks/facebook_light.png" alt="Facebook" height="18" width="18">
@@ -776,7 +768,7 @@
 												</a>
 
 												<a class="social-network-link" 
-												href="https://www.reddit.com/submit?url=https://{{share_url}}/map" 
+												href="https://www.reddit.com/submit?url=https://{{share_url}}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
 												target="#" ng-click="recordActivity('Sharing', 'Reddit message '.rep['feedback_id'])">
 
 													<img class='feedback-message-social' src="/assets/img/socialnetworks/reddit_light.png" alt="Reddit" height="18" width="18">
@@ -784,7 +776,7 @@
 												</a>
 
 												<a class="social-network-link" 
-												href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map" 
+												href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
 												target="#" ng-click="recordActivity('Sharing', 'Twitter message '.rep['feedback_id'])">
 												
 													<img class='feedback-message-social' src="/assets/img/socialnetworks/twitter_light.png" alt="Twitter" height="18" width="18">
