@@ -33,7 +33,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 .help-tutorial-img{
 	display: block;
 	width:200px;
-	width:auto;
+	height:auto;
 	margin-left: auto;
 	margin-right: auto;	
 }
