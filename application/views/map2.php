@@ -167,6 +167,10 @@
 					<h4>Welcome</h4>
 					<p>
 						This web site is an experiment built and ran by the Museum of Manchester and the School of Computer Science both from the Univrsity of Manchester.
+						</br>
+						Feel free to explore the collection and maybe discover some cool things about fossils or their locations.
+						</br>
+						We'd love to read about what you've discovered.
 					</p>
 					
 					<h4>How to use it</h4>
@@ -312,7 +316,15 @@
 						<strong>The community's discoveries</strong>
 						This is the community's contributions, its content adapts according to the state of the filters.
 					</p>
+
+					<h4>The experiment</h4>
 					
+					<p>
+					This web application is also an experiment aiming at understanding the way people make dsiscoveries, particulary on the web.
+
+
+
+
 					<h4>Terms and privacy</h4>
 					<p>
 						<strong>Cookies and privacy</strong>
