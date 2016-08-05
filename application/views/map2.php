@@ -25,7 +25,7 @@
 	<!-- Metadata -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Mapping the Fossil' Collection</title>
+	<title>Mapping the Fossils' Collection</title>
 	
 	<!-- Typography -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
@@ -119,7 +119,7 @@
 
 					<li>
 						<a class="social-network-link"
-						href="https://www.facebook.com/sharer/sharer.php?u={{ share.url }}/map"
+						href="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}/map"
 						target="#" ng-click="recordActivity('Sharing', 'Facebook')">
 							<img class='social-network-icon' src="/assets/img/socialnetworks/facebook_white.png" alt="Facebook" height="32" width="32">
 						</a>
@@ -127,7 +127,7 @@
 					
 					<li>
 						<a class="social-network-link"
-						href="https://plus.google.com/share?url={{ share.url }}/map"
+						href="https://plus.google.com/share?url={{ share_url }}/map"
 						target="#" ng-click="recordActivity('Sharing', 'Google+')"> 
 							<img class='social-network-icon' src="/assets/img/socialnetworks/google_white.png" alt="Google" height="32" width="32">
 						</a>
@@ -177,7 +177,7 @@
 					<div class='row'>
 						<div clas='col-md-6'>
 							</br>
-							<p class='help-tutorial-center'></p>
+							<p class='help-tutorial-center'>Zoom, pan and filter to isolate something interesting.</p>
 							<img class='help-tutorial-img' src='https://natureslibrary.co.uk/assets/img/welcome_map/01.JPG' alt='Zoom, pan and filter to focus on something interesting'>
 						</div>
 
@@ -657,7 +657,7 @@
 										<div class='col-md-4 '>
 
 											<a class="social-network-link" 
-											href="https://plus.google.com/share?url={{ share.url }}/map"
+											href="https://plus.google.com/share?url={{ share_url }}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}"
 											target="#" ng-click="recordActivity('Sharing', 'Google+ message '.feedback['feedback_id'])">
 
 												<img class='feedback-message-social' src="/assets/img/socialnetworks/google_light.png" alt="Google" height="18" width="18">
@@ -665,7 +665,7 @@
 											</a>
 
 											<a class="social-network-link" 
-											href=="https://www.facebook.com/sharer/sharer.php?u={{ share.url }}/map" 
+											href=="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}/map" 
 											target="#" ng-click="recordActivity('Sharing', 'Facebook message '.feedback['feedback_id'])">
 											
 												<img class='feedback-message-social' src="/assets/img/socialnetworks/facebook_light.png" alt="Facebook" height="18" width="18">
@@ -751,13 +751,47 @@
 
 											<div class='col-md-4 '>
 
-											<img class='feedback-message-social' src="/assets/img/socialnetworks/google_light.png" alt="Google" height="18" width="18">
-											
-											<img class='feedback-message-social' src="/assets/img/socialnetworks/facebook_light.png" alt="Facebook" height="18" width="18">
+												<img class='feedback-message-social' src="/assets/img/socialnetworks/google_light.png" alt="Google" height="18" width="18">
+												
+												<img class='feedback-message-social' src="/assets/img/socialnetworks/facebook_light.png" alt="Facebook" height="18" width="18">
 
-											<img class='feedback-message-social' src="/assets/img/socialnetworks/reddit_light.png" alt="Reddit" height="18" width="18">
-											
-											<img class='feedback-message-social' src="/assets/img/socialnetworks/twitter_light.png" alt="Twitter" height="18" width="18">
+												<img class='feedback-message-social' src="/assets/img/socialnetworks/reddit_light.png" alt="Reddit" height="18" width="18">
+												
+												<img class='feedback-message-social' src="/assets/img/socialnetworks/twitter_light.png" alt="Twitter" height="18" width="18">
+
+												<a class="social-network-link" 
+												href="https://plus.google.com/share?url={{ share_url }}/map"
+												target="#" ng-click="recordActivity('Sharing', 'Google+ message '.rep['feedback_id'])">
+
+													<img class='feedback-message-social' src="/assets/img/socialnetworks/google_light.png" alt="Google" height="18" width="18">
+
+												</a>
+
+												<a class="social-network-link" 
+												href=="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}/map" 
+												target="#" ng-click="recordActivity('Sharing', 'Facebook message '.rep['feedback_id'])">
+												
+													<img class='feedback-message-social' src="/assets/img/socialnetworks/facebook_light.png" alt="Facebook" height="18" width="18">
+
+												</a>
+
+												<a class="social-network-link" 
+												href="https://www.reddit.com/submit?url=https://{{share_url}}/map" 
+												target="#" ng-click="recordActivity('Sharing', 'Reddit message '.rep['feedback_id'])">
+
+													<img class='feedback-message-social' src="/assets/img/socialnetworks/reddit_light.png" alt="Reddit" height="18" width="18">
+
+												</a>
+
+												<a class="social-network-link" 
+												href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map" 
+												target="#" ng-click="recordActivity('Sharing', 'Twitter message '.rep['feedback_id'])">
+												
+													<img class='feedback-message-social' src="/assets/img/socialnetworks/twitter_light.png" alt="Twitter" height="18" width="18">
+
+												</a>
+
+											</div>
 
 										</div>
 
