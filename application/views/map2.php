@@ -190,14 +190,14 @@
 
 						<div class='col-md-12'>
 							</br>
-							<p class='help-tutorial-img help-tutorial-center'>Click on the select button to add fossils to your contribution.
+							<p class='help-tutorial-center'>Click on the select button to add fossils to your contribution.
 							</p>
 							<img class='help-tutorial-img help-tutorial-center' src='https://natureslibrary.co.uk/assets/img/welcome_map/03.JPG' alt='Click on the select button to add them to your comment'>
 						</div>
 
 						<div class='col-md-12'>
 							</br>
-							<p class='help-tutorial-img help-tutorial-center'>Write a contribution a share it with the community.
+							<p class='help-tutorial-center'>Write a contribution a share it with the community.
 							</p>
 							<img class='help-tutorial-img help-tutorial-center' src='https://natureslibrary.co.uk/assets/img/welcome_map/04.JPG' alt='Write and send a comment !'>
 						</div>
