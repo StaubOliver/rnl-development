@@ -789,7 +789,7 @@ var map = angular.module('map', ['rzModule'])
 	} 
 	else 
 	{
-		$scope.profile.first_name = 'stranger, do you fancy a login ?';
+		$scope.profile.first_name = '';
 		$scope.section_feedback_form_section_title = "Share your discoveries (anonymously)";
 	}
 	

@@ -145,7 +145,7 @@
 		 				<li><a href ="/auth/logout_map" class="navbar-link">Logout</a></li>
 					<?php endif; ?>	
 					<?php if($logged_in == false): ?>
-						<li><a href ="/auth/create_user_map" class="navbar-link">Sign up</a></li>
+						<!--<li><a href ="/auth/create_user_map" class="navbar-link">Sign up</a></li>-->
 		 				<li><a href ="/auth/login_map" class="navbar-link">Login</a></li>
 					<?php endif; ?>	
 				</ul>
