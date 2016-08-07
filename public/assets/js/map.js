@@ -533,11 +533,11 @@ var map = angular.module('map', ['rzModule'])
 		$scope.recordActivity("Click reply", "Feedback "+id);
 		//$scope.section_feedback_form_section_title = "You are replying to:";
 		//deselect_all_marker();
-		console.log('reply '+id);
-		console.log($scope.show_feedback_reply[id]);
+		//console.log('reply '+id);
+		//console.log($scope.show_feedback_reply[id]);
 		$scope.show_feedback_reply[id] = !$scope.show_feedback_reply[id];
 		
-		console.log($scope.show_feedback_reply[id]);
+		//console.log($scope.show_feedback_reply[id]);
 		for (var i = 0; i < $scope.feedbacks.length; i++)
 		{
 			if ($scope.feedbacks[i]['feedback_id']==parseInt(id))
