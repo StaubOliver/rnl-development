@@ -641,7 +641,7 @@
 
 						<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
-							<div class="feedback-message hover-link" ng-mouseover="recordActivity('Feedback mouse over', feedback['feedback_id']+ ' '+feedback['message']); mouseoverFeedback(feedback)" ng-mouseleave="mouseleaveFeedback()" ng-click="">
+							<div class="feedback-message hover-link" ng-mouseover="recordActivity('Feedback mouse over', feedback['feedback_id']+ ' '+feedback['message']); mouseoverFeedback(feedback)" ng-mouseleave="mouseleaveFeedback()" ng-click="clickFeedback(feedback.feedback_id)">
 
 								<div class="row">
 
