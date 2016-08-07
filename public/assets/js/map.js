@@ -503,11 +503,11 @@ var map = angular.module('map', ['rzModule'])
 		});
 	}
 
-	$scope.fitViewToFeedback = function(feedback)
+	$scope.fitViewToFeedback = function(f)
 	{
-		center = new google.maps.LatLng(feedback['map_center_lat'],feedback['map_center_lng']);
+		center = new google.maps.LatLng(f['map_center_lat'],f['map_center_lng']);
 		actualmap.setCenter(center);
-		actualmap.setZoom(feedback['map_zoom']);
+		actualmap.setZoom(f['map_zoom']);
 	}
 
 	$scope.clickFeedback = function(id){
