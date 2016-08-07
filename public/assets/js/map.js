@@ -517,7 +517,7 @@ var map = angular.module('map', ['rzModule'])
 		{
 			if ($scope.feedbacks[i]['feedback_id'] == parseInt(id))
 			{
-				$scope.fitViewToFeedback($scope.feedback[i]);
+				$scope.fitViewToFeedback($scope.feedbacks[i]);
 			}
 			for (var j = 0; $scope.feedbacks[i]['replies'].length; j++)
 			{
