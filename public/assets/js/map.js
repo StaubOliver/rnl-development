@@ -503,6 +503,32 @@ var map = angular.module('map', ['rzModule'])
 		});
 	}
 
+	$scope.fitViewToFeedback = function(feedback)
+	{
+		center = new google.maps.LatLng(feedback['map_center_lat'],feedback['map_center_lng']);
+		actualmap.setCenter(center);
+		actualmap.setZoom(feedback['map_zoom']);
+	}
+
+	$scope.clickFeedback = function(id){
+		$scope.recordActivity("Click on Feedback", "Feedback "+id);
+
+		for (var i = 0; i < $scope.feedbacks.length; i++)
+		{
+			if ($scope.feedbacks[i]['feedback_id'] == parseInt(id))
+			{
+				$scope.fitViewToFeedback($scope.feedback[i]);
+			}
+			for (var j = 0; $scope.feedbacks[i]['replies'].length; j++)
+			{
+				if ($scope.feedbacks[i]['replies'][j]['feedback_id'] == parseInt(i))
+				{
+					$scope.fitViewToFeedback($scope.feedbacks[i]['replies'][j]);
+				}
+			}
+		}
+	}
+
 	$scope.replyFeedback = function(id){
 		$scope.recordActivity("Click reply", "Feedback "+id);
 		//$scope.section_feedback_form_section_title = "You are replying to:";
