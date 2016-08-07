@@ -507,7 +507,7 @@ var map = angular.module('map', ['rzModule'])
 	{
 		center = new google.maps.LatLng(f['map_center_lat'],f['map_center_lng']);
 		actualmap.setCenter(center);
-		actualmap.setZoom(f['map_zoom']);
+		actualmap.setZoom(parseInt(f['map_zoom']));
 	}
 
 	$scope.clickFeedback = function(id){
