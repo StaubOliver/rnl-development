@@ -639,77 +639,76 @@
 							</div>
 						</div>
 
-							<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
+						<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
+							<div class="feedback-message hover-link" ng-mouseover="recordActivity('Feedback mouse over', feedback['feedback_id']+ ' '+feedback['message']); mouseoverFeedback(feedback)" ng-mouseleave="mouseleaveFeedback()" ng-click="">
 
-								<div class="feedback-message hover-link" ng-mouseover="recordActivity('Feedback mouse over', feedback['feedback_id']+ ' '+feedback['message']); mouseoverFeedback(feedback)" ng-mouseleave="mouseleaveFeedback()" ng-click="">
+								<div class="row">
 
-									<div class="row">
+									<div class="col-md-8 feedback-message-author">
+										<p>{{feedback['first_name']}} {{feedback['last_name']}} on {{feedback['time'].split(" ")[0]}}</p>
+									</div>
 
-										<div class="col-md-8 feedback-message-author">
-											<p>{{feedback['first_name']}} {{feedback['last_name']}} on {{feedback['time'].split(" ")[0]}}</p>
-										</div>
+									<div class='col-md-4 '>
 
-										<div class='col-md-4 '>
+										<a class="social-network-link" 
+										href="https://plus.google.com/share?url={{ share_url }}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}"
+										target="#" ng-click="recordActivity('Sharing', 'Google+ message '.feedback['feedback_id'])">
 
-											<a class="social-network-link" 
-											href="https://plus.google.com/share?url={{ share_url }}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}"
-											target="#" ng-click="recordActivity('Sharing', 'Google+ message '.feedback['feedback_id'])">
+											<img class='feedback-message-social' src="/assets/img/socialnetworks/google_light.png" alt="Google" height="18" width="18">
 
-												<img class='feedback-message-social' src="/assets/img/socialnetworks/google_light.png" alt="Google" height="18" width="18">
+										</a>
 
-											</a>
-
-											<a class="social-network-link" 
-											href=="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
-											target="#" ng-click="recordActivity('Sharing', 'Facebook message '.feedback['feedback_id'])">
-											
-												<img class='feedback-message-social' src="/assets/img/socialnetworks/facebook_light.png" alt="Facebook" height="18" width="18">
-
-											</a>
-
-											<a class="social-network-link" 
-											href="https://www.reddit.com/submit?url=https://{{share_url}}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
-											target="#" ng-click="recordActivity('Sharing', 'Reddit message '.feedback['feedback_id'])">
-
-												<img class='feedback-message-social' src="/assets/img/socialnetworks/reddit_light.png" alt="Reddit" height="18" width="18">
-
-											</a>
-
-											<a class="social-network-link" 
-											href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
-											target="#" ng-click="recordActivity('Sharing', 'Twitter message '.feedback['feedback_id'])">
-											
-												<img class='feedback-message-social' src="/assets/img/socialnetworks/twitter_light.png" alt="Twitter" height="18" width="18">
-
-											</a>
-
-										</div>
-
-										<div class="col-md-12 feedback-message-text">
-											<p>{{feedback['message']}}</p>
-										</div>
+										<a class="social-network-link" 
+										href=="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
+										target="#" ng-click="recordActivity('Sharing', 'Facebook message '.feedback['feedback_id'])">
 										
-										<!--
-										<div class="col-md-6 feedback-message-author">
-											<p>{{feedback['first_name']}} {{feedback['last_name']}}</p>
-										</div>
+											<img class='feedback-message-social' src="/assets/img/socialnetworks/facebook_light.png" alt="Facebook" height="18" width="18">
 
-										<div class="col-md-6 feedback-message-time">
-											<p>{{feedback['time']}}</p>
-										</div>-->
+										</a>
 
-										<div class="col-md-6 feedback-message-buttons">
-											<a class='feedback-message-button-up' href='#' ng-show="!feedback.user_has_upvote" ng-click="upvoteFeedback(feedback.feedback_id)">Upvote</a> 
-											<span ng-show="feedback.user_has_upvote">Upvoted</span>
-											<a class='feedback-message-button-reply' href='' ng-click="replyFeedback(feedback.feedback_id)" ng-hide="show_feedback_reply[feedback.feedback_id]">Reply</a>
-											<a class='feedback-message-button-reply' href='' ng-click="replyFeedback(feedback.feedback_id)" ng-show="show_feedback_reply[feedback.feedback_id]">Cancel reply</a>
-										</div>
+										<a class="social-network-link" 
+										href="https://www.reddit.com/submit?url=https://{{share_url}}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
+										target="#" ng-click="recordActivity('Sharing', 'Reddit message '.feedback['feedback_id'])">
 
-										<div class="col-md-6 feedback-message-info">
-											<span>{{feedback.upvote}} up </span> 
-											<span>{{feedback.selection.length}} fossils</span>
-										</div>
+											<img class='feedback-message-social' src="/assets/img/socialnetworks/reddit_light.png" alt="Reddit" height="18" width="18">
+
+										</a>
+
+										<a class="social-network-link" 
+										href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
+										target="#" ng-click="recordActivity('Sharing', 'Twitter message '.feedback['feedback_id'])">
+										
+											<img class='feedback-message-social' src="/assets/img/socialnetworks/twitter_light.png" alt="Twitter" height="18" width="18">
+
+										</a>
+
+									</div>
+
+									<div class="col-md-12 feedback-message-text">
+										<p>{{feedback['message']}}</p>
+									</div>
+									
+									<!--
+									<div class="col-md-6 feedback-message-author">
+										<p>{{feedback['first_name']}} {{feedback['last_name']}}</p>
+									</div>
+
+									<div class="col-md-6 feedback-message-time">
+										<p>{{feedback['time']}}</p>
+									</div>-->
+
+									<div class="col-md-6 feedback-message-buttons">
+										<a class='feedback-message-button-up' href='#' ng-show="!feedback.user_has_upvote" ng-click="upvoteFeedback(feedback.feedback_id)">Upvote</a> 
+										<span ng-show="feedback.user_has_upvote">Upvoted</span>
+										<a class='feedback-message-button-reply' href='' ng-click="replyFeedback(feedback.feedback_id)" ng-hide="show_feedback_reply[feedback.feedback_id]">Reply</a>
+										<a class='feedback-message-button-reply' href='' ng-click="replyFeedback(feedback.feedback_id)" ng-show="show_feedback_reply[feedback.feedback_id]">Cancel reply</a>
+									</div>
+
+									<div class="col-md-6 feedback-message-info">
+										<span>{{feedback.upvote}} up </span> 
+										<span>{{feedback.selection.length}} fossils</span>
+									</div>
 
 										
 										<!--
@@ -725,67 +724,68 @@
 											<p ng-show="feedback.selection.length">{{feedback.selection.length}} fossils</p>
 										</div>
 										-->
-									</div>
 								</div>
 
-								<!-- replies to that feedback -->
-								<div ng-repeat='rep in feedback.replies' ng-show='feedbacks.length'>
+							</div>
 
-									<div class="feedback-message-reply " ng-mouseover="recordActivity('Feedback mouse over', rep['feedback_id']+ ' '+rep['message']); mouseoverFeedback(rep)" ng-mouseleave="mouseleaveFeedback()">
+							<!-- replies to that feedback -->
+							<div ng-repeat='rep in feedback.replies' ng-show='feedbacks.length'>
 
-										<!--
-										<div class='feedback-message-delete-btn' ng-click="" ng-show="(logged_in && feedback['user_id']==user_id) || admin"> 
-											<span class="glyphicon glyphicon-remove"></span>
+								<div class="feedback-message-reply " ng-mouseover="recordActivity('Feedback mouse over', rep['feedback_id']+ ' '+rep['message']); mouseoverFeedback(rep)" ng-mouseleave="mouseleaveFeedback()">
+
+									<!--
+									<div class='feedback-message-delete-btn' ng-click="" ng-show="(logged_in && feedback['user_id']==user_id) || admin"> 
+										<span class="glyphicon glyphicon-remove"></span>
+									</div>
+									-->
+
+									<div class='row'>
+
+										<div class="col-md-8 feedback-message-author">
+											<p>{{feedback['first_name']}} {{feedback['last_name']}} on {{feedback['time'].split(" ")[0]}}</p>
 										</div>
-										-->
 
-										<div class='row'>
+										<div class='col-md-4 '>
+										
+											<a class="social-network-link" 
+											href="https://plus.google.com/share?url={{ share_url }}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}"
+											target="#" ng-click="recordActivity('Sharing', 'Google+ message '.rep['feedback_id'])">
 
-											<div class="col-md-8 feedback-message-author">
-												<p>{{feedback['first_name']}} {{feedback['last_name']}} on {{feedback['time'].split(" ")[0]}}</p>
-											</div>
+												<img class='feedback-message-social' src="/assets/img/socialnetworks/google_light.png" alt="Google" height="18" width="18">
 
-											<div class='col-md-4 '>
+											</a>
+
+											<a class="social-network-link" 
+											href=="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
+											target="#" ng-click="recordActivity('Sharing', 'Facebook message '.rep['feedback_id'])">
 											
-												<a class="social-network-link" 
-												href="https://plus.google.com/share?url={{ share_url }}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}"
-												target="#" ng-click="recordActivity('Sharing', 'Google+ message '.rep['feedback_id'])">
+												<img class='feedback-message-social' src="/assets/img/socialnetworks/facebook_light.png" alt="Facebook" height="18" width="18">
 
-													<img class='feedback-message-social' src="/assets/img/socialnetworks/google_light.png" alt="Google" height="18" width="18">
+											</a>
 
-												</a>
+											<a class="social-network-link" 
+											href="https://www.reddit.com/submit?url=https://{{share_url}}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
+											target="#" ng-click="recordActivity('Sharing', 'Reddit message '.rep['feedback_id'])">
 
-												<a class="social-network-link" 
-												href=="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
-												target="#" ng-click="recordActivity('Sharing', 'Facebook message '.rep['feedback_id'])">
-												
-													<img class='feedback-message-social' src="/assets/img/socialnetworks/facebook_light.png" alt="Facebook" height="18" width="18">
+												<img class='feedback-message-social' src="/assets/img/socialnetworks/reddit_light.png" alt="Reddit" height="18" width="18">
 
-												</a>
+											</a>
 
-												<a class="social-network-link" 
-												href="https://www.reddit.com/submit?url=https://{{share_url}}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
-												target="#" ng-click="recordActivity('Sharing', 'Reddit message '.rep['feedback_id'])">
+											<a class="social-network-link" 
+											href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
+											target="#" ng-click="recordActivity('Sharing', 'Twitter message '.rep['feedback_id'])">
+											
+												<img class='feedback-message-social' src="/assets/img/socialnetworks/twitter_light.png" alt="Twitter" height="18" width="18">
 
-													<img class='feedback-message-social' src="/assets/img/socialnetworks/reddit_light.png" alt="Reddit" height="18" width="18">
-
-												</a>
-
-												<a class="social-network-link" 
-												href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}" 
-												target="#" ng-click="recordActivity('Sharing', 'Twitter message '.rep['feedback_id'])">
-												
-													<img class='feedback-message-social' src="/assets/img/socialnetworks/twitter_light.png" alt="Twitter" height="18" width="18">
-
-												</a>
-
-											</div>
+											</a>
 
 										</div>
 
-											<div class="col-md-12 feedback-message-text">
-												<p>{{rep['message']}}</p>
-											</div>
+									
+
+										<div class="col-md-12 feedback-message-text">
+											<p>{{rep['message']}}</p>
+										</div>
 
 											<div class="col-md-6 feedback-message-buttons">
 												<a ng-show="!rep.user_has_upvote" class='feedback-message-button-up' href='#' ng-click="upvoteFeedback(rep.feedback_id)">Upvote</a>
