@@ -166,7 +166,7 @@
 				<div class="modal-body">
 					<h4>Welcome</h4>
 					<p>
-						This web site is an experiment built and ran by the Museum of Manchester and the School of Computer Science both from the Univrsity of Manchester.
+						This website is an experiment built and ran by the Museum of Manchester and the School of Computer Science both from the University of Manchester.
 						</br>
 						Feel free to explore the collection and maybe discover some cool things about fossils or their locations.
 						</br>
@@ -209,12 +209,12 @@
 					<h4>In more details</h4>
 					<p>
 						The application is divided into two parts: the map and the tools. 
-						On the right hand side of the screen you will find three distinct sections:
+						On the right-hand side of the screen you will find three distinct sections:
 					</p>
 
 					<p>
 						<strong>The map</strong>
-						The map displays the fossils of the Manchester Museum Collection according to the filter tool's settings. Each marker represent a fossil. You can click on all of them to get a picture and more information. Markers color's is determined by the geological age of the fossil:
+						The map displays the fossils of the Manchester Museum Collection according to the filter tool's settings. Each marker represents a fossil. You can click on all of them to get a picture and more information. Markers color's is determined by the geological age of the fossil:
 					</p>
 
 					<div class='row'>
@@ -337,7 +337,7 @@
 					
 					<p>
 						<strong>The filter section</strong>
-						Three selectors allow you to select which part of the collection is being displayed on the map. You can select a specific time period, display 
+						Three selectors allow you to select which part of the collection is being displayed on the map. You can select a specific time period, display. 
 					</p>
 
 					<p>
@@ -364,7 +364,7 @@
 						This website and web application uses tracking session cookies for user authentication. Details including IP address, user-agent and user activity are logged on the server to improve the service and for research activities. By using this website and application you consent to the use of tracking and data logging.
 						</br>
 						<strong>Research activities</strong>
-						This website and web application is currently being used for a research study by the University of Manchester School of Computer Science. Further details of this study can be found here: <a href="/doc/pis_map.pdf" target="_blank">natureslibrary.co.uk/doc/pis_map.pdf</a>.
+						This web application is currently being used for a research study by the University of Manchester School of Computer Science. Further details of this study can be found here: <a href="/doc/pis_map.pdf" target="_blank">natureslibrary.co.uk/doc/pis_map.pdf</a>.
 						</br>
 						<strong>Further information</strong>
 						Please contact support@natureslibrary.co.uk if you require further information or clarification of the terms and conditions of usage.
