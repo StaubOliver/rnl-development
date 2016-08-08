@@ -723,20 +723,21 @@ var map = angular.module('map', ['rzModule'])
 	});
 
 	actualmap.addListener("dragend", function(){
-		logActivity($http, "Map Pan", "", user_id);
+		logActivity($http, "Map Pan", actualmap.getCenter().lat() + " " + actualmap.getCenter().lng() , user_id);
 		//refreshFeedback($http);
 		//console.log(actualmap.getCenter().toString());
 	});
 
 	actualmap.addListener("zoom_changed", function(){
 		new_zoom = actualmap.getZoom();
+		
 		if (new_zoom>$scope.map_zoom){
 			//console.log("zoom in");
-			logActivity($http, "Map Zoom in", "New Zoom "+$scope.map_zoom, user_id);
+			logActivity($http, "Map Zoom in", $scope.map_zoom, user_id);
 		}
 		else {
 			//console.log("zoom out");
-			logActivity($http, "Map Zoom out", "New Zoom "+$scope.map_zoom, user_id);
+			logActivity($http, "Map Zoom out", $scope.map_zoom, user_id);
 		}
 		$scope.map_zoom=new_zoom;
 	});
