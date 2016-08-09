@@ -1018,7 +1018,8 @@ class MapModel extends CI_Model {
 
             $avg_time += $interval / floatval($nb_visitors);
         }
-        $avg_time = mktime(date_parse_from_format("s", intval($avg_time)));
+        $temp_time = date_parse_from_format("s", intval($avg_time));
+        $avg_time = mktime($temp_time["hour"], $temp_time["minute"], $temp_time["second"], $temp_time["month"], $temp_time["day"], $temp_time["year"]);
 
 
 
