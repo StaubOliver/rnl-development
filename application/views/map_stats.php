@@ -83,7 +83,7 @@
 					<div class='row'>
 
 						<?php foreach($stats["visits"] as $visits): ?>
-							<div class='col-md-4'>
+							<div class='col-md-6'>
 								<p><?php echo $visits["unique_id"] ?></p>
 							</div>
 							
