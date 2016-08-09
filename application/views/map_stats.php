@@ -84,7 +84,7 @@
 
 						<div class='col-md-6'>
 
-								<select class='form-control' ng-model='selectedUniqueId'>
+								<select class='form-control' ng-model='selectedUniqueId' ng-change='changeUniqueId()'>
 								<optgroup label="Choose an ID">	
 									<?php
 										foreach($stats["visits"] as $visit){
