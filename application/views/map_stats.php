@@ -44,7 +44,7 @@
 
 </head>
 
-<body class='admin-body' ng-controller='admin_map_feedbacks'>
+<body class='admin-body' ng-controller='admin_map_stats'>
 
 	<nav class="navbar-default  navbar-fixed-top" >
 		<div class="container-fluid">
