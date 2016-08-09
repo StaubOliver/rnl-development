@@ -1030,7 +1030,7 @@ class MapModel extends CI_Model {
             "total"=>$total, 
             "map_pan"=>round($nb_map_pan,2), 
             "map_click"=>round($nb_map_click,2),
-            "map_zoom_in"=>$nb_map_zoom_in,
+            "map_zoom_in"=>round($nb_map_zoom_in,2),
             "map_zoom_out"=>round($nb_map_zoom_out,2),
             "click_on_fossil"=>round($nb_click_on_fossil,2),
             "fossil_selected"=>round($nb_fossil_selected,2),
