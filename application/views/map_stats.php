@@ -88,9 +88,7 @@
 								<optgroup label="Choose an ID">	
 									<?php
 										foreach($stats["visits"] as $visit){
-											//if ($genus != "" and $genus != "Not listed" and $genus != "Missing") {
-												echo "<option value='".$visit['unique_id']."'>".$visit['unique_id']."</option>";
-											//}
+											echo "<option value='".$visit['unique_id']."'>".$visit['unique_id']."</option>";
 										}
 									?>
 									</optgroup>
@@ -99,22 +97,6 @@
 								</select>
 
 						</div>
-
-
-					</div>
-
-				</div>
-
-
-				<div class='col-md-10 col-md-offset-1 admin-title'>
-					<div class='row'>
-
-						<?php foreach($stats["visits"] as $visits): ?>
-							<div class='col-md-6'>
-								<p class='hover-link' ng-click="loadVisitdetails('<?php echo $visits["unique_id"] ?>')"><?php echo $visits["unique_id"] ?></p>
-							</div>
-							
-						<?php endforeach; ?>
 
 					</div>
 				</div>
@@ -133,10 +115,6 @@
 							<div class='col-md-9'>{{detail.action}} {{detail.details}}</div>
 
 						</div>
-
-
-
-
 
 					</div>
 				</div>
