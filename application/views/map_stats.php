@@ -70,11 +70,11 @@
 		<div class='container-fluid'>
 			<div class='row'>
 
-				<div class='col-md-10 col-md-offset-1 admin-title'>
+				<div class='col-md-5 col-md-offset-1 admin-title'>
 					<h5>Unique visits - <?php echo $stats['uniqueVisits'] ?> </h5>
 				</div>
 
-				<div class='col-md-10 col-md-offset-1 admin-title'>
+				<div class='col-md-5 admin-title'>
 					<h5>Saved actions - <?php echo $stats['nbActions'] ?> </h5>
 				</div>
 
