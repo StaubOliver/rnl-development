@@ -84,12 +84,11 @@
 		<div class="container-fluid">
 
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Map</a>
+				<a class="navbar-brand" href="#">Hello {{ profile.first_name }}</a>
 			</div>
 
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li><p class="navbar-text">Hello {{ profile.first_name }}</p></li>
 					<?php if($is_admin == 1): ?>
 		 				<li><p class="navbar-text">Fossils loaded: {{nbfossils}}</p></li>
 					<?php endif; ?>	

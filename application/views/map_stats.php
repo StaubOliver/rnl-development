@@ -5,7 +5,7 @@
 	<!-- Metadata -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Admin panel</title>
+	<title>Admin stats</title>
 	
 	<!-- Typography -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
