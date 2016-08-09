@@ -1388,20 +1388,21 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 	$scope.changeUniqueId = function()
 	{
-		$scope.details = [];
-		$scope.general = [];
 		if ($scope.selectedUniqueId == "0")
 		{
+			$scope.details = [];
 			$scope.loadGeneral();
 		}
 		else
 		{
+			$scope.general = [];
 			$scope.loadVisitdetails($scope.selectedUniqueId);
 		}
 	}
 
 	$scope.loadVisitdetails = function (unique_id)
 	{
+		$scope.details = [];
 		data = {};
 		data.unique_id = unique_id;
 		$http({
