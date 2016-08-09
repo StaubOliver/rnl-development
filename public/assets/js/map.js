@@ -1388,7 +1388,10 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_feedbacks'
 	{
 		$data = {};
 		data.unique_id = unique_id;
+
 		$scope.details = [];
+
+		console.log(unique_id);
 		$http({
 	        method : 'POST',
 	        url: '/api/map/visiteDetails',
@@ -1405,7 +1408,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_feedbacks'
 
 
 		}).error(function(data, status, headers, config){
-			//console.log(data);
+			console.log(data);
 		});
 
 
