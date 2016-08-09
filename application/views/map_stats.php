@@ -284,8 +284,11 @@
 							</div>
 						</div>
 
-						<div class='col-md-12'>
+						<div class='col-md-6'>
 							<h5>Time</h5>
+						</div>
+						<div class='col-md-6'>
+							Average visit - {{general.avg_time}}
 						</div>
 						
 
