@@ -70,7 +70,7 @@
 		<div class='container-fluid'>
 			<div class='row'>
 
-				<div class='col-md-5 col-md-offset-1 admin-title'>
+				<div class='col-md-10 col-md-offset-1 admin-title'>
 
 					<div class='row'>
 
