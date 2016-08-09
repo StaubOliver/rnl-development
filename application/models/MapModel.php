@@ -848,6 +848,7 @@ class MapModel extends CI_Model {
         }
     }
 
+    /*
     public function decluster(){
 
         $query_projects = $this->db->query('SELECT id, name, image, blurb, data_table, image_table FROM projects_master');
@@ -871,6 +872,7 @@ class MapModel extends CI_Model {
             }
         }
     }
+    */
 
     public function where_clause()
     {
