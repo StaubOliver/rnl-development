@@ -1400,7 +1400,6 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_feedbacks'
 
 			}
 
-			console.log(data);
 
 		}).error(function(data, status, headers, config){
 			//console.log(data);
