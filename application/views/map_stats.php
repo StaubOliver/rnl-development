@@ -74,12 +74,13 @@
 
 					<div class='row'>
 
+
 						<div class='col-md-3'>
-							<h5>Saved actions - <?php echo $stats['nbActions'] ?> </h5>
+							<h5>Unique visitors - <?php echo $stats['uniqueVisits'] ?> </h5>
 						</div>
 
 						<div class='col-md-3'>
-							<h5>Unique visits - <?php echo $stats['uniqueVisits'] ?> </h5>
+							<h5>Actions - <?php echo $stats['nbActions'] ?> </h5>
 						</div>
 
 						<div class='col-md-6'>
@@ -107,7 +108,7 @@
 					<div class='row'>
 
 						<div class='col-md-12'>
-							<h5>General</h5>
+							<h5>Percentages</h5>
 						</div>
 
 						<div class='col-md-12'>
