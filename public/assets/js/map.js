@@ -730,7 +730,7 @@ var map = angular.module('map', ['rzModule'])
 
 	actualmap.addListener("zoom_changed", function(){
 		new_zoom = actualmap.getZoom();
-		
+
 		if (new_zoom>$scope.map_zoom){
 			//console.log("zoom in");
 			logActivity($http, "Map Zoom in", $scope.map_zoom, user_id);
@@ -1378,6 +1378,40 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 
 });
+
+
+var map_admin = angular.module('map_stats', []).controller('admin_map_feedbacks', function($scope, $http, $compile){
+
+	$scope.details = [];
+
+	$scope.loadVisitdetails = function (unique_id)
+	{
+		$scope.details = [];
+		$http({
+	        method : 'POST',
+	        url: '/api/map/visiteDetails',
+	        data: $.param(data),
+	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+		    	
+		}).success(function(data, status, headers, config) {
+
+			data.forEach(function(item, index)
+			{
+
+			}
+
+			console.log(data);
+
+		}).error(function(data, status, headers, config){
+			//console.log(data);
+		});
+
+
+	}
+
+
+});
+
 
 
 

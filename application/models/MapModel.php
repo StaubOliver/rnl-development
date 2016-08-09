@@ -893,18 +893,21 @@ class MapModel extends CI_Model {
             $res['visits'][] = $unique;
             
         }
-
-
         return $res;
     }
 
 
+    public function visitDetails($unique_id)
+    {
+        $res = array();
+        $query_visit_details = $this->db->query("SELECT * FROM map_activity where unique_id='".$unique_id."' order by activity asc");
 
-
-
-
-
-
+        if ($query_visit_details->num_rows() > 0)
+        {
+            $res = $query_visit_details->result_array();
+        }
+        return $res;
+    }
 
 
 

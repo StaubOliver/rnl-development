@@ -228,9 +228,19 @@ class Map extends MY_Controller {
 
 	public function decluster(){
 		$this->MapModel->decluster();
+	}
 
 
 
+	public function visiteDetails(){
+		if ($this->ion_auth->logged_in())
+		{
+			if ($this->ProfileModel->isAdmin()==1)
+			{
+				echo json_encode($this->MapModel->visiteDetails($this->input->post('unique_id')));
+
+			}
+		}
 	}
 
 }
