@@ -910,10 +910,14 @@ class MapModel extends CI_Model {
         $start = strtotime($res[0]["time"]);
 
         $temp = date_parse_from_format('Y-m-d H:i:s', $res[0]["time"]);
-        $start = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
+        $s = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
+        $start = new DateTime();
+        $start->setTimestamp($s);
         
         $temp = date_parse_from_format('Y-m-d H:i:s', $res[count($res)-1]["time"]);
-        $end = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
+        $e = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
+        $end = new DateTime();
+        $end->setTimestamp($e);
 
         $interval =  $end->diff($start);
         $res["time"] = $interval->format("%H hours %i minutes %s seconds");
