@@ -81,7 +81,7 @@
 				<?php foreach($stats["visits"] as $visits): ?>
 				
 					<div class='col-md-10 col-md-offset-1 admin-title'>
-						<h5><?php echo $visits[0]['unique_id'] ?> </h5>
+						<h5><?php print_r($visits) ?> </h5>
 					</div>
 
 
