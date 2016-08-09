@@ -940,7 +940,22 @@ class MapModel extends CI_Model {
         $query_map_pan = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Map Pan'");
         $nb_map_pan = floatval($query_map_pan->num_rows())/floatval($total) * 100;
 
-        return array("total"=>$total, "map_pan"=>$nb_map_pan);
+        $query_map_click = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Map Click'");
+        $nb_map_click = floatval($query_map_click->num_rows())/floatval($total) * 100;
+
+        $query_map_zoom_in = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Map Zoom in'");
+        $nb_map_zoom_in = floatval($query_map_zoom_in->num_rows())/floatval($total) * 100;
+
+        $query_map_zoom_out = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Map Zoom out'");
+        $nb_map_zoom_out = floatval($query_map_zoom_out->num_rows())/floatval($total) * 100;
+
+        return array(
+            "total"=>$total, 
+            "map_pan"=>$nb_map_pan, 
+            "map_click"=>$nb_map_click,
+            "map_zoom_in"=>$nb_map_zoom_in,
+            "map_zoom_out"=>$nb_map_zoom_out
+        );
 
 
 

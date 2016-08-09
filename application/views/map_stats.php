@@ -113,9 +113,29 @@
 						<div class='col-md-3'>
 							Map Pan
 						</div>
-
 						<div class='col-md-3'>
 							{{general.map_pan}}%
+						</div>
+
+						<div class='col-md-3'>
+							Map Click
+						</div>
+						<div class='col-md-3'>
+							{{general.map_click}}%
+						</div>
+
+						<div class='col-md-3'>
+							Map Zoom In
+						</div>
+						<div class='col-md-3'>
+							{{general.map_zoom_in}}%
+						</div>
+
+						<div class='col-md-3'>
+							Map Zoom Out
+						</div>
+						<div class='col-md-3'>
+							{{general.map_zoom_out}}%
 						</div>
 
 					</div>
