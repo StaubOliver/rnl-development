@@ -1000,9 +1000,9 @@ class MapModel extends CI_Model {
         foreach ($query_unique_id->result_array() as $unique) 
         {
             $query_visit_start = $this->db->query("SELECT activity_id, time from map_activity where unique_id='".$unique["unique_id"]."' order by activity_id asc limit 1");
-            $s = $query->row_array();
+            $query_visit_start = $query->row_array();
             $query_visit_end = $this->db->query("SELECT activity_id, time from map_activity where unique_id='".$unique["unique_id"]."' order by activity_id desc limit 1");
-            $e = $query->row_array();
+            $query_visit_end = $query->row_array();
 
             $temp = date_parse_from_format('Y-m-d H:i:s', $s["time"]);
             $s = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
