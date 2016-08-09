@@ -118,31 +118,24 @@
 						</div>
 
 						<div class='col-md-2'>
-							Map Click
-						</div>
-						<div class='col-md-2'>
-							{{general.map_click}}%
-						</div>
-
-						<div class='col-md-2'>
-							Map Zoom In
-						</div>
-						<div class='col-md-2'>
-							{{general.map_zoom_in}}%
-						</div>
-
-						<div class='col-md-2'>
-							Map Zoom Out
-						</div>
-						<div class='col-md-2'>
-							{{general.map_zoom_out}}%
-						</div>
-
-						<div class='col-md-2'>
 							Click on Fossil
 						</div>
 						<div class='col-md-2'>
 							{{general.click_on_fossil}}%
+						</div>
+
+						<div class='col-md-2'>
+							Change filter geological age
+						</div>
+						<div class='col-md-2'>
+							{{general.filter_geological_change}}%
+						</div>
+
+						<div class='col-md-2'>
+							Map Click
+						</div>
+						<div class='col-md-2'>
+							{{general.map_click}}%
 						</div>
 
 						<div class='col-md-2'>
@@ -153,11 +146,52 @@
 						</div>
 
 						<div class='col-md-2'>
+							Change filter collector
+						</div>
+						<div class='col-md-2'>
+							{{general.filter_collector_change}}%
+						</div>
+
+						<div class='col-md-2'>
+							Map Zoom In
+						</div>
+						<div class='col-md-2'>
+							{{general.map_zoom_in}}%
+						</div>
+
+						<div class='col-md-2'>
 							Fossil Deselected
 						</div>
 						<div class='col-md-2'>
 							{{general.fossil_deselected}}%
 						</div>
+
+						<div class='col-md-2'>
+							Change filter genus
+						</div>
+						<div class='col-md-2'>
+							{{general.filter_genus_change}}%
+						</div>
+
+						<div class='col-md-2'>
+							Map Zoom Out
+						</div>
+						<div class='col-md-2'>
+							{{general.map_zoom_out}}%
+						</div>
+
+						<div class='col-md-2'>
+							Clear Selection
+						</div>
+						<div class='col-md-2'>
+							{{general.clear_fossil_selection}}%
+						</div>
+
+						
+
+						
+
+						
 
 					</div>
 				</div>
