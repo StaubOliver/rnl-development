@@ -900,7 +900,7 @@ class MapModel extends CI_Model {
     public function visiteDetails($unique_id)
     {
         $res = array();
-        $query_visit_details = $this->db->query("SELECT * FROM map_activity where unique_id='".$unique_id."' order by activity asc");
+        $query_visit_details = $this->db->query("SELECT * FROM map_activity where unique_id='".$unique_id."' order by activity_id asc");
 
         if ($query_visit_details->num_rows() > 0)
         {
