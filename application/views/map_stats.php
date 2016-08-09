@@ -78,14 +78,19 @@
 					<h5>Saved actions - <?php echo $stats['nbActions'] ?> </h5>
 				</div>
 
-				<?php foreach($stats["visits"] as $visits): ?>
-				
-					<div class='col-md-10 col-md-offset-1 admin-title'>
-						<h5><?php echo $visits["unique_id"] ?> </h5>
+
+				<div class='col-md-10 col-md-offset-1 admin-title'>
+					<div class='row'>
+
+						<?php foreach($stats["visits"] as $visits): ?>
+							<div class='col-md-4'>
+								<p><?php echo $visits["unique_id"] ?></p>
+							</div>
+							
+						<?php endforeach; ?>
+
 					</div>
-
-
-				<?php endforeach; ?>
+				</div>
 
 
 
