@@ -211,10 +211,80 @@
 							</div>
 						</div>
 
-						
 
-						
+						<div class='col-md-12'>
+							<div class='row'>
 
+								<div class='col-md-2'>
+									Feedback Hover
+								</div>
+								<div class='col-md-2'>
+									{{general.feedback_hover}}%
+								</div>
+
+								<div class='col-md-2'>
+									Write comment
+								</div>
+								<div class='col-md-2'>
+									{{general.write_comment}}%
+								</div>
+
+								<div class='col-md-2'>
+									Sharing
+								</div>
+								<div class='col-md-2'>
+									{{general.sharing}}%
+								</div>
+
+							</div>
+						</div>
+
+						<div class='col-md-12'>
+							<div class='row'>
+
+								<div class='col-md-2'>
+									Feedback Click
+								</div>
+								<div class='col-md-2'>
+									{{general.feedback_click}}%
+								</div>
+
+								<div class='col-md-2'>
+									Submit comment
+								</div>
+								<div class='col-md-2'>
+									{{general.submit_feedback}}%
+								</div>
+
+								<div class='col-md-2'>
+									Sharing
+								</div>
+								<div class='col-md-2'>
+									{{general.sharing}}%
+								</div>
+
+							</div>
+						</div>
+
+						<div class='col-md-12'>
+							<div class='row'>
+
+								<div class='col-md-2'>
+									Upvote
+								</div>
+								<div class='col-md-2'>
+									{{general.upvote}}%
+								</div>
+
+								<div class='col-md-2'>
+									Click reply
+								</div>
+								<div class='col-md-2'>
+									{{general.click_reply}}%
+								</div>
+
+							</div>
+						</div>
 						
 
 					</div>
