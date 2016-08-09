@@ -1014,9 +1014,10 @@ class MapModel extends CI_Model {
             $end = new DateTime();
             $end->setTimestamp($e);
 
-            $interval =  $end->diff($start);
+            $interval =  $e-$s
 
-            $avg_time += floatval($interval) / floatval($nb_visitors);
+
+            $avg_time += $interval / floatval($nb_visitors);
         }
 
 
