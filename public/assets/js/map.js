@@ -1390,6 +1390,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 	$scope.changeUniqueId = function()
 	{
 		console.log($scope.selectedUniqueId);
+		$scope.details = [];
 		if ($scope.selectedUniqueId == "0")
 		{
 			
@@ -1405,7 +1406,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 		data = {};
 		data.unique_id = unique_id;
 
-		$scope.details = [];
+		
 
 		console.log(unique_id);
 		$http({
