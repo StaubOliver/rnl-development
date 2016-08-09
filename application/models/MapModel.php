@@ -886,6 +886,17 @@ class MapModel extends CI_Model {
         $query_actions = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1'");
         $res['nbActions'] = $query_actions->num_rows();
 
+        $res['visits'] = array();
+
+        foreach ($query_unique_visits->result_array() as $unique)
+        {
+            $query_details = $this->db->query("SELECT * FROM map_activity where unique_id='".$unique["unique_id"]."'");
+            foreach ($query_details as $details) 
+            {
+                $res['visits'][] = $details;
+            }
+        }
+
 
         return $res;
     }
