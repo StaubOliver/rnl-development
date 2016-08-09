@@ -79,10 +79,15 @@
 						</div>
 
 						<div class='col-md-3'>
-							<h5>Unique visits - <?php echo $stats['uniqueVisits'] ?> {{selectedUniqueID}}</h5>
+							<h5>Unique visits - <?php echo $stats['uniqueVisits'] ?> </h5>
 						</div>
 
-						<div class='col-md-6'>
+						<div class='col-md-3'>
+							<h5>{{selectedUniqueId}}</h5>
+						</div>
+
+
+						<div class='col-md-3'>
 
 								<select class='form-control' ng-model='selectedUniqueId' ng-change='changeUniqueId()'>
 									<option value="0" selected>General</option>
@@ -103,7 +108,7 @@
 				</div>
 
 
-				<div class='col-md-10 col-md-offset-1 admin-title' ng-show="selectedUniqueID == 0">
+				<div class='col-md-10 col-md-offset-1 admin-title' ng-show="selectedUniqueId == 0">
 					<div class='row'>
 						
 						<div class='col-md-12'>
