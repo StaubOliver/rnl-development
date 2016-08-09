@@ -102,7 +102,7 @@
 
 						<div ng-repeat='detail in details'>
 
-							{{detail.time}} {{detail.action}} {{detail.details}}
+							<div class='col-md-12'>{{detail.time}} {{detail.action}} {{detail.details}}</div>
 
 
 
