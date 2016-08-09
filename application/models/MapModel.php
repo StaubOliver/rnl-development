@@ -920,7 +920,7 @@ class MapModel extends CI_Model {
         $end->setTimestamp($e);
 
         $interval =  $end->diff($start);
-        $res[] = $interval->format("%H hours %i minutes %s seconds");
+        $res[] = $interval->format("%d days %H hours %i minutes %s seconds");
 
 /*
 
