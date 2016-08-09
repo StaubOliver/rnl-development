@@ -82,12 +82,7 @@
 							<h5>Unique visits - <?php echo $stats['uniqueVisits'] ?> </h5>
 						</div>
 
-						<div class='col-md-3'>
-							<h5>{{selectedUniqueId}}</h5>
-						</div>
-
-
-						<div class='col-md-3'>
+						<div class='col-md-6'>
 
 								<select class='form-control' ng-model='selectedUniqueId' ng-change='changeUniqueId()'>
 									<option value="0" selected>General</option>
