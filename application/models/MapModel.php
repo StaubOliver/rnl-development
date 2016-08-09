@@ -904,7 +904,11 @@ class MapModel extends CI_Model {
 
         if ($query_visit_details->num_rows() > 0)
         {
-            $res = $query_visit_details->result_array();
+            foreach ($query_visit_details as $visit) 
+            {
+                $res[] = $visit;
+            }
+            //$res = $query_visit_details->result_array();
         }
         return $res;
     }
