@@ -820,7 +820,7 @@ var map = angular.module('map', ['rzModule'])
 	} 
 	else 
 	{
-		$scope.profile.first_name = ' and welcome';
+		$scope.profile.first_name = ' - Mapping Manchester Museum Fossil Collection';
 		$scope.section_feedback_form_section_title = "Share your discoveries (anonymously)";
 	}
 	
@@ -1450,7 +1450,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 	}
 
 	$scope.loadGeneral();
-	
+
 
 
 });
