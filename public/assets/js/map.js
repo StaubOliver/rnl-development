@@ -1384,6 +1384,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 	$scope.details = [];
 	$scope.selectedUniqueId = "0";
+	$scope.general = [];
 
 	console.log("Hello World");
 
@@ -1391,9 +1392,10 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 	{
 		console.log($scope.selectedUniqueId);
 		$scope.details = [];
+		$scope.general = [];
 		if ($scope.selectedUniqueId == "0")
 		{
-			
+			loadGeneral();
 		}
 		else
 		{
@@ -1405,8 +1407,6 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 	{
 		data = {};
 		data.unique_id = unique_id;
-
-		
 
 		console.log(unique_id);
 		$http({
@@ -1427,8 +1427,27 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 		}).error(function(data, status, headers, config){
 			console.log(data);
 		});
+	}
 
+	$scope.loadGeneral = function()
+	{
+		data = {};
 
+		console.log(unique_id);
+		$http({
+	        method : 'POST',
+	        url: '/api/map/generalStats',
+	        data: $.param(data),
+	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+		    	
+		}).success(function(data, status, headers, config) {
+
+			$scope.general = data;
+			console.log(data);
+
+		}).error(function(data, status, headers, config){
+			console.log(data);
+		});
 	}
 
 
