@@ -907,8 +907,7 @@ class MapModel extends CI_Model {
             $res = $query_visit_details->result_array();
         }
 
-        $start = strtotime($res[0]["time"]);
-
+        
         $temp = date_parse_from_format('Y-m-d H:i:s', $res[0]["time"]);
         $s = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
         $start = new DateTime();
@@ -937,6 +936,7 @@ class MapModel extends CI_Model {
 
         $total = $query_total->num_rows();
 
+        /* percentages */
         $query_map_pan = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Map Pan'");
         $nb_map_pan = floatval($query_map_pan->num_rows())/floatval($total) * 100;
 
@@ -991,6 +991,35 @@ class MapModel extends CI_Model {
         $sharing = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Sharing'");
         $nb_sharing = floatval($sharing->num_rows())/floatval($total) * 100;
 
+
+        /* time */
+
+        $query_unique_id = $this->db->query("select distinct unique_id from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1';");
+        $nb_visitors = $query_unique_id->num_rows();
+        $avg_time;
+        foreach ($query_unique_id->result_array() as $unique) 
+        {
+            $query_visit_start = $this->db->query("SELECT activity_id, time from map_activity where unique_id='".$unique["unique_id"]."' order by activity_id asc limit 1");
+            $s = $query->row_array();
+            $query_visit_end = $this->db->query("SELECT activity_id, time from map_activity where unique_id='".$unique["unique_id"]."' order by activity_id desc limit 1")
+            $e = $query->row_array();
+
+            $temp = date_parse_from_format('Y-m-d H:i:s', $s["time"]);
+            $s = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
+            $start = new DateTime();
+            $start->setTimestamp($s);
+            
+            $temp = date_parse_from_format('Y-m-d H:i:s', $e["time"]);
+            $e = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
+            $end = new DateTime();
+            $end->setTimestamp($e);
+
+            $interval =  $end->diff($start);
+
+            $avg_time += floatval($interval) / floatval($nb_visitors);
+        }
+
+
         return array(
             "total"=>$total, 
             "map_pan"=>$nb_map_pan, 
@@ -1010,7 +1039,8 @@ class MapModel extends CI_Model {
             "click_reply"=>$nb_click_reply, 
             "write_comment"=>$nb_write_comment,
             "submit_feedback"=>$nb_submit_feedback,
-            "sharing"=>$nb_sharing
+            "sharing"=>$nb_sharing, 
+            "avg_time"=>$avg_time
         );
 
 
