@@ -106,7 +106,7 @@
 					<div class='row'>
 						
 						<div class='col-md-12'>
-							<h5>{{details[0]['unique_id']}} -  {{details.length}} actions - details[details.length]</h5>
+							<h5>{{details[0]['unique_id']}} -  {{details.length}} actions - {{details[details.length]}}</h5>
 						</div>
 
 						<div ng-repeat='detail in details'>
