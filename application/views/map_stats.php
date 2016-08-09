@@ -84,7 +84,7 @@
 
 						<?php foreach($stats["visits"] as $visits): ?>
 							<div class='col-md-6'>
-								<p ng-click="loadVisitDetails('<?php echo $visits["unique_id"] ?>')"><?php echo $visits["unique_id"] ?></p>
+								<p ng-click="loadVisitdetails('<?php echo $visits["unique_id"] ?>')"><?php echo $visits["unique_id"] ?></p>
 							</div>
 							
 						<?php endforeach; ?>
