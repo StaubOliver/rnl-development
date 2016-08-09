@@ -1039,13 +1039,13 @@ class MapModel extends CI_Model {
             "filter_geological_change"=>round($nb_filter_geological_change,2),
             "filter_collector_change"=>round($nb_filter_collector_change,2),
             "filter_genus_change"=>round($nb_filter_genus_change,2),
-            "feedback_hover"=>$nb_feedback_hover,2),
-            "feedback_click"=>$nb_feedback_click,2),
-            "upvote"=>$nb_upvote,2),
-            "click_reply"=>$nb_click_reply,2),
-            "write_comment"=>$nb_write_comment,2),
-            "submit_feedback"=>$nb_submit_feedback,2),
-            "sharing"=>$nb_sharing,2),
+            "feedback_hover"=>round($nb_feedback_hover,2),
+            "feedback_click"=>round($nb_feedback_click,2),
+            "upvote"=>round($nb_upvote,2),
+            "click_reply"=>round($nb_click_reply,2),
+            "write_comment"=>round($nb_write_comment,2),
+            "submit_feedback"=>round($nb_submit_feedback,2),
+            "sharing"=>round($nb_sharing,2),
             "avg_time"=>$avg_time
         );
 
