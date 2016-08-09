@@ -74,15 +74,15 @@
 
 					<div class='row'>
 
-						<div class='col-md-4'>
+						<div class='col-md-3'>
 							<h5>Saved actions - <?php echo $stats['nbActions'] ?> </h5>
 						</div>
 
-						<div class='col-md-4'>
+						<div class='col-md-3'>
 							<h5>Unique visits - <?php echo $stats['uniqueVisits'] ?> </h5>
 						</div>
 
-						<div class='col-md-4'>
+						<div class='col-md-6'>
 
 								<select class='form-control' ng-model='selectedUniqueId'>
 								<optgroup label="Choose an ID">	
