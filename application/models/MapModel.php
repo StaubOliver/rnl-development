@@ -874,7 +874,7 @@ class MapModel extends CI_Model {
 
     public function where_clause()
     {
-        return "unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and unique_id!='4977e5ac01ae154eb77ff732d622848696f7ff72'";
+        return "unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and unique_id!='4977e5ac01ae154eb77ff732d622848696f7ff72' and unique_id!='c083abdd99a03add5752e91738d0c5c5c6ed5311'";
     }
 
 
@@ -942,61 +942,61 @@ class MapModel extends CI_Model {
         $query_map_pan = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Map Pan'");
         $nb_map_pan = floatval($query_map_pan->num_rows())/floatval($total) * 100;
 
-        $query_map_click = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Map Click'");
+        $query_map_click = $this->db->query("select * from map_activity where ".$this->where_clause()." map_activity.action='Map Click'");
         $nb_map_click = floatval($query_map_click->num_rows())/floatval($total) * 100;
 
-        $query_map_zoom_in = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Map Zoom in'");
+        $query_map_zoom_in = $this->db->query("select * from map_activity where ".$this->where_clause()." map_activity.action='Map Zoom in'");
         $nb_map_zoom_in = floatval($query_map_zoom_in->num_rows())/floatval($total) * 100;
 
-        $query_map_zoom_out = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Map Zoom out'");
+        $query_map_zoom_out = $this->db->query("select * from map_activity where ".$this->where_clause()." map_activity.action='Map Zoom out'");
         $nb_map_zoom_out = floatval($query_map_zoom_out->num_rows())/floatval($total) * 100;
 
-        $query_click_on_fossil = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Click on Fossil'");
+        $query_click_on_fossil = $this->db->query("select * from map_activity where ".$this->where_clause()." map_activity.action='Click on Fossil'");
         $nb_click_on_fossil = floatval($query_click_on_fossil->num_rows())/floatval($total) * 100;
 
-        $query_fossil_selected = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Fossil selected'");
+        $query_fossil_selected = $this->db->query("select * from map_activity where ".$this->where_clause()." map_activity.action='Fossil selected'");
         $nb_fossil_selected = floatval($query_fossil_selected->num_rows())/floatval($total) * 100;
 
-        $query_fossil_deselected = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Fossil deselected'");
+        $query_fossil_deselected = $this->db->query("select * from map_activity where ".$this->where_clause()." map_activity.action='Fossil deselected'");
         $nb_fossil_deselected = floatval($query_fossil_deselected->num_rows())/floatval($total) * 100;
 
-        $query_clear_fossil_selection = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Clear Fossil selection'");
+        $query_clear_fossil_selection = $this->db->query("select * from map_activity where ".$this->where_clause()." map_activity.action='Clear Fossil selection'");
         $nb_clear_fossil_selection = floatval($query_clear_fossil_selection->num_rows())/floatval($total) * 100;
 
-        $filter_geological_change = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Filter Geological Age changed'");
+        $filter_geological_change = $this->db->query("select * from map_activity where ".$this->where_clause()." map_activity.action='Filter Geological Age changed'");
         $nb_filter_geological_change = floatval($filter_geological_change->num_rows())/floatval($total) * 100;
 
-        $filter_collector_change = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Filter Collector Selector change'");
+        $filter_collector_change = $this->db->query("select * from map_activity where ".$this->where_clause()." map_activity.action='Filter Collector Selector change'");
         $nb_filter_collector_change = floatval($filter_collector_change->num_rows())/floatval($total) * 100;
 
-        $filter_genus_change = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Filter Genus Selector change'");
+        $filter_genus_change = $this->db->query("select * from map_activity where ".$this->where_clause()." map_activity.action='Filter Genus Selector change'");
         $nb_filter_genus_change = floatval($filter_genus_change->num_rows())/floatval($total) * 100;
 
-        $feedback_hover = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Feedback mouse over'");
+        $feedback_hover = $this->db->query("select * from map_activity where ".$this->where_clause()." map_activity.action='Feedback mouse over'");
         $nb_feedback_hover = floatval($feedback_hover->num_rows())/floatval($total) * 100;
 
-        $feedback_click = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Click on feedback'");
+        $feedback_click = $this->db->query("select * from map_activity where ".$this->where_clause()." map_activity.action='Click on feedback'");
         $nb_feedback_click = floatval($feedback_click->num_rows())/floatval($total) * 100;
 
-        $upvote = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Upvote'");
+        $upvote = $this->db->query("select * from map_activity where ".$this->where_clause()." map_activity.action='Upvote'");
         $nb_upvote = floatval($upvote->num_rows())/floatval($total) * 100;
 
-        $click_reply = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Click reply'");
+        $click_reply = $this->db->query("select * from map_activity where ".$this->where_clause()." map_activity.action='Click reply'");
         $nb_click_reply = floatval($click_reply->num_rows())/floatval($total) * 100;
 
-        $write_comment = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Writing comment'");
+        $write_comment = $this->db->query("select * from map_activity where ".$this->where_clause()."map_activity.action='Writing comment'");
         $nb_write_comment = floatval($write_comment->num_rows())/floatval($total) * 100;
 
-        $submit_feedback = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Submit feedback'");
+        $submit_feedback = $this->db->query("select * from map_activity where ".$this->where_clause()." map_activity.action='Submit feedback'");
         $nb_submit_feedback = floatval($submit_feedback->num_rows())/floatval($total) * 100;
 
-        $sharing = $this->db->query("select * from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.action='Sharing'");
+        $sharing = $this->db->query("select * from map_activity where ".$this->where_clause()."map_activity.action='Sharing'");
         $nb_sharing = floatval($sharing->num_rows())/floatval($total) * 100;
 
 
         /* time */
 
-        $query_unique_id = $this->db->query("select distinct unique_id from map_activity where unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1';");
+        $query_unique_id = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause());
         $nb_visitors = $query_unique_id->num_rows();
         $avg_time = 0;
         foreach ($query_unique_id->result_array() as $unique) 
