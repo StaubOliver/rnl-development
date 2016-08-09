@@ -110,6 +110,14 @@
 							<h5>General</h5>
 						</div>
 
+						<div class='col-md-3'>
+							Map Pan
+						</div>
+
+						<div class='col-md-3'>
+							{{general.map_pan}}%
+						</div>
+
 					</div>
 				</div>
 
