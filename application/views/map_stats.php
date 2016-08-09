@@ -75,7 +75,7 @@
 				</div>
 
 				<div class='col-md-10 col-md-offset-1 admin-title'>
-					<h5>Saved actions - <?php echo $stats." fossils to update" ?> </h5>
+					<h5>Saved actions - <?php echo $stats['nbActions'] ?> </h5>
 				</div>
 
 				
