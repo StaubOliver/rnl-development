@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app=''>
+<html lang="en" ng-app='map_stats'>
 
 <head>
 	<!-- Metadata -->
@@ -84,7 +84,7 @@
 
 						<?php foreach($stats["visits"] as $visits): ?>
 							<div class='col-md-6'>
-								<p><?php echo $visits["unique_id"] ?></p>
+								<p ng-click="loadVisitDetails(<?php echo $visits["unique_id"] ?>)"><?php echo $visits["unique_id"] ?></p>
 							</div>
 							
 						<?php endforeach; ?>
