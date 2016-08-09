@@ -211,7 +211,8 @@
 							</div>
 						</div>
 
-						</br>
+						<div class='col-md-12'>
+						</div>
 
 
 						<div class='col-md-12'>
@@ -258,12 +259,6 @@
 									{{general.submit_feedback}}%
 								</div>
 
-								<div class='col-md-2'>
-									Sharing
-								</div>
-								<div class='col-md-2'>
-									{{general.sharing}}%
-								</div>
 
 							</div>
 						</div>
