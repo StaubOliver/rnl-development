@@ -83,7 +83,7 @@
 						</div>
 
 						<div class='col-md-6'>
-
+								<span class="glyphicon glyphicon-repeat hover-link" ng-click="changeUniqueId()"></span>
 								<select class='form-control' ng-model='selectedUniqueId' ng-change='changeUniqueId()'>
 									<option value="0" selected>General</option>
 									<optgroup label="Choose an ID">	
@@ -107,7 +107,7 @@
 					<div class='row'>
 
 						<div class='col-md-12'>
-							<h5><span class="glyphicon glyphicon-repeat hover-link" ng-click="loadGeneral()"></span> Percentages</h5>
+							<h5> Percentages</h5>
 						</div>
 
 						<div class='col-md-12'>
@@ -301,7 +301,7 @@
 					<div class='row'>
 						
 						<div class='col-md-12'>
-							<h5><span class="glyphicon glyphicon-repeat hover-link" ng-click="loadVisitdetails(selectedUniqueId)"></span> {{details[0]['unique_id']}} -  {{details.length - 1}} actions - {{details[details.length-1]}}</h5>
+							<h5>{{details[0]['unique_id']}} -  {{details.length - 1}} actions - {{details[details.length-1]}}</h5>
 						</div>
 
 						<div ng-repeat='detail in details'>
