@@ -1432,8 +1432,6 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 	$scope.loadGeneral = function()
 	{
 		data = {};
-
-		console.log(unique_id);
 		$http({
 	        method : 'POST',
 	        url: '/api/map/generalStats',
