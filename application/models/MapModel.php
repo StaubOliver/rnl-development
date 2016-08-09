@@ -908,9 +908,16 @@ class MapModel extends CI_Model {
         }
 
         $start = strtotime($res[0]["time"]);
+
+        $temp = date_parse_from_format('Y-m-d H:i:s', $res[0]["time"]);
+        $start = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
+        $res["time"] = $start
+/*
+
         $end = strtotime($res[count($res)-1]["time"]);
         $interval =  $end->diff($start);
         $res["time"] = $interval->format("%H hours %i minutes %s seconds");
+        */
         return $res;
     }
 
