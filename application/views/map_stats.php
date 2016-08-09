@@ -89,7 +89,7 @@
 									<?php
 										foreach($stats["visits"] as $visit){
 											//if ($genus != "" and $genus != "Not listed" and $genus != "Missing") {
-												echo "<option value='".$visits['unique_id']."'>".$visits['unique_id']."</option>";
+												echo "<option value='".$visit['unique_id']."'>".$visit['unique_id']."</option>";
 											//}
 										}
 									?>
