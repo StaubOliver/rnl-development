@@ -1386,6 +1386,8 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_feedbacks'
 
 	$scope.loadVisitdetails = function (unique_id)
 	{
+		$data = {};
+		data.unique_id = unique_id;
 		$scope.details = [];
 		$http({
 	        method : 'POST',
