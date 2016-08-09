@@ -93,6 +93,28 @@
 				</div>
 
 
+				<div class='col-md-10 col-md-offset-1 admin-title' ng-show='{{details.length}}'>
+					<div class='row'>
+						
+						<div class='col-md-12'>
+							<h5>Saved actions - <?php echo $stats['nbActions'] ?> </h5>
+						</div>
+
+						<div ng-repeat='detail in details'>
+
+							{{detail.time}} {{detail.action}} {{detail.details}}
+
+
+
+						</div>
+
+
+
+
+
+					</div>
+				</div>
+
 
 
 			</div>
