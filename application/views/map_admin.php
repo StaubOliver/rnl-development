@@ -5,7 +5,7 @@
 	<!-- Metadata -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Admin panel</title>
+	<title>Admin Panel</title>
 	
 	<!-- Typography -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
@@ -50,12 +50,11 @@
 		<div class="container-fluid">
 
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Map</a>
+				<a class="navbar-brand" href="#">Admin Panel</a>
 			</div>
 
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li><p class="navbar-text">Admin panel</p></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 		 			<li><a href="/map">Back to the map</a></li>
