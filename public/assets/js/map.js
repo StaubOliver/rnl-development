@@ -1398,7 +1398,8 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_feedbacks'
 			data.forEach(function(item, index)
 			{
 
-			}
+			});
+			console.log(data);
 
 
 		}).error(function(data, status, headers, config){
