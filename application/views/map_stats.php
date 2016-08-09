@@ -74,29 +74,29 @@
 					<div class='row'>
 
 
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							<h5>Unique visitors - <?php echo $stats['uniqueVisits'] ?> </h5>
 						</div>
 
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							<h5>Actions - <?php echo $stats['nbActions'] ?> </h5>
 						</div>
 
+						<div class='col-md-2'>
+							<span class="glyphicon glyphicon-repeat hover-link" ng-click="changeUniqueId()"></span> <h5>Refresh</h5>
+						</div>
+
 						<div class='col-md-6'>
-								<span class="glyphicon glyphicon-repeat hover-link" ng-click="changeUniqueId()"></span>
-								<select class='form-control' ng-model='selectedUniqueId' ng-change='changeUniqueId()'>
-									<option value="0" selected>General</option>
-									<optgroup label="Choose an ID">	
-										<?php
-											foreach($stats["visits"] as $visit){
-												echo "<option value='".$visit['unique_id']."'>".$visit['unique_id']."</option>";
-											}
-										?>
-									</optgroup>
-
-
-								</select>
-
+							<select class='form-control' ng-model='selectedUniqueId' ng-change='changeUniqueId()'>
+								<option value="0" selected>General</option>
+								<optgroup label="Choose an ID">	
+									<?php
+										foreach($stats["visits"] as $visit){
+											echo "<option value='".$visit['unique_id']."'>".$visit['unique_id']."</option>";
+										}
+									?>
+								</optgroup>
+							</select>
 						</div>
 
 					</div>
