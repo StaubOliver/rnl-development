@@ -44,7 +44,7 @@
 
 </head>
 
-<body class='admin-body' ng-controller='admin_stats'>
+<body class='admin-body' ng-controller='admin_map_stats'>
 
 	<nav class="navbar-default  navbar-fixed-top" >
 		<div class="container-fluid">
@@ -100,6 +100,9 @@
 
 
 	</div>
+
+</body>
+</html>
 
 
 
