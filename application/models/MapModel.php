@@ -891,10 +891,9 @@ class MapModel extends CI_Model {
         foreach ($query_unique_visits->result_array() as $unique)
         {
             $query_details = $this->db->query("SELECT * FROM map_activity where unique_id='".$unique["unique_id"]."'");
-            foreach ($query_details->result_array() as $details) 
-            {
-                $res['visits'][] = $details;
-            }
+
+            $res['visits'][] = $query_details->result_array();
+            
         }
 
 
