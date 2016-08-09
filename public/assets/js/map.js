@@ -1380,7 +1380,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 });
 
 
-var map_admin = angular.module('map_stats', []).controller('admin_map_feedbacks', function($scope, $http, $compile){
+var map_stats = angular.module('map_stats', []).controller('admin_map_feedbacks', function($scope, $http, $compile){
 
 	$scope.details = [];
 
