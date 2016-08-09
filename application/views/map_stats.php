@@ -71,12 +71,14 @@
 			<div class='row'>
 
 				<div class='col-md-10 col-md-offset-1 admin-title'>
-					<h5>Saved actions - <?php echo $location_update." fossils to update" ?> </h5>
+					<h5>Unique visits - <?php echo $stats ." fossils to update" ?> </h5>
 				</div>
 
 				<div class='col-md-10 col-md-offset-1 admin-title'>
-					<h5>Unique visits - <?php echo $location_update." fossils to update" ?> </h5>
+					<h5>Saved actions - <?php echo $stats." fossils to update" ?> </h5>
 				</div>
+
+				
 
 
 
