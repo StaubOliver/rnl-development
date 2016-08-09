@@ -138,6 +138,27 @@
 							{{general.map_zoom_out}}%
 						</div>
 
+						<div class='col-md-3'>
+							Click on Fossil
+						</div>
+						<div class='col-md-3'>
+							{{general.click_on_fossil}}%
+						</div>
+
+						<div class='col-md-3'>
+							Fossil Selected
+						</div>
+						<div class='col-md-3'>
+							{{general.fossil_selected}}%
+						</div>
+
+						<div class='col-md-3'>
+							Fossil Deselected
+						</div>
+						<div class='col-md-3'>
+							{{general.fossil_deselected}}%
+						</div>
+
 					</div>
 				</div>
 
