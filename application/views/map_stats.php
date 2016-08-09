@@ -301,7 +301,7 @@
 					<div class='row'>
 						
 						<div class='col-md-12'>
-							<h5>{{details[0]['unique_id']}} -  {{details.length - 1}} actions - {{details[details.length-1]}}</h5>
+							<h5><span class="glyphicon glyphicon-repeat" ng-click=""></span> {{details[0]['unique_id']}} -  {{details.length - 1}} actions - {{details[details.length-1]}}</h5>
 						</div>
 
 						<div ng-repeat='detail in details'>
