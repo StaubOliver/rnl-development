@@ -107,7 +107,7 @@
 					<div class='row'>
 
 						<div class='col-md-12'>
-							<h5>Percentages</h5>
+							<h5><span class="glyphicon glyphicon-repeat hover-link" ng-click="loadGeneral()"></span> Percentages</h5>
 						</div>
 
 						<div class='col-md-12'>
