@@ -85,12 +85,13 @@
 						<div class='col-md-6'>
 
 								<select class='form-control' ng-model='selectedUniqueId' ng-change='changeUniqueId()'>
-								<optgroup label="Choose an ID">	
-									<?php
-										foreach($stats["visits"] as $visit){
-											echo "<option value='".$visit['unique_id']."'>".$visit['unique_id']."</option>";
-										}
-									?>
+									<option value='0'>General</option>
+									<optgroup label="Choose an ID">	
+										<?php
+											foreach($stats["visits"] as $visit){
+												echo "<option value='".$visit['unique_id']."'>".$visit['unique_id']."</option>";
+											}
+										?>
 									</optgroup>
 
 
