@@ -71,7 +71,7 @@
 			<div class='row'>
 
 				<div class='col-md-10 col-md-offset-1 admin-title'>
-					<h5>Unique visits - <?php echo $stats['uniqueVisits'] ." fossils to update" ?> </h5>
+					<h5>Unique visits - <?php echo $stats['uniqueVisits'] ?> </h5>
 				</div>
 
 				<div class='col-md-10 col-md-offset-1 admin-title'>
