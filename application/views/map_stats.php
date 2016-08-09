@@ -110,52 +110,52 @@
 							<h5>General</h5>
 						</div>
 
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							Map Pan
 						</div>
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							{{general.map_pan}}%
 						</div>
 
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							Map Click
 						</div>
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							{{general.map_click}}%
 						</div>
 
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							Map Zoom In
 						</div>
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							{{general.map_zoom_in}}%
 						</div>
 
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							Map Zoom Out
 						</div>
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							{{general.map_zoom_out}}%
 						</div>
 
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							Click on Fossil
 						</div>
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							{{general.click_on_fossil}}%
 						</div>
 
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							Fossil Selected
 						</div>
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							{{general.fossil_selected}}%
 						</div>
 
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							Fossil Deselected
 						</div>
-						<div class='col-md-3'>
+						<div class='col-md-2'>
 							{{general.fossil_deselected}}%
 						</div>
 
