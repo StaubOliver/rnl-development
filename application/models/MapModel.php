@@ -904,12 +904,13 @@ class MapModel extends CI_Model {
 
         if ($query_visit_details->num_rows() > 0)
         {
-            foreach ($query_visit_details as $visit) 
-            {
-                $res[] = $visit;
-            }
-            //$res = $query_visit_details->result_array();
+            $res = $query_visit_details->result_array();
         }
+
+        $start = $res[0];
+        $end = $res[count($res)-1];
+        $interval =  $end->diff($start);
+        $res["time"] = $interval->format("%H hours %i minutes %s seconds");
         return $res;
     }
 
