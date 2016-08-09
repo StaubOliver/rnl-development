@@ -83,7 +83,7 @@
 						</div>
 
 						<div class='col-md-2'>
-							<span class="glyphicon glyphicon-repeat hover-link" ng-click="changeUniqueId()"></span> <h5>Refresh</h5>
+							<h5 class="hover-link" ng-click="changeUniqueId()">Refresh</h5>
 						</div>
 
 						<div class='col-md-6'>
