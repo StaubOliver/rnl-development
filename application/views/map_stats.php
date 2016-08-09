@@ -71,11 +71,38 @@
 			<div class='row'>
 
 				<div class='col-md-5 col-md-offset-1 admin-title'>
-					<h5>Unique visits - <?php echo $stats['uniqueVisits'] ?> </h5>
-				</div>
 
-				<div class='col-md-5 admin-title'>
-					<h5>Saved actions - <?php echo $stats['nbActions'] ?> </h5>
+					<div class='row'>
+
+						<div class='col-md-4'>
+							<h5>Saved actions - <?php echo $stats['nbActions'] ?> </h5>
+						</div>
+
+						<div class='col-md-4'>
+							<h5>Unique visits - <?php echo $stats['uniqueVisits'] ?> </h5>
+						</div>
+
+						<div class='col-md-4'>
+
+								<select class='form-control' ng-model='selectedUniqueId'>
+								<optgroup label="Choose an ID">	
+									<?php
+										foreach($stats["visits"] as $visit){
+											//if ($genus != "" and $genus != "Not listed" and $genus != "Missing") {
+												echo "<option value='".$visits['unique_id']."'>".$visits['unique_id']."</option>";
+											//}
+										}
+									?>
+									</optgroup>
+
+
+								</select>
+
+						</div>
+
+
+					</div>
+
 				</div>
 
 
