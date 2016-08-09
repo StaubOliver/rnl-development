@@ -907,8 +907,8 @@ class MapModel extends CI_Model {
             $res = $query_visit_details->result_array();
         }
 
-        $start = $res[0];
-        $end = $res[count($res)-1];
+        $start = $res[0]["time"];
+        $end = $res[count($res)-1]["time"];
         $interval =  $end->diff($start);
         $res["time"] = $interval->format("%H hours %i minutes %s seconds");
         return $res;
