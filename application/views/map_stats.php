@@ -128,7 +128,7 @@
 								</div>
 
 								<div class='col-md-2'>
-									Change filter geological age
+									Change age
 								</div>
 								<div class='col-md-2'>
 									{{general.filter_geological_change}}%
@@ -155,7 +155,7 @@
 								</div>
 
 								<div class='col-md-2'>
-									Change filter collector
+									Change collector
 								</div>
 								<div class='col-md-2'>
 									{{general.filter_collector_change}}%
@@ -182,7 +182,7 @@
 								</div>
 
 								<div class='col-md-2'>
-									Change filter genus
+									Change genus
 								</div>
 								<div class='col-md-2'>
 									{{general.filter_genus_change}}%
