@@ -84,6 +84,18 @@ class map extends CI_Controller {
 		}
 	}
 
+	public function map_stat(){
+		if ($this->ion_auth->logged_in() && ($this->ProfileModel->isAdmin() == 1)){
+			$data['stats'] = $this->MapModel->adminStats();
+
+			$this->load->view('map_stats', $data);
+		}
+		else
+		{
+			redirect('/map');
+		}
+	}
+
 	
 /*
 	public function old() {		
