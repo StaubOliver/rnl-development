@@ -1383,8 +1383,14 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 var map_stats = angular.module('map_stats', []).controller('admin_map_stats', function($scope, $http, $compile){
 
 	$scope.details = [];
+	$scope.selectedUniqueId = "";
 
 	console.log("Hello World");
+
+	$scope.changeUniqueId = function()
+	{
+		$scope.loadVisitdetails($scope.selectedUniqueId);
+	}
 
 	$scope.loadVisitdetails = function (unique_id)
 	{
