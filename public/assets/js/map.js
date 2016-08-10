@@ -99,9 +99,7 @@ var map = angular.module('map', ['rzModule'])
 .controller('GoogleMap', function($scope, $http, $compile){
 
 
-	$("#ModalHelp").on('hide.bs.modal', function () {
-            recordActivity("Close Help");
-    });
+
 
 	var actualmap;
 
@@ -922,6 +920,10 @@ var map = angular.module('map', ['rzModule'])
 		$scope.recordActivity("Close Page", "");
 		return 'Your own message goes here...';
 	});
+
+	$("#ModalHelp").on('hide.bs.modal', function () {
+    	$scope.recordActivity("Close Help");
+    });
 
 });
 
