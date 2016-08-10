@@ -897,23 +897,17 @@ var map = angular.module('map', ['rzModule'])
 	window.onunload = function(){
 		$scope.recordActivity("Close Page", "");
 	}
-/*
-	window.onbeforeunload = bunload;
 
-	function bunload(){
-		dontleave="Are you sure you want to leave?";
-		return dontleave;
-	}
 
 	window.onbeforeunload = function() { 
 		if(confirm('are you sure to exit?')) {
 			logActivity($http,"Close Page", "", user_id);
-		   return true; 
+			return true; 
 		}
 		else 
 		   return false; 
 	};
-*/
+
 
 	$( window ).unload(function() {
 		$scope.recordActivity("Close Page", "");
