@@ -1001,7 +1001,7 @@ class MapModel extends CI_Model {
 
         $write_comment = $this->db->query("select * from map_activity where ".$this->where_clause()."and map_activity.action='Writing comment'");
         $nb_write_comment = $write_comment->num_rows();
-        $p_write_comment = floatval($write_comment)/floatval($total) * 100;
+        $p_write_comment = floatval($nb_write_comment)/floatval($total) * 100;
 
         $submit_feedback = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Submit feedback'");
         $nb_submit_feedback = $submit_feedback->num_rows();
