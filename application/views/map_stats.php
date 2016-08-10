@@ -415,13 +415,13 @@
 							Min
 						</div>
 						<div class='col-md-2'>
-							{{general.min_visit_dwell}}
+							{{general.min_visit_dwell.d}}d {{general.min_visit_dwell.h}}h {{general.min_visit_dwell.m}}m {{general.min_visit_dwell.s}}s
 						</div>
 						<div class='col-md-2'>
 							Max
 						</div>
 						<div class='col-md-2'>
-							{{general.max_visit_dwell}}
+							{{general.max_visit_dwell.d}}d {{general.max_visit_dwell.h}}h {{general.max_visit_dwell.m}}m {{general.max_visit_dwell.s}}s
 						</div>
 						<div class='col-md-4'>
 						</div>
@@ -429,13 +429,13 @@
 							Avg
 						</div>
 						<div class='col-md-2'>
-							{{general.avg_visit_dwell}}
+							{{general.avg_visit_dwell.d}}d {{general.avg_visit_dwell.h}}h {{general.avg_visit_dwell.m}}m {{general.avg_visit_dwell.s}}s
 						</div>
 						<div class='col-md-2'>
 							Med
 						</div>
 						<div class='col-md-2'>
-							{{general.med_visit_dwell}}
+							{{general.med_visit_dwell.d}}d {{general.med_visit_dwell.h}}h {{general.med_visit_dwell.m}}m {{general.med_visit_dwell.s}}s
 						</div>
 
 						<div class='col-md-12'>
