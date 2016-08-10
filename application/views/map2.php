@@ -133,7 +133,7 @@
 					</li>
 
 					<li>
-						<a href="#" data-toggle='modal' data-target='#ModalHelp' id='helpButton'>
+						<a href="#" data-toggle='modal' data-target='#ModalHelp' id='helpButton' ng-click='recordActivity("Open Help", ""')>
 							Help and terms
 						</a>
 					</li>

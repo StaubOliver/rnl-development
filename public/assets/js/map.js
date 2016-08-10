@@ -99,6 +99,9 @@ var map = angular.module('map', ['rzModule'])
 .controller('GoogleMap', function($scope, $http, $compile){
 
 
+	$("#myModal").on('hide.bs.modal', function () {
+            recordActivity("Close Help");
+
 	var actualmap;
 
 	var markers = [];
