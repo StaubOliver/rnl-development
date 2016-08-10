@@ -467,7 +467,7 @@
 							Nb of person
 						</div>
 
-						<div ng-repeat='data in general.hist_actions'>
+						<div ng-repeat='data in general.data_hist_actions'>
 							<div class='col-md-4'>
 								{{$index*10}} - {{($index+1)*10}}
 							</div>
