@@ -463,10 +463,10 @@
 							<h5>Histogram</h5>
 						</div>
 						<div style="display:block; text-align:right" class='col-md-6' ng-hide="show_histogram_data">
-							<button style='margin-top:8px margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_histogram_data = !show_histogram_data">Show Data</button>
+							<button style='margin-top:8px; margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_histogram_data = !show_histogram_data">Show Data</button>
 						</div>
 						<div style="display:block; text-align:right" class='col-md-6' ng-show="show_histogram_data">
-							<button style='margin-top:8px margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_histogram_data = !show_histogram_data">Hide Data</button>
+							<button style='margin-top:8px; margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_histogram_data = !show_histogram_data">Hide Data</button>
 						</div>
 
 						<div ng-show='show_histogram_data'>
@@ -518,10 +518,10 @@
 						</div>
 
 						<div style="display:block; text-align:right" class='col-md-6' ng-hide="show_dwell_fct_actions_data">
-							<button style='margin-top:8px margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_dwell_fct_actions_data = !show_dwell_fct_actions_data">Show Data</button>
+							<button style='margin-top:8px; margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_dwell_fct_actions_data = !show_dwell_fct_actions_data">Show Data</button>
 						</div>
 						<div style="display:block; text-align:right" class='col-md-6' ng-show="show_dwell_fct_actions_data">
-							<button style='margin-top:8px margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_dwell_fct_actions_data = !show_dwell_fct_actions_data">Hide Data</button>
+							<button style='margin-top:8px; margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_dwell_fct_actions_data = !show_dwell_fct_actions_data">Hide Data</button>
 						</div>
 
 						<div ng-show='show_dwell_fct_actions_data'>
