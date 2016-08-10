@@ -78,7 +78,7 @@
 
 </head>
 
-<body ng-controller="GoogleMap" onbeforeunload="$scope.recordactivity('Close Page', '')">
+<body ng-controller="GoogleMap">
 	<!-- Header -->
 	<nav class="navbar-default  navbar-fixed-top" >
 		<div class="container-fluid">
