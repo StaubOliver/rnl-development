@@ -1141,7 +1141,6 @@ class MapModel extends CI_Model {
             "nb_submit_feedback"=>round($nb_submit_feedback,2),
             "sharing"=>round($p_sharing,2),
             "nb_sharing"=>round($nb_sharing,2),
-            "avg_time"=>$avg_time, 
             "hist_actions"=>$hist, 
             "avg_action_per_visit"=>$avg_action_per_visit,
             "med_action_per_visit"=>$med_action_per_visit, 
