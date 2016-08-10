@@ -467,14 +467,15 @@
 							Nb of person
 						</div>
 
-						<div ng-repeat='data in general.data_hist_actions'>
+						<div ng-repeat='d in general.data_hist_actions'>
 							<div class='col-md-4'>
 								{{$index}}
 							</div>
 							<div class='col-md-2'>
-								{{data}}
+								{{d}}
 							</div>
 						</div>
+
 						<div class='col-md-12'>
 							<div id="chart_div" style="width: 100%; height: 400px;"></div>
 						</div>
