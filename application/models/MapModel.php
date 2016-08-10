@@ -1090,7 +1090,7 @@ class MapModel extends CI_Model {
             $hist[] = array($unique["unique_id"], $nb_action);
 
         }
-        $avg_time = date_parse_from_format("s", intval($avg_time));
+        //$avg_time = date_parse_from_format("s", intval($avg_time));
         //$avg_time = mktime($temp_time["hour"], $temp_time["minute"], $temp_time["second"], $temp_time["month"], $temp_time["day"], $temp_time["year"]);
 
         $avg_action_per_visit = $this->calculate_average($avg_med);
