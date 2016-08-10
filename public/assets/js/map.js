@@ -1531,7 +1531,9 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 					title: 'Action distribution',
 					chartArea:{left:100,top:10,width:'100%',height:'350'},
 					pieHole: 0.4,
-					colors: ['212a33']
+					colors: ['212a33', '28323d', '2e3b48', '354352', '3c4c5c', '425467', '495d71', 
+							'50657b', '566e85', '5d7690', '647f9a', '6e87a1', '7890a8', '8298ae', 
+							'8da1b5', '97a9bc', 'a1b2c2', 'acbac9', 'b6c3d0', 'c0cbd6', 'cbd4dd']
 				};
 
 				var chart = new google.visualization.PieChart(document.getElementById('chart_action_distribution'));
