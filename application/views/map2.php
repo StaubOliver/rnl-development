@@ -432,7 +432,7 @@
 					<div class="filter-section">
 
 						<div class='filter-reset-btn'>
-							<span title='Reset filter' class="glyphicon glyphicon-repeat" ng-click="resetFilter()"></span>
+							<span title='Reset filter' class="glyphicon glyphicon-repeat" ng-click="resetFilter(); recordActivity('Reset Filter', '')"></span>
 						</div>
 				
 						<div class="row">
