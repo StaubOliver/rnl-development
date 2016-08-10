@@ -456,25 +456,25 @@
 						</div>
 
 						<div class='col-md-2'>
-							Class
+							Range
 						</div>
 						<div class='col-md-1'>
 							Persons
 						</div>
 						<div class='col-md-2'>
-							Class
+							Range
 						</div>
 						<div class='col-md-1'>
 							Persons
 						</div>
 						<div class='col-md-2'>
-							Class
+							Range
 						</div>
 						<div class='col-md-1'>
 							Persons
 						</div>
 						<div class='col-md-2'>
-							Class
+							Range
 						</div>
 						<div class='col-md-1'>
 							Persons
