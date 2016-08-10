@@ -1488,7 +1488,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 			    var data = google.visualization.arrayToDataTable($scope.general.hist_actions);
 
 			    var options = {
-			      title: 'Lengths of dinosaurs, in meters',
+			      title: 'Actions',
 			      legend: { position: 'none' }, 
 			      colors: ['212a33']
 
