@@ -889,7 +889,7 @@ var map = angular.module('map', ['rzModule'])
 		refresh($http);
 	}
 
-
+/*
 	window.onunload = function(){
 		$scope.recordActivity("Close Page", "");
 	}
@@ -907,7 +907,7 @@ var map = angular.module('map', ['rzModule'])
 
 	$( window ).unload(function() {
 		$scope.recordActivity("Close Page", "");
-	});
+	});*/
 
 });
 
