@@ -415,13 +415,13 @@
 							Min
 						</div>
 						<div class='col-md-2'>
-							{{general.min_action_per_visit}}
+							{{general.min_visit_dwell}}
 						</div>
 						<div class='col-md-2'>
 							Max
 						</div>
 						<div class='col-md-2'>
-							{{general.max_action_per_visit}}
+							{{general.max_visit_dwell}}
 						</div>
 						<div class='col-md-4'>
 						</div>
@@ -435,7 +435,7 @@
 							Med
 						</div>
 						<div class='col-md-2'>
-							{{general.med_action_per_visit}}
+							{{general.med_visit_dwell}}
 						</div>
 
 						<div class='col-md-12'>
