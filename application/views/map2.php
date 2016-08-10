@@ -168,6 +168,7 @@
 						This website is an experiment built and ran by the Museum of Manchester and the School of Computer Science both from the University of Manchester.
 						</br>
 						Feel free to explore the collection and maybe discover some cool things about fossils or their locations.
+						Note that the collection is huge and has not being digitized completely. More items to come stay tuned !
 						</br>
 						We'd love to read about what you've discovered.
 					</p>
