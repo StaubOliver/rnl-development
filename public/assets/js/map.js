@@ -889,17 +889,21 @@ var map = angular.module('map', ['rzModule'])
 		refresh($http);
 	}
 
-/*
+
 	window.onbeforeunload = function () {
-    	logActivity($http,"Close Page", "", user_id);
+    	$scope.recordActivity("Close Page", "");
 	};
 
+	window.onunload = function(){
+		$scope.recordActivity("Close Page", "");
+	}
+/*
 	window.onbeforeunload = bunload;
 
 	function bunload(){
 		dontleave="Are you sure you want to leave?";
 		return dontleave;
-	}*/
+	}
 
 	window.onbeforeunload = function() { 
 		if(confirm('are you sure to exit?')) {
@@ -909,7 +913,7 @@ var map = angular.module('map', ['rzModule'])
 		else 
 		   return false; 
 	};
-
+*/
 
 });
 
