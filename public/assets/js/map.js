@@ -1531,6 +1531,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 					title: 'Action distribution',
 					chartArea:{left:100,top:10,width:'100%',height:'350'},
 					pieHole: 0.4,
+					colors: ['212a33']
 				};
 
 				var chart = new google.visualization.PieChart(document.getElementById('chart_action_distribution'));
