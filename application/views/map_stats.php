@@ -469,10 +469,10 @@
 
 						<div ng-repeat='data in general.data_hist_actions'>
 							<div class='col-md-4'>
-								{{$index*10}} - {{($index+1)*10}}
+								{{$index}}
 							</div>
 							<div class='col-md-2'>
-								
+								{{data}}
 							</div>
 						</div>
 						<div class='col-md-12'>
