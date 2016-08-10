@@ -152,22 +152,31 @@
 								<div class='col-md-2'>
 									Map Click
 								</div>
-								<div class='col-md-2'>
+								<div class='col-md-1'>
 									{{general.map_click}}%
+								</div>
+								<div class='col-md-1'>
+									{{general.nb_map_click}}
 								</div>
 
 								<div class='col-md-2'>
 									Fossil Selected
 								</div>
-								<div class='col-md-2'>
+								<div class='col-md-1'>
 									{{general.fossil_selected}}%
+								</div>
+								<div class='col-md-1'>
+									{{general.nb_fossil_selected}}
 								</div>
 
 								<div class='col-md-2'>
 									Change collector
 								</div>
-								<div class='col-md-2'>
+								<div class='col-md-1'>
 									{{general.filter_collector_change}}%
+								</div>
+								<div class='col-md-1'>
+									{{general.nb_filter_collector_change}}
 								</div>
 
 							</div>
