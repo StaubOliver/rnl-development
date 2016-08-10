@@ -960,7 +960,7 @@ class MapModel extends CI_Model {
         $p_click_on_fossil = floatval($nb_click_on_fossil)/floatval($total) * 100;
 
         $query_enlarge_image = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Enlarge Image'");
-        $nb_enlarge_image = $query_click_on_fossil->num_rows();
+        $nb_enlarge_image = $query_enlarge_image->num_rows();
         $p_enlarge_image = floatval($nb_enlarge_image)/floatval($total) * 100;
 
         $query_fossil_selected = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Fossil selected'");
