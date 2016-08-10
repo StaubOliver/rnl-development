@@ -1491,7 +1491,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 			      legend: { position: 'none' }, 
 			      colors: ['212a33'],
 			      histogram: { bucketSize: 10 },
-			      chartArea:{left:0,top:0,width:'100%',height:'100%'}
+			      chartArea:{left:25,top:0,width:'100%',height:'375'}
 
 			    };
 
