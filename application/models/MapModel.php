@@ -1164,7 +1164,7 @@ class MapModel extends CI_Model {
         $std_dev_action_per_visit = $this->stats_standard_deviation($avg_med);
 
 
-        $hist_class = array_fill(0,$avg_med[count($avg_med)-1],0);
+        $hist_class = array_fill(0,$avg_med[count($avg_med)-1]/10,0);
         for ($i=0; $i < count($avg_med)-1; $i++) 
         { 
             $hist_class[$avg_med[$i]/10] ++;
