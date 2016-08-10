@@ -1093,7 +1093,7 @@ class MapModel extends CI_Model {
         $med_visit_dwell = $this->calculate_median($visit_dwell);
 
         $avg_visit_dwell = intval($avg_visit_dwell);
-        $avg_visit_dwell = new DateTime('P'.$avg_visit_dwell.'S');
+        $avg_visit_dwell = new DateInterval('P'.$avg_visit_dwell.'S');
 
 
         $avg_action_per_visit = $this->calculate_average($avg_med);
