@@ -933,6 +933,7 @@ class MapModel extends CI_Model {
     }
 
     public function calculate_median($arr) {
+        sort($arr);
         $count = count($arr); //total numbers in array
         $middleval = floor(($count-1)/2); // find the middle value, or the lowest middle value
         if($count % 2) { // odd number, middle is the median
@@ -1092,7 +1093,7 @@ class MapModel extends CI_Model {
         //$avg_time = mktime($temp_time["hour"], $temp_time["minute"], $temp_time["second"], $temp_time["month"], $temp_time["day"], $temp_time["year"]);
 
         $avg_action_per_visit = $this->calculate_average($avg_med);
-        $med_action_per_visit = $this->calculate_median(sort($avg_med));
+        $med_action_per_visit = $this->calculate_median($avg_med);
 
         return array(
             "total"=>$total, 
@@ -1141,7 +1142,7 @@ class MapModel extends CI_Model {
             "avg_time"=>$avg_time, 
             "hist_actions"=>$hist, 
             "avg_action_per_visit"=>$avg_action_per_visit,
-            "med_action_per_visit"=>sort($avg_med)
+            "med_action_per_visit"=>$med_action_per_visit
         );
 
 
