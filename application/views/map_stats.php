@@ -75,7 +75,7 @@
 
 
 						<div class='col-md-2'>
-							<h5>Unique visitors - <?php echo $stats['uniqueVisits'] ?> </h5>
+							<h5>Visitors - <?php echo $stats['uniqueVisits'] ?> </h5>
 						</div>
 
 						<div class='col-md-2'>
