@@ -178,7 +178,7 @@
 
 						<div class='col-md-6'>
 							</br>
-							<p class='help-tutorial-center'>Zoom, pan and filter to isolate something interesting.
+							<p class='help-tutorial-center'>Zoom, pan and filter to isolate something interesting like a particular pattern.
 							</p>
 							<img class='help-tutorial-img' src='https://natureslibrary.co.uk/assets/img/welcome_map/01.JPG' alt='Zoom, pan and filter to focus on something interesting'>
 						</div>
