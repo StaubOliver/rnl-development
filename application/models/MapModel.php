@@ -1111,8 +1111,9 @@ class MapModel extends CI_Model {
         $hist[] = array("Number of Persons", "Number of Actions");
 
         $avg_med = array();
-
         $visit_dwell = array();
+        $nb_action_fct_dwell = array();
+
 
         foreach ($query_unique_id->result_array() as $unique) 
         {
@@ -1138,6 +1139,7 @@ class MapModel extends CI_Model {
             $avg_med[] = $nb_action;
             $hist[] = array($unique["unique_id"], $nb_action);
 
+            $nb_action_fct_dwell[] = array($nb_action, $interval);
         }
         //$avg_time = date_parse_from_format("s", intval($avg_time));
         //$avg_time = mktime($temp_time["hour"], $temp_time["minute"], $temp_time["second"], $temp_time["month"], $temp_time["day"], $temp_time["year"]);
@@ -1215,7 +1217,8 @@ class MapModel extends CI_Model {
             "med_visit_dwell"=>$med_visit_dwell,
             "min_visit_dwell"=>$min_visit_dwell,
             "max_visit_dwell"=>$max_visit_dwell, 
-            "std_dev_visit_dwell"=>$std_dev_visit_dwell
+            "std_dev_visit_dwell"=>$std_dev_visit_dwell, 
+            "nb_action_fct_dwell"=>$nb_action_fct_dwell
 
         );
 
