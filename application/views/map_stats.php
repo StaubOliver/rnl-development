@@ -345,6 +345,13 @@
 						<!--<div class='col-md-6'>
 							Average visit - {{general.avg_time}}
 						</div>-->
+
+						<div class='col-md-12'>
+							<h5>Histogram</h5>
+						</div>
+						<div class='col-md-12'>
+							{{general.hist_actions}}
+						</div>
 						
 						
 
