@@ -1487,6 +1487,8 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 			google.charts.setOnLoadCallback(drawHistogram);
 			google.charts.setOnLoadCallback(drawNbActionFctDwell);
+			google.charts.setOnLoadCallback(drawActionDistribution);
+
 
 			function drawHistogram() 
 			{
@@ -1518,6 +1520,20 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 				var chart = new google.visualization.ScatterChart(document.getElementById('chart_action_dwell'));
 
+				chart.draw(data, options);
+			}
+
+			function drawActionDistribution() 
+			{
+				var data = google.visualization.arrayToDataTable($scope.general.action_distribution);
+
+				var options = {
+					title: 'Action distribution',
+					chartArea:{left:100,top:10,width:'100%',height:'350'},
+					pieHole: 0.4,
+				};
+
+				var chart = new google.visualization.PieChart(document.getElementById('chart_action_distribution'));
 				chart.draw(data, options);
 			}
 

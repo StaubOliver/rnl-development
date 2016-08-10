@@ -450,6 +450,10 @@
 							</div>
 						</div>
 
+						<div class='col-md-12'>
+							<div id="chart_action_distribution" style="width: 100%; height: 400px;"></div>
+						</div>
+
 						
 						<!--<div class='col-md-6'>
 							Average visit - {{general.avg_time}}
