@@ -350,7 +350,7 @@
 							<h5>Histogram</h5>
 						</div>
 						<div class='col-md-12'>
-							<div id="chart_div" style="width: 900px; height: 500px;"></div>
+							<div id="chart_div" style="width: 100%; height: 500px;"></div>
 						</div>
 						
 						
