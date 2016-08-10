@@ -1499,12 +1499,30 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 			    var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
 			    chart.draw(data, options);
-		  }
+			}
 
-		  function drawNbActionFctDwell()
-		  {
-		  	
-		  }
+			function drawNbActionFctDwell()
+			{
+				var data = google.visualization.arrayToDataTable([
+					['Age', 'Weight'],
+					[ 8,      12],
+					[ 4,      5.5],
+					[ 11,     14],
+					[ 4,      5],
+					[ 3,      3.5],
+					[ 6.5,    7]
+				]);
+
+				var options = {
+					legend: { position: 'none' }, 
+			      	colors: ['212a33'],
+			      	chartArea:{left:40,top:10,width:'100%',height:'350'}
+				};
+
+				var chart = new google.visualization.ScatterChart(document.getElementById('chart_action_dwell'));
+
+				chart.draw(data, options);
+			}
 
 		}).error(function(data, status, headers, config){
 			console.log(data);

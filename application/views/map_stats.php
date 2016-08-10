@@ -452,6 +452,10 @@
 						<div class='col-md-12'>
 							<div id="chart_div" style="width: 100%; height: 400px;"></div>
 						</div>
+
+						<div class='col-md-12'>
+							<div id="chart_action_dwell" style="width: 100%; height: 400px;"></div>
+						</div>
 						
 
 						
