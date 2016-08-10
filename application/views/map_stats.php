@@ -120,21 +120,27 @@
 									{{general.map_pan}}%
 								</div>
 								<div class='col-md-1'>
-									{{general.nb_map_pan}}%
+									{{general.nb_map_pan}}
 								</div>
 
 								<div class='col-md-2'>
 									Click on Fossil
 								</div>
-								<div class='col-md-2'>
+								<div class='col-md-1'>
 									{{general.click_on_fossil}}%
+								</div>
+								<div class='col-md-1'>
+									{{general.nb_click_on_fossil}}
 								</div>
 
 								<div class='col-md-2'>
 									Change age
 								</div>
-								<div class='col-md-2'>
+								<div class='col-md-1'>
 									{{general.filter_geological_change}}%
+								</div>
+								<div class='col-md-1'>
+									{{general.nb_filter_geological_change}}
 								</div>
 
 							</div>
