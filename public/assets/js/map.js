@@ -1489,7 +1489,8 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 			    var options = {
 			      title: 'Lengths of dinosaurs, in meters',
-			      legend: { position: 'none' },
+			      legend: { position: 'none' }
+
 			    };
 
 			    var chart = new google.visualization.Histogram(document.getElementById('chart_div'));

@@ -1020,7 +1020,7 @@ class MapModel extends CI_Model {
 
         $hist = array();
 
-        $hist[] = array("Number of Actions", "Number of Persons");
+        $hist[] = array("Number of Persons", "Number of Actions");
 
         foreach ($query_unique_id->result_array() as $unique) 
         {
