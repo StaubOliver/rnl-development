@@ -449,8 +449,36 @@
 							{{general.med_visit_dwell.d}}d {{general.med_visit_dwell.h}}h {{general.med_visit_dwell.m}}m {{general.med_visit_dwell.s}}s
 						</div>
 
+
+
 						<div class='col-md-12'>
 							<h5>Histogram</h5>
+						</div>
+						<div class='col-md-2'>
+							Person
+						</div>
+						<div class='col-md-2'>
+							Nb Action
+						</div>
+						<div class='col-md-2'>
+							Person
+						</div>
+						<div class='col-md-2'>
+							Nb Action
+						</div>
+						<div class='col-md-2'>
+							Person
+						</div>
+						<div class='col-md-2'>
+							Nb Action
+						</div>
+						<div ng-repeat='data in general.hist_actions'>
+							<div class='col-md-2'>
+								{{data[0]}}
+							</div>
+							<div class='col-md-2'>
+								{{data[1]}}
+							</div>
 						</div>
 						<div class='col-md-12'>
 							<div id="chart_div" style="width: 100%; height: 400px;"></div>

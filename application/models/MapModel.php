@@ -1108,7 +1108,7 @@ class MapModel extends CI_Model {
         $nb_visitors = $query_unique_id->num_rows();
 
         $hist = array();
-        $hist[] = array("Number of Persons", "Number of Actions");
+        $hist[] = array("Person", "Number of Actions");
 
         $avg_med = array();
         $visit_dwell = array();
