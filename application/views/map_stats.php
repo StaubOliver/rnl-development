@@ -106,6 +106,87 @@
 				<div class='col-md-10 col-md-offset-1 admin-title' ng-show="selectedUniqueId == 0">
 					<div class='row'>
 
+
+
+						<div class='col-md-12'>
+							<h5>Visits</h5>
+						</div>
+
+						<div class='col-md-4'>
+							Action per visitor
+						</div>
+
+						<div class='col-md-2'>
+							Min
+						</div>
+						<div class='col-md-2'>
+							{{general.min_action_per_visit}}
+						</div>
+						<div class='col-md-2'>
+							Max
+						</div>
+						<div class='col-md-2'>
+							{{general.max_action_per_visit}}
+						</div>
+
+						<div class='col-md-2'>
+							Standard Deviation
+						</div>
+						<div class='col-md-2'>
+							{{general.std_dev_action_per_visit}}
+						</div>
+						<div class='col-md-2'>
+							Avg
+						</div>
+						<div class='col-md-2'>
+							{{general.avg_action_per_visit}}
+						</div>
+						<div class='col-md-2'>
+							Med
+						</div>
+						<div class='col-md-2'>
+							{{general.med_action_per_visit}}
+						</div>
+
+						<div class='col-md-4'>
+							Visit dwell
+						</div>
+						<div class='col-md-2'>
+							Min
+						</div>
+						<div class='col-md-2'>
+							{{general.min_visit_dwell.d}}d {{general.min_visit_dwell.h}}h {{general.min_visit_dwell.m}}m {{general.min_visit_dwell.s}}s
+						</div>
+						<div class='col-md-2'>
+							Max
+						</div>
+						<div class='col-md-2'>
+							{{general.max_visit_dwell.d}}d {{general.max_visit_dwell.h}}h {{general.max_visit_dwell.m}}m {{general.max_visit_dwell.s}}s
+						</div>
+
+						<div class='col-md-2'>
+							Standard Deviation
+						</div>
+						<div class='col-md-2'>
+							{{general.std_dev_visit_dwell.d}}d {{general.std_dev_visit_dwell.h}}h {{general.std_dev_visit_dwell.m}}m {{general.std_dev_visit_dwell.s}}s
+						</div>
+						<div class='col-md-2'>
+							Avg
+						</div>
+						<div class='col-md-2'>
+							{{general.avg_visit_dwell.d}}d {{general.avg_visit_dwell.h}}h {{general.avg_visit_dwell.m}}m {{general.avg_visit_dwell.s}}s
+						</div>
+						<div class='col-md-2'>
+							Med
+						</div>
+						<div class='col-md-2'>
+							{{general.med_visit_dwell.d}}d {{general.med_visit_dwell.h}}h {{general.med_visit_dwell.m}}m {{general.med_visit_dwell.s}}s
+						</div>
+
+
+
+					
+
 						<div class='col-md-12'>
 							<h5>Action distribution</h5>
 						</div>
@@ -374,80 +455,7 @@
 							Average visit - {{general.avg_time}}
 						</div>-->
 
-						<div class='col-md-12'>
-							<h5>Visits</h5>
-						</div>
-
-						<div class='col-md-4'>
-							Action per visitor
-						</div>
-
-						<div class='col-md-2'>
-							Min
-						</div>
-						<div class='col-md-2'>
-							{{general.min_action_per_visit}}
-						</div>
-						<div class='col-md-2'>
-							Max
-						</div>
-						<div class='col-md-2'>
-							{{general.max_action_per_visit}}
-						</div>
-
-						<div class='col-md-2'>
-							Standard Deviation
-						</div>
-						<div class='col-md-2'>
-							{{general.std_dev_action_per_visit}}
-						</div>
-						<div class='col-md-2'>
-							Avg
-						</div>
-						<div class='col-md-2'>
-							{{general.avg_action_per_visit}}
-						</div>
-						<div class='col-md-2'>
-							Med
-						</div>
-						<div class='col-md-2'>
-							{{general.med_action_per_visit}}
-						</div>
-
-						<div class='col-md-4'>
-							Visit dwell
-						</div>
-						<div class='col-md-2'>
-							Min
-						</div>
-						<div class='col-md-2'>
-							{{general.min_visit_dwell.d}}d {{general.min_visit_dwell.h}}h {{general.min_visit_dwell.m}}m {{general.min_visit_dwell.s}}s
-						</div>
-						<div class='col-md-2'>
-							Max
-						</div>
-						<div class='col-md-2'>
-							{{general.max_visit_dwell.d}}d {{general.max_visit_dwell.h}}h {{general.max_visit_dwell.m}}m {{general.max_visit_dwell.s}}s
-						</div>
-
-						<div class='col-md-2'>
-							Standard Deviation
-						</div>
-						<div class='col-md-2'>
-							{{general.std_dev_visit_dwell.d}}d {{general.std_dev_visit_dwell.h}}h {{general.std_dev_visit_dwell.m}}m {{general.std_dev_visit_dwell.s}}s
-						</div>
-						<div class='col-md-2'>
-							Avg
-						</div>
-						<div class='col-md-2'>
-							{{general.avg_visit_dwell.d}}d {{general.avg_visit_dwell.h}}h {{general.avg_visit_dwell.m}}m {{general.avg_visit_dwell.s}}s
-						</div>
-						<div class='col-md-2'>
-							Med
-						</div>
-						<div class='col-md-2'>
-							{{general.med_visit_dwell.d}}d {{general.med_visit_dwell.h}}h {{general.med_visit_dwell.m}}m {{general.med_visit_dwell.s}}s
-						</div>
+						
 
 
 
