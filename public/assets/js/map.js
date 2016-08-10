@@ -890,10 +890,6 @@ var map = angular.module('map', ['rzModule'])
 	}
 
 
-	window.onbeforeunload = function () {
-    	$scope.recordActivity("Close Page", "");
-	};
-
 	window.onunload = function(){
 		$scope.recordActivity("Close Page", "");
 	}
@@ -901,7 +897,7 @@ var map = angular.module('map', ['rzModule'])
 
 	window.onbeforeunload = function() { 
 		if(confirm('are you sure to exit?')) {
-			logActivity($http,"Close Page", "", user_id);
+			$scope.recordActivity("Close Page", "");
 			return true; 
 		}
 		else 
