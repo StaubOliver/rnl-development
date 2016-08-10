@@ -934,7 +934,7 @@ class MapModel extends CI_Model {
 
     public function generalStats()
     {
-        $query_total = $this->db->query("select * from map_activity where ".$this->where_clause());
+        $query_total = $this->db->query("select * from map_activity where ".$this->where_clause()." and action!='Open Page' and action!='Close Page' and action!='Open Help' and action!='Close Help'");
 
         $total = $query_total->num_rows();
 
