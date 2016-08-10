@@ -162,7 +162,7 @@
 						<div class='col-md-6'>
 							<h4 class="modal-title">Mapping Manchester Museum Fossil Collection</h4>
 						</div>
-						<div style="display:block; position:absolute; margin-right:0px"class='col-md-6'>
+						<div style="display:block; position:absolute; right:0px"class='col-md-6'>
 							<button type="button" class="btn btn-xs btn-custom-default" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> Close</button>
 						</div>
 					</div>
