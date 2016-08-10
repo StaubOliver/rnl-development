@@ -381,6 +381,7 @@
 						<div class='col-md-4'>
 							Action per visitor
 						</div>
+
 						<div class='col-md-2'>
 							Min
 						</div>
@@ -393,7 +394,12 @@
 						<div class='col-md-2'>
 							{{general.max_action_per_visit}}
 						</div>
-						<div class='col-md-4'>
+
+						<div class='col-md-2'>
+							Standard Deviation
+						</div>
+						<div class='col-md-2'>
+							{{general.std_dev_action_per_visit}}
 						</div>
 						<div class='col-md-2'>
 							Avg
@@ -423,7 +429,12 @@
 						<div class='col-md-2'>
 							{{general.max_visit_dwell.d}}d {{general.max_visit_dwell.h}}h {{general.max_visit_dwell.m}}m {{general.max_visit_dwell.s}}s
 						</div>
-						<div class='col-md-4'>
+
+						<div class='col-md-2'>
+							Standard Deviation
+						</div>
+						<div class='col-md-2'>
+							{{general.std_dev_visit_dwell.d}}d {{general.std_dev_visit_dwell.h}}h {{general.std_dev_visit_dwell.m}}m {{general.std_dev_visit_dwell.s}}s
 						</div>
 						<div class='col-md-2'>
 							Avg

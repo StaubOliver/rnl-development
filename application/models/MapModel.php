@@ -1145,11 +1145,13 @@ class MapModel extends CI_Model {
         $avg_visit_dwell = $this->calculate_average($visit_dwell);
         sort($visit_dwell);
         $med_visit_dwell = $this->calculate_median($visit_dwell);
+        $std_dev_visit_dwell = $this->stats_standard_deviation($visit_dwell);
 
         $avg_visit_dwell = $this->secondsToTime(intval($avg_visit_dwell));
         $med_visit_dwell = $this->secondsToTime(intval($med_visit_dwell));
         $min_visit_dwell = $this->secondsToTime($visit_dwell[0]);
         $max_visit_dwell = $this->secondsToTime($visit_dwell[count($visit_dwell)-1]);
+        $std_dev_visit_dwell = $this->secondsToTime($std_dev_visit_dwell);
         
         
 
@@ -1212,7 +1214,8 @@ class MapModel extends CI_Model {
             "avg_visit_dwell"=>$avg_visit_dwell, 
             "med_visit_dwell"=>$med_visit_dwell,
             "min_visit_dwell"=>$min_visit_dwell,
-            "max_visit_dwell"=>$max_visit_dwell
+            "max_visit_dwell"=>$max_visit_dwell, 
+            "std_dev_visit_dwell"=>$std_dev_visit_dwell
 
         );
 
