@@ -370,9 +370,6 @@
 						</div>
 
 						
-						<div class='col-md-12'>
-							<h5>Time</h5>
-						</div>
 						<!--<div class='col-md-6'>
 							Average visit - {{general.avg_time}}
 						</div>-->
@@ -409,6 +406,10 @@
 						</div>
 						<div class='col-md-2'>
 							{{general.med_action_per_visit}}
+						</div>
+
+						<div class='col-md-4'>
+							Time per visitor
 						</div>
 
 						<div class='col-md-12'>
