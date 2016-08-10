@@ -472,7 +472,7 @@
 						<div class='col-md-2'>
 							Nb Action
 						</div>
-						<div ng-repeat='data in general.hist_actions'>
+						<div ng-repeat='data in general.hist_actions' ng-if="$index > 0">
 							<div class='col-md-2'>
 								{{data[0]}}
 							</div>
