@@ -1110,6 +1110,8 @@ class MapModel extends CI_Model {
         $hist = array();
         $hist[] = array("Person", "Number of Actions");
 
+        
+
         $avg_med = array();
         $visit_dwell = array();
         $nb_action_fct_dwell = array();
@@ -1155,13 +1157,18 @@ class MapModel extends CI_Model {
         $max_visit_dwell = $this->secondsToTime($visit_dwell[count($visit_dwell)-1]);
         $std_dev_visit_dwell = $this->secondsToTime($std_dev_visit_dwell);
         
-        
-
+    
         $avg_action_per_visit = $this->calculate_average($avg_med);
         sort($avg_med);
         $med_action_per_visit = $this->calculate_median($avg_med);
         $std_dev_action_per_visit = $this->stats_standard_deviation($avg_med);
 
+
+        $hist_class = array_fill(0,$avg_med[count($avg_med)-1],0);
+        for ($i=0; $i < count($avg_med)-1; $i++) 
+        { 
+            $hist_class[$avg_med[i]/10] ++;
+        }
 
         return array(
             "total"=>$total, 
@@ -1208,6 +1215,7 @@ class MapModel extends CI_Model {
             "sharing"=>round($p_sharing,2),
             "nb_sharing"=>round($nb_sharing,2),
             "hist_actions"=>$hist, 
+            "data_hist_actions"=>$hist_class,
             "avg_action_per_visit"=>round($avg_action_per_visit,2),
             "med_action_per_visit"=>round($med_action_per_visit,2), 
             "min_action_per_visit"=>$avg_med[0],

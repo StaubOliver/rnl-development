@@ -467,7 +467,7 @@
 							Nb of person
 						</div>
 
-						<div ng-repeat='data in general.hist_actions' ng-if="$index > 0">
+						<div ng-repeat='data in general.hist_actions'>
 							<div class='col-md-4'>
 								{{$index}}
 							</div>
