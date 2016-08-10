@@ -455,25 +455,25 @@
 							<h5>Histogram</h5>
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-1'>
 							Range
 						</div>
 						<div class='col-md-1'>
 							Persons
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-1'>
 							Range
 						</div>
 						<div class='col-md-1'>
 							Persons
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-1'>
 							Range
 						</div>
 						<div class='col-md-1'>
 							Persons
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-1'>
 							Range
 						</div>
 						<div class='col-md-1'>
@@ -482,7 +482,7 @@
 
 
 						<div ng-repeat='d in general.data_hist_actions track by $index'>
-							<div class='col-md-2'>
+							<div class='col-md-1'>
 								{{$index*10}}-{{($index+1)*10}}
 							</div>
 							<div class='col-md-1'>
