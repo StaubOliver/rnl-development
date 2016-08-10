@@ -1483,8 +1483,10 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 			google.charts.load("current", {packages:["corechart"]});
 
 			google.charts.setOnLoadCallback(drawHistogram);
+			google.charts.setOnLoadCallback(drawNbActionFctDwell);
 
-			function drawHistogram() {
+			function drawHistogram() 
+			{
 			    var data = google.visualization.arrayToDataTable($scope.general.hist_actions);
 
 			    var options = {
@@ -1497,7 +1499,12 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 			    var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
 			    chart.draw(data, options);
-			  }
+		  }
+
+		  function drawNbActionFctDwell()
+		  {
+		  	
+		  }
 
 		}).error(function(data, status, headers, config){
 			console.log(data);

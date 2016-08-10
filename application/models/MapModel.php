@@ -1113,6 +1113,7 @@ class MapModel extends CI_Model {
         $avg_med = array();
         $visit_dwell = array();
         $nb_action_fct_dwell = array();
+        $nb_action_fct_dwell[] = array("Nb Action", "Dwell")
 
 
         foreach ($query_unique_id->result_array() as $unique) 
