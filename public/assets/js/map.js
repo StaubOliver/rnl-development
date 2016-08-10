@@ -101,6 +101,7 @@ var map = angular.module('map', ['rzModule'])
 
 	$("#ModalHelp").on('hide.bs.modal', function () {
             recordActivity("Close Help");
+    });
 
 	var actualmap;
 
