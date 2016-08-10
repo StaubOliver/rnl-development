@@ -319,6 +319,15 @@
 									{{general.nb_submit_feedback}}
 								</div>
 
+								<div class='col-md-2'>
+									Enlarge image
+								</div>
+								<div class='col-md-1'>
+									{{general.enlarge_image}}%
+								</div>
+								<div class='col-md-1'>
+									{{general.nb_enlarge_image}}
+								</div>
 
 							</div>
 						</div>
