@@ -170,13 +170,13 @@
 								</div>
 
 								<div class='col-md-2'>
-									Change collector
+									Hover collector
 								</div>
 								<div class='col-md-1'>
-									{{general.filter_collector_change}}%
+									{{general.filter_collector_hover}}%
 								</div>
 								<div class='col-md-1'>
-									{{general.nb_filter_collector_change}}
+									{{general.nb_filter_collector_hover}}
 								</div>
 
 							</div>
@@ -206,13 +206,13 @@
 								</div>
 
 								<div class='col-md-2'>
-									Change genus
+									Change collector
 								</div>
 								<div class='col-md-1'>
-									{{general.filter_genus_change}}%
+									{{general.filter_collector_change}}%
 								</div>
 								<div class='col-md-1'>
-									{{general.nb_filter_genus_change}}
+									{{general.nb_filter_collector_change}}
 								</div>
 
 							</div>
@@ -239,6 +239,16 @@
 								</div>
 								<div class='col-md-1'>
 									{{general.nb_clear_fossil_selection}}
+								</div>
+
+								<div class='col-md-2'>
+									Hover genus
+								</div>
+								<div class='col-md-1'>
+									{{general.filter_genus_hover}}%
+								</div>
+								<div class='col-md-1'>
+									{{general.nb_filter_genus_hover}}
 								</div>
 
 							</div>
@@ -269,6 +279,16 @@
 								</div>
 								<div class='col-md-1'>
 									{{general.nb_write_comment}}
+								</div>
+
+								<div class='col-md-2'>
+									Change genus
+								</div>
+								<div class='col-md-1'>
+									{{general.filter_genus_change}}%
+								</div>
+								<div class='col-md-1'>
+									{{general.nb_filter_genus_change}}
 								</div>
 
 								
