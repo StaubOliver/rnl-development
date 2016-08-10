@@ -506,6 +506,24 @@
 						<div class='col-md-1'>
 							Dwell
 						</div>
+						<div class='col-md-2'>
+							Actions
+						</div>
+						<div class='col-md-1'>
+							Dwell
+						</div>
+						<div class='col-md-2'>
+							Actions
+						</div>
+						<div class='col-md-1'>
+							Dwell
+						</div>
+						<div class='col-md-2'>
+							Actions
+						</div>
+						<div class='col-md-1'>
+							Dwell
+						</div>
 						<div ng-repeat='d in general.nb_action_fct_dwell' ng-if='$index > 0'>
 							<div class='col-md-2'>
 								{{d[0]}}
