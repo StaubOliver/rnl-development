@@ -1094,6 +1094,7 @@ class MapModel extends CI_Model {
 
         $avg_action_per_visit = $this->calculate_average($avg_med);
         $med_action_per_visit = $this->calculate_median($avg_med);
+        sort($avg_med);
 
         return array(
             "total"=>$total, 
@@ -1142,7 +1143,9 @@ class MapModel extends CI_Model {
             "avg_time"=>$avg_time, 
             "hist_actions"=>$hist, 
             "avg_action_per_visit"=>$avg_action_per_visit,
-            "med_action_per_visit"=>$med_action_per_visit
+            "med_action_per_visit"=>$med_action_per_visit, 
+            "min_action_per_visit"=>$avg_med[0],
+            "max_action_per_visit"=>$avg_med[count($avg_med)-1]
         );
 
 

@@ -380,9 +380,23 @@
 						<div class='col-md-12'>
 							<h5>Visits</h5>
 						</div>
-						
+
 						<div class='col-md-4'>
 							Action per visitor
+						</div>
+						<div class='col-md-2'>
+							Min
+						</div>
+						<div class='col-md-2'>
+							{{general.min_action_per_visit}}
+						</div>
+						<div class='col-md-2'>
+							Max
+						</div>
+						<div class='col-md-2'>
+							{{general.max_action_per_visit}}
+						</div>
+						<div class='col-md-4'>
 						</div>
 						<div class='col-md-2'>
 							Avg
