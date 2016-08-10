@@ -1139,7 +1139,9 @@ class MapModel extends CI_Model {
             "sharing"=>round($p_sharing,2),
             "nb_sharing"=>round($nb_sharing,2),
             "avg_time"=>$avg_time, 
-            "hist_actions"=>$hist
+            "hist_actions"=>$hist, 
+            "avg_action_per_visit"=>$avg_action_per_visit,
+            "med_action_per_visit"=>$med_action_per_visit
         );
 
 

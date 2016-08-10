@@ -390,13 +390,13 @@
 							Avg
 						</div>
 						<div class='col-md-2'>
-							
+							{{general.avg_action_per_visit}}
 						</div>
 						<div class='col-md-2'>
 							Med
 						</div>
 						<div class='col-md-2'>
-							
+							{{general.med_action_per_visit}}
 						</div>
 
 
