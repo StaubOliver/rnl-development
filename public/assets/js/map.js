@@ -895,19 +895,24 @@ var map = angular.module('map', ['rzModule'])
 	}
 
 
-	window.onbeforeunload = function() { 
+	window.unload = function() { 
 		if(confirm('Are you sure to exit?')) {
 			$scope.recordActivity("Close Page", "");
 			return true; 
 		}
 		else 
 		   return false; 
-	};
+	};*/
 
 
-	$( window ).unload(function() {
-		$scope.recordActivity("Close Page", "");
-	});*/
+	$( window ).unload(function() { 
+		if(confirm('Are you sure to exit ?')) {
+			$scope.recordActivity("Close Page", "");
+			return true; 
+		}
+		else 
+		   return false; 
+	});
 
 });
 
