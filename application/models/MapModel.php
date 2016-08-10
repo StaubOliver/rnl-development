@@ -1053,12 +1053,13 @@ class MapModel extends CI_Model {
 
         $query_unique_id = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause());
         $nb_visitors = $query_unique_id->num_rows();
-        $avg_time = 0;
 
         $hist = array();
         $hist[] = array("Number of Persons", "Number of Actions");
 
         $avg_med = array();
+
+        $visit_dwell = array();
 
         foreach ($query_unique_id->result_array() as $unique) 
         {
@@ -1077,9 +1078,9 @@ class MapModel extends CI_Model {
             $end = new DateTime();
             $end->setTimestamp($e);
 
-            $interval =  $e-$s;
+            $interval = $e-$s;
 
-            $avg_time += $interval / floatval($nb_visitors);
+            $visit_dwell[] = $interval;
 
             $query_nb_actions = $this->db->query("SELECT action from map_activity where unique_id='".$unique["unique_id"]."'");
                 
@@ -1145,7 +1146,8 @@ class MapModel extends CI_Model {
             "avg_action_per_visit"=>$avg_action_per_visit,
             "med_action_per_visit"=>$med_action_per_visit, 
             "min_action_per_visit"=>$avg_med[0],
-            "max_action_per_visit"=>$avg_med[count($avg_med)-1]
+            "max_action_per_visit"=>$avg_med[count($avg_med)-1],
+            "avg_visit_dwell"=>$visit_dwell
         );
 
 

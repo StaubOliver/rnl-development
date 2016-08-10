@@ -409,7 +409,7 @@
 						</div>
 
 						<div class='col-md-4'>
-							Time per visitor
+							Visit dwell
 						</div>
 
 						<div class='col-md-12'>
