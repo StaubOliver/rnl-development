@@ -454,6 +454,7 @@
 						<div class='col-md-12'>
 							<h5>Histogram</h5>
 						</div>
+
 						<div class='col-md-2'>
 							Class
 						</div>
@@ -466,6 +467,19 @@
 						<div class='col-md-1'>
 							Nb of person
 						</div>
+						<div class='col-md-2'>
+							Class
+						</div>
+						<div class='col-md-1'>
+							Nb of person
+						</div>
+						<div class='col-md-2'>
+							Class
+						</div>
+						<div class='col-md-1'>
+							Nb of person
+						</div>
+
 
 						<div ng-repeat='d in general.data_hist_actions track by $index'>
 							<div class='col-md-2'>
