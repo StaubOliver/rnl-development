@@ -1156,7 +1156,7 @@ class MapModel extends CI_Model {
         $avg_action_per_visit = $this->calculate_average($avg_med);
         sort($avg_med);
         $med_action_per_visit = $this->calculate_median($avg_med);
-        $std_dev_action_per_visit = stats_standard_deviation($avg_med);
+        $std_dev_action_per_visit = $this->stats_standard_deviation($avg_med);
 
 
         return array(
