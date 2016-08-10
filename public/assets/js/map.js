@@ -888,7 +888,7 @@ var map = angular.module('map', ['rzModule'])
 		refreshFeedback($http);
 		refresh($http);
 	}
-
+/*
 
 	window.onbeforeunload = function () {
     	$scope.recordActivity("Close Page", "");
@@ -896,7 +896,7 @@ var map = angular.module('map', ['rzModule'])
 
 	window.onunload = function(){
 		$scope.recordActivity("Close Page", "");
-	}
+	}*/
 /*
 	window.onbeforeunload = bunload;
 
@@ -914,6 +914,10 @@ var map = angular.module('map', ['rzModule'])
 		   return false; 
 	};
 */
+
+	$( window ).unload(function() {
+		$scope.recordActivity("Close Page", "");
+	});
 
 });
 
