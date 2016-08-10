@@ -1141,7 +1141,7 @@ class MapModel extends CI_Model {
             "avg_time"=>$avg_time, 
             "hist_actions"=>$hist, 
             "avg_action_per_visit"=>$avg_action_per_visit,
-            "med_action_per_visit"=>sort($avg_med);
+            "med_action_per_visit"=>sort($avg_med)
         );
 
 
