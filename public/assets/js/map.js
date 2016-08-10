@@ -894,7 +894,7 @@ var map = angular.module('map', ['rzModule'])
 		$scope.recordActivity("Close Page", "");
 	}
 
-*/
+
 	window.onunload = function() { 
 		if(confirm('Are you sure to exit?')) {
 			$scope.recordActivity("Close Page", "");
@@ -904,7 +904,7 @@ var map = angular.module('map', ['rzModule'])
 		   return false; 
 	};
 
-/*
+
 	$( window ).unload(function() { 
 		if(confirm('Are you sure to exit ?')) {
 			$scope.recordActivity("Close Page", "");
@@ -913,6 +913,11 @@ var map = angular.module('map', ['rzModule'])
 		else 
 		   return false; 
 	});*/
+
+	$(window).on('beforeunload', function() {
+		$scope.recordActivity("Close Page", "");
+		return 'Your own message goes here...';
+	});
 
 });
 
