@@ -1045,7 +1045,7 @@ class MapModel extends CI_Model {
 
             $query_nb_actions = $this->db->query("SELECT action from map_activity where unique_id='".$unique["unique_id"]."'");
                 
-            $hist[] = array($unique_id["unique_id"]=>$query_nb_actions->num_rows());
+            $hist[] = array($unique["unique_id"]=>$query_nb_actions->num_rows());
 
             
         }
