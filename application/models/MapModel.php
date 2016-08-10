@@ -1020,7 +1020,7 @@ class MapModel extends CI_Model {
 
         $hist = array();
 
-        $hist[] = array("Number of Actions", "Number of Persons");
+        $hist[] = array("Number of Persons", "Number of Actions");
 
         foreach ($query_unique_id->result_array() as $unique) 
         {
@@ -1046,7 +1046,7 @@ class MapModel extends CI_Model {
             $query_nb_actions = $this->db->query("SELECT action from map_activity where unique_id='".$unique["unique_id"]."'");
                 
             //$hist[] = array($unique["unique_id"], $query_nb_actions->num_rows());
-            $hist[] = array($query_nb_actions->num_rows(), $unique["unique_id"]);
+            $hist[] = array($unique["unique_id"], $query_nb_actions->num_rows());
 
             
         }
