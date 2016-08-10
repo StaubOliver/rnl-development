@@ -895,7 +895,7 @@ var map = angular.module('map', ['rzModule'])
 	}
 
 */
-	window.unload = function() { 
+	window.onbeforeunload = function() { 
 		if(confirm('Are you sure to exit?')) {
 			$scope.recordActivity("Close Page", "");
 			return true; 
