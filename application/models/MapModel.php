@@ -955,6 +955,37 @@ class MapModel extends CI_Model {
         return $average;
     }
 
+    function secondsToTime($inputSeconds) {
+
+        $secondsInAMinute = 60;
+        $secondsInAnHour  = 60 * $secondsInAMinute;
+        $secondsInADay    = 24 * $secondsInAnHour;
+
+        // extract days
+        $days = floor($inputSeconds / $secondsInADay);
+
+        // extract hours
+        $hourSeconds = $inputSeconds % $secondsInADay;
+        $hours = floor($hourSeconds / $secondsInAnHour);
+
+        // extract minutes
+        $minuteSeconds = $hourSeconds % $secondsInAnHour;
+        $minutes = floor($minuteSeconds / $secondsInAMinute);
+
+        // extract the remaining seconds
+        $remainingSeconds = $minuteSeconds % $secondsInAMinute;
+        $seconds = ceil($remainingSeconds);
+
+        // return the final array
+        $obj = array(
+            'd' => (int) $days,
+            'h' => (int) $hours,
+            'm' => (int) $minutes,
+            's' => (int) $seconds,
+        );
+        return $obj;
+    }
+
 
     public function generalStats()
     {
@@ -1093,7 +1124,8 @@ class MapModel extends CI_Model {
         $med_visit_dwell = $this->calculate_median($visit_dwell);
 
         $avg_visit_dwell = intval($avg_visit_dwell);
-        $avg_visit_dwell = new DateInterval('P'.$avg_visit_dwell.'S');
+        $avg_visit_dwell = $this->secondsToTime($avg_visit_dwell);
+        
 
 
         $avg_action_per_visit = $this->calculate_average($avg_med);
