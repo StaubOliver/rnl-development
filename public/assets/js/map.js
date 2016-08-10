@@ -594,7 +594,7 @@ var map = angular.module('map', ['rzModule'])
 		}).success(function(data, status, headers, config) {		});
 	}
 
-	logActivity($http, "Open Page", "", user_id);
+	logActivity($http, "Open Page", navigator.userAgent, user_id);
 
 	$scope.feedback_form_text = "";
 	$scope.feedback_form_error = "";
