@@ -941,11 +941,11 @@ class MapModel extends CI_Model {
         /* percentages */
         $query_map_pan = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Map Pan'");
         $nb_map_pan = $query_map_pan->num_rows();
-        $p_map_pan = floatval($nb_map_pan/floatval($total) * 100;
+        $p_map_pan = floatval($nb_map_pan)/floatval($total) * 100;
 
         $query_map_click = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Map Click'");
         $nb_map_click = $query_map_click->num_rows();
-        $p_map_click = floatval($nb_map_click/floatval($total) * 100;
+        $p_map_click = floatval($nb_map_click)/floatval($total) * 100;
 
         $query_map_zoom_in = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Map Zoom in'");
         $nb_map_zoom_in = $query_map_zoom_in->num_rows();
