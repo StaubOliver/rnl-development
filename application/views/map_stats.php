@@ -451,41 +451,46 @@
 
 
 
-						<div class='col-md-12'>
+						<div class='col-md-6'>
 							<h5>Histogram</h5>
 						</div>
-
-						<div class='col-md-2'>
-							Range
-						</div>
-						<div class='col-md-1'>
-							Persons
-						</div>
-						<div class='col-md-2'>
-							Range
-						</div>
-						<div class='col-md-1'>
-							Persons
-						</div>
-						<div class='col-md-2'>
-							Range
-						</div>
-						<div class='col-md-1'>
-							Persons
-						</div>
-						<div class='col-md-2'>
-							Range
-						</div>
-						<div class='col-md-1'>
-							Persons
+						<div style="display:block; text-align:right" class='col-md-6'>
+							<button style='margin-top:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_histogram_data = !show_histogram_data">Show Data</button>
 						</div>
 
-						<div ng-repeat='d in general.data_hist_actions track by $index'>
+						<div ng-show='show_histogram_data'>
 							<div class='col-md-2'>
-								{{$index*10}}-{{($index+1)*10}}
+								Range
 							</div>
 							<div class='col-md-1'>
-								{{d}}
+								Persons
+							</div>
+							<div class='col-md-2'>
+								Range
+							</div>
+							<div class='col-md-1'>
+								Persons
+							</div>
+							<div class='col-md-2'>
+								Range
+							</div>
+							<div class='col-md-1'>
+								Persons
+							</div>
+							<div class='col-md-2'>
+								Range
+							</div>
+							<div class='col-md-1'>
+								Persons
+							</div>
+
+							<div ng-repeat='d in general.data_hist_actions track by $index'>
+								<div class='col-md-2'>
+									{{$index*10}}-{{($index+1)*10}}
+								</div>
+								<div class='col-md-1'>
+									{{d}}
+								</div>
 							</div>
 						</div>
 
@@ -494,6 +499,8 @@
 						<div class='col-md-12'>
 							<div id="chart_div" style="width: 100%; height: 400px;"></div>
 						</div>
+
+
 
 						<div class='col-md-6'>
 							<h5>Dwell = fct(nb action)</h5>

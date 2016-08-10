@@ -1427,6 +1427,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 	$scope.general = [];
 
 	$scope.show_dwell_fct_actions_data = false;
+	$scope.show_histogram_data = false;
 
 	$scope.changeUniqueId = function()
 	{
