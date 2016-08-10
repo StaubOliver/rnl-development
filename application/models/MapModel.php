@@ -1069,13 +1069,9 @@ class MapModel extends CI_Model {
 
             $temp = date_parse_from_format('Y-m-d H:i:s', $s["time"]);
             $s = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
-            $start = new DateTime();
-            $start->setTimestamp($s);
             
             $temp = date_parse_from_format('Y-m-d H:i:s', $e["time"]);
             $e = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
-            $end = new DateTime();
-            $end->setTimestamp($e);
 
             $interval = $e-$s;
 
@@ -1095,6 +1091,8 @@ class MapModel extends CI_Model {
         $avg_visit_dwell = $this->calculate_average($visit_dwell);
         sort($visit_dwell);
         $med_visit_dwell = $this->calculate_median($visit_dwell);
+
+        $avg_visit_dwell = mktime(0,0,$avg_visit_dwell, 0, 0, 0);
 
 
         $avg_action_per_visit = $this->calculate_average($avg_med);
