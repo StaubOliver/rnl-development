@@ -455,24 +455,24 @@
 							<h5>Histogram</h5>
 						</div>
 						<div class='col-md-4'>
-							Person
+							Class
 						</div>
 						<div class='col-md-2'>
-							Nb Action
+							Nb of person
 						</div>
 						<div class='col-md-4'>
-							Person
+							Class
 						</div>
 						<div class='col-md-2'>
-							Nb Action
+							Nb of person
 						</div>
 
 						<div ng-repeat='data in general.hist_actions' ng-if="$index > 0">
 							<div class='col-md-4'>
-								{{data[0]}}
+								{{$index}}
 							</div>
 							<div class='col-md-2'>
-								{{data[1]}}
+								
 							</div>
 						</div>
 						<div class='col-md-12'>
