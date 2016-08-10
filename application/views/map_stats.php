@@ -495,41 +495,47 @@
 							<div id="chart_div" style="width: 100%; height: 400px;"></div>
 						</div>
 
-						<div class='col-md-12'>
+						<div class='col-md-6'>
 							<h5>Dwell = fct(nb action)</h5>
 						</div>
 
+						<div style="display:block; text-align:right" class='col-md-6'>
+							<button type="button" class="btn btn-xs btn-custom-default" ng-click="show_dwell_fct_actions_data = !show_dwell_fct_actions_data">Show Data</button>
 
-						<div class='col-md-2'>
-							Actions
 						</div>
-						<div class='col-md-1'>
-							Dwell
-						</div>
-						<div class='col-md-2'>
-							Actions
-						</div>
-						<div class='col-md-1'>
-							Dwell
-						</div>
-						<div class='col-md-2'>
-							Actions
-						</div>
-						<div class='col-md-1'>
-							Dwell
-						</div>
-						<div class='col-md-2'>
-							Actions
-						</div>
-						<div class='col-md-1'>
-							Dwell
-						</div>
-						<div ng-repeat='d in general.nb_action_fct_dwell' ng-if='$index > 0'>
+
+						<div ng-show='show_dwell_fct_actions_data'>
 							<div class='col-md-2'>
-								{{d[0]}}
+								Actions
 							</div>
 							<div class='col-md-1'>
-								{{d[1]}}
+								Dwell
+							</div>
+							<div class='col-md-2'>
+								Actions
+							</div>
+							<div class='col-md-1'>
+								Dwell
+							</div>
+							<div class='col-md-2'>
+								Actions
+							</div>
+							<div class='col-md-1'>
+								Dwell
+							</div>
+							<div class='col-md-2'>
+								Actions
+							</div>
+							<div class='col-md-1'>
+								Dwell
+							</div>
+							<div ng-repeat='d in general.nb_action_fct_dwell' ng-if='$index > 0'>
+								<div class='col-md-2'>
+									{{d[0]}}
+								</div>
+								<div class='col-md-1'>
+									{{d[1]}}
+								</div>
 							</div>
 						</div>
 
