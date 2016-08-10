@@ -459,25 +459,25 @@
 							Class
 						</div>
 						<div class='col-md-1'>
-							Nb of person
+							Persons
 						</div>
 						<div class='col-md-2'>
 							Class
 						</div>
 						<div class='col-md-1'>
-							Nb of person
+							Persons
 						</div>
 						<div class='col-md-2'>
 							Class
 						</div>
 						<div class='col-md-1'>
-							Nb of person
+							Persons
 						</div>
 						<div class='col-md-2'>
 							Class
 						</div>
 						<div class='col-md-1'>
-							Nb of person
+							Persons
 						</div>
 
 
