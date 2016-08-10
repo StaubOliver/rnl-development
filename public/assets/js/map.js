@@ -889,10 +889,17 @@ var map = angular.module('map', ['rzModule'])
 		refresh($http);
 	}
 
-
+/*
 	window.onbeforeunload = function () {
     	logActivity($http,"Close Page", "", user_id);
 	};
+*/
+	window.onbeforeunload = bunload;
+
+	function bunload(){
+	dontleave="Are you sure you want to leave?";
+	return dontleave;
+}
 
 
 });
