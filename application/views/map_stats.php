@@ -411,6 +411,32 @@
 						<div class='col-md-4'>
 							Visit dwell
 						</div>
+						<div class='col-md-2'>
+							Min
+						</div>
+						<div class='col-md-2'>
+							{{general.min_action_per_visit}}
+						</div>
+						<div class='col-md-2'>
+							Max
+						</div>
+						<div class='col-md-2'>
+							{{general.max_action_per_visit}}
+						</div>
+						<div class='col-md-4'>
+						</div>
+						<div class='col-md-2'>
+							Avg
+						</div>
+						<div class='col-md-2'>
+							{{general.avg_visit_dwell}}
+						</div>
+						<div class='col-md-2'>
+							Med
+						</div>
+						<div class='col-md-2'>
+							{{general.med_action_per_visit}}
+						</div>
 
 						<div class='col-md-12'>
 							<div id="chart_div" style="width: 100%; height: 400px;"></div>
