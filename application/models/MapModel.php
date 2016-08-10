@@ -932,6 +932,29 @@ class MapModel extends CI_Model {
         return $res;
     }
 
+    public function calculate_median($arr) {
+        $count = count($arr); //total numbers in array
+        $middleval = floor(($count-1)/2); // find the middle value, or the lowest middle value
+        if($count % 2) { // odd number, middle is the median
+            $median = $arr[$middleval];
+        } else { // even number, calculate avg of 2 medians
+            $low = $arr[$middleval];
+            $high = $arr[$middleval+1];
+            $median = (($low+$high)/2);
+        }
+        return $median;
+    }
+
+    public function calculate_average($arr) {
+        $count = count($arr); //total numbers in array
+        foreach ($arr as $value) {
+            $total = $total + $value; // total value of array numbers
+        }
+        $average = ($total/$count); // get average value
+        return $average;
+    }
+
+
     public function generalStats()
     {
         $query_total = $this->db->query("select * from map_activity where ".$this->where_clause()." and action!='Open Page' and action!='Close Page' and action!='Open Help' and action!='Close Help'");
@@ -1031,8 +1054,9 @@ class MapModel extends CI_Model {
         $avg_time = 0;
 
         $hist = array();
-
         $hist[] = array("Number of Persons", "Number of Actions");
+
+        $avg_med = array();
 
         foreach ($query_unique_id->result_array() as $unique) 
         {
@@ -1058,14 +1082,16 @@ class MapModel extends CI_Model {
             $query_nb_actions = $this->db->query("SELECT action from map_activity where unique_id='".$unique["unique_id"]."'");
                 
             //$hist[] = array($unique["unique_id"], $query_nb_actions->num_rows());
-            $hist[] = array($unique["unique_id"], $query_nb_actions->num_rows());
+            $nb_action = $query_nb_actions->num_rows();
+            $avg_med[] = $nb_action;
+            $hist[] = array($unique["unique_id"], $nb_action);
 
-            
         }
         $avg_time = date_parse_from_format("s", intval($avg_time));
         //$avg_time = mktime($temp_time["hour"], $temp_time["minute"], $temp_time["second"], $temp_time["month"], $temp_time["day"], $temp_time["year"]);
 
-
+        $avg_action_per_visit = $this->calculate_average($avg_med);
+        $med_action_per_visit = $this->calculate_median(sort($avg_med));
 
         return array(
             "total"=>$total, 

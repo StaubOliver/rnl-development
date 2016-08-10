@@ -378,11 +378,28 @@
 						</div>-->
 
 						<div class='col-md-12'>
-							<h5>Histogram</h5>
+							<h5>Visits</h5>
 						</div>
 						<div class='col-md-12'>
 							<div id="chart_div" style="width: 100%; height: 400px;"></div>
 						</div>
+						<div class='col-md-4'>
+							Action per visitor
+						</div>
+						<div class='col-md-2'>
+							Avg
+						</div>
+						<div class='col-md-2'>
+							
+						</div>
+						<div class='col-md-2'>
+							Med
+						</div>
+						<div class='col-md-2'>
+							
+						</div>
+
+
 						
 						
 
