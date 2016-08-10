@@ -1489,6 +1489,8 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 	google.charts.load("current", {packages:["corechart"]});
 
+	google.charts.setOnLoadCallback(drawHistogram);
+
 	function drawHistogram() {
         var data = google.visualization.arrayToDataTable([
           ['Dinosaur', 'Length'],
@@ -1531,7 +1533,6 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
         chart.draw(data, options);
       }
 
-      drawHistogram();
 
 
 
