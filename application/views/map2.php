@@ -158,8 +158,8 @@
 			<div class="modal-content">
 
 				<div class="modal-header">
-					<button type="button" class="btn btn-custom-default" data-dismiss="modal" aria-label="Close">Close<span aria-hidden="true">&times;</span></button>
 					<h4 class="modal-title">Mapping Manchester Museum Fossil Collection</h4>
+					<button type="button" class="btn btn-custom-default" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> Close</button>
 				</div>
 
 				<div class="modal-body">
