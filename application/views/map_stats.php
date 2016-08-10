@@ -116,8 +116,11 @@
 								<div class='col-md-2'>
 									Map Pan
 								</div>
-								<div class='col-md-2'>
+								<div class='col-md-1'>
 									{{general.map_pan}}%
+								</div>
+								<div class='col-md-1'>
+									{{general.nb_map_pan}}%
 								</div>
 
 								<div class='col-md-2'>

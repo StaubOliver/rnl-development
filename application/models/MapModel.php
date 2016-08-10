@@ -940,7 +940,8 @@ class MapModel extends CI_Model {
 
         /* percentages */
         $query_map_pan = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Map Pan'");
-        $nb_map_pan = floatval($query_map_pan->num_rows())/floatval($total) * 100;
+        $nb_map_pan = $query_map_pan->num_rows());
+        $p_map_pan = floatval($nb_map_pan/floatval($total) * 100;
 
         $query_map_click = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Map Click'");
         $nb_map_click = floatval($query_map_click->num_rows())/floatval($total) * 100;
@@ -1030,24 +1031,25 @@ class MapModel extends CI_Model {
 
         return array(
             "total"=>$total, 
-            "map_pan"=>round($nb_map_pan,2), 
-            "map_click"=>round($nb_map_click,2),
-            "map_zoom_in"=>round($nb_map_zoom_in,2),
-            "map_zoom_out"=>round($nb_map_zoom_out,2),
-            "click_on_fossil"=>round($nb_click_on_fossil,2),
-            "fossil_selected"=>round($nb_fossil_selected,2),
-            "fossil_deselected"=>round($nb_fossil_deselected,2),
-            "clear_fossil_selection"=>round($nb_clear_fossil_selection,2),
-            "filter_geological_change"=>round($nb_filter_geological_change,2),
-            "filter_collector_change"=>round($nb_filter_collector_change,2),
-            "filter_genus_change"=>round($nb_filter_genus_change,2),
-            "feedback_hover"=>round($nb_feedback_hover,2),
-            "feedback_click"=>round($nb_feedback_click,2),
-            "upvote"=>round($nb_upvote,2),
-            "click_reply"=>round($nb_click_reply,2),
-            "write_comment"=>round($nb_write_comment,2),
-            "submit_feedback"=>round($nb_submit_feedback,2),
-            "sharing"=>round($nb_sharing,2),
+            "map_pan"=>round($p_map_pan,2), 
+            "nb_map_pan"=>$nb_map_pan,
+            "map_click"=>round($p_map_click,2),
+            "map_zoom_in"=>round($p_map_zoom_in,2),
+            "map_zoom_out"=>round($p_map_zoom_out,2),
+            "click_on_fossil"=>round($p_click_on_fossil,2),
+            "fossil_selected"=>round($p_fossil_selected,2),
+            "fossil_deselected"=>round($p_fossil_deselected,2),
+            "clear_fossil_selection"=>round($p_clear_fossil_selection,2),
+            "filter_geological_change"=>round($p_filter_geological_change,2),
+            "filter_collector_change"=>round($p_filter_collector_change,2),
+            "filter_genus_change"=>round($p_filter_genus_change,2),
+            "feedback_hover"=>round($p_feedback_hover,2),
+            "feedback_click"=>round($p_feedback_click,2),
+            "upvote"=>round($p_upvote,2),
+            "click_reply"=>round($p_click_reply,2),
+            "write_comment"=>round($p_write_comment,2),
+            "submit_feedback"=>round($p_submit_feedback,2),
+            "sharing"=>round($p_sharing,2),
             "avg_time"=>$avg_time
         );
 
