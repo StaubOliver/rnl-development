@@ -271,15 +271,7 @@
 									{{general.nb_write_comment}}
 								</div>
 
-								<div class='col-md-2'>
-									Sharing
-								</div>
-								<div class='col-md-1'>
-									{{general.sharing}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_sharing}}
-								</div>
+								
 
 							</div>
 						</div>
@@ -333,6 +325,16 @@
 								</div>
 								<div class='col-md-1'>
 									{{general.nb_click_reply}}
+								</div>
+
+								<div class='col-md-2'>
+									Sharing
+								</div>
+								<div class='col-md-1'>
+									{{general.sharing}}%
+								</div>
+								<div class='col-md-1'>
+									{{general.nb_sharing}}
 								</div>
 
 							</div>

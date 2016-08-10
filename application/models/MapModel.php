@@ -978,10 +978,18 @@ class MapModel extends CI_Model {
         $filter_collector_change = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Filter Collector Selector change'");
         $nb_filter_collector_change = $filter_collector_change->num_rows();
         $p_filter_collector_change = floatval($nb_filter_collector_change)/floatval($total) * 100;
+        
+        $filter_collector_hover = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Collector Selector Hover'");
+        $nb_filter_collector_hover = $filter_collector_hover->num_rows();
+        $p_filter_collector_hover = floatval($nb_filter_collector_hover)/floatval($total) * 100;
 
         $filter_genus_change = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Filter Genus Selector change'");
         $nb_filter_genus_change = $filter_genus_change->num_rows();
         $p_filter_genus_change = floatval($nb_filter_genus_change)/floatval($total) * 100;
+
+        $filter_genus_hover = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Genus Selector Hover'");
+        $nb_filter_genus_hover = $filter_genus_hover->num_rows();
+        $p_filter_genus_hover = floatval($nb_filter_genus_hover)/floatval($total) * 100;
 
         $feedback_hover = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Feedback mouse over'");
         $nb_feedback_hover = $feedback_hover->num_rows();
@@ -1077,8 +1085,12 @@ class MapModel extends CI_Model {
             "nb_filter_geological_change"=>round($nb_filter_geological_change,2),
             "filter_collector_change"=>round($p_filter_collector_change,2),
             "nb_filter_collector_change"=>round($nb_filter_collector_change,2),
+            "filter_collector_hover"=>round($p_filter_collector_hover,2),
+            "nb_filter_collector_hover"=>round($nb_filter_collector_hover,2),
             "filter_genus_change"=>round($p_filter_genus_change,2),
             "nb_filter_genus_change"=>round($nb_filter_genus_change,2),
+            "filter_genus_hover"=>round($p_filter_genus_hover,2),
+            "nb_filter_genus_hover"=>round($nb_filter_genus_hover,2),
             "feedback_hover"=>round($p_feedback_hover,2),
             "nb_feedback_hover"=>round($nb_feedback_hover,2),
             "feedback_click"=>round($p_feedback_click,2),
