@@ -143,6 +143,8 @@ var map = angular.module('map', ['rzModule'])
 
 	$scope.share_url = window.location.hostname;
 
+
+
 	// Sets the map on all markers in the array.
 	function setMapOnAll(map) {
 		for (var i = 0; i < markers.length; i++) {
@@ -588,6 +590,8 @@ var map = angular.module('map', ['rzModule'])
 	    	
 		}).success(function(data, status, headers, config) {		});
 	}
+
+	logActivity($http, "Open Page", "", user_id);
 
 	$scope.feedback_form_text = "";
 	$scope.feedback_form_error = "";
