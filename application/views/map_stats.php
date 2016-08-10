@@ -212,7 +212,7 @@
 									{{general.filter_genus_change}}%
 								</div>
 								<div class='col-md-1'>
-									{{general.nb_filter_genus_change}}_
+									{{general.nb_filter_genus_change}}
 								</div>
 
 							</div>
