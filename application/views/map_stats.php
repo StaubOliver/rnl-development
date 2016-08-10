@@ -107,7 +107,7 @@
 					<div class='row'>
 
 						<div class='col-md-12'>
-							<h5>Percentages</h5>
+							<h5>Action distribution</h5>
 						</div>
 
 						<div class='col-md-12'>
