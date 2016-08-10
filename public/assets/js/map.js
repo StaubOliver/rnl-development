@@ -1503,15 +1503,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 			function drawNbActionFctDwell()
 			{
-				var data = google.visualization.arrayToDataTable([
-					['Age', 'Weight'],
-					[ 8,      12],
-					[ 4,      5.5],
-					[ 11,     14],
-					[ 4,      5],
-					[ 3,      3.5],
-					[ 6.5,    7]
-				]);
+				var data = google.visualization.arrayToDataTable($scope.general.nb_action_fct_dwell);
 
 				var options = {
 					legend: { position: 'none' }, 
