@@ -1017,6 +1017,9 @@ class MapModel extends CI_Model {
         $query_unique_id = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause());
         $nb_visitors = $query_unique_id->num_rows();
         $avg_time = 0;
+
+        $hist = array();
+
         foreach ($query_unique_id->result_array() as $unique) 
         {
             $query_visit_start = $this->db->query("SELECT activity_id, time from map_activity where unique_id='".$unique["unique_id"]."' order by activity_id asc limit 1");
@@ -1038,7 +1041,8 @@ class MapModel extends CI_Model {
 
             $avg_time += $interval / floatval($nb_visitors);
 
-
+            $query_nb_actions = $this->db->query("SELECT action from map_activity where unique_id='".$unique["unique_id"]."'");
+            $hist[$unique["unique_id"]] = $query_nb_actions->num_rows();
             
         }
         $avg_time = date_parse_from_format("s", intval($avg_time));
@@ -1084,7 +1088,8 @@ class MapModel extends CI_Model {
             "nb_submit_feedback"=>round($nb_submit_feedback,2),
             "sharing"=>round($p_sharing,2),
             "nb_sharing"=>round($nb_sharing,2),
-            "avg_time"=>$avg_time
+            "avg_time"=>$avg_time, 
+            "hist_actions"=>$hist
         );
 
 
