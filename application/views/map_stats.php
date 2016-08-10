@@ -480,7 +480,6 @@
 							Persons
 						</div>
 
-
 						<div ng-repeat='d in general.data_hist_actions track by $index'>
 							<div class='col-md-2'>
 								{{$index*10}}-{{($index+1)*10}}
@@ -490,6 +489,8 @@
 							</div>
 						</div>
 
+
+
 						<div class='col-md-12'>
 							<div id="chart_div" style="width: 100%; height: 400px;"></div>
 						</div>
@@ -497,6 +498,23 @@
 						<div class='col-md-12'>
 							<h5>Dwell = fct(nb action)</h5>
 						</div>
+
+
+						<div class='col-md-2'>
+							Actions
+						</div>
+						<div class='col-md-1'>
+							Dwell
+						</div>
+						<div ng-repeat='d in general.nb_action_fct_dwell' ng-if='$index > 0'>
+							<div class='col-md-2'>
+								{{d[0]}}
+							</div>
+							<div class='col-md-1'>
+								{{d[1]}}
+							</div>
+						</div>
+
 						<div class='col-md-12'>
 							<div id="chart_action_dwell" style="width: 100%; height: 400px;"></div>
 						</div>
