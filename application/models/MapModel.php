@@ -1092,7 +1092,7 @@ class MapModel extends CI_Model {
         sort($visit_dwell);
         $med_visit_dwell = $this->calculate_median($visit_dwell);
 
-        $avg_visit_dwell = mktime(0,0,$avg_visit_dwell, 0, 0, 0);
+        $avg_visit_dwell = mktime(0,0,intval($avg_visit_dwell), 0, 0, 0);
 
 
         $avg_action_per_visit = $this->calculate_average($avg_med);
@@ -1149,7 +1149,7 @@ class MapModel extends CI_Model {
             "med_action_per_visit"=>$med_action_per_visit, 
             "min_action_per_visit"=>$avg_med[0],
             "max_action_per_visit"=>$avg_med[count($avg_med)-1],
-            "avg_visit_dwell"=>intval($avg_visit_dwell)->format("%d days %H hours %i minutes %s seconds")
+            "avg_visit_dwell"=>$avg_visit_dwell->format("%d days %H hours %i minutes %s seconds")
 
         );
 
