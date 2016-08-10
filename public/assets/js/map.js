@@ -902,9 +902,10 @@ var map = angular.module('map', ['rzModule'])
 	}*/
 
 	window.onbeforeunload = function() { 
-		if(confirm('are you sure to exit?')) 
+		if(confirm('are you sure to exit?')) {
 			logActivity($http,"Close Page", "", user_id);
 		   return true; 
+		}
 		else 
 		   return false; 
 	};
