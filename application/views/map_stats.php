@@ -472,7 +472,7 @@
 								{{$index*10}} - {{($index+1)*10}}
 							</div>
 							<div class='col-md-2'>
-								{{data[0]}}
+								
 							</div>
 						</div>
 						<div class='col-md-12'>
