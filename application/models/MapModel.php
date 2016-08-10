@@ -1214,6 +1214,7 @@ class MapModel extends CI_Model {
             "nb_submit_feedback"=>round($nb_submit_feedback,2),
             "sharing"=>round($p_sharing,2),
             "action_distribution"=>array(
+                array("Actions", "Distribution"),
                 array("Map Pan", round($nb_map_pan,2)), 
                 array("Map Zoom in", round($nb_map_zoom_in,2)),
                 array("Map Zoom out", round($nb_map_zoom_out,2)),
