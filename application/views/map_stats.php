@@ -38,8 +38,8 @@
 	-->
 	<link rel="stylesheet" href="/assets/css/map2.css">
 	
-	<!-- Google Map API -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIwlL-wm53SyhrnSAqCRL9SDGwhTVsq7c"></script>
+	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	
 
 </head>
@@ -351,6 +351,9 @@
 						</div>
 						<div class='col-md-12'>
 							{{general.hist_actions}}
+						</div>
+						<div class='col-md-12'>
+							<div id="chart_div" style="width: 900px; height: 500px;"></div>
 						</div>
 						
 						
