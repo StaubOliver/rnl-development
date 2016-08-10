@@ -97,7 +97,8 @@ var getPinColor = function(age){
 
 var map = angular.module('map', ['rzModule'])
 .controller('GoogleMap', function($scope, $http, $compile){
-	
+
+
 	var actualmap;
 
 	var markers = [];
@@ -887,6 +888,11 @@ var map = angular.module('map', ['rzModule'])
 		refreshFeedback($http);
 		refresh($http);
 	}
+
+
+	window.onbeforeunload = function () {
+    	logActivity($http,"Close Page", "", user_id);
+	};
 
 
 });
