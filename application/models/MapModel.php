@@ -1369,7 +1369,7 @@ class MapModel extends CI_Model {
         
             $hist[] = array($unique["unique_id"], $visitor_details["nb_tot_action"]);
 
-            $nb_action_fct_dwell[] = array($visit_details["nb_tot_action"], $visitor_details["tot_dwell"]);
+            $nb_action_fct_dwell[] = array($visitor_details["nb_tot_action"], $visitor_details["tot_dwell"]);
             
         }
         //$avg_time = date_parse_from_format("s", intval($avg_time));
@@ -1414,7 +1414,6 @@ class MapModel extends CI_Model {
         $stat_action_per_visit = array(
             "min" => $action_per_visit[0],
             "max" => $action_per_visit[count($action_per_visit)-1],
-            "total" => $tot_action_per_visit,
             "avg" => round($this->calculate_average($action_per_visit),2),
             "med" => round($this->calculate_median($action_per_visit), 2),
             "std" => round($this->stats_standard_deviation($action_per_visit), 2)
@@ -1425,7 +1424,6 @@ class MapModel extends CI_Model {
         $stat_dwell_per_visit = array(
             "min" => $this->secondsToTime($dwell_per_visit[0]),
             "max" => $this->secondsToTime($dwell_per_visit[count($dwell_per_visit)-1]),
-            "total" => $this->secondsToTime($tot_dwell_per_visit),
             "avg" => $this->secondsToTime(intval($this->calculate_average($dwell_per_visit))),
             "med" => $this->secondsToTime(intval($this->calculate_median($dwell_per_visit))),
             "std" => $this->secondsToTime(intval($this->stats_standard_deviation($dwell_per_visit)))
