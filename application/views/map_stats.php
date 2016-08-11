@@ -765,7 +765,7 @@
 						<div ng-repeat='visit in details.visits'>
 							<div class='col-md-12'>
 
-								<h6>{{visit.nb_action}} actions - {{visit.visit_time.d}}d {{visit.visit_time.h}}h {{visit.visit_time.m}}m {{visit.visit_time.s}}s</h6>
+								<h5>{{visit.nb_action}} actions - {{visit.visit_time.d}}d {{visit.visit_time.h}}h {{visit.visit_time.m}}m {{visit.visit_time.s}}s</h5>
 							</div>
 							<div ng-repeat='action in visit.actions'>
 								<div class='col-md-3'>{{action.time}} </div> 
