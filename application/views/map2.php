@@ -402,7 +402,7 @@
 
 	<div class="map-legend">
 		<div class='row'>
-			<div class='col-md-12'>
+			<div class='col-md-12 col-sm-12 col-xs-12'>
 				<h4 class='map-legend-title'><span class="glyphicon map-legend-title-glyph" aria-hidden="true" ng-click="show_legend=!show_legend" ng-class="{'glyphicon-chevron-down':!show_legend, 'glyphicon-chevron-up':show_legend}"></span>Legend</h4>
 			</div>
 		</div>
