@@ -1039,8 +1039,10 @@ class MapModel extends CI_Model {
                                 $j ++;
                             }
                         } 
+
                         $include_last = false;
-                        if ($last_id > $open[$nb_open] and $last_id > $close[$nb_close])
+                        
+                        if ($last_id > $open[$nb_open-1] and $last_id > $close[$nb_close-1])
                         {
                             $ids[] = $last_id;
                             $include_last = true;
