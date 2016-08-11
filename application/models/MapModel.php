@@ -967,7 +967,7 @@ class MapModel extends CI_Model {
             {
                 for ($i=0; $i < $nb_open; $i++) 
                 { 
-                    $return[] = $this->session_details($unique_id, $open[i]["activity_id"], $close[i]["activity_id"], true);
+                    $return[] = $this->session_details($unique_id, $open[$i]["activity_id"], $close[$i]["activity_id"], true);
                 }
             }
             else
@@ -976,7 +976,7 @@ class MapModel extends CI_Model {
                 {
                     for ($i=0; $i < $nb_open-1; $i++) 
                     { 
-                        $return[] = $this->session_details($unique_id, $open[i]["activity_id"], $open[i+1]["activity_id"], false);
+                        $return[] = $this->session_details($unique_id, $open[$i]["activity_id"], $open[$i+1]["activity_id"], false);
                     }
                     $return[] = $this->session_details($unique_id, $open[count($open-1)]["activity_id"], $last_id, true);
                 }
