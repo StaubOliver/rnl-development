@@ -341,7 +341,7 @@
 						<div class='col-md-1 col-sm-1 col-xs-1'>
 							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/909090.png' alt='Data Missing'>
 						</div>
-						<div class='col-md-2 col-sm-2 col-xs-2'>
+						<div class='col-md-3 col-sm-4 col-xs-4'>
 							Data Missing
 						</div>
 
