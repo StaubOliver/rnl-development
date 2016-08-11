@@ -579,11 +579,11 @@
 						<div ng-repeat='visit in details.visits'>
 							<div class='col-md-12'>
 
-								<h5>{{visit.nb_actions}} actions - {{visit.visit_time.d}}d {{visit.visit_time.h}}h {{visit.visit_time.m}}m {{visit.visit_time.s}}s</h5>
+								<h5>{{visit.nb_action}} actions - {{visit.visit_time.d}}d {{visit.visit_time.h}}h {{visit.visit_time.m}}m {{visit.visit_time.s}}s</h5>
 							</div>
 							<div ng-repeat='action in visit.actions'>
-								<div class='col-md-3'>{{visit.time}} </div> 
-								<div class='col-md-9'>{{visit.action}} {{visit.details}}</div>
+								<div class='col-md-3'>{{action.time}} </div> 
+								<div class='col-md-9'>{{action.action}} {{action.details}}</div>
 							</div>
 
 
