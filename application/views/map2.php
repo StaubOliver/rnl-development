@@ -165,10 +165,10 @@
 
 				<div class="modal-header">
 					<div class='row'>
-						<div class='col-md-6'>
+						<div class='col-md-6 col-sm-12 col-xs-12'>
 							<h4 class="modal-title">Mapping Manchester Museum Fossil Collection</h4>
 						</div>
-						<div class='col-md-6 help_terms_close_btn'>
+						<div class='col-md-6 col-sm-12 col-xs-12 help_terms_close_btn'>
 							<button type="button" class="btn btn-xs btn-custom-primary" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> Close</button>
 						</div>
 					</div>
