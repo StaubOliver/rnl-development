@@ -103,7 +103,7 @@
 				</div>
 
 
-				<div class='col-md-10 col-md-offset-1 admin-title' ng-show="selectedUniqueId == 0">
+				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title' ng-show="selectedUniqueId == 0">
 					<div class='row'>
 
 						<!-- Visitors per visitor -->
@@ -250,7 +250,7 @@
 				</div>
 
 
-				<div class='col-md-10 col-md-offset-1 admin-title' ng-show="selectedUniqueId == 0">
+				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title' ng-show="selectedUniqueId == 0">
 					<div class='row'>
 
 
@@ -354,7 +354,7 @@
 				</div>
 
 
-				<div class='col-md-10 col-md-offset-1 admin-title' ng-show="selectedUniqueId == 0">
+				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title' ng-show="selectedUniqueId == 0">
 					<div class='row'>
 
 
@@ -597,7 +597,7 @@
 				</div>
 
 
-				<div class='col-md-10 col-md-offset-1 admin-title' ng-show="selectedUniqueId == 0">
+				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title' ng-show="selectedUniqueId == 0">
 					<div class='row'>
 
 
@@ -657,7 +657,7 @@
 				</div>
 
 
-				<div class='col-md-10 col-md-offset-1 admin-title' ng-show="selectedUniqueId == 0">
+				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title' ng-show="selectedUniqueId == 0">
 					<div class='row'>
 
 
@@ -715,7 +715,7 @@
 				</div>
 
 
-				<div class='col-md-10 col-md-offset-1 admin-title' ng-show="selectedUniqueId == 0">
+				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title' ng-show="selectedUniqueId == 0">
 					<div class='row'>
 
 
@@ -761,7 +761,7 @@
 
 				-->
 
-				<div class='col-md-10 col-md-offset-1 admin-title' ng-show='details.length != 0'>
+				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title' ng-show='details.length != 0'>
 					<div class='row'>
 
 						<div class='col-md-12'>
