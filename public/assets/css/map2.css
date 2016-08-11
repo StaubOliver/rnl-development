@@ -22,7 +22,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 @media (min-width: 768px) {
 	.help_terms_close_btn{
 		display:block; 
-		text-align:center;
+		text-align:right;
 	}
 
 
