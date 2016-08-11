@@ -1539,6 +1539,7 @@ class MapModel extends CI_Model {
             "data_hist_actions"=>$hist_class,
            
             "nb_action_fct_dwell"=>$nb_action_fct_dwell,
+            
             "latest_activity"=>$latest_activity, 
 
 
