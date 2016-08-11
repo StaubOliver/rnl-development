@@ -1367,9 +1367,9 @@ class MapModel extends CI_Model {
 
             */
         
-            $hist[] = array($unique["unique_id"], $visit_details["nb_tot_action"]);
+            $hist[] = array($unique["unique_id"], $visitor_details["nb_tot_action"]);
 
-            $nb_action_fct_dwell[] = array($visit_details["nb_tot_action"], $visit_details["tot_dwell"]);
+            $nb_action_fct_dwell[] = array($visit_details["nb_tot_action"], $visitor_details["tot_dwell"]);
             
         }
         //$avg_time = date_parse_from_format("s", intval($avg_time));
