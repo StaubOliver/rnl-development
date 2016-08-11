@@ -267,32 +267,32 @@
 							Min
 						</div>
 						<div class='col-md-2'>
-							{{general.stat_action_visit.min}}
+							{{general.stat_action_per_visit.min}}
 						</div>
 						<div class='col-md-2'>
 							Max
 						</div>
 						<div class='col-md-2'>
-							{{general.stat_action_visit.max}}
+							{{general.stat_action_per_visit.max}}
 						</div>
 
 						<div class='col-md-2'>
 							Standard Deviation
 						</div>
 						<div class='col-md-2'>
-							{{general.stat_action_visit.std}}
+							{{general.stat_action_per_visit.std}}
 						</div>
 						<div class='col-md-2'>
 							Avg
 						</div>
 						<div class='col-md-2'>
-							{{general.stat_action_visit.avg}}
+							{{general.stat_action_per_visit.avg}}
 						</div>
 						<div class='col-md-2'>
 							Med
 						</div>
 						<div class='col-md-2'>
-							{{general.stat_action_visit.med}}
+							{{general.stat_action_per_visit.med}}
 						</div>
 
 						<!-- Dwell per Visits -->
