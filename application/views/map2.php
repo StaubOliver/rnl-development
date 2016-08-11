@@ -447,6 +447,9 @@
 			<!-- Filter  & Feedback -->
 			<div class="row">
 				
+				<div class='col-sm-12 col-xs-12'>
+					<h5><span class="glyphicon glyphicon-chevron-down"></span> Scroll to filter <span class="glyphicon glyphicon-chevron-down"></span></h5>
+				</div>
 
 				<!-- Filter tool -->
 				<div class="col-md-12 col-sm-12 col-xs-12 section" >
