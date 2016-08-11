@@ -104,7 +104,7 @@
 		 				<li><a href="/map/map_admin">Admin panel</a></li>
 					<?php endif; ?>	
 
-					<li style='display: block'>
+					<li style='display: inline-block'>
 						<p class="navbar-text">Share</p>
 						<a class="social-network-link" 
 						href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map" 
