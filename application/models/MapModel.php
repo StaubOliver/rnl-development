@@ -1310,8 +1310,8 @@ class MapModel extends CI_Model {
         $hist[] = array("Visitor", "Number of Actions");
 
         
-        $visitor_nb_action_fct_dwell = array();
-        $visitor_nb_action_fct_dwell[] = array("Nb Action per Visitor", "Dwell");
+        $nb_action_fct_dwell = array();
+        $nb_action_fct_dwell[] = array("Nb Action per Visitor", "Dwell");
 
 
         $action_per_visitor = array();
@@ -1539,7 +1539,7 @@ class MapModel extends CI_Model {
             "data_hist_actions"=>$hist_class,
            
             "nb_action_fct_dwell"=>$nb_action_fct_dwell,
-            
+
             "latest_activity"=>$latest_activity, 
 
 
