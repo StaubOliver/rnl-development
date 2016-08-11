@@ -704,14 +704,14 @@
 										<p>{{feedback['time']}}</p>
 									</div>-->
 
-									<div class="col-md-6 feedback-message-buttons">
+									<div class="col-md-6 col-sm-6 col-xs-6 feedback-message-buttons">
 										<a class='feedback-message-button-up' href='#' ng-show="!feedback.user_has_upvote" ng-click="upvoteFeedback(feedback.feedback_id)">Upvote</a> 
 										<span ng-show="feedback.user_has_upvote">Upvoted</span>
 										<a class='feedback-message-button-reply' href='' ng-click="replyFeedback(feedback.feedback_id)" ng-hide="show_feedback_reply[feedback.feedback_id]">Reply</a>
 										<a class='feedback-message-button-reply' href='' ng-click="replyFeedback(feedback.feedback_id)" ng-show="show_feedback_reply[feedback.feedback_id]">Cancel reply</a>
 									</div>
 
-									<div class="col-md-6 feedback-message-info">
+									<div class="col-md-6 col-sm-6 col-xs-6 feedback-message-info">
 										<span>{{feedback.upvote}} up </span> 
 										<span>{{feedback.selection.length}} fossils</span>
 									</div>
