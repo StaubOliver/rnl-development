@@ -1457,7 +1457,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 		}).success(function(data, status, headers, config) {
 
 			$scope.details = data;
-			console.log(details);
+			console.log($scope.details);
 
 
 		}).error(function(data, status, headers, config){
