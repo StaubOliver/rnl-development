@@ -179,23 +179,23 @@
 										</div>
 									</div>
 
-									<div class='col-md-4 col-sm-12 col-xs-12'>
+									<div class='col-md-4 col-sm-4 col-xs-4'>
 										{{feedback['upvote']}} upvotes
 									</div>
 
-									<div class='col-md-4 col-sm-6 col-xs-6'>
+									<div class='col-md-4 col-sm-4 col-xs-4'>
 										Filter
 									</div>
 
-									<div class='col-md-4 col-sm-6 col-xs-6'>
+									<div class='col-md-4 col-sm-4 col-xs-4'>
 										Geological Age
 									</div>
 
-									<div class='col-md-4 col-sm-6 col-xs-6'>
+									<div class='col-md-4 col-sm-4 col-xs-4'>
 										{{feedback.selection.length}} fossils selected
 									</div>
 
-									<div class='col-md-4 col-sm-6 col-xs-6'>
+									<div class='col-md-4 col-sm-4 col-xs-4'>
 										<div ng-show="feedback['genus']==-1">
 											Genus: All
 										</div>
@@ -204,19 +204,19 @@
 										</div>
 									</div>
 									
-									<div class='col-md-4 col-sm-6 col-xs-6' >
+									<div class='col-md-4 col-sm-4 col-xs-4' >
 										From: {{feedback['age_min']}}
 									</div>
 
-									<div class='col-md-4 col-sm-12 col-xs-612' ng-show='feedback.replies.length == 0'>
+									<div class='col-md-4 col-sm-4 col-xs-4' ng-show='feedback.replies.length == 0'>
 										0 replies
 									</div>
 
-									<div class='col-md-4 col-sm-12 col-xs-12' ng-show='feedback.replies.length > 0'>
+									<div class='col-md-4 col-sm-4 col-xs-4' ng-show='feedback.replies.length > 0'>
 										<div class='btn btn-custom-default btn-xs btn-admin ' data-toggle='collapse' data-target='#{{feedback.feedback_id}}' aria-expanded="false" aria-controls='{{feedback.feedback_id}}' ng-click='show_replies(feedback.feedback_id)'><span class="glyphicon glyphicon-chevron-down"></span> Show {{feedback.replies.length}} replies</div>
 									</div>
 
-									<div class='col-md-4'>
+									<div class='col-md-4 col-sm-4 col-xs-4'>
 										<div ng-show="feedback['collector']==-1">
 											Collector: All
 										</div>
@@ -225,7 +225,7 @@
 										</div>
 									</div>
 
-									<div class='col-md-4'>
+									<div class='col-md-4 col-sm-4 col-xs-4'>
 										To: {{feedback['age_max']}}
 									</div>
 
