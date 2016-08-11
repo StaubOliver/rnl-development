@@ -253,7 +253,7 @@
 
 						<!-- Visits -->
 
-						<div class='col-md-4'>
+						<div class='col-md-12'>
 							<h5>Visits</h5>
 						</div>
 
