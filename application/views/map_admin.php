@@ -160,7 +160,7 @@
 								</div>
 							</div>
 
-							<div class='col-md-8 col-sm-8 col-xs-12 admin-feedback-vertical-ligne'>
+							<div class='col-md-8 col-sm-6 col-xs-12 admin-feedback-vertical-ligne'>
 
 								<div class='row'>
 									
@@ -272,7 +272,7 @@
 							</div>
 							-->
 
-							<div class='col-md-4 col-sm-4 col-xs-12'>
+							<div class='col-md-4 col-sm-6 col-xs-12'>
 								<div class='row'>
 
 									<div class='col-md-12 col-sm-12 col-xs-12'>
