@@ -43,9 +43,7 @@ html, body, .main-layout, .main-layout-right, .controller-googleMap{
 		box-shadow: 0px 0px 4px #CCCCCC;
 	}
 
-	.p-update-location{
-		margin:0px !important;
-	}
+
 
 }
 
@@ -87,6 +85,10 @@ html, body, .main-layout, .main-layout-right, .controller-googleMap{
 		width: 169px;
 		background-color: white;
 		box-shadow: 0px 0px 4px #CCCCCC;
+	}
+
+	.p-update-location{
+		margin:0px !important;
 	}
 
 }
@@ -131,6 +133,9 @@ html, body, .main-layout, .main-layout-right, .controller-googleMap{
 		box-shadow: 0px 0px 4px #CCCCCC;
 	}
 
+	.p-update-location{
+		margin:0px !important;
+	}
 
 }
 
