@@ -107,6 +107,20 @@
 					<div class='row'>
 
 
+						<div class='col-md-12'>
+							<h5>Latest Activity</h5>
+						</div>
+						<div ng-repeat="a in general.latest_activity">
+							<div class="col-md-6">
+								{{a.unique_id}}
+							</div>
+							<div class="col-md-2">
+								{{a.time}}
+							</div>
+							<div class="col-md-4">
+								{{a.action}} {{a.details}}
+							</div>
+						</div>
 
 						<div class='col-md-12'>
 							<h5>Visits</h5>
