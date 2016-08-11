@@ -7,6 +7,43 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	height:100%;
 }
 
+
+
+
+
+@media (max-width: 768px) {
+	.help_terms_close_btn{
+		display:block; 
+		text-align:center;
+	}
+}
+
+
+@media (min-width: 768px) {
+	.help_terms_close_btn{
+		display:block; 
+		text-align:center;
+	}
+
+
+}
+
+
+@media (min-width: 992px) {
+	.help_terms_close_btn{
+		display:block; 
+		text-align:right;
+	}
+
+
+}
+
+
+
+
+
+
+
 .main-layout{
 	width: 100%;
 	margin: 0px !important;
@@ -800,7 +837,6 @@ fieldset[disabled] .btn-custom-default.active {
 .even_row{
 	background-color:#F3F3F3;
 }
-
 
 
 
