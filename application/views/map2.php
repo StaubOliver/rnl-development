@@ -417,7 +417,6 @@
 			<!-- Map -->
 			<div class='controller-googleMap'>
 				
-
 				<!-- Modal to show large pictures -->
 				<div class="modal fade" id="ModalImage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 					<div class="modal-dialog modal-lg" role="document">
@@ -450,7 +449,7 @@
 				
 
 				<!-- Filter tool -->
-				<div class="col-md-12 section" >
+				<div class="col-md-12 col-sm-12 col-xs-12 section" >
 					<div class="filter-section">
 
 						<div class='filter-reset-btn'>
@@ -500,10 +499,10 @@
 
 						<!-- Geological Age --> 
 						<div class="row filter-element">
-							<div class="col-md-12">
+							<div class="col-md-12 col-sm-12 col-xs-12">
 								<p class='filter-element-title'>Geological Age</p>
 							</div>
-							<div class="col-md-12">
+							<div class="col-md-12 col-sm-12 col-xs-12">
 								<rzslider
 							    rz-slider-model="selectedAgeMin"
 							    rz-slider-high="selectedAgeMax"
@@ -513,7 +512,7 @@
 						
 						<!-- Collector -->
 						<div class="row ">
-							<div class="col-md-6 filter-element">
+							<div class="col-md-6 col-sm-6 col)xs-6 filter-element">
 								<p class='filter-element-title'>Collector</p>
 								<select class="form-control" id="fossilCollectorSelect" ng-model="selectedCollector" ng-change="clear_selected_markers(); newCollector()"  ng-mouseover="recordActivity('Collector Selector Hover', '')">
 									<option value="-1" selected>All Collectors</option>
@@ -532,7 +531,7 @@
 						
 
 							<!-- Genus --> 
-							<div class="col-md-6 filter-element">
+							<div class="col-md-6 col-sm-6 col)xs-6 filter-element">
 								<p class='filter-element-title'>Genus</p>
 								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="clear_selected_markers(); newGenus()" ng-mouseover="recordActivity('Genus Selector Hover', '')">
 									<option value="-1" selected>All Genera</option>
@@ -556,11 +555,11 @@
 				</div>
 
 				<!-- Write a feedback -->
-				<div class="col-md-12 section">
+				<div class="col-md-12 col-sm-12 col-xs-12 section">
 					<div name='write-section' class="feedback-section">
 
 						<div class="row">
-							<div class="col-md-12 feedback-title">
+							<div class="col-md-12 col-sm-12 col-xs-12 feedback-title">
 								<h4>{{section_feedback_form_section_title}}</h4>
 							</div>
 						</div>
@@ -593,10 +592,10 @@
 						<div class="feedback-message-form">
 							<form>
 								<div class="row feedback-form">
-									<div class="col-md-12">
+									<div class="col-md-12 col-sm-12 col-xs-12">
 										<textarea class="form-control feedback-message-form-textarea" ng-model='feedback_form_text' ng-change="feedback_form_error=''; recordActivity('Writing comment', feedback_form_text)" rows="2"></textarea>
 									</div>
-									<div class="col-md-12">
+									<div class="col-md-12 col-sm-12 col-xs-12">
 										<span ng-show="selected_markers.length==0">You can select fossils from the map</span>
 										<span ng-show="selected_markers.length==1">{{selected_markers.length}} fossil selected</span>
 										<span ng-show="selected_markers.length>1">{{selected_markers.length}} fossils selected</span>
@@ -606,13 +605,13 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-md-6 feedback-clear-btn">
+									<div class="col-md-6 col-sm-6 col-xs-6 feedback-clear-btn">
 										<button type="button" class="btn btn-custom-default btn-sm" ng-show="selected_markers.length > 0" ng-click="clear_selected_markers(); recordActivity('Clear Fossil selection', '')">Clear</button>
 									</div>
-									<div class="col-md-6 feedback-submit-btn">
+									<div class="col-md-6 col-sm-6 col-xs-6 feedback-submit-btn">
 										<button type="button" class="btn btn-custom-primary btn-sm" ng-click="submitfeedback()">Send</button>
 									</div>
-									<div class="col-md-12 feedback-form-error" ng-show="feedback_form_error">
+									<div class="col-md-12 col-sm-12 col-xs-12 feedback-form-error" ng-show="feedback_form_error">
 										{{feedback_form_error}}
 									</div>
 									<!--
@@ -651,7 +650,7 @@
 
 
 				<!-- Contributions from the comunity -->
-				<div class='col-md-12 section'>
+				<div class='col-md-12 col-sm-12 col-xs-12 section'>
 					<div class='feedback-section'>
 
 						<div class="row">
