@@ -135,7 +135,7 @@
 										{{feedback['time']}}
 									</div>
 
-									<div class='col-md-2 col-sm-6 col-xs-6 no-margin'>
+									<div class='col-md-2 col-sm-3 col-xs-6 no-margin'>
 										<div class='col-md-12 col-sm-6 col-xs-6 no-margin' ng-show="!show_map[feedback.feedback_id]">
 											<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id)'><span class="glyphicon glyphicon-chevron-up"></span> Show the map</div>
 										</div>
@@ -145,7 +145,7 @@
 										</div>
 									</div>
 
-									<div class='col-md-2 col-sm-6 col-xs-6 no-margin'>
+									<div class='col-md-2 col-sm-3 col-xs-6 no-margin'>
 
 										<div class='col-md-12 col-sm-6 col-xs-6 no-margin' ng-show="feedback.hidden == 0">
 											<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide' ng-click="hideComment(feedback.feedback_id)">Hide comment</div>	
