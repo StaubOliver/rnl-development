@@ -977,6 +977,7 @@ class MapModel extends CI_Model {
         return $res;
     }
 
+
     public function visit_details($unique_id)
     {
         $nb_visit = $this->nb_visit($unique_id);
@@ -1007,7 +1008,7 @@ class MapModel extends CI_Model {
             }
             else
             {
-                if ($nb_close = 0)
+                if ($nb_close == 0)
                 {
                     for ($i=0; $i < $nb_open-1; $i++) 
                     { 
