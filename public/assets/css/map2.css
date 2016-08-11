@@ -67,7 +67,7 @@ html, body, .main-layout, .main-layout-right, .controller-googleMap{
 	.map-header{
 		z-index: 5;
 		position: absolute;
-		top: 65px;
+		top: 165px;
 		left: 15px;
 		width: 169px;
 		height: 84px;
@@ -439,7 +439,7 @@ html, body, .main-layout, .main-layout-right, .controller-googleMap{
 .map-header-img{
 	padding:10px;
 }
-
+/*
 .map-legend{
 	z-index: 5;
 	position: absolute;
@@ -448,7 +448,7 @@ html, body, .main-layout, .main-layout-right, .controller-googleMap{
 	width: 169px;
 	background-color: white;
 	box-shadow: 0px 0px 4px #CCCCCC;
-}
+}*/
 
 .map-legend-title{
 	margin-left: 10px;
