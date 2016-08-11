@@ -188,28 +188,28 @@
 					<h4>How it works</h4>
 					<div class='row'>
 
-						<div class='col-md-6'>
+						<div class='col-md-6 col-sm-6 col-xs-12'>
 							</br>
 							<p class='help-tutorial-center'>Zoom, pan and filter to isolate something interesting like a particular pattern.
 							</p>
 							<img class='help-tutorial-img' src='https://natureslibrary.co.uk/assets/img/welcome_map/01.JPG' alt='Zoom, pan and filter to focus on something interesting'>
 						</div>
 
-						<div class='col-md-6'>
+						<div class='col-md-6 col-sm-6 col-xs-12'>
 							</br>
 							<p class='help-tutorial-center'>Click on markers to get more information.
 							</p>
 							<img class='help-tutorial-img' src='https://natureslibrary.co.uk/assets/img/welcome_map/02.JPG' alt='Click on markers to get more information'>
 						</div>
 
-						<div class='col-md-6'>
+						<div class='col-md-6 col-sm-6 col-xs-12'>
 							</br>
 							<p class='help-tutorial-center'>Click on the select button to add fossils to your contribution.
 							</p>
 							<img class='help-tutorial-img' src='https://natureslibrary.co.uk/assets/img/welcome_map/03.JPG' alt='Click on the select button to add them to your comment'>
 						</div>
 
-						<div class='col-md-6'>
+						<div class='col-md-6 col-sm-6 col-xs-12'>
 							</br>
 							<p class='help-tutorial-center'>Write a contribution a share it with the community.
 							</p>
