@@ -29,12 +29,14 @@ html, body, .main-layout, .main-layout-right, .controller-googleMap{
 		text-align: center;
 	}
 
-	.map-header{ display:none; }
+	.map-header{ 
+		display:none; 
+	}
 
 	.map-legend{
 		z-index: 5;
 		position: absolute;
-		top: 65px;
+		top: 0px;
 		left: 15px;
 		width: 169px;
 		background-color: white;
