@@ -569,7 +569,7 @@
 
 				-->
 
-				<div class='col-md-10 col-md-offset-1 admin-title' >
+				<div class='col-md-10 col-md-offset-1 admin-title' ng-show='details.length != 0'>
 					<div class='row'>
 
 						<div class='col-md-12'>
