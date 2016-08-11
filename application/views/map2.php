@@ -747,11 +747,11 @@
 
 									<div class='row'>
 
-										<div class="col-md-8 feedback-message-author">
+										<div class="col-md-8 col-sm-12 col-xs-12 feedback-message-author">
 											<p>{{feedback['first_name']}} {{feedback['last_name']}} on {{feedback['time'].split(" ")[0]}}</p>
 										</div>
 
-										<div class='col-md-4 '>
+										<div class='col-md-4 col-sm-12 col-xs-12'>
 										
 											<a class="social-network-link" 
 											href="https://plus.google.com/share?url={{ share_url }}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}"
@@ -789,16 +789,16 @@
 
 									
 
-										<div class="col-md-12 feedback-message-text">
+										<div class="col-md-12 col-sm-12 col-xs-12 feedback-message-text">
 											<p>{{rep['message']}}</p>
 										</div>
 
-											<div class="col-md-6 feedback-message-buttons">
+											<div class="col-md-6 col-sm-6 col-xs-6 feedback-message-buttons">
 												<a ng-show="!rep.user_has_upvote" class='feedback-message-button-up' href='#' ng-click="upvoteFeedback(rep.feedback_id)">Upvote</a>
 												<span ng-show="rep.user_has_upvote">Upvoted</span>
 											</div>
 
-											<div class="col-md-6 feedback-message-info">
+											<div class="col-md-6 col-sm-6 col-xs-6 feedback-message-info">
 												<span>{{rep.upvote}} up </span> 
 												<span>{{rep.selection.length}} fossils</span>
 											</div>
