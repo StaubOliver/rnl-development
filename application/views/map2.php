@@ -413,7 +413,7 @@
 
 	<div class="row main-layout">
 
-		<div class="col-md-9 main-layout-left">
+		<div class="col-md-9 col-sm-12 col-xs-12 main-layout-left">
 			<!-- Map -->
 			<div class='controller-googleMap'>
 				
@@ -443,7 +443,7 @@
 
 		</div>
 
-		<div class="col-md-3 main-layout-right">
+		<div class="col-md-3 col-sm-12 col-xs-12 main-layout-right">
 
 			<!-- Filter  & Feedback -->
 			<div class="row">
