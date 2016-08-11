@@ -902,7 +902,7 @@ class MapModel extends CI_Model {
 
     public function nb_visit($unique_id)
     {
-        $query_open_close = $this->db->query("SELECT activity_id, action FROM map_activity where action="Open Page" and unique_id='".$unique_id."'");
+        $query_open_close = $this->db->query("SELECT activity_id, action FROM map_activity where action='Open Page' and unique_id='".$unique_id."'");
         if ($query_open_close->num_rows() > 0)
         {
             return $query_open_close->num_rows();
