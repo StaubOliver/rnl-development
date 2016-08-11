@@ -651,11 +651,11 @@
 
 								<div class="row">
 
-									<div class="col-md-8 feedback-message-author">
+									<div class="col-md-8 col-sm-8 col-xs-8 feedback-message-author">
 										<p>{{feedback['first_name']}} {{feedback['last_name']}} on {{feedback['time'].split(" ")[0]}}</p>
 									</div>
 
-									<div class='col-md-4 '>
+									<div class='col-md-4 col-sm-4 col-xs-4'>
 
 										<a class="social-network-link" 
 										href="https://plus.google.com/share?url={{ share_url }}/map/{{selectedGenus}}/{{selectedCollector}}/{{selectedAgeMin}}/{{selectedAgeMax}}"
