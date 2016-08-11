@@ -1018,10 +1018,45 @@ class MapModel extends CI_Model {
                 }
                 else 
                 {
+                    /*
                     $ids = array();
                     for ($i=0; $i < $nb_open; $i++) { 
                          
                     } 
+                    */
+                    if ($nb_close < $nb_open)
+                    {
+                        $ids = array();
+                        $j = 0;
+                        for ($i = 0; $i < $nb_open; $i++) 
+                        {
+                            if ($open[$i] < $close[$j]){
+                                $ids[] = $open[$i]["activity_id"];
+                            }
+                            else
+                            {
+                                $ids[] = $close[$j]["activity_id"];
+                                $j ++;
+                            }
+                        } 
+                        $include_last = false;
+                        if ($last_id > $open[$nb_open] && $last_id > $close[$nb_close])
+                        {
+                            $ids[] = $last_id;
+                            $include_last = true;
+                        }
+
+
+                        for ($i=0; $i < count($ids)-2; $i++) { 
+                             $return[] = $this->session_details($unique_id, $ids[$i], $ids[$i+1], false);
+                         } 
+
+                         $return[] = $this->session_details($unique_id, $ids[count($ids)-2], $ids[count($ids)-1], $include_last);
+
+
+
+                    }
+
                 }
             }
 
