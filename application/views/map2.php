@@ -256,24 +256,24 @@
 
 					<div class='row'>
 
-						<div class='col-md-1 col-md-offset-1'>
+						<div class='col-md-1 col-md-offset-1 col-sm-1 col-xs-1'>
 							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/7FC64E.png' alt='Cretaceous'>
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Cretaceous
 						</div>
 
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/34B2C9.png' alt='Jurassic'>
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Jurassic
 						</div>
 
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/C72B92.png' alt='Triassic'>
 						</div>
-						<div class='col-md-3'>
+						<div class='col-md-3 col-sm-2 col-xs-2'>
 							Triassic
 						</div>
 
@@ -281,24 +281,24 @@
 
 					<div class='row'>
 
-						<div class='col-md-1 col-md-offset-1'>
+						<div class='col-md-1 col-md-offset-1 col-sm-1 col-xs-1'>
 							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/F04028.png' alt='Permian'>
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Permian
 						</div>
 
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/67A599.png' alt='Carboniferous'>
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Carboniferous
 						</div>
 
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/CB8C37.png' alt='Devonian'>
 						</div>
-						<div class='col-md-3'>
+						<div class='col-md-3 col-sm-2 col-xs-2'>
 							Devonian
 						</div>
 
@@ -306,24 +306,24 @@
 
 					<div class='row'>
 
-						<div class='col-md-1 col-md-offset-1'>
+						<div class='col-md-1 col-md-offset-1 col-sm-1 col-xs-1'>
 							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/B3E1B6.png' alt='Silurian'>
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Silurian
 						</div>
 
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/009270.png' alt='Ordovician'>
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Ordovician
 						</div>
 
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/7F1056.png' alt='Cambrian'>
 						</div>
-						<div class='col-md-3'>
+						<div class='col-md-3 col-sm-2 col-xs-2'>
 							Cambrian
 						</div>
 
@@ -331,17 +331,17 @@
 
 					<div class='row'>
 
-						<div class='col-md-1 col-md-offset-1'>
+						<div class='col-md-1 col-md-offset-1 col-sm-1 col-xs-1'>
 							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/934370.png' alt='Precambrian'>
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Precambrian
 						</div>
 
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/909090.png' alt='Data Missing'>
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Data Missing
 						</div>
 
