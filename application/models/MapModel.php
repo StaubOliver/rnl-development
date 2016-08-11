@@ -1206,7 +1206,7 @@ class MapModel extends CI_Model {
         return sqrt($carry / $n);
     }
 
-    
+
 
 
     public function generalStats()
@@ -1307,17 +1307,46 @@ class MapModel extends CI_Model {
         $nb_visitors = $query_unique_id->num_rows();
 
         $hist = array();
-        $hist[] = array("Person", "Number of Actions");
+        $hist[] = array("Visitor", "Number of Actions");
 
         
+        $visitor_nb_action_fct_dwell = array();
+        $visitor_nb_action_fct_dwell[] = array("Nb Action per Visitor", "Dwell");
 
-        $avg_med = array();
-        $visit_dwell = array();
-        $nb_action_fct_dwell = array();
-        $nb_action_fct_dwell[] = array("Nb Action", "Dwell");
+
+        $action_per_visitor = array();
+        $visits_per_visitor = array();
+        $dwell_per_visitor = array();
+        $action_per_visit = array();
+        $dwell_per_visit = array();
+
+        $tot_action_per_visitor = 0;
+        $tot_visit_per_visitor = 0;
+        $tot_dwell_per_visitor = 0;
+
 
         foreach ($query_unique_id->result_array() as $unique) 
         {
+
+            $visitor_details = $this->visiteDetails($unique["unique_id"]);
+
+            $action_per_visitor[] = $visitor_details["nb_tot_action"];
+            $tot_action_per_visitor += $visitor_details["nb_tot_action"];
+
+            $visits_per_visitor[] = $visit_details["nb_visits"];
+            $tot_visit_per_visitor += $visit_details["nb_visits"];
+
+            $dwell_per_visitor[] = $visit_details["tot_dwell"];
+            $tot_dwell_per_visitor += $visit_details["tot_dwell"];
+
+            foreach ($visit_details["visits"] as $visit) 
+            {
+                $action_per_visit[] = $visit["nb_action"];
+                $dwell_per_visit[] = $visit["dwell"];
+            }
+
+
+            /*
             $query_visit_start = $this->db->query("SELECT activity_id, time from map_activity where unique_id='".$unique["unique_id"]."' order by activity_id asc limit 1");
             $s = $query_visit_start->row_array();
             $query_visit_end = $this->db->query("SELECT activity_id, time from map_activity where unique_id='".$unique["unique_id"]."' order by activity_id desc limit 1");
@@ -1331,36 +1360,99 @@ class MapModel extends CI_Model {
 
             $interval = $e-$s;
 
-            $visit_dwell[] = $interval;
+            $visitor_dwell[] = $interval;
+            
 
             $query_nb_actions = $this->db->query("SELECT action from map_activity where unique_id='".$unique["unique_id"]."'");
-                
-            //$hist[] = array($unique["unique_id"], $query_nb_actions->num_rows());
-            $nb_action = $query_nb_actions->num_rows();
-            $avg_med[] = $nb_action;
-            $hist[] = array($unique["unique_id"], $nb_action);
 
-            $nb_action_fct_dwell[] = array($nb_action, $interval);
+            */
+        
+            $hist[] = array($unique["unique_id"], $visit_details["nb_tot_action"]);
+
+            $nb_action_fct_dwell[] = array($visit_details["nb_tot_action"], $visit_details["tot_dwell"]);
+            
         }
         //$avg_time = date_parse_from_format("s", intval($avg_time));
         //$avg_time = mktime($temp_time["hour"], $temp_time["minute"], $temp_time["second"], $temp_time["month"], $temp_time["day"], $temp_time["year"]);
 
-        $avg_visit_dwell = $this->calculate_average($visit_dwell);
-        sort($visit_dwell);
-        $med_visit_dwell = $this->calculate_median($visit_dwell);
-        $std_dev_visit_dwell = $this->stats_standard_deviation($visit_dwell);
 
-        $avg_visit_dwell = $this->secondsToTime(intval($avg_visit_dwell));
-        $med_visit_dwell = $this->secondsToTime(intval($med_visit_dwell));
-        $min_visit_dwell = $this->secondsToTime($visit_dwell[0]);
-        $max_visit_dwell = $this->secondsToTime($visit_dwell[count($visit_dwell)-1]);
-        $std_dev_visit_dwell = $this->secondsToTime($std_dev_visit_dwell);
+        sort($action_per_visitor);
+        sort($visits_per_visitor);
+        sort($dwell_per_visitor);
+
+        sort($action_per_visit);
+        sort($dwell_per_visit);
+
+        $stat_action_per_visitor = array(
+            "min" => $action_per_visitor[0],
+            "max" => $action_per_visitor[count($action_per_visitor)-1],
+            "total" => $tot_action_per_visitor,
+            "avg" => round($this->calculate_average($action_per_visitor),2),
+            "med" => round($this->calculate_median($action_per_visitor), 2),
+            "std" => round($this->stats_standard_deviation($action_per_visitor), 2)
+        );
+
+        $stat_visits_per_visitor = array(
+            "min" => $visits_per_visitor[0],
+            "max" => $visits_per_visitor[count($visits_per_visitor)-1],
+            "total" => $tot_visits_per_visitor,
+            "avg" => round($this->calculate_average($visits_per_visitor),2),
+            "med" => round($this->calculate_median($visits_per_visitor), 2),
+            "std" => round($this->stats_standard_deviation($visits_per_visitor), 2)
+        );
+
+
+        $stats_dwell_per_visitor = array(
+            "min" => $this->secondsToTime($dwell_per_visitor[0]),
+            "max" => $this->secondsToTime($dwell_per_visitor[count($dwell_per_visitor)-1]),
+            "total" => $this->secondsToTime($tot_dwell_per_visitor),
+            "avg" => $this->secondsToTime(intval($this->calculate_average($dwell_per_visitor))),
+            "med" => $this->secondsToTime(intval($this->calculate_median($dwell_per_visitor))),
+            "std" => $this->secondsToTime(intval($this->stats_standard_deviation($dwell_per_visitor)))
+        );
+
+        $stat_action_per_visit = array(
+            "min" => $action_per_visit[0],
+            "max" => $action_per_visit[count($action_per_visit)-1],
+            "total" => $tot_action_per_visit,
+            "avg" => round($this->calculate_average($action_per_visit),2),
+            "med" => round($this->calculate_median($action_per_visit), 2),
+            "std" => round($this->stats_standard_deviation($action_per_visit), 2)
+        );
+
+
+
+        $stat_dwell_per_visit = array(
+            "min" => $this->secondsToTime($dwell_per_visit[0]),
+            "max" => $this->secondsToTime($dwell_per_visit[count($dwell_per_visit)-1]),
+            "total" => $this->secondsToTime($tot$dwell_per_visit),
+            "avg" => $this->secondsToTime(intval($this->calculate_average($dwell_per_visit))),
+            "med" => $this->secondsToTime(intval($this->calculate_median($dwell_per_visit))),
+            "std" => $this->secondsToTime(intval($this->stats_standard_deviation($dwell_per_visit)))
+        );
+
+
+
+/*
+
+        $avg_visitor_dwell = $this->calculate_average($visit_dwell);
+        sort($visitor_dwell);
+        $med_visitor_dwell = $this->calculate_median($visit_dwell);
+        $std_dev_visitor_dwell = $this->stats_standard_deviation($visit_dwell);
+
+        $avg_visitor_dwell = $this->secondsToTime(intval($avg_visit_dwell));
+        $med_visitor_dwell = $this->secondsToTime(intval($med_visit_dwell));
+        $min_visitor_dwell = $this->secondsToTime($visit_dwell[0]);
+        $max_visitor_dwell = $this->secondsToTime($visit_dwell[count($visit_dwell)-1]);
+        $std_dev_visitor_dwell = $this->secondsToTime($std_dev_visit_dwell);
         
     
         $avg_action_per_visit = $this->calculate_average($avg_med);
         sort($avg_med);
         $med_action_per_visit = $this->calculate_median($avg_med);
         $std_dev_action_per_visit = $this->stats_standard_deviation($avg_med);
+
+        */
 
 
         $hist_class = array_fill(0,($avg_med[count($avg_med)-1]/10)+1,0);
@@ -1415,6 +1507,10 @@ class MapModel extends CI_Model {
             "submit_feedback"=>round($p_submit_feedback,2),
             "nb_submit_feedback"=>round($nb_submit_feedback,2),
             "sharing"=>round($p_sharing,2),
+            "nb_sharing"=>round($nb_sharing,2),
+
+
+
             "action_distribution"=>array(
                 array("Actions", "Distribution"),
                 array("Map Pan", round($nb_map_pan,2)), 
@@ -1439,21 +1535,20 @@ class MapModel extends CI_Model {
                 array("Submit Comment", round($nb_submit_feedback, 2)),
                 array("Sharing", round($nb_sharing, 2))
             ),
-            "nb_sharing"=>round($nb_sharing,2),
+            
+
             "hist_actions"=>$hist, 
             "data_hist_actions"=>$hist_class,
-            "avg_action_per_visit"=>round($avg_action_per_visit,2),
-            "med_action_per_visit"=>round($med_action_per_visit,2), 
-            "min_action_per_visit"=>$avg_med[0],
-            "max_action_per_visit"=>$avg_med[count($avg_med)-1],
-            "std_dev_action_per_visit"=>round($std_dev_action_per_visit,2),
-            "avg_visit_dwell"=>$avg_visit_dwell, 
-            "med_visit_dwell"=>$med_visit_dwell,
-            "min_visit_dwell"=>$min_visit_dwell,
-            "max_visit_dwell"=>$max_visit_dwell, 
-            "std_dev_visit_dwell"=>$std_dev_visit_dwell, 
+           
             "nb_action_fct_dwell"=>$nb_action_fct_dwell,
-            "latest_activity"=>$latest_activity
+            "latest_activity"=>$latest_activity, 
+
+
+            "stat_action_per_visitor" => $stat_action_per_visitor,
+            "stat_visits_per_visitor" => $stat_visits_per_visitor,
+            "stats_dwell_per_visitor" => $stats_dwell_per_visitor,
+            "stat_action_per_visit" => $stat_action_per_visit,
+            "stat_dwell_per_visit" => $stat_dwell_per_visit
 
         );
 
