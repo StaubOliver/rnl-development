@@ -1333,13 +1333,13 @@ class MapModel extends CI_Model {
             $action_per_visitor[] = $visitor_details["nb_tot_action"];
             $tot_action_per_visitor += $visitor_details["nb_tot_action"];
 
-            $visits_per_visitor[] = $visit_details["nb_visits"];
-            $tot_visit_per_visitor += $visit_details["nb_visits"];
+            $visits_per_visitor[] = $visitor_details["nb_visits"];
+            $tot_visit_per_visitor += $visitor_details["nb_visits"];
 
-            $dwell_per_visitor[] = $visit_details["tot_dwell"];
-            $tot_dwell_per_visitor += $visit_details["tot_dwell"];
+            $dwell_per_visitor[] = $visitor_details["tot_dwell"];
+            $tot_dwell_per_visitor += $visitor_details["tot_dwell"];
 
-            foreach ($visit_details["visits"] as $visit) 
+            foreach ($visitor_details["visits"] as $visit) 
             {
                 $action_per_visit[] = $visit["nb_action"];
                 $dwell_per_visit[] = $visit["dwell"];
