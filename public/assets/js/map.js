@@ -1456,11 +1456,8 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 		    	
 		}).success(function(data, status, headers, config) {
 
-			data.forEach(function(item, index)
-			{
-				$scope.details.push(item);
-			});
-			console.log(details);
+			$scope.details = data;
+			console.log(data);
 
 
 		}).error(function(data, status, headers, config){
