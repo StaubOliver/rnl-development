@@ -111,7 +111,7 @@
 							<h5>Latest Activity</h5>
 						</div>
 						<div ng-repeat="a in general.latest_activity">
-							<div class="col-md-5">
+							<div class="col-md-5" ng-class="{'even_row':$index%2==0}">
 								{{a.unique_id}}
 							</div>
 							<div class="col-md-3">
