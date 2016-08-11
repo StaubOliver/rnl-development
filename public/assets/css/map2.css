@@ -31,6 +31,16 @@ html, body, .main-layout, .main-layout-right, .controller-googleMap{
 
 	.map-header{ display:none; }
 
+	.map-legend{
+		z-index: 5;
+		position: absolute;
+		top: 65px;
+		left: 15px;
+		width: 169px;
+		background-color: white;
+		box-shadow: 0px 0px 4px #CCCCCC;
+	}
+
 }
 
 
@@ -63,6 +73,16 @@ html, body, .main-layout, .main-layout-right, .controller-googleMap{
 		box-shadow: 0px 0px 4px #CCCCCC;
 	}
 
+	.map-legend{
+		z-index: 5;
+		position: absolute;
+		top: 165px;
+		left: 15px;
+		width: 169px;
+		background-color: white;
+		box-shadow: 0px 0px 4px #CCCCCC;
+	}
+
 }
 
 
@@ -91,6 +111,16 @@ html, body, .main-layout, .main-layout-right, .controller-googleMap{
 		left: 15px;
 		width: 169px;
 		height: 84px;
+		background-color: white;
+		box-shadow: 0px 0px 4px #CCCCCC;
+	}
+
+	.map-legend{
+		z-index: 5;
+		position: absolute;
+		top: 165px;
+		left: 15px;
+		width: 169px;
 		background-color: white;
 		box-shadow: 0px 0px 4px #CCCCCC;
 	}
