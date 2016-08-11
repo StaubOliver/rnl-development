@@ -104,7 +104,7 @@
 		 				<li><a href="/map/map_admin">Admin panel</a></li>
 					<?php endif; ?>	
 
-					<li><p class="navbar-text">Share</p></li>
+					<li><p>Share</p></li>
 
 					<li>
 						<a class="social-network-link" 
