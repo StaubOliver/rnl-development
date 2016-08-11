@@ -1172,7 +1172,7 @@ class MapModel extends CI_Model {
             $hist_class[$avg_med[$i]/10] ++;
         }
 
-        $query_latest_activity = $this->db->query("SELECT * FROM map_activity where  ".$this->where_clause()."' order by activity_id desc LIMIT 10");
+        $query_latest_activity = $this->db->query("SELECT * FROM map_activity where  ".$this->where_clause()." order by activity_id desc LIMIT 10");
         $latest_activity = $query_latest_activity->result_array();
 
         return array(
