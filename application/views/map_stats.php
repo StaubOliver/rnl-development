@@ -549,7 +549,7 @@
 					</div>
 				</div>
 
-
+				<!--
 				<div class='col-md-10 col-md-offset-1 admin-title' ng-show='details.length > 0'>
 					<div class='row'>
 						
@@ -563,6 +563,33 @@
 							<div class='col-md-9'>{{detail.action}} {{detail.details}}</div>
 
 						</div>
+
+					</div>
+				</div>
+
+				-->
+
+				<div class='col-md-10 col-md-offset-1 admin-title' ng-show='details.length > 0'>
+					<div class='row'>
+
+						<div class='col-md-12'>
+							<h5>{{details.unique_id}} - {{details.nb_tot_actions}} actions - {{general.tot_time.d}}d {{general.tot_time.h}}h {{general.tot_time.m}}m {{general.tot_time.s}}s</h5>
+						</div>
+
+						<div ng-repeat='visit in visits'>
+							<div class='col-md-12'>
+								<h5>{{visit.nb_actions}} actions - {{visit.visit_time.d}}d {{visit.visit_time.h}}h {{visit.visit_time.m}}m {{visit.visit_time.s}}s</h5>
+							</div>
+							<div ng-repeat='action in visit.actions'>
+								<div class='col-md-3'>{{visit.time}} </div> 
+								<div class='col-md-9'>{{visit.action}} {{visit.details}}</div>
+							</div>
+
+
+						</div>
+
+						</div>
+
 
 					</div>
 				</div>
