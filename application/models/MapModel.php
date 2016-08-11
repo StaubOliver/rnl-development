@@ -942,7 +942,7 @@ class MapModel extends CI_Model {
         }
         else 
         {
-            return 1;
+            return -1;
         }
     }
 
@@ -1076,6 +1076,9 @@ class MapModel extends CI_Model {
         }
         $res["unique_id"] = $unique_id;
         $res["nb_tot_action"] = $query_visit_details->num_rows();
+
+        if ($nb_visits == -1) $nb_visits = 1;
+
         $res["nb_visits"] = $nb_visits;
         $res["visits"] = $this->visit_details($unique_id);
 
