@@ -83,23 +83,23 @@
 				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback update-info'>
 					<div class='row'>
 
-						<div class='col-md-3 col-sm-12 col-xs-12'>
+						<div class='col-md-3 col-sm-4 col-xs-12'>
 							<div class='btn btn-custom-primary btn-xl btn-update-location' ng-click="update_location()">
 								Update Locations
 							</div>	
 						</div>
 						
-						<div class='col-md-9 col-sm-12 col-xs-12'>	
+						<div class='col-md-9 col-sm-8 col-xs-12'>	
 						<p class='p-update-location'>
 							Use this button to use the Google Maps api to translate the country and place information for each fossil into coordinates. Limit: 1000 items per 24 hours.
 						</p>
 						</div>
 
-						<div class='col-md-12 admin-update-notice' ng-show='show_update_notice'>
+						<div class='col-md-12 col-sm-12 col-xs-12 admin-update-notice' ng-show='show_update_notice'>
 							<h5 id='updateLocationNotice'>The Update process is ongoing. It will take a while however this window can be closed.</h5>
 						</div>
 
-						<div class='col-md-12 admin-update-notice' ng-show='showUpdateError'>
+						<div class='col-md-12 col-sm-12 col-xs-12 admin-update-notice' ng-show='showUpdateError'>
 							<h5 id='updateLocationError'>The Update process is ongoing. It will take a while however this window can be closed.</h5>
 						</div>
 
