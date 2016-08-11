@@ -900,6 +900,39 @@ class MapModel extends CI_Model {
         return $res;
     }
 
+
+    function secondsToTime($inputSeconds) {
+
+        $secondsInAMinute = 60;
+        $secondsInAnHour  = 60 * $secondsInAMinute;
+        $secondsInADay    = 24 * $secondsInAnHour;
+
+        // extract days
+        $days = floor($inputSeconds / $secondsInADay);
+
+        // extract hours
+        $hourSeconds = $inputSeconds % $secondsInADay;
+        $hours = floor($hourSeconds / $secondsInAnHour);
+
+        // extract minutes
+        $minuteSeconds = $hourSeconds % $secondsInAnHour;
+        $minutes = floor($minuteSeconds / $secondsInAMinute);
+
+        // extract the remaining seconds
+        $remainingSeconds = $minuteSeconds % $secondsInAMinute;
+        $seconds = ceil($remainingSeconds);
+
+        // return the final array
+        $obj = array(
+            'd' => (int) $days,
+            'h' => (int) $hours,
+            'm' => (int) $minutes,
+            's' => (int) $seconds,
+        );
+        return $obj;
+    }
+
+
     public function nb_visit($unique_id)
     {
         $query_open_close = $this->db->query("SELECT activity_id, action FROM map_activity where action='Open Page' and unique_id='".$unique_id."'");
@@ -930,18 +963,17 @@ class MapModel extends CI_Model {
         
         $temp = date_parse_from_format('Y-m-d H:i:s', $res["actions"][0]["time"]);
         $s = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
-        $start = new DateTime();
-        $start->setTimestamp($s);
+
         
         $temp = date_parse_from_format('Y-m-d H:i:s', $res["actions"][count($res["actions"])-1]["time"]);
         $e = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
-        $end = new DateTime();
-        $end->setTimestamp($e);
+
         
-        $interval =  $end->diff($start);
-        $res["visit_time"] = $interval->format("%d days %H hours %i minutes %s seconds");
-        $res["dwell"] = $e - $s;
-        
+        $interval =  $e-$s;
+
+        $res["visit_time"] = $this->secondsToTime($interval);
+        $res["dwell"] = $interval;
+
         return $res;
     }
 
@@ -1047,6 +1079,14 @@ class MapModel extends CI_Model {
         $res["nb_visits"] = $nb_visits;
         $res["visits"] = $this->visit_details($unique_id);
 
+        $temp_tot_time = 0;
+        for ($i=0; $i < count($res["visits"]); $i++) { 
+            $temp_tot_time += $res["visits"][$i]["dwell"];
+        }
+
+        $res["tot_dwell"] = $temp_tot_time;
+        $res["tot_time"] = $this->secondsToTime($temp_tot_time);
+
 /*
         $temp = date_parse_from_format('Y-m-d H:i:s', $res[0]["time"]);
         $s = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
@@ -1094,37 +1134,6 @@ class MapModel extends CI_Model {
         }
         $average = ($total/$count); // get average value
         return $average;
-    }
-
-    function secondsToTime($inputSeconds) {
-
-        $secondsInAMinute = 60;
-        $secondsInAnHour  = 60 * $secondsInAMinute;
-        $secondsInADay    = 24 * $secondsInAnHour;
-
-        // extract days
-        $days = floor($inputSeconds / $secondsInADay);
-
-        // extract hours
-        $hourSeconds = $inputSeconds % $secondsInADay;
-        $hours = floor($hourSeconds / $secondsInAnHour);
-
-        // extract minutes
-        $minuteSeconds = $hourSeconds % $secondsInAnHour;
-        $minutes = floor($minuteSeconds / $secondsInAMinute);
-
-        // extract the remaining seconds
-        $remainingSeconds = $minuteSeconds % $secondsInAMinute;
-        $seconds = ceil($remainingSeconds);
-
-        // return the final array
-        $obj = array(
-            'd' => (int) $days,
-            'h' => (int) $hours,
-            'm' => (int) $minutes,
-            's' => (int) $seconds,
-        );
-        return $obj;
     }
 
     function stats_standard_deviation(array $a, $sample = false) {
