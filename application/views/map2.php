@@ -691,7 +691,7 @@
 
 									</div>
 
-									<div class="col-md-12 feedback-message-text">
+									<div class="col-md-12 col-sm-12 col-xs-12feedback-message-text">
 										<p>{{feedback['message']}}</p>
 									</div>
 									
