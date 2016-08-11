@@ -576,7 +576,7 @@
 							<h5>{{details.unique_id}} - {{details.nb_tot_actions}} actions - {{general.tot_time.d}}d {{general.tot_time.h}}h {{general.tot_time.m}}m {{general.tot_time.s}}s</h5>
 						</div>
 
-						<div ng-repeat='visit in visits'>
+						<div ng-repeat='visit in details.visits'>
 							<div class='col-md-12'>
 
 								<h5>{{visit.nb_actions}} actions - {{visit.visit_time.d}}d {{visit.visit_time.h}}h {{visit.visit_time.m}}m {{visit.visit_time.s}}s</h5>
