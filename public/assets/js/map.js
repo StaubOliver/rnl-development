@@ -827,7 +827,7 @@ var map = angular.module('map', ['rzModule'])
 	} 
 	else 
 	{
-		$scope.profile.first_name = 'Mapping the collection';
+		$scope.profile.first_name = 'Manchester Fossil collection';
 		$scope.section_feedback_form_section_title = "Share your discoveries (anonymously)";
 	}
 	
