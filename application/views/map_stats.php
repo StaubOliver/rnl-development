@@ -108,21 +108,6 @@
 
 
 						<div class='col-md-12'>
-							<h5>Latest Activity</h5>
-						</div>
-						<div ng-repeat="a in general.latest_activity">
-							<div class="col-md-5" ng-class="{'even_row':$index%2==0}">
-								{{a.unique_id}}
-							</div>
-							<div class="col-md-3">
-								{{a.time}}
-							</div>
-							<div class="col-md-4">
-								{{a.action}} {{a.details}}
-							</div>
-						</div>
-
-						<div class='col-md-12'>
 							<h5>Visits</h5>
 						</div>
 
@@ -205,264 +190,224 @@
 							<h5>Action distribution</h5>
 						</div>
 
-						<div class='col-md-12'>
-							<div class='row'>
-
-								<div class='col-md-2'>
-									Map Pan
-								</div>
-								<div class='col-md-1'>
-									{{general.map_pan}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_map_pan}}
-								</div>
-
-								<div class='col-md-2'>
-									Click on Fossil
-								</div>
-								<div class='col-md-1'>
-									{{general.click_on_fossil}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_click_on_fossil}}
-								</div>
-
-								<div class='col-md-2'>
-									Change age
-								</div>
-								<div class='col-md-1'>
-									{{general.filter_geological_change}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_filter_geological_change}}
-								</div>
-
-							</div>
+						<div class='col-md-2'>
+							Map Pan
+						</div>
+						<div class='col-md-1'>
+							{{general.map_pan}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_map_pan}}
 						</div>
 
-						<div class='col-md-12'>
-							<div class='row'>
-
-								<div class='col-md-2'>
-									Map Click
-								</div>
-								<div class='col-md-1'>
-									{{general.map_click}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_map_click}}
-								</div>
-
-								<div class='col-md-2'>
-									Fossil Selected
-								</div>
-								<div class='col-md-1'>
-									{{general.fossil_selected}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_fossil_selected}}
-								</div>
-
-								<div class='col-md-2'>
-									Hover collector
-								</div>
-								<div class='col-md-1'>
-									{{general.filter_collector_hover}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_filter_collector_hover}}
-								</div>
-
-							</div>
+						<div class='col-md-2'>
+							Click on Fossil
+						</div>
+						<div class='col-md-1'>
+							{{general.click_on_fossil}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_click_on_fossil}}
 						</div>
 
-						<div class='col-md-12'>
-							<div class='row'>
-
-								<div class='col-md-2'>
-									Map Zoom In
-								</div>
-								<div class='col-md-1'>
-									{{general.map_zoom_in}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_map_zoom_in}}
-								</div>
-
-								<div class='col-md-2'>
-									Fossil Deselected
-								</div>
-								<div class='col-md-1'>
-									{{general.fossil_deselected}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_fossil_deselected}}
-								</div>
-
-								<div class='col-md-2'>
-									Change collector
-								</div>
-								<div class='col-md-1'>
-									{{general.filter_collector_change}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_filter_collector_change}}
-								</div>
-
-							</div>
+						<div class='col-md-2'>
+							Change age
+						</div>
+						<div class='col-md-1'>
+							{{general.filter_geological_change}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_filter_geological_change}}
 						</div>
 
-						<div class='col-md-12'>
-							<div class='row'>
-
-								<div class='col-md-2'>
-									Map Zoom Out
-								</div>
-								<div class='col-md-1'>
-									{{general.map_zoom_out}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_map_zoom_out}}
-								</div>
-
-								<div class='col-md-2'>
-									Clear Selection
-								</div>
-								<div class='col-md-1'>
-									{{general.clear_fossil_selection}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_clear_fossil_selection}}
-								</div>
-
-								<div class='col-md-2'>
-									Hover genus
-								</div>
-								<div class='col-md-1'>
-									{{general.filter_genus_hover}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_filter_genus_hover}}
-								</div>
-
-							</div>
+						<div class='col-md-2'>
+							Map Click
+						</div>
+						<div class='col-md-1'>
+							{{general.map_click}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_map_click}}
 						</div>
 
-						<div class='col-md-12'>
+						<div class='col-md-2'>
+							Fossil Selected
+						</div>
+						<div class='col-md-1'>
+							{{general.fossil_selected}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_fossil_selected}}
+						</div>
+
+						<div class='col-md-2'>
+							Hover collector
+						</div>
+						<div class='col-md-1'>
+							{{general.filter_collector_hover}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_filter_collector_hover}}
+						</div>
+
+						<div class='col-md-2'>
+							Map Zoom In
+						</div>
+						<div class='col-md-1'>
+							{{general.map_zoom_in}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_map_zoom_in}}
+						</div>
+
+						<div class='col-md-2'>
+							Fossil Deselected
+						</div>
+						<div class='col-md-1'>
+							{{general.fossil_deselected}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_fossil_deselected}}
+						</div>
+
+						<div class='col-md-2'>
+							Change collector
+						</div>
+						<div class='col-md-1'>
+							{{general.filter_collector_change}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_filter_collector_change}}
 						</div>
 
 
-						<div class='col-md-12'>
-							<div class='row'>
+						<div class='col-md-2'>
+							Map Zoom Out
+						</div>
+						<div class='col-md-1'>
+							{{general.map_zoom_out}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_map_zoom_out}}
+						</div>
 
-								<div class='col-md-2'>
-									Feedback Hover
-								</div>
-								<div class='col-md-1'>
-									{{general.feedback_hover}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_feedback_hover}}
-								</div>
+						<div class='col-md-2'>
+							Clear Selection
+						</div>
+						<div class='col-md-1'>
+							{{general.clear_fossil_selection}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_clear_fossil_selection}}
+						</div>
 
-								<div class='col-md-2'>
-									Write comment
-								</div>
-								<div class='col-md-1'>
-									{{general.write_comment}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_write_comment}}
-								</div>
+						<div class='col-md-2'>
+							Hover genus
+						</div>
+						<div class='col-md-1'>
+							{{general.filter_genus_hover}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_filter_genus_hover}}
+						</div>
 
-								<div class='col-md-2'>
-									Change genus
-								</div>
-								<div class='col-md-1'>
-									{{general.filter_genus_change}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_filter_genus_change}}
-								</div>
+
+						<div class='col-md-2'>
+							Feedback Hover
+						</div>
+						<div class='col-md-1'>
+							{{general.feedback_hover}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_feedback_hover}}
+						</div>
+
+						<div class='col-md-2'>
+							Write comment
+						</div>
+						<div class='col-md-1'>
+							{{general.write_comment}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_write_comment}}
+						</div>
+
+						<div class='col-md-2'>
+							Change genus
+						</div>
+						<div class='col-md-1'>
+							{{general.filter_genus_change}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_filter_genus_change}}
+						</div>
+
+						
+
+
+						<div class='col-md-2'>
+							Feedback Click
+						</div>
+						<div class='col-md-1'>
+							{{general.feedback_click}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_feedback_click}}
+						</div>
+
+						<div class='col-md-2'>
+							Submit comment
+						</div>
+						<div class='col-md-1'>
+							{{general.submit_feedback}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_submit_feedback}}
+						</div>
+
+						<div class='col-md-2'>
+							Enlarge image
+						</div>
+						<div class='col-md-1'>
+							{{general.enlarge_image}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_enlarge_image}}
+						</div>
+
+
+						<div class='col-md-2'>
+							Upvote
+						</div>
+						<div class='col-md-1'>
+							{{general.upvote}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_upvote}}
+						</div>
+
+
+						<div class='col-md-2'>
+							Click reply
+						</div>
+						<div class='col-md-1'>
+							{{general.click_reply}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_click_reply}}
+						</div>
+
+						<div class='col-md-2'>
+							Sharing
+						</div>
+						<div class='col-md-1'>
+							{{general.sharing}}%
+						</div>
+						<div class='col-md-1'>
+							{{general.nb_sharing}}
+						</div>
 
 								
-
-							</div>
-						</div>
-
-						<div class='col-md-12'>
-							<div class='row'>
-
-								<div class='col-md-2'>
-									Feedback Click
-								</div>
-								<div class='col-md-1'>
-									{{general.feedback_click}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_feedback_click}}
-								</div>
-
-								<div class='col-md-2'>
-									Submit comment
-								</div>
-								<div class='col-md-1'>
-									{{general.submit_feedback}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_submit_feedback}}
-								</div>
-
-								<div class='col-md-2'>
-									Enlarge image
-								</div>
-								<div class='col-md-1'>
-									{{general.enlarge_image}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_enlarge_image}}
-								</div>
-
-							</div>
-						</div>
-
-						<div class='col-md-12'>
-							<div class='row'>
-
-								<div class='col-md-2'>
-									Upvote
-								</div>
-								<div class='col-md-1'>
-									{{general.upvote}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_upvote}}
-								</div>
-
-
-								<div class='col-md-2'>
-									Click reply
-								</div>
-								<div class='col-md-1'>
-									{{general.click_reply}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_click_reply}}
-								</div>
-
-								<div class='col-md-2'>
-									Sharing
-								</div>
-								<div class='col-md-1'>
-									{{general.sharing}}%
-								</div>
-								<div class='col-md-1'>
-									{{general.nb_sharing}}
-								</div>
-
-							</div>
-						</div>
 
 						<div class='col-md-12'>
 							<div id="chart_action_distribution" style="width: 100%; height: 400px;"></div>
@@ -579,6 +524,22 @@
 
 						<div class='col-md-12'>
 							<div id="chart_action_dwell" style="width: 100%; height: 400px;"></div>
+						</div>
+
+
+						<div class='col-md-12'>
+							<h5>Latest Activity</h5>
+						</div>
+						<div ng-repeat="a in general.latest_activity">
+							<div class="col-md-5">
+								{{a.unique_id}}
+							</div>
+							<div class="col-md-3">
+								{{a.time}}
+							</div>
+							<div class="col-md-4">
+								{{a.action}} {{a.details}}
+							</div>
 						</div>
 						
 
