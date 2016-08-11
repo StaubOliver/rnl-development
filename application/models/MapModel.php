@@ -940,6 +940,8 @@ class MapModel extends CI_Model {
         
         $interval =  $end->diff($start);
         $res["visit_time"] = $interval->format("%d days %H hours %i minutes %s seconds");
+        $res["dwell"] = $e - $s;
+        
         return $res;
     }
 
@@ -1030,6 +1032,7 @@ class MapModel extends CI_Model {
         $res = array();
         $query_visit_details = $this->db->query("SELECT * FROM map_activity where unique_id='".$unique_id."' order by activity_id asc");
 
+        $nb_visits = 0;
         if ($query_visit_details->num_rows() > 0)
         {
             $nb_visits = $this->nb_visit($unique_id);
@@ -1041,6 +1044,7 @@ class MapModel extends CI_Model {
         }
         $res["unique_id"] = $unique_id;
         $res["nb_tot_action"] = $query_visit_details->num_rows();
+        $res["nb_visits"] = $nb_visits;
         $res["visits"] = $this->visit_details($unique_id);
 
 /*
