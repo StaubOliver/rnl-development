@@ -259,7 +259,7 @@
 
 						<!-- Action per Visits -->
 
-						<div class='col-md-4'>
+						<div class='col-md-12'>
 							<h6>Action per visit</h6>
 						</div>
 
@@ -274,6 +274,9 @@
 						</div>
 						<div class='col-md-2'>
 							{{general.stat_action_per_visit.max}}
+						</div>
+						<div class='col-md-4'>
+							
 						</div>
 
 						<div class='col-md-2'>
@@ -297,7 +300,7 @@
 
 						<!-- Dwell per Visits -->
 
-						<div class='col-md-4'>
+						<div class='col-md-12'>
 							<h6>Dwell per visit</h6>
 						</div>
 
@@ -312,6 +315,9 @@
 						</div>
 						<div class='col-md-2'>
 							{{general.stat_dwell_per_visit.max.d}}d {{general.stat_dwell_per_visit.max.h}}h {{general.stat_dwell_per_visit.max.m}}m {{general.stat_dwell_per_visit.max.s}}s
+						</div>
+						<div class='col-md-4'>
+							
 						</div>
 						<div class='col-md-2'>
 							Standard Deviation
