@@ -109,25 +109,25 @@
 						<a class="social-network-link" 
 						href="http://www.twitter.com/share?text=Check out Manchester Museum's fossil collection ! @McrMuseum @TheStudyMcr&url=https://{{share_url}}/map" 
 						target="#" ng-click="recordActivity('Sharing', 'Twitter')">
-						<img class='social-network-icon' src="/assets/img/socialnetworks/twitter_white.png" alt="Twitter" height="32" width="32">
+						<img class='social-network-icon img-responsive' src="/assets/img/socialnetworks/twitter_white.png" alt="Twitter" height="32" width="32">
 						</a>
 
 						<a class="social-network-link"
 						href="https://www.reddit.com/submit?url=https://{{share_url}}/map"
 						target="#" ng-click="recordActivity('Sharing', 'Reddit')"> 
-							<img class='social-network-icon' src="/assets/img/socialnetworks/reddit_white.png" alt="Reddit" height="32" width="32">
+							<img class='social-network-icon img-responsive' src="/assets/img/socialnetworks/reddit_white.png" alt="Reddit" height="32" width="32">
 						</a>
 
 						<a class="social-network-link"
 						href="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}/map"
 						target="#" ng-click="recordActivity('Sharing', 'Facebook')">
-							<img class='social-network-icon' src="/assets/img/socialnetworks/facebook_white.png" alt="Facebook" height="32" width="32">
+							<img class='social-network-icon img-responsive' src="/assets/img/socialnetworks/facebook_white.png" alt="Facebook" height="32" width="32">
 						</a>
 
 						<a class="social-network-link"
 						href="https://plus.google.com/share?url={{ share_url }}/map"
 						target="#" ng-click="recordActivity('Sharing', 'Google+')"> 
-							<img class='social-network-icon' src="/assets/img/socialnetworks/google_white.png" alt="Google" height="32" width="32">
+							<img class='social-network-icon img-responsive' src="/assets/img/socialnetworks/google_white.png" alt="Google" height="32" width="32">
 						</a>
 
 					</li>
