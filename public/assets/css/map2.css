@@ -3,7 +3,7 @@ body{
 	background-color: #EAEAEA;
 }
 
-html, body, .main-layout, .main-layout-right{
+html, body, .main-layout, .main-layout-right, .controller-googleMap{
 	height:100%;
 }
 
@@ -21,7 +21,7 @@ html, body, .main-layout, .main-layout-right{
 
 	}
 
-	.main-layout-left, .controller-googleMap{
+	.main-layout-left{
 		height:80%;
 	}
 
@@ -39,7 +39,7 @@ html, body, .main-layout, .main-layout-right{
 
 	}
 
-	.main-layout-left,.controller-googleMap{
+	.main-layout-left{
 		height:80%;
 	}
 
@@ -56,7 +56,7 @@ html, body, .main-layout, .main-layout-right{
 		overflow: auto;
 	}
 
-	.controller-googleMap{
+	.main-layout-left{
 		height:100%;
 	}
 
