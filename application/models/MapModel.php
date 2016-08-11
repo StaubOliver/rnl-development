@@ -963,7 +963,7 @@ class MapModel extends CI_Model {
 
             $last_id = $query_last_id->row_array()["activity_id"];
 
-            if (($nb_open - $nb_close) = 0)
+            if (($nb_open - $nb_close) == 0)
             {
                 for ($i=0; $i < $nb_open; $i++) 
                 { 
