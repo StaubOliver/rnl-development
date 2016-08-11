@@ -759,13 +759,13 @@
 					<div class='row'>
 
 						<div class='col-md-12'>
-							{{details.length}}<h5>{{details.unique_id}} - {{details.nb_tot_action}} actions - {{details.nb_visits}} visits - {{details.tot_time.d}}d {{details.tot_time.h}}h {{details.tot_time.m}}m {{details.tot_time.s}}s</h5>
+							<h5>{{details.unique_id}} - {{details.nb_tot_action}} actions - {{details.nb_visits}} visits - {{details.tot_time.d}}d {{details.tot_time.h}}h {{details.tot_time.m}}m {{details.tot_time.s}}s</h5>
 						</div>
 
 						<div ng-repeat='visit in details.visits'>
 							<div class='col-md-12'>
 
-								<h5>{{visit.nb_action}} actions - {{visit.visit_time.d}}d {{visit.visit_time.h}}h {{visit.visit_time.m}}m {{visit.visit_time.s}}s</h5>
+								<h6>{{visit.nb_action}} actions - {{visit.visit_time.d}}d {{visit.visit_time.h}}h {{visit.visit_time.m}}m {{visit.visit_time.s}}s</h6>
 							</div>
 							<div ng-repeat='action in visit.actions'>
 								<div class='col-md-3'>{{action.time}} </div> 
