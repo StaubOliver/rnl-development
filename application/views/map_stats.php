@@ -69,24 +69,24 @@
 		<div class='container-fluid'>
 			<div class='row'>
 
-				<div class='col-md-10 col-md-offset-1 admin-title'>
+				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title'>
 
 					<div class='row'>
 
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-4'>
 							<h5>Visitors - <?php echo $stats['uniqueVisits'] ?> </h5>
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-4'>
 							<h5>Actions - <?php echo $stats['nbActions'] ?> </h5>
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-4'>
 							<h5 class="hover-link" ng-click="changeUniqueId()">Refresh</h5>
 						</div>
 
-						<div class='col-md-6'>
+						<div class='col-md-6 col-sm-6 col-xs-12'>
 							<select class='form-control' ng-model='selectedUniqueId' ng-change='changeUniqueId()'>
 								<option value="0" selected>General</option>
 								<optgroup label="Choose an ID">	

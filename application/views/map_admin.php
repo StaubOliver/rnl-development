@@ -329,16 +329,14 @@
 						
 						<div ng-repeat='rep in feedback.replies' ng-show='feedback.replies.length'>
 
-						
-
-							<div class='col-md-10 col-md-offset-1' ng-class="{'admin-feedback-reply':rep.hidden==0, 'admin-feedback-reply-hidden':rep.hidden==1||feedback.hidden==1}">
+							<div class='col-md-10 col-sm-12 col-xs-12 col-md-offset-1' ng-class="{'admin-feedback-reply':rep.hidden==0, 'admin-feedback-reply-hidden':rep.hidden==1||feedback.hidden==1}">
 
 								<div class='row'>
 
-									<div class='col-md-12 admin-message-head'>
+									<div class='col-md-12 col-sm-12 col-xs-12 admin-message-head'>
 										<div class='row'>
 
-											<div class='col-md-10'>
+											<div class='col-md-10 '>
 												{{feedback["first_name"]}} {{feedback["last_name"]}}
 												on
 												{{feedback['time']}}
