@@ -16,6 +16,18 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 		display:block; 
 		text-align:center;
 	}
+
+	.main-layout-right{
+
+	}
+
+	.map-section{
+		background-color:#EEEEEE;
+		box-shadow: 0px 1px 10px #CCCCCC;
+		width:auto;
+		height:80%;
+	}
+
 }
 
 
@@ -25,7 +37,16 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 		text-align:right;
 	}
 
+	.main-layout-right{
 
+	}
+
+	.map-section{
+		background-color:#EEEEEE;
+		box-shadow: 0px 1px 10px #CCCCCC;
+		width:auto;
+		height:80%;
+	}
 }
 
 
@@ -33,6 +54,17 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	.help_terms_close_btn{
 		display:block; 
 		text-align:right;
+	}
+
+	.main-layout-right{
+		overflow: auto;
+	}
+
+	.map-section{
+		background-color:#EEEEEE;
+		box-shadow: 0px 1px 10px #CCCCCC;
+		width:auto;
+		height:100%;
 	}
 
 
@@ -52,12 +84,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 	margin: 0px !important;
 }
 
-.map-section{
-	background-color:#EEEEEE;
-	box-shadow: 0px 1px 10px #CCCCCC;
-	width:auto;
-	height:100%;
-}
+
 
 #googleMap{
 	width:100%;
@@ -87,9 +114,7 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 }
 
 
-.main-layout-right{
-	overflow: auto;
-}
+
 
 .section{
 	padding-left: 12px !important;
