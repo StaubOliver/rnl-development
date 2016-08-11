@@ -52,7 +52,16 @@ html, body, .main-layout, .main-layout-right, .controller-googleMap{
 		text-align: center;
 	}
 
-	.map-header{ display:none; }
+	.map-header{
+		z-index: 5;
+		position: absolute;
+		top: 65px;
+		left: 15px;
+		width: 169px;
+		height: 84px;
+		background-color: white;
+		box-shadow: 0px 0px 4px #CCCCCC;
+	}
 
 }
 
