@@ -50,10 +50,16 @@
 		<div class="container-fluid">
 
 			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
 				<a class="navbar-brand" href="#">Admin Panel</a>
 			</div>
 
-			<div class="collapse navbar-collapse">
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse">
 				<ul class="nav navbar-nav">
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -70,20 +76,20 @@
 			<div class='row'>
 
 
-				<div class='col-md-10 col-md-offset-1 admin-title'>
+				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title'>
 					<h4>Update location - <?php echo $location_update." fossils to update" ?> </h4>
 				</div>
 
-				<div class='col-md-10 col-md-offset-1 admin-feedback update-info'>
+				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback update-info'>
 					<div class='row'>
 
-						<div class='col-md-3'>
+						<div class='col-md-3 col-sm-12 col-xs-12'>
 							<div class='btn btn-custom-primary btn-xl btn-update-location' ng-click="update_location()">
 								Update Locations
 							</div>	
 						</div>
 						
-						<div class='col-md-9'>	
+						<div class='col-md-9 col-sm-12 col-xs-12'>	
 						<p class='p-update-location'>
 							Use this button to use the Google Maps api to translate the country and place information for each fossil into coordinates. Limit: 1000 items per 24 hours.
 						</p>
