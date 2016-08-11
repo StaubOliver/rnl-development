@@ -1036,26 +1036,20 @@ class MapModel extends CI_Model {
                             else
                             {
                                 $ids[] = $close[$j]["activity_id"];
-                                $j ++;
+                                $j ++; $i--;
                             }
                         } 
 
-                        $include_last = false;
-                        
                         if ($last_id > $open[$nb_open-1] and $last_id > $close[$nb_close-1])
                         {
                             $ids[] = $last_id;
-                            $include_last = true;
                         }
-
 
                         for ($i=0; $i < count($ids)-2; $i++) { 
                              $return[] = $this->session_details($unique_id, $ids[$i], $ids[$i+1], false);
                          } 
 
-                         $return[] = $this->session_details($unique_id, $ids[count($ids)-2], $ids[count($ids)-1], $include_last);
-
-
+                         $return[] = $this->session_details($unique_id, $ids[count($ids)-2], $ids[count($ids)-1], true);
 
                     }
 
