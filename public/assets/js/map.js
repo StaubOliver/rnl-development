@@ -131,6 +131,7 @@ var map = angular.module('map', ['rzModule'])
 	//$scope.selectedCollector = filter['collector'];	
 
 	$scope.show_legend = true;
+	if (screen.width < 768) $scope.show_legend = false;
 
 	var marker_clicked_for_selection = {};
 
