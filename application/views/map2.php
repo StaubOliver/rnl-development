@@ -231,24 +231,24 @@
 
 					<div class='row'>
 
-						<div class='col-md-1 col-md-offset-1'>
+						<div class='col-md-1 col-md-offset-1 col-sm-1 col-xs-1'>
 							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/F9F97F.png' alt='Quaternary'>
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Quaternary
 						</div>
 
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/FFE619.png' alt='Neogene'>
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Neogene
 						</div>
 
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							<img class='map-legend-pin' src='https://natureslibrary.co.uk/assets/img/markers/FD9A52.png' alt='Paleogene'>
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Paleogene
 						</div>
 					
