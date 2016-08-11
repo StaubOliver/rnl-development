@@ -104,6 +104,7 @@
 		 				<li><a href="/map/map_admin">Admin panel</a></li>
 					<?php endif; ?>	
 
+					<!--
 					<li style='display: inline-block'>
 						<p class="navbar-text">Share</p>
 						<a class="social-network-link" 
@@ -131,8 +132,9 @@
 						</a>
 
 					</li>
+					-->
 
-					<!--
+					
 					<li><p class="navbar-text">Share</p></li>
 
 					<li>
@@ -167,7 +169,7 @@
 						</a>
 					</li>
 
-					-->
+					
 
 					<li>
 						<a href="#" data-toggle='modal' data-target='#ModalHelp' id='helpButton' ng-click='recordActivity("Open Help", "")'>
