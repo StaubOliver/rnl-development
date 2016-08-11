@@ -118,41 +118,41 @@
 							<h6>Action per visitor</h6>
 						</div>
 
-						<div class='col-md-2 col-sm-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Min
 						</div>
-						<div class='col-md-2 col-sm-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_action_per_visitor.min}}
 						</div>
-						<div class='col-md-2 col-sm-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Max
 						</div>
-						<div class='col-md-2 col-sm-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_action_per_visitor.max}}
 						</div>
-						<div class='col-md-2 col-sm-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Total
 						</div>
-						<div class='col-md-2 col-sm-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_action_per_visitor.total}}
 						</div>
 
-						<div class='col-md-2 col-sm-2'>
-							Standard Deviation
+						<div class='col-md-2 col-sm-2 col-xs-2'>
+							Std
 						</div>
-						<div class='col-md-2 col-sm-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_action_per_visitor.std}}
 						</div>
-						<div class='col-md-2 col-sm-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Avg
 						</div>
-						<div class='col-md-2 col-sm-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_action_per_visitor.avg}}
 						</div>
-						<div class='col-md-2 col-sm-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Med
 						</div>
-						<div class='col-md-2 col-sm-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_action_per_visitor.med}}
 						</div>
 
