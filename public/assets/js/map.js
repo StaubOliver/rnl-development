@@ -1492,10 +1492,13 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 			    var data = google.visualization.arrayToDataTable($scope.general.hist_actions);
 
 			    var options = {
-			      legend: { position: 'none' }, 
-			      colors: ['212a33'],
-			      histogram: { bucketSize: 10 },
-			      chartArea:{left:40,top:10,width:'100%',height:'350'}
+					legend: { position: 'none' }, 
+					colors: ['212a33'],
+					histogram: { bucketSize: 10 },
+					chartArea:{left:40,top:10,width:'100%',height:'350'},
+					vAxis: {
+						ticks: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+					}
 
 			    };
 
