@@ -1013,7 +1013,7 @@ class MapModel extends CI_Model {
                     { 
                         $return[] = $this->session_details($unique_id, $open[$i]["activity_id"], $open[$i+1]["activity_id"], false);
                     }
-                    $return[] = $this->session_details($unique_id, $open[count($open-1)]["activity_id"], $last_id, true);
+                    $return[] = $this->session_details($unique_id, $open[count($open)-1]["activity_id"], $last_id, true);
                 }
                 else 
                 {
