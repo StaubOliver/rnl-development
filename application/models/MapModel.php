@@ -951,8 +951,8 @@ class MapModel extends CI_Model {
 
         if ($nb_visit > 0)
         {
-            $query_open = $this->db->query("SELECT activity_id, unique_id, action FROM map_activity where action="Open Page" and unique_id='".$unique_id."' order by activity_id asc");
-            $query_close = $this->db->query("SELECT activity_id, unique_id, action FROM map_activity where action="Close Page" and unique_id='".$unique_id."' order by activity_id asc");
+            $query_open = $this->db->query("SELECT activity_id, unique_id, action FROM map_activity where action='Open Page' and unique_id='".$unique_id."' order by activity_id asc");
+            $query_close = $this->db->query("SELECT activity_id, unique_id, action FROM map_activity where action='Close Page' and unique_id='".$unique_id."' order by activity_id asc");
             $query_last_id = $this->db->query("SELECT activity_id FROM map_activity WHERE unique_id='".$unique_id."' order by activity_id desc limit 1");
 
             $nb_open = $query_open->num_rows();
