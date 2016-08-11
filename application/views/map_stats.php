@@ -569,7 +569,7 @@
 
 				-->
 
-				<div class='col-md-10 col-md-offset-1 admin-title' ng-show='details.length > 0'>
+				<div class='col-md-10 col-md-offset-1 admin-title' >
 					<div class='row'>
 
 						<div class='col-md-12'>
@@ -578,7 +578,7 @@
 
 						<div ng-repeat='visit in visits'>
 							<div class='col-md-12'>
-							
+
 								<h5>{{visit.nb_actions}} actions - {{visit.visit_time.d}}d {{visit.visit_time.h}}h {{visit.visit_time.m}}m {{visit.visit_time.s}}s</h5>
 							</div>
 							<div ng-repeat='action in visit.actions'>
