@@ -1027,17 +1027,22 @@ class MapModel extends CI_Model {
                     if ($nb_open > $nb_close)
                     {
                         $ids = array();
+                        $i = 0;
                         $j = 0;
-                        for ($i = 0; $i < $nb_open; $i++) 
+                        while ( <= 10) 
                         {
                             if ($open[$i]["activity_id"] < $close[$j]["activity_id"]){
                                 $ids[] = $open[$i]["activity_id"];
+                                $i++;
                             }
                             else
                             {
                                 $ids[] = $close[$j]["activity_id"];
-                                $j ++; $i--;
+                                $j++;
                             }
+                        }
+
+
                         } 
 
                         if ($last_id > $open[$nb_open-1] and $last_id > $close[$nb_close-1])
