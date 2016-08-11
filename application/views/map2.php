@@ -90,7 +90,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Hello {{ profile.first_name }}</a>
+				<a class="navbar-brand" href="#">{{ profile.first_name }}</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -104,7 +104,7 @@
 		 				<li><a href="/map/map_admin">Admin panel</a></li>
 					<?php endif; ?>	
 
-					<li><p>Share</p></li>
+					<li><p class="navbar-text">Share</p></li>
 
 					<li>
 						<a class="social-network-link" 

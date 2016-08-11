@@ -821,13 +821,13 @@ var map = angular.module('map', ['rzModule'])
 			$scope.profile.email = data.profile.email;
 			$scope.profile.last_login = data.profile.last_login;
 			$scope.profile.location = data.profile.location;
-			$scope.profile.first_name = data.profile.first_name;
+			$scope.profile.first_name = "Hello" + data.profile.first_name;
 			$scope.profile.last_name = data.profile.last_name;
 		});
 	} 
 	else 
 	{
-		$scope.profile.first_name = ' - Mapping Manchester Museum Fossil Collection';
+		$scope.profile.first_name = 'Mapping the collection';
 		$scope.section_feedback_form_section_title = "Share your discoveries (anonymously)";
 	}
 	
