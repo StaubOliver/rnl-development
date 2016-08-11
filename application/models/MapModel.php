@@ -1425,7 +1425,7 @@ class MapModel extends CI_Model {
         $stat_dwell_per_visit = array(
             "min" => $this->secondsToTime($dwell_per_visit[0]),
             "max" => $this->secondsToTime($dwell_per_visit[count($dwell_per_visit)-1]),
-            "total" => $this->secondsToTime($tot$dwell_per_visit),
+            "total" => $this->secondsToTime($tot_$dwell_per_visit),
             "avg" => $this->secondsToTime(intval($this->calculate_average($dwell_per_visit))),
             "med" => $this->secondsToTime(intval($this->calculate_median($dwell_per_visit))),
             "std" => $this->secondsToTime(intval($this->stats_standard_deviation($dwell_per_visit)))
