@@ -578,6 +578,7 @@
 
 						<div ng-repeat='visit in visits'>
 							<div class='col-md-12'>
+							
 								<h5>{{visit.nb_actions}} actions - {{visit.visit_time.d}}d {{visit.visit_time.h}}h {{visit.visit_time.m}}m {{visit.visit_time.s}}s</h5>
 							</div>
 							<div ng-repeat='action in visit.actions'>
@@ -585,8 +586,6 @@
 								<div class='col-md-9'>{{visit.action}} {{visit.details}}</div>
 							</div>
 
-
-						</div>
 
 						</div>
 
