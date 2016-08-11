@@ -900,6 +900,130 @@ class MapModel extends CI_Model {
         return $res;
     }
 
+    public function nb_visit($unique_id)
+    {
+        $query_open_close = $this->db->query('SELECT activity_id, action FROM map_activity where action="Open Page" and unique_id='.$unique_id);
+        if ($query_open_close->num_rows() > 0)
+        {
+            return $query_open_close->num_rows();
+        }
+        else 
+        {
+            return 1;
+        }
+    }
+
+    public function session_details($unique_id, $activity_id_inf, $activity_id_sup, $inf_equal)
+    {
+        if ($inf_equal)
+        {
+            $query_actions = $this->db->query("SELECT * FROM map_activity where unique_id='".$unique_id."' and activity_id >= '".$activity_id_inf."' and activity_id <= '".$activity_id_sup."' order by activity_id asc");
+        }
+        else
+        {
+         $query_actions = $this->db->query("SELECT * FROM map_activity where unique_id='".$unique_id."' and activity_id >= '".$activity_id_inf."' and activity_id < '".$activity_id_sup."' order by activity_id asc");
+        }
+
+        $res = array();
+        $res["actions"] = $query_actions->result_array();
+        $res["nb_action"] = $query_actions->num_rows();
+        
+        $temp = date_parse_from_format('Y-m-d H:i:s', $res["actions"][0]["time"]);
+        $s = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
+        $start = new DateTime();
+        $start->setTimestamp($s);
+        
+        $temp = date_parse_from_format('Y-m-d H:i:s', $res["actions"][count($res["actions"])-1]["time"]);
+        $e = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
+        $end = new DateTime();
+        $end->setTimestamp($e);
+        
+        $interval =  $end->diff($start);
+        $res["visit_time"] = $interval->format("%d days %H hours %i minutes %s seconds");
+        return $res;
+    }
+
+    public function visit_details($unique_id)
+    {
+        $nb_visit = $this->nb_visit($unique_id);
+
+        $return = array();
+
+        if ($nb_visit > 0)
+        {
+            $query_open = $this->db->query('SELECT activity_id, unique_id, action FROM map_activity where action="Open Page" and unique_id='.$unique_id.' order by activity_id asc');
+            $query_close = $this->db->query('SELECT activity_id, unique_id, action FROM map_activity where action="Close Page" and unique_id='.$unique_id.' order by activity_id asc');
+            $query_last_id = $this->db->query("SELECT activity_id FROM map_activity WHERE unique_id='".$unique_id."' order by activity_id desc limit 1");
+
+            $nb_open = $query_open->num_rows();
+            $nb_close = $query_close->num_rows();
+
+            $open = $query_open->result_array();
+            $close = $query_close->result_array();
+
+            $last_id = $query_last_id->row_array()["activity_id"];
+
+            if (($nb_open - $nb_close) = 0)
+            {
+                for ($i=0; $i < $nb_open; $i++) 
+                { 
+                    $return[] = $this->session_details($unique_id, $open[i]["activity_id"], $close[i]["activity_id"], true);
+                }
+            }
+            else
+            {
+                if ($nb_close = 0)
+                {
+                    for ($i=0; $i < $nb_open-1; $i++) 
+                    { 
+                        $return[] = $this->session_details($unique_id, $open[i]["activity_id"], $open[i+1]["activity_id"], false);
+                    }
+                    $return[] = $this->session_details($unique_id, $open[count($open-1)]["activity_id"], $last_id, true);
+                }
+                else 
+                {
+                    $ids = array();
+                    for ($i=0; $i < $nb_open; $i++) { 
+                         
+                    } 
+                }
+            }
+
+        }
+        else
+        {
+
+            $query_bounds = $this->db->query("SELECT activity_id FROM map_activity where unique_id='".$unique_id."' order by activity_id asc");
+
+            $bounds = $query_bounds->result_array();
+
+            $return[] = $this->session_details($unique_id, $bounds[0]["activity_id"], $bounds[count($bounds)-1]["activity_id"], true);
+
+            /*
+            $query_actions = $this->db->query("SELECT * FROM map_activity where unique_id='".$unique_id."' order by activity_id asc");
+            $res = array();
+            $res["actions"] = $query_actions->result_array();
+            $res["nb_action"] = $query_actions->num_rows();
+            
+            $temp = date_parse_from_format('Y-m-d H:i:s', $res["actions"][0]["time"]);
+            $s = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
+            $start = new DateTime();
+            $start->setTimestamp($s);
+            
+            $temp = date_parse_from_format('Y-m-d H:i:s', $res["actions"][count($res["actions"])-1]["time"]);
+            $e = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
+            $end = new DateTime();
+            $end->setTimestamp($e);
+            
+            $interval =  $end->diff($start);
+            $res["visit_time"] = $interval->format("%d days %H hours %i minutes %s seconds");
+            $return[] = $res;
+            */
+        }
+
+        return $return;
+    }
+
 
     public function visiteDetails($unique_id)
     {
@@ -908,10 +1032,18 @@ class MapModel extends CI_Model {
 
         if ($query_visit_details->num_rows() > 0)
         {
-            $res = $query_visit_details->result_array();
+            $nb_visits = $this->nb_visit($unique_id);
+            for ($i=0; $i < $nb_visits; $i++) 
+            { 
+                
+            }
+            //$res = $query_visit_details->result_array();
         }
+        $res["unique_id"] = $unique_id;
+        $res["nb_tot_action"] = $query_visit_details->num_rows();
+        $res["visits"] = $this->visit_details($unique_id);
 
-        
+/*
         $temp = date_parse_from_format('Y-m-d H:i:s', $res[0]["time"]);
         $s = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
         $start = new DateTime();
@@ -925,12 +1057,15 @@ class MapModel extends CI_Model {
         $interval =  $end->diff($start);
         $res[] = $interval->format("%d days %H hours %i minutes %s seconds");
 
+        
+*/
+
 /*
 
         $end = strtotime($res[count($res)-1]["time"]);
         $interval =  $end->diff($start);
         $res["time"] = $interval->format("%H hours %i minutes %s seconds");
-        */
+*/
         return $res;
     }
 
@@ -1009,6 +1144,7 @@ class MapModel extends CI_Model {
         }
         return sqrt($carry / $n);
     }
+
     
 
 
