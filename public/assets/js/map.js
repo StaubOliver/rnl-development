@@ -355,10 +355,10 @@ var map = angular.module('map', ['rzModule'])
 	}
 
 	function LegendItem(color, age){
-		return "<div class='col-md-3 col-xs-3'>"
+		return "<div class='col-md-3 col-sm-3 col-xs-3'>"
 				+ "<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/"+color+"/' alt='Hello there'>"
 			+ "</div>"
-			+ "<div class='col-md-9 col-xs-9'>"
+			+ "<div class='col-md-9 col-sm-9 col-xs-9'>"
 				+ "<p class='map-legend-content-title'>"+age+"</p>"
 			+ "</div>";
 	}
