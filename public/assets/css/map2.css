@@ -38,7 +38,10 @@ html, body, .main-layout, .main-layout-left, .main-layout-right, .controller-goo
 
 }
 
-
+.help_terms_close_btn_bottom{
+		display:block; 
+		text-align:center;
+	}
 
 
 

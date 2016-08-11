@@ -382,6 +382,15 @@
 						Please contact support@natureslibrary.co.uk if you require further information or clarification of the terms and conditions of usage.
 					</p>	
 				</div>
+
+				<div class='modal-footer'>
+					<div class='row'>
+						<div class='col-md-12 col-sm-12 col-xs-12 help_terms_close_btn_bottom'>
+							<button type="button" class="btn btn-xs btn-custom-primary" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> Close</button>
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</div>
 	</div>
