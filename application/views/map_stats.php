@@ -246,9 +246,12 @@
 						</div>
 
 
+					</div>
+				</div>
 
 
-
+				<div class='col-md-10 col-md-offset-1 admin-title' ng-show="selectedUniqueId == 0">
+					<div class='row'>
 
 
 						<!-- Visits -->
@@ -341,7 +344,12 @@
 
 
 
+					</div>
+				</div>
 
+
+				<div class='col-md-10 col-md-offset-1 admin-title' ng-show="selectedUniqueId == 0">
+					<div class='row'>
 
 
 
@@ -579,7 +587,12 @@
 						</div>-->
 
 						
+					</div>
+				</div>
 
+
+				<div class='col-md-10 col-md-offset-1 admin-title' ng-show="selectedUniqueId == 0">
+					<div class='row'>
 
 
 						<div class='col-md-6'>
@@ -634,6 +647,12 @@
 							<div id="chart_div" style="width: 100%; height: 400px;"></div>
 						</div>
 
+					</div>
+				</div>
+
+
+				<div class='col-md-10 col-md-offset-1 admin-title' ng-show="selectedUniqueId == 0">
+					<div class='row'>
 
 
 						<div class='col-md-6'>
@@ -685,6 +704,13 @@
 						<div class='col-md-12'>
 							<div id="chart_action_dwell" style="width: 100%; height: 400px;"></div>
 						</div>
+
+					</div>
+				</div>
+
+
+				<div class='col-md-10 col-md-offset-1 admin-title' ng-show="selectedUniqueId == 0">
+					<div class='row'>
 
 
 						<div class='col-md-12'>
