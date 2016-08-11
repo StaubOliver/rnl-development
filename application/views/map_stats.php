@@ -111,10 +111,10 @@
 							<h5>Latest Activity</h5>
 						</div>
 						<div ng-repeat="a in general.latest_activity">
-							<div class="col-md-6">
+							<div class="col-md-5">
 								{{a.unique_id}}
 							</div>
-							<div class="col-md-2">
+							<div class="col-md-3">
 								{{a.time}}
 							</div>
 							<div class="col-md-4">
