@@ -278,8 +278,11 @@
 						<div class='col-md-2'>
 							{{general.stat_action_per_visit.max}}
 						</div>
-						<div class='col-md-4'>
-							
+						<div class='col-md-2'>
+							Total
+						</div>
+						<div class='col-md-2'>
+							{{general.stat_action_per_visit.total}}
 						</div>
 
 						<div class='col-md-2'>
@@ -319,8 +322,11 @@
 						<div class='col-md-2'>
 							{{general.stat_dwell_per_visit.max.d}}d {{general.stat_dwell_per_visit.max.h}}h {{general.stat_dwell_per_visit.max.m}}m {{general.stat_dwell_per_visit.max.s}}s
 						</div>
-						<div class='col-md-4'>
-							
+						<div class='col-md-2'>
+							Total
+						</div>
+						<div class='col-md-2'>
+							{{general.stat_dwell_per_visit.total.d}}d {{general.stat_dwell_per_visit.total.h}}h {{general.stat_dwell_per_visit.total.m}}m {{general.stat_dwell_per_visit.total.s}}s
 						</div>
 						<div class='col-md-2'>
 							Standard Deviation
