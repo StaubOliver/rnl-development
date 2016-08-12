@@ -102,6 +102,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<?php if($is_admin == 1): ?>
 		 				<li><a href="/map/map_admin">Admin panel</a></li>
+		 				<li><a href="/map/map_stats">Stats</a></li>
 					<?php endif; ?>	
 
 					<!--
