@@ -364,220 +364,220 @@
 							<h5>Action distribution</h5>
 						</div>
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Map Pan
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.map_pan}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_map_pan}}
 						</div>
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Click on Fossil
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.click_on_fossil}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_click_on_fossil}}
 						</div>
 
-						<div class='col-md-2 col-sm-4 col-xs-2'>
+						<div class='col-md-2 col-sm-4 col-xs-3'>
 							Change age
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.filter_geological_change}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_filter_geological_change}}
 						</div>
 
-						<div class='col-md-2 col-sm-2 col-xs-2'>
+						<div class='col-md-2 col-sm-2 col-xs-3'>
 							Map Click
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.map_click}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_map_click}}
 						</div>
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Fossil Selected
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.fossil_selected}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_fossil_selected}}
 						</div>
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Hover collector
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.filter_collector_hover}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_filter_collector_hover}}
 						</div>
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Map Zoom In
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.map_zoom_in}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_map_zoom_in}}
 						</div>
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Fossil Deselected
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.fossil_deselected}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_fossil_deselected}}
 						</div>
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Change collector
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.filter_collector_change}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_filter_collector_change}}
 						</div>
 
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Map Zoom Out
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.map_zoom_out}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_map_zoom_out}}
 						</div>
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Clear Selection
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.clear_fossil_selection}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_clear_fossil_selection}}
 						</div>
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Hover genus
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.filter_genus_hover}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_filter_genus_hover}}
 						</div>
 
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Feedback Hover
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.feedback_hover}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_feedback_hover}}
 						</div>
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Write comment
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.write_comment}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_write_comment}}
 						</div>
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Change genus
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.filter_genus_change}}%
 						</div>
-						<div class='col-md-1 4ol-sm-2 4ol-xs-2'>
+						<div class='col-md-1 4ol-sm-2 4ol-xs-3'>
 							{{general.nb_filter_genus_change}}
 						</div>
 
 						
 
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Feedback Click
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.feedback_click}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_feedback_click}}
 						</div>
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Submit comment
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.submit_feedback}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_submit_feedback}}
 						</div>
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Enlarge image
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.enlarge_image}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_enlarge_image}}
 						</div>
 
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Upvote
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.upvote}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_upvote}}
 						</div>
 
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Click reply
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.click_reply}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_click_reply}}
 						</div>
 
-						<div class='col-md-2 col-sm-4 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-6'>
 							Sharing
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.sharing}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-2'>
+						<div class='col-md-1 col-sm-2 col-xs-3'>
 							{{general.nb_sharing}}
 						</div>
 
