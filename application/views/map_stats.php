@@ -158,90 +158,90 @@
 
 						<!-- Visits per visitor -->
 
-						<div class='col-md-12 col-sm-12'>
+						<div class='col-md-12 col-sm-12 col-xs-12'>
 							<h6>Visits per visitor</h6>
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Min
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_visits_per_visitor.min}}
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Max
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_visits_per_visitor.max}}
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Total
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_visits_per_visitor.total}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Standard Deviation
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_visits_per_visitor.std}}
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Avg
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_visits_per_visitor.avg}}
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Med
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_visits_per_visitor.med}}
 						</div>
 
 
 						<!-- Visits per visitor -->
 
-						<div class='col-md-12'>
+						<div class='col-md-12 col-sm-12 col-xs-12'>
 							<h6>Dwell per visitor</h6>
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Min
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_dwell_per_visitor.min.d}}d {{general.stat_dwell_per_visitor.min.h}}h {{general.stat_dwell_per_visitor.min.m}}m {{general.stat_dwell_per_visitor.min.s}}s
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Max
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_dwell_per_visitor.max.d}}d {{general.stat_dwell_per_visitor.max.h}}h {{general.stat_dwell_per_visitor.max.m}}m {{general.stat_dwell_per_visitor.max.s}}s
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Total
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_dwell_per_visitor.total.d}}d {{general.stat_dwell_per_visitor.total.h}}h {{general.stat_dwell_per_visitor.total.m}}m {{general.stat_dwell_per_visitor.total.s}}s
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Standard Deviation
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_dwell_per_visitor.std.d}}d {{general.stat_dwell_per_visitor.std.h}}h {{general.stat_dwell_per_visitor.std.m}}m {{general.stat_dwell_per_visitor.std.s}}s
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Avg
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_dwell_per_visitor.avg.d}}d {{general.stat_dwell_per_visitor.avg.h}}h {{general.stat_dwell_per_visitor.avg.m}}m {{general.stat_dwell_per_visitor.avg.s}}s
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Med
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_dwell_per_visitor.med.d}}d {{general.stat_dwell_per_visitor.med.h}}h {{general.stat_dwell_per_visitor.med.m}}m {{general.stat_dwell_per_visitor.med.s}}s
 						</div>
 
@@ -256,94 +256,94 @@
 
 						<!-- Visits -->
 
-						<div class='col-md-12'>
+						<div class='col-md-12 col-sm-12 col-xs-12'>
 							<h5>Visits</h5>
 						</div>
 
 						<!-- Action per Visits -->
 
-						<div class='col-md-12'>
+						<div class='col-md-12 col-sm-12 col-xs-12'>
 							<h6>Action per visit</h6>
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Min
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_action_per_visit.min}}
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Max
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_action_per_visit.max}}
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Total
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_action_per_visit.total}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Standard Deviation
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_action_per_visit.std}}
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Avg
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_action_per_visit.avg}}
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Med
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_action_per_visit.med}}
 						</div>
 
 						<!-- Dwell per Visits -->
 
-						<div class='col-md-12'>
+						<div class='col-md-12 col-sm-12 col-xs-12'>
 							<h6>Dwell per visit</h6>
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Min
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_dwell_per_visit.min.d}}d {{general.stat_dwell_per_visit.min.h}}h {{general.stat_dwell_per_visit.min.m}}m {{general.stat_dwell_per_visit.min.s}}s
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Max
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_dwell_per_visit.max.d}}d {{general.stat_dwell_per_visit.max.h}}h {{general.stat_dwell_per_visit.max.m}}m {{general.stat_dwell_per_visit.max.s}}s
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Total
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_dwell_per_visit.total.d}}d {{general.stat_dwell_per_visit.total.h}}h {{general.stat_dwell_per_visit.total.m}}m {{general.stat_dwell_per_visit.total.s}}s
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Standard Deviation
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_dwell_per_visit.std.d}}d {{general.stat_dwell_per_visit.std.h}}h {{general.stat_dwell_per_visit.std.m}}m {{general.stat_dwell_per_visit.std.s}}s
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Avg
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_dwell_per_visit.avg.d}}d {{general.stat_dwell_per_visit.avg.h}}h {{general.stat_dwell_per_visit.avg.m}}m {{general.stat_dwell_per_visit.avg.s}}s
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Med
 						</div>
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_dwell_per_visit.med.d}}d {{general.stat_dwell_per_visit.med.h}}h {{general.stat_dwell_per_visit.med.m}}m {{general.stat_dwell_per_visit.med.s}}s
 						</div>
 
@@ -360,230 +360,230 @@
 
 
 
-						<div class='col-md-12'>
+						<div class='col-md-12 col-sm-12 col-xs-12'>
 							<h5>Action distribution</h5>
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Map Pan
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.map_pan}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_map_pan}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Click on Fossil
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.click_on_fossil}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_click_on_fossil}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Change age
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.filter_geological_change}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_filter_geological_change}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Map Click
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.map_click}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_map_click}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Fossil Selected
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.fossil_selected}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_fossil_selected}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Hover collector
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.filter_collector_hover}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_filter_collector_hover}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Map Zoom In
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.map_zoom_in}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_map_zoom_in}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Fossil Deselected
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.fossil_deselected}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_fossil_deselected}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Change collector
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.filter_collector_change}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_filter_collector_change}}
 						</div>
 
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Map Zoom Out
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.map_zoom_out}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_map_zoom_out}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Clear Selection
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.clear_fossil_selection}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_clear_fossil_selection}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Hover genus
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.filter_genus_hover}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_filter_genus_hover}}
 						</div>
 
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Feedback Hover
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.feedback_hover}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_feedback_hover}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Write comment
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.write_comment}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_write_comment}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Change genus
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.filter_genus_change}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_filter_genus_change}}
 						</div>
 
 						
 
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Feedback Click
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.feedback_click}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_feedback_click}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Submit comment
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.submit_feedback}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_submit_feedback}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Enlarge image
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.enlarge_image}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_enlarge_image}}
 						</div>
 
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Upvote
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.upvote}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_upvote}}
 						</div>
 
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Click reply
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.click_reply}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_click_reply}}
 						</div>
 
-						<div class='col-md-2'>
+						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Sharing
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.sharing}}%
 						</div>
-						<div class='col-md-1'>
+						<div class='col-md-1 col-sm-1 col-xs-1'>
 							{{general.nb_sharing}}
 						</div>
 
 								
 
-						<div class='col-md-12'>
+						<div class='col-md-12 col-sm-12 col-xs-12'>
 							<div id="chart_action_distribution" style="width: 100%; height: 400px;"></div>
 						</div>
 
@@ -601,47 +601,47 @@
 					<div class='row'>
 
 
-						<div class='col-md-6'>
+						<div class='col-md-6 col-sm-6 col-xs-12'>
 							<h5>Histogram</h5>
 						</div>
-						<div style="display:block; text-align:right" class='col-md-6' ng-hide="show_histogram_data">
+						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-12' ng-hide="show_histogram_data">
 							<button style='margin-top:8px; margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_histogram_data = !show_histogram_data">Show Data</button>
 						</div>
-						<div style="display:block; text-align:right" class='col-md-6' ng-show="show_histogram_data">
+						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-12' ng-show="show_histogram_data">
 							<button style='margin-top:8px; margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_histogram_data = !show_histogram_data">Hide Data</button>
 						</div>
 
 						<div ng-show='show_histogram_data'>
-							<div class='col-md-2'>
+							<div class='col-md-2 col-sm-2 col-xs-2'>
 								Range
 							</div>
-							<div class='col-md-1'>
+							<div class='col-md-2 col-sm-1 col-xs-1'>
 								Persons
 							</div>
-							<div class='col-md-2'>
+							<div class='col-md-2 col-sm-2 col-xs-2'>
 								Range
 							</div>
-							<div class='col-md-1'>
+							<div class='col-md-1 col-sm-1 col-xs-1'>
 								Persons
 							</div>
-							<div class='col-md-2'>
+							<div class='col-md-2 col-sm-2 col-xs-2'>
 								Range
 							</div>
-							<div class='col-md-1'>
+							<div class='col-md-1 col-sm-1 col-xs-1'>
 								Persons
 							</div>
-							<div class='col-md-2'>
+							<div class='col-md-2 col-sm-2 col-xs-2'>
 								Range
 							</div>
-							<div class='col-md-1'>
+							<div class='col-md-1 col-sm-1 col-xs-1'>
 								Persons
 							</div>
 
 							<div ng-repeat='d in general.data_hist_actions track by $index'>
-								<div class='col-md-2'>
+								<div class='col-md-2 col-sm-2 col-xs-2'>
 									{{$index*10}}-{{($index+1)*10}}
 								</div>
-								<div class='col-md-1'>
+								<div class='col-md-1  col-sm-1 col-xs-1'>
 									{{d}}
 								</div>
 							</div>
@@ -649,7 +649,7 @@
 
 
 
-						<div class='col-md-12'>
+						<div class='col-md-12  col-sm-12 col-xs-12'>
 							<div id="chart_div" style="width: 100%; height: 400px;"></div>
 						</div>
 
@@ -661,53 +661,53 @@
 					<div class='row'>
 
 
-						<div class='col-md-6'>
+						<div class='col-md-6 col-sm-6 col-xs-12'>
 							<h5>Dwell = fct(nb action)</h5>
 						</div>
 
-						<div style="display:block; text-align:right" class='col-md-6' ng-hide="show_dwell_fct_actions_data">
+						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-12' ng-hide="show_dwell_fct_actions_data">
 							<button style='margin-top:8px; margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_dwell_fct_actions_data = !show_dwell_fct_actions_data">Show Data</button>
 						</div>
-						<div style="display:block; text-align:right" class='col-md-6' ng-show="show_dwell_fct_actions_data">
+						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-12' ng-show="show_dwell_fct_actions_data">
 							<button style='margin-top:8px; margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_dwell_fct_actions_data = !show_dwell_fct_actions_data">Hide Data</button>
 						</div>
 
 						<div ng-show='show_dwell_fct_actions_data'>
-							<div class='col-md-2'>
+							<div class='col-md-2 col-sm-2 col-xs-2'>
 								Actions
 							</div>
-							<div class='col-md-1'>
+							<div class='col-md-1  col-sm-1 col-xs-1'>
 								Dwell
 							</div>
-							<div class='col-md-2'>
+							<div class='col-md-2  col-sm-2 col-xs-2'>
 								Actions
 							</div>
-							<div class='col-md-1'>
+							<div class='col-md-1 col-sm-1 col-xs-1'>
 								Dwell
 							</div>
-							<div class='col-md-2'>
+							<div class='col-md-2  col-sm-2 col-xs-2'>
 								Actions
 							</div>
-							<div class='col-md-1'>
+							<div class='col-md-1 col-sm-1 col-xs-1'>
 								Dwell
 							</div>
-							<div class='col-md-2'>
+							<div class='col-md-2  col-sm-2 col-xs-2'>
 								Actions
 							</div>
-							<div class='col-md-1'>
+							<div class='col-md-1 col-sm-1 col-xs-1'>
 								Dwell
 							</div>
 							<div ng-repeat='d in general.nb_action_fct_dwell' ng-if='$index > 0'>
-								<div class='col-md-2'>
+								<div class='col-md-2  col-sm-2 col-xs-2'>
 									{{d[0]}}
 								</div>
-								<div class='col-md-1'>
+								<div class='col-md-1 col-sm-1 col-xs-1'>
 									{{d[1]}}
 								</div>
 							</div>
 						</div>
 
-						<div class='col-md-12'>
+						<div class='col-md-12 col-sm-12 col-xs-12'>
 							<div id="chart_action_dwell" style="width: 100%; height: 400px;"></div>
 						</div>
 
@@ -719,17 +719,17 @@
 					<div class='row'>
 
 
-						<div class='col-md-12'>
+						<div class='col-md-12 col-sm-12 col-xs-12'>
 							<h5>Latest Activity</h5>
 						</div>
 						<div ng-repeat="a in general.latest_activity">
-							<div class="col-md-5">
+							<div class="col-md-5 col-sm-5 col-xs-5">
 								{{a.unique_id}}
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-3 col-sm-3 col-xs-3">
 								{{a.time}}
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-4 col-xs-4">
 								{{a.action}} {{a.details}}
 							</div>
 						</div>
