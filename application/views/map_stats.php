@@ -512,7 +512,7 @@
 						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.filter_genus_change}}%
 						</div>
-						<div class='col-md-1 col-sm-3 4ol-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.nb_filter_genus_change}}
 						</div>
 
