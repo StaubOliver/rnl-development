@@ -604,10 +604,10 @@
 						<div class='col-md-6 col-sm-6 col-xs-12'>
 							<h5>Histogram</h5>
 						</div>
-						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-12' ng-hide="show_histogram_data">
+						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-6' ng-hide="show_histogram_data">
 							<button style='margin-top:8px; margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_histogram_data = !show_histogram_data">Show Data</button>
 						</div>
-						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-12' ng-show="show_histogram_data">
+						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-6' ng-show="show_histogram_data">
 							<button style='margin-top:8px; margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_histogram_data = !show_histogram_data">Hide Data</button>
 						</div>
 
@@ -665,10 +665,10 @@
 							<h5>Dwell = fct(nb action)</h5>
 						</div>
 
-						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-12' ng-hide="show_dwell_fct_actions_data">
+						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-6' ng-hide="show_dwell_fct_actions_data">
 							<button style='margin-top:8px; margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_dwell_fct_actions_data = !show_dwell_fct_actions_data">Show Data</button>
 						</div>
-						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-12' ng-show="show_dwell_fct_actions_data">
+						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-6' ng-show="show_dwell_fct_actions_data">
 							<button style='margin-top:8px; margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_dwell_fct_actions_data = !show_dwell_fct_actions_data">Hide Data</button>
 						</div>
 
@@ -764,18 +764,18 @@
 				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title' ng-show='details.length != 0'>
 					<div class='row'>
 
-						<div class='col-md-12'>
+						<div class='col-md-12 col-sm-12 col-xs-12'>
 							<h5>{{details.unique_id}} - {{details.nb_tot_action}} actions - {{details.nb_visits}} visits - {{details.tot_time.d}}d {{details.tot_time.h}}h {{details.tot_time.m}}m {{details.tot_time.s}}s</h5>
 						</div>
 
 						<div ng-repeat='visit in details.visits'>
-							<div class='col-md-12'>
+							<div class='col-md-12 col-sm-12 col-xs-12'>
 
 								<h6>{{visit.nb_action}} actions - {{visit.visit_time.d}}d {{visit.visit_time.h}}h {{visit.visit_time.m}}m {{visit.visit_time.s}}s</h6>
 							</div>
 							<div ng-repeat='action in visit.actions'>
-								<div class='col-md-3'>{{action.time}} </div> 
-								<div class='col-md-9'>{{action.action}} {{action.details}}</div>
+								<div class='col-md-3 col-sm-3 col-xs-3'>{{action.time}} </div> 
+								<div class='col-md-9 col-sm-9 col-xs-9'>{{action.action}} {{action.details}}</div>
 							</div>
 
 
