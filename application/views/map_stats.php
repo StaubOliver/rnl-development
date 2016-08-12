@@ -601,7 +601,7 @@
 					<div class='row'>
 
 
-						<div class='col-md-6 col-sm-6 col-xs-12'>
+						<div class='col-md-6 col-sm-6 col-xs-6'>
 							<h5>Histogram</h5>
 						</div>
 						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-6' ng-hide="show_histogram_data">
@@ -661,7 +661,7 @@
 					<div class='row'>
 
 
-						<div class='col-md-6 col-sm-6 col-xs-12'>
+						<div class='col-md-6 col-sm-6 col-xs-6'>
 							<h5>Dwell = fct(nb action)</h5>
 						</div>
 
