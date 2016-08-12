@@ -210,38 +210,38 @@
 						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Min
 						</div>
-						<div class='col-md-2 col-sm-2 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-4'>
 							{{general.stat_dwell_per_visitor.min.d}}d {{general.stat_dwell_per_visitor.min.h}}h {{general.stat_dwell_per_visitor.min.m}}m {{general.stat_dwell_per_visitor.min.s}}s
 						</div>
 						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Max
 						</div>
-						<div class='col-md-2 col-sm-2 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-4'>
 							{{general.stat_dwell_per_visitor.max.d}}d {{general.stat_dwell_per_visitor.max.h}}h {{general.stat_dwell_per_visitor.max.m}}m {{general.stat_dwell_per_visitor.max.s}}s
 						</div>
 						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Total
 						</div>
-						<div class='col-md-2 col-sm-2 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-4'>
 							{{general.stat_dwell_per_visitor.total.d}}d {{general.stat_dwell_per_visitor.total.h}}h {{general.stat_dwell_per_visitor.total.m}}m {{general.stat_dwell_per_visitor.total.s}}s
 						</div>
 
 						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Std
 						</div>
-						<div class='col-md-2 col-sm-2 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-4'>
 							{{general.stat_dwell_per_visitor.std.d}}d {{general.stat_dwell_per_visitor.std.h}}h {{general.stat_dwell_per_visitor.std.m}}m {{general.stat_dwell_per_visitor.std.s}}s
 						</div>
 						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Avg
 						</div>
-						<div class='col-md-2 col-sm-2 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-4'>
 							{{general.stat_dwell_per_visitor.avg.d}}d {{general.stat_dwell_per_visitor.avg.h}}h {{general.stat_dwell_per_visitor.avg.m}}m {{general.stat_dwell_per_visitor.avg.s}}s
 						</div>
 						<div class='col-md-2 col-sm-2 col-xs-2'>
 							Med
 						</div>
-						<div class='col-md-2 col-sm-2 col-xs-4'>
+						<div class='col-md-2 col-sm-4 col-xs-4'>
 							{{general.stat_dwell_per_visitor.med.d}}d {{general.stat_dwell_per_visitor.med.h}}h {{general.stat_dwell_per_visitor.med.m}}m {{general.stat_dwell_per_visitor.med.s}}s
 						</div>
 
