@@ -489,30 +489,30 @@
 						<div class='col-md-2 col-sm-6 col-xs-6'>
 							Feedback Hover
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.feedback_hover}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.nb_feedback_hover}}
 						</div>
 
 						<div class='col-md-2 col-sm-6 col-xs-6'>
 							Write comment
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.write_comment}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.nb_write_comment}}
 						</div>
 
 						<div class='col-md-2 col-sm-6 col-xs-6'>
 							Change genus
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.filter_genus_change}}%
 						</div>
-						<div class='col-md-1 4ol-sm-2 4ol-xs-3'>
+						<div class='col-md-1 col-sm-3 4ol-xs-3'>
 							{{general.nb_filter_genus_change}}
 						</div>
 
@@ -522,30 +522,30 @@
 						<div class='col-md-2 col-sm-6 col-xs-6'>
 							Feedback Click
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.feedback_click}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.nb_feedback_click}}
 						</div>
 
 						<div class='col-md-2 col-sm-6 col-xs-6'>
 							Submit comment
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.submit_feedback}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.nb_submit_feedback}}
 						</div>
 
 						<div class='col-md-2 col-sm-6 col-xs-6'>
 							Enlarge image
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.enlarge_image}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.nb_enlarge_image}}
 						</div>
 
@@ -553,10 +553,10 @@
 						<div class='col-md-2 col-sm-6 col-xs-6'>
 							Upvote
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.upvote}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.nb_upvote}}
 						</div>
 
@@ -564,20 +564,20 @@
 						<div class='col-md-2 col-sm-6 col-xs-6'>
 							Click reply
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.click_reply}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.nb_click_reply}}
 						</div>
 
 						<div class='col-md-2 col-sm-6 col-xs-6'>
 							Sharing
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.sharing}}%
 						</div>
-						<div class='col-md-1 col-sm-2 col-xs-3'>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.nb_sharing}}
 						</div>
 
