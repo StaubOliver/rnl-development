@@ -182,7 +182,7 @@
 						</div>
 
 						<div class='col-md-2 col-sm-2 col-xs-2'>
-							Standard Deviation
+							Std
 						</div>
 						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_visits_per_visitor.std}}
@@ -227,7 +227,7 @@
 						</div>
 
 						<div class='col-md-2 col-sm-2 col-xs-2'>
-							Standard Deviation
+							Std
 						</div>
 						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_dwell_per_visitor.std.d}}d {{general.stat_dwell_per_visitor.std.h}}h {{general.stat_dwell_per_visitor.std.m}}m {{general.stat_dwell_per_visitor.std.s}}s
@@ -286,7 +286,7 @@
 						</div>
 
 						<div class='col-md-2 col-sm-2 col-xs-2'>
-							Standard Deviation
+							Std
 						</div>
 						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_action_per_visit.std}}
@@ -329,7 +329,7 @@
 							{{general.stat_dwell_per_visit.total.d}}d {{general.stat_dwell_per_visit.total.h}}h {{general.stat_dwell_per_visit.total.m}}m {{general.stat_dwell_per_visit.total.s}}s
 						</div>
 						<div class='col-md-2 col-sm-2 col-xs-2'>
-							Standard Deviation
+							Std
 						</div>
 						<div class='col-md-2 col-sm-2 col-xs-2'>
 							{{general.stat_dwell_per_visit.std.d}}d {{general.stat_dwell_per_visit.std.h}}h {{general.stat_dwell_per_visit.std.m}}m {{general.stat_dwell_per_visit.std.s}}s
