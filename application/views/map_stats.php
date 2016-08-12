@@ -673,35 +673,35 @@
 						</div>
 
 						<div ng-show='show_dwell_fct_actions_data'>
-							<div class='col-md-2 col-sm-2 col-xs-2'>
+							<div class='col-md-2 col-sm-4 col-xs-8'>
 								Actions
 							</div>
-							<div class='col-md-1  col-sm-1 col-xs-1'>
+							<div class='col-md-1  col-sm-2 col-xs-4'>
 								Dwell
 							</div>
-							<div class='col-md-2  col-sm-2 col-xs-2'>
+							<div class='col-md-2  col-sm-4 col-xs-8'>
 								Actions
 							</div>
-							<div class='col-md-1 col-sm-1 col-xs-1'>
+							<div class='col-md-1 col-sm-2 col-xs-4'>
 								Dwell
 							</div>
-							<div class='col-md-2  col-sm-2 col-xs-2'>
+							<div class='col-md-2  col-sm-4 col-xs-8'>
 								Actions
 							</div>
-							<div class='col-md-1 col-sm-1 col-xs-1'>
+							<div class='col-md-1 col-sm-2 col-xs-4'>
 								Dwell
 							</div>
-							<div class='col-md-2  col-sm-2 col-xs-2'>
+							<div class='col-md-2  col-sm-4 col-xs-8'>
 								Actions
 							</div>
-							<div class='col-md-1 col-sm-1 col-xs-1'>
+							<div class='col-md-1 col-sm-2 col-xs-4'>
 								Dwell
 							</div>
 							<div ng-repeat='d in general.nb_action_fct_dwell' ng-if='$index > 0'>
-								<div class='col-md-2  col-sm-2 col-xs-2'>
+								<div class='col-md-2  col-sm-4 col-xs-8'>
 									{{d[0]}}
 								</div>
-								<div class='col-md-1 col-sm-1 col-xs-1'>
+								<div class='col-md-1 col-sm-2 col-xs-4'>
 									{{d[1]}}
 								</div>
 							</div>
