@@ -612,36 +612,36 @@
 						</div>
 
 						<div ng-show='show_histogram_data'>
-							<div class='col-md-2 col-sm-2 col-xs-2'>
+							<div class='col-md-2 col-sm-4 col-xs-4'>
 								Range
 							</div>
-							<div class='col-md-2 col-sm-1 col-xs-1'>
+							<div class='col-md-2 col-sm-2 col-xs-2'>
 								Persons
 							</div>
-							<div class='col-md-2 col-sm-2 col-xs-2'>
+							<div class='col-md-2 col-sm-4 col-xs-4'>
 								Range
 							</div>
-							<div class='col-md-1 col-sm-1 col-xs-1'>
+							<div class='col-md-1 col-sm-2 col-xs-2'>
 								Persons
 							</div>
-							<div class='col-md-2 col-sm-2 col-xs-2'>
+							<div class='col-md-2 col-sm-4 col-xs-4'>
 								Range
 							</div>
-							<div class='col-md-1 col-sm-1 col-xs-1'>
+							<div class='col-md-1 col-sm-2 col-xs-2'>
 								Persons
 							</div>
-							<div class='col-md-2 col-sm-2 col-xs-2'>
+							<div class='col-md-2 col-sm-4 col-xs-4'>
 								Range
 							</div>
-							<div class='col-md-1 col-sm-1 col-xs-1'>
+							<div class='col-md-1 col-sm-2 col-xs-2'>
 								Persons
 							</div>
 
 							<div ng-repeat='d in general.data_hist_actions track by $index'>
-								<div class='col-md-2 col-sm-2 col-xs-2'>
+								<div class='col-md-2 col-sm-4 col-xs-4'>
 									{{$index*10}}-{{($index+1)*10}}
 								</div>
-								<div class='col-md-1  col-sm-1 col-xs-1'>
+								<div class='col-md-1  col-sm-2 col-xs-2'>
 									{{d}}
 								</div>
 							</div>
