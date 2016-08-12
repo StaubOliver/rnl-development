@@ -394,7 +394,7 @@
 							{{general.nb_filter_geological_change}}
 						</div>
 
-						<div class='col-md-2 col-sm-3 col-xs-3'>
+						<div class='col-md-2 col-sm-6 col-xs-3'>
 							Map Click
 						</div>
 						<div class='col-md-1 col-sm-3 col-xs-3'>
