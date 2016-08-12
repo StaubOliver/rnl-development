@@ -661,11 +661,11 @@
 					<div class='row'>
 
 
-						<div class='col-md-6 col-sm-6 col-xs-6'>
+						<div class='col-md-6 col-sm-6 col-xs-8'>
 							<h5>Dwell = fct(nb action)</h5>
 						</div>
 
-						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-8' ng-hide="show_dwell_fct_actions_data">
+						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-4' ng-hide="show_dwell_fct_actions_data">
 							<button style='margin-top:8px; margin-bottom:8px' type="button" class="btn btn-xs btn-custom-default" ng-click="show_dwell_fct_actions_data = !show_dwell_fct_actions_data">Show Data</button>
 						</div>
 						<div style="display:block; text-align:right" class='col-md-6 col-sm-6 col-xs-4' ng-show="show_dwell_fct_actions_data">
