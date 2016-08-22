@@ -1462,7 +1462,13 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 				    	
 				}).success(function(data, status, headers, config) {
-					$scope.successCollector = "Operation successfull"
+					$scope.successCollector = "Operation successfull";
+
+					$scope.selectedCollector1 = '-1';
+					$scope.selectedCollector2 = '-1';
+					$scope.newCollector = '';
+					$scope.refreshCollector();
+
 				}).error(function(data, status, headers, config){
 					$scope.errorCollector = 'Error :';
 					$scope.errorCollector += data;
