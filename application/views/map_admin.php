@@ -551,6 +551,12 @@
 						</div>	
 					</div>
 
+
+
+					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title'>
+						<h4>Edit coordinates</h4>
+					</div>
+
 				</div>
 
 
