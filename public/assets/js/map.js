@@ -1541,7 +1541,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			map = new google.maps.Map(document.getElementById("map-conversionFailed"),mapOpt);
 
 			map.addListener("click", function(event){
-				console.log(event.latLng);
+				console.log(event.latLng.lat());
 				if (marker != null){
 					marker.setMap(null);
 					marker = null;
