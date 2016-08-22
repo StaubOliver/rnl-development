@@ -572,11 +572,15 @@
 							         <option value='-1'>Pick a fossil</option>
 							         <option ng:repeat="fossil in conversionFailed" value="{{fossil.data_id}}">{{fossil.data_id}} - {{fossil.genus}}</option>
 								</select>  
-
-
-
 							</div>
 
+							<div class='col-md-2'>
+								<h5>Location</h5>
+							</div>
+
+							<div class='col-md-4'>
+							 	<h5>{{selectedFossilLocation}}</h5>
+						 	</div>
 
 
 						</div>
