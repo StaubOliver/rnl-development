@@ -569,7 +569,7 @@
 
 					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback'>
 						<select class="form-control" id="collectorSelect1" ng-model="selectedCollector" ng-change=""  ng-mouseover="">
-							<div ng-repeat='collector in collectors'
+							<div ng-repeat='collector in collectors'>
 								<option value='{{collector}}'>{{collector}}</option>
 							</div>
 						</select>
