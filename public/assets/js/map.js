@@ -1491,6 +1491,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.selectedFossil = '-1';
 	$scope.selectedFossilLocation = "";
+	$scope.newLat = "";
+	$scope.newLng = "";
 	$scope.conversionFailed = [];
 
 	var map;
@@ -1523,6 +1525,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				}
 			}
 
+			$scope.newLat = "";
+			$scope.newLng = "";
+
 			var mapOpt = {
 			    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
 			    zoom:3,
@@ -1552,6 +1557,12 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		else
 		{
 			$scope.selectedFossilLocation = '';
+			$scope.newLat = "";
+			$scope.newLng = "";
+			if (marker != null){
+				marker.setMap(null);
+				marker = null;
+			}
 		}
 	}
 
