@@ -1543,9 +1543,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				}
 				marker = new google.maps.Marker({
 			        position: event.latLng, 
-			        map: map
+			        map: map, 
+			        icon: pin_selected
 			    });
-			    map.panTo(event.latLng);
 			});
 
 		}
