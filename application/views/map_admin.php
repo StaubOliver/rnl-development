@@ -578,9 +578,19 @@
 								<h5>Location - {{selectedFossilLocation}}</h5>
 							</div>
 
-							<div class='col-md-12' ng-hide="selectedFossil=='-1'">
+							<div class='col-md-12' ng-hide="selectedFossil=='-1' && newLat == ''">
 								<h5>Click on the map to give the fossil some coordinates</h5>
 							</div>
+
+							<div class='col-md-10' ng-hide="newLat != '' && newLng !=''">
+								<h5>New Location - Lat - {{newLat}} - Lng {{newLng}}</h5>
+							</div>
+							<div class='col-md-2' ng-hide="newLat != '' && newLng !=''">
+								<div class='btn btn-custom-primary btn-xs btn-update-location' ng-click="updateCollector()">
+									Save
+								</div>	
+							</div>
+
 
 							<div id='map-conversionFailed' class='col-md-12 map-admin-edit-ccordinates' ng-hide="selectedFossil=='-1'">
 
