@@ -95,7 +95,7 @@
 			<div class='row'>
 
 
-				<div class='tab_markers'>
+				<div class='tab_markers' ng-show='selected_tab == 2'>
 
 					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title'>
 						<h4>Update location - <?php echo $location_update." fossils to update" ?> </h4>
@@ -129,7 +129,7 @@
 
 				</div>
 
-				<div class='tab_contribution'>
+				<div class='tab_contribution' ng-show='selected_tab == 1'>
 
 					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title'>
 						<h4><?php echo 'Feedbacks - '.count($feedbacks).' feedbacks recorded'; ?></h4>
