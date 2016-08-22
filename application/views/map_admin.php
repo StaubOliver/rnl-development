@@ -573,7 +573,7 @@
 					         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
 						</select>  
 
-						<select class="form-control" id="collectorSelect2" ng-model="selectedCollector1">
+						<select class="form-control" id="collectorSelect2" ng-model="selectedCollector2">
 					         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
 						</select>  
 
