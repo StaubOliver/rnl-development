@@ -257,7 +257,7 @@ class Map extends MY_Controller {
 		if ($this->ion_auth->logged_in()){
 			if ($this->ProfileModel->isAdmin()==1){
 
-				echo json_encode($this->db->loadFailedConversions());
+				echo json_encode($this->MapModel->loadFailedConversions());
 
 			}
 		}
