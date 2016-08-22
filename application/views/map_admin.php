@@ -75,7 +75,7 @@
 
 		<div class='container-fluid'>
 
-			<div class='row'>
+			<div class='row no-padding'>
 
 
 				<div class='col-md-4 admin-tabs-col'>

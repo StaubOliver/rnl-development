@@ -950,7 +950,7 @@ fieldset[disabled] .btn-custom-default.active {
 }
 
 .admin-tabs-active{
-	background-color: #EEEEEE
+	border-bottom: 2px solid #ff4d79;
 }
 
 .admin-tabs:hover{
@@ -958,6 +958,10 @@ fieldset[disabled] .btn-custom-default.active {
 	cursor:pointer;
 }
 
+.no-padding{
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
 
 
 
