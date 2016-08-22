@@ -1519,7 +1519,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		    streetViewControl:false
 		};
 
-		map = new google.maps.Map(document.getElementById("map"),mapOpt);
+		map = new google.maps.Map(document.getElementById("map-conversionFailed"),mapOpt);
 
 
 	}
