@@ -1433,7 +1433,43 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		});
 	}
 
+	$scope.updateCollector = function()
+	{
+		if (selectedCollector1 == '-1')
+		{
+			$scope.errorCollector = "The first name cannot be empty";
+		}
+		else 
+		{
+			if ($scope.newCollector == "")
+			{
+				$scope.errorCollector = "The new name cannot be empty";
+			}
+			else 
+			{
+				data = {};
+				data.collector1 = $scope.selectedCollector1;
+				data.collector2 = $scope.selectedCollector2;
+				data.newCollector = $scope.newCollector;
 
+				$http({
+			        method : 'POST',
+			        url: '/api/map/adminUpdateCollector',
+			        data: $.param(data),
+			        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+				    	
+				}).success(function(data, status, headers, config) {
+					$scope.successCollector = "Operation successfull"
+				}).error(function(data, status, headers, config){
+					$scope.errorCollector = 'Error :';
+					$scope.errorCollector += data;
+
+				});
+
+
+			}
+		}
+	}
 });
 
 

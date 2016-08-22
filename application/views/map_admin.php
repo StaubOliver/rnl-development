@@ -611,7 +611,7 @@
 							</div>
 							
 							<div class='col-md-2'>
-								<div class='btn btn-custom-primary btn-sm btn-update-location' ng-click="">
+								<div class='btn btn-custom-primary btn-sm btn-update-location' ng-click="updateCollector()">
 									Save
 								</div>	
 							</div>

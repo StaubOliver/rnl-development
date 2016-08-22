@@ -233,6 +233,24 @@ class Map extends MY_Controller {
 		}
 	}
 
+	public function adminUpdateCollector()
+	{
+		if ($this->ion_auth->logged_in()){
+			if ($this->ProfileModel->isAdmin()==1){
+				
+				$data = array('collector' => $this->input->post("newCollector"));
+
+				$this->db->where("collector", $this->input->post("collector1"));
+				$this->db->update("project_1_data", $data);
+
+				if ($this->input->post("collector2") != "-1")
+				{
+					$this->db->where("collector", $this->input->post("collector2"));
+					$this->db->update("project_1_data", $data);
+				}
+			}
+		}
+	}
 
 	public function decluster(){
 		$this->MapModel->decluster();
