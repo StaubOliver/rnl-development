@@ -1441,12 +1441,14 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		if ($scope.selectedCollector1 == '-1')
 		{
 			$scope.errorCollector = "The first name cannot be empty";
+			$scope.successCollector = "";
 		}
 		else 
 		{
 			if ($scope.newCollector == "")
 			{
 				$scope.errorCollector = "The new name cannot be empty";
+				$scope.successCollector = "";
 			}
 			else 
 			{
@@ -1463,13 +1465,14 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				    	
 				}).success(function(data, status, headers, config) {
 					$scope.successCollector = "Operation successfull";
-
+					$scope.errorCollector = "";
 					$scope.selectedCollector1 = '-1';
 					$scope.selectedCollector2 = '-1';
 					$scope.newCollector = '';
 					$scope.refreshCollector();
 
 				}).error(function(data, status, headers, config){
+					$scope.successCollector = "";
 					$scope.errorCollector = 'Error :';
 					$scope.errorCollector += data;
 
