@@ -606,11 +606,11 @@
 								<h5>by: <h5>
 							</div>
 							
-							<div class='col-md-8'>
+							<div class='col-md-7'>
 								<input type="text" class="form-control" placeholder="" ng-model="">
 							</div>
 							
-							<div class='col-md-1'>
+							<div class='col-md-2'>
 								<div class='btn btn-custom-primary btn-update-location' ng-click="">
 									Save
 								</div>	
