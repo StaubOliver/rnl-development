@@ -1536,11 +1536,14 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			map = new google.maps.Map(document.getElementById("map-conversionFailed"),mapOpt);
 
 			map.addListener("click", function(event){
-				console.log('click '+event.latlng);
+				
+				console.log(event.latLng);
+
 				marker = new google.maps.Marker({
-			        position: event.latlng, 
+			        position: event.latLng, 
 			        map: map
 			    });
+			    map.panTo(event.latLng);
 			});
 
 		}
