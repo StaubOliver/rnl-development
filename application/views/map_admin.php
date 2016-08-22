@@ -570,7 +570,7 @@
 
 								<select class="form-control" id="" ng-model="selectedFossil" ng-change="">
 							         <option value='-1'>Pick a fossil</option>
-							         <option ng:repeat="fossil in conversionFailed" value="{{f.data_id}}">{{f.data_id - f.genus}}</option>
+							         <option ng:repeat="fossil in conversionFailed" value="{{fossil.data_id}}">{{fossil.data_id - fossil.genus}}</option>
 								</select>  
 
 
