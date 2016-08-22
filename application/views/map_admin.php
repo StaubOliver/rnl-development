@@ -578,11 +578,11 @@
 								<h5>Location - {{selectedFossilLocation}}</h5>
 							</div>
 
-							<div class='col-md-12' ng-hide="selectedFossil=='-1' && newLat == ''">
+							<div class='col-md-12' ng-show="selectedFossil=='-1' && newLat=='' && newLng==''">
 								<h5>Click on the map to give the fossil some coordinates</h5>
 							</div>
 
-							<div class='col-md-10' ng-hide="newLat != '' && newLng !=''">
+							<div class='col-md-10' ng-show="newLat != '' && newLng !=''">
 								<h5>New Location - Lat - {{newLat}} - Lng {{newLng}}</h5>
 							</div>
 							<div class='col-md-2' ng-hide="newLat != '' && newLng !=''">
