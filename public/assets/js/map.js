@@ -1493,8 +1493,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.selectedFossilLocation = "";
 	$scope.conversionFailed = [];
 
-	var map;
-	var marker;
+	var $scope.map;
+	var $scope.marker;
 
 	$scope.refreshConversionFailed = function()
 	{
@@ -1533,17 +1533,17 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			    streetViewControl:false
 				};
 
-			map = new google.maps.Map(document.getElementById("map-conversionFailed"),mapOpt);
+			$scope.map = new google.maps.Map(document.getElementById("map-conversionFailed"),mapOpt);
 
-			map.addListener("click", function(event){
+			$scope.map.addListener("click", function(event){
 				console.log(event.latLng);
-				if (marker != null){
-					marker.setMap(null);
-					marker = null;
+				if ($scope.marker != null){
+					$scope.marker.setMap(null);
+					$scope.marker = null;
 				}
-				marker = new google.maps.Marker({
+				$scope.marker = new google.maps.Marker({
 			        position: event.latLng, 
-			        map: map, 
+			        map: $scope.map, 
 			        icon: pin_selected
 			    });
 			});
