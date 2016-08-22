@@ -761,7 +761,7 @@ class MapModel extends CI_Model {
     {
         $query = $this->db->query("SELECT * FROM project_1_data WHERE lat='0' AND lng='0'");
 
-        return $query->result_array;
+        return $query->result_array();
     }
 
 
