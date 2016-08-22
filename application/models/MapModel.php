@@ -695,7 +695,7 @@ class MapModel extends CI_Model {
             foreach($query->result_array() as $row)
             {
                 //we retrieve the data from each fossil from each project
-                $query2=$this->db->query('SELECT distinct  collector FROM '.$row['data_table'].' order by collector asc');
+                $query2=$this->db->query('SELECT distinct collector FROM '.$row['data_table'].' order by collector asc');
 
                 foreach($query2->result_array() as $row){
                     $return[] = $row['collector'];
