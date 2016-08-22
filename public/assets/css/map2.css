@@ -978,6 +978,14 @@ fieldset[disabled] .btn-custom-default.active {
 	text-align: center;
 }
 
+.map-admin-edit-ccordinates{
+	width:97%;
+	height:500px;
+	margin-left: 15px;
+	margin-right: 9px;
+	margin-bottom: 5px;
+}
+
 
 
 

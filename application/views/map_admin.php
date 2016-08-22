@@ -581,8 +581,8 @@
 							<div class='col-md-12' ng-hide="selectedFossil=='-1'">
 								<h5>Click on the map to give the fossil some coordinates</h5>
 							</div>
-							
-							<div id='map-conversionFailed' class='col-md-12 map-admin' ng-hide="selectedFossil=='-1'">
+
+							<div id='map-conversionFailed' class='col-md-12 map-admin-edit-ccordinates' ng-hide="selectedFossil=='-1'">
 
 
 							</div>
