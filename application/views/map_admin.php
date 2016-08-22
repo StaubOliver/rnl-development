@@ -563,7 +563,7 @@
 						<div class='row'>
 
 							<div class='col-md-2'>
-								<h5>Conversion failed</h5>
+								<h5>Conversion failed - {{conversionFailed.length}}</h5>
 							</div>
 
 							<div class='col-md-4'>
@@ -603,7 +603,7 @@
 							<div class='col-md-4'>
 								
 								<select class="form-control" id="collectorSelect1" ng-model="selectedCollector1" ng-change="selectedCollector1 == '-1' ? newCollector='': newCollector=selectedCollector1; errorCollector = ''; successCollector=''">
-							         <option value='-1'>Pick a name</option>
+							         <option value='-1'>Pick a fossil</option>
 							         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
 								</select>  
 
