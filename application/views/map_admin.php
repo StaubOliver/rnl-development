@@ -616,6 +616,13 @@
 								</div>	
 							</div>
 
+							<div class='col-md-12' ng-hide='errorCollector == ""'>
+								{{errorCollector}}
+							</div>
+							<div class='col-md-12' ng-hide='successCollector == ""'>
+								{{successCollector}}
+							</div>
+
 						</div>
 
 					</div>
