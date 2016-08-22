@@ -948,6 +948,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.change_tab = function($int)
 	{
 		$scope.selected_tab = $int;
+		refresh_tab($int);
 	}
 
 	var url_empty = "/assets/img/star/circle_empty.png";
@@ -955,6 +956,22 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	var url_hightlight = "/assets/img/star/circle_highlight.png";
 
 	
+	function refresh_tab($int){
+		if ($int == 1)
+		{
+			refreshFeedback();
+		}
+		if ($int == 2)
+		{
+
+		}
+		if ($int == 3)
+		{
+
+		}
+	}
+
+
 	function refreshFeedback(){
 		$scope.feedbacks = [];
 		$scope.rating_img = [];
@@ -1064,35 +1081,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		});
 	}
 
-	/*$scope.rating_highlight = function(feedback_id, star){
-		console.log(feedback_id+'-'+star);
-		for (var i = 1; i <= star; i++){
-			$scope.init_rating_img[feedback_id][i] = url_hightlight;
-		}
-	}
-
-	$scope.rating_unhighlight = function(feedback_id, star){
-		var rate = 0;
-		for (var i = 0; i <  $scope.feedbacks.length; i++){
-			if ($scope.feedbacks[i]['feedback_id'] == feedback_id){
-				rate = $scope.feedbacks[i]['rating_correctness'];
-			}
-			for (var j = 0; j < $scope.feedbacks[i]['replies'].length; j++)
-			{
-				if ($scope.feedbacks[i]['replies'][j]['feedback_id'] == feedback_id)
-				{
-					rate = $scope.feedbacks[i]['replies'][j]['rating_correctness'];
-				}
-			}
-		}
-		for (var i = 1; i <= 6; i++){
-			if (rate>=i){
-				$scope.init_rating_img[feedback_id][i] = url_full;
-			} else {
-				$scope.init_rating_img[feedback_id][i] = url_empty;
-			}
-		}
-	}*/
 
 	$scope.showUpdateError = false;
 
