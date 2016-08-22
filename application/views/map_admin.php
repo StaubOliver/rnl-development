@@ -571,7 +571,7 @@
 
 						<div class='row'>
 						
-							<div class='col-md-2'>
+							<div class='col-md-1 col-md-offset-1'>
 								<h5>Remplace</h5>
 							</div>
 							<div class='col-md-4'>
@@ -582,7 +582,7 @@
 
 							</div>
 
-							<div class='col-md-2'>
+							<div class='col-md-1'>
 								<h5>and</h5>
 							</div>
 
@@ -598,7 +598,7 @@
 
 						<div class='row'>
 
-							<div class='col-md-3 col-md-offset-1'>
+							<div class='col-md-1 col-md-offset-1'>
 								<h5>by: <h5>
 							</div>
 							
