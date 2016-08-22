@@ -1551,6 +1551,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			        map: map, 
 			        icon: pin_selected
 			    });
+			    $scope.newLat = event.latLng.lat();
+			    $scope.newLng = event.latLng.lng();
 			});
 
 		}
