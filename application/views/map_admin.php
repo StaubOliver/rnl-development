@@ -599,7 +599,7 @@
 						<div class='row'>
 
 							<div class='col-md-3 col-md-offset-1'>
-								<h5>Remplace to:<h5>
+								<h5>by: <h5>
 							</div>
 							
 							<div class='col-md-6'>
