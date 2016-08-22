@@ -577,6 +577,7 @@
 							<div class='col-md-4'>
 								
 								<select class="form-control" id="collectorSelect1" ng-model="selectedCollector1">
+							         <option value='-1'>Pick a name</option>
 							         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
 								</select>  
 
@@ -589,6 +590,7 @@
 							<div class='col-md-4'>
 
 								<select class="form-control" id="collectorSelect2" ng-model="selectedCollector2">
+							         <option value='-1'>Optionaly pick a second name</option>
 							         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
 								</select>  
 
