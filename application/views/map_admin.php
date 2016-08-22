@@ -604,10 +604,10 @@
 								<h5>by: <h5>
 							</div>
 							
-							<div class='col-md-6'>
+							<div class='col-md-8'>
 							</div>
 							
-							<div class='col-md-2'>
+							<div class='col-md-1'>
 								Save
 							</div>
 
