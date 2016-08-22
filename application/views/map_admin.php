@@ -603,7 +603,7 @@
 						<div class='row'>
 
 							<div class='col-md-1 col-md-offset-1'>
-								<h5>by: <h5>
+								<h5>by<h5>
 							</div>
 							
 							<div class='col-md-7'>
