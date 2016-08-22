@@ -968,6 +968,11 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		if ($int == 3)
 		{
 			$scope.refreshCollector();
+			$scope.selectedCollector1 = '-1';
+			$scope.selectedCollector2 = '-1';
+			$scope.newCollector = "";
+			$scope.errorCollector = "";
+			$scope.successCollector = "";
 		}
 	}
 
