@@ -949,8 +949,13 @@ fieldset[disabled] .btn-custom-default.active {
 	box-shadow: 0px 1px 10px #CCCCCC;
 }
 
+.admin-tabs-active{
+	background-color: #EEEEEE
+}
+
 .admin-tabs:hover{
 	box-shadow: 0px 1px 15px #AAAAAA;
+	cursor:pointer;
 }
 
 

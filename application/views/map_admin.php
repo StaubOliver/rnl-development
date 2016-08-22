@@ -78,7 +78,7 @@
 			<div class='row'>
 
 				<div class='col-md-4 admin-tabs-col'>
-					<h4 class='admin-tabs'>Contributions</h4>
+					<h4 class='admin-tabs admin-tabs-active'>Contributions</h4>
 				</div>
 
 				<div class='col-md-4 admin-tabs-col'>
