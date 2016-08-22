@@ -757,6 +757,14 @@ class MapModel extends CI_Model {
         return $res;
     }
 
+    public function loadFailedConversions()
+    {
+        $query = $this->db->query("SELECT * FROM project_1_data WHERE lat='0' AND lng='0'");
+
+        return $query->result_array;
+    }
+
+
     function changeLocation($coord)
     {
         return array('lat'=>$coord['lat']-0.01+rand(0,10)*0.002, 'lng'=>$coord['lng']-0.02+rand(0,20)*0.002);

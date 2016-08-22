@@ -252,6 +252,17 @@ class Map extends MY_Controller {
 		}
 	}
 
+	public function loadFailedConversions()
+	{
+		if ($this->ion_auth->logged_in()){
+			if ($this->ProfileModel->isAdmin()==1){
+
+				echo json_encode($this->db->loadFailedConversions());
+
+			}
+		}
+	}
+
 	public function decluster(){
 		$this->MapModel->decluster();
 	}

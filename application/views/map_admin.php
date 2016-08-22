@@ -557,6 +557,32 @@
 						<h4>Edit coordinates</h4>
 					</div>
 
+
+					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback'>
+
+						<div class='row'>
+
+							<div class='col-md-2'>
+								<h5>Conversion failed</h5>
+							</div>
+
+							<div class='col-md-4'>
+
+								<select class="form-control" id="collectorSelect1" ng-model="selectedCollector1" ng-change="selectedCollector1 == '-1' ? newCollector='': newCollector=selectedCollector1; errorCollector = ''; successCollector=''">
+							         <option value='-1'>Pick a name</option>
+							         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
+								</select>  
+
+
+
+							</div>
+
+
+
+						</div>
+
+					</div>
+
 				</div>
 
 
