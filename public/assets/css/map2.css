@@ -946,7 +946,15 @@ fieldset[disabled] .btn-custom-default.active {
 	background-color:#FFFFFF;
 	border-radius: 2px;
 	box-shadow: 0px 1px 10px #CCCCCC;
+}
 
+.admin-tabs:hover{
+	padding-left:10px;
+	padding-right:10px;
+
+	background-color:#FFFFFF;
+	border-radius: 2px;
+	box-shadow: 0px 1px 15px #CCCCCC;
 }
 
 
