@@ -968,6 +968,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		if ($int == 3)
 		{
 			$scope.refreshCollector();
+			console.log($scope.collectors);
 		}
 	}
 
