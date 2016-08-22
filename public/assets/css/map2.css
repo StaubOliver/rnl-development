@@ -946,7 +946,7 @@ fieldset[disabled] .btn-custom-default.active {
 
 	background-color:#FFFFFF;
 	border-radius: 2px;
-	box-shadow: 0px 1px 10px #CCCCCC;
+	/*box-shadow: 0px 1px 10px #CCCCCC;*/
 }
 
 .admin-tabs-left{
@@ -967,7 +967,7 @@ fieldset[disabled] .btn-custom-default.active {
 }
 
 .admin-tabs:hover{
-	box-shadow: 0px 1px 10px #AAAAAA;
+	/*box-shadow: 0px 1px 10px #AAAAAA;*/
 	cursor:pointer;
 }
 
