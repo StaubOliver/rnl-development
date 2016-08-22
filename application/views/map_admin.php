@@ -571,7 +571,10 @@
 
 						<div class='row'>
 						
-							<div class='col-md-5 col-md-offset-1'>
+							<div class='col-md-2'>
+								<h5>Remplace</h5>
+							</div>
+							<div class='col-md-4'>
 								
 								<select class="form-control" id="collectorSelect1" ng-model="selectedCollector1">
 							         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
@@ -579,7 +582,11 @@
 
 							</div>
 
-							<div class='col-md-5'>
+							<div class='col-md-2'>
+								<h5>and</h5>
+							</div>
+
+							<div class='col-md-4'>
 
 								<select class="form-control" id="collectorSelect2" ng-model="selectedCollector2">
 							         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
