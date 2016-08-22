@@ -77,21 +77,19 @@
 
 			<div class='row'>
 
-				<div class="col-md-10 col-md-offset-1 no-margin">
 
-					<div class='col-md-4 admin-tabs-col'>
-						<h4 class='admin-tabs' ng-class="{'admin-tabs-active':selected_tab == 1}" ng-click='change_tab(1)'>Contributions</h4>
-					</div>
-
-					<div class='col-md-4 admin-tabs-col'>
-						<h4 class='admin-tabs' ng-class="{'admin-tabs-active':selected_tab == 2}" ng-click='change_tab(2)'>Coordinates</h4>
-					</div>
-
-					<div class='col-md-4 admin-tabs-col'>
-						<h4 class='admin-tabs' ng-class="{'admin-tabs-active':selected_tab == 3}" ng-click='change_tab(3)'>Collectors</h4>
-					</div>
-
+				<div class='col-md-4 admin-tabs-col'>
+					<h4 class='admin-tabs' ng-class="{'admin-tabs-active':selected_tab == 1}" ng-click='change_tab(1)'>Contributions</h4>
 				</div>
+
+				<div class='col-md-4 admin-tabs-col'>
+					<h4 class='admin-tabs' ng-class="{'admin-tabs-active':selected_tab == 2}" ng-click='change_tab(2)'>Coordinates</h4>
+				</div>
+
+				<div class='col-md-4 admin-tabs-col'>
+					<h4 class='admin-tabs' ng-class="{'admin-tabs-active':selected_tab == 3}" ng-click='change_tab(3)'>Collectors</h4>
+				</div>
+
 
 			</div>
 
