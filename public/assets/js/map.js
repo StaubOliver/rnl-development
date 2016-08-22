@@ -1411,6 +1411,17 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		document.getElementById('map-'+feedback_id).setAttribute("style","height:-1px");
 	}
 
+	$scope.collectors = [];
+
+
+	$scope.refreshCollector = function()
+	{
+		$scope.collectors = [];
+		$http.get('/api/map/loadCollector/').success(function(data, status, headers, config){
+			$scope.collectors = data;
+		});
+	}
+
 
 });
 
