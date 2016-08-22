@@ -568,9 +568,9 @@
 
 							<div class='col-md-4'>
 
-								<select class="form-control" id="collectorSelect1" ng-model="selectedCollector1" ng-change="selectedCollector1 == '-1' ? newCollector='': newCollector=selectedCollector1; errorCollector = ''; successCollector=''">
-							         <option value='-1'>Pick a name</option>
-							         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
+								<select class="form-control" id="" ng-model="selectedFossil" ng-change="">
+							         <option value='-1'>Pick a fossil</option>
+							         <option ng:repeat="fossil in conversionFailed" value="{{f.data_id}}">{{f.data_id - f.genus}}</option>
 								</select>  
 
 
@@ -603,7 +603,7 @@
 							<div class='col-md-4'>
 								
 								<select class="form-control" id="collectorSelect1" ng-model="selectedCollector1" ng-change="selectedCollector1 == '-1' ? newCollector='': newCollector=selectedCollector1; errorCollector = ''; successCollector=''">
-							         <option value='-1'>Pick a fossil</option>
+							         <option value='-1'>Pick a name</option>
 							         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
 								</select>  
 
