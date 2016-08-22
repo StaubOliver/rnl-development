@@ -585,8 +585,8 @@
 							<div class='col-md-10' ng-show="newLat != '' && newLng !=''">
 								<h5>New Location - Lat - {{newLat}} - Lng {{newLng}}</h5>
 							</div>
-							<div class='col-md-2' ng-hide="newLat != '' && newLng !=''">
-								<div class='btn btn-custom-primary btn-xs btn-update-location' ng-click="updateCollector()">
+							<div class='col-md-2' ng-show="newLat != '' && newLng !=''">
+								<div class='btn btn-custom-primary btn-xs btn-update-location' ng-click="">
 									Save
 								</div>	
 							</div>
