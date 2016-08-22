@@ -1507,6 +1507,15 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		});
 	}
 
+	$scope.changeConversionFailed = function(){
+		for (var i = $scope.conversionFailed.length - 1; i >= 0; i--) {
+			if ($scope.selectedFossil == $scope.conversionFailed[i].data_id)
+			{
+				$scope.selectedFossilLocation = $scope.conversionFailed[i].country + " " + $scope.conversionFailed[i].place;
+			}
+		}
+	}
+
 
 });
 
