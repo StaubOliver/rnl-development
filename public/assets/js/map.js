@@ -1509,17 +1509,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			console.log(data);
 		});
 
-		var mapOpt = {
-		    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
-		    zoom:3,
-		    maxZoom: 12,
-		    minZoom: 2,
-		    mapTypeId:google.maps.MapTypeId.ROADMAP,
-		    mapTypeControl:false,
-		    streetViewControl:false
-		};
-
-		map = new google.maps.Map(document.getElementById("map-conversionFailed"),mapOpt);
 
 
 	}
@@ -1533,6 +1522,18 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 					$scope.selectedFossilLocation = $scope.conversionFailed[i].country + " " + $scope.conversionFailed[i].place;
 				}
 			}
+
+			var mapOpt = {
+			    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
+			    zoom:3,
+			    maxZoom: 12,
+			    minZoom: 2,
+			    mapTypeId:google.maps.MapTypeId.ROADMAP,
+			    mapTypeControl:false,
+			    streetViewControl:false
+				};
+
+			map = new google.maps.Map(document.getElementById("map-conversionFailed"),mapOpt);
 		}
 		else
 		{
