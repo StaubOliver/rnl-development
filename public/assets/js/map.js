@@ -1542,6 +1542,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 			map.addListener("click", function(event){
 				console.log(event.latLng.lat());
+				$scope.newLat = event.latLng.lat();
+			    $scope.newLng = event.latLng.lng();
+			    console.log($scope.newLng);
 				if (marker != null){
 					marker.setMap(null);
 					marker = null;
@@ -1551,8 +1554,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			        map: map, 
 			        icon: pin_selected
 			    });
-			    $scope.newLat = event.latLng.lat();
-			    $scope.newLng = event.latLng.lng();
+			    
 			});
 
 		}
