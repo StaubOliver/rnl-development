@@ -964,6 +964,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		if ($int == 2)
 		{
 			$scope.refreshConversionFailed();
+			console.lod($scope.conversionFailed);
 		}
 		if ($int == 3)
 		{
