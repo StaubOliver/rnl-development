@@ -589,7 +589,7 @@
 
 							<div class='col-md-4'>
 
-								<select class="form-control" id="collectorSelect2" ng-model="selectedCollector2">
+								<select class="form-control" id="collectorSelect2" ng-model="selectedCollector2" ng-change="selectedCollector1 == '-1' ? newCollector='': newCollector=selectedCollector1">
 							         <option value='-1'>Optionaly pick a second name</option>
 							         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
 								</select>  
