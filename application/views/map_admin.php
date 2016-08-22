@@ -607,7 +607,7 @@
 							</div>
 							
 							<div class='col-md-7'>
-								<input type="text" class="form-control" placeholder="" ng-model="">
+								<input type="text" class="form-control" placeholder="" ng-model="newCollector">
 							</div>
 							
 							<div class='col-md-2'>

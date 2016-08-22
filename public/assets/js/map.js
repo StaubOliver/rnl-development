@@ -1415,6 +1415,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.selectedCollector1 = "";
 	$scope.selectedCollector2 = "";
+	$scope.newCollector = "";
 
 
 	$scope.refreshCollector = function()
