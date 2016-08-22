@@ -617,10 +617,10 @@
 							</div>
 
 							<div class='col-md-12' ng-hide='errorCollector == ""'>
-								{{errorCollector}}
+								<h5 class='error'>{{errorCollector}}</h5>
 							</div>
 							<div class='col-md-12' ng-hide='successCollector == ""'>
-								{{successCollector}}
+								<h5 class='sucess'>{{successCollector}}</h5>
 							</div>
 
 						</div>

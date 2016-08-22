@@ -931,7 +931,7 @@ fieldset[disabled] .btn-custom-default.active {
 
 .admin-tabs-col {
 	text-align: center;
-	padding: 0px! important;
+	padding: 0px!;
 }
 
 .admin-tabs{
@@ -969,8 +969,14 @@ fieldset[disabled] .btn-custom-default.active {
 	padding: 0px !important;
 }
 
+.error{
+	text-align: center;
+	color:#ff4d79;
+}
 
-
+.success{
+	text-align: center;
+}
 
 
 
