@@ -1493,6 +1493,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.selectedFossilLocation = "";
 	$scope.conversionFailed = [];
 
+	var map;
+	var marker;
+
 	$scope.refreshConversionFailed = function()
 	{
 		$scope.conversionFailed = [];
@@ -1505,6 +1508,20 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}).error(function(data, status, headers, config){
 			console.log(data);
 		});
+
+		var mapOpt = {
+		    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
+		    zoom:parseInt(feedback['map_zoom']),
+		    maxZoom: 12,
+		    minZoom: 2,
+		    mapTypeId:google.maps.MapTypeId.ROADMAP,
+		    mapTypeControl:false,
+		    streetViewControl:false
+		};
+
+		map = new google.maps.Map(document.getElementById("map"),mapOpt);
+
+
 	}
 
 	$scope.changeConversionFailed = function(){
