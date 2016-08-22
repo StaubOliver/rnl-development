@@ -950,16 +950,16 @@ fieldset[disabled] .btn-custom-default.active {
 }
 
 .admin-tabs-left{
-	margin-right: 10px;
+	padding-right: 10px !important;
 }
 
 .admin-tabs-middle{
-	margin-left:10px;
-	margin-right:10px;
+	padding-left:10px !important;
+	padding-right:10px !important;
 }
 
 .admin-tabs-right{
-	margin-left: 10px;
+	padding-left: 10px !important;
 }
 
 .admin-tabs-active{
