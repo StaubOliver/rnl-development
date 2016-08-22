@@ -964,7 +964,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		if ($int == 2)
 		{
 			$scope.refreshConversionFailed();
-			console.log($scope.conversionFailed);
+			$scope.selectedFossil = '-1';
 		}
 		if ($int == 3)
 		{
@@ -1489,6 +1489,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}
 	}
 
+	$scope.selectedFossil = '-1';
 	$scope.conversionFailed = [];
 
 	$scope.refreshConversionFailed = function()
