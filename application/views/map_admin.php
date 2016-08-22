@@ -77,6 +77,7 @@
 
 			<div class='row no-padding'>
 
+			<div class='col-md-10 col-md-offset-1'>
 
 				<div class='col-md-4 admin-tabs-col'>
 					<h4 class='admin-tabs' ng-class="{'admin-tabs-active':selected_tab == 1}" ng-click='change_tab(1)'>Contributions</h4>
@@ -89,6 +90,8 @@
 				<div class='col-md-4 admin-tabs-col'>
 					<h4 class='admin-tabs' ng-class="{'admin-tabs-active':selected_tab == 3}" ng-click='change_tab(3)'>Collectors</h4>
 				</div>
+
+			</div>
 
 
 			</div>
