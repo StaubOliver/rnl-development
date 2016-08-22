@@ -931,6 +931,7 @@ fieldset[disabled] .btn-custom-default.active {
 
 .admin-tabs-col {
 	text-align: center;
+	padding: 0px! important;
 }
 
 .admin-tabs{
