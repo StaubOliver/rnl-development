@@ -1417,8 +1417,12 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.refreshCollector = function()
 	{
 		$scope.collectors = [];
-		$http.get('/api/map/loadCollector/').success(function(data, status, headers, config){
-			$scope.collectors = data;
+		$http.get('/api/map/loadCollector').success(function(data, status, headers, config){
+			data.forEach(function(item, index)
+			{
+				$scope.collectors.push(item);
+			});
+
 		}).error(function(data, status, headers, config){
 
 			console.log(data);
