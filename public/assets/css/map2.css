@@ -943,23 +943,23 @@ fieldset[disabled] .btn-custom-default.active {
 	padding-bottom: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
-	
+
 	background-color:#FFFFFF;
 	border-radius: 2px;
 	box-shadow: 0px 1px 10px #CCCCCC;
 }
 
 .admin-tabs-left{
-	padding-right: 10px;
+	margin-right: 10px;
 }
 
 .admin-tabs-middle{
-	padding-left:10px;
-	padding-right:10px;
+	margin-left:10px;
+	margin-right:10px;
 }
 
 .admin-tabs-right{
-	padding-left: 10px;
+	margin-left: 10px;
 }
 
 .admin-tabs-active{
