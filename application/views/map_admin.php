@@ -568,14 +568,26 @@
 
 
 					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback'>
-						
-						<select class="form-control" id="collectorSelect1" ng-model="selectedCollector1">
-					         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
-						</select>  
 
-						<select class="form-control" id="collectorSelect2" ng-model="selectedCollector2">
-					         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
-						</select>  
+						<div class='row'>
+						
+							<div class='col-md-5 col-md-offset-1'>
+								
+								<select class="form-control" id="collectorSelect1" ng-model="selectedCollector1">
+							         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
+								</select>  
+
+							</div>
+
+							<div class='col-md-5'>
+
+								<select class="form-control" id="collectorSelect2" ng-model="selectedCollector2">
+							         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
+								</select>  
+
+							</div>
+
+						</div>
 
 					</div>
 
