@@ -79,16 +79,16 @@
 
 				<div class='col-md-10 col-md-offset-1 admin-tabs'>
 
-					<div class='col-md-4 admin-tabs-col '>
-						<h4 class='' ng-class="{'admin-tabs-active':selected_tab == 1}" ng-click='change_tab(1)'>Contributions</h4>
+					<div class='col-md-4 admin-tabs-col' ng-class="{'admin-tabs-active':selected_tab == 1}" ng-click='change_tab(1)'>
+						<h4 class='' >Contributions</h4>
 					</div>
 
-					<div class='col-md-4 admin-tabs-col'>
-						<h4 class='' ng-class="{'admin-tabs-active':selected_tab == 2}" ng-click='change_tab(2)'>Coordinates</h4>
+					<div class='col-md-4 admin-tabs-col' ng-class="{'admin-tabs-active':selected_tab == 2}" ng-click='change_tab(2)'>
+						<h4 class='' >Coordinates</h4>
 					</div>
 
-					<div class='col-md-4 admin-tabs-col'>
-						<h4 class='' ng-class="{'admin-tabs-active':selected_tab == 3}" ng-click='change_tab(3)'>Collectors</h4>
+					<div class='col-md-4 admin-tabs-col' ng-class="{'admin-tabs-active':selected_tab == 3}" ng-click='change_tab(3)'>
+						<h4 class='' '>Collectors</h4>
 					</div>
 
 				</div>
