@@ -1433,9 +1433,12 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		});
 	}
 
+	$scope.errorCollector = "";
+	$scope.successCollector = "";
+
 	$scope.updateCollector = function()
 	{
-		if (selectedCollector1 == '-1')
+		if ($scope.selectedCollector1 == '-1')
 		{
 			$scope.errorCollector = "The first name cannot be empty";
 		}
