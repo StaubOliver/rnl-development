@@ -576,7 +576,7 @@
 							</div>
 							<div class='col-md-4'>
 								
-								<select class="form-control" id="collectorSelect1" ng-model="selectedCollector1" ng-change="selectedCollector1 == '-1' ? newCollector='': newCollector=selectedCollector1">
+								<select class="form-control" id="collectorSelect1" ng-model="selectedCollector1" ng-change="selectedCollector1 == '-1' ? newCollector='': newCollector=selectedCollector1; errorCollector = ''; successCollector=''">
 							         <option value='-1'>Pick a name</option>
 							         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
 								</select>  
@@ -589,7 +589,7 @@
 
 							<div class='col-md-4'>
 
-								<select class="form-control" id="collectorSelect2" ng-model="selectedCollector2">
+								<select class="form-control" id="collectorSelect2" ng-model="selectedCollector2" ng-change="errorCollector = ''; successCollector=''">
 							         <option value='-1'>Optionaly pick a second name</option>
 							         <option ng:repeat="c in collectors" value="{{c}}">{{c}}</option>
 								</select>  
@@ -607,7 +607,7 @@
 							</div>
 							
 							<div class='col-md-7'>
-								<input type="text" class="form-control" placeholder="" ng-model="newCollector">
+								<input type="text" class="form-control" placeholder="" ng-model="newCollector" ng-change="errorCollector = ''; successCollector=''">
 							</div>
 							
 							<div class='col-md-2'>
@@ -620,7 +620,7 @@
 								<h5 class='error'>{{errorCollector}}</h5>
 							</div>
 							<div class='col-md-12' ng-hide='successCollector == ""'>
-								<h5 class='sucess'>{{successCollector}}</h5>
+								<h5 class='success'>{{successCollector}}</h5>
 							</div>
 
 						</div>
