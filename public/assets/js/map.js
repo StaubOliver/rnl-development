@@ -945,6 +945,11 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.selected_tab = 1;
 
+	$scope.change_tab = function($int)
+	{
+		$scope.selected_tab = $int;
+	}
+
 	var url_empty = "/assets/img/star/circle_empty.png";
 	var url_full = "/assets/img/star/circle_full.png";
 	var url_hightlight = "/assets/img/star/circle_highlight.png";
