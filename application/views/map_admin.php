@@ -608,7 +608,7 @@
 							</div>
 							
 							<div class='col-md-1'>
-								<div class='btn btn-custom-primary btn-update-location' ng-click="">
+								<div class='btn btn-custom-primary btn-xs btn-update-location' ng-click="">
 									Save
 								</div>	
 							</div>
