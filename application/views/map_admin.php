@@ -574,13 +574,9 @@
 								</select>  
 							</div>
 
-							<div class='col-md-2' ng-hide="selectedFossilLocation == ''">
-								<h5>Location</h5>
+							<div class='col-md-6' ng-hide="selectedFossilLocation == ''">
+								<h5>Location - {{selectedFossilLocation}}</h5>
 							</div>
-
-							<div class='col-md-4' ng-hide="selectedFossilLocation == ''">
-							 	<h5>{{selectedFossilLocation}}</h5>
-						 	</div>
 
 
 						</div>
