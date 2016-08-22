@@ -1525,9 +1525,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				}
 			}
 
-			$scope.newLat = "";
-			$scope.newLng = "";
-
 			var mapOpt = {
 			    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
 			    zoom:3,
@@ -1541,10 +1538,12 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			map = new google.maps.Map(document.getElementById("map-conversionFailed"),mapOpt);
 
 			map.addListener("click", function(event){
+
 				console.log(event.latLng.lat());
 				$scope.newLat = event.latLng.lat();
 			    $scope.newLng = event.latLng.lng();
 			    console.log($scope.newLng);
+
 				if (marker != null){
 					marker.setMap(null);
 					marker = null;
