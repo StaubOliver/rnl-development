@@ -74,446 +74,473 @@
 	<div class=container>
 
 		<div class='container-fluid'>
+
+			<div class='row'>
+
+				<div class='col-md-4 admin-title'>
+					<h4>Contributions</h4>
+				</div>
+
+				<div class='col-md-4 admin-title'>
+					<h4>Coordinates</h4>
+				</div>
+
+				<div class='col-md-4 admin-title'>
+					<h4>Collectors</h4>
+				</div>
+
+
+			</div>
+
 			<div class='row'>
 
 
-				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title'>
-					<h4>Update location - <?php echo $location_update." fossils to update" ?> </h4>
-				</div>
+				<div class='tab_markers'>
 
-				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback update-info'>
-					<div class='row'>
+					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title'>
+						<h4>Update location - <?php echo $location_update." fossils to update" ?> </h4>
+					</div>
 
-						<div class='col-md-3 col-sm-4 col-xs-12'>
-							<div class='btn btn-custom-primary btn-xl btn-update-location' ng-click="update_location()">
-								Update Locations
-							</div>	
-						</div>
-						
-						<div class='col-md-9 col-sm-8 col-xs-12'>	
-						<p class='p-update-location'>
-							Use this button to use the Google Maps api to translate the country and place information for each fossil into coordinates. Limit: 1000 items per 24 hours.
-						</p>
-						</div>
-
-						<div class='col-md-12 col-sm-12 col-xs-12 admin-update-notice' ng-show='show_update_notice'>
-							<h5 id='updateLocationNotice'>The Update process is ongoing. It will take a while however this window can be closed.</h5>
-						</div>
-
-						<div class='col-md-12 col-sm-12 col-xs-12 admin-update-notice' ng-show='showUpdateError'>
-							<h5 id='updateLocationError'>The Update process is ongoing. It will take a while however this window can be closed.</h5>
-						</div>
-
-					</div>	
-				</div>
-
-				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title'>
-					<h4><?php echo 'Feedbacks - '.count($feedbacks).' feedbacks recorded'; ?></h4>
-				</div>
-
-
-				<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
-
-					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12' ng-class="{'admin-feedback':feedback.hidden==0, 'admin-feedback-hidden':feedback.hidden==1}">
-				
+					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback update-info'>
 						<div class='row'>
 
-						<!--
-							<div class="col-md-12 " id="map-{{feedback.feedback_id}}" ng-class="{'map-admin':show_map[feedback.feedback_id], 
-							'map-admin-hidden':!show_map[feedback.feedback_id]}">
+							<div class='col-md-3 col-sm-4 col-xs-12'>
+								<div class='btn btn-custom-primary btn-xl btn-update-location' ng-click="update_location()">
+									Update Locations
+								</div>	
 							</div>
-						-->
-
-							<div id ='map-{{feedback.feedback_id}}' class='col-md-12 col-sm-12 col-xs-12 map-admin'>
+							
+							<div class='col-md-9 col-sm-8 col-xs-12'>	
+							<p class='p-update-location'>
+								Use this button to use the Google Maps api to translate the country and place information for each fossil into coordinates. Limit: 1000 items per 24 hours.
+							</p>
 							</div>
 
-							<div class='col-md-12 col-sm-12 col-xs-12 admin-message-head'>
-								<div class='row'>
+							<div class='col-md-12 col-sm-12 col-xs-12 admin-update-notice' ng-show='show_update_notice'>
+								<h5 id='updateLocationNotice'>The Update process is ongoing. It will take a while however this window can be closed.</h5>
+							</div>
 
-									<div class='col-md-8 col-sm-6 col-xs-12'>
-										{{feedback["first_name"]}} {{feedback["last_name"]}}
-										on
-										{{feedback['time']}}
+							<div class='col-md-12 col-sm-12 col-xs-12 admin-update-notice' ng-show='showUpdateError'>
+								<h5 id='updateLocationError'>The Update process is ongoing. It will take a while however this window can be closed.</h5>
+							</div>
+
+						</div>	
+					</div>
+
+				</div>
+
+				<div class='tab_contribution'>
+
+					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title'>
+						<h4><?php echo 'Feedbacks - '.count($feedbacks).' feedbacks recorded'; ?></h4>
+					</div>
+
+
+					<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
+
+						<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12' ng-class="{'admin-feedback':feedback.hidden==0, 'admin-feedback-hidden':feedback.hidden==1}">
+					
+							<div class='row'>
+
+							<!--
+								<div class="col-md-12 " id="map-{{feedback.feedback_id}}" ng-class="{'map-admin':show_map[feedback.feedback_id], 
+								'map-admin-hidden':!show_map[feedback.feedback_id]}">
+								</div>
+							-->
+
+								<div id ='map-{{feedback.feedback_id}}' class='col-md-12 col-sm-12 col-xs-12 map-admin'>
+								</div>
+
+								<div class='col-md-12 col-sm-12 col-xs-12 admin-message-head'>
+									<div class='row'>
+
+										<div class='col-md-8 col-sm-6 col-xs-12'>
+											{{feedback["first_name"]}} {{feedback["last_name"]}}
+											on
+											{{feedback['time']}}
+										</div>
+
+										<div class='col-md-2 col-sm-3 col-xs-6 no-margin'>
+											<div class='col-md-12 col-sm-6 col-xs-6 no-margin' ng-show="!show_map[feedback.feedback_id]">
+												<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id)'><span class="glyphicon glyphicon-chevron-up"></span> Show the map</div>
+											</div>
+
+											<div class='col-md-12 col-sm-6 col-xs-6 no-margin' ng-show="show_map[feedback.feedback_id]">
+												<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='hideMap(feedback.feedback_id)'><span class="glyphicon glyphicon-chevron-down"></span> Hide the map</div>
+											</div>
+										</div>
+
+										<div class='col-md-2 col-sm-3 col-xs-6 no-margin'>
+
+											<div class='col-md-12 col-sm-6 col-xs-6 no-margin' ng-show="feedback.hidden == 0">
+												<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide' ng-click="hideComment(feedback.feedback_id)">Hide comment</div>	
+											</div>
+
+											<div class='col-md-12 col-sm-6 col-xs-6 no-margin' ng-show="feedback.hidden == 1">
+												<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide' ng-click="hideComment(feedback.feedback_id)">Unhide comment</div>	
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+
+								<div class='col-md-8 col-sm-6 col-xs-12 admin-feedback-vertical-ligne'>
+
+									<div class='row'>
+										
+										<!--<div class='col-md-12'>
+											{{feedback["first_name"]}} {{feedback["last_name"]}}
+											on
+											{{feedback['time']}}
+										</div>
+										-->
+
+										<div class='col-md-12 col-sm-12 col-xs-12'>
+											<div class='well well-sm well-message'>
+												<strong>
+													{{feedback['message']}}
+												</strong>
+											</div>
+										</div>
+
+										<div class='col-md-4 col-sm-4 col-xs-4'>
+											{{feedback['upvote']}} upvotes
+										</div>
+
+										<div class='col-md-4 col-sm-4 col-xs-4'>
+											Filter
+										</div>
+
+										<div class='col-md-4 col-sm-4 col-xs-4'>
+											Geological Age
+										</div>
+
+										<div class='col-md-4 col-sm-4 col-xs-4'>
+											{{feedback.selection.length}} fossils selected
+										</div>
+
+										<div class='col-md-4 col-sm-4 col-xs-4'>
+											<div ng-show="feedback['genus']==-1">
+												Genus: All
+											</div>
+											<div ng-show="feedback['genus']!=-1">
+												Genus: {{feedback['genus']}}
+											</div>
+										</div>
+										
+										<div class='col-md-4 col-sm-4 col-xs-4' >
+											From: {{feedback['age_min']}}
+										</div>
+
+										<div class='col-md-4 col-sm-4 col-xs-4' ng-show='feedback.replies.length == 0'>
+											0 replies
+										</div>
+
+										<div class='col-md-4 col-sm-4 col-xs-4' ng-show='feedback.replies.length > 0'>
+											<div class='btn btn-custom-default btn-xs btn-admin ' data-toggle='collapse' data-target='#{{feedback.feedback_id}}' aria-expanded="false" aria-controls='{{feedback.feedback_id}}' ng-click='show_replies(feedback.feedback_id)'><span class="glyphicon glyphicon-chevron-down"></span> Show {{feedback.replies.length}} replies</div>
+										</div>
+
+										<div class='col-md-4 col-sm-4 col-xs-4'>
+											<div ng-show="feedback['collector']==-1">
+												Collector: All
+											</div>
+											<div ng-show="feedback['collector']!=-1">
+												Collector: {{feedback['collector']}}
+											</div>
+										</div>
+
+										<div class='col-md-4 col-sm-4 col-xs-4'>
+											To: {{feedback['age_max']}}
+										</div>
+
+										
+
+										
+
+										
+
+										<!--
+										<div class='col-md-12 admin-feedback-tool'>
+											<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See on the map</div>
+											<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
+											
+										</div>
+										-->
+
 									</div>
 
-									<div class='col-md-2 col-sm-3 col-xs-6 no-margin'>
-										<div class='col-md-12 col-sm-6 col-xs-6 no-margin' ng-show="!show_map[feedback.feedback_id]">
+								</div>
+
+								<!--
+
+								<div class='col-md-2'>
+									<div class='row'>
+
+										<div class='col-md-12' ng-show="!show_map[feedback.feedback_id]">
 											<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id)'><span class="glyphicon glyphicon-chevron-up"></span> Show the map</div>
 										</div>
 
-										<div class='col-md-12 col-sm-6 col-xs-6 no-margin' ng-show="show_map[feedback.feedback_id]">
+										<div class='col-md-12' ng-show="show_map[feedback.feedback_id]">
 											<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='hideMap(feedback.feedback_id)'><span class="glyphicon glyphicon-chevron-down"></span> Hide the map</div>
 										</div>
-									</div>
 
-									<div class='col-md-2 col-sm-3 col-xs-6 no-margin'>
-
-										<div class='col-md-12 col-sm-6 col-xs-6 no-margin' ng-show="feedback.hidden == 0">
+										<div class='col-md-12' ng-show="feedback.hidden == 0">
 											<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide' ng-click="hideComment(feedback.feedback_id)">Hide comment</div>	
 										</div>
 
-										<div class='col-md-12 col-sm-6 col-xs-6 no-margin' ng-show="feedback.hidden == 1">
+										<div class='col-md-12' ng-show="feedback.hidden == 1">
 											<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide' ng-click="hideComment(feedback.feedback_id)">Unhide comment</div>	
 										</div>
 
 									</div>
-
 								</div>
-							</div>
+								-->
 
-							<div class='col-md-8 col-sm-6 col-xs-12 admin-feedback-vertical-ligne'>
+								<div class='col-md-4 col-sm-6 col-xs-12'>
+									<div class='row'>
 
-								<div class='row'>
-									
-									<!--<div class='col-md-12'>
-										{{feedback["first_name"]}} {{feedback["last_name"]}}
-										on
-										{{feedback['time']}}
-									</div>
-									-->
-
-									<div class='col-md-12 col-sm-12 col-xs-12'>
-										<div class='well well-sm well-message'>
-											<strong>
-												{{feedback['message']}}
-											</strong>
-										</div>
-									</div>
-
-									<div class='col-md-4 col-sm-4 col-xs-4'>
-										{{feedback['upvote']}} upvotes
-									</div>
-
-									<div class='col-md-4 col-sm-4 col-xs-4'>
-										Filter
-									</div>
-
-									<div class='col-md-4 col-sm-4 col-xs-4'>
-										Geological Age
-									</div>
-
-									<div class='col-md-4 col-sm-4 col-xs-4'>
-										{{feedback.selection.length}} fossils selected
-									</div>
-
-									<div class='col-md-4 col-sm-4 col-xs-4'>
-										<div ng-show="feedback['genus']==-1">
-											Genus: All
-										</div>
-										<div ng-show="feedback['genus']!=-1">
-											Genus: {{feedback['genus']}}
-										</div>
-									</div>
-									
-									<div class='col-md-4 col-sm-4 col-xs-4' >
-										From: {{feedback['age_min']}}
-									</div>
-
-									<div class='col-md-4 col-sm-4 col-xs-4' ng-show='feedback.replies.length == 0'>
-										0 replies
-									</div>
-
-									<div class='col-md-4 col-sm-4 col-xs-4' ng-show='feedback.replies.length > 0'>
-										<div class='btn btn-custom-default btn-xs btn-admin ' data-toggle='collapse' data-target='#{{feedback.feedback_id}}' aria-expanded="false" aria-controls='{{feedback.feedback_id}}' ng-click='show_replies(feedback.feedback_id)'><span class="glyphicon glyphicon-chevron-down"></span> Show {{feedback.replies.length}} replies</div>
-									</div>
-
-									<div class='col-md-4 col-sm-4 col-xs-4'>
-										<div ng-show="feedback['collector']==-1">
-											Collector: All
-										</div>
-										<div ng-show="feedback['collector']!=-1">
-											Collector: {{feedback['collector']}}
-										</div>
-									</div>
-
-									<div class='col-md-4 col-sm-4 col-xs-4'>
-										To: {{feedback['age_max']}}
-									</div>
-
-									
-
-									
-
-									
-
-									<!--
-									<div class='col-md-12 admin-feedback-tool'>
-										<div class='btn btn-custom-default btn-sm' ng-click='showMap(feedback.feedback_id, 0)'>See on the map</div>
-										<div class='btn btn-custom-primary btn-sm'>Delete comment</div>	
-										
-									</div>
-									-->
-
-								</div>
-
-							</div>
-
-							<!--
-
-							<div class='col-md-2'>
-								<div class='row'>
-
-									<div class='col-md-12' ng-show="!show_map[feedback.feedback_id]">
-										<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id)'><span class="glyphicon glyphicon-chevron-up"></span> Show the map</div>
-									</div>
-
-									<div class='col-md-12' ng-show="show_map[feedback.feedback_id]">
-										<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='hideMap(feedback.feedback_id)'><span class="glyphicon glyphicon-chevron-down"></span> Hide the map</div>
-									</div>
-
-									<div class='col-md-12' ng-show="feedback.hidden == 0">
-										<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide' ng-click="hideComment(feedback.feedback_id)">Hide comment</div>	
-									</div>
-
-									<div class='col-md-12' ng-show="feedback.hidden == 1">
-										<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide' ng-click="hideComment(feedback.feedback_id)">Unhide comment</div>	
-									</div>
-
-								</div>
-							</div>
-							-->
-
-							<div class='col-md-4 col-sm-6 col-xs-12'>
-								<div class='row'>
-
-									<div class='col-md-12 col-sm-12 col-xs-12'>
-										Contribution rating
-									</div>
-
-									<!-- rating incorrect - correct -->
-									<div class="row rating-correctness">
-										<div class="col-md-6 col-sm-6 col-xs-6 rating-left">
-											<div class='rating-btn-left' ng-click="rating_click(feedback['feedback_id'], 1, 1)">Incorrect<img class='rating-btn-img rating-btn-img-left' ng-src="{{rating_img[feedback['feedback_id']][1]}}"></div>
-
+										<div class='col-md-12 col-sm-12 col-xs-12'>
+											Contribution rating
 										</div>
 
-										<div class="col-md-6 col-sm-6 col-xs-6 rating-right">
-											<div class='rating-btn-right' ng-click="rating_click(feedback['feedback_id'], 1, 2)"> <img class='rating-btn-img rating-btn-img-right' ng-src="{{rating_img[feedback['feedback_id']][2]}}">Correct</div>
-										</div>
-									</div>
+										<!-- rating incorrect - correct -->
+										<div class="row rating-correctness">
+											<div class="col-md-6 col-sm-6 col-xs-6 rating-left">
+												<div class='rating-btn-left' ng-click="rating_click(feedback['feedback_id'], 1, 1)">Incorrect<img class='rating-btn-img rating-btn-img-left' ng-src="{{rating_img[feedback['feedback_id']][1]}}"></div>
 
-									<!-- rating known fact - new discovery -->
-									<div class="row rating-discovery">
-										<div class="col-md-6 col-sm-6 col-xs-6 rating-left">
-											<div class='rating-btn-left' ng-click="rating_click(feedback['feedback_id'], 2, 1)">Known Fact<img class='rating-btn-img  rating-btn-img-left' src="{{rating_img[feedback['feedback_id']][3]}}"></div>
-
-										</div>
-
-										<div class="col-md-6 col-sm-6 col-xs-6 rating-right">
-											<div class='rating-btn-right' ng-click="rating_click(feedback['feedback_id'], 2, 2)"> <img class='rating-btn-img rating-btn-img-right' src="{{rating_img[feedback['feedback_id']][4]}}">New Discovery</div>
-										</div>
-									</div>
-
-									<!-- rating unrelevant - relevant -->
-									<div class="row">
-										<div class="col-md-6 col-sm-6 col-xs-6 rating-left">
-											<div class='rating-btn-left' ng-click="rating_click(feedback['feedback_id'], 3, 1)">Unrelevant<img class='rating-btn-img rating-btn-img-left' src="{{rating_img[feedback['feedback_id']][5]}}"></div>
-
-										</div>
-
-										<div class="col-md-6 col-sm-6 col-xs-6 rating-right">
-											<div class='rating-btn-right' ng-click="rating_click(feedback['feedback_id'], 3, 2)"> <img class='rating-btn-img rating-btn-img-right' src="{{rating_img[feedback['feedback_id']][6]}}">Revelant</div>
-										</div>
-									</div>
-
-								</div>
-
-							</div>
-
-
-						</div>
-					</div>
-
-					<!-- replies -->
-
-					<div class='collapse' id='{{feedback.feedback_id}}'>
-						
-						<div ng-repeat='rep in feedback.replies' ng-show='feedback.replies.length'>
-
-							<div class='col-md-10 col-sm-12 col-xs-12 col-md-offset-1' ng-class="{'admin-feedback-reply':rep.hidden==0, 'admin-feedback-reply-hidden':rep.hidden==1||feedback.hidden==1}">
-
-								<div class='row'>
-
-									<div class='col-md-12 col-sm-12 col-xs-12 admin-message-head'>
-										<div class='row'>
-
-											<div class='col-md-10 '>
-												{{feedback["first_name"]}} {{feedback["last_name"]}}
-												on
-												{{feedback['time']}}
 											</div>
 
-											<div class='col-md-2 no-margin'>
+											<div class="col-md-6 col-sm-6 col-xs-6 rating-right">
+												<div class='rating-btn-right' ng-click="rating_click(feedback['feedback_id'], 1, 2)"> <img class='rating-btn-img rating-btn-img-right' ng-src="{{rating_img[feedback['feedback_id']][2]}}">Correct</div>
+											</div>
+										</div>
+
+										<!-- rating known fact - new discovery -->
+										<div class="row rating-discovery">
+											<div class="col-md-6 col-sm-6 col-xs-6 rating-left">
+												<div class='rating-btn-left' ng-click="rating_click(feedback['feedback_id'], 2, 1)">Known Fact<img class='rating-btn-img  rating-btn-img-left' src="{{rating_img[feedback['feedback_id']][3]}}"></div>
+
+											</div>
+
+											<div class="col-md-6 col-sm-6 col-xs-6 rating-right">
+												<div class='rating-btn-right' ng-click="rating_click(feedback['feedback_id'], 2, 2)"> <img class='rating-btn-img rating-btn-img-right' src="{{rating_img[feedback['feedback_id']][4]}}">New Discovery</div>
+											</div>
+										</div>
+
+										<!-- rating unrelevant - relevant -->
+										<div class="row">
+											<div class="col-md-6 col-sm-6 col-xs-6 rating-left">
+												<div class='rating-btn-left' ng-click="rating_click(feedback['feedback_id'], 3, 1)">Unrelevant<img class='rating-btn-img rating-btn-img-left' src="{{rating_img[feedback['feedback_id']][5]}}"></div>
+
+											</div>
+
+											<div class="col-md-6 col-sm-6 col-xs-6 rating-right">
+												<div class='rating-btn-right' ng-click="rating_click(feedback['feedback_id'], 3, 2)"> <img class='rating-btn-img rating-btn-img-right' src="{{rating_img[feedback['feedback_id']][6]}}">Revelant</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+
+
+							</div>
+						</div>
+
+						<!-- replies -->
+
+						<div class='collapse' id='{{feedback.feedback_id}}'>
+							
+							<div ng-repeat='rep in feedback.replies' ng-show='feedback.replies.length'>
+
+								<div class='col-md-10 col-sm-12 col-xs-12 col-md-offset-1' ng-class="{'admin-feedback-reply':rep.hidden==0, 'admin-feedback-reply-hidden':rep.hidden==1||feedback.hidden==1}">
+
+									<div class='row'>
+
+										<div class='col-md-12 col-sm-12 col-xs-12 admin-message-head'>
+											<div class='row'>
+
+												<div class='col-md-10 '>
+													{{feedback["first_name"]}} {{feedback["last_name"]}}
+													on
+													{{feedback['time']}}
+												</div>
+
+												<div class='col-md-2 no-margin'>
+													
+													<div class='col-md-12 no-margin' ng-show="rep.hidden == 0">
+														<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide-reply' ng-click="hideComment(rep.feedback_id)">Hide comment</div>	
+													</div>
+
+													<div class='col-md-12 no-margin' ng-show="rep.hidden == 1">
+														<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide-reply' ng-click="hideComment(rep.feedback_id)">Unhide comment</div>	
+													</div>
+
+												</div>
+
+											</div>
+										</div>
+
+										<div class='col-md-8 admin-feedback-vertical-ligne'>
+
+											<div class='row'>
+
+												<div class='col-md-12'>
+													<div class='well well-sm well-message'>
+														<strong>
+															{{rep['message']}}
+														</strong>
+													</div>
+												</div>
+
+												<div class='col-md-12'>
+													{{rep['upvote']}} upvotes
+												</div>
+
+												<!--
+
+												<div class='col-md-4'>
+													Filter
+												</div>
+
+												<div class='col-md-4'>
+													Geological Age
+												</div>
+
+
+												<div class='col-md-4'>
+												</div>
+
+												<div class='col-md-4'>
+													<div ng-show="rep['genus']==-1">
+														Genus: All
+													</div>
+													<div ng-show="rep['genus']!=-1">
+														Genus: {{rep['genus']}}
+													</div>
+												</div>
+
+
+
+
 												
-												<div class='col-md-12 no-margin' ng-show="rep.hidden == 0">
+
+												<div class='col-md-4'>
+												From: {{rep['age_min']}}
+												</div>
+
+												<div class='col-md-4'>
+												</div>
+
+												<div class='col-md-4'>
+													<div ng-show="rep['genus']==-1">
+														Collector: All
+													</div>
+													<div ng-show="rep['genus']!=-1">
+														Collector: {{rep['collector']}}
+													</div>
+												</div>
+
+
+												<div class='col-md-4'>
+													To: {{rep['age_max']}}
+												</div>
+												
+												
+
+												
+												<div class='col-md-4'>
+													{{rep['upvote']}} upvotes
+												</div>
+												-->
+
+											</div>
+										</div>
+
+										<!--
+
+										<div class='col-md-2'>
+											<div class='row'>
+
+											
+												<div class='col-md-12'>
+													<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id, rep.feedback_id)'>See on the map</div>
+												</div>
+												
+
+												<div class='col-md-12' ng-show="rep.hidden == 0">
 													<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide-reply' ng-click="hideComment(rep.feedback_id)">Hide comment</div>	
 												</div>
 
-												<div class='col-md-12 no-margin' ng-show="rep.hidden == 1">
+												<div class='col-md-12' ng-show="rep.hidden == 1">
 													<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide-reply' ng-click="hideComment(rep.feedback_id)">Unhide comment</div>	
 												</div>
 
 											</div>
-
 										</div>
-									</div>
 
-									<div class='col-md-8 admin-feedback-vertical-ligne'>
+										-->
 
-										<div class='row'>
-
-											<div class='col-md-12'>
-												<div class='well well-sm well-message'>
-													<strong>
-														{{rep['message']}}
-													</strong>
-												</div>
-											</div>
-
-											<div class='col-md-12'>
-												{{rep['upvote']}} upvotes
-											</div>
-
-											<!--
-
-											<div class='col-md-4'>
-												Filter
-											</div>
-
-											<div class='col-md-4'>
-												Geological Age
-											</div>
+		
 
 
-											<div class='col-md-4'>
-											</div>
+										<div class='col-md-4'>
 
-											<div class='col-md-4'>
-												<div ng-show="rep['genus']==-1">
-													Genus: All
-												</div>
-												<div ng-show="rep['genus']!=-1">
-													Genus: {{rep['genus']}}
-												</div>
-											</div>
+											<div class='row'>
 
-
-
-
-											
-
-											<div class='col-md-4'>
-											From: {{rep['age_min']}}
-											</div>
-
-											<div class='col-md-4'>
-											</div>
-
-											<div class='col-md-4'>
-												<div ng-show="rep['genus']==-1">
-													Collector: All
-												</div>
-												<div ng-show="rep['genus']!=-1">
-													Collector: {{rep['collector']}}
-												</div>
-											</div>
-
-
-											<div class='col-md-4'>
-												To: {{rep['age_max']}}
-											</div>
-											
-											
-
-											
-											<div class='col-md-4'>
-												{{rep['upvote']}} upvotes
-											</div>
-											-->
-
-										</div>
-									</div>
-
-									<!--
-
-									<div class='col-md-2'>
-										<div class='row'>
-
-										
-											<div class='col-md-12'>
-												<div class='btn btn-custom-default btn-xs btn-admin btn-admin-map' ng-click='showMap(feedback.feedback_id, rep.feedback_id)'>See on the map</div>
-											</div>
-											
-
-											<div class='col-md-12' ng-show="rep.hidden == 0">
-												<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide-reply' ng-click="hideComment(rep.feedback_id)">Hide comment</div>	
-											</div>
-
-											<div class='col-md-12' ng-show="rep.hidden == 1">
-												<div class='btn btn-custom-primary btn-xs btn-admin btn-admin-hide-reply' ng-click="hideComment(rep.feedback_id)">Unhide comment</div>	
-											</div>
-
-										</div>
-									</div>
-
-									-->
-
-	
-
-
-									<div class='col-md-4'>
-
-										<div class='row'>
-
-											<div class='col-md-12'>
-												Contribution rating
-											</div>
-
-											<!-- rating incorrect - correct -->
-											<div class="row rating-correctness">
-												<div class="col-md-6 rating-left">
-													<div class='rating-btn-left' ng-click="rating_click(rep['feedback_id'], 1, 1)">Incorrect<img class='rating-btn-img rating-btn-img-left' ng-src="{{rating_img[rep['feedback_id']][1]}}"></div>
-
+												<div class='col-md-12'>
+													Contribution rating
 												</div>
 
-												<div class="col-md-6 rating-right">
-													<div class='rating-btn-right' ng-click="rating_click(rep['feedback_id'], 1, 2)"> <img class='rating-btn-img rating-btn-img-right' ng-src="{{rating_img[rep['feedback_id']][2]}}">Correct</div>
-												</div>
-											</div>
+												<!-- rating incorrect - correct -->
+												<div class="row rating-correctness">
+													<div class="col-md-6 rating-left">
+														<div class='rating-btn-left' ng-click="rating_click(rep['feedback_id'], 1, 1)">Incorrect<img class='rating-btn-img rating-btn-img-left' ng-src="{{rating_img[rep['feedback_id']][1]}}"></div>
 
-											<!-- rating known fact - new discovery -->
-											<div class="row rating-discovery">
-												<div class="col-md-6 rating-left">
-													<div class='rating-btn-left' ng-click="rating_click(rep['feedback_id'], 2, 1)">Known Fact<img class='rating-btn-img  rating-btn-img-left' src="{{rating_img[rep['feedback_id']][3]}}"></div>
+													</div>
 
-												</div>
-
-												<div class="col-md-6 rating-right">
-													<div class='rating-btn-right' ng-click="rating_click(rep['feedback_id'], 2, 2)"> <img class='rating-btn-img rating-btn-img-right' src="{{rating_img[rep['feedback_id']][4]}}">New Discovery</div>
-												</div>
-											</div>
-
-											<!-- rating unrelevant - relevant -->
-											<div class="row">
-												<div class="col-md-6 rating-left">
-													<div class='rating-btn-left' ng-click="rating_click(rep['feedback_id'], 3, 1)">Unrelevant<img class='rating-btn-img rating-btn-img-left' src="{{rating_img[rep['feedback_id']][5]}}"></div>
-
+													<div class="col-md-6 rating-right">
+														<div class='rating-btn-right' ng-click="rating_click(rep['feedback_id'], 1, 2)"> <img class='rating-btn-img rating-btn-img-right' ng-src="{{rating_img[rep['feedback_id']][2]}}">Correct</div>
+													</div>
 												</div>
 
-												<div class="col-md-6 rating-right">
-													<div class='rating-btn-right' ng-click="rating_click(rep['feedback_id'], 3, 2)"> <img class='rating-btn-img rating-btn-img-right' src="{{rating_img[rep['feedback_id']][6]}}">Revelant</div>
+												<!-- rating known fact - new discovery -->
+												<div class="row rating-discovery">
+													<div class="col-md-6 rating-left">
+														<div class='rating-btn-left' ng-click="rating_click(rep['feedback_id'], 2, 1)">Known Fact<img class='rating-btn-img  rating-btn-img-left' src="{{rating_img[rep['feedback_id']][3]}}"></div>
+
+													</div>
+
+													<div class="col-md-6 rating-right">
+														<div class='rating-btn-right' ng-click="rating_click(rep['feedback_id'], 2, 2)"> <img class='rating-btn-img rating-btn-img-right' src="{{rating_img[rep['feedback_id']][4]}}">New Discovery</div>
+													</div>
 												</div>
+
+												<!-- rating unrelevant - relevant -->
+												<div class="row">
+													<div class="col-md-6 rating-left">
+														<div class='rating-btn-left' ng-click="rating_click(rep['feedback_id'], 3, 1)">Unrelevant<img class='rating-btn-img rating-btn-img-left' src="{{rating_img[rep['feedback_id']][5]}}"></div>
+
+													</div>
+
+													<div class="col-md-6 rating-right">
+														<div class='rating-btn-right' ng-click="rating_click(rep['feedback_id'], 3, 2)"> <img class='rating-btn-img rating-btn-img-right' src="{{rating_img[rep['feedback_id']][6]}}">Revelant</div>
+													</div>
+												</div>
+
 											</div>
 
 										</div>
 
-									</div>
 
+									</div>
 
 								</div>
-
 							</div>
 						</div>
+
+
 					</div>
 
 
