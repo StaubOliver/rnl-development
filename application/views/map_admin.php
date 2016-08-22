@@ -77,15 +77,15 @@
 
 			<div class='row'>
 
-				<div class='col-md-4 admin-title'>
+				<div class='col-md-4 admin-tabs'>
 					<h4>Contributions</h4>
 				</div>
 
-				<div class='col-md-4 admin-title'>
+				<div class='col-md-4 admin-tabs'>
 					<h4>Coordinates</h4>
 				</div>
 
-				<div class='col-md-4 admin-title'>
+				<div class='col-md-4 admin-tabs'>
 					<h4>Collectors</h4>
 				</div>
 
