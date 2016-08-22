@@ -1487,6 +1487,24 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			}
 		}
 	}
+
+	$scope.conversionFailed = [];
+
+	$scope.refreshConversionFailed = function()
+	{
+		$scope.conversionFailed = [];
+		$http.get('/api/map/loadFailedConversions').success(function(data, status, headers, config){
+			data.forEach(function(item, index)
+			{
+				$scope.conversionFailed.push(item);
+			});
+
+		}).error(function(data, status, headers, config){
+			console.log(data);
+		});
+	}
+
+
 });
 
 
