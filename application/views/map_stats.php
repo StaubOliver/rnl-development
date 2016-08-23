@@ -622,7 +622,7 @@
 							<div class='col-md-2 col-sm-4 col-xs-8'>
 								Range
 							</div>
-							<div class='col-md-2 col-sm-2 col-xs-4'>
+							<div class='col-md-1 col-sm-2 col-xs-4'>
 								Persons
 							</div>
 							<div class='col-md-2 col-sm-4 col-xs-8'>
