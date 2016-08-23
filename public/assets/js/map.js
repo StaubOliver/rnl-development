@@ -1654,9 +1654,9 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 					histogram: 
 					{ 
-						bucketSize: 100,
+						bucketSize: 10,
 						hideBucketItems: true, 
-						maxNumBuckets: 75
+						maxNumBuckets: 80
 					},
 
 					chartArea:
