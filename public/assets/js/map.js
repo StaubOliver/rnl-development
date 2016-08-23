@@ -1523,6 +1523,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			marker.setMap(null);
 			marker = null;
 		}
+
 		marker = new google.maps.Marker({
 	        position: position, 
 	        map: map, 
@@ -1650,7 +1651,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 			    var options = {
 					legend: { position: 'none' }, 
 					colors: ['212a33'],
-					histogram: { bucketSize: 10 },
+					histogram: { bucketSize: 20 },
 					chartArea:{left:40,top:10,width:'100%',height:'350'}
 					/*vAxis: {
 						ticks: [0, 10, 20, 30, 40, 50, 60, 70]
