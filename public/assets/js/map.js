@@ -1669,6 +1669,10 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 						top:10,
 						width:'100%',
 						height:'350'
+					},
+
+					hAxis: {
+						ticks: [0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
 					}
 
 					/*vAxis: {
