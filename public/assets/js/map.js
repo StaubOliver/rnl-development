@@ -1656,8 +1656,12 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 					{ 
 						bucketSize: 10,
 						hideBucketItems: true, 
-						maxNumBuckets: 80
+						maxNumBuckets: 80,
+						minValue: 0,
+						maxValue: 1000
 					},
+
+					bar: { gap: 0 },
 
 					chartArea:
 					{
