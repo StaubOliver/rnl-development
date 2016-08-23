@@ -1510,9 +1510,24 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}).error(function(data, status, headers, config){
 			console.log(data);
 		});
+	}
 
+	function click_on_map(position)
+	{
+		console.log(event.latLng.lat());
+		$scope.newLat = event.latLng.lat();
+	    $scope.newLng = event.latLng.lng();
+	    console.log($scope.newLng);
 
-
+		if (marker != null){
+			marker.setMap(null);
+			marker = null;
+		}
+		marker = new google.maps.Marker({
+	        position: event.latLng, 
+	        map: map, 
+	        icon: pin_selected
+	    });
 	}
 
 	$scope.changeConversionFailed = function(){
@@ -1539,21 +1554,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 			map.addListener("click", function(event){
 
-				console.log(event.latLng.lat());
-				$scope.newLat = event.latLng.lat();
-			    $scope.newLng = event.latLng.lng();
-			    console.log($scope.newLng);
-
-				if (marker != null){
-					marker.setMap(null);
-					marker = null;
-				}
-				marker = new google.maps.Marker({
-			        position: event.latLng, 
-			        map: map, 
-			        icon: pin_selected
-			    });
-			    console.log($scope.newLng);
+				click_on_map(event.latLng);
+				
 			    
 			});
 
