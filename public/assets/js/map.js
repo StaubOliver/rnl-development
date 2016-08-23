@@ -1514,9 +1514,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	function click_on_map(position)
 	{
-		console.log(event.latLng.lat());
-		$scope.newLat = event.latLng.lat();
-	    $scope.newLng = event.latLng.lng();
+		console.log(position.lat());
+		$scope.newLat = position.lat();
+	    $scope.newLng = position.lng();
 	    console.log($scope.newLng);
 
 		if (marker != null){
@@ -1524,7 +1524,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			marker = null;
 		}
 		marker = new google.maps.Marker({
-	        position: event.latLng, 
+	        position: position, 
 	        map: map, 
 	        icon: pin_selected
 	    });
