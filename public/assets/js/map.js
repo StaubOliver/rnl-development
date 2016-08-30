@@ -241,6 +241,26 @@ var map = angular.module('map', ['rzModule'])
 			} else {
 				$scope.text_select_btn = "Deselect this fossil";
 			}
+
+			var buttons ="";
+
+			if (admin)
+			{
+				buttons = 
+						"<div class='col-md-6 col-sm-6 col-xs-6'>"
+							+ "<div class='btn btn-custom-primary btn-sm' ng-click='click_on_marker_for_selection("+info['id']+");'>{{text_select_btn}}</div>"
+						+ "</div>"
+						+ "<div class='col-md-6 col-sm-6 col-xs-6'>"
+							+ "<a class='btn btn-custom-primary btn-sm' href='/map/map_admin/"+info['id']+"''>Edit Locations</div>"
+						+ "</a>";
+			}
+			else
+			{
+				buttons = "<div class='col-md-12 col-sm-12 col-xs-12'>"
+								+ "<div class='btn btn-custom-primary btn-sm' ng-click='click_on_marker_for_selection("+info['id']+");'>{{text_select_btn}}</div>"
+							+ "</div>";
+			}
+
 			var content =
 			"<div class='container-fluid map-infowindow'>"
 				+ "<div class='row'>"
