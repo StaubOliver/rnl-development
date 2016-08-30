@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" ng-app='map_admin'>
+<html lang="en" ng-app='map_admin'
+
+<?php
+	echo 'ng-init = "selected_tab=\''.$tab.'\'"';
+?>
+
+
+>
 
 <head>
 	<!-- Metadata -->
@@ -574,11 +581,11 @@
 								</select>  
 							</div>
 
-							<div class='col-md-6' ng-hide="selectedFossil== '-1'">
+							<div class='col-md-6' ng-hide="selectedFossil == '-1'">
 								<h5>Location - {{selectedFossilLocation}}</h5>
 							</div>
 
-							<div class='col-md-12' ng-show="newLat=='' && newLng==''">
+							<div class='col-md-12' ng-show="newLat == '' && newLng == ''">
 								<h5>Click on the map to give the fossil some coordinates</h5>
 							</div>
 
