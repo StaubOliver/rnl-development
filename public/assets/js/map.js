@@ -1477,7 +1477,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	var map;
 	var marker;
 
-	$scope.refreshConversionFailed = function()
+	function refreshConversionFailed()
 	{
 		$scope.conversionFailed = [];
 		$http.get('/api/map/loadFailedConversions').success(function(data, status, headers, config){
@@ -1560,7 +1560,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}
 		if ($int == 2)
 		{
-			$scope.refreshConversionFailed();
+			refreshConversionFailed();
 			$scope.selectedFossil = '-1';
 		}
 		if ($int == 3)
