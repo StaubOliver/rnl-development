@@ -2,7 +2,7 @@
 <html lang="en" ng-app='map_admin'
 
 <?php
-	echo 'ng-init = "selected_tab=\''.$tab.'\'"';
+	echo 'ng-init = "selected_tab=\''.$selected_tab.'\'"';
 ?>
 
 
