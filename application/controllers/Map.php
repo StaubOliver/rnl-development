@@ -78,7 +78,7 @@ class map extends CI_Controller {
 			$data['selected_tab'] = 1;
 			$data["edit_location"] = -1;
 
-			if ($this->uri->segement(3))
+			if ($this->uri->segment(3))
 			{
 				$data["selected_tab"] = 2;
 				$data["edit_location"] = urldecode($this->uri->segment(3));
