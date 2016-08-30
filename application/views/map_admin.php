@@ -2,7 +2,7 @@
 <html lang="en" ng-app='map_admin'
 
 <?php
-	echo 'ng-init = "selected_tab=\''.$selected_tab.'\'"';
+	echo 'ng-init = "selected_tab=\''.$selected_tab.'\'; edit_location=\''.$edit_location.'\'"';
 ?>
 
 
@@ -537,7 +537,7 @@
 
 							<div class='col-md-3 col-sm-4 col-xs-12'>
 								<div class='btn btn-custom-primary btn-xl btn-update-location' ng-click="update_location()">
-									Update Locations
+									Update Locations {{edit_location}}
 								</div>	
 							</div>
 							
