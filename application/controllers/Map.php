@@ -75,6 +75,8 @@ class map extends CI_Controller {
 
 			$data['location_update'] = $this->MapModel->updatelocationestimate();
 
+			$data['selected_tab'] = 1;
+
 			$this->load->view('map_admin', $data);
 
 		}
@@ -87,7 +89,6 @@ class map extends CI_Controller {
 	public function map_stats(){
 		if ($this->ion_auth->logged_in() && ($this->ProfileModel->isAdmin() == 1)){
 			$data['stats'] = $this->MapModel->adminStats();
-			$data['selected_tab'] = 1;
 
 			$this->load->view('map_stats', $data);
 		}
