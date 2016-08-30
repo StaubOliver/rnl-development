@@ -954,26 +954,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	var url_hightlight = "/assets/img/star/circle_highlight.png";
 
 	
-	function refresh_tab($int){
-		if ($int == 1)
-		{
-			refreshFeedback();
-		}
-		if ($int == 2)
-		{
-			$scope.refreshConversionFailed();
-			$scope.selectedFossil = '-1';
-		}
-		if ($int == 3)
-		{
-			$scope.refreshCollector();
-			$scope.selectedCollector1 = '-1';
-			$scope.selectedCollector2 = '-1';
-			$scope.newCollector = "";
-			$scope.errorCollector = "";
-			$scope.successCollector = "";
-		}
-	}
+	
 
 
 	function refreshFeedback(){
@@ -1568,6 +1549,28 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				marker.setMap(null);
 				marker = null;
 			}
+		}
+	}
+
+
+	function refresh_tab($int){
+		if ($int == 1)
+		{
+			refreshFeedback();
+		}
+		if ($int == 2)
+		{
+			$scope.refreshConversionFailed();
+			$scope.selectedFossil = '-1';
+		}
+		if ($int == 3)
+		{
+			$scope.refreshCollector();
+			$scope.selectedCollector1 = '-1';
+			$scope.selectedCollector2 = '-1';
+			$scope.newCollector = "";
+			$scope.errorCollector = "";
+			$scope.successCollector = "";
 		}
 	}
 

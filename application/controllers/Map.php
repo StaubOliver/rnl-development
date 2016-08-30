@@ -76,7 +76,7 @@ class map extends CI_Controller {
 			$data['location_update'] = $this->MapModel->updatelocationestimate();
 
 			$data['selected_tab'] = 1;
-			$data["edit_location"] = -1;
+			$data["edit_location"] = 0;
 
 			if ($this->uri->segment(3))
 			{
