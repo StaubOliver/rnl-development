@@ -957,7 +957,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	function refresh_tab($int){
 		if ($int == 1)
 		{
-			//refreshFeedback();
+			refreshFeedback();
 		}
 		if ($int == 2)
 		{
