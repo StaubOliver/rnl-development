@@ -247,10 +247,10 @@ var map = angular.module('map', ['rzModule'])
 			if ($scope.admin==true)
 			{
 				buttons = 
-						"<div class='col-md-12 col-sm-12 col-xs-12'>"
+						"<div class='col-md-6 col-sm-12 col-xs-12'>"
 							+ "<div class='btn btn-custom-primary btn-xs' ng-click='click_on_marker_for_selection("+info['id']+");'>{{text_select_btn}}</div>"
 						+ "</div>"
-						+ "<div class='col-md-12 col-sm-12 col-xs-12'>"
+						+ "<div class='col-md-6 col-sm-12 col-xs-12'>"
 							+ "<a class='btn btn-custom-default btn-xs' href='/map/map_admin/"+info['id']+"''>Edit Locations</div>"
 						+ "</a>";
 			}
