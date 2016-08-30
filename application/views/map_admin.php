@@ -537,7 +537,7 @@
 
 							<div class='col-md-3 col-sm-4 col-xs-12'>
 								<div class='btn btn-custom-primary btn-xl btn-update-location' ng-click="update_location()">
-									Update Locations {{edit_location}}
+									Update Locations
 								</div>	
 							</div>
 							
