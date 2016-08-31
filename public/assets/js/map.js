@@ -1487,6 +1487,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	}
 
 	$scope.selectedFossilLocation = "";
+	$scope.newLat = "test";
+	$scope.newLng = "";
+
 	$scope.list_fossils = [];
 
 	var map;
