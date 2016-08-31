@@ -252,6 +252,11 @@ class Map extends MY_Controller {
 		}
 	}
 
+	public function loadListFossils()
+	{
+		echo json_encode($this->MapModel->loadListFossils());
+	}
+
 	public function loadFailedConversions()
 	{
 		if ($this->ion_auth->logged_in()){
@@ -259,6 +264,24 @@ class Map extends MY_Controller {
 
 				echo json_encode($this->MapModel->loadFailedConversions());
 
+			}
+		}
+	}
+
+	public function loadFossilsNotConversionPossible()
+	{
+		if ($this->ion_auth->logged_in()){
+			if ($this->ProfileModel->isAdmin()==1){
+				echo json_encode($this->MapModel->loadFossilsNotConversionPossible());
+			}
+		}
+	}
+
+	public function loadFossilWithCoordinates()
+	{
+		if ($this->ion_auth->logged_in()){
+			if ($this->ProfileModel->isAdmin()==1){
+				echo json_encode($this->MapModel->loadFossilWithCoordinates());
 			}
 		}
 	}

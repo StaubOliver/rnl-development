@@ -757,10 +757,28 @@ class MapModel extends CI_Model {
         return $res;
     }
 
+    public function loadListFossils()
+    {
+        $query = $this->db->query("SELECT * FROM project_1_data where lat is null ORDER BY data_id ASC");
+
+        return $query->result_array();     
+    }
+
     public function loadFailedConversions()
     {
-        $query = $this->db->query("SELECT * FROM project_1_data WHERE lat='0' AND lng='0'");
+        $query = $this->db->query("SELECT * FROM project_1_data WHERE lat='0' AND lng='0' ORDER BY data_id ASC");
+        return $query->result_array();
+    }
 
+    public function loadFossilsNotConversionPossible()
+    {
+        $query = $this->db->query("SELECT * FROM project_1_data WHERE lat is NULL AND lng is NULL AND (country='Missing' AND place='') OR country='' ORDER BY data_id ASC");
+        return $query->result_array();
+    }
+
+    public function loadFossilWithCoordinates()
+    {
+        $query = $this->db->query("SELECT * FROM project_1_data WHERE lat!='0' AND lng!='0' ORDER BY data_id ASC");
         return $query->result_array();
     }
 
