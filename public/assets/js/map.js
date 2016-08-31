@@ -1490,19 +1490,19 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.selectedFossilLocation = "";
 	$scope.newLat = "";
 	$scope.newLng = "";
-	$scope.conversionFailed = [];
+
+	$scope.list_fossils_with_coordinates = [];
+	$scope.list_fossils_conversion_failed = [];
+	$scope.list_fossils_no_location = [];
 
 	var map;
 	var marker;
 
-	function refreshConversionFailed()
+	function refreshListFossils()
 	{
 		$scope.conversionFailed = [];
-		$http.get('/api/map/loadFailedConversions').success(function(data, status, headers, config){
-			data.forEach(function(item, index)
-			{
-				$scope.conversionFailed.push(item);
-			});
+		$http.get('/api/map/loadListFossils').success(function(data, status, headers, config){
+			console.log(data);
 
 		}).error(function(data, status, headers, config){
 			console.log(data);
@@ -1578,7 +1578,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}
 		if ($int == 2)
 		{
-			refreshConversionFailed();
+			refreshListFossils();
 			$scope.selectedFossil = '-1';
 		}
 		if ($int == 3)

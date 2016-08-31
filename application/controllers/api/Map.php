@@ -254,7 +254,11 @@ class Map extends MY_Controller {
 
 	public function loadListFossils()
 	{
-		echo json_encode($this->MapModel->loadListFossils());
+		if ($this->ion_auth->logged_in()){
+			if ($this->ProfileModel->isAdmin()==1){
+				echo json_encode($this->MapModel->loadListFossils());
+			}
+		}
 	}
 
 	public function loadFailedConversions()

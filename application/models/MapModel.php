@@ -765,7 +765,6 @@ class MapModel extends CI_Model {
         $res["no_location"] = array();
 
         $query = $this->db->query("SELECT * FROM project_1_data ORDER BY data_id ASC");
-    
         foreach($query->result_array() as $item)
         {
             if ($item["lat"] != "null" and $item["lng"] == "null")
@@ -780,9 +779,7 @@ class MapModel extends CI_Model {
             {
                 $res["has_coordinates"][] = $item;
             }
-
         }         
-    
         return $res;
     }
 
