@@ -1504,7 +1504,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		$scope.list_fossils_no_location = [];
 
 		$http.get('/api/map/loadListFossils').success(function(data, status, headers, config){
-			$scope.list_fossils_with_coordinates = data.has_cordinates;
+			$scope.list_fossils_with_coordinates = b = $.extend( {}, data.has_cordinates );
 			/*$scope.list_fossils_conversion_failed = data.conversoin_failed;
 			$scope.list_fossils_no_location = data['no_location'];*/
 
