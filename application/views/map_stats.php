@@ -601,7 +601,7 @@
 					<div class='row'>
 
 						<div class='col-md-12 col-sm-12 col-xs-12'>
-							<h5>Action distribution</h5>
+							<h5>Action distribution - {{general.total}} total actions</h5>
 						</div>
 
 						<div class='col-md-2 col-sm-6 col-xs-6'>
