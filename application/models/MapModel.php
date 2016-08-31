@@ -884,7 +884,7 @@ class MapModel extends CI_Model {
 
     public function where_clause()
     {
-        return "unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and unique_id!='4977e5ac01ae154eb77ff732d622848696f7ff72' and unique_id!='c083abdd99a03add5752e91738d0c5c5c6ed5311' and unique_id!='8a4861977edbcea94cf95bb17efdea2aaaee036c' and unique_id!='62de74b7572008d00211723826b123759d0333ad' and unique_id!='3e48ab85766a7a97cd2aa40b4bfa061caa1f2696' and unique_id!='23f3c030653bef5433ea9eebf5c2875cbcf6b72d' and unique_id!='fd319c06755facd37d6d0cef48b04333c532ccb8' and unique_id!='9a4d7044009255fb170c74754910283432becc2e'";
+        return "unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and unique_id!='4977e5ac01ae154eb77ff732d622848696f7ff72' and unique_id!='c083abdd99a03add5752e91738d0c5c5c6ed5311' and unique_id!='8a4861977edbcea94cf95bb17efdea2aaaee036c' and unique_id!='62de74b7572008d00211723826b123759d0333ad' and unique_id!='3e48ab85766a7a97cd2aa40b4bfa061caa1f2696' and unique_id!='23f3c030653bef5433ea9eebf5c2875cbcf6b72d' and unique_id!='fd319c06755facd37d6d0cef48b04333c532ccb8' and unique_id!='9a4d7044009255fb170c74754910283432becc2e' and activity_id<'50691'";
     }
 
 
