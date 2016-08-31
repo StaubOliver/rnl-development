@@ -1521,7 +1521,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	        icon: pin_selected
 	    });
 
-	    $scope.newLat = position.lat();
 	}
 
 	$scope.changeConversionFailed = function(){
@@ -1607,6 +1606,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 				google.maps.event.addListener(map, "click", function(event){
 					click_on_map(event.latLng);
+					$scope.newLat = event.latLng.lat();
 				});
 
 
