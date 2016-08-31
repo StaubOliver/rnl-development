@@ -1605,7 +1605,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				}
 
 
-				map.addListener("click", function(event){
+				google.maps.event.addListener(map, "click", function(event){
 					click_on_map(event.latLng);
 				});
 
