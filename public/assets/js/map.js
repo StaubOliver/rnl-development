@@ -1601,7 +1601,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 						
 						infoWindowadmin.setContent(content);
 
-						infoWindowadmin.open('map', marker);
+						infoWindowadmin.open('map', tmp);
 
 					});
 				}
