@@ -1508,7 +1508,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			$scope.list_fossils_conversion_failed = data.conversoin_failed;
 			$scope.list_fossils_no_location = data['no_location'];*/
 
-			console.log(data);
+			console.log(data.has_coordinates);
 
 		}).error(function(data, status, headers, config){
 			console.log(data);
