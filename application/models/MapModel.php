@@ -1231,7 +1231,8 @@ class MapModel extends CI_Model {
 
         $total = $query_total->num_rows();
 
-        /* percentages */
+        /* Action distribution */
+
         $query_map_pan = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Map Pan'");
         $nb_map_pan = $query_map_pan->num_rows();
         $p_map_pan = floatval($nb_map_pan)/floatval($total) * 100;
@@ -1315,6 +1316,108 @@ class MapModel extends CI_Model {
         $sharing = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Sharing'");
         $nb_sharing = $sharing->num_rows();
         $p_sharing = floatval($nb_sharing)/floatval($total) * 100;
+
+        $share_contribution = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Share contribution'");
+        $nb_share_contribution = $share_contribution->num_rows();
+        $p_share_contribution = floatval($nb_share_contribution)/floatval($total) * 100;
+
+
+
+
+
+        /*Number of users doing a particular action*/
+        
+        $query_unique_participants = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause());
+        $total_participants = $query_unique_participants->num_rows();
+
+        $query_part_map_pan = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Map Pan'");
+        $nb_part_map_pan = $query_part_map_pan->num_rows();
+        $p_part_map_pan = floatval($nb_part_map_pan)/floatval($total_participants) * 100;
+
+        $query_part_map_click = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Map Click'");
+        $nb_part_map_click = $query_part_map_click->num_rows();
+        $p_part_map_click = floatval($nb_part_map_click)/floatval($total_participants) * 100;
+
+        $query_part_map_zoom_in = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Map Zoom in'");
+        $nb_part_map_zoom_in = $query_part_map_zoom_in->num_rows();
+        $p_part_map_zoom_in = floatval($nb_part_map_zoom_in)/floatval($total_participants) * 100;
+
+
+        $query_part_map_zoom_out = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Map Zoom out'");
+        $nb_part_map_zoom_out = $query_part_map_zoom_out->num_rows();
+        $p_part_map_zoom_out = floatval($nb_part_map_zoom_out)/floatval($total_participants) * 100;
+
+        $query_part_click_on_fossil = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Click on Fossil'");
+        $nb_part_click_on_fossil = $query_part_click_on_fossil->num_rows();
+        $p_part_click_on_fossil = floatval($nb_part_click_on_fossil)/floatval($total_participants) * 100;
+
+        $query_part_enlarge_image = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Enlarge Image'");
+        $nb_part_enlarge_image = $query_part_enlarge_image->num_rows();
+        $p_part_enlarge_image = floatval($nb_part_enlarge_image)/floatval($total_participants) * 100;
+
+        $query_part_fossil_selected = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Fossil selected'");
+        $nb_part_fossil_selected = $query_part_fossil_selected->num_rows();
+        $p_part_fossil_selected = floatval($nb_part_fossil_selected)/floatval($total_participants) * 100;
+
+        $query_part_fossil_deselected = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Fossil deselected'");
+        $nb_part_fossil_deselected = $query_part_fossil_deselected->num_rows();
+        $p_part_fossil_deselected = floatval($nb_part_fossil_deselected)/floatval($total_participants) * 100;
+
+        $query_part_clear_fossil_selection = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Clear Fossil selection'");
+        $nb_part_clear_fossil_selection = $query_part_clear_fossil_selection->num_rows();
+        $p_part_clear_fossil_selection = floatval($nb_part_clear_fossil_selection)/floatval($total_participants) * 100;
+
+        $filter_part_geological_change = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Filter Geological Age changed'");
+        $nb_part_filter_geological_change = $filter_part_geological_change->num_rows();
+        $p_part_filter_geological_change = floatval($nb_part_filter_geological_change)/floatval($total_participants) * 100;
+
+        $filter_part_collector_change = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Filter Collector Selector change'");
+        $nb_part_filter_collector_change = $filter_part_collector_change->num_rows();
+        $p_part_filter_collector_change = floatval($nb_part_filter_collector_change)/floatval($total_participants) * 100;
+        
+        $filter_part_collector_hover = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Collector Selector Hover'");
+        $nb_part_filter_collector_hover = $filter_part_collector_hover->num_rows();
+        $p_part_filter_collector_hover = floatval($nb_part_filter_collector_hover)/floatval($total_participants) * 100;
+
+        $filter_part_genus_change = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Filter Genus Selector change'");
+        $nb_part_filter_genus_change = $filter_part_genus_change->num_rows();
+        $p_part_filter_genus_change = floatval($nb_part_filter_genus_change)/floatval($total_participants) * 100;
+
+        $filter_part_genus_hover = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Genus Selector Hover'");
+        $nb_part_filter_genus_hover = $filter_part_genus_hover->num_rows();
+        $p_part_filter_genus_hover = floatval($nb_part_filter_genus_hover)/floatval($total_participants) * 100;
+
+        $feedback_part_hover = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Feedback mouse over'");
+        $nb_part_feedback_hover = $feedback_part_hover->num_rows();
+        $p_part_feedback_hover = floatval($nb_part_feedback_hover)/floatval($total_participants) * 100;
+
+        $feedback_part_click = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Click on feedback'");
+        $nb_part_feedback_click = $feedback_part_click->num_rows();
+        $p_part_feedback_click = floatval($nb_part_feedback_click)/floatval($total_participants) * 100;
+
+        $upvote_part = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Upvote'");
+        $nb_part_upvote = $upvote_part->num_rows();
+        $p_part_upvote = floatval($nb_upvote_part)/floatval($total_participants) * 100;
+
+        $click_reply_part = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Click reply'");
+        $nb_part_click_reply = $click_reply_part->num_rows();
+        $p_part_click_reply = floatval($nb_part_click_reply)/floatval($total_participants) * 100;
+
+        $write_comment_part = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()."and map_activity.action='Writing comment'");
+        $nb_part_write_comment = $write_comment_part->num_rows();
+        $p_part_write_comment = floatval($nb_part_write_comment)/floatval($total_participants) * 100;
+
+        $submit_feedback_part = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Submit feedback'");
+        $nb_part_submit_feedback = $submit_feedback_part->num_rows();
+        $p_part_submit_feedback = floatval($nb_part_submit_feedback)/floatval($total_participants) * 100;
+
+        $sharing_part = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Sharing'");
+        $nb_part_sharing = $sharing_part->num_rows();
+        $p_part_sharing = floatval($nb_part_sharing)/floatval($total_participants) * 100;
+
+        $share_contribution_part = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Share contribution'");
+        $nb_part_share_contribution = $share_contribution_part->num_rows();
+        $p_part_share_contribution = floatval($nb_part_share_contribution)/floatval($total_participants) * 100;
 
 
         /* time */
@@ -1529,6 +1632,8 @@ class MapModel extends CI_Model {
             "nb_submit_feedback"=>round($nb_submit_feedback,2),
             "sharing"=>round($p_sharing,2),
             "nb_sharing"=>round($nb_sharing,2),
+            "share_contribution"=>round($p_share_contribution,2),
+            "nb_share_contribution"=>round($nb_share_contribution,2),
 
 
 
@@ -1554,9 +1659,57 @@ class MapModel extends CI_Model {
                 array("Click Reply", round($nb_click_reply,2)),
                 array("Write Comment", round($nb_write_comment, 2)),
                 array("Submit Comment", round($nb_submit_feedback, 2)),
-                array("Sharing", round($nb_sharing, 2))
+                array("Sharing", round($nb_sharing, 2)),
+                array("Share contribution", round($nb_share_contribution, 2))
             ),
-            
+
+
+
+            "total_participants"=>$total_participants,
+            "map_pan_part"=>round($p_part_map_pan,2), 
+            "nb_map_pan_part"=>$nb_part_map_pan,
+            "map_click_part"=>round($p_part_map_click,2),
+            "nb_map_click_part"=>round($nb_part_map_click,2),
+            "map_zoom_in_part"=>round($p_part_map_zoom_in,2),
+            "nb_map_zoom_in_part"=>round($nb_part_map_zoom_in,2),
+            "map_zoom_out_part"=>round($p_part_map_zoom_out,2),
+            "nb_map_zoom_out_part"=>round($nb_part_map_zoom_out,2),
+            "click_on_fossil_part"=>round($p_part_click_on_fossil,2),
+            "nb_click_on_fossil_part"=>round($nb_part_click_on_fossil,2),
+            "enlarge_image_part"=>round($p_part_enlarge_image,2),
+            "nb_enlarge_image_part"=>round($nb_part_enlarge_image,2),
+            "fossil_selected_part"=>round($p_part_fossil_selected,2),
+            "nb_fossil_selected_part"=>round($nb_part_fossil_selected,2),
+            "fossil_deselected_part"=>round($p_part_fossil_deselected,2),
+            "nb_fossil_deselected_part"=>round($nb_part_fossil_deselected,2),
+            "clear_fossil_selection_part"=>round($p_part_clear_fossil_selection,2),
+            "nb_clear_fossil_selection_part"=>round($nb_part_clear_fossil_selection,2),
+            "filter_geological_change_part"=>round($p_part_filter_geological_change,2),
+            "nb_filter_geological_change_part"=>round($nb_part_filter_geological_change,2),
+            "filter_collector_change_part"=>round($p_part_filter_collector_change,2),
+            "nb_filter_collector_change_part"=>round($nb_part_filter_collector_change,2),
+            "filter_collector_hover_part"=>round($p_part_filter_collector_hover,2),
+            "nb_filter_collector_hover_part"=>round($nb_part_filter_collector_hover,2),
+            "filter_genus_change_part"=>round($p_part_filter_genus_change,2),
+            "nb_filter_genus_change_part"=>round($nb_part_filter_genus_change,2),
+            "filter_genus_hover_part"=>round($p_part_filter_genus_hover,2),
+            "nb_filter_genus_hover_part"=>round($nb_part_filter_genus_hover,2),
+            "feedback_hover_part"=>round($p_part_feedback_hover,2),
+            "nb_feedback_hover_part"=>round($nb_part_feedback_hover,2),
+            "feedback_click_part"=>round($p_part_feedback_click,2),
+            "nb_feedback_click_part"=>round($nb_part_feedback_click,2),            
+            "upvote_part"=>round($p_part_upvote,2),
+            "nb_upvote_part"=>round($nb_part_upvote,2),
+            "click_reply_part"=>round($p_part_click_reply,2),
+            "nb_click_reply_part"=>round($nb_part_click_reply,2),
+            "write_comment_part"=>round($p_part_write_comment,2),
+            "nb_write_comment_part"=>round($nb_part_write_comment,2),
+            "submit_feedback_part"=>round($p_part_submit_feedback,2),
+            "nb_submit_feedback_part"=>round($nb_part_submit_feedback,2),
+            "sharing_part"=>round($p_part_sharing,2),
+            "nb_sharing_part"=>round($nb_part_sharing,2),
+            "share_contribution_part"=>round($p_part_share_contribution,2),
+            "nb_share_contribution_part"=>round($nb_part_share_contribution,2),
 
             "hist_actions"=>$hist, 
             "data_hist_actions"=>$hist_class,

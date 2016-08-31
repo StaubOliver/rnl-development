@@ -95,7 +95,7 @@
 
 						<div class='col-md-6 col-sm-6 col-xs-12'>
 							<select class='form-control' ng-model='selectedUniqueId' ng-change='changeUniqueId()'>
-								<option value="0" selected>General</option>
+								<option value="0" selected>General Statistics</option>
 								<optgroup label="Visitors with contribution">	
 									<?php
 										foreach($stats["ids_contributions"] as $visit){
@@ -371,8 +371,234 @@
 				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title' ng-show="selectedUniqueId == 0">
 					<div class='row'>
 
+						<div class='col-md-12 col-sm-12 col-xs-12'>
+							<h5>Action per visitor - {{general.total_participants}} visitors</h5>
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Map Pan
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.map_pan_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_map_pan_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Click on Fossil
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.click_on_fossil_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_click_on_fossil_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Change age
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.filter_geological_change_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_filter_geological_change_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Map Click
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.map_click_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_map_click_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Fossil Selected
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.fossil_selected_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_fossil_selected_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Hover collector
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.filter_collector_hover_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_filter_collector_hover_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Map Zoom In
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.map_zoom_in_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_map_zoom_in_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Fossil Deselected
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.fossil_deselected_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_fossil_deselected_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Change collector
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.filter_collector_change_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_filter_collector_change_part}}
+						</div>
 
 
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Map Zoom Out
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.map_zoom_out_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_map_zoom_out_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Clear Selection
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.clear_fossil_selection_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_clear_fossil_selection_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Hover genus
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.filter_genus_hover_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_filter_genus_hover_part}}
+						</div>
+
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Feedback Hover
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.feedback_hover_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_feedback_hover_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Write comment
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.write_comment_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_write_comment_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Change genus
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.filter_genus_change_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_filter_genus_change_part}}
+						</div>
+
+						
+
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Feedback Click
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.feedback_click_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_feedback_click_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Submit comment
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.submit_feedback_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_submit_feedback_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Enlarge image
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.enlarge_image_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_enlarge_image_part}}
+						</div>
+
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Upvote
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.upvote_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_upvote_part}}
+						</div>
+
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Click reply
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.click_reply_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_click_reply_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Sharing
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.sharing_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_sharing_part}}
+						</div>
+
+
+					</div>
+				</div>
+
+
+				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title' ng-show="selectedUniqueId == 0">
+					<div class='row'>
 
 						<div class='col-md-12 col-sm-12 col-xs-12'>
 							<h5>Action distribution</h5>
@@ -605,10 +831,10 @@
 						<!--<div class='col-md-6'>
 							Average visit - {{general.avg_time}}
 						</div>-->
-
-						
+	
 					</div>
 				</div>
+
 
 
 				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title' ng-show="selectedUniqueId == 0">
