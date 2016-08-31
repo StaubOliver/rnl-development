@@ -614,7 +614,7 @@
 							</div>
 
 							<div class='col-md-2' ng-show="selectedFossil!='-1'">
-								<div class='btn btn-custom-primary btn-xs btn-update-location' ng-click="">
+								<div class='btn btn-custom-primary btn-xs btn-update-location' ng-click="updateFossilCoordinates()">
 									Save
 								</div>	
 							</div>

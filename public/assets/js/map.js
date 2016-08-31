@@ -1489,6 +1489,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.selectedFossilLocation = "";
 	$scope.newLat = "test";
 	$scope.newLng = "";
+	newLat = "";
+
 
 	$scope.list_fossils = [];
 
@@ -1514,6 +1516,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		changeFossil();
 	}
 
+	
 	function changeFossil()
 	{
 		if ($scope.selectedFossil != '-1')
@@ -1603,8 +1606,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				        icon: pin_selected
 				    });
 
-					$scope.newLat = event.latLng.lat();
-					console.log($scope.newLat);
+					newLat = event.latLng.lat();
+					console.log(newLat);
 				});
 
 
@@ -1629,6 +1632,10 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	}
 	
 
+	$scope.updateFossilCoordinates = function()
+	{
+		$scope.newLat = newLat;
+	}
 
 	function refresh_tab($int){
 		if ($int == 1)
