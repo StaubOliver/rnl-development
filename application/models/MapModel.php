@@ -759,29 +759,30 @@ class MapModel extends CI_Model {
 
     public function loadListFossils()
     {
-        $query = $this->db->query("SELECT * FROM project_1_data where lat is null ORDER BY data_id ASC");
+        $res = array();
+        $res["has_coordinates"] = array();
+        $res["conversion_failed"] = array();
+        $res["no_location"] = array();
 
-        return $query->result_array();     
+        $query = $this->db->query("SELECT * FROM project_1_data ORDER BY data_id ASC");
+    
+        foreach($query->result_array() as $item)
+        {
+            if ($item["lat"] != "null" and $item["lng"] == "null")
+            {
+                $res["no_location"][] = $item;
+            } 
+            else if ($item["lat"] == "0" and $item["lng"] == "0")
+            {
+                $res["conversion_failed"][] = $item;
+            }
+            else
+            {
+                $res["has_coordinates"][] = $item;
+            }
+
+        }         
     }
-
-    public function loadFailedConversions()
-    {
-        $query = $this->db->query("SELECT * FROM project_1_data WHERE lat='0' AND lng='0' ORDER BY data_id ASC");
-        return $query->result_array();
-    }
-
-    public function loadFossilsNotConversionPossible()
-    {
-        $query = $this->db->query("SELECT * FROM project_1_data WHERE lat is NULL AND lng is NULL AND (country='Missing' AND place='') OR country='' ORDER BY data_id ASC");
-        return $query->result_array();
-    }
-
-    public function loadFossilWithCoordinates()
-    {
-        $query = $this->db->query("SELECT * FROM project_1_data WHERE lat!='0' AND lng!='0' ORDER BY data_id ASC");
-        return $query->result_array();
-    }
-
 
     function changeLocation($coord)
     {
