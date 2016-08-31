@@ -787,7 +787,7 @@
 
 								<h6>{{visit.nb_action}} actions - {{visit.visit_time.d}}d {{visit.visit_time.h}}h {{visit.visit_time.m}}m {{visit.visit_time.s}}s</h6>
 							</div>
-							<div ng-repeat='action in visit.actions'>
+							<div ng-repeat='action in visit.actions' ng-class="{'stat-submit-comment':action.action=='Submit feedback'}">
 								<div class='col-md-3 col-sm-3 col-xs-12'>{{action.time}} </div> 
 								<div class='col-md-9 col-sm-9 col-xs-12'>{{action.action}} {{action.details}}</div>
 							</div>
