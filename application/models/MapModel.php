@@ -785,7 +785,7 @@ class MapModel extends CI_Model {
 
     public function loadFossilDetails($id)
     {
-        $query = $this->db->query("SELECT * FROM project_1_data WHERE data_id".$id);
+        $query = $this->db->query("SELECT * FROM project_1_data WHERE data_id=".$id);
         return $query->row_array();
     }
 
