@@ -1590,24 +1590,18 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 					});
 				}
 
-				function click_on_map(position)
-				{
+				google.maps.event.addListener(map, "click", function(event){
 					if (marker != null){
 						marker.setMap(null);
 						marker = null;
 					}
 
 					marker = new google.maps.Marker({
-				        position: position, 
+				        position: event.latLng, 
 				        map: map, 
 				        icon: pin_selected
 				    });
 
-				}
-
-
-				google.maps.event.addListener(map, "click", function(event){
-					click_on_map(event.latLng);
 					$scope.newLat = event.latLng.lat();
 					console.log($scope.newLat);
 				});
