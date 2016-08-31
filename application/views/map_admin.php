@@ -569,8 +569,8 @@
 
 						<div class='row'>
 
-							<div class='col-md-3'>
-								<h5>{{ (list_fossils.has_coordinates.length|number) + (list_fossils.conversion_failed/length|number) }} fossils</h5>
+							<div class='col-md-2'>
+								<h5>{{ (list_fossils.has_coordinates.length|number) + (list_fossils.conversion_failed/length|number) + (list_fossils.no_location.length|number) }} fossils</h5>
 							</div>
 
 							<div class='col-md-3'>
@@ -589,18 +589,17 @@
 								</select>  
 							</div>
 
-							<div class='col-md-6' ng-hide="selectedFossil == '-1'">
+							<div class='col-md-7' ng-hide="selectedFossil == '-1'">
 								<h5>Location - {{selectedFossilLocation}}</h5>
 							</div>
 
-							<div class='col-md-12' ng-show="newLat == '' && newLng == ''">
+
+
+							<div class='col-md-12'>
 								<h5>Click on the map to give the fossil some coordinates</h5>
 							</div>
 
-							<div class='col-md-10' ng-show="newLat != '' && newLng !=''">
-								<h5>New Location - Lat - {{newLat}} - Lng {{newLng}}</h5>
-							</div>
-							<div class='col-md-2' ng-show="newLat != '' && newLng !=''">
+							<div class='col-md-2'">
 								<div class='btn btn-custom-primary btn-xs btn-update-location' ng-click="">
 									Save
 								</div>	
