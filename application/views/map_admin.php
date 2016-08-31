@@ -570,7 +570,7 @@
 						<div class='row'>
 
 							<div class='col-md-2'>
-								<h5>{{ (list_fossils.has_coordinates.length|number) + (list_fossils.conversion_failed/length|number) + (list_fossils.no_location.length|number) }} fossils  {{selectedFossil}}</h5>
+								<h5><?php echo count($list_fossils["conversion_failed"])+count($list_fossils["has_coordinates"])+count($list_fossils["no_location"]) ?> fossils</h5>
 							</div>
 
 							<div class='col-md-3'>
@@ -600,7 +600,7 @@
 										}
 									?>
 								</select>  
-								
+
 							</div>
 
 							<div class='col-md-7' ng-hide="selectedFossil == '-1'">
