@@ -1487,9 +1487,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	}
 
 	$scope.selectedFossilLocation = "";
-	$scope.newLat = "";
-	$scope.newLng = "";
-
 	$scope.list_fossils = [];
 
 	var map;
@@ -1591,6 +1588,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				}
 
 				google.maps.event.addListener(map, "click", function(event){
+
 					if (marker != null){
 						marker.setMap(null);
 						marker = null;
