@@ -1562,6 +1562,48 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 						title: temp['id'] + "-" + temp['genus'],
 					    icon: getPinColor(temp['age'])
 					});
+
+					tmp.addListener("click", function()
+					{
+
+						//info window
+						infoWindowadmin.close;
+						var content =
+						"<div class='container-fluid map-infowindow'>"
+							+ "<div class='row'>"
+
+								+ "<div class='col-md-12'>"
+
+									+ "<div class='row'>"
+										+ "<div class='col-xs-12'>"
+											+ "<p class='infowindow-text'><strong> Genus : </strong> " + temp['genus'] + "</p>"
+										+ "</div>"
+										+ "<div class='col-xs-12'>"
+											+ "<p class='infowindow-text'> <strong> Species : </strong> " + temp["species"] + "</p>"
+										+ "</div>"
+										+ "<div class='col-xs-12'>"
+											+ "<p class='infowindow-text'> <strong> Age : </strong>" + temp['age'] + "</p>"
+										+ "</div>"
+										+ "<div class='col-xs-12'>"
+											+ "<p class='infowindow-text'> <strong> Collector : </strong>"+ temp["collector"] + "</p>"
+										+ "</div>"
+										+ "<div class='col-xs-12'>"
+											+ "<p class='infowindow-text'> <strong> Location : </strong>" + temp["place"] + "</p>"
+										+ "</div>"
+
+									+"</div>"
+
+								+ "</div>"
+							+ "</div>"
+						+ "</div>"
+						;
+
+						
+						infoWindowadmin.setContent(content);
+
+						infoWindowadmin.open('map', marker);
+
+					});
 				}
 
 
