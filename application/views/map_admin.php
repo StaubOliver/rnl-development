@@ -599,9 +599,8 @@
 											echo "<option value='".$item['data_id']."'>".$item['data_id'].' - '.$item["genus"]."</option>";
 										}
 									?>
-
-
 								</select>  
+								
 							</div>
 
 							<div class='col-md-7' ng-hide="selectedFossil == '-1'">

@@ -261,6 +261,15 @@ class Map extends MY_Controller {
 		}
 	}
 
+	public function loadFossilDetails()
+	{
+		if ($this->ion_auth->logged_in()){
+			if ($this->ProfileModel->isAdmin()==1){
+				echo json_encode($this->MapModel->loadFossilsDetails($this->uri->segment(4)));
+			}
+		}
+	}
+
 	public function decluster(){
 		$this->MapModel->decluster();
 	}

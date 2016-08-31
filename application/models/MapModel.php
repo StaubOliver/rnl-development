@@ -783,6 +783,12 @@ class MapModel extends CI_Model {
         return $res;
     }
 
+    public function loadFossilDetails($id)
+    {
+        $query = $this->db->query("SELECT * FROM project_1_data WHERE data_id".$id);
+        return $query->row_array();
+    }
+
     function changeLocation($coord)
     {
         return array('lat'=>$coord['lat']-0.01+rand(0,10)*0.002, 'lng'=>$coord['lng']-0.02+rand(0,20)*0.002);
