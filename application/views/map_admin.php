@@ -570,7 +570,7 @@
 						<div class='row'>
 
 							<div class='col-md-3'>
-								<h5>{{list_fossils.has_coordinates.length + list_fossils.conversion_failed/length}} fossils</h5>
+								<h5>{{ (list_fossils.has_coordinates.length|number) + (list_fossils.conversion_failed/length|number) }} fossils</h5>
 							</div>
 
 							<div class='col-md-3'>
