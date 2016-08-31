@@ -261,35 +261,6 @@ class Map extends MY_Controller {
 		}
 	}
 
-	public function loadFailedConversions()
-	{
-		if ($this->ion_auth->logged_in()){
-			if ($this->ProfileModel->isAdmin()==1){
-
-				echo json_encode($this->MapModel->loadFailedConversions());
-
-			}
-		}
-	}
-
-	public function loadFossilsNotConversionPossible()
-	{
-		if ($this->ion_auth->logged_in()){
-			if ($this->ProfileModel->isAdmin()==1){
-				echo json_encode($this->MapModel->loadFossilsNotConversionPossible());
-			}
-		}
-	}
-
-	public function loadFossilWithCoordinates()
-	{
-		if ($this->ion_auth->logged_in()){
-			if ($this->ProfileModel->isAdmin()==1){
-				echo json_encode($this->MapModel->loadFossilWithCoordinates());
-			}
-		}
-	}
-
 	public function decluster(){
 		$this->MapModel->decluster();
 	}
