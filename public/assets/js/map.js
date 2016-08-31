@@ -1502,8 +1502,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		$http.get('/api/map/loadListFossils').success(function(data, status, headers, config){
 			$scope.list_fossils = data;
 
-			console.log($scope.list_fossils);
-
 		}).error(function(data, status, headers, config){
 			console.log(data);
 		});
