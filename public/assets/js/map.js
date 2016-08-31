@@ -1508,20 +1508,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	}
 
 
-	function click_on_map(position)
-	{
-		if (marker != null){
-			marker.setMap(null);
-			marker = null;
-		}
-
-		marker = new google.maps.Marker({
-	        position: position, 
-	        map: map, 
-	        icon: pin_selected
-	    });
-
-	}
+	
 
 	$scope.changeConversionFailed = function(){
 		changeFossil();
@@ -1601,6 +1588,21 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 						infoWindowadmin.open('map', tmp);
 
 					});
+				}
+
+				function click_on_map(position)
+				{
+					if (marker != null){
+						marker.setMap(null);
+						marker = null;
+					}
+
+					marker = new google.maps.Marker({
+				        position: position, 
+				        map: map, 
+				        icon: pin_selected
+				    });
+
 				}
 
 
