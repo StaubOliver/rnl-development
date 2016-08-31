@@ -1728,7 +1728,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 				var options = {
 					title: 'Action distribution',
-					chartArea:{left:100,top:10,width:'100%',height:'350'},
+					chartArea:{left:100,top:10,width:'100%',height:'450'},
 					pieHole: 0.4,
 					colors: ['212a33', '28323d', '2e3b48', '354352', '3c4c5c', '425467', '495d71', 
 							'50657b', '566e85', '5d7690', '647f9a', '6e87a1', '7890a8', '8298ae', 
