@@ -1534,8 +1534,10 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	{
 		if ($scope.selectedFossil != '-1')
 		{
+			var temp;
 			$http.get('/api/map/loadFossilDetails/'+$scope.selectedFossil).success(function(data, status, headers, config){
-				$scope.selectedFossilLocation = data.country + " " + data.place
+				$scope.selectedFossilLocation = data.country + " " + data.place;
+				temp = data;
 			}).error(function(data, status, headers, config){
 				console.log(data);
 			});
@@ -1552,12 +1554,22 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 			map = new google.maps.Map(document.getElementById("map-conversionFailed"),mapOpt);
 
-			map.addListener("click", function(event){
+			if (temp["lat"] != '0' and temp["lat"] != "null")
+			{
 
+				var tmp = new google.maps.Marker({
+					map: map,
+					position: new google.maps.LatLng(temp['lat'], temp['lng']),
+					title: temp['id'] + "-" + temp['genus'],
+				    icon: getPinColor(temp['age'])
+				});
+			}
+
+
+			map.addListener("click", function(event){
 				click_on_map(event.latLng);
-				
-			    
 			});
+
 		}
 		else
 		{
