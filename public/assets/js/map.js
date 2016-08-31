@@ -1507,7 +1507,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		});
 	}
 
-	var test = "";
 
 	function click_on_map(position)
 	{
@@ -1522,8 +1521,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	        icon: pin_selected
 	    });
 
-	    test = position.lat();
-	    console.log(test);
+	    $scope.newLat = position.lat();
 	}
 
 	$scope.changeConversionFailed = function(){
