@@ -592,6 +592,26 @@
 							{{general.nb_sharing_part}}
 						</div>
 
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Share contribution
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.share_contribution_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_share_contribution_part}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Reset Filter
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.reset_filter_part}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_reset_filter_part}}
+						</div>
+
 
 					</div>
 				</div>
@@ -821,6 +841,25 @@
 							{{general.nb_sharing}}
 						</div>
 
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Share contribution
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.share_contribution}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_share_contribution}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Reset Filter
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.reset_filter}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_reset_filter}}
+						</div>
 								
 
 						<div class='col-md-12 col-sm-12 col-xs-12'>

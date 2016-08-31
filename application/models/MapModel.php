@@ -1323,6 +1323,10 @@ class MapModel extends CI_Model {
         $nb_share_contribution = $share_contribution->num_rows();
         $p_share_contribution = floatval($nb_share_contribution)/floatval($total) * 100;
 
+        $reset_filter = $this->db->query("select * from map_activity where ".$this->where_clause()." and map_activity.action='Reset Filter'");
+        $nb_reset_filter = $reset_filter->num_rows();
+        $p_reset_filter = floatval($nb_reset_filter)/floatval($total) * 100;
+
 
 
 
@@ -1420,6 +1424,10 @@ class MapModel extends CI_Model {
         $share_contribution_part = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Share contribution'");
         $nb_part_share_contribution = $share_contribution_part->num_rows();
         $p_part_share_contribution = floatval($nb_part_share_contribution)/floatval($total_participants) * 100;
+
+        $reset_filter_part = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Reset Filter'");
+        $nb_part_reset_filter = $reset_filter_part->num_rows();
+        $p_part_reset_filter = floatval($nb_part_reset_filter)/floatval($total_participants) * 100;
 
 
         /* time */
@@ -1636,6 +1644,8 @@ class MapModel extends CI_Model {
             "nb_sharing"=>round($nb_sharing,2),
             "share_contribution"=>round($p_share_contribution,2),
             "nb_share_contribution"=>round($nb_share_contribution,2),
+            "reset_filter"=>round($p_reset_filter,2),
+            "nb_reset_filter"=>round($nb_reset_filter,2),
 
 
 
@@ -1662,7 +1672,8 @@ class MapModel extends CI_Model {
                 array("Write Comment", round($nb_write_comment, 2)),
                 array("Submit Comment", round($nb_submit_feedback, 2)),
                 array("Sharing", round($nb_sharing, 2)),
-                array("Share contribution", round($nb_share_contribution, 2))
+                array("Share contribution", round($nb_share_contribution, 2)),
+                array("Reset Filter", round($nb_reset_filter, 2))
             ),
 
 
@@ -1712,6 +1723,8 @@ class MapModel extends CI_Model {
             "nb_sharing_part"=>round($nb_part_sharing,2),
             "share_contribution_part"=>round($p_part_share_contribution,2),
             "nb_share_contribution_part"=>round($nb_part_share_contribution,2),
+            "reset_filter_part"=>round($p_part_reset_filter,2),
+            "nb_reset_filter_part"=>round($nb_part_reset_filter,2),
 
             "hist_actions"=>$hist, 
             "data_hist_actions"=>$hist_class,
