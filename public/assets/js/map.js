@@ -1581,6 +1581,37 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			}
 		}
 	}
+
+	function changeFossil()
+	{
+		if ($scope.selectedFossil != '-1')
+		{
+			$http.get('/api/map/loadFossilDetails/'+$scope.selectedFossil).success(function(data, status, headers, config){
+				console.log(data);
+			}).error(function(data, status, headers, config){
+				console.log(data);
+			});
+
+			var mapOpt = {
+			    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
+			    zoom:3,
+			    maxZoom: 12,
+			    minZoom: 2,
+			    mapTypeId:google.maps.MapTypeId.ROADMAP,
+			    mapTypeControl:false,
+			    streetViewControl:false
+				};
+
+			map = new google.maps.Map(document.getElementById("map-conversionFailed"),mapOpt);
+
+			map.addListener("click", function(event){
+
+				click_on_map(event.latLng);
+				
+			    
+			});
+		}
+	}
 	
 
 
@@ -1591,8 +1622,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}
 		if ($int == 2)
 		{
-			refreshListFossils();
-			
+			//refreshListFossils();
+			changeFossil();
 		}
 		if ($int == 3)
 		{
