@@ -1505,6 +1505,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}).error(function(data, status, headers, config){
 			console.log(data);
 		});
+
+		changeFossil();
 	}
 
 	function click_on_map(position)
@@ -1649,7 +1651,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		if ($int == 2)
 		{
 			refreshListFossils();
-			changeFossil();
+			
 		}
 		if ($int == 3)
 		{
