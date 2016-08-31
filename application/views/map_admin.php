@@ -595,7 +595,7 @@
 
 
 
-							<div class='col-md-12' ng-show="selectedFossil!='-1'">
+							<div class='col-md-10' ng-show="selectedFossil!='-1'">
 								<h5>Click on the map to give the fossil some coordinates</h5>
 							</div>
 
