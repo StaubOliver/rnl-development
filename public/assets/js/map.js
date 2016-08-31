@@ -1486,7 +1486,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}
 	}
 
-	$scope.selectedFossil = '-1';
 	$scope.selectedFossilLocation = "";
 	$scope.newLat = "";
 	$scope.newLng = "";

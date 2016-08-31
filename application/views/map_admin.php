@@ -2,7 +2,7 @@
 <html lang="en" ng-app='map_admin'
 
 <?php
-	echo 'ng-init = "selected_tab=\''.$selected_tab.'\'; edit_location=\''.$edit_location.'\'"';
+	echo 'ng-init = "selected_tab=\''.$selected_tab.'\'; selectedFossil=\''.$edit_location.'\'"';
 ?>
 
 
@@ -577,7 +577,15 @@
 
 								<select class="form-control" id="" ng-model="selectedFossil" ng-change="changeConversionFailed()">
 							         <option value='-1'>Pick a fossil</option>
-							         <option ng:repeat="fossil in conversionFailed" value="{{fossil.data_id}}">{{fossil.data_id}} - {{fossil.genus}}</option>
+							      
+							         <optgroup label="Fossils with failed conversion">	
+							         <option ng:repeat="fossil in list_fossils_conversion_failed" value="{{fossil.data_id}}">{{fossil.data_id}} - {{fossil.genus}}</option>
+
+							         <optgroup label="Fossils with coordinates">	
+							         <option ng:repeat="fossil in list_fossils_with_coordinates" value="{{fossil.data_id}}">{{fossil.data_id}} - {{fossil.genus}}</option>
+
+							         <optgroup label="Fossils with missing location information">
+							         <option ng:repeat="fossil in list_fossils_no_location" value="{{fossil.data_id}}">{{fossil.data_id}} - {{fossil.genus}}</option>	
 								</select>  
 							</div>
 
