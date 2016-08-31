@@ -1587,7 +1587,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		if ($scope.selectedFossil != '-1')
 		{
 			$http.get('/api/map/loadFossilDetails/'+$scope.selectedFossil).success(function(data, status, headers, config){
-				console.log(data);
+				scope.selectedFossilLocation = data.country + " " + data.place
 			}).error(function(data, status, headers, config){
 				console.log(data);
 			});
