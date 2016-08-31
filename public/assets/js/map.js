@@ -1505,8 +1505,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		}).error(function(data, status, headers, config){
 			console.log(data);
 		});
-
-		changeFossil();
 	}
 
 	function click_on_map(position)
@@ -1529,63 +1527,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	}
 
 	$scope.changeConversionFailed = function(){
-		if ($scope.selectedFossil != '-1')
-		{
-			for (var i = $scope.list_fossils.has_coordinates.length - 1; i >= 0; i--) {
-				if ($scope.selectedFossil == $scope.list_fossils.has_coordinates[i].data_id)
-				{
-					$scope.selectedFossilLocation = $scope.list_fossils.has_coordinates[i].country + " " + $scope.list_fossils.has_coordinates[i].place;
-				}
-			}
-
-			for (var i = $scope.list_fossils.no_location.length - 1; i >= 0; i--) {
-				if ($scope.selectedFossil == $scope.list_fossils.no_location[i].data_id)
-				{
-					$scope.selectedFossilLocation = $scope.list_fossils.no_location[i].country + " " + $scope.list_fossils.no_location[i].place;
-				}
-			}
-
-			for (var i = $scope.list_fossils.conversion_failed.length - 1; i >= 0; i--) {
-				if ($scope.selectedFossil == $scope.list_fossils.conversion_failed[i].data_id)
-				{
-					$scope.selectedFossilLocation = $scope.list_fossils.conversion_failed[i].country + " " + $scope.list_fossils.conversion_failed[i].place;
-				}
-			}
-
-			var mapOpt = {
-			    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
-			    zoom:3,
-			    maxZoom: 12,
-			    minZoom: 2,
-			    mapTypeId:google.maps.MapTypeId.ROADMAP,
-			    mapTypeControl:false,
-			    streetViewControl:false
-				};
-
-			map = new google.maps.Map(document.getElementById("map-conversionFailed"),mapOpt);
-
-			map.addListener("click", function(event){
-
-				click_on_map(event.latLng);
-				
-			    
-			});
-
-		}
-		else
-		{
-			$scope.selectedFossilLocation = '';
-			$scope.newLat = "";
-			$scope.newLng = "";
-			if (marker != null){
-				marker.setMap(null);
-				marker = null;
-			}
-		}
-	}
-
-	function changeFossil()
-	{
 		if ($scope.selectedFossil != '-1')
 		{
 			for (var i = $scope.list_fossils.has_coordinates.length - 1; i >= 0; i--) {
