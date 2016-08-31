@@ -1397,7 +1397,7 @@ class MapModel extends CI_Model {
 
         $upvote_part = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Upvote'");
         $nb_part_upvote = $upvote_part->num_rows();
-        $p_part_upvote = floatval($nb_upvote_part)/floatval($total_participants) * 100;
+        $p_part_upvote = floatval($nb_part_upvote)/floatval($total_participants) * 100;
 
         $click_reply_part = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Click reply'");
         $nb_part_click_reply = $click_reply_part->num_rows();
