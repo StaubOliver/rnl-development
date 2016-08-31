@@ -579,13 +579,13 @@
 							         <option value='-1'>Pick a fossil</option>
 							      
 							         <optgroup label="Fossils with failed conversion">	
-							         <option ng:repeat="fossil in list_fossils_conversion_failed" value="{{fossil.data_id}}">{{fossil.data_id}} - {{fossil.genus}}</option>
+							         <option ng:repeat="fossil in list_fossils.conversion_failed" value="{{fossil.data_id}}">{{fossil.data_id}} - {{fossil.genus}}</option>
 
 							         <optgroup label="Fossils with coordinates">	
-							         <option ng:repeat="fossil in list_fossils_with_coordinates" value="{{fossil.data_id}}">{{fossil.data_id}} - {{fossil.genus}}</option>
+							         <option ng:repeat="fossil in list_fossils.has_coordinates" value="{{fossil.data_id}}">{{fossil.data_id}} - {{fossil.genus}}</option>
 
 							         <optgroup label="Fossils with missing location information">
-							         <option ng:repeat="fossil in list_fossils_no_location" value="{{fossil.data_id}}">{{fossil.data_id}} - {{fossil.genus}}</option>	
+							         <option ng:repeat="fossil in list_fossils.no_location" value="{{fossil.data_id}}">{{fossil.data_id}} - {{fossil.genus}}</option>	
 								</select>  
 							</div>
 

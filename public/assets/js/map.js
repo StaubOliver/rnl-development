@@ -1490,10 +1490,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.newLat = "";
 	$scope.newLng = "";
 
-	$scope.list_fossils_with_coordinates = [];
-	$scope.list_fossils_conversion_failed = [];
-	$scope.list_fossils_no_location = [];
-
 	$scope.list_fossils = [];
 
 	var map;
@@ -1501,16 +1497,10 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	function refreshListFossils()
 	{
-		$scope.list_fossils_with_coordinates = [];
-		$scope.list_fossils_conversion_failed = [];
-		$scope.list_fossils_no_location = [];
-
 		$scope.list_fossils = [];
 
 		$http.get('/api/map/loadListFossils').success(function(data, status, headers, config){
 			$scope.list_fossils = data;
-			/*$scope.list_fossils_conversion_failed = data.conversoin_failed;
-			$scope.list_fossils_no_location = data['no_location'];*/
 
 			console.log($scope.list_fossils);
 
