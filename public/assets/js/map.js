@@ -1507,9 +1507,10 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		});
 	}
 
+	var test = "";
+
 	function click_on_map(position)
 	{
-
 		if (marker != null){
 			marker.setMap(null);
 			marker = null;
@@ -1521,7 +1522,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	        icon: pin_selected
 	    });
 
-	    $scope.newLat = marker.getPosition().lat();
+	    test = position.lat();
+	    console.log(test);
 	}
 
 	$scope.changeConversionFailed = function(){
