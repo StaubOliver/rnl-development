@@ -576,16 +576,31 @@
 							<div class='col-md-3'>
 
 								<select class="form-control" id="" ng-model="selectedFossil" ng-change="changeConversionFailed()">
-							         <option value='-1'>Pick a fossil</option>
+							        <option value='-1'>Pick a fossil</option>
 							      
-							         <optgroup label="Fossils with failed conversion">	
-							         <option ng:repeat="fossil in list_fossils.conversion_failed" value="{{fossil.data_id}}">{{fossil.data_id}} - {{fossil.genus}}</option>
+							        <optgroup label="Fossils with failed conversion">	
+							        <?php
+										foreach($list_fossils["conversion_failed"] as $item){
+											echo "<option value='".$item['data_id']."'>".$item['data_id'].' - '.$item["genus"]."</option>";
+										}
+									?>
 
-							         <optgroup label="Fossils with coordinates">	
-							         <option ng:repeat="fossil in list_fossils.has_coordinates" value="{{fossil.data_id}}">{{fossil.data_id}} - {{fossil.genus}}</option>
+							        <optgroup label="Fossils with coordinates">	
+							        <?php
+										foreach($list_fossils["has_coordinates"] as $item){
+											echo "<option value='".$item['data_id']."'>".$item['data_id'].' - '.$item["genus"]."</option>";
+										}
+									?>
 
-							         <optgroup label="Fossils with missing location information">
-							         <option ng:repeat="fossil in list_fossils.no_location" value="{{fossil.data_id}}">{{fossil.data_id}} - {{fossil.genus}}</option>	
+
+							        <optgroup label="Fossils with missing location information">
+							        <?php
+										foreach($list_fossils["no_location"] as $item){
+											echo "<option value='".$item['data_id']."'>".$item['data_id'].' - '.$item["genus"]."</option>";
+										}
+									?>
+
+
 								</select>  
 							</div>
 

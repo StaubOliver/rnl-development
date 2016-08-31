@@ -84,6 +84,8 @@ class map extends CI_Controller {
 				$data["edit_location"] = urldecode($this->uri->segment(3));
 			}
 
+			$data["list_fossils"] = $this->MapModel->loadListFossils();
+
 			$this->load->view('map_admin', $data);
 		}
 		else
