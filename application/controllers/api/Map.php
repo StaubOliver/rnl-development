@@ -252,6 +252,17 @@ class Map extends MY_Controller {
 		}
 	}
 
+	public function adminUpdateFossilCoordinates()
+	{
+		if ($this->ion_auth->logged_in()){
+			if ($this->ProfileModel->isAdmin()==1){
+				$data = array('lat' => $this->input->post("lat"), 'lng' => $this->input->post("lng"));
+				$this->db->where("data_id", $this->input->post("data_id"));
+				$this->db->update("project_1_data", $data);
+			}
+		}	
+	}
+
 	public function loadListFossils()
 	{
 		if ($this->ion_auth->logged_in()){

@@ -1487,9 +1487,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	}
 
 	$scope.selectedFossilLocation = "";
-	$scope.newLat = "test";
-	$scope.newLng = "";
 	newLat = "";
+	newLng = "";
 
 
 	$scope.list_fossils = [];
@@ -1607,7 +1606,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				    });
 
 					newLat = event.latLng.lat();
-					console.log(newLat);
+					newLng = event.latLng.lng();
 				});
 
 
@@ -1634,7 +1633,24 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.updateFossilCoordinates = function()
 	{
-		$scope.newLat = newLat;
+		data = {};
+		data.data_id = $scope.selectedFossil;
+		data.lat = newLat;
+		data.lng = newLng;
+
+		$http({
+	        method : 'POST',
+	        url: '/api/map/adminUpdateFossilCoordinates',
+	        data: $.param(data),
+	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+		    	
+		}).success(function(data, status, headers, config) {
+			
+
+		}).error(function(data, status, headers, config){
+
+
+		});
 	}
 
 	function refresh_tab($int){
