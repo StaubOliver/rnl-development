@@ -1775,7 +1775,7 @@ class MapModel extends CI_Model {
     {
         switch ($action) {
             case "Map Pan":
-                return "2";
+                return "1";
                 break;
             case "Map Zoom in":
                 return "2";
@@ -1783,10 +1783,67 @@ class MapModel extends CI_Model {
             case "Map Zoom out":
                 return "3";
                 break;
-            case "":
+            case "Map Click":
                 return "4";
                 break;
+            case "Click on Fossil":
+                return "5";
+                break;                 
+            case "Enlarge Image":
+                return "6";
+                break; 
+            case "Filter Geological Age changed":
+                return "7";
+                break; 
+            case "Collector Selector Hover":
+                return "8";
+                break; 
+            case "Filter Collector Selector Change":
+                return "9";
+                break; 
+            case "Filter Genus Selector Hover":
+                return "10";
+                break; 
+            case "Filter Genus Selector Change":
+                return "11";
+                break;
 
+
+            case "Feedback Hover":
+                return "21";
+                break; 
+            case "Feedback Click":
+                return "22";
+                break; 
+            case "Upvote":
+                return "23";
+                break; 
+            case "Click Reply":
+                return "24";
+                break; 
+            case "Sharing":
+                return "24";
+                break; 
+            case "Share contribution":
+                return "25";
+                break; 
+
+
+            case "Fossil selected":
+                return "31";
+                break; 
+            case "Fossil deseleted":
+                return "32";
+                break; 
+            case "Clear Selection":
+                return "33";
+                break; 
+            case "Writing comment":
+                return "34";
+                break; 
+            case "Submit comment":
+                return "35";
+                break; 
 
 
             default:

@@ -1674,8 +1674,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		var r = confirm("Are you sure to delete this fossils' coordinates from the database ?");
 		if (r == true) {
 		    x = "You pressed OK!";
-		} else {
-		    x = "You pressed Cancel!";
 		}
 	}
 
