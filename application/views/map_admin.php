@@ -570,7 +570,7 @@
 						<div class='row'>
 
 							<div class='col-md-2'>
-								<h5><?php echo count($list_fossils["conversion_failed"])+count($list_fossils["has_coordinates"])+count($list_fossils["no_location"]) ?> fossils</h5>
+								<h5><?php echo count($list_fossils["conversion_failed"])+count($list_fossils["has_coordinates"])+count($list_fossils["no_location"]) ?> Fossils</h5>
 							</div>
 
 							<div class='col-md-3'>
