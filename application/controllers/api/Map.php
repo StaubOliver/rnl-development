@@ -318,6 +318,8 @@ class Map extends MY_Controller {
 
 		fclose($myfile);
 
+		echo "done";
+
 	}
 
 }
