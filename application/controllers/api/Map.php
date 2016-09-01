@@ -316,7 +316,7 @@ class Map extends MY_Controller {
 		fwrite($file, "hello");
 		fwrite($file, "world");
 
-		fclose($myfile);
+		fclose($file);
 
 		echo "done";
 
