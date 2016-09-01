@@ -1846,6 +1846,19 @@ class MapModel extends CI_Model {
                 break; 
 
 
+            case "Open Page":
+                return "A";
+                break;
+            case "Close Page":
+                return "B";
+                break;
+            case "Open Help":
+                return "C";
+                break;
+            case "Close Help":
+                return "D";
+                break;
+
             default:
                 return "0";
         }
