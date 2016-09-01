@@ -1806,7 +1806,7 @@ class MapModel extends CI_Model {
             $res[$unique["unique_id"]] = array();
             $query_all_actions = $this->db->query("SELECT action from map_activity WHERE unique_id='".$unique["unique_id"]."' ORDER BY activity_id ASC");
 
-            foreach ($query_all_actions as $action) 
+            foreach ($query_all_actions->result_array() as $action) 
             {
                 $res[$unique["unique_id"]][] = $this->actionCode($action["action"]);
             }
