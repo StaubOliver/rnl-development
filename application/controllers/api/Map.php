@@ -311,7 +311,7 @@ class Map extends MY_Controller {
 
 	public function outputSPMF()
 	{
-		echo 'test';
+		echo 'test'+"\n";
 		echo 'heelo';
 	}
 
