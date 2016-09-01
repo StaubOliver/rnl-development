@@ -1761,7 +1761,7 @@ class MapModel extends CI_Model {
 
             "hist_actions"=>$hist, 
             "data_hist_actions"=>$hist_class,
-            "data_hist_tot_action"=>$hist_class,
+            "data_hist_tot_action"=>$hist_class_tot_action,
            
             "nb_action_fct_dwell"=>$nb_action_fct_dwell,
 
