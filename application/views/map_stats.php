@@ -924,9 +924,44 @@
 									{{d}}
 								</div>
 							</div>
+
+
+							<div class='col-md-2 col-sm-4 col-xs-8'>
+								Range
+							</div>
+							<div class='col-md-1 col-sm-2 col-xs-4'>
+								Nb of actions in class
+							</div>
+							<div class='col-md-2 col-sm-4 col-xs-8'>
+								Range
+							</div>
+							<div class='col-md-1 col-sm-2 col-xs-4'>
+								Nb of actions in class
+							</div>
+							<div class='col-md-2 col-sm-4 col-xs-8'>
+								Range
+							</div>
+							<div class='col-md-1 col-sm-2 col-xs-4'>
+								Nb of actions in class
+							</div>
+							<div class='col-md-2 col-sm-4 col-xs-8'>
+								Range
+							</div>
+							<div class='col-md-1 col-sm-2 col-xs-4'>
+								Nb of actions in class
+							</div>
+
+							<div ng-repeat='d in general.data_hist_tot_action track by $index'>
+								<div class='col-md-2 col-sm-4 col-xs-8'>
+									{{$index*10}}-{{($index+1)*10}}
+								</div>
+								<div class='col-md-1  col-sm-2 col-xs-4'>
+									{{d}}
+								</div>
+							</div>
+
+
 						</div>
-
-
 
 						<div class='col-md-12  col-sm-12 col-xs-12'>
 							<div id="chart_div" style="width: 100%; height: 400px;"></div>

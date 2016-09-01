@@ -1614,10 +1614,19 @@ class MapModel extends CI_Model {
 
 
         $hist_class = array_fill(0,($action_per_visitor[count($action_per_visitor)-1]/10)+1,0);
+
         for ($i=0; $i < count($action_per_visitor); $i++) 
         { 
             $hist_class[$action_per_visitor[$i]/10] ++;
         }
+
+        $hist_class_tot_action = array_fill(0,($action_per_visitor[count($action_per_visitor)-1]/10)+1,0);
+
+        for ($i=0; $i < count($action_per_visitor); $i++) 
+        { 
+            $hist_class_tot_action[$action_per_visitor[$i]/10] += $action_per_visitor[$i];
+        }
+
 
         $query_latest_activity = $this->db->query("SELECT * FROM map_activity where  ".$this->where_clause()." order by activity_id desc LIMIT 10");
         $latest_activity = $query_latest_activity->result_array();
@@ -1752,6 +1761,7 @@ class MapModel extends CI_Model {
 
             "hist_actions"=>$hist, 
             "data_hist_actions"=>$hist_class,
+            "data_hist_tot_action"=>$hist_class,
            
             "nb_action_fct_dwell"=>$nb_action_fct_dwell,
 
@@ -1786,7 +1796,7 @@ class MapModel extends CI_Model {
             case "Map Click":
                 return "4";
                 break;
-            case "Click on Fossil":
+            case "Click on fossil":
                 return "5";
                 break;                 
             case "Enlarge Image":
@@ -1801,7 +1811,7 @@ class MapModel extends CI_Model {
             case "Filter Collector Selector Change":
                 return "9";
                 break; 
-            case "Filter Genus Selector Hover":
+            case "Genus Selector Hover":
                 return "10";
                 break; 
             case "Filter Genus Selector Change":
@@ -1809,10 +1819,10 @@ class MapModel extends CI_Model {
                 break;
 
 
-            case "Feedback Hover":
+            case "Feedback mouse over":
                 return "21";
                 break; 
-            case "Feedback Click":
+            case "Click on Feedback":
                 return "22";
                 break; 
             case "Upvote":
@@ -1829,13 +1839,13 @@ class MapModel extends CI_Model {
                 break; 
 
 
-            case "Fossil selected":
+            case "Fossil selected ":
                 return "31";
                 break; 
-            case "Fossil deseleted":
+            case "Fossil deselected":
                 return "32";
                 break; 
-            case "Clear Selection":
+            case "Clear Fossil selection":
                 return "33";
                 break; 
             case "Writing comment":
@@ -1847,16 +1857,16 @@ class MapModel extends CI_Model {
 
 
             case "Open Page":
-                return "A";
+                return "41";
                 break;
             case "Close Page":
-                return "B";
+                return "42";
                 break;
             case "Open Help":
-                return "C";
+                return "43";
                 break;
             case "Close Help":
-                return "D";
+                return "44";
                 break;
 
             default:
