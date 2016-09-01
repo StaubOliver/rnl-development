@@ -313,9 +313,6 @@ class Map extends MY_Controller {
 	{
 		$file = fopen('/var/www/html/public/outputSPFM.txt', 'w');
 
-		fwrite($file, "hello"."\n");
-		fwrite($file, "world");
-
 		foreach ($this->MapModel->outputSPMF() as $visitor) 
 		{
 			foreach($visitor as $action)
