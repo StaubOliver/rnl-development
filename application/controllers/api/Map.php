@@ -313,7 +313,7 @@ class Map extends MY_Controller {
 	{
 		$file = fopen('/var/www/html/public/outputSPFM.txt', 'w');
 
-		fwrite($file, "hello");
+		fwrite($file, "hello"."\n");
 		fwrite($file, "world");
 
 		fclose($file);
