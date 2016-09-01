@@ -1795,7 +1795,7 @@ class MapModel extends CI_Model {
     }
 
 
-    public function outputSPFM()
+    public function outputSPMF()
     {
         $res = array();
 
