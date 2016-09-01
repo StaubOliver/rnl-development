@@ -309,4 +309,10 @@ class Map extends MY_Controller {
 		}
 	}
 
+	public function outputSPMF()
+	{
+		echo 'test';
+		echo 'heelo';
+	}
+
 }
