@@ -311,8 +311,12 @@ class Map extends MY_Controller {
 
 	public function outputSPMF()
 	{
-		$file = '/var/www/html/public/outputSPFM.txt';
-		readfile($file);
+		$file = fopen('/var/www/html/public/outputSPFM.txt', 'w');
+
+		fwrite($file, "hello");
+		fwrite($file, "world");
+
+		fclose($myfile);
 
 	}
 
