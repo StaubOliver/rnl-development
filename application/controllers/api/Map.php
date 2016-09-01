@@ -311,8 +311,9 @@ class Map extends MY_Controller {
 
 	public function outputSPMF()
 	{
-		print 'test \n';
-		echo 'heelo';
+		$file = '/var/www/html/public/outputSPFM.txt';
+		readfile($file);
+
 	}
 
 }
