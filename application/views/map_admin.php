@@ -619,7 +619,7 @@
 								</div>	
 							</div>
 							<div class='col-md-2' ng-show="selectedFossil!='-1'">
-								<div class='btn btn-custom-primary btn-xs btn-update-location' ng-click="updateFossilCoordinates()">
+								<div class='btn btn-custom-default btn-xs btn-update-location' ng-click="updateFossilCoordinates()">
 									Delete Coordinates
 								</div>	
 							</div>
