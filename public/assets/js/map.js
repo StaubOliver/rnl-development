@@ -1647,9 +1647,16 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		    	
 		}).success(function(data, status, headers, config) {
 			
-			marker_old.setPosition(marker.getPosition());
-			marker.setMap(null);
-			marker = null;
+			if(marker_old!=null)
+			{
+				marker_old.setPosition(marker.getPosition());
+				marker.setMap(null);
+				marker = null;
+			}
+			else
+			{
+				changeFossil();
+			}
 
 		}).error(function(data, status, headers, config){
 
