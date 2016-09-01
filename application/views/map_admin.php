@@ -609,13 +609,18 @@
 
 
 
-							<div class='col-md-10' ng-show="selectedFossil!='-1'">
+							<div class='col-md-8' ng-show="selectedFossil!='-1'">
 								<h5>Click on the map to give the fossil some coordinates</h5>
 							</div>
 
 							<div class='col-md-2' ng-show="selectedFossil!='-1'">
 								<div class='btn btn-custom-primary btn-xs btn-update-location' ng-click="updateFossilCoordinates()">
 									Save
+								</div>	
+							</div>
+							<div class='col-md-2' ng-show="selectedFossil!='-1'">
+								<div class='btn btn-custom-primary btn-xs btn-update-location' ng-click="updateFossilCoordinates()">
+									Delete Coordinates
 								</div>	
 							</div>
 
