@@ -1856,7 +1856,7 @@ class MapModel extends CI_Model {
     {
         $res = array();
 
-        $query_unique_visits = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and action!='Open Page' and action!='Close Page' and action!='Open Help' and action!='Close Help'");
+        $query_unique_visits = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause());
 
         foreach ($query_unique_visits->result_array() as $unique)
         {
