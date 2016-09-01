@@ -930,25 +930,25 @@
 								Range
 							</div>
 							<div class='col-md-1 col-sm-2 col-xs-4'>
-								Nb of actions in class
+								Nb actions
 							</div>
 							<div class='col-md-2 col-sm-4 col-xs-8'>
 								Range
 							</div>
 							<div class='col-md-1 col-sm-2 col-xs-4'>
-								Nb of actions in class
+								Nb actions
 							</div>
 							<div class='col-md-2 col-sm-4 col-xs-8'>
 								Range
 							</div>
 							<div class='col-md-1 col-sm-2 col-xs-4'>
-								Nb of actions in class
+								Nb actions
 							</div>
 							<div class='col-md-2 col-sm-4 col-xs-8'>
 								Range
 							</div>
 							<div class='col-md-1 col-sm-2 col-xs-4'>
-								Nb of actions in class
+								Nb actions
 							</div>
 
 							<div ng-repeat='d in general.data_hist_tot_action track by $index'>
