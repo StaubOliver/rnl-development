@@ -1495,6 +1495,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	var map;
 	var marker;
+	var marker_old;
 
 	function refreshListFossils()
 	{
@@ -1542,14 +1543,14 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				if (temp["lat"] != '0' && temp["lat"] != "null")
 				{
 
-					var tmp = new google.maps.Marker({
+					marker_old = new google.maps.Marker({
 						map: map,
 						position: new google.maps.LatLng(temp['lat'], temp['lng']),
 						title: temp['id'] + "-" + temp['genus'],
 					    icon: getPinColor(temp['age'])
 					});
 
-					tmp.addListener("click", function()
+					marker_old.addListener("click", function()
 					{
 
 						//info window
@@ -1587,7 +1588,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 						
 						infoWindowadmin.setContent(content);
 
-						infoWindowadmin.open('map', tmp);
+						infoWindowadmin.open('map', marker_old);
 
 					});
 				}
@@ -1645,68 +1646,10 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		    	
 		}).success(function(data, status, headers, config) {
-			$http.get('/api/map/loadFossilDetails/'+$scope.selectedFossil).success(function(data, status, headers, config){
-				
-				$scope.selectedFossilLocation = data.country + " " + data.place;
-					
-				temp = data;
-
-				if (temp["lat"] != '0' && temp["lat"] != "null")
-				{
-
-					var tmp = new google.maps.Marker({
-						map: map,
-						position: new google.maps.LatLng(temp['lat'], temp['lng']),
-						title: temp['id'] + "-" + temp['genus'],
-					    icon: getPinColor(temp['age'])
-					});
-
-					tmp.addListener("click", function()
-					{
-
-						//info window
-						infoWindowadmin.close;
-						var content =
-						"<div class='container-fluid map-infowindow'>"
-							+ "<div class='row'>"
-
-								+ "<div class='col-md-12'>"
-
-									+ "<div class='row'>"
-										+ "<div class='col-xs-12'>"
-											+ "<p class='infowindow-text'><strong> Genus : </strong> " + temp['genus'] + "</p>"
-										+ "</div>"
-										+ "<div class='col-xs-12'>"
-											+ "<p class='infowindow-text'> <strong> Species : </strong> " + temp["species"] + "</p>"
-										+ "</div>"
-										+ "<div class='col-xs-12'>"
-											+ "<p class='infowindow-text'> <strong> Age : </strong>" + temp['age'] + "</p>"
-										+ "</div>"
-										+ "<div class='col-xs-12'>"
-											+ "<p class='infowindow-text'> <strong> Collector : </strong>"+ temp["collector"] + "</p>"
-										+ "</div>"
-										+ "<div class='col-xs-12'>"
-											+ "<p class='infowindow-text'> <strong> Location : </strong>" + temp["place"] + "</p>"
-										+ "</div>"
-
-									+"</div>"
-
-								+ "</div>"
-							+ "</div>"
-						+ "</div>"
-						;
-
-						
-						infoWindowadmin.setContent(content);
-
-						infoWindowadmin.open('map', tmp);
-
-					});
-				}
-
-			}).error(function(data, status, headers, config){
-				console.log(data);
-			});
+			
+			marker_old.setPosition(marker.getPosition());
+			marker.setMap(null);
+			marker = null;
 
 		}).error(function(data, status, headers, config){
 
