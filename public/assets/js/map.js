@@ -1634,34 +1634,37 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	$scope.updateFossilCoordinates = function()
 	{
-		data = {};
-		data.data_id = $scope.selectedFossil;
-		data.lat = newLat;
-		data.lng = newLng;
+		if (newLat != "" && newLng != "")
+		{
+			data = {};
+			data.data_id = $scope.selectedFossil;
+			data.lat = newLat;
+			data.lng = newLng;
 
-		$http({
-	        method : 'POST',
-	        url: '/api/map/adminUpdateFossilCoordinates',
-	        data: $.param(data),
-	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-		    	
-		}).success(function(data, status, headers, config) {
-			
-			if(marker_old!=null)
-			{
-				marker_old.setPosition(marker.getPosition());
-				marker.setMap(null);
-				marker = null;
-			}
-			else
-			{
-				changeFossil();
-			}
+			$http({
+		        method : 'POST',
+		        url: '/api/map/adminUpdateFossilCoordinates',
+		        data: $.param(data),
+		        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+			    	
+			}).success(function(data, status, headers, config) {
+				
+				if(marker_old!=null)
+				{
+					marker_old.setPosition(marker.getPosition());
+					marker.setMap(null);
+					marker = null;
+				}
+				else
+				{
+					changeFossil();
+				}
 
-		}).error(function(data, status, headers, config){
+			}).error(function(data, status, headers, config){
 
 
-		});
+			});
+		}
 	}
 
 	function refresh_tab($int){
