@@ -316,6 +316,15 @@ class Map extends MY_Controller {
 		fwrite($file, "hello"."\n");
 		fwrite($file, "world");
 
+		foreach ($this->MapModel->outputSPMF() as $visitor) 
+		{
+			foreach($visitor as $action)
+			{
+				fwrite($file, $action." ");
+			}
+			fwrite($file, "\n");
+		}
+
 		fclose($file);
 
 		echo "done";

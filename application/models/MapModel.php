@@ -1771,15 +1771,49 @@ class MapModel extends CI_Model {
     }
 
 
+    public function actionCode($action)
+    {
+        switch ($action) {
+            case "Map Pan":
+                return "2";
+                break;
+            case "Map Zoom in":
+                return "2";
+                break;
+            case "Map Zoom out":
+                return "3";
+                break;
+            case "":
+                return "4";
+                break;
 
 
 
+            default:
+                return "0";
+        }
+    }
 
 
+    public function outputSPFM()
+    {
+        $res = array();
 
+        $query_unique_visits = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and action!='Open Page' and action!='Close Page' and action!='Open Help' and action!='Close Help'");
 
+        foreach ($query_unique_visits->result_array() as $unique)
+        {
+            $res[$unique["unique_id"]] = array();
+            $query_all_actions = $this->db->query("SELECT action from map_activity WHERE unique_id='".$unique["unique_id"]."' ORDER BY activity_id ASC");
 
+            foreach ($query_all_actions as $action) 
+            {
+                $res[$unique["unique_id"]][] = $this->actionCode($action["action"]);
+            }
+        }
 
+        return $res;
+    }
 
 
 
