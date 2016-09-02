@@ -1670,7 +1670,7 @@ class MapModel extends CI_Model {
             }
             else
             {
-                $nb_action_fct_dwell[] = array($visitor_details["nb_tot_action"], $visitor_details["tot_dwell"], "");
+                $nb_action_fct_dwell[] = array($visitor_details["nb_tot_action"], $visitor_details["tot_dwell"], "0");
             }
 
             
