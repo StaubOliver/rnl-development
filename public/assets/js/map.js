@@ -1822,11 +1822,11 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 					histogram: 
 					{ 
-						bucketSize: 20,
+						bucketSize: 10,
 						hideBucketItems: true, 
 						maxNumBuckets: 80,
 						minValue: 0,
-						maxValue: 1000
+						maxValue: 700
 					},
 
 					bar: { gap: 0 },
@@ -1846,6 +1846,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 					},
 
 					vAxis: {
+						ticks: [0, 25, 50, 75, 100, 125, 150, 175, 200, 225],
 						title:'Number of person'
 					}
 
@@ -1854,6 +1855,25 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 			    var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
 			    chart.draw(data, options);
 			}
+
+			/*
+			function drawNbActionFctDwell()
+			{
+				var data = google.visualization.arrayToDataTable($scope.general.nb_action_fct_dwell);
+
+				var options = {
+					legend: { position: 'none' }, 
+			      	colors: ['212a33'],
+			      	chartArea:{left:100,top:10,width:'100%',height:'350'},
+			      	hAxis: {title: 'N Action'},
+          			vAxis: {title: 'Dwell (s)', logScale:true},
+          			pointSize: 4
+				};
+
+				var chart = new google.visualization.ScatterChart(document.getElementById('chart_action_dwell'));
+
+				chart.draw(data, options);
+			}*/
 
 			function drawNbActionFctDwell()
 			{
@@ -1872,6 +1892,24 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 				chart.draw(data, options);
 			}
+
+			/*
+			function drawActionDistribution() 
+			{
+				var data = google.visualization.arrayToDataTable($scope.general.action_distribution);
+
+				var options = {
+					title: 'Action distribution',
+					chartArea:{left:100,top:10,width:'100%',height:'450'},
+					pieHole: 0.4,
+					colors: ['212a33', '28323d', '2e3b48', '354352', '3c4c5c', '425467', '495d71', 
+							'50657b', '566e85', '5d7690', '647f9a', '6e87a1', '7890a8', '8298ae', 
+							'8da1b5', '97a9bc', 'a1b2c2', 'acbac9', 'b6c3d0', 'c0cbd6', 'cbd4dd']
+				};
+
+				var chart = new google.visualization.PieChart(document.getElementById('chart_action_distribution'));
+				chart.draw(data, options);
+			}*/
 
 			function drawActionDistribution() 
 			{
