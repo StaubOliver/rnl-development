@@ -646,10 +646,10 @@
 							Social Collaboration
 						</div>
 						<div class='col-md-1 col-sm-3 col-xs-3'>
-							{{general.p_part_social_contribution}}%
+							{{general.p_part_social_collaboration}}%
 						</div>
 						<div class='col-md-1 col-sm-3 col-xs-3'>
-							{{general.nb_part_social_contribution}}
+							{{general.nb_part_social_collaboration}}
 						</div>
 
 					</div>
