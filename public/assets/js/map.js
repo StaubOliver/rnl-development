@@ -1824,7 +1824,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 					{ 
 						bucketSize: 5,
 						hideBucketItems: true, 
-						maxNumBuckets: 100,
+						maxNumBuckets: 500,
 						minValue: 0,
 						maxValue: 700
 					},
@@ -1835,7 +1835,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 					{
 						left:100,
 						top:10,
-						width:'95%',
+						width:'90%',
 						height:'550'
 					},
 
