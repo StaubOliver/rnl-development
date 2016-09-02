@@ -961,6 +961,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 	refresh_tab($scope.selected_tab);
 
+
 	$scope.change_tab = function($int)
 	{
 		$scope.selected_tab = $int;

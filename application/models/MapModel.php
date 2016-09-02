@@ -1569,6 +1569,15 @@ class MapModel extends CI_Model {
             "std" => $this->secondsToTime(intval($this->stats_standard_deviation($dwell_per_visitor)))
         );
 
+        $stat_dwell = array(
+            "min" => $dwell_per_visitor[0],
+            "max" => $dwell_per_visitor[count($dwell_per_visitor)-1],
+            "total" => $tot_dwell_per_visitor,
+            "avg" => intval($this->calculate_average($dwell_per_visitor)),
+            "med" => intval($this->calculate_median($dwell_per_visitor)),
+            "std" => intval($this->stats_standard_deviation($dwell_per_visitor))
+        );
+
         $stat_action_per_visit = array(
             "min" => $action_per_visit[0],
             "max" => $action_per_visit[count($action_per_visit)-1],
@@ -1772,7 +1781,9 @@ class MapModel extends CI_Model {
             "stat_visits_per_visitor" => $stat_visits_per_visitor,
             "stat_dwell_per_visitor" => $stat_dwell_per_visitor,
             "stat_action_per_visit" => $stat_action_per_visit,
-            "stat_dwell_per_visit" => $stat_dwell_per_visit
+            "stat_dwell_per_visit" => $stat_dwell_per_visit,
+
+            "dwell" => $stat_dwell
 
         );
 
