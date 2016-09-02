@@ -1554,15 +1554,15 @@ class MapModel extends CI_Model {
 
         $query_data_exploration = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Map Pan' or action ='Map Zoom in' or action = 'Map Zoom out' or action ='Map Click' or action ='Click on Fossil' or action ='Enlarge Image' or action='Filter Geological Age changed' or action='Filter Collector Selector change' or action='Collector Selector Hover' or action='Filter Genus Selector change' or action='Genus Selector Hover' or action='Reset Filter'");
         $nb_part_data_exploration = $query_data_exploration->num_rows();
-        $p_part_data_exploration = floatval($nb_part_data_exploration /floatval($total_participants) * 100;
+        $p_part_data_exploration = floatval($nb_part_data_exploration)/floatval($total_participants) * 100;
 
         $query_contribution = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and action='Fossil selected' or action='Fossil deselected' or action='Clear Fossil selection' or action='Writing comment' or action='Submit feedback'");
         $nb_part_contribution = $query_contribution->num_rows();
-        $p_part_contribution = floatval($nb_part_contribution /floatval($total_participants) * 100;
+        $p_part_contribution = floatval($nb_part_contribution)/floatval($total_participants) * 100;
 
         $query_social_collaboration = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and action='Feedback mouse over' or action='Click on feedback' or action='Upvote' or action='Click reply'     ");
         $nb_part_social_collaboration = $query_social_collaboration->num_rows();
-        $p_part_social_collaboration = floatval($nb_part_social_collaboration /floatval($total_participants) * 100;
+        $p_part_social_collaboration = floatval($nb_part_social_collaboration)/floatval($total_participants) * 100;
 
 
         /* time */
