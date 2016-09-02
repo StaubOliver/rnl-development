@@ -1562,7 +1562,7 @@ class MapModel extends CI_Model {
 
         $query_contribution = $this->db->query("select * from map_activity where ".$this->where_clause()." and (action='Fossil selected' or action='Fossil deselected' or action='Clear Fossil selection' or action='Writing comment' or action='Submit feedback')");
         $nb_contribution = $query_contribution->num_rows();
-        $p_contribution = floatval($nb_part_contribution)/floatval($total) * 100;
+        $p_contribution = floatval($nb_contribution)/floatval($total) * 100;
 
         $query_social_collaboration = $this->db->query("select * from map_activity where ".$this->where_clause()." and (action='Feedback mouse over' or action='Click on feedback' or action='Upvote' or action='Click reply' or action='Sharing' or action='Share contribution')");
         $nb_social_collaboration = $qsocial_collaboration->num_rows();
