@@ -1597,7 +1597,7 @@ class MapModel extends CI_Model {
 
         
         $nb_action_fct_dwell = array();
-        $nb_action_fct_dwell[] = array("Nb Action per Visitor", "Dwell");
+        $nb_action_fct_dwell[] = array("Nb Action per Visitor", "Dwell", "Dwell");
 
 
         $action_per_visitor = array();
@@ -1660,7 +1660,19 @@ class MapModel extends CI_Model {
         
             $hist[] = array($unique["unique_id"], $visitor_details["nb_tot_action"]);
 
-            $nb_action_fct_dwell[] = array($visitor_details["nb_tot_action"], $visitor_details["tot_dwell"]);
+            //$nb_action_fct_dwell[] = array($visitor_details["nb_tot_action"], $visitor_details["tot_dwell"]);
+
+            /*check if contribution*/
+            $query_contribution = $this->db->query("select * from map_activity where action='Submit feedback' and unique_id='".$unique["unique_id"]."'");
+            if ($query_contribution->num_rows() > 0)
+            {
+                $nb_action_fct_dwell[] = array($visitor_details["nb_tot_action"], $visitor_details["tot_dwell"], $visitor_details["tot_dwell"]);
+            }
+            else
+            {
+                $nb_action_fct_dwell[] = array($visitor_details["nb_tot_action"], $visitor_details["tot_dwell"], "null");
+            }
+
             
         }
         //$avg_time = date_parse_from_format("s", intval($avg_time));
@@ -1823,7 +1835,7 @@ class MapModel extends CI_Model {
             "nb_reset_filter"=>round($nb_reset_filter,2),
 
 
-
+            /*
             "action_distribution"=>array(
                 array("Actions", "Distribution"),
                 array("Map Pan", round($nb_map_pan,2)), 
@@ -1849,6 +1861,33 @@ class MapModel extends CI_Model {
                 array("Sharing", round($nb_sharing, 2)),
                 array("Share contribution", round($nb_share_contribution, 2)),
                 array("Reset Filter", round($nb_reset_filter, 2))
+            ),*/
+
+            "action_distribution"=>array(
+                array("Actions", "Distribution"),
+                array("Map pan 26,74%", round($nb_map_pan,2)), 
+                array("Map zoom in 15,47%", round($nb_map_zoom_in,2)),
+                array("Map zoom out 8,57%", round($nb_map_zoom_out,2)),
+                array("Map click 3,2%", round($nb_map_click,2)),
+                array("Fossil click 9,93%", round($nb_click_on_fossil,2)),
+                array("Enlarge image 1,65%", round($nb_enlarge_image,2)),
+                array("Fossil selection 0,95% ", round($nb_fossil_selected,2)),
+                array("Fossil deselection 0,44%", round($nb_fossil_deselected,2)),
+                array("Clear selection list 0,07%", round($nb_clear_fossil_selection,2)),
+                array("Writing contribution 3,12%", round($nb_write_comment, 2)),
+                array("Submitting contribution 0,03%", round($nb_submit_feedback, 2)),
+                array("Contribution hover 16,83%", round($nb_feedback_hover,2)),
+                array("Contribution click 0,22%", round($nb_feedback_click, 2)),
+                array("Click upvote 0%", round($nb_upvote, 2)),
+                array("Click reply 0,02%", round($nb_click_reply,2)),
+                array("Share of the application 0,11%", round($nb_sharing, 2)),
+                array("Share of a contribution 0%", round($nb_share_contribution, 2)),
+                array("Change geological age 2,75%", round($nb_filter_geological_change,2)),
+                array("Hover collector 5,46%", round($nb_filter_collector_hover,2)),
+                array("Change collector  0,29%", round($nb_filter_collector_change, 2)),
+                array("Hover genus 3,93%", round($nb_filter_genus_hover, 2)),
+                array("Change genus 0,17%", round($nb_filter_genus_change, 2)),
+                array("Reset filter 0,06%", round($nb_reset_filter, 2))
             ),
 
 
@@ -1923,9 +1962,9 @@ class MapModel extends CI_Model {
 
             "hist_actions"=>$hist, 
             "data_hist_actions"=>$hist_class,
-            "data_hist_tot_action"=>$hist_class_tot_action,
            
             "nb_action_fct_dwell"=>$nb_action_fct_dwell,
+            //"nb_action_fct_dwell_with_contribution"=>$nb_action_fct_dwell_with_contribution,
 
             "latest_activity"=>$latest_activity, 
 
@@ -1937,13 +1976,8 @@ class MapModel extends CI_Model {
             "stat_dwell_per_visit" => $stat_dwell_per_visit,
 
             "dwell" => $stat_dwell
-
         );
-
-
-
     }
-
 
 
     public function outputSPMF()
@@ -1962,7 +1996,6 @@ class MapModel extends CI_Model {
                 $res[$unique["unique_id"]][] = $this->actionCode($action["action"]);
             }
         }
-
         return $res;
     }
 
