@@ -1881,10 +1881,10 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 				var options = {
 					legend: { position: 'none' }, 
-			      	colors: ['212a33', 'FF4D79'],
-			      	chartArea:{left:100,top:10,width:'100%',height:'350'},
-			      	hAxis: {title: 'N Action'},
-          			vAxis: {title: 'Dwell (s)', logScale:true},
+			      	colors: ['212a33'],
+			      	chartArea:{left:100,top:10,width:'100%',height:'550'},
+			      	hAxis: {title: 'Number of action', logScale:true},
+          			vAxis: {title: 'Dwell (second)', logScale:true},
           			pointSize: 4
 				};
 

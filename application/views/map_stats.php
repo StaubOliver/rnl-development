@@ -1122,7 +1122,7 @@
 						</div>
 
 						<div class='col-md-12 col-sm-12 col-xs-12'>
-							<div id="chart_action_dwell" style="width: 100%; height: 400px;"></div>
+							<div id="_chart_action_dwell" style="width: 100%; height: 400px;"></div>
 						</div>
 
 					</div>
@@ -1216,6 +1216,10 @@
 
 	<div class='col-md-12 col-sm-12 col-xs-12'>
 		<div id="chart_action_distribution" style="width: 1000px; height: 600px; margin-top:15px"></div>
+	</div>
+
+	<div class='col-md-12 col-sm-12 col-xs-12'>
+		<div id="chart_action_dwell" style="width: 1500px; height: 600px;"></div>
 	</div>
 
 
