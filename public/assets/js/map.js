@@ -1822,6 +1822,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 			      	chartArea:{left:100,top:10,width:'100%',height:'350'},
 			      	hAxis: {title: 'N Action'},
           			vAxis: {title: 'Dwell (s)', logScale:true},
+          			pointSize: 4
 				};
 
 				var chart = new google.visualization.ScatterChart(document.getElementById('chart_action_dwell'));
