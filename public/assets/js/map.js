@@ -1822,7 +1822,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 					histogram: 
 					{ 
-						bucketSize: 5,
+						bucketSize: 10,
 						hideBucketItems: true, 
 						maxNumBuckets: 500,
 						minValue: 0,
