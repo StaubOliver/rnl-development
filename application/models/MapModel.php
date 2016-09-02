@@ -1565,7 +1565,7 @@ class MapModel extends CI_Model {
         $p_contribution = floatval($nb_contribution)/floatval($total) * 100;
 
         $query_social_collaboration = $this->db->query("select * from map_activity where ".$this->where_clause()." and (action='Feedback mouse over' or action='Click on feedback' or action='Upvote' or action='Click reply' or action='Sharing' or action='Share contribution')");
-        $nb_social_collaboration = $qsocial_collaboration->num_rows();
+        $nb_social_collaboration = $social_collaboration->num_rows();
         $p_social_collaboration = floatval($nb_social_collaboration)/floatval($total) * 100;
 
         /* Action per visitor per category */
