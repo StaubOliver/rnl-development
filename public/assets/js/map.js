@@ -1769,7 +1769,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 			google.charts.setOnLoadCallback(drawNbActionFctDwell);
 			google.charts.setOnLoadCallback(drawActionDistribution);
 
-
+			/*
 			function drawHistogram() 
 			{
 			    var data = google.visualization.arrayToDataTable($scope.general.hist_actions);
@@ -1795,6 +1795,48 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 						top:10,
 						width:'100%',
 						height:'350'
+					},
+
+					hAxis: {
+						ticks: [0, 100, 200, 300, 400, 500, 600, 700],
+						viewWindowMode: 'pretty'
+					}
+
+					/*vAxis: {
+						ticks: [0, 10, 20, 30, 40, 50, 60, 70]
+					}
+
+			    };
+
+			    var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
+			    chart.draw(data, options);
+			}*/
+
+			function drawHistogram() 
+			{
+			    var data = google.visualization.arrayToDataTable($scope.general.hist_actions);
+
+			    var options = {
+					legend: { position: 'none' }, 
+					colors: ['212a33'],
+
+					histogram: 
+					{ 
+						bucketSize: 20,
+						hideBucketItems: true, 
+						maxNumBuckets: 80,
+						minValue: 0,
+						maxValue: 1000
+					},
+
+					bar: { gap: 0 },
+
+					chartArea:
+					{
+						left:40,
+						top:10,
+						width:'90%',
+						height:'550'
 					},
 
 					hAxis: {
