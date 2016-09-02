@@ -1833,7 +1833,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 					chartArea:
 					{
-						left:40,
+						left:100,
 						top:10,
 						width:'90%',
 						height:'550'
