@@ -1211,7 +1211,7 @@
 	</div>
 
 	<div class='col-md-12  col-sm-12 col-xs-12'>
-		<div id="chart_div" style="width: 1440px; height: 600px;"></div>
+		<div id="chart_div" style="width: 1600px; height: 600px;"></div>
 	</div>
 
 

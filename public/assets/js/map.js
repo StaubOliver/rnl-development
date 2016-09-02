@@ -1840,7 +1840,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 					},
 
 					hAxis: {
-						ticks: [0, 100, 200, 300, 400, 500, 600, 700],
+						ticks: [0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700],
 						viewWindowMode: 'pretty',
 						title:'Number of action'
 					},
