@@ -1841,12 +1841,13 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 					hAxis: {
 						ticks: [0, 100, 200, 300, 400, 500, 600, 700],
-						viewWindowMode: 'pretty'
+						viewWindowMode: 'pretty',
+						title:'Number of action'
 					}
 
-					/*vAxis: {
-						ticks: [0, 10, 20, 30, 40, 50, 60, 70]
-					}*/
+					vAxis: {
+						title:'Number of person'
+					}
 
 			    };
 
