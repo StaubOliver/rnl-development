@@ -1550,18 +1550,40 @@ class MapModel extends CI_Model {
         $p_part_reset_filter = floatval($nb_part_reset_filter)/floatval($total_participants) * 100;
 
 
+        /* Action distribution per category */
+
+        $query_data_visualization = $this->db->query("select * from map_activity where ".$this->where_clause()." and (map_activity.action='Map Pan' or action ='Map Zoom in' or action = 'Map Zoom out' or action ='Map Click' or action ='Click on Fossil' or action ='Enlarge Image')");
+        $nb_data_visualization = $query_data_visualization->num_rows();
+        $p_data_visualization = floatval($nb_data_visualization)/floatval($total) * 100;
+
+        $query_data_exploration = $this->db->query("select * from map_activity where ".$this->where_clause()." and (action='Filter Geological Age changed' or action='Filter Collector Selector change' or action='Collector Selector Hover' or action='Filter Genus Selector change' or action='Genus Selector Hover' or action='Reset Filter')");
+        $nb_data_exploration = $query_data_exploration->num_rows();
+        $p_data_exploration = floatval($nb_data_exploration)/floatval($total) * 100;
+
+        $query_contribution = $this->db->query("select * from map_activity where ".$this->where_clause()." and (action='Fossil selected' or action='Fossil deselected' or action='Clear Fossil selection' or action='Writing comment' or action='Submit feedback')");
+        $nb_contribution = $query_contribution->num_rows();
+        $p_contribution = floatval($nb_part_contribution)/floatval($total) * 100;
+
+        $query_social_collaboration = $this->db->query("select * from map_activity where ".$this->where_clause()." and (action='Feedback mouse over' or action='Click on feedback' or action='Upvote' or action='Click reply' or action='Sharing' or action='Share contribution')");
+        $nb_social_collaboration = $qsocial_collaboration->num_rows();
+        $p_social_collaboration = floatval($nb_social_collaboration)/floatval($total) * 100;
+
         /* Action per visitor per category */
 
-        $query_data_exploration = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and (map_activity.action='Map Pan' or action ='Map Zoom in' or action = 'Map Zoom out' or action ='Map Click' or action ='Click on Fossil' or action ='Enlarge Image' or action='Filter Geological Age changed' or action='Filter Collector Selector change' or action='Collector Selector Hover' or action='Filter Genus Selector change' or action='Genus Selector Hover' or action='Reset Filter')");
-        $nb_part_data_exploration = $query_data_exploration->num_rows();
+        $query_part_data_visualization = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and (map_activity.action='Map Pan' or action ='Map Zoom in' or action = 'Map Zoom out' or action ='Map Click' or action ='Click on Fossil' or action ='Enlarge Image')");
+        $nb_part_data_visualization = $query_part_data_visualization->num_rows();
+        $p_part_data_visualization = floatval($nb_part_data_visualization)/floatval($total_participants) * 100;
+
+        $query_part_data_exploration = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and (action='Filter Geological Age changed' or action='Filter Collector Selector change' or action='Collector Selector Hover' or action='Filter Genus Selector change' or action='Genus Selector Hover' or action='Reset Filter')");
+        $nb_part_data_exploration = $query_part_data_exploration->num_rows();
         $p_part_data_exploration = floatval($nb_part_data_exploration)/floatval($total_participants) * 100;
 
-        $query_contribution = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and (action='Fossil selected' or action='Fossil deselected' or action='Clear Fossil selection' or action='Writing comment' or action='Submit feedback')");
-        $nb_part_contribution = $query_contribution->num_rows();
+        $query_part_contribution = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and (action='Fossil selected' or action='Fossil deselected' or action='Clear Fossil selection' or action='Writing comment' or action='Submit feedback')");
+        $nb_part_contribution = $query_part_contribution->num_rows();
         $p_part_contribution = floatval($nb_part_contribution)/floatval($total_participants) * 100;
 
-        $query_social_collaboration = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and (action='Feedback mouse over' or action='Click on feedback' or action='Upvote' or action='Click reply' or action='Sharing' or action='Share contribution')");
-        $nb_part_social_collaboration = $query_social_collaboration->num_rows();
+        $query_part_social_collaboration = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and (action='Feedback mouse over' or action='Click on feedback' or action='Upvote' or action='Click reply' or action='Sharing' or action='Share contribution')");
+        $nb_part_social_collaboration = $query_part_social_collaboration->num_rows();
         $p_part_social_collaboration = floatval($nb_part_social_collaboration)/floatval($total_participants) * 100;
 
 
@@ -1879,6 +1901,18 @@ class MapModel extends CI_Model {
             "reset_filter_part"=>round($p_part_reset_filter,2),
             "nb_reset_filter_part"=>round($nb_part_reset_filter,2),
 
+
+            "nb_data_visualization"=>round($nb_data_visualization,2),
+            "p_data_visualization"=>round($p_data_visualization,2),
+            "nb_data_exploration"=>round($nb_data_exploration,2),
+            "p_data_exploration"=>round($p_data_exploration,2),
+            "nb_contribution"=>round($nb_contribution,2),
+            "p_contribution"=>round($p_contribution,2),
+            "nb_social_collaboration"=>round($nb_social_collaboration,2),
+            "p_social_collaboration"=>round($p_social_collaboration,2),
+
+            "nb_part_data_visualization"=>round($nb_part_data_visualization,2),
+            "p_part_data_visualization"=>round($p_part_data_visualization,2),
             "nb_part_data_exploration"=>round($nb_part_data_exploration,2),
             "p_part_data_exploration"=>round($p_part_data_exploration,2),
             "nb_part_contribution"=>round($nb_part_contribution,2),

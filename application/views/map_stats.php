@@ -376,7 +376,7 @@
 						</div>
 
 						<div class='col-md-12 col-sm-12 col-xs-12'>
-							<h6>Global</h6>
+							<h6>All actions</h6>
 						</div>
 
 
@@ -622,33 +622,44 @@
 							<h6>Per category</h6>
 						</div>
 
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Data Visualization
+						</div>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
+							{{general.p_part_data_visualization}}%
+						</div>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
+							{{general.nb_part_data_visualization}}
+						</div>
+
 						<div class='col-md-2 col-sm-6 col-xs-6'>
 							Data Exploration
 						</div>
-						<div class='col-md-1 col-sm-3 col-xs-3'>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
 							{{general.p_part_data_exploration}}%
 						</div>
-						<div class='col-md-1 col-sm-3 col-xs-3'>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
 							{{general.nb_part_data_exploration}}
 						</div>
 
 						<div class='col-md-2 col-sm-6 col-xs-6'>
 							Contribution
 						</div>
-						<div class='col-md-1 col-sm-3 col-xs-3'>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
 							{{general.p_part_contribution}}%
 						</div>
-						<div class='col-md-1 col-sm-3 col-xs-3'>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
 							{{general.nb_part_contribution}}
 						</div>
 
 						<div class='col-md-2 col-sm-6 col-xs-6'>
 							Social Collaboration
 						</div>
-						<div class='col-md-1 col-sm-3 col-xs-3'>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
 							{{general.p_part_social_collaboration}}%
 						</div>
-						<div class='col-md-1 col-sm-3 col-xs-3'>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
 							{{general.nb_part_social_collaboration}}
 						</div>
 
@@ -661,6 +672,10 @@
 
 						<div class='col-md-12 col-sm-12 col-xs-12'>
 							<h5>Action distribution - {{general.total}} total actions</h5>
+						</div>
+
+						<div class='col-md-12 col-sm-12 col-xs-12'>
+							<h6>All actions</h6>
 						</div>
 
 						<div class='col-md-2 col-sm-6 col-xs-6'>
@@ -898,6 +913,52 @@
 						</div>
 						<div class='col-md-1 col-sm-3 col-xs-3'>
 							{{general.nb_reset_filter}}
+						</div>
+
+
+						<div class='col-md-12 col-sm-12 col-xs-12'>
+							<h6>Per category</h6>
+						</div>
+
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Data Visualization
+						</div>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
+							{{general.p_data_visualization}}%
+						</div>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
+							{{general.nb_data_visualization}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Data Exploration
+						</div>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
+							{{general.p_data_exploration}}%
+						</div>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
+							{{general.nb_data_exploration}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Contribution
+						</div>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
+							{{general.p_contribution}}%
+						</div>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
+							{{general.nb_contribution}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Social Collaboration
+						</div>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
+							{{general.p_social_collaboration}}%
+						</div>
+						<div class='col-md-2 col-sm-3 col-xs-3'>
+							{{general.nb_social_collaboration}}
 						</div>
 								
 
