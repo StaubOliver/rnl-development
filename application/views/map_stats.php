@@ -375,6 +375,11 @@
 							<h5>Action per visitor - {{general.total_participants}} visitors</h5>
 						</div>
 
+						<div class='col-md-12 col-sm-12 col-xs-12'>
+							<h6>Global</h6>
+						</div>
+
+
 						<div class='col-md-2 col-sm-6 col-xs-6'>
 							Map Pan
 						</div>
@@ -612,6 +617,40 @@
 							{{general.nb_reset_filter_part}}
 						</div>
 
+
+						<div class='col-md-12 col-sm-12 col-xs-12'>
+							<h6>Per category</h6>
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Data Exploration
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.p_data_exploration}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_data_exploration}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Contribution
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.p_contribution}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_contribution}}
+						</div>
+
+						<div class='col-md-2 col-sm-6 col-xs-6'>
+							Social Collaboration
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.p_social_contribution}}%
+						</div>
+						<div class='col-md-1 col-sm-3 col-xs-3'>
+							{{general.nb_social_contribution}}
+						</div>
 
 					</div>
 				</div>

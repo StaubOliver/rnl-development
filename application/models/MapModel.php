@@ -942,6 +942,102 @@ class MapModel extends CI_Model {
         return $res;
     }
 
+    public function actionCode($action)
+    {
+        switch ($action) {
+            case "Map Pan":
+                return "1";
+                break;
+            case "Map Zoom in":
+                return "2";
+                break;
+            case "Map Zoom out":
+                return "3";
+                break;
+            case "Map Click":
+                return "4";
+                break;
+            case "Click on fossil":
+                return "5";
+                break;                 
+            case "Enlarge Image":
+                return "6";
+                break; 
+            case "Filter Geological Age changed":
+                return "7";
+                break; 
+            case "Collector Selector Hover":
+                return "8";
+                break; 
+            case "Filter Collector Selector Change":
+                return "9";
+                break; 
+            case "Genus Selector Hover":
+                return "10";
+                break; 
+            case "Filter Genus Selector Change":
+                return "11";
+                break;
+            case "Reset Filter":
+                return "12";
+                break;
+
+
+            case "Feedback mouse over":
+                return "21";
+                break; 
+            case "Click on Feedback":
+                return "22";
+                break; 
+            case "Upvote":
+                return "23";
+                break; 
+            case "Click Reply":
+                return "24";
+                break; 
+            case "Sharing":
+                return "24";
+                break; 
+            case "Share contribution":
+                return "25";
+                break; 
+
+
+            case "Fossil selected ":
+                return "31";
+                break; 
+            case "Fossil deselected":
+                return "32";
+                break; 
+            case "Clear Fossil selection":
+                return "33";
+                break; 
+            case "Writing comment":
+                return "34";
+                break; 
+            case "Submit comment":
+                return "35";
+                break; 
+
+
+            case "Open Page":
+                return "41";
+                break;
+            case "Close Page":
+                return "42";
+                break;
+            case "Open Help":
+                return "43";
+                break;
+            case "Close Help":
+                return "44";
+                break;
+
+            default:
+                return "0";
+        }
+    }
+
 
     function secondsToTime($inputSeconds) {
 
@@ -1454,6 +1550,21 @@ class MapModel extends CI_Model {
         $p_part_reset_filter = floatval($nb_part_reset_filter)/floatval($total_participants) * 100;
 
 
+        /* Action per visitor per category */
+
+        $query_data_exploration = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and map_activity.action='Map Pan' or action ='Map Zoom in' or action = 'Map Zoom out' or action ='Map Click' or action ='Click on Fossil' or action ='Enlarge Image' or action='Filter Geological Age changed' or action='Filter Collector Selector change' or action='Collector Selector Hover' or action='Filter Genus Selector change' or action='Genus Selector Hover' or action='Reset Filter'");
+        $nb_part_data_exploration = $query_data_exploration->num_rows();
+        $p_part_data_exploration = floatval($nb_part_data_exploration /floatval($total_participants) * 100;
+
+        $query_contribution = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and action='Fossil selected' or action='Fossil deselected' or action='Clear Fossil selection' or action='Writing comment' or action='Submit feedback'");
+        $nb_part_contribution = $query_contribution->num_rows();
+        $p_part_contribution = floatval($nb_part_contribution /floatval($total_participants) * 100;
+
+        $query_social_collaboration = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and action='Feedback mouse over' or action='Click on feedback' or action='Upvote' or action='Click reply'     ");
+        $nb_part_social_collaboration = $query_social_collaboration->num_rows();
+        $p_part_social_collaboration = floatval($nb_part_social_collaboration /floatval($total_participants) * 100;
+
+
         /* time */
 
         $query_unique_id = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause());
@@ -1768,6 +1879,14 @@ class MapModel extends CI_Model {
             "reset_filter_part"=>round($p_part_reset_filter,2),
             "nb_reset_filter_part"=>round($nb_part_reset_filter,2),
 
+            "nb_part_data_exploration"=>round($nb_part_data_exploration,2),
+            "p_part_data_exploration"=>round($p_part_data_exploration,2),
+            "nb_part_contribution"=>round($nb_part_contribution,2),
+            "p_part_contribution"=>round($p_part_contribution,2),
+            "nb_part_social_collaboration"=>round($nb_part_social_collaboration,2),
+            "p_part_social_collaboration"=>round($p_part_social_collaboration,2),
+
+
             "hist_actions"=>$hist, 
             "data_hist_actions"=>$hist_class,
             "data_hist_tot_action"=>$hist_class_tot_action,
@@ -1791,99 +1910,6 @@ class MapModel extends CI_Model {
 
     }
 
-
-    public function actionCode($action)
-    {
-        switch ($action) {
-            case "Map Pan":
-                return "1";
-                break;
-            case "Map Zoom in":
-                return "2";
-                break;
-            case "Map Zoom out":
-                return "3";
-                break;
-            case "Map Click":
-                return "4";
-                break;
-            case "Click on fossil":
-                return "5";
-                break;                 
-            case "Enlarge Image":
-                return "6";
-                break; 
-            case "Filter Geological Age changed":
-                return "7";
-                break; 
-            case "Collector Selector Hover":
-                return "8";
-                break; 
-            case "Filter Collector Selector Change":
-                return "9";
-                break; 
-            case "Genus Selector Hover":
-                return "10";
-                break; 
-            case "Filter Genus Selector Change":
-                return "11";
-                break;
-
-
-            case "Feedback mouse over":
-                return "21";
-                break; 
-            case "Click on Feedback":
-                return "22";
-                break; 
-            case "Upvote":
-                return "23";
-                break; 
-            case "Click Reply":
-                return "24";
-                break; 
-            case "Sharing":
-                return "24";
-                break; 
-            case "Share contribution":
-                return "25";
-                break; 
-
-
-            case "Fossil selected ":
-                return "31";
-                break; 
-            case "Fossil deselected":
-                return "32";
-                break; 
-            case "Clear Fossil selection":
-                return "33";
-                break; 
-            case "Writing comment":
-                return "34";
-                break; 
-            case "Submit comment":
-                return "35";
-                break; 
-
-
-            case "Open Page":
-                return "41";
-                break;
-            case "Close Page":
-                return "42";
-                break;
-            case "Open Help":
-                return "43";
-                break;
-            case "Close Help":
-                return "44";
-                break;
-
-            default:
-                return "0";
-        }
-    }
 
 
     public function outputSPMF()
