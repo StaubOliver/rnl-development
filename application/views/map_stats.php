@@ -626,30 +626,30 @@
 							Data Exploration
 						</div>
 						<div class='col-md-1 col-sm-3 col-xs-3'>
-							{{general.p_data_exploration}}%
+							{{general.p_part_data_exploration}}%
 						</div>
 						<div class='col-md-1 col-sm-3 col-xs-3'>
-							{{general.nb_data_exploration}}
+							{{general.nb_part_data_exploration}}
 						</div>
 
 						<div class='col-md-2 col-sm-6 col-xs-6'>
 							Contribution
 						</div>
 						<div class='col-md-1 col-sm-3 col-xs-3'>
-							{{general.p_contribution}}%
+							{{general.p_part_contribution}}%
 						</div>
 						<div class='col-md-1 col-sm-3 col-xs-3'>
-							{{general.nb_contribution}}
+							{{general.nb_part_contribution}}
 						</div>
 
 						<div class='col-md-2 col-sm-6 col-xs-6'>
 							Social Collaboration
 						</div>
 						<div class='col-md-1 col-sm-3 col-xs-3'>
-							{{general.p_social_contribution}}%
+							{{general.p_part_social_contribution}}%
 						</div>
 						<div class='col-md-1 col-sm-3 col-xs-3'>
-							{{general.nb_social_contribution}}
+							{{general.nb_part_social_contribution}}
 						</div>
 
 					</div>
