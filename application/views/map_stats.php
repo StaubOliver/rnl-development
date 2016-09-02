@@ -963,7 +963,7 @@
 								
 
 						<div class='col-md-12 col-sm-12 col-xs-12'>
-							<div id="chart_action_distribution" style="width: 100%; height: 500px; margin-top:15px"></div>
+							<div id="_chart_action_distribution" style="width: 100%; height: 500px; margin-top:15px"></div>
 						</div>
 
 						
@@ -1212,6 +1212,10 @@
 
 	<div class='col-md-12  col-sm-12 col-xs-12'>
 		<div id="chart_div" style="width: 1500px; height: 600px;"></div>
+	</div>
+
+	<div class='col-md-12 col-sm-12 col-xs-12'>
+		<div id="chart_action_distribution" style="width: 1500px; height: 600px; margin-top:15px"></div>
 	</div>
 
 
