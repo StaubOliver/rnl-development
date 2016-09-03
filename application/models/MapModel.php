@@ -1746,7 +1746,7 @@ class MapModel extends CI_Model {
 
         /* AB group data */
 
-        $query_part_group_a = $this->nb->query("select * from map_ab where ab_group='A'");
+        $query_part_group_a = $this->db->query("select * from map_ab where ab_group='A'");
         $nb_part_group_a = $query_part_group_a->num_rows();
         $p_part_group_a = floatval($nb_part_group_a)/floatval($total_participants) * 100;
 
@@ -1768,7 +1768,7 @@ class MapModel extends CI_Model {
 
 
 
-        $query_part_group_b = $this->nb->query("select * from map_ab where ab_group='B'");
+        $query_part_group_b = $this->db->query("select * from map_ab where ab_group='B'");
         $nb_part_group_b = $query_part_group_b->num_rows();
         $p_part_group_b = floatval($nb_part_group_b)/floatval($total_participants) * 100;
 
