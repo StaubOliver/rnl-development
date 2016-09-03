@@ -1744,6 +1744,51 @@ class MapModel extends CI_Model {
 
 
 
+        /* AB group data */
+
+        $query_part_group_a = $this->nb->query("select * from map_ab where ab_group='A'");
+        $nb_part_group_a = $query_part_group_a->num_rows();
+        $p_part_group_a = floatval($nb_part_group_a)/floatval($total_participants) * 100;
+
+        $query_part_data_visualization_group_a = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and (map_activity.action='Map Pan' or action ='Map Zoom in' or action = 'Map Zoom out' or action ='Map Click' or action ='Click on Fossil' or action ='Enlarge Image') and ab_group='A'");
+        $nb_part_data_visualization_group_a = $query_part_data_visualization_group_a->num_rows();
+        $p_part_data_visualization_group_a = floatval($nb_part_data_visualization_group_a)/floatval($nb_part_group_a) * 100;
+
+        $query_part_data_exploration_group_a = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and (action='Filter Geological Age changed' or action='Filter Collector Selector change' or action='Collector Selector Hover' or action='Filter Genus Selector change' or action='Genus Selector Hover' or action='Reset Filter') and ab_group='A'");
+        $nb_part_data_exploration_group_a = $query_part_data_exploration_group_a->num_rows();
+        $p_part_data_exploration_group_a = floatval($nb_part_data_exploration_group_a)/floatval($nb_part_group_a) * 100;
+
+        $query_part_contribution_group_a = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and (action='Fossil selected' or action='Fossil deselected' or action='Clear Fossil selection' or action='Writing comment' or action='Submit feedback') and ab_group='A'");
+        $nb_part_contribution_group_a = $query_part_contribution_group_a->num_rows();
+        $p_part_contribution_group_a = floatval($nb_part_contribution_group_a)/floatval($nb_part_group_a) * 100;
+
+        $query_part_social_collaboration_group_a = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and (action='Feedback mouse over' or action='Click on feedback' or action='Upvote' or action='Click reply' or action='Sharing' or action='Share contribution') and ab_group='A'");
+        $nb_part_social_collaboration_group_a = $query_part_social_collaboration_group_a->num_rows();
+        $p_part_social_collaboration_group_a = floatval($nb_part_social_collaboration_group_a)/floatval($nb_part_group_a) * 100;
+
+
+
+        $query_part_group_b = $this->nb->query("select * from map_ab where ab_group='B'");
+        $nb_part_group_b = $query_part_group_b->num_rows();
+        $p_part_group_b = floatval($nb_part_group_b)/floatval($total_participants) * 100;
+
+        $query_part_data_visualization_group_b = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and (map_activity.action='Map Pan' or action ='Map Zoom in' or action = 'Map Zoom out' or action ='Map Click' or action ='Click on Fossil' or action ='Enlarge Image') and ab_group='B'");
+        $nb_part_data_visualization_group_b = $query_part_data_visualization_group_b->num_rows();
+        $p_part_data_visualization_group_b = floatval($nb_part_data_visualization_group_b)/floatval($nb_part_group_b) * 100;
+
+        $query_part_data_exploration_group_b = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and (action='Filter Geological Age changed' or action='Filter Collector Selector change' or action='Collector Selector Hover' or action='Filter Genus Selector change' or action='Genus Selector Hover' or action='Reset Filter') and ab_group='B'");
+        $nb_part_data_exploration_group_b = $query_part_data_exploration_group_b->num_rows();
+        $p_part_data_exploration_group_b = floatval($nb_part_data_exploration_group_b)/floatval($nb_part_group_b) * 100;
+
+        $query_part_contribution_group_b = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and (action='Fossil selected' or action='Fossil deselected' or action='Clear Fossil selection' or action='Writing comment' or action='Submit feedback') and ab_group='B'");
+        $nb_part_contribution_group_b = $query_part_contribution_group_b->num_rows();
+        $p_part_contribution_group_b = floatval($nb_part_contribution_group_b)/floatval($nb_part_group_b) * 100;
+
+        $query_part_social_collaboration_group_b = $this->db->query("select distinct unique_id from map_activity where ".$this->where_clause()." and (action='Feedback mouse over' or action='Click on feedback' or action='Upvote' or action='Click reply' or action='Sharing' or action='Share contribution') and ab_group='B'");
+        $nb_part_social_collaboration_group_b = $query_part_social_collaboration_group_b->num_rows();
+        $p_part_social_collaboration_group_b = floatval($nb_part_social_collaboration_group_b)/floatval($nb_part_group_b) * 100;
+
+
 /*
 
         $avg_visitor_dwell = $this->calculate_average($visit_dwell);
@@ -1974,7 +2019,34 @@ class MapModel extends CI_Model {
             "stat_action_per_visit" => $stat_action_per_visit,
             "stat_dwell_per_visit" => $stat_dwell_per_visit,
 
-            "dwell" => $stat_dwell
+            "dwell" => $stat_dwell,
+
+            "nb_part_group_a" => $nb_part_group_a,
+            "p_part_group_a" => $p_part_group_a,
+            "nb_part_data_exploration_group_a" => $nb_part_data_exploration_group_a,
+            "p_part_data_exploration_group_a" => $p_part_data_exploration_group_a,
+            "nb_part_data_visualization_group_a" => $nb_part_data_visualization_group_a,
+            "p_part_data_visualization_group_a" => $p_part_data_visualization_group_a,
+            "nb_part_contribution_group_a" => $nb_part_contribution_group_a,
+            "p_part_contribution_group_a" => $p_part_contribution_group_a,
+            "nb_part_collaboration_group_a" => $nb_part_collaboration_group_a,
+            "p_part_collaboration_group_a" => $p_part_collaboration_group_a,
+
+
+            "nb_part_group_b" => $nb_part_group_b,
+            "p_part_group_b" => $p_part_group_b,
+            "nb_part_data_exploration_group_b" => $nb_part_data_exploration_group_b,
+            "p_part_data_exploration_group_b" => $p_part_data_exploration_group_b,
+            "nb_part_data_visualization_group_b" => $nb_part_data_visualization_group_b,
+            "p_part_data_visualization_group_b" => $p_part_data_visualization_group_b,
+            "nb_part_contribution_group_b" => $nb_part_contribution_group_b,
+            "p_part_contribution_group_b" => $p_part_contribution_group_b,
+            "nb_part_collaboration_group_b" => $nb_part_collaboration_group_b,
+            "p_part_collaboration_group_b" => $p_part_collaboration_group_b
+
+
+
+
         );
     }
 
