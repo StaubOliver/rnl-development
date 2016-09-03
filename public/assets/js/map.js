@@ -734,7 +734,7 @@ var map = angular.module('map', ['rzModule'])
 	var mapProp = {
 	    center:new google.maps.LatLng(31.42866248834942,-35.80444375000001),
 	    zoom:$scope.map_zoom,
-	    maxZoom: 12,
+	    maxZoom: 13,
 	    minZoom: 2,
 	    mapTypeId:google.maps.MapTypeId.ROADMAP,
 	    mapTypeControl:false,
@@ -1882,9 +1882,26 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 				var options = {
 					legend: { position: 'none' }, 
 			      	colors: ['212a33'],
-			      	chartArea:{left:100,top:10,width:'100%',height:'550'},
-			      	hAxis: {title: 'Number of action', logScale:true},
-          			vAxis: {title: 'Dwell (second)', logScale:true},
+			      	chartArea:
+			      	{
+			      		left:100,
+			      		top:10,
+			      		width:'100%',
+			      		height:'550'
+			      	},
+
+			      	hAxis: 
+			      	{
+			      		title: 'Number of action',
+			      		ticks: [0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700],
+			      	},
+          			
+          			vAxis: 
+          			{
+          				title: 'Dwell (second)', 
+          				logScale:true
+          			},
+
           			pointSize: 4
 				};
 

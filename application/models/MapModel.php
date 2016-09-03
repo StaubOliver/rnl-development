@@ -1275,6 +1275,12 @@ class MapModel extends CI_Model {
         $res["tot_dwell"] = $temp_tot_time;
         $res["tot_time"] = $this->secondsToTime($temp_tot_time);
 
+
+        $query_user_group = $this->db->query("select * from map_ab where unique_id='".$unique_id."'");
+        $temp = $query_user_group->row_array();
+        $res["ab_group"] = $temp["ab_group"];
+
+
 /*
         $temp = date_parse_from_format('Y-m-d H:i:s', $res[0]["time"]);
         $s = mktime($temp["hour"], $temp["minute"], $temp["second"], $temp["month"], $temp["day"], $temp["year"]);
