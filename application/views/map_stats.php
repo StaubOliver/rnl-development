@@ -1179,7 +1179,7 @@
 					<div class='row'>
 
 						<div class='col-md-12 col-sm-12 col-xs-12'>
-							<h5>{{details.unique_id}} - {{details.nb_tot_action}} actions - {{details.nb_visits}} visits - {{details.tot_time.d}}d {{details.tot_time.h}}h {{details.tot_time.m}}m {{details.tot_time.s}}s</h5>
+							<h5>{{details.unique_id}} - Group {{details.ab_group}} - {{details.nb_tot_action}} actions - {{details.nb_visits}} visits - {{details.tot_time.d}}d {{details.tot_time.h}}h {{details.tot_time.m}}m {{details.tot_time.s}}s</h5>
 						</div>
 
 						<div ng-repeat='visit in details.visits'>
