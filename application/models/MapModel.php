@@ -2030,7 +2030,7 @@ class MapModel extends CI_Model {
             "nb_part_contribution_group_a" => $nb_part_contribution_group_a,
             "p_part_contribution_group_a" => $p_part_contribution_group_a,
             "nb_part_social_collaboration_group_a" => $nb_part_social_collaboration_group_a,
-            "nb_part_social_collaboration_group_a" => $p_part_csocial_ollaboration_group_a,
+            "nb_part_social_collaboration_group_a" => $p_part_social_collaboration_group_a,
 
 
             "nb_part_group_b" => $nb_part_group_b,
