@@ -671,6 +671,41 @@
 					<div class='row'>
 
 						<div class='col-md-12 col-sm-12 col-xs-12'>
+							<h5>AB groups</h5>
+						</div>
+
+						<div class='col-md-6 col-sm-12 col-xs-12'>
+							<div class='row'>
+
+								<div class='col-md-12 col-sm-12 col-xs-12'>	
+									<h6>Group A</h6>
+								</div>
+
+
+							</div>
+						</div>
+
+						<div class='col-md-6 col-sm-12 col-xs-12'>
+							<div class='row'>
+
+								<div class='col-md-12 col-sm-12 col-xs-12'>	
+									<h6>Group B</h6>
+								</div>
+
+
+							</div>
+						</div>
+
+
+
+					</div>
+				</div>
+
+
+				<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title' ng-show="selectedUniqueId == 0">
+					<div class='row'>
+
+						<div class='col-md-12 col-sm-12 col-xs-12'>
 							<h5>Action distribution - {{general.total}} total actions</h5>
 						</div>
 
