@@ -2029,8 +2029,8 @@ class MapModel extends CI_Model {
             "p_part_data_visualization_group_a" => $p_part_data_visualization_group_a,
             "nb_part_contribution_group_a" => $nb_part_contribution_group_a,
             "p_part_contribution_group_a" => $p_part_contribution_group_a,
-            "nb_part_social_collaboration_group_a" => $nb_part_collaboration_group_a,
-            "nb_part_social_collaboration_group_a" => $p_part_collaboration_group_a,
+            "nb_part_social_collaboration_group_a" => $nb_part_social_collaboration_group_a,
+            "nb_part_social_collaboration_group_a" => $p_part_csocial_ollaboration_group_a,
 
 
             "nb_part_group_b" => $nb_part_group_b,
@@ -2041,8 +2041,8 @@ class MapModel extends CI_Model {
             "p_part_data_visualization_group_b" => $p_part_data_visualization_group_b,
             "nb_part_contribution_group_b" => $nb_part_contribution_group_b,
             "p_part_contribution_group_b" => $p_part_contribution_group_b,
-            "nb_part_social_collaboration_group_b" => $nb_part_collaboration_group_b,
-            "p_part_social_collaboration_group_b" => $p_part_collaboration_group_b
+            "nb_part_social_collaboration_group_b" => $nb_part_social_collaboration_group_b,
+            "p_part_social_collaboration_group_b" => $p_part_social_collaboration_group_b
 
 
 
