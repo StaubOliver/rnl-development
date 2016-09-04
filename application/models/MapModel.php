@@ -1750,7 +1750,7 @@ class MapModel extends CI_Model {
         $nb_part_group_a = $query_part_group_a->num_rows();
         $p_part_group_a = floatval($nb_part_group_a)/floatval($total_participants) * 100;
 
-        $query_part_data_visualization_group_a = $this->db->query("SELECT distinct map_activity.unique_id FROM map_activity inner join map_ab on map_ab.unique_id=map_activity.unique_id where ".$this->where_clause()." and (map_activity.action='Map Pan' or map_activity.action ='Map Zoom in' or map_activity.action = 'Map Zoom out' or map_activity.action ='Map Click' or map_activity.action ='Click on Fossil' or map_activity.action ='Enlarge Image') and map.ab.ab_group='A'");
+        $query_part_data_visualization_group_a = $this->db->query("SELECT distinct map_activity.unique_id FROM map_activity inner join map_ab on map_ab.unique_id=map_activity.unique_id where ".$this->where_clause()." and (map_activity.action='Map Pan' or map_activity.action ='Map Zoom in' or map_activity.action = 'Map Zoom out' or map_activity.action ='Map Click' or map_activity.action ='Click on Fossil' or map_activity.action ='Enlarge Image') and map_ab.ab_group='A'");
         $nb_part_data_visualization_group_a = $query_part_data_visualization_group_a->num_rows();
         $p_part_data_visualization_group_a = floatval($nb_part_data_visualization_group_a)/floatval($nb_part_group_a) * 100;
 

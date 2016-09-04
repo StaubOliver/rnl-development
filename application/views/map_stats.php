@@ -732,6 +732,46 @@
 									<h6>Group B</h6>
 								</div>
 
+								<div class='col-md-8 col-sm-6 col-xs-6'>
+									Data Visualization
+								</div>
+								<div class='col-md-2 col-sm-3 col-xs-3'>
+									{{general.p_part_data_visualization}}%
+								</div>
+								<div class='col-md-2 col-sm-3 col-xs-3'>
+									{{general.nb_part_data_visualization}}
+								</div>
+
+								<div class='col-md-8 col-sm-6 col-xs-6'>
+									Data Exploration
+								</div>
+								<div class='col-md-2 col-sm-3 col-xs-3'>
+									{{general.p_part_data_exploration}}%
+								</div>
+								<div class='col-md-2 col-sm-3 col-xs-3'>
+									{{general.nb_part_data_exploration}}
+								</div>
+
+								<div class='col-md-8 col-sm-6 col-xs-6'>
+									Contribution
+								</div>
+								<div class='col-md-2 col-sm-3 col-xs-3'>
+									{{general.p_part_contribution}}%
+								</div>
+								<div class='col-md-2 col-sm-3 col-xs-3'>
+									{{general.nb_part_contribution}}
+								</div>
+
+								<div class='col-md-8 col-sm-6 col-xs-6'>
+									Social Collaboration
+								</div>
+								<div class='col-md-2 col-sm-3 col-xs-3'>
+									{{general.p_part_social_collaboration}}%
+								</div>
+								<div class='col-md-2 col-sm-3 col-xs-3'>
+									{{general.nb_part_social_collaboration}}
+								</div>
+
 
 							</div>
 						</div>
