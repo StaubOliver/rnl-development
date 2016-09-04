@@ -677,8 +677,14 @@
 						<div class='col-md-6 col-sm-12 col-xs-12'>
 							<div class='row'>
 
-								<div class='col-md-12 col-sm-12 col-xs-12'>	
+								<div class='col-md-8 col-sm-6 col-xs-6'>	
 									<h6>Group A</h6>
+								</div>
+								<div class='col-md-2 col-sm-3 col-xs-3'>
+									{{general.p_part_group_a}}%
+								</div>
+								<div class='col-md-2 col-sm-3 col-xs-3'>
+									{{general.nb_part_group_a}}
 								</div>
 
 								<div class='col-md-8 col-sm-6 col-xs-6'>
@@ -728,8 +734,14 @@
 						<div class='col-md-6 col-sm-12 col-xs-12'>
 							<div class='row'>
 
-								<div class='col-md-12 col-sm-12 col-xs-12'>	
+								<div class='col-md-8 col-sm-6 col-xs-6'>	
 									<h6>Group B</h6>
+								</div>
+								<div class='col-md-2 col-sm-3 col-xs-3'>
+									{{general.p_part_group_b}}%
+								</div>
+								<div class='col-md-2 col-sm-3 col-xs-3'>
+									{{general.nb_part_group_b}}
 								</div>
 
 								<div class='col-md-8 col-sm-6 col-xs-6'>
