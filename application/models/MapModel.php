@@ -2019,7 +2019,7 @@ class MapModel extends CI_Model {
             "stat_action_per_visit" => $stat_action_per_visit,
             "stat_dwell_per_visit" => $stat_dwell_per_visit,
 
-            "dwell" => $stat_dwell
+            "dwell" => $stat_dwell,
 
             "nb_part_group_a" => $nb_part_group_a,
             "p_part_group_a" => $p_part_group_a,
