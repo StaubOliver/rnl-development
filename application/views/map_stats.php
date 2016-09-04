@@ -685,40 +685,40 @@
 									Data Visualization
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.p_part_data_visualization}}%
+									{{general.p_part_data_visualization_group_a}}%
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.nb_part_data_visualization}}
+									{{general.nb_part_data_visualization_group_a}}
 								</div>
 
 								<div class='col-md-8 col-sm-6 col-xs-6'>
 									Data Exploration
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.p_part_data_exploration}}%
+									{{general.p_part_data_exploration_group_a}}%
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.nb_part_data_exploration}}
+									{{general.nb_part_data_exploration_group_a}}
 								</div>
 
 								<div class='col-md-8 col-sm-6 col-xs-6'>
 									Contribution
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.p_part_contribution}}%
+									{{general.p_part_contribution_group_a}}%
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.nb_part_contribution}}
+									{{general.nb_part_contribution_group_a}}
 								</div>
 
 								<div class='col-md-8 col-sm-6 col-xs-6'>
 									Social Collaboration
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.p_part_social_collaboration}}%
+									{{general.p_part_social_collaboration_group_a}}%
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.nb_part_social_collaboration}}
+									{{general.nb_part_social_collaboration_group_a}}
 								</div>
 
 
@@ -736,40 +736,40 @@
 									Data Visualization
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.p_part_data_visualization}}%
+									{{general.p_part_data_visualization_group_b}}%
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.nb_part_data_visualization}}
+									{{general.nb_part_data_visualization_group_b}}
 								</div>
 
 								<div class='col-md-8 col-sm-6 col-xs-6'>
 									Data Exploration
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.p_part_data_exploration}}%
+									{{general.p_part_data_exploration_group_b}}%
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.nb_part_data_exploration}}
+									{{general.nb_part_data_exploration_group_b}}
 								</div>
 
 								<div class='col-md-8 col-sm-6 col-xs-6'>
 									Contribution
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.p_part_contribution}}%
+									{{general.p_part_contribution_group_b}}%
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.nb_part_contribution}}
+									{{general.nb_part_contribution_group_b}}
 								</div>
 
 								<div class='col-md-8 col-sm-6 col-xs-6'>
 									Social Collaboration
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.p_part_social_collaboration}}%
+									{{general.p_part_social_collaboration_group_b}}%
 								</div>
 								<div class='col-md-2 col-sm-3 col-xs-3'>
-									{{general.nb_part_social_collaboration}}
+									{{general.nb_part_social_collaboration_group_b}}
 								</div>
 
 
