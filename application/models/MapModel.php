@@ -2022,27 +2022,27 @@ class MapModel extends CI_Model {
             "dwell" => $stat_dwell,
 
             "nb_part_group_a" => $nb_part_group_a,
-            "p_part_group_a" => $p_part_group_a,
+            "p_part_group_a" => round($p_part_group_a,2),
             "nb_part_data_exploration_group_a" => $nb_part_data_exploration_group_a,
-            "p_part_data_exploration_group_a" => $p_part_data_exploration_group_a,
+            "p_part_data_exploration_group_a" => round($p_part_data_exploration_group_a,2),
             "nb_part_data_visualization_group_a" => $nb_part_data_visualization_group_a,
-            "p_part_data_visualization_group_a" => $p_part_data_visualization_group_a,
+            "p_part_data_visualization_group_a" => round($p_part_data_visualization_group_a,2),
             "nb_part_contribution_group_a" => $nb_part_contribution_group_a,
-            "p_part_contribution_group_a" => $p_part_contribution_group_a,
+            "p_part_contribution_group_a" => round($p_part_contribution_group_a,2),
             "nb_part_social_collaboration_group_a" => $nb_part_social_collaboration_group_a,
-            "nb_part_social_collaboration_group_a" => $p_part_social_collaboration_group_a,
+            "nb_part_social_collaboration_group_a" => round($p_part_social_collaboration_group_a,2),
 
 
             "nb_part_group_b" => $nb_part_group_b,
-            "p_part_group_b" => $p_part_group_b,
+            "p_part_group_b" => round($p_part_group_b,2),
             "nb_part_data_exploration_group_b" => $nb_part_data_exploration_group_b,
-            "p_part_data_exploration_group_b" => $p_part_data_exploration_group_b,
+            "p_part_data_exploration_group_b" => round($p_part_data_exploration_group_b,2),
             "nb_part_data_visualization_group_b" => $nb_part_data_visualization_group_b,
-            "p_part_data_visualization_group_b" => $p_part_data_visualization_group_b,
+            "p_part_data_visualization_group_b" => round($p_part_data_visualization_group_b,2),
             "nb_part_contribution_group_b" => $nb_part_contribution_group_b,
-            "p_part_contribution_group_b" => $p_part_contribution_group_b,
+            "p_part_contribution_group_b" => round($p_part_contribution_group_b,2),
             "nb_part_social_collaboration_group_b" => $nb_part_social_collaboration_group_b,
-            "p_part_social_collaboration_group_b" => $p_part_social_collaboration_group_b
+            "p_part_social_collaboration_group_b" => round($p_part_social_collaboration_group_b,2)
 
 
 
