@@ -175,6 +175,10 @@ a{
 	color: #FF4D79;
 }
 
+a:hover{
+	color:#d24c6d;
+}
+
 .help_terms_close_btn_bottom{
 		display:block; 
 		text-align:center;
