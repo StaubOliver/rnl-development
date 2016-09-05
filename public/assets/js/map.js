@@ -1768,7 +1768,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 			google.charts.setOnLoadCallback(drawNbActionFctDwell);
 			google.charts.setOnLoadCallback(drawActionDistribution);
 
-			/*
+			
 			function drawHistogram() 
 			{
 			    var data = google.visualization.arrayToDataTable($scope.general.hist_actions);
@@ -1803,14 +1803,15 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 					/*vAxis: {
 						ticks: [0, 10, 20, 30, 40, 50, 60, 70]
-					}
+					}*/
 
 			    };
 
 			    var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
 			    chart.draw(data, options);
-			}*/
+			}
 
+			/*
 			function drawHistogram() 
 			{
 			    var data = google.visualization.arrayToDataTable($scope.general.hist_actions);
@@ -1854,8 +1855,9 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 			    var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
 			    chart.draw(data, options);
 			}
+			*/
 
-			/*
+			
 			function drawNbActionFctDwell()
 			{
 				var data = google.visualization.arrayToDataTable($scope.general.nb_action_fct_dwell);
@@ -1872,8 +1874,8 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 				var chart = new google.visualization.ScatterChart(document.getElementById('chart_action_dwell'));
 
 				chart.draw(data, options);
-			}*/
-
+			}
+/*
 			function drawNbActionFctDwell()
 			{
 				var data = google.visualization.arrayToDataTable($scope.general.nb_action_fct_dwell);
@@ -1908,8 +1910,9 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 				chart.draw(data, options);
 			}
+*/
 
-			/*
+			
 			function drawActionDistribution() 
 			{
 				var data = google.visualization.arrayToDataTable($scope.general.action_distribution);
@@ -1925,8 +1928,8 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 				var chart = new google.visualization.PieChart(document.getElementById('chart_action_distribution'));
 				chart.draw(data, options);
-			}*/
-
+			}
+/*
 			function drawActionDistribution() 
 			{
 				var data = google.visualization.arrayToDataTable($scope.general.action_distribution);
@@ -1942,6 +1945,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 				var chart = new google.visualization.PieChart(document.getElementById('chart_action_distribution'));
 				chart.draw(data, options);
 			}
+*/
 
 		}).error(function(data, status, headers, config){
 			console.log(data);
