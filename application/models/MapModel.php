@@ -415,6 +415,8 @@ class MapModel extends CI_Model {
             $new_row['last_name'] = "Smith";
         }
 
+        $new_row["unique_id"] = $row["unique_id"];
+
         //for each feedback we query its upvote information
         $query_upvote = $this->db->query('SELECT upvote_id  FROM up_vote WHERE feedback_id = '.$row['feedback_id']);
         $new_row['upvote'] = $query_upvote->num_rows();
@@ -505,7 +507,7 @@ class MapModel extends CI_Model {
 
         $return = [];
 
-        $query_feedbacks = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id, rating_correctness, rating_discovery, rating_relevance, hidden  FROM feedback WHERE replyto=0 ORDER BY time DESC');
+        $query_feedbacks = $this->db->query('SELECT feedback_id, unique_id, user_id, filter_id, time, message, map_coordinates_id, rating_correctness, rating_discovery, rating_relevance, hidden  FROM feedback WHERE replyto=0 ORDER BY time DESC');
 
         if ($query_feedbacks->num_rows() > 0){
             foreach ($query_feedbacks->result_array() as $row) {
@@ -516,7 +518,7 @@ class MapModel extends CI_Model {
                 $new_row['replies'] = array();
 
                 //query of replies for each feedback
-                $query_replies = $this->db->query('SELECT feedback_id, user_id, filter_id, time, message, map_coordinates_id, rating_correctness, rating_discovery, rating_relevance, hidden FROM feedback WHERE replyto='.$new_row['feedback_id'].' ORDER BY time ASC');
+                $query_replies = $this->db->query('SELECT feedback_id, unique_id, user_id, filter_id, time, message, map_coordinates_id, rating_correctness, rating_discovery, rating_relevance, hidden FROM feedback WHERE replyto='.$new_row['feedback_id'].' ORDER BY time ASC');
 
                 if ($query_replies->num_rows() > 0){
                     //for each replies, we get their details
@@ -908,8 +910,8 @@ class MapModel extends CI_Model {
 
     public function where_clause()
     {
-        return "map_activity.unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and map_activity.unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and map_activity.unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and map_activity.unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and map_activity.unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and map_activity.unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.unique_id!='4977e5ac01ae154eb77ff732d622848696f7ff72' and map_activity.unique_id!='c083abdd99a03add5752e91738d0c5c5c6ed5311' and map_activity.unique_id!='8a4861977edbcea94cf95bb17efdea2aaaee036c' and map_activity.unique_id!='62de74b7572008d00211723826b123759d0333ad' and map_activity.unique_id!='3e48ab85766a7a97cd2aa40b4bfa061caa1f2696' and map_activity.unique_id!='23f3c030653bef5433ea9eebf5c2875cbcf6b72d' and map_activity.unique_id!='fd319c06755facd37d6d0cef48b04333c532ccb8' and map_activity.unique_id!='9a4d7044009255fb170c74754910283432becc2e' and
-            map_activity.activity_id<'50751'";
+        return "map_activity.unique_id!='12f3bdd3b95558e788f1a602a1412e3d07e5f74a' and map_activity.unique_id!='1618315f0f87047126d4d684950537ef2ce69bd5' and map_activity.unique_id!='25a0288f2636eefb53dc1b4ad28b7da44f91ca90' and map_activity.unique_id!='5504539e6c4db715a72a5a6b8875be5e5f443390' and map_activity.unique_id!='898850774d78fdf45cacf3239c132a76a7bcd572' and map_activity.unique_id!='db57dc7ed8fac52c3688c3f74f96be93386408f1' and map_activity.unique_id!='4977e5ac01ae154eb77ff732d622848696f7ff72' and map_activity.unique_id!='c083abdd99a03add5752e91738d0c5c5c6ed5311' and map_activity.unique_id!='8a4861977edbcea94cf95bb17efdea2aaaee036c' and map_activity.unique_id!='62de74b7572008d00211723826b123759d0333ad' and map_activity.unique_id!='3e48ab85766a7a97cd2aa40b4bfa061caa1f2696' and map_activity.unique_id!='23f3c030653bef5433ea9eebf5c2875cbcf6b72d' and map_activity.unique_id!='fd319c06755facd37d6d0cef48b04333c532ccb8' and map_activity.unique_id!='9a4d7044009255fb170c74754910283432becc2e'";
+         //and map_activity.activity_id<'50751'";
             //and activity!='Open Page' and activity!='Close page' and activity!='Open Help' and activity!='Close Help'";
 
             //unique_id!='f1250f3a10a2b003dd6e6d150d6119b55966e324'
