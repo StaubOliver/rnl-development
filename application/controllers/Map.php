@@ -100,7 +100,7 @@ class map extends CI_Controller {
 
 			if($this->uri->segment(3))
 			{
-				$data["selectedUniqueId"] = urldecode($this->uri->segement(3));
+				$data["selectedUniqueId"] = urldecode($this->uri->segment(3));
 			}
 			else
 			{
