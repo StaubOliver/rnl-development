@@ -132,7 +132,8 @@
 									<div class='row'>
 
 										<div class='col-md-8 col-sm-6 col-xs-12'>
-											{{feedback["first_name"]}} {{feedback["last_name"]}}
+											{{feedback["unique_id"]}}
+											({{feedback["first_name"]}} {{feedback["last_name"]}})
 											on
 											{{feedback['time']}}
 										</div>
