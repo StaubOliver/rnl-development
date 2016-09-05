@@ -98,6 +98,14 @@ class map extends CI_Controller {
 		if ($this->ion_auth->logged_in() && ($this->ProfileModel->isAdmin() == 1)){
 			$data['stats'] = $this->MapModel->adminStats();
 
+			if($this->uri->segment(3))
+			{
+				$data["selectedUniqueId"] = urldecode($this->uri->segement(3));
+			}
+			else
+			{
+				$data["selectedUniqueId"] = 0;
+			}
 			$this->load->view('map_stats', $data);
 		}
 		else

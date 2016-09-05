@@ -1706,7 +1706,6 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 var map_stats = angular.module('map_stats', []).controller('admin_map_stats', function($scope, $http, $compile){
 
 	$scope.details = [];
-	$scope.selectedUniqueId = "0";
 	$scope.general = [];
 
 	$scope.show_dwell_fct_actions_data = false;

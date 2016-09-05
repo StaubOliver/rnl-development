@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" ng-app='map_stats'>
+<html lang="en" ng-app='map_stats'
+
+<?php
+	echo 'ng-init = "selectedUniqueId=\''.$selectedUniqueId.'\'"';
+?>
+
+>
 
 <head>
 	<!-- Metadata -->
