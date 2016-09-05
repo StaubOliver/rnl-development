@@ -171,6 +171,10 @@ html, body, .main-layout, .main-layout-right, .controller-googleMap{
 
 }
 
+a{
+	color: #FF4D79;
+}
+
 .help_terms_close_btn_bottom{
 		display:block; 
 		text-align:center;
