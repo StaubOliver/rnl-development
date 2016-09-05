@@ -1948,7 +1948,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 		});
 	}
 
-	$scope.loadGeneral();
+	$scope.changeUniqueId();
 
 	
 
