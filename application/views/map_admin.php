@@ -132,7 +132,7 @@
 									<div class='row'>
 
 										<div class='col-md-8 col-sm-6 col-xs-12'>
-											{{feedback["unique_id"]}}
+											<a href='/map/map_stat/{{feedback["unique_id"]}}'>{{feedback["unique_id"]}}</a>
 											({{feedback["first_name"]}} {{feedback["last_name"]}})
 											on
 											{{feedback['time']}}
