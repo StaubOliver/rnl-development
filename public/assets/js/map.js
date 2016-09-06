@@ -379,7 +379,7 @@ var map = angular.module('map', ['rzModule'])
 				+ "<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/"+color+"/' alt='Hello there'>"
 			+ "</div>"
 			+ "<div class='col-md-9 col-sm-9 col-xs-9'>"
-				+ "<a class='map-legend-content-title' href='/map/map_admin'>"+age+"</a>"
+				+ "<p class='map-legend-content-title' ng-click='selectedAgeMin=0; selectedAgeMax=0;'>"+age+"</p>"
 			+ "</div>";
 	}
 
