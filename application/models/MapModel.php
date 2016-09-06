@@ -503,11 +503,11 @@ class MapModel extends CI_Model {
 
     
 
-    function adminFeedbacks(){
+    function adminFeedbacks($int){
 
         $return = [];
 
-        $query_feedbacks = $this->db->query('SELECT feedback_id, unique_id, user_id, filter_id, time, message, map_coordinates_id, rating_correctness, rating_discovery, rating_relevance, hidden  FROM feedback WHERE replyto=0 ORDER BY time DESC');
+        $query_feedbacks = $this->db->query('SELECT feedback_id, unique_id, user_id, filter_id, time, message, map_coordinates_id, rating_correctness, rating_discovery, rating_relevance, hidden  FROM feedback WHERE replyto=0 ORDER BY time DESC LIMIT '.$int.', 5');
 
         if ($query_feedbacks->num_rows() > 0){
             foreach ($query_feedbacks->result_array() as $row) {
@@ -532,6 +532,7 @@ class MapModel extends CI_Model {
                 $return[] = $new_row;
             }
         }
+
         return $return;
 
     }

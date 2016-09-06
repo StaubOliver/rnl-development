@@ -193,7 +193,7 @@ class Map extends MY_Controller {
 	public function loadAdminFeedback(){
 		if ($this->ion_auth->logged_in()){
 			if ($this->ProfileModel->isAdmin()==1){
-				$data = $this->MapModel->adminFeedbacks();
+				$data = $this->MapModel->adminFeedbacks($this->input->post("contributionIndex"));
 				echo json_encode($data);
 			}
 		}
