@@ -146,9 +146,9 @@ class MapModel extends CI_Model {
             $temp[] = 'Precambrian';
         }
 
-        $temp[] = 'Illegible';
-        $temp[] = 'Missing';
-        $temp[] = '';
+        //$temp[] = 'Illegible';
+        //$temp[] = 'Missing';
+        //$temp[] = '';
 
         for ($i = 0; $i < count($temp)-1; ++$i){
             $list .= "'".$temp[$i]."', ";
