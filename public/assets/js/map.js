@@ -418,6 +418,9 @@ var map = angular.module('map', ['rzModule'])
 
 		//document.getElementById('map-legend-content').append(compiled);
 		//legend;
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
 	}
 
 	function refreshFeedback(http){
