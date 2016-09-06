@@ -501,6 +501,13 @@ class MapModel extends CI_Model {
         return $new_row;
     }
 
+
+    function nbadminFeedbacks()
+    {
+        $query_feedbacks = $this->db->query('SELECT feedback_id, unique_id, user_id, filter_id, time, message, map_coordinates_id, rating_correctness, rating_discovery, rating_relevance, hidden  FROM feedback WHERE replyto=0 ORDER BY time DESC');
+
+        return $query_feedbacks->num_rows();
+    }
     
 
     function adminFeedbacks($int){

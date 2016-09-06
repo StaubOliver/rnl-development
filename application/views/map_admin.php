@@ -109,7 +109,7 @@
 				<div class='tab_contribution' ng-show='selected_tab == 1'>
 
 					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-title'>
-						<h4><?php echo 'Feedbacks - '.count($feedbacks).' feedbacks recorded'; ?></h4>
+						<h4><?php echo 'Feedbacks - '.$nb_feedbacks.' feedbacks recorded'; ?></h4>
 					</div>
 
 

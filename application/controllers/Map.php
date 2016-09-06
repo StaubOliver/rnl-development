@@ -71,7 +71,7 @@ class map extends CI_Controller {
 	
 	public function map_admin(){
 		if ($this->ion_auth->logged_in() && ($this->ProfileModel->isAdmin() == 1)){
-			//$data['feedbacks'] = $this->MapModel->adminFeedbacks();
+			$data['nb_feedbacks'] = $this->MapModel->nbadminFeedbacks();
 
 			$data['location_update'] = $this->MapModel->updatelocationestimate();
 
