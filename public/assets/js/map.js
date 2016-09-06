@@ -379,7 +379,7 @@ var map = angular.module('map', ['rzModule'])
 				+ "<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/"+color+"/' alt='Hello there'>"
 			+ "</div>"
 			+ "<div class='col-md-9 col-sm-9 col-xs-9'>"
-				+ "<p class='map-legend-content-title'>"+age+"</p>"
+				+ "<p class='map-legend-content-title' href='/map/map_admin'>"+age+"</p>"
 			+ "</div>";
 	}
 
@@ -402,7 +402,9 @@ var map = angular.module('map', ['rzModule'])
 
 		legend += LegendItem('909090', 'Data Missing');
 
-		document.getElementById('map-legend-content').innerHTML = legend;
+		document.getElementById('map-legend-content').innerHTML = $compile(content)($scope)[0];
+
+		//legend;
 	}
 
 	function refreshFeedback(http){
