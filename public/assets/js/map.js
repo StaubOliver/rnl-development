@@ -385,6 +385,7 @@ var map = angular.module('map', ['rzModule'])
 
 	function refreshLegend(){
 		//console.log("refresh legend");
+		angular.element(document.getElementById('map-legend-content')).append(null);
 		legend = "";
 		if (markers_age.indexOf('Quaternary')!=-1){ legend += LegendItem('F9F97F', 'Quaternary'); }
 		if (markers_age.indexOf('Pliocene')!=-1 || markers_age.indexOf('Miocene')!=-1){ legend += LegendItem('FFE619', 'Neogene'); }
@@ -875,8 +876,8 @@ var map = angular.module('map', ['rzModule'])
 	$scope.newAge = function()
 	{
 		$scope.clear_selected_markers(); 
-		refresh($http);
 		refreshFeedback($http);
+		refresh($http);
 		logActivity($http, "Filter Geological Age changed", "New range "+$scope.selectedAgeMin+" - "+$scope.selectedAgeMax, user_id);
 	}
 
