@@ -368,7 +368,7 @@ class MapModel extends CI_Model {
     		
             //$row = $query->row_array();
     		
-            foreach ($query as $filter) 
+            foreach ($query->result_array() as $filter) 
             {
 
                 $filter_id = $filter['filter_id'];
