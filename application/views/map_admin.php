@@ -528,15 +528,15 @@
 					<!-- load more -->
 
 
-					<div id='endContributionList' class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback load-more' ng-hide='noMore' ng-click="loadMoreContributions()">
+					<div id='endContributionList' class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 load-more' ng-hide='noMore' ng-click="loadMoreContributions()">
 						<h5 class='contribution-loading'>Click to load more contributions</h5>
 					</div>
 
-					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback' ng-show='loadingContributions'>
+					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12' ng-show='loadingContributions'>
 						<h5 class='contribution-loading'>Loading...</h5>
 					</div>
 
-					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback' ng-show='noMore'>
+					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12' ng-show='noMore'>
 						<h5 class='contribution-loading'>No more contributions to show</h5>
 					</div>
 					
