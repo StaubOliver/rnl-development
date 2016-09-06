@@ -955,6 +955,9 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.show_map = [];
 	$scope.show_update_notice = false;
 
+	$scope.noMore = false;
+	$scope.loadingContributions = true;
+
 	var infoWindowadmin = new google.maps.InfoWindow({maxWidth:200});
 
 	var actualmap;
