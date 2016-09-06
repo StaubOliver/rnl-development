@@ -975,20 +975,14 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	var url_empty = "/assets/img/star/circle_empty.png";
 	var url_full = "/assets/img/star/circle_full.png";
 	var url_hightlight = "/assets/img/star/circle_highlight.png";
-
+/*
 	window.onscroll = function() {
 		if ($('#endContributionList').visible())
 		{
 			$scope.loadMoreContributions();
 		}
 	};
-
-	function scrolling()
-	{
-		
-	}
-	
-
+*/
 
 	function refreshFeedback(){
 		$scope.noMore = false;
