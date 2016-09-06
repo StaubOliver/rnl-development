@@ -405,7 +405,7 @@ var map = angular.module('map', ['rzModule'])
 		if (markers_age.indexOf('Silurian')!=-1 || markers_age.indexOf('Silurian, Pridoli')!=-1 || markers_age.indexOf('Silurian, Ludlow')!=-1 || markers_age.indexOf('Silurian, Wenlock')!=-1 || markers_age.indexOf('Silurian, Llandovery')!=-1){ legend += LegendItem('B3E1B6', 'Silurian',9); }
 		if (markers_age.indexOf('Ordovician')!=-1 || markers_age.indexOf('Ordovician, Upper')!=-1 || markers_age.indexOf('Ordovician, Middle')!=-1 || markers_age.indexOf('Ordovician, Middle')!=-1 || markers_age.indexOf('Ordovician, Lower')!=-1){ legend += LegendItem('009270', 'Ordovician',10); }
 		if (markers_age.indexOf('Cambrian')!=-1){ legend += LegendItem('7FA056', 'Cambrian',11); }
-		if (markers_age.indexOf('Precambrain')!=-1){ legend += LegendItem('934370', 'Precambrian', 12); }
+		if (markers_age.indexOf('Precambrian')!=-1){ legend += LegendItem('934370', 'Precambrian', 12); }
 
 		if($scope.selectedAgeMin=="0" && $scope.selectedAgeMax=="12")
 		{
