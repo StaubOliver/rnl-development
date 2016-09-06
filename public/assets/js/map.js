@@ -61,7 +61,7 @@ var getPinColor = function(age){
 
 	//carboniferous
 	if (age=="Carboniferous") { return pin_carboniferous; }
-	if (age=="Carboniferous Upper (Coal Measeures") { return pin_carboniferous; }
+	if (age=="Carboniferous Upper (Coal Measeures)") { return pin_carboniferous; }
 	if (age=="Carboniferous Lower (Limestone)") { return pin_carboniferous; }
 
 	//denovian
@@ -411,22 +411,6 @@ var map = angular.module('map', ['rzModule'])
 		$scope.section_feedback_form_section_title = 'Share your discoveries';
 		http.get('/api/map/loadfeedbacks/'+filter['genus']+'/-1/'+$scope.selectedAgeMin+'/'+$scope.selectedAgeMax+'/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
 			data.forEach(function(item, index){
-				/*
-				currentBounds = actualmap.getBounds();
-
-				var view = [
-				    {lat: currentBounds.getNorthEast().lat(), lng: currentBounds.getNorthEast().lng()},
-				    {lat: currentBounds.getSouthWest().lat(), lng: currentBounds.getNorthEast().lng()},
-				    {lat: currentBounds.getSouthWest().lat(), lng: currentBounds.getSouthWest().lng()},
-				    {lat: currentBounds.getNorthEast().lat(), lng: currentBounds.getSouthWest().lng()},
-				    {lat: currentBounds.getNorthEast().lat(), lng: currentBounds.getNorthEast().lng()}
-				];
-
-				center = new google.maps.LatLng(item['map_center_lat'], item['map_center_lng']);
-
-				if (google.maps.geometry.poly.containsLocation(center, view)){
-					
-				}*/
 
 				$scope.feedbacks.push(item);
 
