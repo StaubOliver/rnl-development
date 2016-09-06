@@ -526,16 +526,16 @@
 					<!-- load more -->
 
 
-					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback' ng-show='noMore = false'>
+					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback' ng-hide='noMore'>
 						<h5 class='contribution-loading load-more'>Click to load more contributions</h5>
 					</div>
 
-					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback' ng-show='loadingContributions = true'>
+					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback' ng-show='loadingContributions'>
 						<h5 class='contribution-loading'>Loading...</h5>
 					</div>
 
-					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback' ng-show='noMore = true'>
-						<h5 class='contribution-loading'>No more contribuions to show</h5>
+					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback' ng-show='noMore'>
+						<h5 class='contribution-loading'>No more contributions to show</h5>
 					</div>
 
 
