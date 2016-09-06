@@ -318,36 +318,40 @@ class MapModel extends CI_Model {
 
     function loadFeedbacks($data, $user_id){
     	//using the data from the filter we create the where statement for querying the database
-    	$where = [];
-    	$i = 0;
-    	
-		$where[$i] = "genus = '" . $data['genus']."'";
-        $i += 1;
+        $where_string = "";
 
-
-        $where[$i] = "age_min = " . $data['age_min'];
-        $i += 1;
-
-        $where[$i] = "age_max = " . $data['age_max'];
-        $i += 1;
-      
-
-        $where[$i] = "collector = '" . $data['collector']."'";
-        $i += 1;
-
-    	$where_string = "";
-
-    	if ($i != 0)
+        if ($data["genus"] == "-1" and $data["collector"] == "-1" and $data["age_min"] == "0" and $data["age_max"] == "12")
         {
-            for ($j=0; $j<$i-1; $j++)
-            {
-                $where_string .= $where[$j] . " AND ";
-            }
-            
-            $where_string .= $where[$i-1]; 
+            $where_string = "1";
         }
-        else {
-            $where_string = " 1";
+        else
+        {        
+            $where = [];
+        	$i = 0;
+        	
+    		$where[$i] = "genus = '" . $data['genus']."'";
+            $i += 1;
+
+            $where[$i] = "age_min = " . $data['age_min'];
+            $i += 1;
+
+            $where[$i] = "age_max = " . $data['age_max'];
+            $i += 1;
+          
+            $where[$i] = "collector = '" . $data['collector']."'";
+            $i += 1;
+
+        	if ($i != 0)
+            {
+                for ($j=0; $j<$i-1; $j++)
+                {
+                    $where_string .= $where[$j] . " AND ";
+                }
+                $where_string .= $where[$i-1]; 
+            }
+            else {
+                $where_string = " 1";
+            }
         }
 
 
