@@ -379,7 +379,7 @@ var map = angular.module('map', ['rzModule'])
 				+ "<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/"+color+"/' alt='Hello there'>"
 			+ "</div>"
 			+ "<div class='col-md-9 col-sm-9 col-xs-9'>"
-				+ "<p class='map-legend-content-title' ng-click='newAge(0,0)'>"+age+"</p>"
+				+ "<p class='map-legend-content-title' ng-click='selectedAgeMin=0; selectedAgeMax=0; newAge()'>"+age+"</p>"
 			+ "</div>";
 	}
 
@@ -872,7 +872,7 @@ var map = angular.module('map', ['rzModule'])
 		deselect_all_marker();
 	}*/
 
-	$scope.newAge = function($min, $max)
+	$scope.newAge = function()
 	{
 		$scope.clear_selected_markers(); 
 		refresh($http);
