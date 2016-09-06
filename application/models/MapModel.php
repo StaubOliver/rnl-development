@@ -400,16 +400,12 @@ class MapModel extends CI_Model {
 
                         $return[] = $new_row;
                     }
-                    return $return;
+                    
         		}
 
-                else 
-                {
-        			//if we didn't we return an empty array
-        			return $return;
-        		}
 
             }
+            return $return;
 
     	} else {
     		//if the filter is not found then no feedbacks are recorded. We return an emty array
