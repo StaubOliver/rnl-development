@@ -1125,6 +1125,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		    	
 		}).success(function(data, status, headers, config) {
 
+			console.log(data);
+
 			if (data.length > 0)
 			{
 				data.forEach(function(item, index)
@@ -1238,6 +1240,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			{
 				$scope.noMore = true;
 			}
+		}).error(function(data, status, header, config){
+			console.log(data);
 		});
 
 		$scope.loadingContributions = false;
