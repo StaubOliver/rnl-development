@@ -323,9 +323,9 @@ class MapModel extends CI_Model {
     	//using the data from the filter we create the where statement for querying the database
         $where_string = "";
 
-        if ($data["genus"] == "-1" and $data["collector"] == "-1" and $data["age_min"] == "0" and $data["age_max"] == "12")
+        if ($data["genus"] == -1 and $data["collector"] == -1 and $data["age_min"] == 0 and $data["age_max"] == 12)
         {
-            $where_string = "1";
+            $where_string = "errors";
         }
         else
         {        
