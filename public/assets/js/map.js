@@ -407,15 +407,16 @@ var map = angular.module('map', ['rzModule'])
 		if (markers_age.indexOf('Cambrian')!=-1){ legend += LegendItem('7FA056', 'Cambrian',11); }
 		if (markers_age.indexOf('Precambrain')!=-1){ legend += LegendItem('934370', 'Precambrian', 12); }
 
-		legend += LegendItem('909090', 'Data Missing', null);
-
+		if($scope.selectedAgeMin=="0" && $scope.selectedAgeMax=="12")
+		{
+			legend += LegendItem('909090', 'Data Missing', null);
+		}
+		
 		var compiled = $compile(legend)($scope);
 
 		angular.element(document.getElementById('map-legend-content')).append(compiled);
 
 		//document.getElementById('map-legend-content').append(compiled);
-		console.log(compiled);
-
 		//legend;
 	}
 
