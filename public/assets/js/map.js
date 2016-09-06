@@ -404,7 +404,7 @@ var map = angular.module('map', ['rzModule'])
 
 		var compiled = $compile(legend)($scope);
 
-		document.getElementById('map-legend-content').innerHTML = legend;
+		document.getElementById('map-legend-content').innerHTML = compiled[0];
 		console.log(compiled);
 
 		//legend;
