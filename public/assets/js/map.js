@@ -1234,9 +1234,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 					$scope.feedbacks.push(item);
 				});
 
-				$scope.contributionIndex += 5;
 
-				if (data.length <= 4)
+				if (data.length < 5)
 				{
 					$scope.noMore = true;
 				}
