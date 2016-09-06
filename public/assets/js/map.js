@@ -956,7 +956,8 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	$scope.show_update_notice = false;
 
 	$scope.noMore = false;
-	$scope.loadingContributions = true;
+	$scope.loadingContributions = false;
+	$scope.contributionIndex = 0;
 
 	var infoWindowadmin = new google.maps.InfoWindow({maxWidth:200});
 
@@ -1089,6 +1090,16 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 	}
 
 	$scope.showUpdateError = false;
+
+	$scope.loadMoreContributions = function(){
+		$scope.contributionIndex += 5;
+
+		$scope.loadingContributions = true;
+		
+
+
+	}
+
 
 	$scope.update_location = function(){
 		$scope.show_update_notice = true;
