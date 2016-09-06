@@ -1225,6 +1225,11 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 				});
 
 				$scope.contributionIndex += 5;
+
+				if (data.length < 5)
+				{
+					$scope.noMore = true;
+				}
 			}
 			else 
 			{
@@ -1232,7 +1237,7 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 			}
 		});
 
-		$scope.loadingContributions = true;
+		$scope.loadingContributions = false;
 	}
 
 
