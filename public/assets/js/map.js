@@ -402,7 +402,9 @@ var map = angular.module('map', ['rzModule'])
 
 		legend += LegendItem('909090', 'Data Missing');
 
-		document.getElementById('map-legend-content').innerHTML = $compile(legend)($scope)[0];
+		var compiled = $compile(legend)($scope);
+
+		document.getElementById('map-legend-content').innerHTML = compiled[0];
 
 		//legend;
 	}
