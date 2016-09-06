@@ -424,14 +424,15 @@ var map = angular.module('map', ['rzModule'])
 		$scope.replyto = {'reply': false};
 		$scope.section_feedback_form_section_title = 'Share your discoveries';
 		http.get('/api/map/loadfeedbacks/'+filter['genus']+'/-1/'+$scope.selectedAgeMin+'/'+$scope.selectedAgeMax+'/'+filter['collector']+'/-1/-1/-1/-1/-1').success(function(data, status, headers, config){
-			data.forEach(function(item, index){
+			
+			if (data.length > 0){
+				data.forEach(function(item, index){
+					$scope.feedbacks.push(item);
+				});
+			}
 
-				$scope.feedbacks.push(item);
-
-				$scope.feedback_form_text_reply[item.feedback_id]="";
-				$scope.show_feedback_reply[item.feedback_id] = false;
-
-			});
+			$scope.feedback_form_text_reply[item.feedback_id]="";
+			$scope.show_feedback_reply[item.feedback_id] = false;
 		});
 		//console.log($scope.show_feedback_reply);
 	}
