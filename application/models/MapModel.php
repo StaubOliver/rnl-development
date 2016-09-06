@@ -146,7 +146,7 @@ class MapModel extends CI_Model {
             $temp[] = 'Precambrian';
         }
 
-        if ($min=0 and $max=12)
+        if ($min==0 and $max==12)
         {
             $temp[] = 'Illegible';
             $temp[] = 'Missing';
