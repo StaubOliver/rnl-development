@@ -981,6 +981,10 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 
 
 	function refreshFeedback(){
+		$scope.noMore = false;
+		$scope.loadingContributions = false;
+		$scope.contributionIndex = 0;
+
 		$scope.feedbacks = [];
 		$scope.rating_img = [];
 		$scope.show_map = [];
@@ -1117,111 +1121,118 @@ var map_admin = angular.module('map_admin', []).controller('admin_map_feedbacks'
 		    	
 		}).success(function(data, status, headers, config) {
 
-			data.forEach(function(item, index)
+			if (data.length > 0)
 			{
-				$scope.rating_img[item["feedback_id"]] = [];
+				data.forEach(function(item, index)
+				{
+					$scope.rating_img[item["feedback_id"]] = [];
 
-				$scope.show_map[item["feedback_id"]] = false;
+					$scope.show_map[item["feedback_id"]] = false;
 
-				
-				//rating correctness
-				if (item['rating_correctness'] == "0"){
-					$scope.rating_img[item['feedback_id']][1] = url_empty;
-					$scope.rating_img[item['feedback_id']][2] = url_empty;
-				}
-				if (item['rating_correctness'] == "1"){
-					$scope.rating_img[item['feedback_id']][1] = url_hightlight;
-					$scope.rating_img[item['feedback_id']][2] = url_empty;
-				}
-				if (item['rating_correctness'] == "2"){
-					$scope.rating_img[item['feedback_id']][1] = url_empty;
-					$scope.rating_img[item['feedback_id']][2] = url_hightlight;
-				}
-
-				//rating discovery
-				if (item['rating_discovery'] == "0"){
-					$scope.rating_img[item['feedback_id']][3] = url_empty;
-					$scope.rating_img[item['feedback_id']][4] = url_empty;
-				}
-				if (item['rating_discovery'] == "1"){
-					$scope.rating_img[item['feedback_id']][3] = url_hightlight;
-					$scope.rating_img[item['feedback_id']][4] = url_empty;
-				}
-				if (item['rating_discovery'] == "2"){
-					$scope.rating_img[item['feedback_id']][3] = url_empty;
-					$scope.rating_img[item['feedback_id']][4] = url_hightlight;
-				}
-
-				//rating discovery
-				if (item['rating_relevance'] == "0"){
-					$scope.rating_img[item['feedback_id']][5] = url_empty;
-					$scope.rating_img[item['feedback_id']][6] = url_empty;
-				}
-				if (item['rating_relevance'] == "1"){
-					$scope.rating_img[item['feedback_id']][5] = url_hightlight;
-					$scope.rating_img[item['feedback_id']][6] = url_empty;
-				}
-				if (item['rating_relevance'] == "2"){
-					$scope.rating_img[item['feedback_id']][5] = url_empty;
-					$scope.rating_img[item['feedback_id']][6] = url_hightlight;
-				}
-
-
-				// do the same for the replies
-				for (var j = 0; j < item['replies'].length; j++){
-					$scope.rating_img[item['replies'][j]['feedback_id']] = [];
 					
 					//rating correctness
-					if (item['replies'][j]['rating_correctness'] == "0"){
-						$scope.rating_img[item['replies'][j]['feedback_id']][1] = url_empty;
-						$scope.rating_img[item['replies'][j]['feedback_id']][2] = url_empty;
+					if (item['rating_correctness'] == "0"){
+						$scope.rating_img[item['feedback_id']][1] = url_empty;
+						$scope.rating_img[item['feedback_id']][2] = url_empty;
 					}
-					if (item['replies'][j]['rating_correctness'] == "1"){
-						$scope.rating_img[item['replies'][j]['feedback_id']][1] = url_hightlight;
-						$scope.rating_img[item['replies'][j]['feedback_id']][2] = url_empty;
+					if (item['rating_correctness'] == "1"){
+						$scope.rating_img[item['feedback_id']][1] = url_hightlight;
+						$scope.rating_img[item['feedback_id']][2] = url_empty;
 					}
-					if (item['replies'][j]['rating_correctness'] == "2"){
-						$scope.rating_img[item['replies'][j]['feedback_id']][1] = url_empty;
-						$scope.rating_img[item['replies'][j]['feedback_id']][2] = url_hightlight;
-					}
-
-					//rating discovery
-					if (item['replies'][j]['rating_discovery'] == "0"){
-						$scope.rating_img[item['replies'][j]['feedback_id']][3] = url_empty;
-						$scope.rating_img[item['replies'][j]['feedback_id']][4] = url_empty;
-					}
-					if (item['replies'][j]['rating_discovery'] == "1"){
-						$scope.rating_img[item['replies'][j]['feedback_id']][3] = url_hightlight;
-						$scope.rating_img[item['replies'][j]['feedback_id']][4] = url_empty;
-					}
-					if (item['replies'][j]['rating_discovery'] == "2"){
-						$scope.rating_img[item['replies'][j]['feedback_id']][3] = url_empty;
-						$scope.rating_img[item['replies'][j]['feedback_id']][4] = url_hightlight;
+					if (item['rating_correctness'] == "2"){
+						$scope.rating_img[item['feedback_id']][1] = url_empty;
+						$scope.rating_img[item['feedback_id']][2] = url_hightlight;
 					}
 
 					//rating discovery
-					if (item['replies'][j]['rating_relevance'] == "0"){
-						$scope.rating_img[item['replies'][j]['feedback_id']][5] = url_empty;
-						$scope.rating_img[item['replies'][j]['feedback_id']][6] = url_empty;
+					if (item['rating_discovery'] == "0"){
+						$scope.rating_img[item['feedback_id']][3] = url_empty;
+						$scope.rating_img[item['feedback_id']][4] = url_empty;
 					}
-					if (item['replies'][j]['rating_relevance'] == "1"){
-						$scope.rating_img[item['replies'][j]['feedback_id']][5] = url_hightlight;
-						$scope.rating_img[item['replies'][j]['feedback_id']][6] = url_empty;
+					if (item['rating_discovery'] == "1"){
+						$scope.rating_img[item['feedback_id']][3] = url_hightlight;
+						$scope.rating_img[item['feedback_id']][4] = url_empty;
 					}
-					if (item['replies'][j]['rating_relevance'] == "2"){
-						$scope.rating_img[item['replies'][j]['feedback_id']][5] = url_empty;
-						$scope.rating_img[item['replies'][j]['feedback_id']][6] = url_hightlight;
+					if (item['rating_discovery'] == "2"){
+						$scope.rating_img[item['feedback_id']][3] = url_empty;
+						$scope.rating_img[item['feedback_id']][4] = url_hightlight;
+					}
+
+					//rating discovery
+					if (item['rating_relevance'] == "0"){
+						$scope.rating_img[item['feedback_id']][5] = url_empty;
+						$scope.rating_img[item['feedback_id']][6] = url_empty;
+					}
+					if (item['rating_relevance'] == "1"){
+						$scope.rating_img[item['feedback_id']][5] = url_hightlight;
+						$scope.rating_img[item['feedback_id']][6] = url_empty;
+					}
+					if (item['rating_relevance'] == "2"){
+						$scope.rating_img[item['feedback_id']][5] = url_empty;
+						$scope.rating_img[item['feedback_id']][6] = url_hightlight;
 					}
 
 
-				}
-				$scope.feedbacks.push(item);
-			});
+					// do the same for the replies
+					for (var j = 0; j < item['replies'].length; j++){
+						$scope.rating_img[item['replies'][j]['feedback_id']] = [];
+						
+						//rating correctness
+						if (item['replies'][j]['rating_correctness'] == "0"){
+							$scope.rating_img[item['replies'][j]['feedback_id']][1] = url_empty;
+							$scope.rating_img[item['replies'][j]['feedback_id']][2] = url_empty;
+						}
+						if (item['replies'][j]['rating_correctness'] == "1"){
+							$scope.rating_img[item['replies'][j]['feedback_id']][1] = url_hightlight;
+							$scope.rating_img[item['replies'][j]['feedback_id']][2] = url_empty;
+						}
+						if (item['replies'][j]['rating_correctness'] == "2"){
+							$scope.rating_img[item['replies'][j]['feedback_id']][1] = url_empty;
+							$scope.rating_img[item['replies'][j]['feedback_id']][2] = url_hightlight;
+						}
 
-			$scope.contributionIndex += 5;
+						//rating discovery
+						if (item['replies'][j]['rating_discovery'] == "0"){
+							$scope.rating_img[item['replies'][j]['feedback_id']][3] = url_empty;
+							$scope.rating_img[item['replies'][j]['feedback_id']][4] = url_empty;
+						}
+						if (item['replies'][j]['rating_discovery'] == "1"){
+							$scope.rating_img[item['replies'][j]['feedback_id']][3] = url_hightlight;
+							$scope.rating_img[item['replies'][j]['feedback_id']][4] = url_empty;
+						}
+						if (item['replies'][j]['rating_discovery'] == "2"){
+							$scope.rating_img[item['replies'][j]['feedback_id']][3] = url_empty;
+							$scope.rating_img[item['replies'][j]['feedback_id']][4] = url_hightlight;
+						}
+
+						//rating discovery
+						if (item['replies'][j]['rating_relevance'] == "0"){
+							$scope.rating_img[item['replies'][j]['feedback_id']][5] = url_empty;
+							$scope.rating_img[item['replies'][j]['feedback_id']][6] = url_empty;
+						}
+						if (item['replies'][j]['rating_relevance'] == "1"){
+							$scope.rating_img[item['replies'][j]['feedback_id']][5] = url_hightlight;
+							$scope.rating_img[item['replies'][j]['feedback_id']][6] = url_empty;
+						}
+						if (item['replies'][j]['rating_relevance'] == "2"){
+							$scope.rating_img[item['replies'][j]['feedback_id']][5] = url_empty;
+							$scope.rating_img[item['replies'][j]['feedback_id']][6] = url_hightlight;
+						}
+
+
+					}
+					$scope.feedbacks.push(item);
+				});
+
+				$scope.contributionIndex += 5;
+			}
+			else 
+			{
+				$scope.noMore = true;
+			}
 		});
 
-
+		$scope.loadingContributions = true;
 	}
 
 
