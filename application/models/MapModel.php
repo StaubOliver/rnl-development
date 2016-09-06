@@ -325,7 +325,7 @@ class MapModel extends CI_Model {
 
         if ($data["genus"] == -1 and $data["collector"] == -1 and $data["age_min"] == 0 and $data["age_max"] == 12)
         {
-            $where_string = "errors";
+            $where_string = "1";
         }
         else
         {        
@@ -365,41 +365,52 @@ class MapModel extends CI_Model {
     	{
             $return = array();
     		//if the filter is found we use it to retrieve the feedabcks
-    		$row = $query->row_array();
-    		$filter_id = $row['filter_id'];
+    		
+            //$row = $query->row_array();
+    		
+            foreach ($query as $filter) 
+            {
 
-    		$query2 = $this->db->query('SELECT feedback_id, user_id, time, message, map_coordinates_id FROM feedback WHERE filter_id='.$filter_id.' AND replyto=0 AND hidden=0 ORDER BY time DESC');
+                $filter_id = $filter['filter_id'];
 
-    		if ($query2->num_rows() > 0)
-    		{
-    			//we found some feedbacks related to that filter
-    			foreach ($query2->result_array() as $row){
-                    
-                    $new_row = $this->getFeedbackDetails($row, $user_id);
-                    $new_row['replyto'] = 0;
-                    
-                    $new_row['replies'] = array();
+        		$query2 = $this->db->query('SELECT feedback_id, user_id, time, message, map_coordinates_id FROM feedback WHERE filter_id='.$filter_id.' AND replyto=0 AND hidden=0 ORDER BY time DESC');
 
-                    //query of replies for each feedback
-                    $query_replies = $this->db->query('SELECT feedback_id, user_id, time, message, map_coordinates_id FROM feedback WHERE filter_id='.$filter_id.' AND replyto='.$new_row['feedback_id'].' AND hidden=0 ORDER BY time ASC');
+        		if ($query2->num_rows() > 0)
+        		{
+        			//we found some feedbacks related to that filter
+        			foreach ($query2->result_array() as $row){
+                        
+                        $new_row = $this->getFeedbackDetails($row, $user_id);
+                        $new_row['replyto'] = 0;
+                        
+                        $new_row['replies'] = array();
 
-                    if ($query_replies->num_rows() > 0){
-                        //for each replies, we get their details
-                        foreach ($query_replies->result_array() as $rep){
-                            $temp = $this->getFeedbackDetails($rep, $user_id);
-                            $temp["selection"] = $new_row["selection"];
-                            $new_row["replies"][] = $temp;
+                        //query of replies for each feedback
+                        $query_replies = $this->db->query('SELECT feedback_id, user_id, time, message, map_coordinates_id FROM feedback WHERE filter_id='.$filter_id.' AND replyto='.$new_row['feedback_id'].' AND hidden=0 ORDER BY time ASC');
+
+                        if ($query_replies->num_rows() > 0){
+                            //for each replies, we get their details
+                            foreach ($query_replies->result_array() as $rep){
+                                $temp = $this->getFeedbackDetails($rep, $user_id);
+                                $temp["selection"] = $new_row["selection"];
+                                $new_row["replies"][] = $temp;
+                            }
+
                         }
 
+                        $return[] = $new_row;
                     }
+                    return $return;
+        		}
 
-                    $return[] = $new_row;
-                }
-                return $return;
-    		} else {
-    			//if we didn't we return an empty array
-    			return $return;
-    		}
+                else 
+                {
+        			//if we didn't we return an empty array
+        			return $return;
+        		}
+
+            }
+
     	} else {
     		//if the filter is not found then no feedbacks are recorded. We return an emty array
     		return $return;
