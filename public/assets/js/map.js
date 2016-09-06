@@ -385,7 +385,7 @@ var map = angular.module('map', ['rzModule'])
 
 	function refreshLegend(){
 		//console.log("refresh legend");
-		angular.element(document.getElementById('map-legend-content')).html='';
+		angular.element(document.getElementById('map-legend-content')).empty();
 		legend = "";
 		if (markers_age.indexOf('Quaternary')!=-1){ legend += LegendItem('F9F97F', 'Quaternary'); }
 		if (markers_age.indexOf('Pliocene')!=-1 || markers_age.indexOf('Miocene')!=-1){ legend += LegendItem('FFE619', 'Neogene'); }
