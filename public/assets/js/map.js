@@ -429,10 +429,10 @@ var map = angular.module('map', ['rzModule'])
 				data.forEach(function(item, index){
 					$scope.feedbacks.push(item);
 				});
+				$scope.feedback_form_text_reply[item.feedback_id]="";
+				$scope.show_feedback_reply[item.feedback_id] = false;
 			}
-
-			$scope.feedback_form_text_reply[item.feedback_id]="";
-			$scope.show_feedback_reply[item.feedback_id] = false;
+			
 		});
 		//console.log($scope.show_feedback_reply);
 	}
