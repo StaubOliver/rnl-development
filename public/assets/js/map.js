@@ -379,7 +379,7 @@ var map = angular.module('map', ['rzModule'])
 				+ "<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/"+color+"/' alt='Hello there'>"
 			+ "</div>"
 			+ "<div class='col-md-9 col-sm-9 col-xs-9'>"
-				+ "<p class='map-legend-content-title' ng-click='selectedAgeMin=0; selectedAgeMax=0;'>"+age+"</p>"
+				+ "<p class='map-legend-content-title' ng-click='newAge(0,0)'>"+age+"</p>"
 			+ "</div>";
 	}
 
@@ -871,6 +871,14 @@ var map = angular.module('map', ['rzModule'])
 		refresh($http);
 		deselect_all_marker();
 	}*/
+
+	$scope.newAge = function($min, $max)
+	{
+		$scope.clear_selected_markers(); 
+		refresh($http);
+		refreshFeedback($http);
+		logActivity($http, "Filter Geological Age changed", "New range "+$scope.selectedAgeMin+" - "+$scope.selectedAgeMax, user_id);
+	}
 
 	$scope.newCollector = function(){
 		filter['collector'] = $scope.selectedCollector;
