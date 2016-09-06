@@ -526,8 +526,8 @@
 					<!-- load more -->
 
 
-					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback' ng-hide='noMore'>
-						<h5 class='contribution-loading load-more'>Click to load more contributions</h5>
+					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback load-more' ng-hide='noMore'>
+						<h5 class='contribution-loading'>Click to load more contributions</h5>
 					</div>
 
 					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback' ng-show='loadingContributions'>
