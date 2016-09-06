@@ -70,7 +70,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 		 			<li><a href="/map">Back to the map</a></li>
-		 			<li><a href="/map/map_admin">Panel</a></li>
+		 			<li><a href="/map/map_admin">Admin</a></li>
 		 			<li><a href ="/auth/logout" class="navbar-link">Logout</a></li>
 				</ul>
 			</div>

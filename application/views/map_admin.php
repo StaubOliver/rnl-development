@@ -523,6 +523,23 @@
 
 
 
+					<!-- load more -->
+
+
+					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback' ng-show='noMore = false'>
+						<h5>Click to load more contributions</h5>
+					</div>
+
+					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback' ng-show='loadingContributions = true'>
+						<h5>Loading...</h5>
+					</div>
+
+					<div class='col-md-10 col-md-offset-1 col-sm-12 col-xs-12 admin-feedback' ng-show='noMore = true'>
+						<h5>No more contribuions to show</h5>
+					</div>
+
+
+
 
 				</div>
 

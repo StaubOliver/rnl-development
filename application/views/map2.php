@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="map" 
-<?php if($logged_in == true)
+
+<?php 
+	if($logged_in == true)
 	{
 		$log = "true";
 	}
@@ -9,7 +11,8 @@
 		$log = "false";
 	}
 	
-	if($is_admin==1){
+	if($is_admin==1)
+	{
 		$admin="true";
 	}
 	else
@@ -17,9 +20,9 @@
 		$admin="false";
 	}
 
-
 	echo 'ng-init = "selectedGenus=\''.$genus.'\'; selectedCollector=\''.$collector.'\'; selectedAgeMin='.$agemin.'; selectedAgeMax='.$agemax.'; logged_in='.$log.'; admin='.$admin.'; firstVisit=\''.$firstVisit.'\'"';
 ?>
+
 >
 <head>
 	<!-- Metadata -->
@@ -112,7 +115,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<?php if($is_admin == 1): ?>
-		 				<li><a href="/map/map_admin">Admin panel</a></li>
+		 				<li><a href="/map/map_admin">Admin</a></li>
 		 				<li><a href="/map/map_stats">Stats</a></li>
 					<?php endif; ?>	
 
