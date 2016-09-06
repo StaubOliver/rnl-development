@@ -1025,6 +1025,9 @@ fieldset[disabled] .btn-custom-default.active {
 	text-align: center;
 }
 
+.load-more:hover{
+	cursor: pointer;
+}
 
 
 
