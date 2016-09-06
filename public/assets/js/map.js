@@ -374,12 +374,18 @@ var map = angular.module('map', ['rzModule'])
 
 	}
 
-	function LegendItem(color, age){
+	function LegendItem(color, age, int){
+		ngclick = "";
+		if (int != null)
+		{
+			ngclick = "ng-click='selectedAgeMin="+int+"; selectedAgeMax="+int+"; newAge()'";
+		}
+
 		return "<div class='col-md-3 col-sm-3 col-xs-3'>"
 				+ "<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/"+color+"/' alt='Hello there'>"
 			+ "</div>"
 			+ "<div class='col-md-9 col-sm-9 col-xs-9'>"
-				+ "<p class='map-legend-content-title' ng-click='selectedAgeMin=0; selectedAgeMax=0; newAge()'>"+age+"</p>"
+				+ "<p class='map-legend-content-title' "+ngclick+">"+age+"</p>"
 			+ "</div>";
 	}
 
@@ -387,21 +393,21 @@ var map = angular.module('map', ['rzModule'])
 		//console.log("refresh legend");
 		angular.element(document.getElementById('map-legend-content')).empty();
 		legend = "";
-		if (markers_age.indexOf('Quaternary')!=-1){ legend += LegendItem('F9F97F', 'Quaternary'); }
-		if (markers_age.indexOf('Pliocene')!=-1 || markers_age.indexOf('Miocene')!=-1){ legend += LegendItem('FFE619', 'Neogene'); }
-		if (markers_age.indexOf('Oligocene')!=-1 || markers_age.indexOf('Eocene')!=-1 || markers_age.indexOf('Palocene')!=-1 ){ legend += LegendItem('FD9A52', 'Paleogene'); }
-		if (markers_age.indexOf('Cretaceous')!=-1 || markers_age.indexOf('Cretaceous, Upper')!=-1 || markers_age.indexOf('Cretaceous, Lower')!=-1){ legend += LegendItem('7FC64E', 'Cretaceous'); }
-		if (markers_age.indexOf('Jurassic')!=-1 || markers_age.indexOf('Jurassic, Upper')!=-1 || markers_age.indexOf('Jurassic, Middle')!=-1 || markers_age.indexOf('Jurassic, Lower (Lias)')!=-1){ legend += LegendItem('34B2C9', 'Jurassic'); }
-		if (markers_age.indexOf('Triassic')!=-1 || markers_age.indexOf('Triassic, Upper')!=-1 || markers_age.indexOf('Triassic, Middle')!=-1 || markers_age.indexOf('Triassic, lower')!=-1){ legend += LegendItem('C72B92', 'Triassic'); }
-		if (markers_age.indexOf('Permian')!=-1){ legend += LegendItem('F04028', 'Permian'); }
-		if (markers_age.indexOf('Carboniferous')!=-1 || markers_age.indexOf('Carboniferous, Upper (Coal Measeures)')!=-1 || markers_age.indexOf('Carboniferous, Lower (Limestone)')!=-1){ legend += LegendItem('67A599', 'Carboniferous'); }
-		if (markers_age.indexOf('Devonian')!=-1 || markers_age.indexOf('Devonian, Upper')!=-1 || markers_age.indexOf('Devonian, Middle')!=-1 || markers_age.indexOf('Devonian, Lower')!=-1){ legend += LegendItem('CB8C37', 'Devonian'); }
-		if (markers_age.indexOf('Silurian')!=-1 || markers_age.indexOf('Silurian, Pridoli')!=-1 || markers_age.indexOf('Silurian, Ludlow')!=-1 || markers_age.indexOf('Silurian, Wenlock')!=-1 || markers_age.indexOf('Silurian, Llandovery')!=-1){ legend += LegendItem('B3E1B6', 'Silurian'); }
-		if (markers_age.indexOf('Ordovician')!=-1 || markers_age.indexOf('Ordovician, Upper')!=-1 || markers_age.indexOf('Ordovician, Middle')!=-1 || markers_age.indexOf('Ordovician, Middle')!=-1 || markers_age.indexOf('Ordovician, Lower')!=-1){ legend += LegendItem('009270', 'Ordovician'); }
-		if (markers_age.indexOf('Cambrian')!=-1){ legend += LegendItem('7FA056', 'Cambrian'); }
-		if (markers_age.indexOf('Precambrain')!=-1){ legend += LegendItem('934370', 'Precambrian'); }
+		if (markers_age.indexOf('Quaternary')!=-1){ legend += LegendItem('F9F97F', 'Quaternary',0); }
+		if (markers_age.indexOf('Pliocene')!=-1 || markers_age.indexOf('Miocene')!=-1){ legend += LegendItem('FFE619', 'Neogene',1); }
+		if (markers_age.indexOf('Oligocene')!=-1 || markers_age.indexOf('Eocene')!=-1 || markers_age.indexOf('Palocene')!=-1 ){ legend += LegendItem('FD9A52', 'Paleogene', 2); }
+		if (markers_age.indexOf('Cretaceous')!=-1 || markers_age.indexOf('Cretaceous, Upper')!=-1 || markers_age.indexOf('Cretaceous, Lower')!=-1){ legend += LegendItem('7FC64E', 'Cretaceous', 3); }
+		if (markers_age.indexOf('Jurassic')!=-1 || markers_age.indexOf('Jurassic, Upper')!=-1 || markers_age.indexOf('Jurassic, Middle')!=-1 || markers_age.indexOf('Jurassic, Lower (Lias)')!=-1){ legend += LegendItem('34B2C9', 'Jurassic', 4); }
+		if (markers_age.indexOf('Triassic')!=-1 || markers_age.indexOf('Triassic, Upper')!=-1 || markers_age.indexOf('Triassic, Middle')!=-1 || markers_age.indexOf('Triassic, lower')!=-1){ legend += LegendItem('C72B92', 'Triassic', 5); }
+		if (markers_age.indexOf('Permian')!=-1){ legend += LegendItem('F04028', 'Permian', 6); }
+		if (markers_age.indexOf('Carboniferous')!=-1 || markers_age.indexOf('Carboniferous, Upper (Coal Measeures)')!=-1 || markers_age.indexOf('Carboniferous, Lower (Limestone)')!=-1){ legend += LegendItem('67A599', 'Carboniferous', 7); }
+		if (markers_age.indexOf('Devonian')!=-1 || markers_age.indexOf('Devonian, Upper')!=-1 || markers_age.indexOf('Devonian, Middle')!=-1 || markers_age.indexOf('Devonian, Lower')!=-1){ legend += LegendItem('CB8C37', 'Devonian',8); }
+		if (markers_age.indexOf('Silurian')!=-1 || markers_age.indexOf('Silurian, Pridoli')!=-1 || markers_age.indexOf('Silurian, Ludlow')!=-1 || markers_age.indexOf('Silurian, Wenlock')!=-1 || markers_age.indexOf('Silurian, Llandovery')!=-1){ legend += LegendItem('B3E1B6', 'Silurian',9); }
+		if (markers_age.indexOf('Ordovician')!=-1 || markers_age.indexOf('Ordovician, Upper')!=-1 || markers_age.indexOf('Ordovician, Middle')!=-1 || markers_age.indexOf('Ordovician, Middle')!=-1 || markers_age.indexOf('Ordovician, Lower')!=-1){ legend += LegendItem('009270', 'Ordovician',10); }
+		if (markers_age.indexOf('Cambrian')!=-1){ legend += LegendItem('7FA056', 'Cambrian',11); }
+		if (markers_age.indexOf('Precambrain')!=-1){ legend += LegendItem('934370', 'Precambrian', 12); }
 
-		legend += LegendItem('909090', 'Data Missing');
+		legend += LegendItem('909090', 'Data Missing', null);
 
 		var compiled = $compile(legend)($scope);
 
