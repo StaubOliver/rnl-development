@@ -385,7 +385,7 @@ var map = angular.module('map', ['rzModule'])
 				+ "<img class='map-legend-pin' src='http://www.googlemapsmarkers.com/v1/"+color+"/' alt='Hello there'>"
 			+ "</div>"
 			+ "<div class='col-md-9 col-sm-9 col-xs-9'>"
-				+ "<p class='map-legend-content-title' "+ngclick+">"+age+'-'+count+"</p>"
+				+ "<p class='map-legend-content-title' "+ngclick+">"+age+"</p>"
 			+ "</div>";
 	}
 
