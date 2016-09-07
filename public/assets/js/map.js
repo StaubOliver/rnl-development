@@ -411,9 +411,10 @@ var map = angular.module('map', ['rzModule'])
 
 		if (markers_age.indexOf('Oligocene')!=-1 || 
 			markers_age.indexOf('Eocene')!=-1 || 
-			markers_age.indexOf('Palocene')!=-1 )
+			markers_age.indexOf('Palocene')!=-1 ||
+			markers_age.indexOf('Paleogene')!=-1)
 		{ 
-			legend += LegendItem('FD9A52', 'Paleogene', 2, count('Oligocene')+count('Eocene')+count('Palocene')); 
+			legend += LegendItem('FD9A52', 'Paleogene', 2, count('Oligocene')+count('Eocene')+count('Palocene')+count('Paleogene')); 
 		}
 
 		if (markers_age.indexOf('Cretaceous')!=-1 || 
