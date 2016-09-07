@@ -714,7 +714,7 @@
 
 						<div ng-repeat='feedback in feedbacks' ng-show='feedbacks.length'>
 
-							<div class="feedback-message hover-link" ng-mouseover="recordActivity('Feedback mouse over', feedback['feedback_id']+ ' '+feedback['message']); mouseoverFeedback(feedback)" ng-mouseleave="mouseleaveFeedback()" ng-click="clickFeedback(feedback.feedback_id)">
+							<div class="feedback-message hover-link" ng-mouseenter="recordActivity('Feedback mouse over', feedback['feedback_id']+ ' '+feedback['message']); mouseoverFeedback(feedback)" ng-mouseleave="mouseleaveFeedback()" ng-click="clickFeedback(feedback.feedback_id)">
 
 								<div class="row">
 
@@ -804,7 +804,7 @@
 							<!-- replies to that feedback -->
 							<div ng-repeat='rep in feedback.replies' ng-show='feedbacks.length'>
 
-								<div class="feedback-message-reply " ng-mouseover="recordActivity('Feedback mouse over', rep['feedback_id']+ ' '+rep['message']); mouseoverFeedback(rep)" ng-mouseleave="mouseleaveFeedback()">
+								<div class="feedback-message-reply " ng-mouseenter="recordActivity('Feedback mouse over', rep['feedback_id']+ ' '+rep['message']); mouseoverFeedback(rep)" ng-mouseleave="mouseleaveFeedback()">
 
 									<!--
 									<div class='feedback-message-delete-btn' ng-click="" ng-show="(logged_in && feedback['user_id']==user_id) || admin"> 
