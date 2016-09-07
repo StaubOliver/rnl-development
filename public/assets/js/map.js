@@ -456,7 +456,7 @@ var map = angular.module('map', ['rzModule'])
 			markers_age.indexOf('Devonian, Middle')!=-1 || 
 			markers_age.indexOf('Devonian, Lower')!=-1)
 		{ 
-			legend += LegendItem('CB8C37', 'Devonian',8, count('Devonian')+count('Devonian, Upper')+count('Devonian, Middle'), count('Devonian, Lower')); 
+			legend += LegendItem('CB8C37', 'Devonian',8, count('Devonian')+count('Devonian, Upper')+count('Devonian, Middle')+ count('Devonian, Lower')); 
 		}
 
 		if (markers_age.indexOf('Silurian')!=-1 || 
@@ -474,7 +474,7 @@ var map = angular.module('map', ['rzModule'])
 			markers_age.indexOf('Ordovician, Middle')!=-1 || 
 			markers_age.indexOf('Ordovician, Lower')!=-1)
 		{ 
-			legend += LegendItem('009270', 'Ordovician',10, count('Ordovician'), count('Ordovician, Upper'), count('Ordovician, Middle'), count('Ordovician, Middle'), count('Ordovician, Lower')); 
+			legend += LegendItem('009270', 'Ordovician',10, count('Ordovician')+count('Ordovician, Upper')+ count('Ordovician, Middle')+ count('Ordovician, Middle')+ count('Ordovician, Lower')); 
 		}
 
 		if (markers_age.indexOf('Cambrian')!=-1)
