@@ -321,8 +321,8 @@ class MapModel extends CI_Model {
 
     function loadFeedbacks($data, $user_id){
     	//using the data from the filter we create the where statement for querying the database
-        $where_string = "";
-
+        $where_string = "1";
+        /*
         if ($data["genus"] == -1 and $data["collector"] == -1 and $data["age_min"] == 0 and $data["age_max"] == 12)
         {
             $where_string = "1";
@@ -356,6 +356,7 @@ class MapModel extends CI_Model {
                 $where_string = " 1";
             }
         }
+        */
 
 
     	//querying the database to find the filter id
