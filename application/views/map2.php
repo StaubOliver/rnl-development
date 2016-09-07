@@ -555,7 +555,7 @@
 							<div class="col-md-12 col-sm-12 col-xs-12">
 								<p class='filter-element-title'>Geological Age</p>
 							</div>
-							<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="col-md-12 col-sm-12 col-xs-12" ng-mouseenter="recordActivity('Geological Age Selector Hover', '')">
 								<rzslider
 							    rz-slider-model="selectedAgeMin"
 							    rz-slider-high="selectedAgeMax"
@@ -567,7 +567,7 @@
 						<div class="row ">
 							<div class="col-md-6 col-sm-6 col)xs-6 filter-element">
 								<p class='filter-element-title'>Collector</p>
-								<select class="form-control" id="fossilCollectorSelect" ng-model="selectedCollector" ng-change="clear_selected_markers(); newCollector()"  ng-mouseover="recordActivity('Collector Selector Hover', '')">
+								<select class="form-control" id="fossilCollectorSelect" ng-model="selectedCollector" ng-change="clear_selected_markers(); newCollector()"  ng-mouseenter="recordActivity('Collector Selector Hover', '')">
 									<option value="-1" selected>All Collectors</option>
 									<optgroup label="Collectors">	
 									<?php
@@ -586,7 +586,7 @@
 							<!-- Genus --> 
 							<div class="col-md-6 col-sm-6 col)xs-6 filter-element">
 								<p class='filter-element-title'>Genus</p>
-								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="clear_selected_markers(); newGenus()" ng-mouseover="recordActivity('Genus Selector Hover', '')">
+								<select class="form-control" id="fossilGenusSelect" ng-model="selectedGenus" ng-change="clear_selected_markers(); newGenus()" ng-mouseenter="recordActivity('Genus Selector Hover', '')">
 									<option value="-1" selected>All Genera</option>
 									<optgroup label="Coral genera">	
 									<?php
