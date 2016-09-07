@@ -420,7 +420,7 @@ var map = angular.module('map', ['rzModule'])
 			markers_age.indexOf('Cretaceous, Upper')!=-1 || 
 			markers_age.indexOf('Cretaceous, Lower')!=-1)
 		{ 
-			legend += LegendItem('7FC64E', 'Cretaceous', 3, count('Cretaceous')+cout('Cretaceous, Upper')+count('Cretaceous, Lower')); 
+			legend += LegendItem('7FC64E', 'Cretaceous', 3, count('Cretaceous')+count('Cretaceous, Upper')+count('Cretaceous, Lower')); 
 		}
 
 		if (markers_age.indexOf('Jurassic')!=-1 || 
