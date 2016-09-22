@@ -1385,7 +1385,6 @@ class MapModel extends CI_Model {
         {
             foreach ($query_unique_users->result_array() as $visitor)
             {
-                $res['visits'][] = $visitor;
                 $query_one_visitor = $this->db->query("SELECT * FROM map_activity WHERE unique_id='".$visitor['unique_id']."'");
 
                 if ($query_one_visitor->num_rows() > 0)
