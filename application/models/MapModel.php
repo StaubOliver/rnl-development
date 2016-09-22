@@ -1934,29 +1934,29 @@ class MapModel extends CI_Model {
 
             "action_distribution"=>array(
                 array("Actions", "Distribution"),
-                array("Map pan 26,74%", round($nb_map_pan,2)), 
-                array("Map zoom in 15,47%", round($nb_map_zoom_in,2)),
-                array("Map zoom out 8,57%", round($nb_map_zoom_out,2)),
-                array("Map click 3,2%", round($nb_map_click,2)),
-                array("Fossil click 9,93%", round($nb_click_on_fossil,2)),
-                array("Enlarge image 1,65%", round($nb_enlarge_image,2)),
-                array("Fossil selection 0,95% ", round($nb_fossil_selected,2)),
-                array("Fossil deselection 0,44%", round($nb_fossil_deselected,2)),
-                array("Clear selection list 0,07%", round($nb_clear_fossil_selection,2)),
-                array("Writing contribution 3,12%", round($nb_write_comment, 2)),
-                array("Submitting contribution 0,03%", round($nb_submit_feedback, 2)),
-                array("Contribution hover 16,83%", round($nb_feedback_hover,2)),
-                array("Contribution click 0,22%", round($nb_feedback_click, 2)),
-                array("Click upvote 0%", round($nb_upvote, 2)),
-                array("Click reply 0,02%", round($nb_click_reply,2)),
-                array("Share of the application 0,11%", round($nb_sharing, 2)),
-                array("Share of a contribution 0%", round($nb_share_contribution, 2)),
-                array("Change geological age 2,75%", round($nb_filter_geological_change,2)),
-                array("Hover collector 5,46%", round($nb_filter_collector_hover,2)),
-                array("Change collector  0,29%", round($nb_filter_collector_change, 2)),
-                array("Hover genus 3,93%", round($nb_filter_genus_hover, 2)),
-                array("Change genus 0,17%", round($nb_filter_genus_change, 2)),
-                array("Reset filter 0,06%", round($nb_reset_filter, 2))
+                array("Map pan", round($nb_map_pan,2)), 
+                array("Map zoom in ", round($nb_map_zoom_in,2)),
+                array("Map zoom out", round($nb_map_zoom_out,2)),
+                array("Map clic", round($nb_map_click,2)),
+                array("Fossil click", round($nb_click_on_fossil,2)),
+                array("Enlarge image", round($nb_enlarge_image,2)),
+                array("Fossil selection", round($nb_fossil_selected,2)),
+                array("Fossil deselection", round($nb_fossil_deselected,2)),
+                array("Clear selection list", round($nb_clear_fossil_selection,2)),
+                array("Writing contribution", round($nb_write_comment, 2)),
+                array("Submitting contribution", round($nb_submit_feedback, 2)),
+                array("Contribution hover", round($nb_feedback_hover,2)),
+                array("Contribution click", round($nb_feedback_click, 2)),
+                array("Click upvote", round($nb_upvote, 2)),
+                array("Click reply", round($nb_click_reply,2)),
+                array("Share of the application", round($nb_sharing, 2)),
+                array("Share of a contribution", round($nb_share_contribution, 2)),
+                array("Change geological age", round($nb_filter_geological_change,2)),
+                array("Hover collector", round($nb_filter_collector_hover,2)),
+                array("Change collector", round($nb_filter_collector_change, 2)),
+                array("Hover genus", round($nb_filter_genus_hover, 2)),
+                array("Change genus", round($nb_filter_genus_change, 2)),
+                array("Reset filter", round($nb_reset_filter, 2))
             ),
 
 
@@ -2068,9 +2068,6 @@ class MapModel extends CI_Model {
             "p_part_contribution_group_b" => round($p_part_contribution_group_b,2),
             "nb_part_social_collaboration_group_b" => $nb_part_social_collaboration_group_b,
             "p_part_social_collaboration_group_b" => round($p_part_social_collaboration_group_b,2)
-
-
-
 
         );
     }
