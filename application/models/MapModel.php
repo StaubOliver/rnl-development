@@ -1399,7 +1399,11 @@ class MapModel extends CI_Model {
                     {
                         if (!array_key_exists($date, $res))
                         {
-                            $res[$date] = count(array_keys($temp, $date));
+                            $res[$date] = 1;
+                        }
+                        else
+                        {
+                            $res[$date] = $res[$date] + 1;
                         }
                         
                     }
