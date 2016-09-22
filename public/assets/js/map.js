@@ -2018,7 +2018,8 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 			google.charts.setOnLoadCallback(drawHistogram);
 			google.charts.setOnLoadCallback(drawNbActionFctDwell);
 			google.charts.setOnLoadCallback(drawActionDistribution);
-
+			google.charts.setOnLoadCallback(drawVisitorDaily);
+			google.charts.setOnLoadCallback(drawActionDaily);
 			
 			function drawHistogram() 
 			{
@@ -2211,7 +2212,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 				chart.draw(data, options);
 			}
 
-			function drawActionsDaily()
+			function drawActionDaily()
 			{
 				var data = google.visualization.arrayToDataTable($scope.general.daily_actions);
 
