@@ -1417,7 +1417,7 @@ class MapModel extends CI_Model {
         $data[] = array("Date", "Number of Visitor");
         foreach ($res as $key=>$nb)
         { 
-            $data[] = array($key, $nb)
+            $data[] = array($key, $nb);
         }
 
         return $data;
