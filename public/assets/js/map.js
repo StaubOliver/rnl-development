@@ -2204,7 +2204,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 				var data = google.visualization.arrayToDataTable($scope.general.daily_visitors);
 
 				var options = {
-					curveType: 'function',
+					curveType: 'none',
 					chartArea:{left:50,top:10,width:'100%',height:'450'}
 				}
 
@@ -2217,7 +2217,7 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 				var data = google.visualization.arrayToDataTable($scope.general.daily_actions);
 
 				var options = {
-					curveType: 'function',
+					curveType: 'none',
 					chartArea:{left:50,top:10,width:'100%',height:'450'}
 				}
 
