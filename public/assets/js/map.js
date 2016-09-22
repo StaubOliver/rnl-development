@@ -2198,6 +2198,17 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 			}
 */
 
+			function drawVisitorDaily()
+			{
+
+			}
+
+			function drawActionsDaily()
+			{
+				
+			}
+
+
 		}).error(function(data, status, headers, config){
 			console.log(data);
 		});

@@ -1412,7 +1412,15 @@ class MapModel extends CI_Model {
 
             }
         }
-        return $res;
+
+        $data = array();
+        $data[] = array("Date", "Number of Visitor");
+        foreach ($res as $key=>$nb)
+        { 
+            $data[] = array($key, $nb)
+        }
+
+        return $data;
     }
 
 
