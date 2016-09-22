@@ -1377,7 +1377,7 @@ class MapModel extends CI_Model {
         return sqrt($carry / $n);
     }
 
-    public function stat_dayly_visitors(){
+    public function stat_daily_visitors(){
         $res = array();
         $query_unique_users = $this->db->query("SELECT DISTINCT unique_id FROM map_activity WHERE ". $this->where_clause());
 
@@ -1402,7 +1402,7 @@ class MapModel extends CI_Model {
                     }
 
                 }
-                
+
             }
         }
         return $res;
@@ -1410,7 +1410,7 @@ class MapModel extends CI_Model {
     }
 
 
-    public function stat_dayly_actions(){
+    public function stat_daily_actions(){
 
 
 
