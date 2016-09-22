@@ -1377,6 +1377,44 @@ class MapModel extends CI_Model {
         return sqrt($carry / $n);
     }
 
+    public function stat_dayly_visitors(){
+        $res = array();
+        $query_unique_users = $this->db->query("SELECT DISTINCT unique_id FROM map_activity WHERE ". $this->where_clause());
+
+        if ($query_unique_users->num_rows() > 0)
+        {
+            foreach ($query_unique_users->result_array() as $visitor)
+            {
+                $res['visits'][] = $unique;
+                $query_one_visitor = $this->db->query("SELECT * FROM map_activity WHERE unique_id=".$visitor['unique_id']);
+
+                if ($query_one_visitor->num_rows() > 0)
+                {
+                    $temp = array();
+                    foreach ($query_one_visitor->result_array() as $one_visitor)
+                    {
+                        $temp[] = explode(' ',$one_visitor['time']);
+                    }
+
+                    foreach (array_unique($temp) as $date)
+                    {
+                        $res[$date] =+ 1;
+                    }
+
+                }
+                
+            }
+        }
+        return $res;
+
+    }
+
+
+    public function stat_dayly_actions(){
+
+
+
+    }
 
 
 
