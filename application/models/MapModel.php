@@ -1417,7 +1417,29 @@ class MapModel extends CI_Model {
 
 
     public function stat_daily_actions(){
+        $res = array();
+        $query_actions = $this->db->query("SELECT * FROM map_activity where ".$this->where_clause()." and action!='Open Page' and action!='Close Page' and action!='Open Help' and action!='Close Help'");
 
+        if ($query_actions->num_rows() > 0)
+        {
+            $temp = array();
+            foreach ($query_actions->result_array() as $action) 
+            {
+                $temp[] = explode(" ", $action['time'])[0];
+            }
+
+            foreach (array_unique($temp) as $date)
+            {
+                if (!array_key_exists($date, $res))
+                {
+                    $res[$date] = 1;
+                }
+                else
+                {
+                    $res[$date] = $res[$date] + 1;
+                }
+            }
+        }
 
 
     }
