@@ -2205,7 +2205,8 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 				var options = {
 					curveType: 'none',
-					chartArea:{left:50,top:10,width:'100%',height:'450'}
+					chartArea:{left:50,top:10,width:'100%',height:'450'},
+					colors:["212a33"]
 				}
 
 				var chart = new google.visualization.LineChart(document.getElementById('chart_daily_visitors'));
@@ -2218,7 +2219,8 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 				var options = {
 					curveType: 'none',
-					chartArea:{left:50,top:10,width:'100%',height:'450'}
+					chartArea:{left:50,top:10,width:'100%',height:'450'},
+					colors:["212a33"]
 				}
 
 				var chart = new google.visualization.LineChart(document.getElementById('chart_daily_actions'));
