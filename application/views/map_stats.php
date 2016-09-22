@@ -266,6 +266,10 @@
 						</div>
 
 
+						<div class='col-md-12 col-sm-12 col-xs-12'>
+							<div id="chart_daily_visitors" style="width: 100%; height: 500px; margin-top:15px"></div>
+						</div>
+
 					</div>
 				</div>
 
@@ -1094,6 +1098,10 @@
 							{{general.nb_social_collaboration}}
 						</div>
 								
+
+						<div class='col-md-12 col-sm-12 col-xs-12'>
+							<div id="chart_daily_actions" style="width: 100%; height: 500px; margin-top:15px"></div>
+						</div>
 
 						<div class='col-md-12 col-sm-12 col-xs-12'>
 							<div id="chart_action_distribution" style="width: 100%; height: 500px; margin-top:15px"></div>

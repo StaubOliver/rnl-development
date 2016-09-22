@@ -1405,7 +1405,6 @@ class MapModel extends CI_Model {
                         {
                             $res[$date] = $res[$date] + 1;
                         }
-                        
                     }
 
                 }

@@ -2200,12 +2200,28 @@ var map_stats = angular.module('map_stats', []).controller('admin_map_stats', fu
 
 			function drawVisitorDaily()
 			{
+				var data = google.visualization.arrayToDataTable($scope.general.daily_visitors);
 
+				var options = {
+					curveType: 'function',
+					chartArea:{left:100,top:10,width:'100%',height:'450'}
+				}
+
+				var chart = new google.visualization.LineChart(document.getElementById('chart_daily_visitors'));
+				chart.draw(data, options);
 			}
 
 			function drawActionsDaily()
 			{
-				
+				var data = google.visualization.arrayToDataTable($scope.general.daily_actions);
+
+				var options = {
+					curveType: 'function',
+					chartArea:{left:100,top:10,width:'100%',height:'450'}
+				}
+
+				var chart = new google.visualization.LineChart(document.getElementById('chart_daily_visitors'));
+				chart.draw(data, options);
 			}
 
 
