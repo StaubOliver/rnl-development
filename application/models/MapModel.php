@@ -1440,8 +1440,7 @@ class MapModel extends CI_Model {
                 }
             }
         }
-
-
+        return $res;
     }
 
 
