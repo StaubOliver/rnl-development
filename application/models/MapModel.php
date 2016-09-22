@@ -1397,7 +1397,7 @@ class MapModel extends CI_Model {
 
                     foreach (array_unique($temp) as $date)
                     {
-                        if (array_key_exists($date, $res))
+                        if (!array_key_exists($date, $res))
                         {
                             $res[$date] = 1;
                         }
