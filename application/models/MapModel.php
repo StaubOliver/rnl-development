@@ -2135,7 +2135,8 @@ class MapModel extends CI_Model {
             "nb_part_social_collaboration_group_b" => $nb_part_social_collaboration_group_b,
             "p_part_social_collaboration_group_b" => round($p_part_social_collaboration_group_b,2),
 
-            "daily_visitors" => $this->stat_daily_visitors()
+            "daily_visitors" => $this->stat_daily_visitors(),
+            "daily_actions" => $this->stat_daily_actions()
 
         );
     }
