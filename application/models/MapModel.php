@@ -1393,7 +1393,7 @@ class MapModel extends CI_Model {
                     $temp = array();
                     foreach ($query_one_visitor->result_array() as $one_visitor)
                     {
-                        $temp[] = explode(' ',$one_visitor['time']);
+                        $temp[] = explode(' ',$one_visitor['time'])[0];
                     }
 
                     foreach (array_unique($temp) as $date)
