@@ -1869,7 +1869,7 @@ class MapModel extends CI_Model {
 
 
 
-        $query_part_group_b = $this->db->query("select * from map_ab where ab_group='B'");
+        $query_part_group_b = $this->db->query("select * from map_ab where ab_group='B' and ".$this->where_clause("map_ab"));
         $nb_part_group_b = $query_part_group_b->num_rows();
         $p_part_group_b = floatval($nb_part_group_b)/floatval($total_participants) * 100;
 
